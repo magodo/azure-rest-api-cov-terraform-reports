@@ -205,9 +205,14 @@
     "operation": "PUT",
     "properties": [
       "properties/allowedTenants",
+      "properties/authority",
       "properties/clientId",
       "properties/clientSecret",
+      "properties/passwordResetPolicyName",
+      "properties/profileEditingPolicyName",
+      "properties/signinPolicyName",
       "properties/signinTenant",
+      "properties/signupPolicyName",
       "properties/type"
     ]
   },
@@ -1600,6 +1605,7 @@
       "properties/osProfile/windowsConfiguration/winRM/listeners/certificateUrl",
       "properties/osProfile/windowsConfiguration/winRM/listeners/protocol",
       "properties/priority",
+      "properties/provisioningState",
       "properties/proximityPlacementGroup/id",
       "properties/securityProfile/encryptionAtHost",
       "properties/storageProfile/dataDisks/caching",
@@ -1706,6 +1712,7 @@
       "properties/virtualMachineProfile/extensionProfile/extensions/properties/settings",
       "properties/virtualMachineProfile/extensionProfile/extensions/properties/type",
       "properties/virtualMachineProfile/extensionProfile/extensions/properties/typeHandlerVersion",
+      "properties/virtualMachineProfile/extensionProfile/extensionsTimeBudget",
       "properties/virtualMachineProfile/licenseType",
       "properties/virtualMachineProfile/networkProfile/healthProbe/id",
       "properties/virtualMachineProfile/networkProfile/networkInterfaceConfigurations/name",
@@ -1845,6 +1852,7 @@
       "properties/virtualMachineProfile/extensionProfile/extensions/properties/settings",
       "properties/virtualMachineProfile/extensionProfile/extensions/properties/type",
       "properties/virtualMachineProfile/extensionProfile/extensions/properties/typeHandlerVersion",
+      "properties/virtualMachineProfile/extensionProfile/extensionsTimeBudget",
       "properties/virtualMachineProfile/networkProfile/healthProbe/id",
       "properties/virtualMachineProfile/networkProfile/networkInterfaceConfigurations/name",
       "properties/virtualMachineProfile/networkProfile/networkInterfaceConfigurations/properties/dnsSettings/dnsServers",
@@ -2157,6 +2165,7 @@
       "properties/availabilityZones",
       "properties/count",
       "properties/enableAutoScaling",
+      "properties/enableEncryptionAtHost",
       "properties/enableNodePublicIP",
       "properties/maxCount",
       "properties/maxPods",
@@ -2200,6 +2209,7 @@
       "properties/agentPoolProfiles/availabilityZones",
       "properties/agentPoolProfiles/count",
       "properties/agentPoolProfiles/enableAutoScaling",
+      "properties/agentPoolProfiles/enableEncryptionAtHost",
       "properties/agentPoolProfiles/enableNodePublicIP",
       "properties/agentPoolProfiles/maxCount",
       "properties/agentPoolProfiles/maxPods",
@@ -2578,6 +2588,14 @@
       "properties{AzureSqlDatabase}/parameters",
       "properties{AzureSqlDatabase}/type",
       "properties{AzureSqlDatabase}/typeProperties/connectionString",
+      "properties{AzureTableStorage}",
+      "properties{AzureTableStorage}/annotations",
+      "properties{AzureTableStorage}/connectVia/referenceName",
+      "properties{AzureTableStorage}/connectVia/type",
+      "properties{AzureTableStorage}/description",
+      "properties{AzureTableStorage}/parameters",
+      "properties{AzureTableStorage}/type",
+      "properties{AzureTableStorage}/typeProperties/connectionString",
       "properties{CosmosDb}",
       "properties{CosmosDb}/annotations",
       "properties{CosmosDb}/connectVia/referenceName",
@@ -3487,6 +3505,7 @@
       "properties/ipFilterRules/ipMask",
       "properties/messagingEndpoints",
       "properties/minTlsVersion",
+      "properties/provisioningState",
       "properties/publicNetworkAccess",
       "properties/routing/endpoints/eventHubs/connectionString",
       "properties/routing/endpoints/eventHubs/name",
@@ -4206,6 +4225,35 @@
   },
   {
     "api_version": "2020-05-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Media/mediaServices/{accountName}/streamingPolicies/{streamingPolicyName}",
+    "operation": "PUT",
+    "properties": [
+      "properties/commonEncryptionCbcs/contentKeys/defaultKey/label",
+      "properties/commonEncryptionCbcs/contentKeys/defaultKey/policyName",
+      "properties/commonEncryptionCbcs/drm/fairPlay/allowPersistentLicense",
+      "properties/commonEncryptionCbcs/drm/fairPlay/customLicenseAcquisitionUrlTemplate",
+      "properties/commonEncryptionCbcs/enabledProtocols/dash",
+      "properties/commonEncryptionCbcs/enabledProtocols/download",
+      "properties/commonEncryptionCbcs/enabledProtocols/hls",
+      "properties/commonEncryptionCbcs/enabledProtocols/smoothStreaming",
+      "properties/commonEncryptionCenc/contentKeys/defaultKey/label",
+      "properties/commonEncryptionCenc/contentKeys/defaultKey/policyName",
+      "properties/commonEncryptionCenc/drm/playReady/customLicenseAcquisitionUrlTemplate",
+      "properties/commonEncryptionCenc/drm/playReady/playReadyCustomAttributes",
+      "properties/commonEncryptionCenc/drm/widevine/customLicenseAcquisitionUrlTemplate",
+      "properties/commonEncryptionCenc/enabledProtocols/dash",
+      "properties/commonEncryptionCenc/enabledProtocols/download",
+      "properties/commonEncryptionCenc/enabledProtocols/hls",
+      "properties/commonEncryptionCenc/enabledProtocols/smoothStreaming",
+      "properties/defaultContentKeyPolicyName",
+      "properties/noEncryption/enabledProtocols/dash",
+      "properties/noEncryption/enabledProtocols/download",
+      "properties/noEncryption/enabledProtocols/hls",
+      "properties/noEncryption/enabledProtocols/smoothStreaming"
+    ]
+  },
+  {
+    "api_version": "2020-05-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Media/mediaServices/{accountName}/transforms/{transformName}",
     "operation": "PUT",
     "properties": [
@@ -4631,6 +4679,21 @@
   },
   {
     "api_version": "2020-05-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/backendAddressPools/{backendAddressPoolName}",
+    "operation": "PUT",
+    "properties": [
+      "id",
+      "name",
+      "properties/backendIPConfigurations/id",
+      "properties/loadBalancerBackendAddresses/name",
+      "properties/loadBalancerBackendAddresses/properties/ipAddress",
+      "properties/loadBalancerBackendAddresses/properties/virtualNetwork/id",
+      "properties/loadBalancingRules/id",
+      "properties/outboundRules/id"
+    ]
+  },
+  {
+    "api_version": "2020-05-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/bastionHosts/{bastionHostName}",
     "operation": "PUT",
     "properties": [
@@ -4898,10 +4961,13 @@
       "properties/ipConfigurations/properties/applicationGatewayBackendAddressPools/properties/backendAddresses/fqdn",
       "properties/ipConfigurations/properties/applicationGatewayBackendAddressPools/properties/backendAddresses/ipAddress",
       "properties/ipConfigurations/properties/applicationSecurityGroups/id",
+      "properties/ipConfigurations/properties/loadBalancerBackendAddressPools",
       "properties/ipConfigurations/properties/loadBalancerBackendAddressPools/id",
       "properties/ipConfigurations/properties/loadBalancerBackendAddressPools/name",
       "properties/ipConfigurations/properties/loadBalancerBackendAddressPools/properties/backendIPConfigurations",
+      "properties/ipConfigurations/properties/loadBalancerBackendAddressPools/properties/loadBalancerBackendAddresses",
       "properties/ipConfigurations/properties/loadBalancerBackendAddressPools/properties/loadBalancingRules/id",
+      "properties/ipConfigurations/properties/loadBalancerBackendAddressPools/properties/outboundRules/id",
       "properties/ipConfigurations/properties/loadBalancerInboundNatRules/id",
       "properties/ipConfigurations/properties/loadBalancerInboundNatRules/name",
       "properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/backendIPConfiguration",
@@ -5037,10 +5103,14 @@
       "id",
       "location",
       "name",
-      "properties/backendAddressPools/id",
+      "properties/backendAddressPools",
       "properties/backendAddressPools/name",
       "properties/backendAddressPools/properties/backendIPConfigurations/id",
+      "properties/backendAddressPools/properties/loadBalancerBackendAddresses/name",
+      "properties/backendAddressPools/properties/loadBalancerBackendAddresses/properties/ipAddress",
+      "properties/backendAddressPools/properties/loadBalancerBackendAddresses/properties/virtualNetwork/id",
       "properties/backendAddressPools/properties/loadBalancingRules/id",
+      "properties/backendAddressPools/properties/outboundRules/id",
       "properties/frontendIPConfigurations/id",
       "properties/frontendIPConfigurations/name",
       "properties/frontendIPConfigurations/properties/inboundNatRules/id",
@@ -5349,10 +5419,13 @@
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/applicationGatewayBackendAddressPools/name",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/applicationGatewayBackendAddressPools/properties/backendAddresses/fqdn",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/applicationGatewayBackendAddressPools/properties/backendAddresses/ipAddress",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerBackendAddressPools",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerBackendAddressPools/id",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerBackendAddressPools/name",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerBackendAddressPools/properties/backendIPConfigurations",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerBackendAddressPools/properties/loadBalancerBackendAddresses",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerBackendAddressPools/properties/loadBalancingRules/id",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerBackendAddressPools/properties/outboundRules/id",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerInboundNatRules/id",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerInboundNatRules/name",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/backendIPConfiguration",
@@ -7036,6 +7109,22 @@
   },
   {
     "api_version": "2020-04-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/cassandraKeyspaces/{keyspaceName}/tables/{tableName}",
+    "operation": "PUT",
+    "properties": [
+      "properties/options/autoscaleSettings/maxThroughput",
+      "properties/options/throughput",
+      "properties/resource/defaultTtl",
+      "properties/resource/id",
+      "properties/resource/schema/clusterKeys/name",
+      "properties/resource/schema/clusterKeys/orderBy",
+      "properties/resource/schema/columns/name",
+      "properties/resource/schema/columns/type",
+      "properties/resource/schema/partitionKeys/name"
+    ]
+  },
+  {
+    "api_version": "2020-04-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}",
     "operation": "PUT",
     "properties": [
@@ -7167,6 +7256,15 @@
       "properties/options/autoscaleSettings/maxThroughput",
       "properties/options/throughput",
       "properties/resource/id"
+    ]
+  },
+  {
+    "api_version": "2020-04-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/cassandraKeyspaces/{keyspaceName}/tables/{tableName}/throughputSettings/default",
+    "operation": "PUT",
+    "properties": [
+      "properties/resource/autoscaleSettings/maxThroughput",
+      "properties/resource/throughput"
     ]
   },
   {
@@ -7920,6 +8018,7 @@
       "properties/criteria{Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/metricNamespace",
       "properties/criteria{Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/name",
       "properties/criteria{Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/operator",
+      "properties/criteria{Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/skipMetricValidation",
       "properties/criteria{Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/timeAggregation",
       "properties/criteria{Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/dimensions/name",
       "properties/criteria{Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/dimensions/operator",
@@ -7928,6 +8027,7 @@
       "properties/criteria{Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/metricNamespace",
       "properties/criteria{Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/name",
       "properties/criteria{Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/operator",
+      "properties/criteria{Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/skipMetricValidation",
       "properties/criteria{Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/threshold",
       "properties/criteria{Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/timeAggregation",
       "properties/criteria{Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria}/odata.type",
@@ -7938,6 +8038,7 @@
       "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/metricNamespace",
       "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/name",
       "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/operator",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/skipMetricValidation",
       "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/threshold",
       "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/timeAggregation",
       "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/odata.type",
@@ -8114,6 +8215,25 @@
     ]
   },
   {
+    "api_version": "2019-08-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/iotSecuritySolutions/{solutionName}",
+    "operation": "PUT",
+    "properties": [
+      "location",
+      "properties/displayName",
+      "properties/export",
+      "properties/iotHubs",
+      "properties/recommendationsConfiguration/recommendationType",
+      "properties/recommendationsConfiguration/status",
+      "properties/status",
+      "properties/unmaskedIpLoggingStatus",
+      "properties/userDefinedResources/query",
+      "properties/userDefinedResources/querySubscriptions",
+      "properties/workspace",
+      "tags"
+    ]
+  },
+  {
     "api_version": "2018-06-01",
     "api_path": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/{pricingName}",
     "operation": "PUT",
@@ -8282,6 +8402,9 @@
       "properties/reverseProxyCertificate/thumbprint",
       "properties/reverseProxyCertificate/thumbprintSecondary",
       "properties/reverseProxyCertificate/x509StoreName",
+      "properties/reverseProxyCertificateCommonNames/commonNames/certificateCommonName",
+      "properties/reverseProxyCertificateCommonNames/commonNames/certificateIssuerThumbprint",
+      "properties/reverseProxyCertificateCommonNames/x509StoreName",
       "properties/upgradeMode",
       "properties/vmImage",
       "tags"
@@ -8972,7 +9095,7 @@
     ]
   },
   {
-    "api_version": "2018-01-10",
+    "api_version": "2018-07-10",
     "api_path": "/Subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationFabrics/{fabricName}/replicationNetworks/{networkName}/replicationNetworkMappings/{networkMappingName}",
     "operation": "PUT",
     "properties": [
@@ -8982,7 +9105,7 @@
     ]
   },
   {
-    "api_version": "2018-01-10",
+    "api_version": "2018-07-10",
     "api_path": "/Subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationPolicies/{policyName}",
     "operation": "PUT",
     "properties": [
@@ -8993,7 +9116,7 @@
     ]
   },
   {
-    "api_version": "2018-01-10",
+    "api_version": "2018-07-10",
     "api_path": "/Subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationFabrics/{fabricName}/replicationProtectionContainers/{protectionContainerName}",
     "operation": "PUT",
     "properties": [
@@ -9001,7 +9124,7 @@
     ]
   },
   {
-    "api_version": "2018-01-10",
+    "api_version": "2018-07-10",
     "api_path": "/Subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationFabrics/{fabricName}/replicationProtectionContainers/{protectionContainerName}/replicationProtectionContainerMappings/{mappingName}",
     "operation": "PUT",
     "properties": [
@@ -9010,7 +9133,7 @@
     ]
   },
   {
-    "api_version": "2018-01-10",
+    "api_version": "2018-07-10",
     "api_path": "/Subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationFabrics/{fabricName}/replicationProtectionContainers/{protectionContainerName}/replicationProtectedItems/{replicatedProtectedItemName}/remove",
     "operation": "POST",
     "properties": [
@@ -9018,7 +9141,7 @@
     ]
   },
   {
-    "api_version": "2018-01-10",
+    "api_version": "2018-07-10",
     "api_path": "/Subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationFabrics/{fabricName}/replicationProtectionContainers/{protectionContainerName}/replicationProtectedItems/{replicatedProtectedItemName}",
     "operation": "PUT",
     "properties": [
@@ -9035,7 +9158,7 @@
     ]
   },
   {
-    "api_version": "2018-01-10",
+    "api_version": "2018-07-10",
     "api_path": "/Subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationFabrics/{fabricName}",
     "operation": "PUT",
     "properties": [
@@ -9044,7 +9167,7 @@
     ]
   },
   {
-    "api_version": "2018-01-10",
+    "api_version": "2018-07-10",
     "api_path": "/Subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationFabrics/{fabricName}/replicationProtectionContainers/{protectionContainerName}/replicationProtectionContainerMappings/{mappingName}/remove",
     "operation": "POST",
     "properties": [
@@ -9052,7 +9175,7 @@
     ]
   },
   {
-    "api_version": "2018-01-10",
+    "api_version": "2018-07-10",
     "api_path": "/Subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationPolicies/{policyName}",
     "operation": "PATCH",
     "properties": [
@@ -9063,7 +9186,7 @@
     ]
   },
   {
-    "api_version": "2018-01-10",
+    "api_version": "2018-07-10",
     "api_path": "/Subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationFabrics/{fabricName}/replicationProtectionContainers/{protectionContainerName}/replicationProtectedItems/{replicatedProtectedItemName}",
     "operation": "PATCH",
     "properties": [
@@ -9190,13 +9313,14 @@
     ]
   },
   {
-    "api_version": "2018-03-01",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}",
+    "api_version": "2020-06-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}",
     "operation": "PUT",
     "properties": [
       "location",
       "properties/enableNonSslPort",
       "properties/minimumTlsVersion",
+      "properties/publicNetworkAccess",
       "properties/redisConfiguration",
       "properties/shardCount",
       "properties/sku/capacity",
@@ -9209,8 +9333,8 @@
     ]
   },
   {
-    "api_version": "2018-03-01",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{cacheName}/firewallRules/{ruleName}",
+    "api_version": "2020-06-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{cacheName}/firewallRules/{ruleName}",
     "operation": "PUT",
     "properties": [
       "properties/endIP",
@@ -9218,8 +9342,8 @@
     ]
   },
   {
-    "api_version": "2018-03-01",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}/linkedServers/{linkedServerName}",
+    "api_version": "2020-06-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/linkedServers/{linkedServerName}",
     "operation": "PUT",
     "properties": [
       "properties/linkedRedisCacheId",
@@ -9228,8 +9352,8 @@
     ]
   },
   {
-    "api_version": "2018-03-01",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}/patchSchedules/{default}",
+    "api_version": "2020-06-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/patchSchedules/{default}",
     "operation": "PUT",
     "properties": [
       "properties/scheduleEntries/dayOfWeek",
@@ -9237,12 +9361,13 @@
     ]
   },
   {
-    "api_version": "2018-03-01",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}",
+    "api_version": "2020-06-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}",
     "operation": "PATCH",
     "properties": [
       "properties/enableNonSslPort",
       "properties/minimumTlsVersion",
+      "properties/publicNetworkAccess",
       "properties/redisConfiguration",
       "properties/shardCount",
       "properties/sku/capacity",
@@ -10261,6 +10386,8 @@
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/hostingEnvironments/{name}",
     "operation": "PATCH",
     "properties": [
+      "properties/clusterSettings/name",
+      "properties/clusterSettings/value",
       "properties/frontEndScaleFactor",
       "properties/internalLoadBalancingMode",
       "properties/multiSize",
@@ -10277,6 +10404,8 @@
       "id",
       "kind",
       "location",
+      "properties/clusterSettings/name",
+      "properties/clusterSettings/value",
       "properties/frontEndScaleFactor",
       "properties/internalLoadBalancingMode",
       "properties/location",
