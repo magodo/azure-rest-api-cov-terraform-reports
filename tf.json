@@ -79,6 +79,14 @@
   },
   {
     "api_version": "2019-12-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/tenant/{accessName}",
+    "operation": "PATCH",
+    "properties": [
+      "properties/enabled"
+    ]
+  },
+  {
+    "api_version": "2019-12-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/authorizationServers/{authsid}",
     "operation": "PUT",
     "properties": [
@@ -226,7 +234,8 @@
       "properties/credentials",
       "properties/description",
       "properties/isBuffered",
-      "properties/loggerType"
+      "properties/loggerType",
+      "properties/resourceId"
     ]
   },
   {
@@ -612,6 +621,7 @@
       "identity/type",
       "location",
       "properties/activeDeploymentName",
+      "properties/fqdn",
       "properties/httpsOnly",
       "properties/persistentDisk/mountPath",
       "properties/persistentDisk/sizeInGB",
@@ -629,6 +639,7 @@
       "identity/type",
       "location",
       "properties/activeDeploymentName",
+      "properties/fqdn",
       "properties/httpsOnly",
       "properties/persistentDisk/mountPath",
       "properties/persistentDisk/sizeInGB",
@@ -642,6 +653,7 @@
     "operation": "PUT",
     "properties": [
       "properties/keyVaultCertName",
+      "properties/thumbprint",
       "properties/vaultUri"
     ]
   },
@@ -667,6 +679,15 @@
       "properties/configServer/gitProperty/uri",
       "properties/configServer/gitProperty/username",
       "properties/error"
+    ]
+  },
+  {
+    "api_version": "2020-07-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AppPlatform/Spring/{serviceName}/apps/{appName}/domains/{domainName}",
+    "operation": "PUT",
+    "properties": [
+      "properties/certName",
+      "properties/thumbprint"
     ]
   },
   {
@@ -747,6 +768,47 @@
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Attestation/attestationProviders/{providerName}",
     "operation": "PATCH",
     "properties": [
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2020-03-20",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}",
+    "operation": "PUT",
+    "properties": [
+      "location",
+      "properties/circuit/expressRouteID",
+      "properties/circuit/expressRoutePrivatePeeringID",
+      "properties/circuit/primarySubnet",
+      "properties/circuit/secondarySubnet",
+      "properties/endpoints/hcxCloudManager",
+      "properties/endpoints/nsxtManager",
+      "properties/endpoints/vcsa",
+      "properties/internet",
+      "properties/managementCluster/clusterId",
+      "properties/managementCluster/clusterSize",
+      "properties/managementCluster/hosts",
+      "properties/managementNetwork",
+      "properties/networkBlock",
+      "properties/nsxtCertificateThumbprint",
+      "properties/nsxtPassword",
+      "properties/provisioningNetwork",
+      "properties/vcenterCertificateThumbprint",
+      "properties/vcenterPassword",
+      "properties/vmotionNetwork",
+      "sku/name",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2020-03-20",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}",
+    "operation": "PATCH",
+    "properties": [
+      "properties/internet",
+      "properties/managementCluster/clusterId",
+      "properties/managementCluster/clusterSize",
+      "properties/managementCluster/hosts",
       "tags"
     ]
   },
@@ -1291,7 +1353,7 @@
     ]
   },
   {
-    "api_version": "2020-06-01",
+    "api_version": "2020-12-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/availabilitySets/{availabilitySetName}",
     "operation": "PUT",
     "properties": [
@@ -1306,7 +1368,7 @@
     ]
   },
   {
-    "api_version": "2020-06-01",
+    "api_version": "2020-12-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/hostGroups/{hostGroupName}/hosts/{hostName}",
     "operation": "PUT",
     "properties": [
@@ -1323,7 +1385,7 @@
     ]
   },
   {
-    "api_version": "2020-06-01",
+    "api_version": "2020-12-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/hostGroups/{hostGroupName}",
     "operation": "PUT",
     "properties": [
@@ -1335,7 +1397,7 @@
     ]
   },
   {
-    "api_version": "2020-06-01",
+    "api_version": "2020-12-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/hostGroups/{hostGroupName}",
     "operation": "PATCH",
     "properties": [
@@ -1343,7 +1405,7 @@
     ]
   },
   {
-    "api_version": "2020-06-01",
+    "api_version": "2020-12-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/hostGroups/{hostGroupName}/hosts/{hostName}",
     "operation": "PATCH",
     "properties": [
@@ -1354,7 +1416,7 @@
     ]
   },
   {
-    "api_version": "2020-05-01",
+    "api_version": "2020-09-30",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/disks/{diskName}",
     "operation": "PUT",
     "properties": [
@@ -1384,7 +1446,7 @@
     ]
   },
   {
-    "api_version": "2020-05-01",
+    "api_version": "2020-09-30",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskAccesses/{diskAccessName}",
     "operation": "PUT",
     "properties": [
@@ -1395,7 +1457,7 @@
     ]
   },
   {
-    "api_version": "2020-05-01",
+    "api_version": "2020-09-30",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskEncryptionSets/{diskEncryptionSetName}",
     "operation": "PUT",
     "properties": [
@@ -1410,7 +1472,7 @@
     ]
   },
   {
-    "api_version": "2020-05-01",
+    "api_version": "2020-09-30",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskEncryptionSets/{diskEncryptionSetName}",
     "operation": "PATCH",
     "properties": [
@@ -1420,7 +1482,7 @@
     ]
   },
   {
-    "api_version": "2020-05-01",
+    "api_version": "2020-09-30",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/disks/{diskName}",
     "operation": "PATCH",
     "properties": [
@@ -1489,7 +1551,7 @@
     ]
   },
   {
-    "api_version": "2020-06-01",
+    "api_version": "2020-12-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}",
     "operation": "PUT",
     "properties": [
@@ -1514,7 +1576,7 @@
     ]
   },
   {
-    "api_version": "2020-06-01",
+    "api_version": "2020-12-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/proximityPlacementGroups/{proximityPlacementGroupName}",
     "operation": "PUT",
     "properties": [
@@ -1525,7 +1587,7 @@
     ]
   },
   {
-    "api_version": "2020-06-01",
+    "api_version": "2020-12-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/sshPublicKeys/{sshPublicKeyName}",
     "operation": "PUT",
     "properties": [
@@ -1537,7 +1599,7 @@
     ]
   },
   {
-    "api_version": "2020-06-01",
+    "api_version": "2020-12-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/sshPublicKeys/{sshPublicKeyName}",
     "operation": "PATCH",
     "properties": [
@@ -1546,7 +1608,7 @@
     ]
   },
   {
-    "api_version": "2020-05-01",
+    "api_version": "2020-09-30",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/snapshots/{snapshotName}",
     "operation": "PUT",
     "properties": [
@@ -1569,7 +1631,7 @@
     ]
   },
   {
-    "api_version": "2020-06-01",
+    "api_version": "2020-12-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
     "operation": "PUT",
     "properties": [
@@ -1665,7 +1727,7 @@
     ]
   },
   {
-    "api_version": "2020-06-01",
+    "api_version": "2020-12-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/extensions/{vmExtensionName}",
     "operation": "PUT",
     "properties": [
@@ -1682,7 +1744,7 @@
     ]
   },
   {
-    "api_version": "2020-06-01",
+    "api_version": "2020-12-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
     "operation": "PUT",
     "properties": [
@@ -1806,7 +1868,7 @@
     ]
   },
   {
-    "api_version": "2020-06-01",
+    "api_version": "2020-12-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/extensions/{vmssExtensionName}",
     "operation": "PUT",
     "properties": [
@@ -1823,7 +1885,7 @@
     ]
   },
   {
-    "api_version": "2020-06-01",
+    "api_version": "2020-12-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/reimage",
     "operation": "POST",
     "properties": [
@@ -1831,7 +1893,7 @@
     ]
   },
   {
-    "api_version": "2020-06-01",
+    "api_version": "2020-12-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
     "operation": "PATCH",
     "properties": [
@@ -1926,7 +1988,7 @@
     ]
   },
   {
-    "api_version": "2020-06-01",
+    "api_version": "2020-12-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/manualupgrade",
     "operation": "POST",
     "properties": [
@@ -1934,7 +1996,7 @@
     ]
   },
   {
-    "api_version": "2020-06-01",
+    "api_version": "2020-12-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
     "operation": "PATCH",
     "properties": [
@@ -2338,6 +2400,73 @@
     ]
   },
   {
+    "api_version": "2019-08-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/{deviceName}",
+    "operation": "PUT",
+    "properties": [
+      "id",
+      "location",
+      "properties/configuredRoleTypes",
+      "properties/culture",
+      "properties/dataBoxEdgeDeviceStatus",
+      "properties/deviceHcsVersion",
+      "properties/deviceLocalCapacity",
+      "properties/deviceModel",
+      "properties/deviceSoftwareVersion",
+      "properties/deviceType",
+      "properties/nodeCount",
+      "properties/serialNumber",
+      "properties/timeZone",
+      "sku/name",
+      "sku/tier",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2019-08-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/{deviceName}",
+    "operation": "PATCH",
+    "properties": [
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2019-08-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/{deviceName}/orders/default",
+    "operation": "PUT",
+    "properties": [
+      "id",
+      "properties/contactInformation/companyName",
+      "properties/contactInformation/contactPerson",
+      "properties/contactInformation/emailList",
+      "properties/contactInformation/phone",
+      "properties/currentStatus/additionalOrderDetails",
+      "properties/currentStatus/comments",
+      "properties/currentStatus/status",
+      "properties/currentStatus/updateDateTime",
+      "properties/deliveryTrackingInfo/carrierName",
+      "properties/deliveryTrackingInfo/serialNumber",
+      "properties/deliveryTrackingInfo/trackingId",
+      "properties/deliveryTrackingInfo/trackingUrl",
+      "properties/orderHistory/additionalOrderDetails",
+      "properties/orderHistory/comments",
+      "properties/orderHistory/status",
+      "properties/orderHistory/updateDateTime",
+      "properties/returnTrackingInfo/carrierName",
+      "properties/returnTrackingInfo/serialNumber",
+      "properties/returnTrackingInfo/trackingId",
+      "properties/returnTrackingInfo/trackingUrl",
+      "properties/serialNumber",
+      "properties/shippingAddress/addressLine1",
+      "properties/shippingAddress/addressLine2",
+      "properties/shippingAddress/addressLine3",
+      "properties/shippingAddress/city",
+      "properties/shippingAddress/country",
+      "properties/shippingAddress/postalCode",
+      "properties/shippingAddress/state"
+    ]
+  },
+  {
     "api_version": "2018-04-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Databricks/workspaces/{workspaceName}",
     "operation": "PUT",
@@ -2558,6 +2687,12 @@
       "properties{AzureBlobStorage}/parameters",
       "properties{AzureBlobStorage}/type",
       "properties{AzureBlobStorage}/typeProperties/connectionString",
+      "properties{AzureBlobStorage}/typeProperties/sasUri",
+      "properties{AzureBlobStorage}/typeProperties/servicePrincipalId",
+      "properties{AzureBlobStorage}/typeProperties/servicePrincipalKey{AzureKeyVaultSecret}",
+      "properties{AzureBlobStorage}/typeProperties/servicePrincipalKey{SecureString}/type",
+      "properties{AzureBlobStorage}/typeProperties/servicePrincipalKey{SecureString}/value",
+      "properties{AzureBlobStorage}/typeProperties/tenant",
       "properties{AzureFileStorage}",
       "properties{AzureFileStorage}/annotations",
       "properties{AzureFileStorage}/connectVia/referenceName",
@@ -3669,6 +3804,20 @@
     "api_version": "2020-09-18",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Kusto/clusters/{clusterName}/databases/{databaseName}/dataConnections/{dataConnectionName}",
     "operation": "PUT",
+    "variant": "EventGrid",
+    "properties": [
+      "location",
+      "properties/blobStorageEventType",
+      "properties/consumerGroup",
+      "properties/eventHubResourceId",
+      "properties/ignoreFirstRecord",
+      "properties/storageAccountResourceId"
+    ]
+  },
+  {
+    "api_version": "2020-09-18",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Kusto/clusters/{clusterName}/databases/{databaseName}/dataConnections/{dataConnectionName}",
+    "operation": "PUT",
     "variant": "EventHub",
     "properties": [
       "id",
@@ -3680,6 +3829,19 @@
       "properties/eventHubResourceId",
       "properties/mappingRuleName",
       "properties/tableName"
+    ]
+  },
+  {
+    "api_version": "2020-09-18",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Kusto/clusters/{clusterName}/databases/{databaseName}/dataConnections/{dataConnectionName}",
+    "operation": "PUT",
+    "variant": "IotHub",
+    "properties": [
+      "location",
+      "properties/consumerGroup",
+      "properties/eventSystemProperties",
+      "properties/iotHubResourceId",
+      "properties/sharedAccessPolicyName"
     ]
   },
   {
@@ -3710,6 +3872,7 @@
       "name",
       "properties/dataIngestionUri",
       "properties/enableDiskEncryption",
+      "properties/enableDoubleEncryption",
       "properties/enablePurge",
       "properties/enableStreamingIngest",
       "properties/engineType",
@@ -4473,7 +4636,7 @@
     ]
   },
   {
-    "api_version": "2019-10-01",
+    "api_version": "2020-09-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetApp/netAppAccounts/{accountName}",
     "operation": "PUT",
     "properties": [
@@ -4490,7 +4653,23 @@
     ]
   },
   {
-    "api_version": "2019-10-01",
+    "api_version": "2020-09-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetApp/netAppAccounts/{accountName}/capacityPools/{poolName}/volumes/{volumeName}/authorizeReplication",
+    "operation": "POST",
+    "properties": [
+      "remoteVolumeResourceId"
+    ]
+  },
+  {
+    "api_version": "2020-09-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetApp/netAppAccounts/{accountName}/capacityPools/{poolName}/volumes/{volumeName}/breakReplication",
+    "operation": "POST",
+    "properties": [
+      "forceBreakReplication"
+    ]
+  },
+  {
+    "api_version": "2020-09-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetApp/netAppAccounts/{accountName}/capacityPools/{poolName}",
     "operation": "PUT",
     "properties": [
@@ -4502,31 +4681,26 @@
     ]
   },
   {
-    "api_version": "2019-10-01",
+    "api_version": "2020-09-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetApp/netAppAccounts/{accountName}/capacityPools/{poolName}/volumes/{volumeName}/snapshots/{snapshotName}",
     "operation": "PUT",
     "properties": [
       "id",
-      "location",
-      "tags"
+      "location"
     ]
   },
   {
-    "api_version": "2019-10-01",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetApp/netAppAccounts/{accountName}/capacityPools/{poolName}/volumes/{volumeName}/snapshots/{snapshotName}",
-    "operation": "PATCH",
-    "properties": [
-      "tags"
-    ]
-  },
-  {
-    "api_version": "2019-10-01",
+    "api_version": "2020-09-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetApp/netAppAccounts/{accountName}/capacityPools/{poolName}/volumes/{volumeName}",
     "operation": "PUT",
     "properties": [
       "id",
       "location",
       "properties/creationToken",
+      "properties/dataProtection/replication/endpointType",
+      "properties/dataProtection/replication/remoteVolumeRegion",
+      "properties/dataProtection/replication/remoteVolumeResourceId",
+      "properties/dataProtection/replication/replicationSchedule",
       "properties/exportPolicy/rules/allowedClients",
       "properties/exportPolicy/rules/cifs",
       "properties/exportPolicy/rules/nfsv3",
@@ -4539,6 +4713,7 @@
       "properties/serviceLevel",
       "properties/subnetId",
       "properties/usageThreshold",
+      "properties/volumeType",
       "tags"
     ]
   },
@@ -5953,6 +6128,10 @@
       "properties/activeActive",
       "properties/bgpSettings/asn",
       "properties/bgpSettings/bgpPeeringAddress",
+      "properties/bgpSettings/bgpPeeringAddresses/customBgpIpAddresses",
+      "properties/bgpSettings/bgpPeeringAddresses/defaultBgpIpAddresses",
+      "properties/bgpSettings/bgpPeeringAddresses/ipconfigurationId",
+      "properties/bgpSettings/bgpPeeringAddresses/tunnelIpAddresses",
       "properties/bgpSettings/peerWeight",
       "properties/customRoutes/addressPrefixes",
       "properties/enableBgp",
@@ -6784,7 +6963,8 @@
       "properties/scope",
       "properties/severity",
       "properties/state",
-      "properties/throttling/duration"
+      "properties/throttling/duration",
+      "tags"
     ]
   },
   {
@@ -7731,7 +7911,6 @@
     "operation": "PUT",
     "properties": [
       "id",
-      "name",
       "properties/captureDescription/destination/name",
       "properties/captureDescription/destination/properties/archiveNameFormat",
       "properties/captureDescription/destination/properties/blobContainer",
@@ -7874,8 +8053,12 @@
       "properties/voiceReceivers/countryCode",
       "properties/voiceReceivers/name",
       "properties/voiceReceivers/phoneNumber",
+      "properties/webhookReceivers/identifierUri",
       "properties/webhookReceivers/name",
+      "properties/webhookReceivers/objectId",
       "properties/webhookReceivers/serviceUri",
+      "properties/webhookReceivers/tenantId",
+      "properties/webhookReceivers/useAadAuth",
       "properties/webhookReceivers/useCommonAlertSchema",
       "tags"
     ]
@@ -8170,6 +8353,21 @@
     "properties": [
       "id",
       "properties/isEnabled"
+    ]
+  },
+  {
+    "api_version": "2020-01-01",
+    "api_path": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/assessmentMetadata/{assessmentMetadataName}",
+    "operation": "PUT",
+    "properties": [
+      "properties/assessmentType",
+      "properties/description",
+      "properties/displayName",
+      "properties/implementationEffort",
+      "properties/remediationDescription",
+      "properties/severity",
+      "properties/threats",
+      "properties/userImpact"
     ]
   },
   {
@@ -8523,6 +8721,58 @@
     ]
   },
   {
+    "api_version": "2019-01-01-preview",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{operationalInsightsResourceProvider}/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/dataConnectors/{dataConnectorId}",
+    "operation": "PUT",
+    "variant": "AzureActiveDirectory",
+    "properties": [
+      "kind",
+      "name",
+      "properties/dataTypes/alerts/state",
+      "properties/tenantId"
+    ]
+  },
+  {
+    "api_version": "2019-01-01-preview",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{operationalInsightsResourceProvider}/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/dataConnectors/{dataConnectorId}",
+    "operation": "PUT",
+    "variant": "AmazonWebServicesCloudTrail",
+    "properties": [
+      "etag",
+      "kind",
+      "name",
+      "properties/awsRoleArn",
+      "properties/dataTypes/logs/state"
+    ]
+  },
+  {
+    "api_version": "2019-01-01-preview",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{operationalInsightsResourceProvider}/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/dataConnectors/{dataConnectorId}",
+    "operation": "PUT",
+    "variant": "Office365",
+    "properties": [
+      "etag",
+      "kind",
+      "name",
+      "properties/dataTypes/exchange/state",
+      "properties/dataTypes/sharePoint/state",
+      "properties/dataTypes/teams/state",
+      "properties/tenantId"
+    ]
+  },
+  {
+    "api_version": "2019-01-01-preview",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{operationalInsightsResourceProvider}/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/dataConnectors/{dataConnectorId}",
+    "operation": "PUT",
+    "variant": "ThreatIntelligence",
+    "properties": [
+      "kind",
+      "name",
+      "properties/dataTypes/indicators/state",
+      "properties/tenantId"
+    ]
+  },
+  {
     "api_version": "2018-01-01-preview",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/networkrulesets/default",
     "operation": "PUT",
@@ -8601,6 +8851,18 @@
       "properties/reverseProxyCertificateCommonNames/commonNames/certificateCommonName",
       "properties/reverseProxyCertificateCommonNames/commonNames/certificateIssuerThumbprint",
       "properties/reverseProxyCertificateCommonNames/x509StoreName",
+      "properties/upgradeDescription/deltaHealthPolicy/maxPercentDeltaUnhealthyApplications",
+      "properties/upgradeDescription/deltaHealthPolicy/maxPercentDeltaUnhealthyNodes",
+      "properties/upgradeDescription/deltaHealthPolicy/maxPercentUpgradeDomainDeltaUnhealthyNodes",
+      "properties/upgradeDescription/forceRestart",
+      "properties/upgradeDescription/healthCheckRetryTimeout",
+      "properties/upgradeDescription/healthCheckStableDuration",
+      "properties/upgradeDescription/healthCheckWaitDuration",
+      "properties/upgradeDescription/healthPolicy/maxPercentUnhealthyApplications",
+      "properties/upgradeDescription/healthPolicy/maxPercentUnhealthyNodes",
+      "properties/upgradeDescription/upgradeDomainTimeout",
+      "properties/upgradeDescription/upgradeReplicaSetCheckTimeout",
+      "properties/upgradeDescription/upgradeTimeout",
       "properties/upgradeMode",
       "properties/vmImage",
       "tags"
@@ -9600,6 +9862,36 @@
     ]
   },
   {
+    "api_version": "2021-03-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redisEnterprise/{clusterName}",
+    "operation": "PUT",
+    "properties": [
+      "location",
+      "name",
+      "properties/hostName",
+      "properties/redisVersion",
+      "properties/resourceState",
+      "sku/capacity",
+      "sku/name",
+      "tags",
+      "zones"
+    ]
+  },
+  {
+    "api_version": "2021-03-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redisEnterprise/{clusterName}/databases/{databaseName}",
+    "operation": "PUT",
+    "properties": [
+      "properties/clientProtocol",
+      "properties/clusteringPolicy",
+      "properties/evictionPolicy",
+      "properties/modules/args",
+      "properties/modules/name",
+      "properties/modules/version",
+      "properties/port"
+    ]
+  },
+  {
     "api_version": "2017-04-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Relay/namespaces/{namespaceName}/hybridConnections/{hybridConnectionName}",
     "operation": "PUT",
@@ -9965,27 +10257,46 @@
     ]
   },
   {
-    "api_version": "2018-10-01",
+    "api_version": "2020-05-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.SignalRService/signalR/{resourceName}",
-    "operation": "PUT",
+    "operation": "PATCH",
     "properties": [
+      "id",
       "location",
       "properties/cors/allowedOrigins",
+      "properties/externalIP",
       "properties/features/flag",
       "properties/features/value",
+      "properties/hostName",
+      "properties/publicPort",
+      "properties/serverPort",
+      "properties/upstream/templates/categoryPattern",
+      "properties/upstream/templates/eventPattern",
+      "properties/upstream/templates/hubPattern",
+      "properties/upstream/templates/urlTemplate",
       "sku/capacity",
       "sku/name",
       "tags"
     ]
   },
   {
-    "api_version": "2018-10-01",
+    "api_version": "2020-05-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.SignalRService/signalR/{resourceName}",
-    "operation": "PATCH",
+    "operation": "PUT",
     "properties": [
+      "id",
+      "location",
       "properties/cors/allowedOrigins",
+      "properties/externalIP",
       "properties/features/flag",
       "properties/features/value",
+      "properties/hostName",
+      "properties/publicPort",
+      "properties/serverPort",
+      "properties/upstream/templates/categoryPattern",
+      "properties/upstream/templates/eventPattern",
+      "properties/upstream/templates/hubPattern",
+      "properties/upstream/templates/urlTemplate",
       "sku/capacity",
       "sku/name",
       "tags"
@@ -10441,6 +10752,25 @@
       "name",
       "properties/query",
       "properties/streamingUnits"
+    ]
+  },
+  {
+    "api_version": "2020-09-01",
+    "api_path": "/subscriptions/{subscriptionId}/providers/Microsoft.Subscription/rename",
+    "operation": "POST",
+    "properties": [
+      "subscriptionName"
+    ]
+  },
+  {
+    "api_version": "2020-09-01",
+    "api_path": "/providers/Microsoft.Subscription/aliases/{aliasName}",
+    "operation": "PUT",
+    "properties": [
+      "properties/billingScope",
+      "properties/displayName",
+      "properties/subscriptionId",
+      "properties/workload"
     ]
   },
   {
