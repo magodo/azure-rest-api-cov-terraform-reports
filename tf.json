@@ -428,6 +428,7 @@
       "identity/type",
       "identity/userAssignedIdentities",
       "location",
+      "name",
       "properties/additionalLocations/gatewayRegionalUrl",
       "properties/additionalLocations/location",
       "properties/additionalLocations/privateIPAddresses",
@@ -1679,6 +1680,7 @@
       "properties/osProfile/windowsConfiguration/timeZone",
       "properties/osProfile/windowsConfiguration/winRM/listeners/certificateUrl",
       "properties/osProfile/windowsConfiguration/winRM/listeners/protocol",
+      "properties/platformFaultDomain",
       "properties/priority",
       "properties/provisioningState",
       "properties/proximityPlacementGroup/id",
@@ -2033,6 +2035,7 @@
       "properties/osProfile/windowsConfiguration/timeZone",
       "properties/osProfile/windowsConfiguration/winRM/listeners/certificateUrl",
       "properties/osProfile/windowsConfiguration/winRM/listeners/protocol",
+      "properties/platformFaultDomain",
       "properties/priority",
       "properties/proximityPlacementGroup/id",
       "properties/securityProfile/encryptionAtHost",
@@ -2311,6 +2314,7 @@
       "properties/apiServerAccessProfile/enablePrivateCluster",
       "properties/apiServerAccessProfile/privateDNSZone",
       "properties/autoScalerProfile/balance-similar-node-groups",
+      "properties/autoScalerProfile/expander",
       "properties/autoScalerProfile/max-graceful-termination-sec",
       "properties/autoScalerProfile/new-pod-scale-up-delay",
       "properties/autoScalerProfile/scale-down-delay-after-add",
@@ -2559,6 +2563,21 @@
       "properties{Json}/typeProperties/location{HttpServerLocation}/fileName",
       "properties{Json}/typeProperties/location{HttpServerLocation}/folderPath",
       "properties{Json}/typeProperties/location{HttpServerLocation}/relativeUrl",
+      "properties{Parquet}",
+      "properties{Parquet}/annotations",
+      "properties{Parquet}/description",
+      "properties{Parquet}/folder/name",
+      "properties{Parquet}/linkedServiceName/referenceName",
+      "properties{Parquet}/linkedServiceName/type",
+      "properties{Parquet}/parameters",
+      "properties{Parquet}/structure",
+      "properties{Parquet}/typeProperties/compressionCodec",
+      "properties{Parquet}/typeProperties/location{AzureBlobStorageLocation}/container",
+      "properties{Parquet}/typeProperties/location{AzureBlobStorageLocation}/fileName",
+      "properties{Parquet}/typeProperties/location{AzureBlobStorageLocation}/folderPath",
+      "properties{Parquet}/typeProperties/location{HttpServerLocation}/fileName",
+      "properties{Parquet}/typeProperties/location{HttpServerLocation}/folderPath",
+      "properties{Parquet}/typeProperties/location{HttpServerLocation}/relativeUrl",
       "properties{RelationalTable}",
       "properties{RelationalTable}/annotations",
       "properties{RelationalTable}/description",
@@ -4686,7 +4705,8 @@
     "operation": "PUT",
     "properties": [
       "id",
-      "location"
+      "location",
+      "properties/snapshotId"
     ]
   },
   {
@@ -4711,6 +4731,7 @@
       "properties/mountTargets/ipAddress",
       "properties/protocolTypes",
       "properties/serviceLevel",
+      "properties/snapshotId",
       "properties/subnetId",
       "properties/usageThreshold",
       "properties/volumeType",
@@ -6968,10 +6989,13 @@
     ]
   },
   {
-    "api_version": "2018-09-01-preview",
+    "api_version": "2020-04-01-preview",
     "api_path": "/{scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}",
     "operation": "PUT",
     "properties": [
+      "properties/condition",
+      "properties/conditionVersion",
+      "properties/description",
       "properties/principalId",
       "properties/principalType",
       "properties/roleDefinitionId"
@@ -8336,6 +8360,24 @@
     ]
   },
   {
+    "api_version": "2020-12-01-preview",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Purview/accounts/{accountName}",
+    "operation": "PUT",
+    "properties": [
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
+      "location",
+      "properties/endpoints/catalog",
+      "properties/endpoints/guardian",
+      "properties/endpoints/scan",
+      "properties/publicNetworkAccess",
+      "sku/capacity",
+      "sku/name",
+      "tags"
+    ]
+  },
+  {
     "api_version": "2018-03-01-preview",
     "api_path": "/providers/Microsoft.Management/managementGroups/{groupId}",
     "operation": "PUT",
@@ -8353,6 +8395,19 @@
     "properties": [
       "id",
       "properties/isEnabled"
+    ]
+  },
+  {
+    "api_version": "2020-01-01",
+    "api_path": "/{resourceId}/providers/Microsoft.Security/assessments/{assessmentName}",
+    "operation": "PUT",
+    "properties": [
+      "id",
+      "properties/additionalData",
+      "properties/resourceDetails{Azure}/source",
+      "properties/status/cause",
+      "properties/status/code",
+      "properties/status/description"
     ]
   },
   {
@@ -8736,6 +8791,30 @@
     "api_version": "2019-01-01-preview",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{operationalInsightsResourceProvider}/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/dataConnectors/{dataConnectorId}",
     "operation": "PUT",
+    "variant": "AzureAdvancedThreatProtection",
+    "properties": [
+      "kind",
+      "name",
+      "properties/dataTypes/alerts/state",
+      "properties/tenantId"
+    ]
+  },
+  {
+    "api_version": "2019-01-01-preview",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{operationalInsightsResourceProvider}/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/dataConnectors/{dataConnectorId}",
+    "operation": "PUT",
+    "variant": "AzureSecurityCenter",
+    "properties": [
+      "kind",
+      "name",
+      "properties/dataTypes/alerts/state",
+      "properties/subscriptionId"
+    ]
+  },
+  {
+    "api_version": "2019-01-01-preview",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{operationalInsightsResourceProvider}/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/dataConnectors/{dataConnectorId}",
+    "operation": "PUT",
     "variant": "AmazonWebServicesCloudTrail",
     "properties": [
       "etag",
@@ -8743,6 +8822,20 @@
       "name",
       "properties/awsRoleArn",
       "properties/dataTypes/logs/state"
+    ]
+  },
+  {
+    "api_version": "2019-01-01-preview",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{operationalInsightsResourceProvider}/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/dataConnectors/{dataConnectorId}",
+    "operation": "PUT",
+    "variant": "MicrosoftCloudAppSecurity",
+    "properties": [
+      "etag",
+      "kind",
+      "name",
+      "properties/dataTypes/alerts/state",
+      "properties/dataTypes/discoveryLogs/state",
+      "properties/tenantId"
     ]
   },
   {

@@ -8029,12 +8029,24 @@
   "authorization": {
     "/{scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}": {
       "PUT": {
-        "2018-09-01-preview": {
+        "2020-04-01-preview": {
           "name": "RoleAssignmentCreateParameters",
-          "swagger_rel_path": "authorization/resource-manager/Microsoft.Authorization/preview/2018-09-01-preview/authorization-RoleAssignmentsCalls.json",
+          "swagger_rel_path": "authorization/resource-manager/Microsoft.Authorization/preview/2020-04-01-preview/authorization-RoleAssignmentsCalls.json",
           "properties": {
             "properties/canDelegate": {
               "state": "Uncovered"
+            },
+            "properties/condition": {
+              "state": "Covered"
+            },
+            "properties/conditionVersion": {
+              "state": "Covered"
+            },
+            "properties/delegatedManagedIdentityResourceId": {
+              "state": "Uncovered"
+            },
+            "properties/description": {
+              "state": "Covered"
             },
             "properties/principalId": {
               "state": "Covered"
@@ -8047,77 +8059,6 @@
             }
           },
           "active": true
-        },
-        "2020-03-01-preview": {
-          "name": "RoleAssignmentCreateParameters",
-          "swagger_rel_path": "authorization/resource-manager/Microsoft.Authorization/preview/2020-03-01-preview/authorization-RoleAssignmentsCalls.json",
-          "properties": {
-            "properties/canDelegate": {
-              "state": "Uncovered"
-            },
-            "properties/condition": {
-              "state": "Uncovered"
-            },
-            "properties/conditionVersion": {
-              "state": "Uncovered"
-            },
-            "properties/createdBy": {
-              "state": "Ignored"
-            },
-            "properties/createdOn": {
-              "state": "Ignored"
-            },
-            "properties/delegatedManagedIdentityResourceId": {
-              "state": "Uncovered"
-            },
-            "properties/principalId": {
-              "state": "Covered"
-            },
-            "properties/principalType": {
-              "state": "Covered"
-            },
-            "properties/roleDefinitionId": {
-              "state": "Covered"
-            },
-            "properties/scope": {
-              "state": "Uncovered"
-            },
-            "properties/updatedBy": {
-              "state": "Ignored"
-            },
-            "properties/updatedOn": {
-              "state": "Ignored"
-            }
-          },
-          "active": false
-        },
-        "2020-04-01-preview": {
-          "name": "RoleAssignmentCreateParameters",
-          "swagger_rel_path": "authorization/resource-manager/Microsoft.Authorization/preview/2020-04-01-preview/authorization-RoleAssignmentsCalls.json",
-          "properties": {
-            "properties/canDelegate": {
-              "state": "Uncovered"
-            },
-            "properties/condition": {
-              "state": "Uncovered"
-            },
-            "properties/conditionVersion": {
-              "state": "Uncovered"
-            },
-            "properties/description": {
-              "state": "Uncovered"
-            },
-            "properties/principalId": {
-              "state": "Covered"
-            },
-            "properties/principalType": {
-              "state": "Covered"
-            },
-            "properties/roleDefinitionId": {
-              "state": "Covered"
-            }
-          },
-          "active": false
         }
       }
     },
@@ -25369,7 +25310,7 @@
               "state": "Covered"
             },
             "properties/platformFaultDomain": {
-              "state": "Uncovered"
+              "state": "Covered"
             },
             "properties/priority": {
               "state": "Covered"
@@ -26005,7 +25946,7 @@
               "state": "Covered"
             },
             "properties/platformFaultDomain": {
-              "state": "Uncovered"
+              "state": "Covered"
             },
             "properties/priority": {
               "state": "Covered"
@@ -28978,7 +28919,7 @@
               "state": "Covered"
             },
             "properties/autoScalerProfile/expander": {
-              "state": "Uncovered"
+              "state": "Covered"
             },
             "properties/autoScalerProfile/max-empty-bulk-delete": {
               "state": "Uncovered"
@@ -29468,7 +29409,7 @@
               "state": "Covered"
             },
             "properties/autoScalerProfile/expander": {
-              "state": "Uncovered"
+              "state": "Covered"
             },
             "properties/autoScalerProfile/max-empty-bulk-delete": {
               "state": "Uncovered"
@@ -31036,7 +30977,7 @@
               "state": "Uncovered"
             },
             "properties{Default}/publicNetworkAccess": {
-              "state": "Ignored"
+              "state": "Uncovered"
             },
             "properties{Default}/virtualNetworkRules/id": {
               "state": "Uncovered"
@@ -31150,7 +31091,7 @@
               "state": "Uncovered"
             },
             "properties{Restore}/publicNetworkAccess": {
-              "state": "Ignored"
+              "state": "Uncovered"
             },
             "properties{Restore}/restoreParameters/databasesToRestore/collectionNames": {
               "state": "Uncovered"
@@ -38209,6 +38150,21 @@
             "properties{Avro}/typeProperties/avroCompressionLevel": {
               "state": "Uncovered"
             },
+            "properties{Avro}/typeProperties/location{AmazonS3CompatibleLocation}/bucketName": {
+              "state": "Uncovered"
+            },
+            "properties{Avro}/typeProperties/location{AmazonS3CompatibleLocation}/fileName": {
+              "state": "Uncovered"
+            },
+            "properties{Avro}/typeProperties/location{AmazonS3CompatibleLocation}/folderPath": {
+              "state": "Uncovered"
+            },
+            "properties{Avro}/typeProperties/location{AmazonS3CompatibleLocation}/type": {
+              "state": "Uncovered"
+            },
+            "properties{Avro}/typeProperties/location{AmazonS3CompatibleLocation}/version": {
+              "state": "Uncovered"
+            },
             "properties{Avro}/typeProperties/location{AmazonS3Location}/bucketName": {
               "state": "Uncovered"
             },
@@ -38318,6 +38274,21 @@
               "state": "Uncovered"
             },
             "properties{Avro}/typeProperties/location{HttpServerLocation}/type": {
+              "state": "Uncovered"
+            },
+            "properties{Avro}/typeProperties/location{OracleCloudStorageLocation}/bucketName": {
+              "state": "Uncovered"
+            },
+            "properties{Avro}/typeProperties/location{OracleCloudStorageLocation}/fileName": {
+              "state": "Uncovered"
+            },
+            "properties{Avro}/typeProperties/location{OracleCloudStorageLocation}/folderPath": {
+              "state": "Uncovered"
+            },
+            "properties{Avro}/typeProperties/location{OracleCloudStorageLocation}/type": {
+              "state": "Uncovered"
+            },
+            "properties{Avro}/typeProperties/location{OracleCloudStorageLocation}/version": {
               "state": "Uncovered"
             },
             "properties{Avro}/typeProperties/location{SftpLocation}/fileName": {
@@ -39217,6 +39188,21 @@
             "properties{Binary}/typeProperties/compression{ZipDeflate}/type": {
               "state": "Uncovered"
             },
+            "properties{Binary}/typeProperties/location{AmazonS3CompatibleLocation}/bucketName": {
+              "state": "Uncovered"
+            },
+            "properties{Binary}/typeProperties/location{AmazonS3CompatibleLocation}/fileName": {
+              "state": "Uncovered"
+            },
+            "properties{Binary}/typeProperties/location{AmazonS3CompatibleLocation}/folderPath": {
+              "state": "Uncovered"
+            },
+            "properties{Binary}/typeProperties/location{AmazonS3CompatibleLocation}/type": {
+              "state": "Uncovered"
+            },
+            "properties{Binary}/typeProperties/location{AmazonS3CompatibleLocation}/version": {
+              "state": "Uncovered"
+            },
             "properties{Binary}/typeProperties/location{AmazonS3Location}/bucketName": {
               "state": "Uncovered"
             },
@@ -39326,6 +39312,21 @@
               "state": "Uncovered"
             },
             "properties{Binary}/typeProperties/location{HttpServerLocation}/type": {
+              "state": "Uncovered"
+            },
+            "properties{Binary}/typeProperties/location{OracleCloudStorageLocation}/bucketName": {
+              "state": "Uncovered"
+            },
+            "properties{Binary}/typeProperties/location{OracleCloudStorageLocation}/fileName": {
+              "state": "Uncovered"
+            },
+            "properties{Binary}/typeProperties/location{OracleCloudStorageLocation}/folderPath": {
+              "state": "Uncovered"
+            },
+            "properties{Binary}/typeProperties/location{OracleCloudStorageLocation}/type": {
+              "state": "Uncovered"
+            },
+            "properties{Binary}/typeProperties/location{OracleCloudStorageLocation}/version": {
               "state": "Uncovered"
             },
             "properties{Binary}/typeProperties/location{SftpLocation}/fileName": {
@@ -39658,6 +39659,21 @@
             "properties{DelimitedText}/typeProperties/firstRowAsHeader": {
               "state": "Covered"
             },
+            "properties{DelimitedText}/typeProperties/location{AmazonS3CompatibleLocation}/bucketName": {
+              "state": "Uncovered"
+            },
+            "properties{DelimitedText}/typeProperties/location{AmazonS3CompatibleLocation}/fileName": {
+              "state": "Uncovered"
+            },
+            "properties{DelimitedText}/typeProperties/location{AmazonS3CompatibleLocation}/folderPath": {
+              "state": "Uncovered"
+            },
+            "properties{DelimitedText}/typeProperties/location{AmazonS3CompatibleLocation}/type": {
+              "state": "Uncovered"
+            },
+            "properties{DelimitedText}/typeProperties/location{AmazonS3CompatibleLocation}/version": {
+              "state": "Uncovered"
+            },
             "properties{DelimitedText}/typeProperties/location{AmazonS3Location}/bucketName": {
               "state": "Uncovered"
             },
@@ -39767,6 +39783,21 @@
               "state": "Covered"
             },
             "properties{DelimitedText}/typeProperties/location{HttpServerLocation}/type": {
+              "state": "Uncovered"
+            },
+            "properties{DelimitedText}/typeProperties/location{OracleCloudStorageLocation}/bucketName": {
+              "state": "Uncovered"
+            },
+            "properties{DelimitedText}/typeProperties/location{OracleCloudStorageLocation}/fileName": {
+              "state": "Uncovered"
+            },
+            "properties{DelimitedText}/typeProperties/location{OracleCloudStorageLocation}/folderPath": {
+              "state": "Uncovered"
+            },
+            "properties{DelimitedText}/typeProperties/location{OracleCloudStorageLocation}/type": {
+              "state": "Uncovered"
+            },
+            "properties{DelimitedText}/typeProperties/location{OracleCloudStorageLocation}/version": {
               "state": "Uncovered"
             },
             "properties{DelimitedText}/typeProperties/location{SftpLocation}/fileName": {
@@ -40054,6 +40085,21 @@
             "properties{Excel}/typeProperties/firstRowAsHeader": {
               "state": "Uncovered"
             },
+            "properties{Excel}/typeProperties/location{AmazonS3CompatibleLocation}/bucketName": {
+              "state": "Uncovered"
+            },
+            "properties{Excel}/typeProperties/location{AmazonS3CompatibleLocation}/fileName": {
+              "state": "Uncovered"
+            },
+            "properties{Excel}/typeProperties/location{AmazonS3CompatibleLocation}/folderPath": {
+              "state": "Uncovered"
+            },
+            "properties{Excel}/typeProperties/location{AmazonS3CompatibleLocation}/type": {
+              "state": "Uncovered"
+            },
+            "properties{Excel}/typeProperties/location{AmazonS3CompatibleLocation}/version": {
+              "state": "Uncovered"
+            },
             "properties{Excel}/typeProperties/location{AmazonS3Location}/bucketName": {
               "state": "Uncovered"
             },
@@ -40163,6 +40209,21 @@
               "state": "Uncovered"
             },
             "properties{Excel}/typeProperties/location{HttpServerLocation}/type": {
+              "state": "Uncovered"
+            },
+            "properties{Excel}/typeProperties/location{OracleCloudStorageLocation}/bucketName": {
+              "state": "Uncovered"
+            },
+            "properties{Excel}/typeProperties/location{OracleCloudStorageLocation}/fileName": {
+              "state": "Uncovered"
+            },
+            "properties{Excel}/typeProperties/location{OracleCloudStorageLocation}/folderPath": {
+              "state": "Uncovered"
+            },
+            "properties{Excel}/typeProperties/location{OracleCloudStorageLocation}/type": {
+              "state": "Uncovered"
+            },
+            "properties{Excel}/typeProperties/location{OracleCloudStorageLocation}/version": {
               "state": "Uncovered"
             },
             "properties{Excel}/typeProperties/location{SftpLocation}/fileName": {
@@ -40888,6 +40949,21 @@
             "properties{Json}/typeProperties/encodingName": {
               "state": "Covered"
             },
+            "properties{Json}/typeProperties/location{AmazonS3CompatibleLocation}/bucketName": {
+              "state": "Uncovered"
+            },
+            "properties{Json}/typeProperties/location{AmazonS3CompatibleLocation}/fileName": {
+              "state": "Uncovered"
+            },
+            "properties{Json}/typeProperties/location{AmazonS3CompatibleLocation}/folderPath": {
+              "state": "Uncovered"
+            },
+            "properties{Json}/typeProperties/location{AmazonS3CompatibleLocation}/type": {
+              "state": "Uncovered"
+            },
+            "properties{Json}/typeProperties/location{AmazonS3CompatibleLocation}/version": {
+              "state": "Uncovered"
+            },
             "properties{Json}/typeProperties/location{AmazonS3Location}/bucketName": {
               "state": "Uncovered"
             },
@@ -40997,6 +41073,21 @@
               "state": "Covered"
             },
             "properties{Json}/typeProperties/location{HttpServerLocation}/type": {
+              "state": "Uncovered"
+            },
+            "properties{Json}/typeProperties/location{OracleCloudStorageLocation}/bucketName": {
+              "state": "Uncovered"
+            },
+            "properties{Json}/typeProperties/location{OracleCloudStorageLocation}/fileName": {
+              "state": "Uncovered"
+            },
+            "properties{Json}/typeProperties/location{OracleCloudStorageLocation}/folderPath": {
+              "state": "Uncovered"
+            },
+            "properties{Json}/typeProperties/location{OracleCloudStorageLocation}/type": {
+              "state": "Uncovered"
+            },
+            "properties{Json}/typeProperties/location{OracleCloudStorageLocation}/version": {
               "state": "Uncovered"
             },
             "properties{Json}/typeProperties/location{SftpLocation}/fileName": {
@@ -41515,6 +41606,21 @@
             "properties{Orc}/type": {
               "state": "Uncovered"
             },
+            "properties{Orc}/typeProperties/location{AmazonS3CompatibleLocation}/bucketName": {
+              "state": "Uncovered"
+            },
+            "properties{Orc}/typeProperties/location{AmazonS3CompatibleLocation}/fileName": {
+              "state": "Uncovered"
+            },
+            "properties{Orc}/typeProperties/location{AmazonS3CompatibleLocation}/folderPath": {
+              "state": "Uncovered"
+            },
+            "properties{Orc}/typeProperties/location{AmazonS3CompatibleLocation}/type": {
+              "state": "Uncovered"
+            },
+            "properties{Orc}/typeProperties/location{AmazonS3CompatibleLocation}/version": {
+              "state": "Uncovered"
+            },
             "properties{Orc}/typeProperties/location{AmazonS3Location}/bucketName": {
               "state": "Uncovered"
             },
@@ -41626,6 +41732,21 @@
             "properties{Orc}/typeProperties/location{HttpServerLocation}/type": {
               "state": "Uncovered"
             },
+            "properties{Orc}/typeProperties/location{OracleCloudStorageLocation}/bucketName": {
+              "state": "Uncovered"
+            },
+            "properties{Orc}/typeProperties/location{OracleCloudStorageLocation}/fileName": {
+              "state": "Uncovered"
+            },
+            "properties{Orc}/typeProperties/location{OracleCloudStorageLocation}/folderPath": {
+              "state": "Uncovered"
+            },
+            "properties{Orc}/typeProperties/location{OracleCloudStorageLocation}/type": {
+              "state": "Uncovered"
+            },
+            "properties{Orc}/typeProperties/location{OracleCloudStorageLocation}/version": {
+              "state": "Uncovered"
+            },
             "properties{Orc}/typeProperties/location{SftpLocation}/fileName": {
               "state": "Uncovered"
             },
@@ -41639,36 +41760,51 @@
               "state": "Uncovered"
             },
             "properties{Parquet}/annotations": {
-              "state": "Uncovered"
+              "state": "Covered"
             },
             "properties{Parquet}/description": {
-              "state": "Uncovered"
+              "state": "Covered"
             },
             "properties{Parquet}/folder/name": {
-              "state": "Uncovered"
+              "state": "Covered"
             },
             "properties{Parquet}/linkedServiceName/parameters": {
               "state": "Uncovered"
             },
             "properties{Parquet}/linkedServiceName/referenceName": {
-              "state": "Uncovered"
+              "state": "Covered"
             },
             "properties{Parquet}/linkedServiceName/type": {
-              "state": "Uncovered"
+              "state": "Covered"
             },
             "properties{Parquet}/parameters": {
-              "state": "Uncovered"
+              "state": "Covered"
             },
             "properties{Parquet}/schema": {
               "state": "Uncovered"
             },
             "properties{Parquet}/structure": {
-              "state": "Uncovered"
+              "state": "Covered"
             },
             "properties{Parquet}/type": {
               "state": "Uncovered"
             },
             "properties{Parquet}/typeProperties/compressionCodec": {
+              "state": "Covered"
+            },
+            "properties{Parquet}/typeProperties/location{AmazonS3CompatibleLocation}/bucketName": {
+              "state": "Uncovered"
+            },
+            "properties{Parquet}/typeProperties/location{AmazonS3CompatibleLocation}/fileName": {
+              "state": "Uncovered"
+            },
+            "properties{Parquet}/typeProperties/location{AmazonS3CompatibleLocation}/folderPath": {
+              "state": "Uncovered"
+            },
+            "properties{Parquet}/typeProperties/location{AmazonS3CompatibleLocation}/type": {
+              "state": "Uncovered"
+            },
+            "properties{Parquet}/typeProperties/location{AmazonS3CompatibleLocation}/version": {
               "state": "Uncovered"
             },
             "properties{Parquet}/typeProperties/location{AmazonS3Location}/bucketName": {
@@ -41699,13 +41835,13 @@
               "state": "Uncovered"
             },
             "properties{Parquet}/typeProperties/location{AzureBlobStorageLocation}/container": {
-              "state": "Uncovered"
+              "state": "Covered"
             },
             "properties{Parquet}/typeProperties/location{AzureBlobStorageLocation}/fileName": {
-              "state": "Uncovered"
+              "state": "Covered"
             },
             "properties{Parquet}/typeProperties/location{AzureBlobStorageLocation}/folderPath": {
-              "state": "Uncovered"
+              "state": "Covered"
             },
             "properties{Parquet}/typeProperties/location{AzureBlobStorageLocation}/type": {
               "state": "Uncovered"
@@ -41771,15 +41907,30 @@
               "state": "Uncovered"
             },
             "properties{Parquet}/typeProperties/location{HttpServerLocation}/fileName": {
-              "state": "Uncovered"
+              "state": "Covered"
             },
             "properties{Parquet}/typeProperties/location{HttpServerLocation}/folderPath": {
-              "state": "Uncovered"
+              "state": "Covered"
             },
             "properties{Parquet}/typeProperties/location{HttpServerLocation}/relativeUrl": {
-              "state": "Uncovered"
+              "state": "Covered"
             },
             "properties{Parquet}/typeProperties/location{HttpServerLocation}/type": {
+              "state": "Uncovered"
+            },
+            "properties{Parquet}/typeProperties/location{OracleCloudStorageLocation}/bucketName": {
+              "state": "Uncovered"
+            },
+            "properties{Parquet}/typeProperties/location{OracleCloudStorageLocation}/fileName": {
+              "state": "Uncovered"
+            },
+            "properties{Parquet}/typeProperties/location{OracleCloudStorageLocation}/folderPath": {
+              "state": "Uncovered"
+            },
+            "properties{Parquet}/typeProperties/location{OracleCloudStorageLocation}/type": {
+              "state": "Uncovered"
+            },
+            "properties{Parquet}/typeProperties/location{OracleCloudStorageLocation}/version": {
               "state": "Uncovered"
             },
             "properties{Parquet}/typeProperties/location{SftpLocation}/fileName": {
@@ -42874,6 +43025,21 @@
             "properties{Xml}/typeProperties/encodingName": {
               "state": "Uncovered"
             },
+            "properties{Xml}/typeProperties/location{AmazonS3CompatibleLocation}/bucketName": {
+              "state": "Uncovered"
+            },
+            "properties{Xml}/typeProperties/location{AmazonS3CompatibleLocation}/fileName": {
+              "state": "Uncovered"
+            },
+            "properties{Xml}/typeProperties/location{AmazonS3CompatibleLocation}/folderPath": {
+              "state": "Uncovered"
+            },
+            "properties{Xml}/typeProperties/location{AmazonS3CompatibleLocation}/type": {
+              "state": "Uncovered"
+            },
+            "properties{Xml}/typeProperties/location{AmazonS3CompatibleLocation}/version": {
+              "state": "Uncovered"
+            },
             "properties{Xml}/typeProperties/location{AmazonS3Location}/bucketName": {
               "state": "Uncovered"
             },
@@ -42983,6 +43149,21 @@
               "state": "Uncovered"
             },
             "properties{Xml}/typeProperties/location{HttpServerLocation}/type": {
+              "state": "Uncovered"
+            },
+            "properties{Xml}/typeProperties/location{OracleCloudStorageLocation}/bucketName": {
+              "state": "Uncovered"
+            },
+            "properties{Xml}/typeProperties/location{OracleCloudStorageLocation}/fileName": {
+              "state": "Uncovered"
+            },
+            "properties{Xml}/typeProperties/location{OracleCloudStorageLocation}/folderPath": {
+              "state": "Uncovered"
+            },
+            "properties{Xml}/typeProperties/location{OracleCloudStorageLocation}/type": {
+              "state": "Uncovered"
+            },
+            "properties{Xml}/typeProperties/location{OracleCloudStorageLocation}/version": {
               "state": "Uncovered"
             },
             "properties{Xml}/typeProperties/location{SftpLocation}/fileName": {
@@ -43430,6 +43611,63 @@
             "properties{AmazonRedshift}/typeProperties/username": {
               "state": "Uncovered"
             },
+            "properties{AmazonS3Compatible}/annotations": {
+              "state": "Uncovered"
+            },
+            "properties{AmazonS3Compatible}/connectVia/parameters": {
+              "state": "Uncovered"
+            },
+            "properties{AmazonS3Compatible}/connectVia/referenceName": {
+              "state": "Uncovered"
+            },
+            "properties{AmazonS3Compatible}/connectVia/type": {
+              "state": "Uncovered"
+            },
+            "properties{AmazonS3Compatible}/description": {
+              "state": "Uncovered"
+            },
+            "properties{AmazonS3Compatible}/parameters": {
+              "state": "Uncovered"
+            },
+            "properties{AmazonS3Compatible}/type": {
+              "state": "Uncovered"
+            },
+            "properties{AmazonS3Compatible}/typeProperties/accessKeyId": {
+              "state": "Uncovered"
+            },
+            "properties{AmazonS3Compatible}/typeProperties/encryptedCredential": {
+              "state": "Uncovered"
+            },
+            "properties{AmazonS3Compatible}/typeProperties/forcePathStyle": {
+              "state": "Uncovered"
+            },
+            "properties{AmazonS3Compatible}/typeProperties/secretAccessKey{AzureKeyVaultSecret}/secretName": {
+              "state": "Uncovered"
+            },
+            "properties{AmazonS3Compatible}/typeProperties/secretAccessKey{AzureKeyVaultSecret}/secretVersion": {
+              "state": "Uncovered"
+            },
+            "properties{AmazonS3Compatible}/typeProperties/secretAccessKey{AzureKeyVaultSecret}/store/parameters": {
+              "state": "Uncovered"
+            },
+            "properties{AmazonS3Compatible}/typeProperties/secretAccessKey{AzureKeyVaultSecret}/store/referenceName": {
+              "state": "Uncovered"
+            },
+            "properties{AmazonS3Compatible}/typeProperties/secretAccessKey{AzureKeyVaultSecret}/store/type": {
+              "state": "Uncovered"
+            },
+            "properties{AmazonS3Compatible}/typeProperties/secretAccessKey{AzureKeyVaultSecret}/type": {
+              "state": "Uncovered"
+            },
+            "properties{AmazonS3Compatible}/typeProperties/secretAccessKey{SecureString}/type": {
+              "state": "Uncovered"
+            },
+            "properties{AmazonS3Compatible}/typeProperties/secretAccessKey{SecureString}/value": {
+              "state": "Uncovered"
+            },
+            "properties{AmazonS3Compatible}/typeProperties/serviceUrl": {
+              "state": "Uncovered"
+            },
             "properties{AmazonS3}/annotations": {
               "state": "Uncovered"
             },
@@ -43677,6 +43915,9 @@
               "state": "Uncovered"
             },
             "properties{AzureBlobStorage}/typeProperties/accountKey/type": {
+              "state": "Uncovered"
+            },
+            "properties{AzureBlobStorage}/typeProperties/accountKind": {
               "state": "Uncovered"
             },
             "properties{AzureBlobStorage}/typeProperties/azureCloudType": {
@@ -45260,6 +45501,12 @@
             "properties{CosmosDb}/typeProperties/accountKey{SecureString}/value": {
               "state": "Covered"
             },
+            "properties{CosmosDb}/typeProperties/azureCloudType": {
+              "state": "Uncovered"
+            },
+            "properties{CosmosDb}/typeProperties/connectionMode": {
+              "state": "Uncovered"
+            },
             "properties{CosmosDb}/typeProperties/connectionString": {
               "state": "Covered"
             },
@@ -45267,6 +45514,39 @@
               "state": "Covered"
             },
             "properties{CosmosDb}/typeProperties/encryptedCredential": {
+              "state": "Uncovered"
+            },
+            "properties{CosmosDb}/typeProperties/servicePrincipalCredentialType": {
+              "state": "Uncovered"
+            },
+            "properties{CosmosDb}/typeProperties/servicePrincipalCredential{AzureKeyVaultSecret}/secretName": {
+              "state": "Uncovered"
+            },
+            "properties{CosmosDb}/typeProperties/servicePrincipalCredential{AzureKeyVaultSecret}/secretVersion": {
+              "state": "Uncovered"
+            },
+            "properties{CosmosDb}/typeProperties/servicePrincipalCredential{AzureKeyVaultSecret}/store/parameters": {
+              "state": "Uncovered"
+            },
+            "properties{CosmosDb}/typeProperties/servicePrincipalCredential{AzureKeyVaultSecret}/store/referenceName": {
+              "state": "Uncovered"
+            },
+            "properties{CosmosDb}/typeProperties/servicePrincipalCredential{AzureKeyVaultSecret}/store/type": {
+              "state": "Uncovered"
+            },
+            "properties{CosmosDb}/typeProperties/servicePrincipalCredential{AzureKeyVaultSecret}/type": {
+              "state": "Uncovered"
+            },
+            "properties{CosmosDb}/typeProperties/servicePrincipalCredential{SecureString}/type": {
+              "state": "Uncovered"
+            },
+            "properties{CosmosDb}/typeProperties/servicePrincipalCredential{SecureString}/value": {
+              "state": "Uncovered"
+            },
+            "properties{CosmosDb}/typeProperties/servicePrincipalId": {
+              "state": "Uncovered"
+            },
+            "properties{CosmosDb}/typeProperties/tenant": {
               "state": "Uncovered"
             },
             "properties{Couchbase}/annotations": {
@@ -47868,6 +48148,60 @@
               "state": "Uncovered"
             },
             "properties{Office365}/typeProperties/servicePrincipalTenantId": {
+              "state": "Uncovered"
+            },
+            "properties{OracleCloudStorage}/annotations": {
+              "state": "Uncovered"
+            },
+            "properties{OracleCloudStorage}/connectVia/parameters": {
+              "state": "Uncovered"
+            },
+            "properties{OracleCloudStorage}/connectVia/referenceName": {
+              "state": "Uncovered"
+            },
+            "properties{OracleCloudStorage}/connectVia/type": {
+              "state": "Uncovered"
+            },
+            "properties{OracleCloudStorage}/description": {
+              "state": "Uncovered"
+            },
+            "properties{OracleCloudStorage}/parameters": {
+              "state": "Uncovered"
+            },
+            "properties{OracleCloudStorage}/type": {
+              "state": "Uncovered"
+            },
+            "properties{OracleCloudStorage}/typeProperties/accessKeyId": {
+              "state": "Uncovered"
+            },
+            "properties{OracleCloudStorage}/typeProperties/encryptedCredential": {
+              "state": "Uncovered"
+            },
+            "properties{OracleCloudStorage}/typeProperties/secretAccessKey{AzureKeyVaultSecret}/secretName": {
+              "state": "Uncovered"
+            },
+            "properties{OracleCloudStorage}/typeProperties/secretAccessKey{AzureKeyVaultSecret}/secretVersion": {
+              "state": "Uncovered"
+            },
+            "properties{OracleCloudStorage}/typeProperties/secretAccessKey{AzureKeyVaultSecret}/store/parameters": {
+              "state": "Uncovered"
+            },
+            "properties{OracleCloudStorage}/typeProperties/secretAccessKey{AzureKeyVaultSecret}/store/referenceName": {
+              "state": "Uncovered"
+            },
+            "properties{OracleCloudStorage}/typeProperties/secretAccessKey{AzureKeyVaultSecret}/store/type": {
+              "state": "Uncovered"
+            },
+            "properties{OracleCloudStorage}/typeProperties/secretAccessKey{AzureKeyVaultSecret}/type": {
+              "state": "Uncovered"
+            },
+            "properties{OracleCloudStorage}/typeProperties/secretAccessKey{SecureString}/type": {
+              "state": "Uncovered"
+            },
+            "properties{OracleCloudStorage}/typeProperties/secretAccessKey{SecureString}/value": {
+              "state": "Uncovered"
+            },
+            "properties{OracleCloudStorage}/typeProperties/serviceUrl": {
               "state": "Uncovered"
             },
             "properties{OracleServiceCloud}/annotations": {
@@ -53433,17 +53767,53 @@
           "name": "ApplicationGroup",
           "swagger_rel_path": "desktopvirtualization/resource-manager/Microsoft.DesktopVirtualization/preview/2021-01-14-preview/desktopvirtualization.json",
           "properties": {
+            "etag": {
+              "state": "Ignored"
+            },
             "id": {
               "state": "Ignored"
+            },
+            "identity/principalId": {
+              "state": "Ignored"
+            },
+            "identity/tenantId": {
+              "state": "Ignored"
+            },
+            "identity/type": {
+              "state": "Uncovered"
+            },
+            "kind": {
+              "state": "Uncovered"
             },
             "location": {
               "state": "Covered"
             },
+            "managedBy": {
+              "state": "Uncovered"
+            },
             "name": {
               "state": "Ignored"
             },
+            "plan/name": {
+              "state": "Uncovered"
+            },
+            "plan/product": {
+              "state": "Uncovered"
+            },
+            "plan/promotionCode": {
+              "state": "Uncovered"
+            },
+            "plan/publisher": {
+              "state": "Uncovered"
+            },
+            "plan/version": {
+              "state": "Uncovered"
+            },
             "properties/applicationGroupType": {
               "state": "Covered"
+            },
+            "properties/cloudPcResource": {
+              "state": "Ignored"
             },
             "properties/description": {
               "state": "Covered"
@@ -53454,8 +53824,32 @@
             "properties/hostPoolArmPath": {
               "state": "Covered"
             },
+            "properties/migrationRequest/migrationPath": {
+              "state": "Uncovered"
+            },
+            "properties/migrationRequest/operation": {
+              "state": "Uncovered"
+            },
+            "properties/objectId": {
+              "state": "Ignored"
+            },
             "properties/workspaceArmPath": {
               "state": "Ignored"
+            },
+            "sku/capacity": {
+              "state": "Uncovered"
+            },
+            "sku/family": {
+              "state": "Uncovered"
+            },
+            "sku/name": {
+              "state": "Uncovered"
+            },
+            "sku/size": {
+              "state": "Uncovered"
+            },
+            "sku/tier": {
+              "state": "Uncovered"
             },
             "tags": {
               "state": "Covered"
@@ -53470,17 +53864,53 @@
           "name": "ApplicationGroup",
           "swagger_rel_path": "desktopvirtualization/resource-manager/Microsoft.DesktopVirtualization/preview/2021-02-01-preview/desktopvirtualization.json",
           "properties": {
+            "etag": {
+              "state": "Ignored"
+            },
             "id": {
               "state": "Ignored"
+            },
+            "identity/principalId": {
+              "state": "Ignored"
+            },
+            "identity/tenantId": {
+              "state": "Ignored"
+            },
+            "identity/type": {
+              "state": "Uncovered"
+            },
+            "kind": {
+              "state": "Uncovered"
             },
             "location": {
               "state": "Covered"
             },
+            "managedBy": {
+              "state": "Uncovered"
+            },
             "name": {
               "state": "Ignored"
             },
+            "plan/name": {
+              "state": "Uncovered"
+            },
+            "plan/product": {
+              "state": "Uncovered"
+            },
+            "plan/promotionCode": {
+              "state": "Uncovered"
+            },
+            "plan/publisher": {
+              "state": "Uncovered"
+            },
+            "plan/version": {
+              "state": "Uncovered"
+            },
             "properties/applicationGroupType": {
               "state": "Covered"
+            },
+            "properties/cloudPcResource": {
+              "state": "Ignored"
             },
             "properties/description": {
               "state": "Covered"
@@ -53491,8 +53921,32 @@
             "properties/hostPoolArmPath": {
               "state": "Covered"
             },
+            "properties/migrationRequest/migrationPath": {
+              "state": "Uncovered"
+            },
+            "properties/migrationRequest/operation": {
+              "state": "Uncovered"
+            },
+            "properties/objectId": {
+              "state": "Ignored"
+            },
             "properties/workspaceArmPath": {
               "state": "Ignored"
+            },
+            "sku/capacity": {
+              "state": "Uncovered"
+            },
+            "sku/family": {
+              "state": "Uncovered"
+            },
+            "sku/name": {
+              "state": "Uncovered"
+            },
+            "sku/size": {
+              "state": "Uncovered"
+            },
+            "sku/tier": {
+              "state": "Uncovered"
             },
             "tags": {
               "state": "Covered"
@@ -53900,16 +54354,52 @@
           "name": "HostPool",
           "swagger_rel_path": "desktopvirtualization/resource-manager/Microsoft.DesktopVirtualization/preview/2021-01-14-preview/desktopvirtualization.json",
           "properties": {
+            "etag": {
+              "state": "Ignored"
+            },
             "id": {
               "state": "Ignored"
+            },
+            "identity/principalId": {
+              "state": "Ignored"
+            },
+            "identity/tenantId": {
+              "state": "Ignored"
+            },
+            "identity/type": {
+              "state": "Uncovered"
+            },
+            "kind": {
+              "state": "Uncovered"
             },
             "location": {
               "state": "Covered"
             },
+            "managedBy": {
+              "state": "Uncovered"
+            },
             "name": {
               "state": "Ignored"
             },
+            "plan/name": {
+              "state": "Uncovered"
+            },
+            "plan/product": {
+              "state": "Uncovered"
+            },
+            "plan/promotionCode": {
+              "state": "Uncovered"
+            },
+            "plan/publisher": {
+              "state": "Uncovered"
+            },
+            "plan/version": {
+              "state": "Uncovered"
+            },
             "properties/applicationGroupReferences": {
+              "state": "Ignored"
+            },
+            "properties/cloudPcResource": {
               "state": "Ignored"
             },
             "properties/customRdpProperty": {
@@ -53929,6 +54419,15 @@
             },
             "properties/maxSessionLimit": {
               "state": "Covered"
+            },
+            "properties/migrationRequest/migrationPath": {
+              "state": "Uncovered"
+            },
+            "properties/migrationRequest/operation": {
+              "state": "Uncovered"
+            },
+            "properties/objectId": {
+              "state": "Ignored"
             },
             "properties/personalDesktopAssignmentType": {
               "state": "Covered"
@@ -53967,6 +54466,21 @@
               "state": "Covered"
             },
             "properties/vmTemplate": {
+              "state": "Uncovered"
+            },
+            "sku/capacity": {
+              "state": "Uncovered"
+            },
+            "sku/family": {
+              "state": "Uncovered"
+            },
+            "sku/name": {
+              "state": "Uncovered"
+            },
+            "sku/size": {
+              "state": "Uncovered"
+            },
+            "sku/tier": {
               "state": "Uncovered"
             },
             "tags": {
@@ -53982,16 +54496,52 @@
           "name": "HostPool",
           "swagger_rel_path": "desktopvirtualization/resource-manager/Microsoft.DesktopVirtualization/preview/2021-02-01-preview/desktopvirtualization.json",
           "properties": {
+            "etag": {
+              "state": "Ignored"
+            },
             "id": {
               "state": "Ignored"
+            },
+            "identity/principalId": {
+              "state": "Ignored"
+            },
+            "identity/tenantId": {
+              "state": "Ignored"
+            },
+            "identity/type": {
+              "state": "Uncovered"
+            },
+            "kind": {
+              "state": "Uncovered"
             },
             "location": {
               "state": "Covered"
             },
+            "managedBy": {
+              "state": "Uncovered"
+            },
             "name": {
               "state": "Ignored"
             },
+            "plan/name": {
+              "state": "Uncovered"
+            },
+            "plan/product": {
+              "state": "Uncovered"
+            },
+            "plan/promotionCode": {
+              "state": "Uncovered"
+            },
+            "plan/publisher": {
+              "state": "Uncovered"
+            },
+            "plan/version": {
+              "state": "Uncovered"
+            },
             "properties/applicationGroupReferences": {
+              "state": "Ignored"
+            },
+            "properties/cloudPcResource": {
               "state": "Ignored"
             },
             "properties/customRdpProperty": {
@@ -54011,6 +54561,15 @@
             },
             "properties/maxSessionLimit": {
               "state": "Covered"
+            },
+            "properties/migrationRequest/migrationPath": {
+              "state": "Uncovered"
+            },
+            "properties/migrationRequest/operation": {
+              "state": "Uncovered"
+            },
+            "properties/objectId": {
+              "state": "Ignored"
             },
             "properties/personalDesktopAssignmentType": {
               "state": "Covered"
@@ -54049,6 +54608,21 @@
               "state": "Covered"
             },
             "properties/vmTemplate": {
+              "state": "Uncovered"
+            },
+            "sku/capacity": {
+              "state": "Uncovered"
+            },
+            "sku/family": {
+              "state": "Uncovered"
+            },
+            "sku/name": {
+              "state": "Uncovered"
+            },
+            "sku/size": {
+              "state": "Uncovered"
+            },
+            "sku/tier": {
               "state": "Uncovered"
             },
             "tags": {
@@ -54223,23 +54797,77 @@
           "name": "Workspace",
           "swagger_rel_path": "desktopvirtualization/resource-manager/Microsoft.DesktopVirtualization/preview/2021-01-14-preview/desktopvirtualization.json",
           "properties": {
+            "etag": {
+              "state": "Ignored"
+            },
             "id": {
               "state": "Ignored"
+            },
+            "identity/principalId": {
+              "state": "Ignored"
+            },
+            "identity/tenantId": {
+              "state": "Ignored"
+            },
+            "identity/type": {
+              "state": "Uncovered"
+            },
+            "kind": {
+              "state": "Uncovered"
             },
             "location": {
               "state": "Covered"
             },
+            "managedBy": {
+              "state": "Uncovered"
+            },
             "name": {
               "state": "Ignored"
             },
+            "plan/name": {
+              "state": "Uncovered"
+            },
+            "plan/product": {
+              "state": "Uncovered"
+            },
+            "plan/promotionCode": {
+              "state": "Uncovered"
+            },
+            "plan/publisher": {
+              "state": "Uncovered"
+            },
+            "plan/version": {
+              "state": "Uncovered"
+            },
             "properties/applicationGroupReferences": {
               "state": "Covered"
+            },
+            "properties/cloudPcResource": {
+              "state": "Ignored"
             },
             "properties/description": {
               "state": "Covered"
             },
             "properties/friendlyName": {
               "state": "Covered"
+            },
+            "properties/objectId": {
+              "state": "Ignored"
+            },
+            "sku/capacity": {
+              "state": "Uncovered"
+            },
+            "sku/family": {
+              "state": "Uncovered"
+            },
+            "sku/name": {
+              "state": "Uncovered"
+            },
+            "sku/size": {
+              "state": "Uncovered"
+            },
+            "sku/tier": {
+              "state": "Uncovered"
             },
             "tags": {
               "state": "Covered"
@@ -54254,23 +54882,77 @@
           "name": "Workspace",
           "swagger_rel_path": "desktopvirtualization/resource-manager/Microsoft.DesktopVirtualization/preview/2021-02-01-preview/desktopvirtualization.json",
           "properties": {
+            "etag": {
+              "state": "Ignored"
+            },
             "id": {
               "state": "Ignored"
+            },
+            "identity/principalId": {
+              "state": "Ignored"
+            },
+            "identity/tenantId": {
+              "state": "Ignored"
+            },
+            "identity/type": {
+              "state": "Uncovered"
+            },
+            "kind": {
+              "state": "Uncovered"
             },
             "location": {
               "state": "Covered"
             },
+            "managedBy": {
+              "state": "Uncovered"
+            },
             "name": {
               "state": "Ignored"
             },
+            "plan/name": {
+              "state": "Uncovered"
+            },
+            "plan/product": {
+              "state": "Uncovered"
+            },
+            "plan/promotionCode": {
+              "state": "Uncovered"
+            },
+            "plan/publisher": {
+              "state": "Uncovered"
+            },
+            "plan/version": {
+              "state": "Uncovered"
+            },
             "properties/applicationGroupReferences": {
               "state": "Covered"
+            },
+            "properties/cloudPcResource": {
+              "state": "Ignored"
             },
             "properties/description": {
               "state": "Covered"
             },
             "properties/friendlyName": {
               "state": "Covered"
+            },
+            "properties/objectId": {
+              "state": "Ignored"
+            },
+            "sku/capacity": {
+              "state": "Uncovered"
+            },
+            "sku/family": {
+              "state": "Uncovered"
+            },
+            "sku/name": {
+              "state": "Uncovered"
+            },
+            "sku/size": {
+              "state": "Uncovered"
+            },
+            "sku/tier": {
+              "state": "Uncovered"
             },
             "tags": {
               "state": "Covered"
@@ -55563,13 +56245,13 @@
               "state": "Ignored"
             },
             "properties/artifactDeploymentStatus/artifactsApplied": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "properties/artifactDeploymentStatus/deploymentStatus": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "properties/artifactDeploymentStatus/totalArtifacts": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "properties/artifacts/artifactId": {
               "state": "Uncovered"
@@ -55596,7 +56278,7 @@
               "state": "Uncovered"
             },
             "properties/computeId": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "properties/computeVm/dataDiskIds": {
               "state": "Ignored"
@@ -55635,10 +56317,10 @@
               "state": "Ignored"
             },
             "properties/createdByUser": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "properties/createdByUserId": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "properties/createdDate": {
               "state": "Uncovered"
@@ -55671,7 +56353,7 @@
               "state": "Uncovered"
             },
             "properties/fqdn": {
-              "state": "Covered"
+              "state": "Ignored"
             },
             "properties/galleryImageReference/offer": {
               "state": "Covered"
@@ -55698,7 +56380,7 @@
               "state": "Covered"
             },
             "properties/lastKnownPowerState": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "properties/networkInterface/dnsName": {
               "state": "Uncovered"
@@ -55737,7 +56419,7 @@
               "state": "Covered"
             },
             "properties/osType": {
-              "state": "Covered"
+              "state": "Ignored"
             },
             "properties/ownerObjectId": {
               "state": "Uncovered"
@@ -55818,7 +56500,7 @@
               "state": "Covered"
             },
             "properties/virtualMachineCreationSource": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "tags": {
               "state": "Covered"
@@ -56945,22 +57627,22 @@
               "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/groupIds": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateEndpoint/id": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/actionsRequired": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/description": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/status": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/provisioningState": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "properties/privateEndpointConnections/type": {
               "state": "Ignored"
@@ -57075,22 +57757,22 @@
               "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/groupIds": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateEndpoint/id": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/actionsRequired": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/description": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/status": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/provisioningState": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "properties/privateEndpointConnections/type": {
               "state": "Ignored"
@@ -58431,22 +59113,22 @@
               "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/groupIds": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateEndpoint/id": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/actionsRequired": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/description": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/status": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/provisioningState": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "properties/privateEndpointConnections/type": {
               "state": "Ignored"
@@ -58570,22 +59252,22 @@
               "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/groupIds": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateEndpoint/id": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/actionsRequired": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/description": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/status": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/provisioningState": {
-              "state": "Uncovered"
+              "state": "Ignored"
             },
             "properties/privateEndpointConnections/type": {
               "state": "Ignored"
@@ -65662,6 +66344,9 @@
             },
             "properties/enabledForTemplateDeployment": {
               "state": "Covered"
+            },
+            "properties/hsmPoolResourceId": {
+              "state": "Ignored"
             },
             "properties/networkAcls/bypass": {
               "state": "Covered"
@@ -79195,7 +79880,7 @@
               "state": "Uncovered"
             },
             "properties/snapshotId": {
-              "state": "Uncovered"
+              "state": "Covered"
             },
             "properties/subnetId": {
               "state": "Covered"
@@ -79358,7 +80043,7 @@
               "state": "Uncovered"
             },
             "properties/snapshotId": {
-              "state": "Uncovered"
+              "state": "Covered"
             },
             "properties/subnetId": {
               "state": "Covered"
@@ -149661,6 +150346,9 @@
             "properties/applicationGateways/properties/backendAddressPools/properties/backendIPConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/applicationGateways/properties/backendAddressPools/properties/backendIPConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/applicationGateways/properties/backendAddressPools/properties/backendIPConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -151356,6 +152044,9 @@
             "properties/applicationGateways/properties/backendAddressPools/properties/backendIPConfigurations/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/applicationGateways/properties/backendAddressPools/properties/backendIPConfigurations/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/applicationGateways/properties/backendAddressPools/properties/backendIPConfigurations/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -152668,6 +153359,9 @@
               "state": "Ignored"
             },
             "properties/applicationGateways/properties/backendAddressPools/properties/backendIPConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/applicationGateways/properties/backendAddressPools/properties/backendIPConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/applicationGateways/properties/backendAddressPools/properties/backendIPConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -154014,6 +154708,9 @@
             "properties/applicationGateways/properties/backendAddressPools/properties/backendIPConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/applicationGateways/properties/backendAddressPools/properties/backendIPConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/applicationGateways/properties/backendAddressPools/properties/backendIPConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -155130,6 +155827,9 @@
             "properties/applicationGateways/properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/applicationGateways/properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/applicationGateways/properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -155796,6 +156496,9 @@
             "properties/applicationGateways/properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/applicationGateways/properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/applicationGateways/properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -156433,6 +157136,9 @@
               "state": "Ignored"
             },
             "properties/applicationGateways/properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/applicationGateways/properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/applicationGateways/properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -157104,6 +157810,9 @@
             "properties/applicationGateways/properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/applicationGateways/properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/applicationGateways/properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -157771,6 +158480,9 @@
               "state": "Ignored"
             },
             "properties/applicationGateways/properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/networkSecurityGroup/properties/subnets/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/applicationGateways/properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/networkSecurityGroup/properties/subnets/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/applicationGateways/properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/networkSecurityGroup/properties/subnets/properties/serviceEndpointPolicies/location": {
@@ -158442,6 +159154,9 @@
             "properties/applicationGateways/properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/applicationGateways/properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/applicationGateways/properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -159109,6 +159824,9 @@
               "state": "Ignored"
             },
             "properties/applicationGateways/properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/applicationGateways/properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/applicationGateways/properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -159879,6 +160597,9 @@
             "properties/applicationGateways/properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/applicationGateways/properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/applicationGateways/properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -160543,6 +161264,9 @@
               "state": "Ignored"
             },
             "properties/applicationGateways/properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/applicationGateways/properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/applicationGateways/properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -162247,6 +162971,9 @@
               "state": "Ignored"
             },
             "properties/applicationGateways/properties/privateEndpointConnections/properties/privateEndpoint/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/applicationGateways/properties/privateEndpointConnections/properties/privateEndpoint/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/applicationGateways/properties/privateEndpointConnections/properties/privateEndpoint/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -232620,6 +233347,9 @@
             "properties/backendAddressPools/properties/backendIPConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/backendAddressPools/properties/backendIPConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/backendAddressPools/properties/backendIPConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -234315,6 +235045,9 @@
             "properties/backendAddressPools/properties/backendIPConfigurations/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/backendAddressPools/properties/backendIPConfigurations/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/backendAddressPools/properties/backendIPConfigurations/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -235627,6 +236360,9 @@
               "state": "Ignored"
             },
             "properties/backendAddressPools/properties/backendIPConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/backendAddressPools/properties/backendIPConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/backendAddressPools/properties/backendIPConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -236973,6 +237709,9 @@
             "properties/backendAddressPools/properties/backendIPConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/backendAddressPools/properties/backendIPConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/backendAddressPools/properties/backendIPConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -238089,6 +238828,9 @@
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -238755,6 +239497,9 @@
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -239392,6 +240137,9 @@
               "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -240063,6 +240811,9 @@
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -240730,6 +241481,9 @@
               "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/networkSecurityGroup/properties/subnets/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/networkSecurityGroup/properties/subnets/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/networkSecurityGroup/properties/subnets/properties/serviceEndpointPolicies/location": {
@@ -241401,6 +242155,9 @@
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -242068,6 +242825,9 @@
               "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -242838,6 +243598,9 @@
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -243502,6 +244265,9 @@
               "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -245206,6 +245972,9 @@
               "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/privateEndpointConnections/properties/privateEndpoint/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -331929,6 +332698,9 @@
             "properties/backendAddressPools/properties/backendIPConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/backendAddressPools/properties/backendIPConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/backendAddressPools/properties/backendIPConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -333624,6 +334396,9 @@
             "properties/backendAddressPools/properties/backendIPConfigurations/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/backendAddressPools/properties/backendIPConfigurations/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/backendAddressPools/properties/backendIPConfigurations/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -334936,6 +335711,9 @@
               "state": "Ignored"
             },
             "properties/backendAddressPools/properties/backendIPConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/backendAddressPools/properties/backendIPConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/backendAddressPools/properties/backendIPConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -336280,6 +337058,9 @@
               "state": "Ignored"
             },
             "properties/backendAddressPools/properties/backendIPConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/backendAddressPools/properties/backendIPConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/backendAddressPools/properties/backendIPConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -338518,6 +339299,9 @@
               "state": "Ignored"
             },
             "properties/frontendIPConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/frontendIPConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/frontendIPConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -341118,6 +341902,9 @@
             "properties/frontendIPConfigurations/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Uncovered"
             },
+            "properties/frontendIPConfigurations/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/frontendIPConfigurations/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Uncovered"
             },
@@ -342727,6 +343514,9 @@
               "state": "Ignored"
             },
             "properties/inboundNatRules/properties/backendIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/inboundNatRules/properties/backendIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/inboundNatRules/properties/backendIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -344424,6 +345214,9 @@
             "properties/inboundNatRules/properties/backendIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/inboundNatRules/properties/backendIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/inboundNatRules/properties/backendIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -345736,6 +346529,9 @@
               "state": "Ignored"
             },
             "properties/inboundNatRules/properties/backendIPConfiguration/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/inboundNatRules/properties/backendIPConfiguration/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/inboundNatRules/properties/backendIPConfiguration/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -347080,6 +347876,9 @@
               "state": "Ignored"
             },
             "properties/inboundNatRules/properties/backendIPConfiguration/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/inboundNatRules/properties/backendIPConfiguration/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/inboundNatRules/properties/backendIPConfiguration/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -376386,6 +377185,9 @@
             "properties/backendIPConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/backendIPConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/backendIPConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -378081,6 +378883,9 @@
             "properties/backendIPConfigurations/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/backendIPConfigurations/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/backendIPConfigurations/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -379393,6 +380198,9 @@
               "state": "Ignored"
             },
             "properties/backendIPConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/backendIPConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/backendIPConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -380737,6 +381545,9 @@
               "state": "Ignored"
             },
             "properties/backendIPConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/backendIPConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/backendIPConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -420885,6 +421696,9 @@
             "properties/ipConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/ipConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/ipConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -421653,6 +422467,9 @@
             "properties/ipConfigurations/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Uncovered"
             },
+            "properties/ipConfigurations/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/ipConfigurations/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Covered"
             },
@@ -422392,6 +423209,9 @@
               "state": "Ignored"
             },
             "properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -423165,6 +423985,9 @@
             "properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Uncovered"
             },
+            "properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Uncovered"
             },
@@ -423936,6 +424759,9 @@
             "properties/networkSecurityGroup/properties/subnets/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/networkSecurityGroup/properties/subnets/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/networkSecurityGroup/properties/subnets/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -424669,6 +425495,9 @@
               "state": "Ignored"
             },
             "properties/privateEndpoint/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/privateEndpoint/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/privateEndpoint/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -425434,6 +426263,9 @@
               "state": "Ignored"
             },
             "properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -426205,6 +427037,9 @@
               "state": "Ignored"
             },
             "properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -427077,6 +427912,9 @@
             "properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -427843,6 +428681,9 @@
               "state": "Ignored"
             },
             "properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -460419,6 +461260,9 @@
             "properties/containerNetworkInterfaceConfigurations/properties/ipConfigurations/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Uncovered"
             },
+            "properties/containerNetworkInterfaceConfigurations/properties/ipConfigurations/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/containerNetworkInterfaceConfigurations/properties/ipConfigurations/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Covered"
             },
@@ -463582,6 +464426,9 @@
               "state": "Ignored"
             },
             "properties/containerNetworkInterfaces/properties/containerNetworkInterfaceConfiguration/properties/ipConfigurations/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/containerNetworkInterfaces/properties/containerNetworkInterfaceConfiguration/properties/ipConfigurations/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/containerNetworkInterfaces/properties/containerNetworkInterfaceConfiguration/properties/ipConfigurations/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -495291,6 +496138,9 @@
             "properties/networkInterfaces/properties/ipConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/networkInterfaces/properties/ipConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/networkInterfaces/properties/ipConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -495768,6 +496618,9 @@
             "properties/networkInterfaces/properties/ipConfigurations/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/networkInterfaces/properties/ipConfigurations/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/networkInterfaces/properties/ipConfigurations/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -496216,6 +497069,9 @@
               "state": "Ignored"
             },
             "properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -496696,6 +497552,9 @@
               "state": "Ignored"
             },
             "properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -497184,6 +498043,9 @@
             "properties/networkInterfaces/properties/privateEndpoint/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/networkInterfaces/properties/privateEndpoint/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/networkInterfaces/properties/privateEndpoint/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -497656,6 +498518,9 @@
               "state": "Ignored"
             },
             "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -498136,6 +499001,9 @@
               "state": "Ignored"
             },
             "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -498717,6 +499585,9 @@
             "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -499192,6 +500063,9 @@
               "state": "Ignored"
             },
             "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -500779,6 +501653,9 @@
               "state": "Ignored"
             },
             "properties/subnets/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/subnets/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/subnets/properties/serviceEndpointPolicies/location": {
@@ -541788,6 +542665,9 @@
             "properties/networkInterfaces/properties/ipConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/networkInterfaces/properties/ipConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/networkInterfaces/properties/ipConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -542454,6 +543334,9 @@
             "properties/networkInterfaces/properties/ipConfigurations/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/networkInterfaces/properties/ipConfigurations/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/networkInterfaces/properties/ipConfigurations/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -543091,6 +543974,9 @@
               "state": "Ignored"
             },
             "properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -543762,6 +544648,9 @@
             "properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -544429,6 +545318,9 @@
               "state": "Ignored"
             },
             "properties/networkInterfaces/properties/networkSecurityGroup/properties/subnets/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/networkInterfaces/properties/networkSecurityGroup/properties/subnets/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/networkInterfaces/properties/networkSecurityGroup/properties/subnets/properties/serviceEndpointPolicies/location": {
@@ -545100,6 +545992,9 @@
             "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -545767,6 +546662,9 @@
               "state": "Ignored"
             },
             "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -546537,6 +547435,9 @@
             "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -547201,6 +548102,9 @@
               "state": "Ignored"
             },
             "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -548906,6 +549810,9 @@
             },
             "properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Uncovered"
+            },
+            "properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
             },
             "properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Uncovered"
@@ -649893,6 +650800,9 @@
             "properties/ipConfigurations/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Uncovered"
             },
+            "properties/ipConfigurations/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/ipConfigurations/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Uncovered"
             },
@@ -652054,6 +652964,9 @@
               "state": "Ignored"
             },
             "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -654654,6 +655567,9 @@
             "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Uncovered"
             },
+            "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Covered"
             },
@@ -655569,6 +656485,9 @@
             "properties/networkInterfaces/properties/ipConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/networkInterfaces/properties/ipConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/networkInterfaces/properties/ipConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -656337,6 +657256,9 @@
             "properties/networkInterfaces/properties/ipConfigurations/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/networkInterfaces/properties/ipConfigurations/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/networkInterfaces/properties/ipConfigurations/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -657076,6 +657998,9 @@
               "state": "Ignored"
             },
             "properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -657849,6 +658774,9 @@
             "properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -658620,6 +659548,9 @@
             "properties/networkInterfaces/properties/networkSecurityGroup/properties/subnets/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/networkInterfaces/properties/networkSecurityGroup/properties/subnets/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/networkInterfaces/properties/networkSecurityGroup/properties/subnets/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -659353,6 +660284,9 @@
               "state": "Ignored"
             },
             "properties/networkInterfaces/properties/privateEndpoint/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/networkInterfaces/properties/privateEndpoint/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/networkInterfaces/properties/privateEndpoint/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -660118,6 +661052,9 @@
               "state": "Ignored"
             },
             "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -660889,6 +661826,9 @@
               "state": "Ignored"
             },
             "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -661761,6 +662701,9 @@
             "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -662527,6 +663470,9 @@
               "state": "Ignored"
             },
             "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -663438,6 +664384,9 @@
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -664104,6 +665053,9 @@
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -664741,6 +665693,9 @@
               "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -665412,6 +666367,9 @@
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/virtualNetworkTaps/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -666079,6 +667037,9 @@
               "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/networkSecurityGroup/properties/subnets/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/networkSecurityGroup/properties/subnets/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/networkSecurityGroup/properties/subnets/properties/serviceEndpointPolicies/location": {
@@ -666750,6 +667711,9 @@
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -667417,6 +668381,9 @@
               "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationLoadBalancerFrontEndIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -668187,6 +669154,9 @@
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -668851,6 +669821,9 @@
               "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/tapConfigurations/properties/virtualNetworkTap/properties/destinationNetworkInterfaceIPConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -670555,6 +671528,9 @@
               "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/privateEndpointConnections/properties/privateEndpoint/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/privateEndpointConnections/properties/privateEndpoint/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -683017,6 +683993,9 @@
               "state": "Ignored"
             },
             "properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
+              "state": "Ignored"
+            },
+            "properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
               "state": "Ignored"
             },
             "properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
@@ -703257,6 +704236,9 @@
             "properties/subnets/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/subnets/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/subnets/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -718248,6 +719230,9 @@
             },
             "id": {
               "state": "Covered"
+            },
+            "kind": {
+              "state": "Ignored"
             },
             "location": {
               "state": "Covered"
@@ -749524,6 +750509,9 @@
             "properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Ignored"
             },
+            "properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/publicIPAddress/properties/ipConfiguration/properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Ignored"
             },
@@ -752694,6 +753682,9 @@
             },
             "properties/subnet/properties/serviceEndpointPolicies/id": {
               "state": "Uncovered"
+            },
+            "properties/subnet/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
             },
             "properties/subnet/properties/serviceEndpointPolicies/location": {
               "state": "Uncovered"
@@ -771811,6 +772802,9 @@
             "properties/subnets/properties/serviceEndpointPolicies/id": {
               "state": "Uncovered"
             },
+            "properties/subnets/properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/subnets/properties/serviceEndpointPolicies/location": {
               "state": "Uncovered"
             },
@@ -789523,6 +790517,9 @@
             "properties/serviceEndpointPolicies/id": {
               "state": "Covered"
             },
+            "properties/serviceEndpointPolicies/kind": {
+              "state": "Ignored"
+            },
             "properties/serviceEndpointPolicies/location": {
               "state": "Uncovered"
             },
@@ -795811,6 +796808,9 @@
             "properties/administration/members": {
               "state": "Covered"
             },
+            "properties/mode": {
+              "state": "Ignored"
+            },
             "sku/name": {
               "state": "Covered"
             },
@@ -795862,6 +796862,9 @@
             },
             "properties/administration/members": {
               "state": "Covered"
+            },
+            "properties/mode": {
+              "state": "Ignored"
             },
             "properties/provisioningState": {
               "state": "Ignored"
@@ -796465,6 +797468,112 @@
             }
           },
           "active": false
+        }
+      }
+    }
+  },
+  "purview": {
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Purview/accounts/{accountName}": {
+      "PUT": {
+        "2020-12-01-preview": {
+          "name": "Account",
+          "swagger_rel_path": "purview/resource-manager/Microsoft.Purview/preview/2020-12-01-preview/purview.json",
+          "properties": {
+            "id": {
+              "state": "Ignored"
+            },
+            "identity/principalId": {
+              "state": "Ignored"
+            },
+            "identity/tenantId": {
+              "state": "Ignored"
+            },
+            "identity/type": {
+              "state": "Covered"
+            },
+            "location": {
+              "state": "Covered"
+            },
+            "name": {
+              "state": "Ignored"
+            },
+            "properties/cloudConnectors/awsExternalId": {
+              "state": "Ignored"
+            },
+            "properties/createdAt": {
+              "state": "Ignored"
+            },
+            "properties/createdBy": {
+              "state": "Ignored"
+            },
+            "properties/createdByObjectId": {
+              "state": "Ignored"
+            },
+            "properties/endpoints/catalog": {
+              "state": "Ignored"
+            },
+            "properties/endpoints/guardian": {
+              "state": "Ignored"
+            },
+            "properties/endpoints/scan": {
+              "state": "Ignored"
+            },
+            "properties/friendlyName": {
+              "state": "Ignored"
+            },
+            "properties/managedResources/eventHubNamespace": {
+              "state": "Ignored"
+            },
+            "properties/managedResources/resourceGroup": {
+              "state": "Ignored"
+            },
+            "properties/managedResources/storageAccount": {
+              "state": "Ignored"
+            },
+            "properties/privateEndpointConnections/id": {
+              "state": "Ignored"
+            },
+            "properties/privateEndpointConnections/name": {
+              "state": "Ignored"
+            },
+            "properties/privateEndpointConnections/properties/privateEndpoint/id": {
+              "state": "Ignored"
+            },
+            "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/actionsRequired": {
+              "state": "Ignored"
+            },
+            "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/description": {
+              "state": "Ignored"
+            },
+            "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/status": {
+              "state": "Ignored"
+            },
+            "properties/privateEndpointConnections/properties/provisioningState": {
+              "state": "Ignored"
+            },
+            "properties/privateEndpointConnections/type": {
+              "state": "Ignored"
+            },
+            "properties/provisioningState": {
+              "state": "Ignored"
+            },
+            "properties/publicNetworkAccess": {
+              "state": "Covered"
+            },
+            "sku/capacity": {
+              "state": "Covered"
+            },
+            "sku/name": {
+              "state": "Covered"
+            },
+            "tags": {
+              "state": "Covered"
+            },
+            "type": {
+              "state": "Ignored"
+            }
+          },
+          "active": true
         }
       }
     }
@@ -809710,6 +810819,134 @@
         }
       }
     },
+    "/{resourceId}/providers/Microsoft.Security/assessments/{assessmentName}": {
+      "PUT": {
+        "2020-01-01": {
+          "name": "SecurityAssessment",
+          "swagger_rel_path": "security/resource-manager/Microsoft.Security/stable/2020-01-01/assessments.json",
+          "properties": {
+            "id": {
+              "state": "Ignored"
+            },
+            "name": {
+              "state": "Ignored"
+            },
+            "properties/additionalData": {
+              "state": "Covered"
+            },
+            "properties/displayName": {
+              "state": "Ignored"
+            },
+            "properties/links/azurePortalUri": {
+              "state": "Ignored"
+            },
+            "properties/metadata/assessmentType": {
+              "state": "Uncovered"
+            },
+            "properties/metadata/category": {
+              "state": "Uncovered"
+            },
+            "properties/metadata/description": {
+              "state": "Uncovered"
+            },
+            "properties/metadata/displayName": {
+              "state": "Uncovered"
+            },
+            "properties/metadata/implementationEffort": {
+              "state": "Uncovered"
+            },
+            "properties/metadata/partnerData/partnerName": {
+              "state": "Uncovered"
+            },
+            "properties/metadata/partnerData/productName": {
+              "state": "Uncovered"
+            },
+            "properties/metadata/partnerData/secret": {
+              "state": "Uncovered"
+            },
+            "properties/metadata/policyDefinitionId": {
+              "state": "Ignored"
+            },
+            "properties/metadata/preview": {
+              "state": "Uncovered"
+            },
+            "properties/metadata/remediationDescription": {
+              "state": "Uncovered"
+            },
+            "properties/metadata/severity": {
+              "state": "Uncovered"
+            },
+            "properties/metadata/threats": {
+              "state": "Uncovered"
+            },
+            "properties/metadata/userImpact": {
+              "state": "Uncovered"
+            },
+            "properties/partnersData/partnerName": {
+              "state": "Uncovered"
+            },
+            "properties/partnersData/secret": {
+              "state": "Uncovered"
+            },
+            "properties/resourceDetails{Azure}/id": {
+              "state": "Ignored"
+            },
+            "properties/resourceDetails{Azure}/source": {
+              "state": "Covered"
+            },
+            "properties/resourceDetails{OnPremiseSql}/databaseName": {
+              "state": "Uncovered"
+            },
+            "properties/resourceDetails{OnPremiseSql}/machineName": {
+              "state": "Uncovered"
+            },
+            "properties/resourceDetails{OnPremiseSql}/serverName": {
+              "state": "Uncovered"
+            },
+            "properties/resourceDetails{OnPremiseSql}/source": {
+              "state": "Uncovered"
+            },
+            "properties/resourceDetails{OnPremiseSql}/sourceComputerId": {
+              "state": "Uncovered"
+            },
+            "properties/resourceDetails{OnPremiseSql}/vmuuid": {
+              "state": "Uncovered"
+            },
+            "properties/resourceDetails{OnPremiseSql}/workspaceId": {
+              "state": "Uncovered"
+            },
+            "properties/resourceDetails{OnPremise}/machineName": {
+              "state": "Uncovered"
+            },
+            "properties/resourceDetails{OnPremise}/source": {
+              "state": "Uncovered"
+            },
+            "properties/resourceDetails{OnPremise}/sourceComputerId": {
+              "state": "Uncovered"
+            },
+            "properties/resourceDetails{OnPremise}/vmuuid": {
+              "state": "Uncovered"
+            },
+            "properties/resourceDetails{OnPremise}/workspaceId": {
+              "state": "Uncovered"
+            },
+            "properties/status/cause": {
+              "state": "Covered"
+            },
+            "properties/status/code": {
+              "state": "Covered"
+            },
+            "properties/status/description": {
+              "state": "Covered"
+            },
+            "type": {
+              "state": "Ignored"
+            }
+          },
+          "active": true
+        }
+      }
+    },
     "/{resourceId}/providers/Microsoft.Security/deviceSecurityGroups/{deviceSecurityGroupName}": {
       "PUT": {
         "2019-08-01": {
@@ -811538,16 +812775,16 @@
               "state": "Ignored"
             },
             "{AzureAdvancedThreatProtection}/kind": {
-              "state": "Uncovered"
+              "state": "Covered"
             },
             "{AzureAdvancedThreatProtection}/name": {
               "state": "Ignored"
             },
             "{AzureAdvancedThreatProtection}/properties/dataTypes/alerts/state": {
-              "state": "Uncovered"
+              "state": "Covered"
             },
             "{AzureAdvancedThreatProtection}/properties/tenantId": {
-              "state": "Uncovered"
+              "state": "Covered"
             },
             "{AzureAdvancedThreatProtection}/type": {
               "state": "Ignored"
@@ -811559,16 +812796,16 @@
               "state": "Ignored"
             },
             "{AzureSecurityCenter}/kind": {
-              "state": "Uncovered"
+              "state": "Covered"
             },
             "{AzureSecurityCenter}/name": {
               "state": "Ignored"
             },
             "{AzureSecurityCenter}/properties/dataTypes/alerts/state": {
-              "state": "Uncovered"
+              "state": "Covered"
             },
             "{AzureSecurityCenter}/properties/subscriptionId": {
-              "state": "Uncovered"
+              "state": "Covered"
             },
             "{AzureSecurityCenter}/type": {
               "state": "Ignored"
@@ -811595,25 +812832,25 @@
               "state": "Ignored"
             },
             "{MicrosoftCloudAppSecurity}/etag": {
-              "state": "Uncovered"
+              "state": "Covered"
             },
             "{MicrosoftCloudAppSecurity}/id": {
               "state": "Ignored"
             },
             "{MicrosoftCloudAppSecurity}/kind": {
-              "state": "Uncovered"
+              "state": "Covered"
             },
             "{MicrosoftCloudAppSecurity}/name": {
               "state": "Ignored"
             },
             "{MicrosoftCloudAppSecurity}/properties/dataTypes/alerts/state": {
-              "state": "Uncovered"
+              "state": "Covered"
             },
             "{MicrosoftCloudAppSecurity}/properties/dataTypes/discoveryLogs/state": {
-              "state": "Uncovered"
+              "state": "Covered"
             },
             "{MicrosoftCloudAppSecurity}/properties/tenantId": {
-              "state": "Uncovered"
+              "state": "Covered"
             },
             "{MicrosoftCloudAppSecurity}/type": {
               "state": "Ignored"
@@ -816701,8 +817938,44 @@
             "properties/creationTime": {
               "state": "Ignored"
             },
+            "properties/disabledAlerts": {
+              "state": "Covered"
+            },
+            "properties/emailAccountAdmins": {
+              "state": "Covered"
+            },
+            "properties/emailAddresses": {
+              "state": "Covered"
+            },
+            "properties/retentionDays": {
+              "state": "Covered"
+            },
             "properties/state": {
               "state": "Covered"
+            },
+            "properties/storageAccountAccessKey": {
+              "state": "Covered"
+            },
+            "properties/storageEndpoint": {
+              "state": "Covered"
+            },
+            "systemData/createdAt": {
+              "state": "Ignored"
+            },
+            "systemData/createdBy": {
+              "state": "Ignored"
+            },
+            "systemData/createdByType": {
+              "state": "Ignored"
+            },
+            "systemData/lastModifiedAt": {
+              "state": "Ignored"
+            },
+            "systemData/lastModifiedBy": {
+              "state": "Ignored"
+            },
+            "systemData/lastModifiedByType": {
+              "state": "Ignored"
             },
             "type": {
               "state": "Ignored"
@@ -816723,8 +817996,44 @@
             "properties/creationTime": {
               "state": "Ignored"
             },
+            "properties/disabledAlerts": {
+              "state": "Covered"
+            },
+            "properties/emailAccountAdmins": {
+              "state": "Covered"
+            },
+            "properties/emailAddresses": {
+              "state": "Covered"
+            },
+            "properties/retentionDays": {
+              "state": "Covered"
+            },
             "properties/state": {
               "state": "Covered"
+            },
+            "properties/storageAccountAccessKey": {
+              "state": "Covered"
+            },
+            "properties/storageEndpoint": {
+              "state": "Covered"
+            },
+            "systemData/createdAt": {
+              "state": "Ignored"
+            },
+            "systemData/createdBy": {
+              "state": "Ignored"
+            },
+            "systemData/createdByType": {
+              "state": "Ignored"
+            },
+            "systemData/lastModifiedAt": {
+              "state": "Ignored"
+            },
+            "systemData/lastModifiedBy": {
+              "state": "Ignored"
+            },
+            "systemData/lastModifiedByType": {
+              "state": "Ignored"
             },
             "type": {
               "state": "Ignored"
@@ -817486,8 +818795,44 @@
             "properties/creationTime": {
               "state": "Ignored"
             },
+            "properties/disabledAlerts": {
+              "state": "Covered"
+            },
+            "properties/emailAccountAdmins": {
+              "state": "Covered"
+            },
+            "properties/emailAddresses": {
+              "state": "Covered"
+            },
+            "properties/retentionDays": {
+              "state": "Covered"
+            },
             "properties/state": {
               "state": "Covered"
+            },
+            "properties/storageAccountAccessKey": {
+              "state": "Covered"
+            },
+            "properties/storageEndpoint": {
+              "state": "Covered"
+            },
+            "systemData/createdAt": {
+              "state": "Ignored"
+            },
+            "systemData/createdBy": {
+              "state": "Ignored"
+            },
+            "systemData/createdByType": {
+              "state": "Ignored"
+            },
+            "systemData/lastModifiedAt": {
+              "state": "Ignored"
+            },
+            "systemData/lastModifiedBy": {
+              "state": "Ignored"
+            },
+            "systemData/lastModifiedByType": {
+              "state": "Ignored"
             },
             "type": {
               "state": "Ignored"
@@ -817508,8 +818853,44 @@
             "properties/creationTime": {
               "state": "Ignored"
             },
+            "properties/disabledAlerts": {
+              "state": "Covered"
+            },
+            "properties/emailAccountAdmins": {
+              "state": "Covered"
+            },
+            "properties/emailAddresses": {
+              "state": "Covered"
+            },
+            "properties/retentionDays": {
+              "state": "Covered"
+            },
             "properties/state": {
               "state": "Covered"
+            },
+            "properties/storageAccountAccessKey": {
+              "state": "Covered"
+            },
+            "properties/storageEndpoint": {
+              "state": "Covered"
+            },
+            "systemData/createdAt": {
+              "state": "Ignored"
+            },
+            "systemData/createdBy": {
+              "state": "Ignored"
+            },
+            "systemData/createdByType": {
+              "state": "Ignored"
+            },
+            "systemData/lastModifiedAt": {
+              "state": "Ignored"
+            },
+            "systemData/lastModifiedBy": {
+              "state": "Ignored"
+            },
+            "systemData/lastModifiedByType": {
+              "state": "Ignored"
             },
             "type": {
               "state": "Ignored"
