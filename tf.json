@@ -2743,6 +2743,32 @@
   },
   {
     "api_version": "2019-12-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/templates/{templateName}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2019-12-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/templates/{templateName}",
+    "operation": "GET",
+    "properties": [
+      "properties/body",
+      "properties/description",
+      "properties/isDefault",
+      "properties/subject",
+      "properties/title"
+    ]
+  },
+  {
+    "api_version": "2019-12-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/templates/{templateName}",
+    "operation": "PUT",
+    "properties": [
+      "properties/body",
+      "properties/subject"
+    ]
+  },
+  {
+    "api_version": "2019-12-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/tenant/{accessName}",
     "operation": "PATCH",
     "properties": [
@@ -2957,6 +2983,33 @@
       "properties/persistentDisk/sizeInGB",
       "properties/public",
       "properties/url"
+    ]
+  },
+  {
+    "api_version": "2020-11-01-preview",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AppPlatform/Spring/{serviceName}/apps/{appName}/bindings/{bindingName}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2020-11-01-preview",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AppPlatform/Spring/{serviceName}/apps/{appName}/bindings/{bindingName}",
+    "operation": "GET",
+    "properties": [
+      "properties/bindingParameters",
+      "properties/key",
+      "properties/resourceId",
+      "properties/resourceType"
+    ]
+  },
+  {
+    "api_version": "2020-11-01-preview",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AppPlatform/Spring/{serviceName}/apps/{appName}/bindings/{bindingName}",
+    "operation": "PUT",
+    "properties": [
+      "properties/bindingParameters",
+      "properties/key",
+      "properties/resourceId",
+      "properties/resourceType"
     ]
   },
   {
@@ -4902,6 +4955,31 @@
     "api_version": "2017-04-18",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}/listKeys",
     "operation": "POST"
+  },
+  {
+    "api_version": "2020-08-20",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Communication/communicationServices/{communicationServiceName}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2020-08-20",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Communication/communicationServices/{communicationServiceName}",
+    "operation": "GET",
+    "properties": [
+      "location",
+      "properties/dataLocation",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2020-08-20",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Communication/communicationServices/{communicationServiceName}",
+    "operation": "PUT",
+    "properties": [
+      "location",
+      "properties/dataLocation",
+      "tags"
+    ]
   },
   {
     "api_version": "2020-12-01",
@@ -11928,9 +12006,12 @@
       "location",
       "properties/blobStorageEventType",
       "properties/consumerGroup",
+      "properties/dataFormat",
       "properties/eventHubResourceId",
       "properties/ignoreFirstRecord",
-      "properties/storageAccountResourceId"
+      "properties/mappingRuleName",
+      "properties/storageAccountResourceId",
+      "properties/tableName"
     ]
   },
   {
@@ -11973,9 +12054,12 @@
       "location",
       "properties/blobStorageEventType",
       "properties/consumerGroup",
+      "properties/dataFormat",
       "properties/eventHubResourceId",
       "properties/ignoreFirstRecord",
-      "properties/storageAccountResourceId"
+      "properties/mappingRuleName",
+      "properties/storageAccountResourceId",
+      "properties/tableName"
     ]
   },
   {
@@ -12258,6 +12342,7 @@
       "name",
       "properties/clientId",
       "properties/principalId",
+      "properties/tenantId",
       "tags"
     ]
   },
@@ -12271,6 +12356,7 @@
       "name",
       "properties/clientId",
       "properties/principalId",
+      "properties/tenantId",
       "tags"
     ]
   },
@@ -13030,6 +13116,7 @@
       "properties/dataProtection/replication/replicationSchedule",
       "properties/exportPolicy/rules/allowedClients",
       "properties/exportPolicy/rules/cifs",
+      "properties/exportPolicy/rules/hasRootAccess",
       "properties/exportPolicy/rules/nfsv3",
       "properties/exportPolicy/rules/nfsv41",
       "properties/exportPolicy/rules/ruleIndex",
@@ -13059,6 +13146,7 @@
       "properties/dataProtection/replication/replicationSchedule",
       "properties/exportPolicy/rules/allowedClients",
       "properties/exportPolicy/rules/cifs",
+      "properties/exportPolicy/rules/hasRootAccess",
       "properties/exportPolicy/rules/nfsv3",
       "properties/exportPolicy/rules/nfsv41",
       "properties/exportPolicy/rules/ruleIndex",
@@ -13202,6 +13290,69 @@
       "properties/policySettings/mode",
       "properties/policySettings/requestBodyCheck",
       "properties/policySettings/state",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2020-05-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/ExpressRoutePorts/{expressRoutePortName}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2020-05-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/ExpressRoutePorts/{expressRoutePortName}",
+    "operation": "GET",
+    "properties": [
+      "identity/type",
+      "identity/userAssignedIdentities",
+      "location",
+      "name",
+      "properties/bandwidthInGbps",
+      "properties/encapsulation",
+      "properties/etherType",
+      "properties/links/id",
+      "properties/links/name",
+      "properties/links/properties/adminState",
+      "properties/links/properties/connectorType",
+      "properties/links/properties/interfaceName",
+      "properties/links/properties/macSecConfig/cakSecretIdentifier",
+      "properties/links/properties/macSecConfig/cipher",
+      "properties/links/properties/macSecConfig/cknSecretIdentifier",
+      "properties/links/properties/patchPanelId",
+      "properties/links/properties/rackId",
+      "properties/links/properties/routerName",
+      "properties/mtu",
+      "properties/peeringLocation",
+      "properties/resourceGuid",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2020-05-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/ExpressRoutePorts/{expressRoutePortName}",
+    "operation": "PUT",
+    "properties": [
+      "identity/type",
+      "identity/userAssignedIdentities",
+      "location",
+      "name",
+      "properties/bandwidthInGbps",
+      "properties/encapsulation",
+      "properties/etherType",
+      "properties/links/id",
+      "properties/links/name",
+      "properties/links/properties/adminState",
+      "properties/links/properties/connectorType",
+      "properties/links/properties/interfaceName",
+      "properties/links/properties/macSecConfig/cakSecretIdentifier",
+      "properties/links/properties/macSecConfig/cipher",
+      "properties/links/properties/macSecConfig/cknSecretIdentifier",
+      "properties/links/properties/patchPanelId",
+      "properties/links/properties/rackId",
+      "properties/links/properties/routerName",
+      "properties/mtu",
+      "properties/peeringLocation",
+      "properties/resourceGuid",
       "tags"
     ]
   },
@@ -19342,7 +19493,6 @@
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/extendedAuditingSettings/{blobAuditingPolicyName}",
     "operation": "GET",
     "properties": [
-      "id",
       "properties/isAzureMonitorTargetEnabled",
       "properties/isStorageSecondaryKeyInUse",
       "properties/retentionDays",
@@ -19356,7 +19506,6 @@
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/extendedAuditingSettings/{blobAuditingPolicyName}",
     "operation": "PUT",
     "properties": [
-      "id",
       "properties/isAzureMonitorTargetEnabled",
       "properties/isStorageSecondaryKeyInUse",
       "properties/retentionDays",
@@ -20668,6 +20817,7 @@
       "name",
       "properties/clientAffinityEnabled",
       "properties/clientCertEnabled",
+      "properties/clientCertMode",
       "properties/customDomainVerificationId",
       "properties/dailyMemoryTimeQuota",
       "properties/defaultHostName",
@@ -20751,6 +20901,7 @@
       "name",
       "properties/clientAffinityEnabled",
       "properties/clientCertEnabled",
+      "properties/clientCertMode",
       "properties/customDomainVerificationId",
       "properties/dailyMemoryTimeQuota",
       "properties/defaultHostName",
@@ -21161,6 +21312,7 @@
       "name",
       "properties/clientAffinityEnabled",
       "properties/clientCertEnabled",
+      "properties/clientCertMode",
       "properties/customDomainVerificationId",
       "properties/dailyMemoryTimeQuota",
       "properties/defaultHostName",
@@ -21244,6 +21396,7 @@
       "name",
       "properties/clientAffinityEnabled",
       "properties/clientCertEnabled",
+      "properties/clientCertMode",
       "properties/customDomainVerificationId",
       "properties/dailyMemoryTimeQuota",
       "properties/defaultHostName",
@@ -22649,7 +22802,10 @@
       "name",
       "properties/cacheSizeGB",
       "properties/mountAddresses",
+      "properties/networkSettings/dnsSearchDomain",
+      "properties/networkSettings/dnsServers",
       "properties/networkSettings/mtu",
+      "properties/networkSettings/ntpServer",
       "properties/securitySettings/accessPolicies/accessRules/access",
       "properties/securitySettings/accessPolicies/accessRules/anonymousGID",
       "properties/securitySettings/accessPolicies/accessRules/anonymousUID",
@@ -22673,7 +22829,10 @@
       "name",
       "properties/cacheSizeGB",
       "properties/mountAddresses",
+      "properties/networkSettings/dnsSearchDomain",
+      "properties/networkSettings/dnsServers",
       "properties/networkSettings/mtu",
+      "properties/networkSettings/ntpServer",
       "properties/securitySettings/accessPolicies/accessRules/access",
       "properties/securitySettings/accessPolicies/accessRules/anonymousGID",
       "properties/securitySettings/accessPolicies/accessRules/anonymousUID",
