@@ -807,6 +807,41 @@
     ]
   },
   {
+    "api_version": "2017-04-01",
+    "api_path": "/providers/microsoft.aadiam/diagnosticSettings/{name}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2017-04-01",
+    "api_path": "/providers/microsoft.aadiam/diagnosticSettings/{name}",
+    "operation": "GET",
+    "properties": [
+      "properties/eventHubAuthorizationRuleId",
+      "properties/eventHubName",
+      "properties/logs/category",
+      "properties/logs/enabled",
+      "properties/logs/retentionPolicy/days",
+      "properties/logs/retentionPolicy/enabled",
+      "properties/storageAccountId",
+      "properties/workspaceId"
+    ]
+  },
+  {
+    "api_version": "2017-04-01",
+    "api_path": "/providers/microsoft.aadiam/diagnosticSettings/{name}",
+    "operation": "PUT",
+    "properties": [
+      "properties/eventHubAuthorizationRuleId",
+      "properties/eventHubName",
+      "properties/logs/category",
+      "properties/logs/enabled",
+      "properties/logs/retentionPolicy/days",
+      "properties/logs/retentionPolicy/enabled",
+      "properties/storageAccountId",
+      "properties/workspaceId"
+    ]
+  },
+  {
     "api_version": "2019-07-01",
     "api_path": "/providers/{managementGroupsNamespace}/managementGroups/{managementGroupId}/providers/Microsoft.PolicyInsights/remediations/{remediationName}",
     "operation": "DELETE"
@@ -5151,6 +5186,7 @@
       "properties/encryptionSettingsCollection/encryptionSettings/keyEncryptionKey/sourceVault/id",
       "properties/networkAccessPolicy",
       "properties/osType",
+      "properties/tier",
       "sku/name",
       "tags",
       "zones"
@@ -5169,6 +5205,7 @@
       "properties/encryption/type",
       "properties/networkAccessPolicy",
       "properties/osType",
+      "properties/tier",
       "sku/name",
       "tags"
     ]
@@ -5200,6 +5237,7 @@
       "properties/encryptionSettingsCollection/encryptionSettings/keyEncryptionKey/sourceVault/id",
       "properties/networkAccessPolicy",
       "properties/osType",
+      "properties/tier",
       "sku/name",
       "tags",
       "zones"
@@ -6536,9 +6574,14 @@
     "operation": "GET",
     "properties": [
       "id",
+      "identity/type",
+      "identity/userAssignedIdentities",
       "location",
       "name",
       "properties/adminUserEnabled",
+      "properties/encryption/keyVaultProperties/identity",
+      "properties/encryption/keyVaultProperties/keyIdentifier",
+      "properties/encryption/status",
       "properties/loginServer",
       "properties/networkRuleSet/defaultAction",
       "properties/networkRuleSet/ipRules/action",
@@ -6562,6 +6605,8 @@
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{registryName}",
     "operation": "PATCH",
     "properties": [
+      "identity/type",
+      "identity/userAssignedIdentities",
       "properties/adminUserEnabled",
       "properties/networkRuleSet/defaultAction",
       "properties/networkRuleSet/ipRules/action",
@@ -6585,9 +6630,14 @@
     "operation": "PUT",
     "properties": [
       "id",
+      "identity/type",
+      "identity/userAssignedIdentities",
       "location",
       "name",
       "properties/adminUserEnabled",
+      "properties/encryption/keyVaultProperties/identity",
+      "properties/encryption/keyVaultProperties/keyIdentifier",
+      "properties/encryption/status",
       "properties/loginServer",
       "properties/networkRuleSet/defaultAction",
       "properties/networkRuleSet/ipRules/action",
@@ -7994,12 +8044,12 @@
     ]
   },
   {
-    "api_version": "2019-08-01",
+    "api_version": "2020-12-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/{deviceName}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2019-08-01",
+    "api_version": "2020-12-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/{deviceName}",
     "operation": "GET",
     "properties": [
@@ -8022,7 +8072,7 @@
     ]
   },
   {
-    "api_version": "2019-08-01",
+    "api_version": "2020-12-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/{deviceName}",
     "operation": "PATCH",
     "properties": [
@@ -8030,7 +8080,7 @@
     ]
   },
   {
-    "api_version": "2019-08-01",
+    "api_version": "2020-12-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/{deviceName}",
     "operation": "PUT",
     "properties": [
@@ -8053,12 +8103,12 @@
     ]
   },
   {
-    "api_version": "2019-08-01",
+    "api_version": "2020-12-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/{deviceName}/orders/default",
     "operation": "DELETE"
   },
   {
-    "api_version": "2019-08-01",
+    "api_version": "2020-12-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/{deviceName}/orders/default",
     "operation": "GET",
     "properties": [
@@ -8094,7 +8144,7 @@
     ]
   },
   {
-    "api_version": "2019-08-01",
+    "api_version": "2020-12-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/{deviceName}/orders/default",
     "operation": "PUT",
     "properties": [
@@ -10281,14 +10331,26 @@
     "operation": "GET",
     "properties": [
       "id",
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
       "kind",
       "location",
       "name",
       "properties/apiProperties/serverVersion",
+      "properties/backupPolicy{Continuous}/type",
+      "properties/backupPolicy{Periodic}/periodicModeProperties/backupIntervalInMinutes",
+      "properties/backupPolicy{Periodic}/periodicModeProperties/backupRetentionIntervalInHours",
+      "properties/backupPolicy{Periodic}/type",
       "properties/capabilities/name",
       "properties/consistencyPolicy/defaultConsistencyLevel",
       "properties/consistencyPolicy/maxIntervalInSeconds",
       "properties/consistencyPolicy/maxStalenessPrefix",
+      "properties/cors/allowedHeaders",
+      "properties/cors/allowedMethods",
+      "properties/cors/allowedOrigins",
+      "properties/cors/exposedHeaders",
+      "properties/cors/maxAgeInSeconds",
       "properties/databaseAccountOfferType",
       "properties/disableKeyBasedMetadataWriteAccess",
       "properties/documentEndpoint",
@@ -10333,13 +10395,25 @@
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}",
     "operation": "PUT",
     "properties": [
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
       "kind",
       "location",
       "properties/apiProperties/serverVersion",
+      "properties/backupPolicy{Continuous}/type",
+      "properties/backupPolicy{Periodic}/periodicModeProperties/backupIntervalInMinutes",
+      "properties/backupPolicy{Periodic}/periodicModeProperties/backupRetentionIntervalInHours",
+      "properties/backupPolicy{Periodic}/type",
       "properties/capabilities/name",
       "properties/consistencyPolicy/defaultConsistencyLevel",
       "properties/consistencyPolicy/maxIntervalInSeconds",
       "properties/consistencyPolicy/maxStalenessPrefix",
+      "properties/cors/allowedHeaders",
+      "properties/cors/allowedMethods",
+      "properties/cors/allowedOrigins",
+      "properties/cors/exposedHeaders",
+      "properties/cors/maxAgeInSeconds",
       "properties/databaseAccountOfferType",
       "properties/disableKeyBasedMetadataWriteAccess",
       "properties/enableAnalyticalStorage",
@@ -10716,6 +10790,7 @@
     "operation": "GET",
     "properties": [
       "id",
+      "properties/resource/analyticalStorageTtl",
       "properties/resource/conflictResolutionPolicy/conflictResolutionPath",
       "properties/resource/conflictResolutionPolicy/conflictResolutionProcedure",
       "properties/resource/conflictResolutionPolicy/mode",
@@ -10738,6 +10813,7 @@
     "properties": [
       "properties/options/autoscaleSettings/maxThroughput",
       "properties/options/throughput",
+      "properties/resource/analyticalStorageTtl",
       "properties/resource/conflictResolutionPolicy/conflictResolutionPath",
       "properties/resource/conflictResolutionPolicy/conflictResolutionProcedure",
       "properties/resource/conflictResolutionPolicy/mode",
@@ -12963,33 +13039,36 @@
     ]
   },
   {
-    "api_version": "2018-05-01",
+    "api_version": "2021-02-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Maps/accounts/{accountName}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2018-05-01",
+    "api_version": "2021-02-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Maps/accounts/{accountName}",
     "operation": "GET",
     "properties": [
       "id",
-      "properties/x-ms-client-id",
+      "location",
+      "properties/uniqueId",
       "sku/name",
       "tags"
     ]
   },
   {
-    "api_version": "2018-05-01",
+    "api_version": "2021-02-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Maps/accounts/{accountName}",
     "operation": "PUT",
     "properties": [
+      "id",
       "location",
+      "properties/uniqueId",
       "sku/name",
       "tags"
     ]
   },
   {
-    "api_version": "2018-05-01",
+    "api_version": "2021-02-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Maps/accounts/{accountName}/listKeys",
     "operation": "POST"
   },
@@ -18891,6 +18970,49 @@
     "operation": "POST"
   },
   {
+    "api_version": "2017-04-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/disasterRecoveryConfigs/CheckNameAvailability",
+    "operation": "POST",
+    "properties": [
+      "name"
+    ]
+  },
+  {
+    "api_version": "2017-04-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/disasterRecoveryConfigs/{alias}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2017-04-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/disasterRecoveryConfigs/{alias}",
+    "operation": "GET",
+    "properties": [
+      "id",
+      "properties/partnerNamespace",
+      "properties/provisioningState"
+    ]
+  },
+  {
+    "api_version": "2017-04-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/disasterRecoveryConfigs/{alias}",
+    "operation": "PUT",
+    "properties": [
+      "id",
+      "properties/partnerNamespace",
+      "properties/provisioningState"
+    ]
+  },
+  {
+    "api_version": "2017-04-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/disasterRecoveryConfigs/{alias}/AuthorizationRules/{authorizationRuleName}/listKeys",
+    "operation": "POST"
+  },
+  {
+    "api_version": "2017-04-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/disasterRecoveryConfigs/{alias}/breakPairing",
+    "operation": "POST"
+  },
+  {
     "api_version": "2018-01-01-preview",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/networkrulesets/default",
     "operation": "GET",
@@ -19986,6 +20108,10 @@
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/replicationLinks",
     "operation": "GET",
     "properties": [
+      "value/location",
+      "value/properties/partnerDatabase",
+      "value/properties/partnerLocation",
+      "value/properties/partnerServer",
       "value/properties/role"
     ]
   },
@@ -20153,6 +20279,7 @@
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/extendedAuditingSettings/{blobAuditingPolicyName}",
     "operation": "GET",
     "properties": [
+      "id",
       "properties/isAzureMonitorTargetEnabled",
       "properties/isStorageSecondaryKeyInUse",
       "properties/retentionDays",
@@ -20166,6 +20293,7 @@
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/extendedAuditingSettings/{blobAuditingPolicyName}",
     "operation": "PUT",
     "properties": [
+      "id",
       "properties/isAzureMonitorTargetEnabled",
       "properties/isStorageSecondaryKeyInUse",
       "properties/retentionDays",
@@ -20521,6 +20649,14 @@
       "name",
       "properties/accessTier",
       "properties/allowBlobPublicAccess",
+      "properties/allowSharedKeyAccess",
+      "properties/azureFilesIdentityBasedAuthentication/activeDirectoryProperties/azureStorageSid",
+      "properties/azureFilesIdentityBasedAuthentication/activeDirectoryProperties/domainGuid",
+      "properties/azureFilesIdentityBasedAuthentication/activeDirectoryProperties/domainName",
+      "properties/azureFilesIdentityBasedAuthentication/activeDirectoryProperties/domainSid",
+      "properties/azureFilesIdentityBasedAuthentication/activeDirectoryProperties/forestName",
+      "properties/azureFilesIdentityBasedAuthentication/activeDirectoryProperties/netBiosDomainName",
+      "properties/azureFilesIdentityBasedAuthentication/directoryServiceOptions",
       "properties/customDomain/name",
       "properties/customDomain/useSubDomainName",
       "properties/encryption/keySource",
@@ -20537,6 +20673,8 @@
       "properties/networkAcls/defaultAction",
       "properties/networkAcls/ipRules/action",
       "properties/networkAcls/ipRules/value",
+      "properties/networkAcls/resourceAccessRules/resourceId",
+      "properties/networkAcls/resourceAccessRules/tenantId",
       "properties/networkAcls/virtualNetworkRules/action",
       "properties/networkAcls/virtualNetworkRules/id",
       "properties/primaryEndpoints/blob",
@@ -20546,6 +20684,9 @@
       "properties/primaryEndpoints/table",
       "properties/primaryEndpoints/web",
       "properties/primaryLocation",
+      "properties/routingPreference/publishInternetEndpoints",
+      "properties/routingPreference/publishMicrosoftEndpoints",
+      "properties/routingPreference/routingChoice",
       "properties/secondaryEndpoints/blob",
       "properties/secondaryEndpoints/dfs",
       "properties/secondaryEndpoints/file",
@@ -20570,6 +20711,14 @@
       "kind",
       "properties/accessTier",
       "properties/allowBlobPublicAccess",
+      "properties/allowSharedKeyAccess",
+      "properties/azureFilesIdentityBasedAuthentication/activeDirectoryProperties/azureStorageSid",
+      "properties/azureFilesIdentityBasedAuthentication/activeDirectoryProperties/domainGuid",
+      "properties/azureFilesIdentityBasedAuthentication/activeDirectoryProperties/domainName",
+      "properties/azureFilesIdentityBasedAuthentication/activeDirectoryProperties/domainSid",
+      "properties/azureFilesIdentityBasedAuthentication/activeDirectoryProperties/forestName",
+      "properties/azureFilesIdentityBasedAuthentication/activeDirectoryProperties/netBiosDomainName",
+      "properties/azureFilesIdentityBasedAuthentication/directoryServiceOptions",
       "properties/customDomain/name",
       "properties/customDomain/useSubDomainName",
       "properties/encryption/keySource",
@@ -20584,8 +20733,13 @@
       "properties/networkAcls/defaultAction",
       "properties/networkAcls/ipRules/action",
       "properties/networkAcls/ipRules/value",
+      "properties/networkAcls/resourceAccessRules/resourceId",
+      "properties/networkAcls/resourceAccessRules/tenantId",
       "properties/networkAcls/virtualNetworkRules/action",
       "properties/networkAcls/virtualNetworkRules/id",
+      "properties/routingPreference/publishInternetEndpoints",
+      "properties/routingPreference/publishMicrosoftEndpoints",
+      "properties/routingPreference/routingChoice",
       "properties/supportsHttpsTrafficOnly",
       "sku/name",
       "sku/tier",
@@ -20604,6 +20758,14 @@
       "location",
       "properties/accessTier",
       "properties/allowBlobPublicAccess",
+      "properties/allowSharedKeyAccess",
+      "properties/azureFilesIdentityBasedAuthentication/activeDirectoryProperties/azureStorageSid",
+      "properties/azureFilesIdentityBasedAuthentication/activeDirectoryProperties/domainGuid",
+      "properties/azureFilesIdentityBasedAuthentication/activeDirectoryProperties/domainName",
+      "properties/azureFilesIdentityBasedAuthentication/activeDirectoryProperties/domainSid",
+      "properties/azureFilesIdentityBasedAuthentication/activeDirectoryProperties/forestName",
+      "properties/azureFilesIdentityBasedAuthentication/activeDirectoryProperties/netBiosDomainName",
+      "properties/azureFilesIdentityBasedAuthentication/directoryServiceOptions",
       "properties/customDomain/name",
       "properties/customDomain/useSubDomainName",
       "properties/isHnsEnabled",
@@ -20614,8 +20776,13 @@
       "properties/networkAcls/defaultAction",
       "properties/networkAcls/ipRules/action",
       "properties/networkAcls/ipRules/value",
+      "properties/networkAcls/resourceAccessRules/resourceId",
+      "properties/networkAcls/resourceAccessRules/tenantId",
       "properties/networkAcls/virtualNetworkRules/action",
       "properties/networkAcls/virtualNetworkRules/id",
+      "properties/routingPreference/publishInternetEndpoints",
+      "properties/routingPreference/publishMicrosoftEndpoints",
+      "properties/routingPreference/routingChoice",
       "properties/supportsHttpsTrafficOnly",
       "sku/name",
       "sku/tier",
@@ -20627,6 +20794,7 @@
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/{BlobServicesName}",
     "operation": "GET",
     "properties": [
+      "properties/changeFeed/enabled",
       "properties/containerDeleteRetentionPolicy/days",
       "properties/containerDeleteRetentionPolicy/enabled",
       "properties/cors/corsRules/allowedHeaders",
@@ -20646,6 +20814,7 @@
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/{BlobServicesName}",
     "operation": "PUT",
     "properties": [
+      "properties/changeFeed/enabled",
       "properties/containerDeleteRetentionPolicy/days",
       "properties/containerDeleteRetentionPolicy/enabled",
       "properties/cors/corsRules/allowedHeaders",
@@ -22575,6 +22744,15 @@
     "api_version": "2019-01-01-preview",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{operationalInsightsResourceProvider}/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/alertRuleTemplates/{alertRuleTemplateId}",
     "operation": "GET",
+    "variant": "MLBehaviorAnalytics",
+    "properties": [
+      "properties/displayName"
+    ]
+  },
+  {
+    "api_version": "2019-01-01-preview",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{operationalInsightsResourceProvider}/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/alertRuleTemplates/{alertRuleTemplateId}",
+    "operation": "GET",
     "variant": "MicrosoftSecurityIncidentCreation",
     "properties": [
       "properties/displayName"
@@ -22599,6 +22777,19 @@
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{operationalInsightsResourceProvider}/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/alertRules/{ruleId}",
     "operation": "GET",
     "variant": "Fusion",
+    "properties": [
+      "etag",
+      "id",
+      "kind",
+      "properties/alertRuleTemplateName",
+      "properties/enabled"
+    ]
+  },
+  {
+    "api_version": "2019-01-01-preview",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{operationalInsightsResourceProvider}/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/alertRules/{ruleId}",
+    "operation": "GET",
+    "variant": "MLBehaviorAnalytics",
     "properties": [
       "etag",
       "id",
@@ -22662,6 +22853,19 @@
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{operationalInsightsResourceProvider}/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/alertRules/{ruleId}",
     "operation": "PUT",
     "variant": "Fusion",
+    "properties": [
+      "etag",
+      "id",
+      "kind",
+      "properties/alertRuleTemplateName",
+      "properties/enabled"
+    ]
+  },
+  {
+    "api_version": "2019-01-01-preview",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{operationalInsightsResourceProvider}/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/alertRules/{ruleId}",
+    "operation": "PUT",
+    "variant": "MLBehaviorAnalytics",
     "properties": [
       "etag",
       "id",
@@ -24994,6 +25198,77 @@
       "properties/permissions/notDataActions",
       "properties/roleName",
       "properties/type"
+    ]
+  },
+  {
+    "api_version": "2019-10-01",
+    "api_path": "/{scope}/providers/Microsoft.Consumption/budgets/{budgetName}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2019-10-01",
+    "api_path": "/{scope}/providers/Microsoft.Consumption/budgets/{budgetName}",
+    "operation": "GET",
+    "properties": [
+      "id",
+      "name",
+      "properties/amount",
+      "properties/category",
+      "properties/filter/and/dimensions/name",
+      "properties/filter/and/dimensions/operator",
+      "properties/filter/and/dimensions/values",
+      "properties/filter/and/tags/name",
+      "properties/filter/and/tags/operator",
+      "properties/filter/and/tags/values",
+      "properties/filter/dimensions/name",
+      "properties/filter/dimensions/operator",
+      "properties/filter/dimensions/values",
+      "properties/filter/not/dimensions/name",
+      "properties/filter/not/dimensions/operator",
+      "properties/filter/not/dimensions/values",
+      "properties/filter/not/tags/name",
+      "properties/filter/not/tags/operator",
+      "properties/filter/not/tags/values",
+      "properties/filter/tags/name",
+      "properties/filter/tags/operator",
+      "properties/filter/tags/values",
+      "properties/notifications",
+      "properties/timeGrain",
+      "properties/timePeriod/endDate",
+      "properties/timePeriod/startDate"
+    ]
+  },
+  {
+    "api_version": "2019-10-01",
+    "api_path": "/{scope}/providers/Microsoft.Consumption/budgets/{budgetName}",
+    "operation": "PUT",
+    "properties": [
+      "id",
+      "name",
+      "properties/amount",
+      "properties/category",
+      "properties/filter/and/dimensions/name",
+      "properties/filter/and/dimensions/operator",
+      "properties/filter/and/dimensions/values",
+      "properties/filter/and/tags/name",
+      "properties/filter/and/tags/operator",
+      "properties/filter/and/tags/values",
+      "properties/filter/dimensions/name",
+      "properties/filter/dimensions/operator",
+      "properties/filter/dimensions/values",
+      "properties/filter/not/dimensions/name",
+      "properties/filter/not/dimensions/operator",
+      "properties/filter/not/dimensions/values",
+      "properties/filter/not/tags/name",
+      "properties/filter/not/tags/operator",
+      "properties/filter/not/tags/values",
+      "properties/filter/tags/name",
+      "properties/filter/tags/operator",
+      "properties/filter/tags/values",
+      "properties/notifications",
+      "properties/timeGrain",
+      "properties/timePeriod/endDate",
+      "properties/timePeriod/startDate"
     ]
   },
   {
