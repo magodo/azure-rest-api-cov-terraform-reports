@@ -2942,6 +2942,11 @@
       "properties/networkProfile/appNetworkResourceGroup",
       "properties/networkProfile/appSubnetId",
       "properties/networkProfile/outboundIPs/publicIPs",
+      "properties/networkProfile/requiredTraffics/direction",
+      "properties/networkProfile/requiredTraffics/fqdns",
+      "properties/networkProfile/requiredTraffics/ips",
+      "properties/networkProfile/requiredTraffics/port",
+      "properties/networkProfile/requiredTraffics/protocol",
       "properties/networkProfile/serviceCidr",
       "properties/networkProfile/serviceRuntimeNetworkResourceGroup",
       "properties/networkProfile/serviceRuntimeSubnetId",
@@ -2960,6 +2965,11 @@
       "properties/networkProfile/appNetworkResourceGroup",
       "properties/networkProfile/appSubnetId",
       "properties/networkProfile/outboundIPs/publicIPs",
+      "properties/networkProfile/requiredTraffics/direction",
+      "properties/networkProfile/requiredTraffics/fqdns",
+      "properties/networkProfile/requiredTraffics/ips",
+      "properties/networkProfile/requiredTraffics/port",
+      "properties/networkProfile/requiredTraffics/protocol",
       "properties/networkProfile/serviceCidr",
       "properties/networkProfile/serviceRuntimeNetworkResourceGroup",
       "properties/networkProfile/serviceRuntimeSubnetId",
@@ -2978,6 +2988,11 @@
       "properties/networkProfile/appNetworkResourceGroup",
       "properties/networkProfile/appSubnetId",
       "properties/networkProfile/outboundIPs/publicIPs",
+      "properties/networkProfile/requiredTraffics/direction",
+      "properties/networkProfile/requiredTraffics/fqdns",
+      "properties/networkProfile/requiredTraffics/ips",
+      "properties/networkProfile/requiredTraffics/port",
+      "properties/networkProfile/requiredTraffics/protocol",
       "properties/networkProfile/serviceCidr",
       "properties/networkProfile/serviceRuntimeNetworkResourceGroup",
       "properties/networkProfile/serviceRuntimeSubnetId",
@@ -4254,6 +4269,7 @@
       "properties/provisioningState",
       "properties/publicNetworkAccess",
       "properties/redisConfiguration",
+      "properties/replicasPerMaster",
       "properties/shardCount",
       "properties/sku/capacity",
       "properties/sku/family",
@@ -4274,6 +4290,7 @@
       "properties/minimumTlsVersion",
       "properties/publicNetworkAccess",
       "properties/redisConfiguration",
+      "properties/replicasPerMaster",
       "properties/shardCount",
       "properties/sku/capacity",
       "properties/sku/family",
@@ -4291,6 +4308,7 @@
       "properties/minimumTlsVersion",
       "properties/publicNetworkAccess",
       "properties/redisConfiguration",
+      "properties/replicasPerMaster",
       "properties/shardCount",
       "properties/sku/capacity",
       "properties/sku/family",
@@ -4426,6 +4444,11 @@
       "properties/modules/version",
       "properties/port"
     ]
+  },
+  {
+    "api_version": "2021-03-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redisEnterprise/{clusterName}/databases/{databaseName}/listKeys",
+    "operation": "POST"
   },
   {
     "api_version": "2019-04-15",
@@ -5791,6 +5814,7 @@
       "properties/virtualMachineProfile/extensionProfile/extensions/properties/type",
       "properties/virtualMachineProfile/extensionProfile/extensions/properties/typeHandlerVersion",
       "properties/virtualMachineProfile/extensionProfile/extensionsTimeBudget",
+      "properties/virtualMachineProfile/licenseType",
       "properties/virtualMachineProfile/networkProfile/healthProbe/id",
       "properties/virtualMachineProfile/networkProfile/networkInterfaceConfigurations/name",
       "properties/virtualMachineProfile/networkProfile/networkInterfaceConfigurations/properties/dnsSettings/dnsServers",
@@ -6799,12 +6823,12 @@
     "operation": "POST"
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2021-03-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{resourceName}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2021-03-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{resourceName}",
     "operation": "GET",
     "properties": [
@@ -6906,7 +6930,7 @@
     ]
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2021-03-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{resourceName}",
     "operation": "PUT",
     "properties": [
@@ -7008,17 +7032,17 @@
     ]
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2021-03-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{resourceName}/accessProfiles/{roleName}/listCredential",
     "operation": "POST"
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2021-03-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{resourceName}/agentPools/{agentPoolName}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2021-03-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{resourceName}/agentPools/{agentPoolName}",
     "operation": "GET",
     "properties": [
@@ -7051,7 +7075,7 @@
     ]
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2021-03-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{resourceName}/agentPools/{agentPoolName}",
     "operation": "PUT",
     "properties": [
@@ -7084,7 +7108,7 @@
     ]
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2021-03-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{resourceName}/resetAADProfile",
     "operation": "POST",
     "properties": [
@@ -7098,7 +7122,7 @@
     ]
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2021-03-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{resourceName}/resetServicePrincipalProfile",
     "operation": "POST",
     "properties": [
@@ -10471,6 +10495,7 @@
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/cassandraKeyspaces/{keyspaceName}/tables/{tableName}",
     "operation": "GET",
     "properties": [
+      "properties/resource/analyticalStorageTtl",
       "properties/resource/defaultTtl",
       "properties/resource/id",
       "properties/resource/schema/clusterKeys/name",
@@ -10487,6 +10512,7 @@
     "properties": [
       "properties/options/autoscaleSettings/maxThroughput",
       "properties/options/throughput",
+      "properties/resource/analyticalStorageTtl",
       "properties/resource/defaultTtl",
       "properties/resource/id",
       "properties/resource/schema/clusterKeys/name",
@@ -10680,6 +10706,7 @@
     "operation": "GET",
     "properties": [
       "id",
+      "properties/resource/analyticalStorageTtl",
       "properties/resource/id",
       "properties/resource/indexes/key/keys",
       "properties/resource/indexes/options/expireAfterSeconds",
@@ -10694,6 +10721,7 @@
     "properties": [
       "properties/options/autoscaleSettings/maxThroughput",
       "properties/options/throughput",
+      "properties/resource/analyticalStorageTtl",
       "properties/resource/id",
       "properties/resource/indexes/key/keys",
       "properties/resource/indexes/options/expireAfterSeconds",
@@ -10983,12 +11011,12 @@
     ]
   },
   {
-    "api_version": "2020-04-01-preview",
+    "api_version": "2020-10-15-preview",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/domains/{domainName}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-04-01-preview",
+    "api_version": "2020-10-15-preview",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/domains/{domainName}",
     "operation": "GET",
     "properties": [
@@ -11014,7 +11042,7 @@
     ]
   },
   {
-    "api_version": "2020-04-01-preview",
+    "api_version": "2020-10-15-preview",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/domains/{domainName}",
     "operation": "PUT",
     "properties": [
@@ -11040,17 +11068,17 @@
     ]
   },
   {
-    "api_version": "2020-04-01-preview",
+    "api_version": "2020-10-15-preview",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/domains/{domainName}/listKeys",
     "operation": "POST"
   },
   {
-    "api_version": "2020-04-01-preview",
+    "api_version": "2020-10-15-preview",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/domains/{domainName}/topics/{domainTopicName}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-04-01-preview",
+    "api_version": "2020-10-15-preview",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/domains/{domainName}/topics/{domainTopicName}",
     "operation": "GET",
     "properties": [
@@ -11059,17 +11087,17 @@
     ]
   },
   {
-    "api_version": "2020-04-01-preview",
+    "api_version": "2020-10-15-preview",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/domains/{domainName}/topics/{domainTopicName}",
     "operation": "PUT"
   },
   {
-    "api_version": "2020-04-01-preview",
+    "api_version": "2020-10-15-preview",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/systemTopics/{systemTopicName}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-04-01-preview",
+    "api_version": "2020-10-15-preview",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/systemTopics/{systemTopicName}",
     "operation": "GET",
     "properties": [
@@ -11083,7 +11111,7 @@
     ]
   },
   {
-    "api_version": "2020-04-01-preview",
+    "api_version": "2020-10-15-preview",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/systemTopics/{systemTopicName}",
     "operation": "PUT",
     "properties": [
@@ -11097,12 +11125,12 @@
     ]
   },
   {
-    "api_version": "2020-04-01-preview",
+    "api_version": "2020-10-15-preview",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/systemTopics/{systemTopicName}/eventSubscriptions/{eventSubscriptionName}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-04-01-preview",
+    "api_version": "2020-10-15-preview",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/systemTopics/{systemTopicName}/eventSubscriptions/{eventSubscriptionName}",
     "operation": "GET",
     "properties": [
@@ -11181,7 +11209,7 @@
     ]
   },
   {
-    "api_version": "2020-04-01-preview",
+    "api_version": "2020-10-15-preview",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/systemTopics/{systemTopicName}/eventSubscriptions/{eventSubscriptionName}",
     "operation": "PUT",
     "properties": [
@@ -11260,17 +11288,17 @@
     ]
   },
   {
-    "api_version": "2020-04-01-preview",
+    "api_version": "2020-10-15-preview",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/systemTopics/{systemTopicName}/eventSubscriptions/{eventSubscriptionName}/getFullUrl",
     "operation": "POST"
   },
   {
-    "api_version": "2020-04-01-preview",
+    "api_version": "2020-10-15-preview",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-04-01-preview",
+    "api_version": "2020-10-15-preview",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}",
     "operation": "GET",
     "properties": [
@@ -11296,7 +11324,7 @@
     ]
   },
   {
-    "api_version": "2020-04-01-preview",
+    "api_version": "2020-10-15-preview",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}",
     "operation": "PUT",
     "properties": [
@@ -11322,7 +11350,7 @@
     ]
   },
   {
-    "api_version": "2020-04-01-preview",
+    "api_version": "2020-10-15-preview",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}/listKeys",
     "operation": "POST"
   },
@@ -11636,6 +11664,7 @@
       "properties/computeProfile/roles/virtualNetworkProfile/subnet",
       "properties/connectivityEndpoints/location",
       "properties/connectivityEndpoints/name",
+      "properties/encryptionInTransitProperties/isEncryptionInTransitEnabled",
       "properties/kafkaRestProperties/clientGroupInfo/groupId",
       "properties/kafkaRestProperties/clientGroupInfo/groupName",
       "properties/minSupportedTlsVersion",
@@ -11682,6 +11711,7 @@
       "properties/computeProfile/roles/targetInstanceCount",
       "properties/computeProfile/roles/virtualNetworkProfile/id",
       "properties/computeProfile/roles/virtualNetworkProfile/subnet",
+      "properties/encryptionInTransitProperties/isEncryptionInTransitEnabled",
       "properties/kafkaRestProperties/clientGroupInfo/groupId",
       "properties/kafkaRestProperties/clientGroupInfo/groupName",
       "properties/minSupportedTlsVersion",
@@ -11922,6 +11952,7 @@
       "properties/corsConfiguration/origins",
       "properties/cosmosDbConfiguration/keyVaultKeyUri",
       "properties/cosmosDbConfiguration/offerThroughput",
+      "properties/publicNetworkAccess",
       "tags"
     ]
   },
@@ -11944,6 +11975,7 @@
       "properties/corsConfiguration/origins",
       "properties/cosmosDbConfiguration/keyVaultKeyUri",
       "properties/cosmosDbConfiguration/offerThroughput",
+      "properties/publicNetworkAccess",
       "tags"
     ]
   },
@@ -13006,6 +13038,49 @@
     ]
   },
   {
+    "api_version": "2020-04-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/computes/{computeName}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2020-04-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/computes/{computeName}",
+    "operation": "GET",
+    "properties": [
+      "id",
+      "location",
+      "properties{AKS}/computeLocation",
+      "properties{AKS}/description",
+      "properties{AKS}/properties/clusterFqdn",
+      "properties{AKS}/properties/clusterPurpose",
+      "properties{AKS}/properties/sslConfiguration/cert",
+      "properties{AKS}/properties/sslConfiguration/cname",
+      "properties{AKS}/properties/sslConfiguration/key",
+      "properties{AKS}/properties/sslConfiguration/status",
+      "properties{AKS}/resourceId",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2020-04-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/computes/{computeName}",
+    "operation": "PUT",
+    "properties": [
+      "id",
+      "location",
+      "properties{AKS}/computeLocation",
+      "properties{AKS}/description",
+      "properties{AKS}/properties/clusterFqdn",
+      "properties{AKS}/properties/clusterPurpose",
+      "properties{AKS}/properties/sslConfiguration/cert",
+      "properties{AKS}/properties/sslConfiguration/cname",
+      "properties{AKS}/properties/sslConfiguration/key",
+      "properties{AKS}/properties/sslConfiguration/status",
+      "properties{AKS}/resourceId",
+      "tags"
+    ]
+  },
+  {
     "api_version": "2018-11-30",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{resourceName}",
     "operation": "DELETE"
@@ -13474,12 +13549,12 @@
     "operation": "POST"
   },
   {
-    "api_version": "2020-05-01",
+    "api_version": "2021-05-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Media/mediaservices/{accountName}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-05-01",
+    "api_version": "2021-05-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Media/mediaservices/{accountName}",
     "operation": "GET",
     "properties": [
@@ -13487,6 +13562,8 @@
       "identity/tenantId",
       "identity/type",
       "location",
+      "properties/keyDelivery/accessControl/defaultAction",
+      "properties/keyDelivery/accessControl/ipAllowList",
       "properties/storageAccounts/id",
       "properties/storageAccounts/type",
       "properties/storageAuthentication",
@@ -13494,7 +13571,7 @@
     ]
   },
   {
-    "api_version": "2020-05-01",
+    "api_version": "2021-05-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Media/mediaservices/{accountName}",
     "operation": "PUT",
     "properties": [
@@ -13502,6 +13579,8 @@
       "identity/tenantId",
       "identity/type",
       "location",
+      "properties/keyDelivery/accessControl/defaultAction",
+      "properties/keyDelivery/accessControl/ipAllowList",
       "properties/storageAccounts/id",
       "properties/storageAccounts/type",
       "properties/storageAuthentication",
@@ -13875,6 +13954,7 @@
       "properties/exportPolicy/rules/unixReadWrite",
       "properties/mountTargets/ipAddress",
       "properties/protocolTypes",
+      "properties/securityStyle",
       "properties/serviceLevel",
       "properties/snapshotId",
       "properties/subnetId",
@@ -13905,6 +13985,7 @@
       "properties/exportPolicy/rules/unixReadWrite",
       "properties/mountTargets/ipAddress",
       "properties/protocolTypes",
+      "properties/securityStyle",
       "properties/serviceLevel",
       "properties/snapshotId",
       "properties/subnetId",
@@ -14815,6 +14896,14 @@
       "properties/virtualNetworkGateway2/name",
       "properties/virtualNetworkGateway2/properties/ipConfigurations",
       "tags"
+    ]
+  },
+  {
+    "api_version": "2020-07-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey",
+    "operation": "PUT",
+    "properties": [
+      "value"
     ]
   },
   {
@@ -22535,6 +22624,40 @@
     ]
   },
   {
+    "api_version": "2020-06-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2020-06-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}",
+    "operation": "GET",
+    "properties": [
+      "id",
+      "location",
+      "properties/defaultHostname",
+      "sku/name",
+      "sku/tier"
+    ]
+  },
+  {
+    "api_version": "2020-06-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}",
+    "operation": "PUT",
+    "properties": [
+      "id",
+      "location",
+      "properties/defaultHostname",
+      "sku/name",
+      "sku/tier"
+    ]
+  },
+  {
+    "api_version": "2020-06-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}/listSecrets",
+    "operation": "POST"
+  },
+  {
     "api_version": "2019-06-01",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/microsoft.alertsManagement/smartDetectorAlertRules/{alertRuleName}",
     "operation": "DELETE"
@@ -25315,12 +25438,12 @@
     ]
   },
   {
-    "api_version": "2020-04-01-preview",
+    "api_version": "2020-10-15-preview",
     "api_path": "/{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{eventSubscriptionName}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-04-01-preview",
+    "api_version": "2020-10-15-preview",
     "api_path": "/{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{eventSubscriptionName}",
     "operation": "GET",
     "properties": [
@@ -25399,7 +25522,7 @@
     ]
   },
   {
-    "api_version": "2020-04-01-preview",
+    "api_version": "2020-10-15-preview",
     "api_path": "/{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{eventSubscriptionName}",
     "operation": "PUT",
     "properties": [
@@ -25478,7 +25601,7 @@
     ]
   },
   {
-    "api_version": "2020-04-01-preview",
+    "api_version": "2020-10-15-preview",
     "api_path": "/{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{eventSubscriptionName}/getFullUrl",
     "operation": "POST"
   },
