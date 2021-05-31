@@ -2877,58 +2877,6 @@
     ]
   },
   {
-    "api_version": "2020-06-01",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AppConfiguration/configurationStores/{configStoreName}",
-    "operation": "DELETE"
-  },
-  {
-    "api_version": "2020-06-01",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AppConfiguration/configurationStores/{configStoreName}",
-    "operation": "GET",
-    "properties": [
-      "id",
-      "identity/principalId",
-      "identity/tenantId",
-      "identity/type",
-      "location",
-      "properties/endpoint",
-      "sku/name",
-      "tags"
-    ]
-  },
-  {
-    "api_version": "2020-06-01",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AppConfiguration/configurationStores/{configStoreName}",
-    "operation": "PATCH",
-    "properties": [
-      "identity/principalId",
-      "identity/tenantId",
-      "identity/type",
-      "sku/name",
-      "tags"
-    ]
-  },
-  {
-    "api_version": "2020-06-01",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AppConfiguration/configurationStores/{configStoreName}",
-    "operation": "PUT",
-    "properties": [
-      "id",
-      "identity/principalId",
-      "identity/tenantId",
-      "identity/type",
-      "location",
-      "properties/endpoint",
-      "sku/name",
-      "tags"
-    ]
-  },
-  {
-    "api_version": "2020-06-01",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AppConfiguration/configurationStores/{configStoreName}/ListKeys",
-    "operation": "POST"
-  },
-  {
     "api_version": "2020-11-01-preview",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AppPlatform/Spring/{serviceName}",
     "operation": "DELETE"
@@ -8771,10 +8719,12 @@
       "properties{Sftp}/type",
       "properties{Sftp}/typeProperties/authenticationType",
       "properties{Sftp}/typeProperties/host",
+      "properties{Sftp}/typeProperties/hostKeyFingerprint",
       "properties{Sftp}/typeProperties/password{AzureKeyVaultSecret}",
       "properties{Sftp}/typeProperties/password{SecureString}/type",
       "properties{Sftp}/typeProperties/password{SecureString}/value",
       "properties{Sftp}/typeProperties/port",
+      "properties{Sftp}/typeProperties/skipHostKeyValidation",
       "properties{Sftp}/typeProperties/userName",
       "properties{Snowflake}",
       "properties{Snowflake}/annotations",
@@ -8988,10 +8938,12 @@
       "properties{Sftp}/type",
       "properties{Sftp}/typeProperties/authenticationType",
       "properties{Sftp}/typeProperties/host",
+      "properties{Sftp}/typeProperties/hostKeyFingerprint",
       "properties{Sftp}/typeProperties/password{AzureKeyVaultSecret}",
       "properties{Sftp}/typeProperties/password{SecureString}/type",
       "properties{Sftp}/typeProperties/password{SecureString}/value",
       "properties{Sftp}/typeProperties/port",
+      "properties{Sftp}/typeProperties/skipHostKeyValidation",
       "properties{Sftp}/typeProperties/userName",
       "properties{Snowflake}",
       "properties{Snowflake}/annotations",
@@ -11355,280 +11307,6 @@
     "operation": "POST"
   },
   {
-    "api_version": "2018-01-01-preview",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/clusters/{clusterName}",
-    "operation": "DELETE"
-  },
-  {
-    "api_version": "2018-01-01-preview",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/clusters/{clusterName}",
-    "operation": "GET",
-    "properties": [
-      "id",
-      "location",
-      "name",
-      "sku/capacity",
-      "sku/name",
-      "tags"
-    ]
-  },
-  {
-    "api_version": "2018-01-01-preview",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/clusters/{clusterName}",
-    "operation": "PUT",
-    "properties": [
-      "id",
-      "location",
-      "name",
-      "sku/capacity",
-      "sku/name",
-      "tags"
-    ]
-  },
-  {
-    "api_version": "2018-01-01-preview",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}",
-    "operation": "DELETE"
-  },
-  {
-    "api_version": "2018-01-01-preview",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}",
-    "operation": "GET",
-    "properties": [
-      "id",
-      "identity/principalId",
-      "identity/tenantId",
-      "identity/type",
-      "location",
-      "name",
-      "properties/clusterArmId",
-      "properties/isAutoInflateEnabled",
-      "properties/kafkaEnabled",
-      "properties/maximumThroughputUnits",
-      "properties/zoneRedundant",
-      "sku/capacity",
-      "sku/name",
-      "sku/tier",
-      "tags"
-    ]
-  },
-  {
-    "api_version": "2018-01-01-preview",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}",
-    "operation": "PUT",
-    "properties": [
-      "id",
-      "identity/principalId",
-      "identity/tenantId",
-      "identity/type",
-      "location",
-      "name",
-      "properties/clusterArmId",
-      "properties/isAutoInflateEnabled",
-      "properties/kafkaEnabled",
-      "properties/maximumThroughputUnits",
-      "properties/zoneRedundant",
-      "sku/capacity",
-      "sku/name",
-      "sku/tier",
-      "tags"
-    ]
-  },
-  {
-    "api_version": "2017-04-01",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/authorizationRules/{authorizationRuleName}",
-    "operation": "DELETE"
-  },
-  {
-    "api_version": "2017-04-01",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/authorizationRules/{authorizationRuleName}",
-    "operation": "GET",
-    "properties": [
-      "id",
-      "name",
-      "properties/rights"
-    ]
-  },
-  {
-    "api_version": "2017-04-01",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/authorizationRules/{authorizationRuleName}",
-    "operation": "PUT",
-    "properties": [
-      "id",
-      "name",
-      "properties/rights"
-    ]
-  },
-  {
-    "api_version": "2017-04-01",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/authorizationRules/{authorizationRuleName}/listKeys",
-    "operation": "POST"
-  },
-  {
-    "api_version": "2017-04-01",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/disasterRecoveryConfigs/checkNameAvailability",
-    "operation": "POST",
-    "properties": [
-      "name"
-    ]
-  },
-  {
-    "api_version": "2017-04-01",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/disasterRecoveryConfigs/{alias}",
-    "operation": "DELETE"
-  },
-  {
-    "api_version": "2017-04-01",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/disasterRecoveryConfigs/{alias}",
-    "operation": "GET",
-    "properties": [
-      "id",
-      "properties/alternateName",
-      "properties/partnerNamespace",
-      "properties/provisioningState"
-    ]
-  },
-  {
-    "api_version": "2017-04-01",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/disasterRecoveryConfigs/{alias}",
-    "operation": "PUT",
-    "properties": [
-      "id",
-      "properties/alternateName",
-      "properties/partnerNamespace",
-      "properties/provisioningState"
-    ]
-  },
-  {
-    "api_version": "2017-04-01",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/disasterRecoveryConfigs/{alias}/breakPairing",
-    "operation": "POST"
-  },
-  {
-    "api_version": "2017-04-01",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/eventhubs/{eventHubName}",
-    "operation": "DELETE"
-  },
-  {
-    "api_version": "2017-04-01",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/eventhubs/{eventHubName}",
-    "operation": "GET",
-    "properties": [
-      "id",
-      "properties/captureDescription/destination/name",
-      "properties/captureDescription/destination/properties/archiveNameFormat",
-      "properties/captureDescription/destination/properties/blobContainer",
-      "properties/captureDescription/destination/properties/storageAccountResourceId",
-      "properties/captureDescription/enabled",
-      "properties/captureDescription/encoding",
-      "properties/captureDescription/intervalInSeconds",
-      "properties/captureDescription/sizeLimitInBytes",
-      "properties/captureDescription/skipEmptyArchives",
-      "properties/messageRetentionInDays",
-      "properties/partitionCount",
-      "properties/partitionIds"
-    ]
-  },
-  {
-    "api_version": "2017-04-01",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/eventhubs/{eventHubName}",
-    "operation": "PUT",
-    "properties": [
-      "id",
-      "properties/captureDescription/destination/name",
-      "properties/captureDescription/destination/properties/archiveNameFormat",
-      "properties/captureDescription/destination/properties/blobContainer",
-      "properties/captureDescription/destination/properties/storageAccountResourceId",
-      "properties/captureDescription/enabled",
-      "properties/captureDescription/encoding",
-      "properties/captureDescription/intervalInSeconds",
-      "properties/captureDescription/sizeLimitInBytes",
-      "properties/captureDescription/skipEmptyArchives",
-      "properties/messageRetentionInDays",
-      "properties/partitionCount",
-      "properties/partitionIds"
-    ]
-  },
-  {
-    "api_version": "2017-04-01",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/eventhubs/{eventHubName}/authorizationRules/{authorizationRuleName}",
-    "operation": "DELETE"
-  },
-  {
-    "api_version": "2017-04-01",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/eventhubs/{eventHubName}/authorizationRules/{authorizationRuleName}",
-    "operation": "GET",
-    "properties": [
-      "id",
-      "name",
-      "properties/rights"
-    ]
-  },
-  {
-    "api_version": "2017-04-01",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/eventhubs/{eventHubName}/authorizationRules/{authorizationRuleName}",
-    "operation": "PUT",
-    "properties": [
-      "id",
-      "name",
-      "properties/rights"
-    ]
-  },
-  {
-    "api_version": "2017-04-01",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/eventhubs/{eventHubName}/authorizationRules/{authorizationRuleName}/listKeys",
-    "operation": "POST"
-  },
-  {
-    "api_version": "2017-04-01",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/eventhubs/{eventHubName}/consumergroups/{consumerGroupName}",
-    "operation": "DELETE"
-  },
-  {
-    "api_version": "2017-04-01",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/eventhubs/{eventHubName}/consumergroups/{consumerGroupName}",
-    "operation": "GET",
-    "properties": [
-      "id",
-      "properties/userMetadata"
-    ]
-  },
-  {
-    "api_version": "2017-04-01",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/eventhubs/{eventHubName}/consumergroups/{consumerGroupName}",
-    "operation": "PUT",
-    "properties": [
-      "id",
-      "properties/userMetadata"
-    ]
-  },
-  {
-    "api_version": "2018-01-01-preview",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/networkRuleSets/default",
-    "operation": "GET",
-    "properties": [
-      "properties/defaultAction",
-      "properties/ipRules/action",
-      "properties/ipRules/ipMask",
-      "properties/trustedServiceAccessEnabled",
-      "properties/virtualNetworkRules/ignoreMissingVnetServiceEndpoint",
-      "properties/virtualNetworkRules/subnet/id"
-    ]
-  },
-  {
-    "api_version": "2018-01-01-preview",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/networkRuleSets/default",
-    "operation": "PUT",
-    "properties": [
-      "properties/defaultAction",
-      "properties/ipRules/action",
-      "properties/ipRules/ipMask",
-      "properties/trustedServiceAccessEnabled",
-      "properties/virtualNetworkRules/ignoreMissingVnetServiceEndpoint",
-      "properties/virtualNetworkRules/subnet/id"
-    ]
-  },
-  {
     "api_version": "2018-06-01-preview",
     "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HDInsight/clusters/{clusterName}",
     "operation": "DELETE"
@@ -13833,29 +13511,33 @@
     "operation": "POST"
   },
   {
-    "api_version": "2019-02-28-preview",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MixedReality/spatialAnchorsAccounts/{spatialAnchorsAccountName}",
+    "api_version": "2021-01-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MixedReality/spatialAnchorsAccounts/{accountName}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2019-02-28-preview",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MixedReality/spatialAnchorsAccounts/{spatialAnchorsAccountName}",
+    "api_version": "2021-01-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MixedReality/spatialAnchorsAccounts/{accountName}",
     "operation": "GET",
     "properties": [
       "id",
       "location",
       "name",
+      "properties/accountDomain",
+      "properties/accountId",
       "tags"
     ]
   },
   {
-    "api_version": "2019-02-28-preview",
-    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MixedReality/spatialAnchorsAccounts/{spatialAnchorsAccountName}",
+    "api_version": "2021-01-01",
+    "api_path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MixedReality/spatialAnchorsAccounts/{accountName}",
     "operation": "PUT",
     "properties": [
       "id",
       "location",
       "name",
+      "properties/accountDomain",
+      "properties/accountId",
       "tags"
     ]
   },
@@ -21529,6 +21211,7 @@
       "properties/friendlyName",
       "properties/hostNames",
       "properties/hostingEnvironmentProfile/id",
+      "properties/hostingEnvironmentProfile/name",
       "properties/issueDate",
       "properties/issuer",
       "properties/keyVaultId",
@@ -21554,6 +21237,7 @@
       "properties/friendlyName",
       "properties/hostNames",
       "properties/hostingEnvironmentProfile/id",
+      "properties/hostingEnvironmentProfile/name",
       "properties/issueDate",
       "properties/issuer",
       "properties/keyVaultId",
@@ -21656,6 +21340,7 @@
       "kind",
       "location",
       "properties/hostingEnvironmentProfile/id",
+      "properties/hostingEnvironmentProfile/name",
       "properties/isXenon",
       "properties/maximumElasticWorkerCount",
       "properties/maximumNumberOfWorkers",
@@ -21677,6 +21362,7 @@
       "kind",
       "location",
       "properties/hostingEnvironmentProfile/id",
+      "properties/hostingEnvironmentProfile/name",
       "properties/isXenon",
       "properties/maximumElasticWorkerCount",
       "properties/maximumNumberOfWorkers",
@@ -22637,7 +22323,8 @@
       "location",
       "properties/defaultHostname",
       "sku/name",
-      "sku/tier"
+      "sku/tier",
+      "tags"
     ]
   },
   {
@@ -22649,7 +22336,8 @@
       "location",
       "properties/defaultHostname",
       "sku/name",
-      "sku/tier"
+      "sku/tier",
+      "tags"
     ]
   },
   {
