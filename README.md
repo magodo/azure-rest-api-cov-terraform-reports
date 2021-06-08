@@ -25,8 +25,6 @@ Especially, each of the reports represent:
     $ op=PUT
     $ v="2021-04-01"
     $ jq --arg p $p --arg v $v --arg rp $rp --arg op $op '.[$rp] | select(.[$p] != null) | .[$p].operations | .[$op] | .[$v] |.swagger_rel_path, (.properties | to_entries[] | select(.value.state == "Uncovered") | .key)' api-cov.json
-    "alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2021-04-01/SmartDetectorAlertRulesApi.json"
-    "properties/detector/parameters"
     ```
 
     Example (Windows):
