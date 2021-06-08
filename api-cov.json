@@ -6539,7 +6539,7 @@
                 "state": "Covered"
               },
               "properties/delegatedManagedIdentityResourceId": {
-                "state": "Covered"
+                "state": "Uncovered"
               },
               "properties/description": {
                 "state": "Covered"
@@ -6573,7 +6573,7 @@
                 "state": "Ignored"
               },
               "properties/delegatedManagedIdentityResourceId": {
-                "state": "Covered"
+                "state": "Uncovered"
               },
               "properties/description": {
                 "state": "Covered"
@@ -6616,7 +6616,7 @@
                 "state": "Ignored"
               },
               "properties/delegatedManagedIdentityResourceId": {
-                "state": "Covered"
+                "state": "Uncovered"
               },
               "properties/description": {
                 "state": "Covered"
@@ -34514,7 +34514,7 @@
                 "state": "Covered"
               },
               "properties/agentPoolProfiles/nodePublicIPPrefixID": {
-                "state": "Covered"
+                "state": "Uncovered"
               },
               "properties/agentPoolProfiles/nodeTaints": {
                 "state": "Covered"
@@ -35045,7 +35045,7 @@
                 "state": "Covered"
               },
               "properties/nodePublicIPPrefixID": {
-                "state": "Covered"
+                "state": "Uncovered"
               },
               "properties/nodeTaints": {
                 "state": "Covered"
@@ -77622,10 +77622,10 @@
                 "state": "Covered"
               },
               "properties{AKS}/properties/sslConfiguration/leafDomainLabel": {
-                "state": "Covered"
+                "state": "Uncovered"
               },
               "properties{AKS}/properties/sslConfiguration/overwriteExistingDomain": {
-                "state": "Covered"
+                "state": "Uncovered"
               },
               "properties{AKS}/properties/sslConfiguration/status": {
                 "state": "Covered"
@@ -81286,10 +81286,10 @@
                 "state": "Covered"
               },
               "properties{AKS}/properties/sslConfiguration/leafDomainLabel": {
-                "state": "Covered"
+                "state": "Uncovered"
               },
               "properties{AKS}/properties/sslConfiguration/overwriteExistingDomain": {
-                "state": "Covered"
+                "state": "Uncovered"
               },
               "properties{AKS}/properties/sslConfiguration/status": {
                 "state": "Covered"
@@ -82136,10 +82136,10 @@
                 "state": "Covered"
               },
               "properties{AKS}/properties/sslConfiguration/leafDomainLabel": {
-                "state": "Covered"
+                "state": "Uncovered"
               },
               "properties{AKS}/properties/sslConfiguration/overwriteExistingDomain": {
-                "state": "Covered"
+                "state": "Uncovered"
               },
               "properties{AKS}/properties/sslConfiguration/status": {
                 "state": "Covered"
@@ -831908,98 +831908,6 @@
         }
       }
     },
-    "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/FIREWALLRULES/{}": {
-      "operations": {
-        "DELETE": {
-          "2020-02-14-preview": {
-            "name": "",
-            "swagger_rel_path": "postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2020-02-14-preview/postgresql.json",
-            "active": true,
-            "properties": {}
-          },
-          "2020-02-14-privatepreview": {
-            "name": "",
-            "swagger_rel_path": "postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2020-02-14-privatepreview/postgresql.json",
-            "active": false,
-            "properties": {}
-          },
-          "2021-04-10-privatepreview": {
-            "name": "",
-            "swagger_rel_path": "postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2021-04-10-privatepreview/postgresql.json",
-            "active": false,
-            "properties": {}
-          }
-        },
-        "PUT": {
-          "2020-02-14-preview": {
-            "name": "FirewallRule",
-            "swagger_rel_path": "postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2020-02-14-preview/postgresql.json",
-            "active": true,
-            "properties": {
-              "id": {
-                "state": "Ignored"
-              },
-              "name": {
-                "state": "Ignored"
-              },
-              "properties/endIpAddress": {
-                "state": "Covered"
-              },
-              "properties/startIpAddress": {
-                "state": "Covered"
-              },
-              "type": {
-                "state": "Ignored"
-              }
-            }
-          },
-          "2020-02-14-privatepreview": {
-            "name": "FirewallRule",
-            "swagger_rel_path": "postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2020-02-14-privatepreview/postgresql.json",
-            "active": false,
-            "properties": {
-              "id": {
-                "state": "Ignored"
-              },
-              "name": {
-                "state": "Ignored"
-              },
-              "properties/endIpAddress": {
-                "state": "Covered"
-              },
-              "properties/startIpAddress": {
-                "state": "Covered"
-              },
-              "type": {
-                "state": "Ignored"
-              }
-            }
-          },
-          "2021-04-10-privatepreview": {
-            "name": "FirewallRule",
-            "swagger_rel_path": "postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2021-04-10-privatepreview/postgresql.json",
-            "active": false,
-            "properties": {
-              "id": {
-                "state": "Ignored"
-              },
-              "name": {
-                "state": "Ignored"
-              },
-              "properties/endIpAddress": {
-                "state": "Covered"
-              },
-              "properties/startIpAddress": {
-                "state": "Covered"
-              },
-              "type": {
-                "state": "Ignored"
-              }
-            }
-          }
-        }
-      }
-    },
     "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/SERVERS/{}": {
       "operations": {
         "DELETE": {
@@ -860440,40 +860348,7 @@
               "properties/replicationProviderSettings{A2A}/recoveryPointHistory": {
                 "state": "Covered"
               },
-              "properties/replicationProviderSettings{HyperVReplica2012R2}/allowedAuthenticationType": {
-                "state": "Uncovered"
-              },
-              "properties/replicationProviderSettings{HyperVReplica2012R2}/applicationConsistentSnapshotFrequencyInHours": {
-                "state": "Uncovered"
-              },
-              "properties/replicationProviderSettings{HyperVReplica2012R2}/compression": {
-                "state": "Uncovered"
-              },
-              "properties/replicationProviderSettings{HyperVReplica2012R2}/initialReplicationMethod": {
-                "state": "Uncovered"
-              },
-              "properties/replicationProviderSettings{HyperVReplica2012R2}/instanceType": {
-                "state": "Uncovered"
-              },
-              "properties/replicationProviderSettings{HyperVReplica2012R2}/offlineReplicationExportPath": {
-                "state": "Uncovered"
-              },
-              "properties/replicationProviderSettings{HyperVReplica2012R2}/offlineReplicationImportPath": {
-                "state": "Uncovered"
-              },
-              "properties/replicationProviderSettings{HyperVReplica2012R2}/onlineReplicationStartTime": {
-                "state": "Uncovered"
-              },
-              "properties/replicationProviderSettings{HyperVReplica2012R2}/recoveryPoints": {
-                "state": "Uncovered"
-              },
-              "properties/replicationProviderSettings{HyperVReplica2012R2}/replicaDeletion": {
-                "state": "Uncovered"
-              },
               "properties/replicationProviderSettings{HyperVReplica2012R2}/replicationFrequencyInSeconds": {
-                "state": "Uncovered"
-              },
-              "properties/replicationProviderSettings{HyperVReplica2012R2}/replicationPort": {
                 "state": "Uncovered"
               },
               "properties/replicationProviderSettings{HyperVReplicaAzure}/applicationConsistentSnapshotFrequencyInHours": {
@@ -882611,164 +882486,6 @@
           }
         }
       }
-    },
-    "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/OBJECTREPLICATIONPOLICIES": {
-      "operations": {}
-    },
-    "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/OBJECTREPLICATIONPOLICIES/{}": {
-      "operations": {
-        "DELETE": {
-          "2021-01-01": {
-            "name": "",
-            "swagger_rel_path": "storage/resource-manager/Microsoft.Storage/stable/2021-01-01/storage.json",
-            "active": true,
-            "properties": {}
-          },
-          "2021-02-01": {
-            "name": "",
-            "swagger_rel_path": "storage/resource-manager/Microsoft.Storage/stable/2021-02-01/storage.json",
-            "active": false,
-            "properties": {}
-          },
-          "2021-04-01": {
-            "name": "",
-            "swagger_rel_path": "storage/resource-manager/Microsoft.Storage/stable/2021-04-01/storage.json",
-            "active": false,
-            "properties": {}
-          }
-        },
-        "PUT": {
-          "2021-01-01": {
-            "name": "ObjectReplicationPolicy",
-            "swagger_rel_path": "storage/resource-manager/Microsoft.Storage/stable/2021-01-01/storage.json",
-            "active": true,
-            "properties": {
-              "id": {
-                "state": "Ignored"
-              },
-              "name": {
-                "state": "Ignored"
-              },
-              "properties/destinationAccount": {
-                "state": "Covered"
-              },
-              "properties/enabledTime": {
-                "state": "Ignored"
-              },
-              "properties/policyId": {
-                "state": "Ignored"
-              },
-              "properties/rules/destinationContainer": {
-                "state": "Covered"
-              },
-              "properties/rules/filters/minCreationTime": {
-                "state": "Covered"
-              },
-              "properties/rules/filters/prefixMatch": {
-                "state": "Covered"
-              },
-              "properties/rules/ruleId": {
-                "state": "Covered"
-              },
-              "properties/rules/sourceContainer": {
-                "state": "Covered"
-              },
-              "properties/sourceAccount": {
-                "state": "Covered"
-              },
-              "type": {
-                "state": "Ignored"
-              }
-            }
-          },
-          "2021-02-01": {
-            "name": "ObjectReplicationPolicy",
-            "swagger_rel_path": "storage/resource-manager/Microsoft.Storage/stable/2021-02-01/storage.json",
-            "active": false,
-            "properties": {
-              "id": {
-                "state": "Ignored"
-              },
-              "name": {
-                "state": "Ignored"
-              },
-              "properties/destinationAccount": {
-                "state": "Covered"
-              },
-              "properties/enabledTime": {
-                "state": "Ignored"
-              },
-              "properties/policyId": {
-                "state": "Ignored"
-              },
-              "properties/rules/destinationContainer": {
-                "state": "Covered"
-              },
-              "properties/rules/filters/minCreationTime": {
-                "state": "Covered"
-              },
-              "properties/rules/filters/prefixMatch": {
-                "state": "Covered"
-              },
-              "properties/rules/ruleId": {
-                "state": "Covered"
-              },
-              "properties/rules/sourceContainer": {
-                "state": "Covered"
-              },
-              "properties/sourceAccount": {
-                "state": "Covered"
-              },
-              "type": {
-                "state": "Ignored"
-              }
-            }
-          },
-          "2021-04-01": {
-            "name": "ObjectReplicationPolicy",
-            "swagger_rel_path": "storage/resource-manager/Microsoft.Storage/stable/2021-04-01/storage.json",
-            "active": false,
-            "properties": {
-              "id": {
-                "state": "Ignored"
-              },
-              "name": {
-                "state": "Ignored"
-              },
-              "properties/destinationAccount": {
-                "state": "Covered"
-              },
-              "properties/enabledTime": {
-                "state": "Ignored"
-              },
-              "properties/policyId": {
-                "state": "Ignored"
-              },
-              "properties/rules/destinationContainer": {
-                "state": "Covered"
-              },
-              "properties/rules/filters/minCreationTime": {
-                "state": "Covered"
-              },
-              "properties/rules/filters/prefixMatch": {
-                "state": "Covered"
-              },
-              "properties/rules/ruleId": {
-                "state": "Covered"
-              },
-              "properties/rules/sourceContainer": {
-                "state": "Covered"
-              },
-              "properties/sourceAccount": {
-                "state": "Covered"
-              },
-              "type": {
-                "state": "Ignored"
-              }
-            }
-          }
-        }
-      }
     }
   },
   "storagecache": {
@@ -893250,138 +892967,6 @@
               },
               "tags": {
                 "state": "Covered"
-              },
-              "type": {
-                "state": "Ignored"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AVS/PRIVATECLOUDS/{}/AUTHORIZATIONS/{}": {
-      "operations": {
-        "DELETE": {
-          "2020-03-20": {
-            "name": "",
-            "swagger_rel_path": "vmware/resource-manager/Microsoft.AVS/stable/2020-03-20/vmware.json",
-            "active": true,
-            "properties": {}
-          },
-          "2020-07-17-preview": {
-            "name": "",
-            "swagger_rel_path": "vmware/resource-manager/Microsoft.AVS/preview/2020-07-17-preview/vmware.json",
-            "active": false,
-            "properties": {}
-          },
-          "2021-01-01-preview": {
-            "name": "",
-            "swagger_rel_path": "vmware/resource-manager/Microsoft.AVS/preview/2021-01-01-preview/vmware.json",
-            "active": false,
-            "properties": {}
-          },
-          "2021-06-01": {
-            "name": "",
-            "swagger_rel_path": "vmware/resource-manager/Microsoft.AVS/stable/2021-06-01/vmware.json",
-            "active": false,
-            "properties": {}
-          }
-        },
-        "PUT": {
-          "2020-03-20": {
-            "name": "ExpressRouteAuthorization",
-            "swagger_rel_path": "vmware/resource-manager/Microsoft.AVS/stable/2020-03-20/vmware.json",
-            "active": true,
-            "properties": {
-              "id": {
-                "state": "Ignored"
-              },
-              "name": {
-                "state": "Ignored"
-              },
-              "properties/expressRouteAuthorizationId": {
-                "state": "Ignored"
-              },
-              "properties/expressRouteAuthorizationKey": {
-                "state": "Ignored"
-              },
-              "properties/provisioningState": {
-                "state": "Ignored"
-              },
-              "type": {
-                "state": "Ignored"
-              }
-            }
-          },
-          "2020-07-17-preview": {
-            "name": "ExpressRouteAuthorization",
-            "swagger_rel_path": "vmware/resource-manager/Microsoft.AVS/preview/2020-07-17-preview/vmware.json",
-            "active": false,
-            "properties": {
-              "id": {
-                "state": "Ignored"
-              },
-              "name": {
-                "state": "Ignored"
-              },
-              "properties/expressRouteAuthorizationId": {
-                "state": "Ignored"
-              },
-              "properties/expressRouteAuthorizationKey": {
-                "state": "Ignored"
-              },
-              "properties/provisioningState": {
-                "state": "Ignored"
-              },
-              "type": {
-                "state": "Ignored"
-              }
-            }
-          },
-          "2021-01-01-preview": {
-            "name": "ExpressRouteAuthorization",
-            "swagger_rel_path": "vmware/resource-manager/Microsoft.AVS/preview/2021-01-01-preview/vmware.json",
-            "active": false,
-            "properties": {
-              "id": {
-                "state": "Ignored"
-              },
-              "name": {
-                "state": "Ignored"
-              },
-              "properties/expressRouteAuthorizationId": {
-                "state": "Ignored"
-              },
-              "properties/expressRouteAuthorizationKey": {
-                "state": "Ignored"
-              },
-              "properties/provisioningState": {
-                "state": "Ignored"
-              },
-              "type": {
-                "state": "Ignored"
-              }
-            }
-          },
-          "2021-06-01": {
-            "name": "ExpressRouteAuthorization",
-            "swagger_rel_path": "vmware/resource-manager/Microsoft.AVS/stable/2021-06-01/vmware.json",
-            "active": false,
-            "properties": {
-              "id": {
-                "state": "Ignored"
-              },
-              "name": {
-                "state": "Ignored"
-              },
-              "properties/expressRouteAuthorizationId": {
-                "state": "Ignored"
-              },
-              "properties/expressRouteAuthorizationKey": {
-                "state": "Ignored"
-              },
-              "properties/provisioningState": {
-                "state": "Ignored"
               },
               "type": {
                 "state": "Ignored"
