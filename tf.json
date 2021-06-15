@@ -685,7 +685,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.NETWORK/LOCATIONS/{}/SERVICETAGS",
     "operation": "GET",
     "properties": [
@@ -7031,6 +7031,10 @@
       "properties{DelimitedText}/typeProperties/encodingName",
       "properties{DelimitedText}/typeProperties/escapeChar",
       "properties{DelimitedText}/typeProperties/firstRowAsHeader",
+      "properties{DelimitedText}/typeProperties/location{AzureBlobFSLocation}/fileName",
+      "properties{DelimitedText}/typeProperties/location{AzureBlobFSLocation}/fileSystem",
+      "properties{DelimitedText}/typeProperties/location{AzureBlobFSLocation}/folderPath",
+      "properties{DelimitedText}/typeProperties/location{AzureBlobFSLocation}/type",
       "properties{DelimitedText}/typeProperties/location{AzureBlobStorageLocation}/container",
       "properties{DelimitedText}/typeProperties/location{AzureBlobStorageLocation}/fileName",
       "properties{DelimitedText}/typeProperties/location{AzureBlobStorageLocation}/folderPath",
@@ -7060,6 +7064,10 @@
       "properties{Json}/parameters",
       "properties{Json}/structure",
       "properties{Json}/typeProperties/encodingName",
+      "properties{Json}/typeProperties/location{AzureBlobFSLocation}/fileName",
+      "properties{Json}/typeProperties/location{AzureBlobFSLocation}/fileSystem",
+      "properties{Json}/typeProperties/location{AzureBlobFSLocation}/folderPath",
+      "properties{Json}/typeProperties/location{AzureBlobFSLocation}/type",
       "properties{Json}/typeProperties/location{AzureBlobStorageLocation}/container",
       "properties{Json}/typeProperties/location{AzureBlobStorageLocation}/fileName",
       "properties{Json}/typeProperties/location{AzureBlobStorageLocation}/folderPath",
@@ -7075,6 +7083,10 @@
       "properties{Parquet}/parameters",
       "properties{Parquet}/structure",
       "properties{Parquet}/typeProperties/compressionCodec",
+      "properties{Parquet}/typeProperties/location{AzureBlobFSLocation}/fileName",
+      "properties{Parquet}/typeProperties/location{AzureBlobFSLocation}/fileSystem",
+      "properties{Parquet}/typeProperties/location{AzureBlobFSLocation}/folderPath",
+      "properties{Parquet}/typeProperties/location{AzureBlobFSLocation}/type",
       "properties{Parquet}/typeProperties/location{AzureBlobStorageLocation}/container",
       "properties{Parquet}/typeProperties/location{AzureBlobStorageLocation}/fileName",
       "properties{Parquet}/typeProperties/location{AzureBlobStorageLocation}/folderPath",
@@ -7152,6 +7164,10 @@
       "properties{DelimitedText}/typeProperties/encodingName",
       "properties{DelimitedText}/typeProperties/escapeChar",
       "properties{DelimitedText}/typeProperties/firstRowAsHeader",
+      "properties{DelimitedText}/typeProperties/location{AzureBlobFSLocation}/fileName",
+      "properties{DelimitedText}/typeProperties/location{AzureBlobFSLocation}/fileSystem",
+      "properties{DelimitedText}/typeProperties/location{AzureBlobFSLocation}/folderPath",
+      "properties{DelimitedText}/typeProperties/location{AzureBlobFSLocation}/type",
       "properties{DelimitedText}/typeProperties/location{AzureBlobStorageLocation}/container",
       "properties{DelimitedText}/typeProperties/location{AzureBlobStorageLocation}/fileName",
       "properties{DelimitedText}/typeProperties/location{AzureBlobStorageLocation}/folderPath",
@@ -7181,6 +7197,10 @@
       "properties{Json}/parameters",
       "properties{Json}/structure",
       "properties{Json}/typeProperties/encodingName",
+      "properties{Json}/typeProperties/location{AzureBlobFSLocation}/fileName",
+      "properties{Json}/typeProperties/location{AzureBlobFSLocation}/fileSystem",
+      "properties{Json}/typeProperties/location{AzureBlobFSLocation}/folderPath",
+      "properties{Json}/typeProperties/location{AzureBlobFSLocation}/type",
       "properties{Json}/typeProperties/location{AzureBlobStorageLocation}/container",
       "properties{Json}/typeProperties/location{AzureBlobStorageLocation}/fileName",
       "properties{Json}/typeProperties/location{AzureBlobStorageLocation}/folderPath",
@@ -7196,6 +7216,10 @@
       "properties{Parquet}/parameters",
       "properties{Parquet}/structure",
       "properties{Parquet}/typeProperties/compressionCodec",
+      "properties{Parquet}/typeProperties/location{AzureBlobFSLocation}/fileName",
+      "properties{Parquet}/typeProperties/location{AzureBlobFSLocation}/fileSystem",
+      "properties{Parquet}/typeProperties/location{AzureBlobFSLocation}/folderPath",
+      "properties{Parquet}/typeProperties/location{AzureBlobFSLocation}/type",
       "properties{Parquet}/typeProperties/location{AzureBlobStorageLocation}/container",
       "properties{Parquet}/typeProperties/location{AzureBlobStorageLocation}/fileName",
       "properties{Parquet}/typeProperties/location{AzureBlobStorageLocation}/folderPath",
@@ -7330,6 +7354,7 @@
       "properties{AzureBlobFS}/description",
       "properties{AzureBlobFS}/parameters",
       "properties{AzureBlobFS}/type",
+      "properties{AzureBlobFS}/typeProperties/accountKey",
       "properties{AzureBlobFS}/typeProperties/servicePrincipalId",
       "properties{AzureBlobFS}/typeProperties/servicePrincipalKey{AzureKeyVaultSecret}",
       "properties{AzureBlobFS}/typeProperties/servicePrincipalKey{SecureString}/type",
@@ -7351,6 +7376,20 @@
       "properties{AzureBlobStorage}/typeProperties/servicePrincipalKey{SecureString}/type",
       "properties{AzureBlobStorage}/typeProperties/servicePrincipalKey{SecureString}/value",
       "properties{AzureBlobStorage}/typeProperties/tenant",
+      "properties{AzureDataExplorer}",
+      "properties{AzureDataExplorer}/annotations",
+      "properties{AzureDataExplorer}/connectVia/referenceName",
+      "properties{AzureDataExplorer}/connectVia/type",
+      "properties{AzureDataExplorer}/description",
+      "properties{AzureDataExplorer}/parameters",
+      "properties{AzureDataExplorer}/type",
+      "properties{AzureDataExplorer}/typeProperties/database",
+      "properties{AzureDataExplorer}/typeProperties/endpoint",
+      "properties{AzureDataExplorer}/typeProperties/servicePrincipalId",
+      "properties{AzureDataExplorer}/typeProperties/servicePrincipalKey{AzureKeyVaultSecret}",
+      "properties{AzureDataExplorer}/typeProperties/servicePrincipalKey{SecureString}/type",
+      "properties{AzureDataExplorer}/typeProperties/servicePrincipalKey{SecureString}/value",
+      "properties{AzureDataExplorer}/typeProperties/tenant",
       "properties{AzureDatabricks}",
       "properties{AzureDatabricks}/annotations",
       "properties{AzureDatabricks}/connectVia/referenceName",
@@ -7412,6 +7451,18 @@
       "properties{AzureKeyVault}/parameters",
       "properties{AzureKeyVault}/type",
       "properties{AzureKeyVault}/typeProperties/baseUrl",
+      "properties{AzureSearch}",
+      "properties{AzureSearch}/annotations",
+      "properties{AzureSearch}/connectVia/referenceName",
+      "properties{AzureSearch}/connectVia/type",
+      "properties{AzureSearch}/description",
+      "properties{AzureSearch}/parameters",
+      "properties{AzureSearch}/type",
+      "properties{AzureSearch}/typeProperties/encryptedCredential",
+      "properties{AzureSearch}/typeProperties/key{AzureKeyVaultSecret}",
+      "properties{AzureSearch}/typeProperties/key{SecureString}/type",
+      "properties{AzureSearch}/typeProperties/key{SecureString}/value",
+      "properties{AzureSearch}/typeProperties/url",
       "properties{AzureSqlDW}",
       "properties{AzureSqlDW}/annotations",
       "properties{AzureSqlDW}/connectVia/referenceName",
@@ -7549,6 +7600,7 @@
       "properties{AzureBlobFS}/description",
       "properties{AzureBlobFS}/parameters",
       "properties{AzureBlobFS}/type",
+      "properties{AzureBlobFS}/typeProperties/accountKey",
       "properties{AzureBlobFS}/typeProperties/servicePrincipalId",
       "properties{AzureBlobFS}/typeProperties/servicePrincipalKey{AzureKeyVaultSecret}",
       "properties{AzureBlobFS}/typeProperties/servicePrincipalKey{SecureString}/type",
@@ -7570,6 +7622,20 @@
       "properties{AzureBlobStorage}/typeProperties/servicePrincipalKey{SecureString}/type",
       "properties{AzureBlobStorage}/typeProperties/servicePrincipalKey{SecureString}/value",
       "properties{AzureBlobStorage}/typeProperties/tenant",
+      "properties{AzureDataExplorer}",
+      "properties{AzureDataExplorer}/annotations",
+      "properties{AzureDataExplorer}/connectVia/referenceName",
+      "properties{AzureDataExplorer}/connectVia/type",
+      "properties{AzureDataExplorer}/description",
+      "properties{AzureDataExplorer}/parameters",
+      "properties{AzureDataExplorer}/type",
+      "properties{AzureDataExplorer}/typeProperties/database",
+      "properties{AzureDataExplorer}/typeProperties/endpoint",
+      "properties{AzureDataExplorer}/typeProperties/servicePrincipalId",
+      "properties{AzureDataExplorer}/typeProperties/servicePrincipalKey{AzureKeyVaultSecret}",
+      "properties{AzureDataExplorer}/typeProperties/servicePrincipalKey{SecureString}/type",
+      "properties{AzureDataExplorer}/typeProperties/servicePrincipalKey{SecureString}/value",
+      "properties{AzureDataExplorer}/typeProperties/tenant",
       "properties{AzureDatabricks}",
       "properties{AzureDatabricks}/annotations",
       "properties{AzureDatabricks}/connectVia/referenceName",
@@ -7631,6 +7697,18 @@
       "properties{AzureKeyVault}/parameters",
       "properties{AzureKeyVault}/type",
       "properties{AzureKeyVault}/typeProperties/baseUrl",
+      "properties{AzureSearch}",
+      "properties{AzureSearch}/annotations",
+      "properties{AzureSearch}/connectVia/referenceName",
+      "properties{AzureSearch}/connectVia/type",
+      "properties{AzureSearch}/description",
+      "properties{AzureSearch}/parameters",
+      "properties{AzureSearch}/type",
+      "properties{AzureSearch}/typeProperties/encryptedCredential",
+      "properties{AzureSearch}/typeProperties/key{AzureKeyVaultSecret}",
+      "properties{AzureSearch}/typeProperties/key{SecureString}/type",
+      "properties{AzureSearch}/typeProperties/key{SecureString}/value",
+      "properties{AzureSearch}/typeProperties/url",
       "properties{AzureSqlDW}",
       "properties{AzureSqlDW}/annotations",
       "properties{AzureSqlDW}/connectVia/referenceName",
@@ -9246,12 +9324,12 @@
     ]
   },
   {
-    "api_version": "2019-12-10-preview",
+    "api_version": "2020-11-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DESKTOPVIRTUALIZATION/APPLICATIONGROUPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2019-12-10-preview",
+    "api_version": "2020-11-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DESKTOPVIRTUALIZATION/APPLICATIONGROUPS/{}",
     "operation": "GET",
     "properties": [
@@ -9264,7 +9342,7 @@
     ]
   },
   {
-    "api_version": "2019-12-10-preview",
+    "api_version": "2020-11-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DESKTOPVIRTUALIZATION/APPLICATIONGROUPS/{}",
     "operation": "PUT",
     "properties": [
@@ -9277,12 +9355,12 @@
     ]
   },
   {
-    "api_version": "2019-12-10-preview",
+    "api_version": "2020-11-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DESKTOPVIRTUALIZATION/HOSTPOOLS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2019-12-10-preview",
+    "api_version": "2020-11-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DESKTOPVIRTUALIZATION/HOSTPOOLS/{}",
     "operation": "GET",
     "properties": [
@@ -9298,12 +9376,13 @@
       "properties/registrationInfo/expirationTime",
       "properties/registrationInfo/registrationTokenOperation",
       "properties/registrationInfo/token",
+      "properties/startVMOnConnect",
       "properties/validationEnvironment",
       "tags"
     ]
   },
   {
-    "api_version": "2019-12-10-preview",
+    "api_version": "2020-11-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DESKTOPVIRTUALIZATION/HOSTPOOLS/{}",
     "operation": "PUT",
     "properties": [
@@ -9319,17 +9398,18 @@
       "properties/registrationInfo/expirationTime",
       "properties/registrationInfo/registrationTokenOperation",
       "properties/registrationInfo/token",
+      "properties/startVMOnConnect",
       "properties/validationEnvironment",
       "tags"
     ]
   },
   {
-    "api_version": "2019-12-10-preview",
+    "api_version": "2020-11-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DESKTOPVIRTUALIZATION/WORKSPACES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2019-12-10-preview",
+    "api_version": "2020-11-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DESKTOPVIRTUALIZATION/WORKSPACES/{}",
     "operation": "GET",
     "properties": [
@@ -9341,7 +9421,7 @@
     ]
   },
   {
-    "api_version": "2019-12-10-preview",
+    "api_version": "2020-11-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DESKTOPVIRTUALIZATION/WORKSPACES/{}",
     "operation": "PUT",
     "properties": [
@@ -10258,10 +10338,14 @@
       "properties/resource/conflictResolutionPolicy/mode",
       "properties/resource/defaultTtl",
       "properties/resource/indexingPolicy/automatic",
+      "properties/resource/indexingPolicy/compositeIndexes/order",
+      "properties/resource/indexingPolicy/compositeIndexes/path",
       "properties/resource/indexingPolicy/excludedPaths/path",
       "properties/resource/indexingPolicy/includedPaths/path",
       "properties/resource/indexingPolicy/indexingMode",
+      "properties/resource/partitionKey/kind",
       "properties/resource/partitionKey/paths",
+      "properties/resource/partitionKey/version",
       "properties/resource/uniqueKeyPolicy/uniqueKeys/paths"
     ]
   },
@@ -10278,10 +10362,14 @@
       "properties/resource/defaultTtl",
       "properties/resource/id",
       "properties/resource/indexingPolicy/automatic",
+      "properties/resource/indexingPolicy/compositeIndexes/order",
+      "properties/resource/indexingPolicy/compositeIndexes/path",
       "properties/resource/indexingPolicy/excludedPaths/path",
       "properties/resource/indexingPolicy/includedPaths/path",
       "properties/resource/indexingPolicy/indexingMode",
+      "properties/resource/partitionKey/kind",
       "properties/resource/partitionKey/paths",
+      "properties/resource/partitionKey/version",
       "properties/resource/uniqueKeyPolicy/uniqueKeys/paths"
     ]
   },
@@ -11183,7 +11271,8 @@
       "properties/captureDescription/skipEmptyArchives",
       "properties/messageRetentionInDays",
       "properties/partitionCount",
-      "properties/partitionIds"
+      "properties/partitionIds",
+      "properties/status"
     ]
   },
   {
@@ -12494,6 +12583,7 @@
       "properties/keyVaultProperties/keyName",
       "properties/keyVaultProperties/keyVaultUri",
       "properties/keyVaultProperties/keyVersion",
+      "properties/keyVaultProperties/userIdentity",
       "properties/languageExtensions/value/languageExtensionName",
       "properties/optimizedAutoscale/isEnabled",
       "properties/optimizedAutoscale/maximum",
@@ -12518,7 +12608,8 @@
     "properties": [
       "properties/keyVaultProperties/keyName",
       "properties/keyVaultProperties/keyVaultUri",
-      "properties/keyVaultProperties/keyVersion"
+      "properties/keyVaultProperties/keyVersion",
+      "properties/keyVaultProperties/userIdentity"
     ]
   },
   {
@@ -12542,6 +12633,7 @@
       "properties/keyVaultProperties/keyName",
       "properties/keyVaultProperties/keyVaultUri",
       "properties/keyVaultProperties/keyVersion",
+      "properties/keyVaultProperties/userIdentity",
       "properties/languageExtensions/value/languageExtensionName",
       "properties/optimizedAutoscale/isEnabled",
       "properties/optimizedAutoscale/maximum",
@@ -14073,12 +14165,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/APPLICATIONGATEWAYS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/APPLICATIONGATEWAYS/{}",
     "operation": "GET",
     "properties": [
@@ -14232,7 +14324,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/APPLICATIONGATEWAYS/{}",
     "operation": "PUT",
     "properties": [
@@ -14386,22 +14478,22 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/APPLICATIONGATEWAYS/{}/START",
     "operation": "POST"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/APPLICATIONGATEWAYS/{}/STOP",
     "operation": "POST"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/APPLICATIONGATEWAYWEBAPPLICATIONFIREWALLPOLICIES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/APPLICATIONGATEWAYWEBAPPLICATIONFIREWALLPOLICIES/{}",
     "operation": "GET",
     "properties": [
@@ -14437,7 +14529,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/APPLICATIONGATEWAYWEBAPPLICATIONFIREWALLPOLICIES/{}",
     "operation": "PUT",
     "properties": [
@@ -14473,12 +14565,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/APPLICATIONSECURITYGROUPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/APPLICATIONSECURITYGROUPS/{}",
     "operation": "GET",
     "properties": [
@@ -14489,7 +14581,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/APPLICATIONSECURITYGROUPS/{}",
     "operation": "PUT",
     "properties": [
@@ -14500,12 +14592,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/AZUREFIREWALLS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/AZUREFIREWALLS/{}",
     "operation": "GET",
     "properties": [
@@ -14572,7 +14664,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/AZUREFIREWALLS/{}",
     "operation": "PUT",
     "properties": [
@@ -14639,12 +14731,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/BASTIONHOSTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/BASTIONHOSTS/{}",
     "operation": "GET",
     "properties": [
@@ -14658,7 +14750,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/BASTIONHOSTS/{}",
     "operation": "PUT",
     "properties": [
@@ -14672,12 +14764,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/CONNECTIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/CONNECTIONS/{}",
     "operation": "GET",
     "properties": [
@@ -14721,7 +14813,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/CONNECTIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -14765,7 +14857,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/CONNECTIONS/{}/SHAREDKEY",
     "operation": "PUT",
     "properties": [
@@ -14773,12 +14865,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/DDOSPROTECTIONPLANS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/DDOSPROTECTIONPLANS/{}",
     "operation": "GET",
     "properties": [
@@ -14790,7 +14882,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/DDOSPROTECTIONPLANS/{}",
     "operation": "PUT",
     "properties": [
@@ -14910,12 +15002,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTECIRCUITS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTECIRCUITS/{}",
     "operation": "GET",
     "properties": [
@@ -14952,7 +15044,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTECIRCUITS/{}",
     "operation": "PUT",
     "properties": [
@@ -14989,12 +15081,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTECIRCUITS/{}/AUTHORIZATIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTECIRCUITS/{}/AUTHORIZATIONS/{}",
     "operation": "GET",
     "properties": [
@@ -15004,7 +15096,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTECIRCUITS/{}/AUTHORIZATIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -15014,12 +15106,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTECIRCUITS/{}/PEERINGS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTECIRCUITS/{}/PEERINGS/{}",
     "operation": "GET",
     "properties": [
@@ -15046,7 +15138,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTECIRCUITS/{}/PEERINGS/{}",
     "operation": "PUT",
     "properties": [
@@ -15073,12 +15165,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTEGATEWAYS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTEGATEWAYS/{}",
     "operation": "GET",
     "properties": [
@@ -15091,7 +15183,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTEGATEWAYS/{}",
     "operation": "PUT",
     "properties": [
@@ -15104,12 +15196,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTEPORTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTEPORTS/{}",
     "operation": "GET",
     "properties": [
@@ -15138,7 +15230,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTEPORTS/{}",
     "operation": "PUT",
     "properties": [
@@ -15167,12 +15259,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/FIREWALLPOLICIES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/FIREWALLPOLICIES/{}",
     "operation": "GET",
     "properties": [
@@ -15192,7 +15284,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/FIREWALLPOLICIES/{}",
     "operation": "PUT",
     "properties": [
@@ -15212,12 +15304,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/FIREWALLPOLICIES/{}/RULECOLLECTIONGROUPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/FIREWALLPOLICIES/{}/RULECOLLECTIONGROUPS/{}",
     "operation": "GET",
     "properties": [
@@ -15287,7 +15379,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/FIREWALLPOLICIES/{}/RULECOLLECTIONGROUPS/{}",
     "operation": "PUT",
     "properties": [
@@ -15624,12 +15716,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/IPGROUPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/IPGROUPS/{}",
     "operation": "GET",
     "properties": [
@@ -15641,7 +15733,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/IPGROUPS/{}",
     "operation": "PUT",
     "properties": [
@@ -15653,12 +15745,12 @@
     ]
   },
   {
-    "api_version": "2020-05-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/LOADBALANCERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-05-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/LOADBALANCERS/{}",
     "operation": "GET",
     "properties": [
@@ -15733,7 +15825,7 @@
     ]
   },
   {
-    "api_version": "2020-05-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/LOADBALANCERS/{}",
     "operation": "PUT",
     "properties": [
@@ -15808,15 +15900,16 @@
     ]
   },
   {
-    "api_version": "2020-05-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/LOADBALANCERS/{}/BACKENDADDRESSPOOLS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-05-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/LOADBALANCERS/{}/BACKENDADDRESSPOOLS/{}",
     "operation": "GET",
     "properties": [
+      "id",
       "name",
       "properties/backendIPConfigurations/id",
       "properties/loadBalancerBackendAddresses/name",
@@ -15827,10 +15920,11 @@
     ]
   },
   {
-    "api_version": "2020-05-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/LOADBALANCERS/{}/BACKENDADDRESSPOOLS/{}",
     "operation": "PUT",
     "properties": [
+      "id",
       "name",
       "properties/backendIPConfigurations/id",
       "properties/loadBalancerBackendAddresses/name",
@@ -15841,7 +15935,7 @@
     ]
   },
   {
-    "api_version": "2020-05-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/LOADBALANCERS/{}/LOADBALANCINGRULES/{}",
     "operation": "GET",
     "properties": [
@@ -15861,12 +15955,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/LOCALNETWORKGATEWAYS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/LOCALNETWORKGATEWAYS/{}",
     "operation": "GET",
     "properties": [
@@ -15883,7 +15977,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/LOCALNETWORKGATEWAYS/{}",
     "operation": "PUT",
     "properties": [
@@ -15900,12 +15994,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NATGATEWAYS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NATGATEWAYS/{}",
     "operation": "GET",
     "properties": [
@@ -15922,7 +16016,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NATGATEWAYS/{}",
     "operation": "PUT",
     "properties": [
@@ -15939,12 +16033,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKINTERFACES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKINTERFACES/{}",
     "operation": "GET",
     "properties": [
@@ -15958,14 +16052,30 @@
       "properties/dnsSettings/internalDomainNameSuffix",
       "properties/enableAcceleratedNetworking",
       "properties/enableIPForwarding",
+      "properties/ipConfigurations/id",
       "properties/ipConfigurations/name",
       "properties/ipConfigurations/properties/applicationGatewayBackendAddressPools/id",
       "properties/ipConfigurations/properties/applicationGatewayBackendAddressPools/name",
       "properties/ipConfigurations/properties/applicationGatewayBackendAddressPools/properties/backendAddresses/fqdn",
       "properties/ipConfigurations/properties/applicationGatewayBackendAddressPools/properties/backendAddresses/ipAddress",
       "properties/ipConfigurations/properties/applicationSecurityGroups/id",
+      "properties/ipConfigurations/properties/loadBalancerBackendAddressPools",
       "properties/ipConfigurations/properties/loadBalancerBackendAddressPools/id",
+      "properties/ipConfigurations/properties/loadBalancerBackendAddressPools/name",
+      "properties/ipConfigurations/properties/loadBalancerBackendAddressPools/properties/backendIPConfigurations",
+      "properties/ipConfigurations/properties/loadBalancerBackendAddressPools/properties/loadBalancerBackendAddresses",
+      "properties/ipConfigurations/properties/loadBalancerBackendAddressPools/properties/loadBalancingRules/id",
+      "properties/ipConfigurations/properties/loadBalancerBackendAddressPools/properties/outboundRules/id",
       "properties/ipConfigurations/properties/loadBalancerInboundNatRules/id",
+      "properties/ipConfigurations/properties/loadBalancerInboundNatRules/name",
+      "properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/backendIPConfiguration",
+      "properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/backendPort",
+      "properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/enableFloatingIP",
+      "properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/enableTcpReset",
+      "properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/frontendIPConfiguration/id",
+      "properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/frontendPort",
+      "properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/idleTimeoutInMinutes",
+      "properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/protocol",
       "properties/ipConfigurations/properties/primary",
       "properties/ipConfigurations/properties/privateIPAddress",
       "properties/ipConfigurations/properties/privateIPAddressVersion",
@@ -16085,7 +16195,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKINTERFACES/{}",
     "operation": "PUT",
     "properties": [
@@ -16099,14 +16209,30 @@
       "properties/dnsSettings/internalDomainNameSuffix",
       "properties/enableAcceleratedNetworking",
       "properties/enableIPForwarding",
+      "properties/ipConfigurations/id",
       "properties/ipConfigurations/name",
       "properties/ipConfigurations/properties/applicationGatewayBackendAddressPools/id",
       "properties/ipConfigurations/properties/applicationGatewayBackendAddressPools/name",
       "properties/ipConfigurations/properties/applicationGatewayBackendAddressPools/properties/backendAddresses/fqdn",
       "properties/ipConfigurations/properties/applicationGatewayBackendAddressPools/properties/backendAddresses/ipAddress",
       "properties/ipConfigurations/properties/applicationSecurityGroups/id",
+      "properties/ipConfigurations/properties/loadBalancerBackendAddressPools",
       "properties/ipConfigurations/properties/loadBalancerBackendAddressPools/id",
+      "properties/ipConfigurations/properties/loadBalancerBackendAddressPools/name",
+      "properties/ipConfigurations/properties/loadBalancerBackendAddressPools/properties/backendIPConfigurations",
+      "properties/ipConfigurations/properties/loadBalancerBackendAddressPools/properties/loadBalancerBackendAddresses",
+      "properties/ipConfigurations/properties/loadBalancerBackendAddressPools/properties/loadBalancingRules/id",
+      "properties/ipConfigurations/properties/loadBalancerBackendAddressPools/properties/outboundRules/id",
       "properties/ipConfigurations/properties/loadBalancerInboundNatRules/id",
+      "properties/ipConfigurations/properties/loadBalancerInboundNatRules/name",
+      "properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/backendIPConfiguration",
+      "properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/backendPort",
+      "properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/enableFloatingIP",
+      "properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/enableTcpReset",
+      "properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/frontendIPConfiguration/id",
+      "properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/frontendPort",
+      "properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/idleTimeoutInMinutes",
+      "properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/protocol",
       "properties/ipConfigurations/properties/primary",
       "properties/ipConfigurations/properties/privateIPAddress",
       "properties/ipConfigurations/properties/privateIPAddressVersion",
@@ -16226,12 +16352,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKPROFILES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKPROFILES/{}",
     "operation": "GET",
     "properties": [
@@ -16306,7 +16432,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKPROFILES/{}",
     "operation": "PUT",
     "properties": [
@@ -16381,12 +16507,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKSECURITYGROUPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKSECURITYGROUPS/{}",
     "operation": "GET",
     "properties": [
@@ -16413,7 +16539,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKSECURITYGROUPS/{}",
     "operation": "PUT",
     "properties": [
@@ -16440,12 +16566,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKSECURITYGROUPS/{}/SECURITYRULES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKSECURITYGROUPS/{}/SECURITYRULES/{}",
     "operation": "GET",
     "properties": [
@@ -16469,7 +16595,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKSECURITYGROUPS/{}/SECURITYRULES/{}",
     "operation": "PUT",
     "properties": [
@@ -16493,12 +16619,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}",
     "operation": "GET",
     "properties": [
@@ -16509,7 +16635,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}",
     "operation": "PUT",
     "properties": [
@@ -16520,30 +16646,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}/CONFIGUREFLOWLOG",
-    "operation": "POST",
-    "properties": [
-      "flowAnalyticsConfiguration/networkWatcherFlowAnalyticsConfiguration/enabled",
-      "flowAnalyticsConfiguration/networkWatcherFlowAnalyticsConfiguration/trafficAnalyticsInterval",
-      "flowAnalyticsConfiguration/networkWatcherFlowAnalyticsConfiguration/workspaceId",
-      "flowAnalyticsConfiguration/networkWatcherFlowAnalyticsConfiguration/workspaceRegion",
-      "flowAnalyticsConfiguration/networkWatcherFlowAnalyticsConfiguration/workspaceResourceId",
-      "properties/enabled",
-      "properties/format/version",
-      "properties/retentionPolicy/days",
-      "properties/retentionPolicy/enabled",
-      "properties/storageId",
-      "targetResourceId"
-    ]
-  },
-  {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}/CONNECTIONMONITORS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}/CONNECTIONMONITORS/{}",
     "operation": "GET",
     "properties": [
@@ -16588,7 +16696,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}/CONNECTIONMONITORS/{}",
     "operation": "PUT",
     "properties": [
@@ -16631,12 +16739,57 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}/FLOWLOGS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2020-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}/FLOWLOGS/{}",
+    "operation": "GET",
+    "properties": [
+      "location",
+      "properties/enabled",
+      "properties/flowAnalyticsConfiguration/networkWatcherFlowAnalyticsConfiguration/enabled",
+      "properties/flowAnalyticsConfiguration/networkWatcherFlowAnalyticsConfiguration/trafficAnalyticsInterval",
+      "properties/flowAnalyticsConfiguration/networkWatcherFlowAnalyticsConfiguration/workspaceId",
+      "properties/flowAnalyticsConfiguration/networkWatcherFlowAnalyticsConfiguration/workspaceRegion",
+      "properties/flowAnalyticsConfiguration/networkWatcherFlowAnalyticsConfiguration/workspaceResourceId",
+      "properties/format/version",
+      "properties/retentionPolicy/days",
+      "properties/retentionPolicy/enabled",
+      "properties/storageId",
+      "properties/targetResourceId",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2020-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}/FLOWLOGS/{}",
+    "operation": "PUT",
+    "properties": [
+      "location",
+      "properties/enabled",
+      "properties/flowAnalyticsConfiguration/networkWatcherFlowAnalyticsConfiguration/enabled",
+      "properties/flowAnalyticsConfiguration/networkWatcherFlowAnalyticsConfiguration/trafficAnalyticsInterval",
+      "properties/flowAnalyticsConfiguration/networkWatcherFlowAnalyticsConfiguration/workspaceId",
+      "properties/flowAnalyticsConfiguration/networkWatcherFlowAnalyticsConfiguration/workspaceRegion",
+      "properties/flowAnalyticsConfiguration/networkWatcherFlowAnalyticsConfiguration/workspaceResourceId",
+      "properties/format/version",
+      "properties/retentionPolicy/days",
+      "properties/retentionPolicy/enabled",
+      "properties/storageId",
+      "properties/targetResourceId",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}/PACKETCAPTURES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}/PACKETCAPTURES/{}",
     "operation": "GET",
     "properties": [
@@ -16656,7 +16809,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}/PACKETCAPTURES/{}",
     "operation": "PUT",
     "properties": [
@@ -16675,20 +16828,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}/QUERYFLOWLOGSTATUS",
-    "operation": "POST",
-    "properties": [
-      "targetResourceId"
-    ]
-  },
-  {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/P2SVPNGATEWAYS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/P2SVPNGATEWAYS/{}",
     "operation": "GET",
     "properties": [
@@ -16707,7 +16852,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/P2SVPNGATEWAYS/{}",
     "operation": "PUT",
     "properties": [
@@ -16851,12 +16996,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PRIVATEENDPOINTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PRIVATEENDPOINTS/{}",
     "operation": "GET",
     "properties": [
@@ -16885,7 +17030,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PRIVATEENDPOINTS/{}",
     "operation": "PUT",
     "properties": [
@@ -16914,12 +17059,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PRIVATEENDPOINTS/{}/PRIVATEDNSZONEGROUPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PRIVATEENDPOINTS/{}/PRIVATEDNSZONEGROUPS/{}",
     "operation": "GET",
     "properties": [
@@ -16935,7 +17080,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PRIVATEENDPOINTS/{}/PRIVATEDNSZONEGROUPS/{}",
     "operation": "PUT",
     "properties": [
@@ -16951,12 +17096,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PRIVATELINKSERVICES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PRIVATELINKSERVICES/{}",
     "operation": "GET",
     "properties": [
@@ -16973,6 +17118,93 @@
       "properties/ipConfigurations/properties/privateIPAllocationMethod",
       "properties/ipConfigurations/properties/subnet/id",
       "properties/loadBalancerFrontendIpConfigurations/id",
+      "properties/loadBalancerFrontendIpConfigurations/name",
+      "properties/loadBalancerFrontendIpConfigurations/properties/inboundNatRules/id",
+      "properties/loadBalancerFrontendIpConfigurations/properties/loadBalancingRules/id",
+      "properties/loadBalancerFrontendIpConfigurations/properties/outboundRules/id",
+      "properties/loadBalancerFrontendIpConfigurations/properties/privateIPAddress",
+      "properties/loadBalancerFrontendIpConfigurations/properties/privateIPAddressVersion",
+      "properties/loadBalancerFrontendIpConfigurations/properties/privateIPAllocationMethod",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/id",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/location",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/name",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/properties/dnsSettings/domainNameLabel",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/properties/dnsSettings/fqdn",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/properties/dnsSettings/reverseFqdn",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/properties/idleTimeoutInMinutes",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/properties/ipAddress",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/properties/ipConfiguration",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/properties/ipTags/ipTagType",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/properties/ipTags/tag",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/properties/publicIPAddressVersion",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/properties/publicIPAllocationMethod",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/properties/publicIPPrefix/id",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/sku/name",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/tags",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/zones",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPPrefix/id",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/id",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/name",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/addressPrefix",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/addressPrefixes",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/delegations",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/natGateway/id",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/id",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/location",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/name",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/id",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/name",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/access",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/description",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/destinationAddressPrefix",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/destinationAddressPrefixes",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/destinationApplicationSecurityGroups",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/destinationApplicationSecurityGroups/id",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/destinationApplicationSecurityGroups/location",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/destinationApplicationSecurityGroups/name",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/destinationApplicationSecurityGroups/tags",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/destinationPortRange",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/destinationPortRanges",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/direction",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/priority",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/protocol",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/sourceAddressPrefix",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/sourceAddressPrefixes",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/sourceApplicationSecurityGroups",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/sourceApplicationSecurityGroups/id",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/sourceApplicationSecurityGroups/location",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/sourceApplicationSecurityGroups/name",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/sourceApplicationSecurityGroups/tags",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/sourcePortRange",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/sourcePortRanges",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/tags",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/privateEndpointNetworkPolicies",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/privateLinkServiceNetworkPolicies",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/routeTable",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/routeTable/id",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/routeTable/location",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/routeTable/name",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/routeTable/properties/disableBgpRoutePropagation",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/routeTable/properties/routes",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/routeTable/properties/routes/name",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/routeTable/properties/routes/properties/addressPrefix",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/routeTable/properties/routes/properties/nextHopIpAddress",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/routeTable/properties/routes/properties/nextHopType",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/routeTable/properties/subnets",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/routeTable/tags",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/serviceEndpointPolicies",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/serviceEndpointPolicies/location",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/serviceEndpointPolicies/properties/serviceEndpointPolicyDefinitions/name",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/serviceEndpointPolicies/properties/serviceEndpointPolicyDefinitions/properties/description",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/serviceEndpointPolicies/properties/serviceEndpointPolicyDefinitions/properties/service",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/serviceEndpointPolicies/properties/serviceEndpointPolicyDefinitions/properties/serviceResources",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/serviceEndpointPolicies/tags",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/serviceEndpoints",
+      "properties/loadBalancerFrontendIpConfigurations/zones",
       "properties/privateEndpointConnections/id",
       "properties/privateEndpointConnections/name",
       "properties/privateEndpointConnections/properties/privateEndpoint",
@@ -16992,13 +17224,29 @@
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/dnsSettings/internalDomainNameSuffix",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/enableAcceleratedNetworking",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/enableIPForwarding",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/id",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/name",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/applicationGatewayBackendAddressPools/id",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/applicationGatewayBackendAddressPools/name",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/applicationGatewayBackendAddressPools/properties/backendAddresses/fqdn",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/applicationGatewayBackendAddressPools/properties/backendAddresses/ipAddress",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerBackendAddressPools",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerBackendAddressPools/id",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerBackendAddressPools/name",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerBackendAddressPools/properties/backendIPConfigurations",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerBackendAddressPools/properties/loadBalancerBackendAddresses",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerBackendAddressPools/properties/loadBalancingRules/id",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerBackendAddressPools/properties/outboundRules/id",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerInboundNatRules/id",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerInboundNatRules/name",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/backendIPConfiguration",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/backendPort",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/enableFloatingIP",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/enableTcpReset",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/frontendIPConfiguration/id",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/frontendPort",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/idleTimeoutInMinutes",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/protocol",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/primary",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/privateIPAddress",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/privateIPAddressVersion",
@@ -17186,7 +17434,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PRIVATELINKSERVICES/{}",
     "operation": "PUT",
     "properties": [
@@ -17203,6 +17451,93 @@
       "properties/ipConfigurations/properties/privateIPAllocationMethod",
       "properties/ipConfigurations/properties/subnet/id",
       "properties/loadBalancerFrontendIpConfigurations/id",
+      "properties/loadBalancerFrontendIpConfigurations/name",
+      "properties/loadBalancerFrontendIpConfigurations/properties/inboundNatRules/id",
+      "properties/loadBalancerFrontendIpConfigurations/properties/loadBalancingRules/id",
+      "properties/loadBalancerFrontendIpConfigurations/properties/outboundRules/id",
+      "properties/loadBalancerFrontendIpConfigurations/properties/privateIPAddress",
+      "properties/loadBalancerFrontendIpConfigurations/properties/privateIPAddressVersion",
+      "properties/loadBalancerFrontendIpConfigurations/properties/privateIPAllocationMethod",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/id",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/location",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/name",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/properties/dnsSettings/domainNameLabel",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/properties/dnsSettings/fqdn",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/properties/dnsSettings/reverseFqdn",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/properties/idleTimeoutInMinutes",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/properties/ipAddress",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/properties/ipConfiguration",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/properties/ipTags/ipTagType",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/properties/ipTags/tag",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/properties/publicIPAddressVersion",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/properties/publicIPAllocationMethod",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/properties/publicIPPrefix/id",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/sku/name",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/tags",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPAddress/zones",
+      "properties/loadBalancerFrontendIpConfigurations/properties/publicIPPrefix/id",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/id",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/name",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/addressPrefix",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/addressPrefixes",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/delegations",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/natGateway/id",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/id",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/location",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/name",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/id",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/name",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/access",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/description",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/destinationAddressPrefix",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/destinationAddressPrefixes",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/destinationApplicationSecurityGroups",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/destinationApplicationSecurityGroups/id",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/destinationApplicationSecurityGroups/location",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/destinationApplicationSecurityGroups/name",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/destinationApplicationSecurityGroups/tags",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/destinationPortRange",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/destinationPortRanges",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/direction",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/priority",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/protocol",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/sourceAddressPrefix",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/sourceAddressPrefixes",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/sourceApplicationSecurityGroups",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/sourceApplicationSecurityGroups/id",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/sourceApplicationSecurityGroups/location",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/sourceApplicationSecurityGroups/name",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/sourceApplicationSecurityGroups/tags",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/sourcePortRange",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/properties/securityRules/properties/sourcePortRanges",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/networkSecurityGroup/tags",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/privateEndpointNetworkPolicies",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/privateLinkServiceNetworkPolicies",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/routeTable",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/routeTable/id",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/routeTable/location",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/routeTable/name",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/routeTable/properties/disableBgpRoutePropagation",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/routeTable/properties/routes",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/routeTable/properties/routes/name",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/routeTable/properties/routes/properties/addressPrefix",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/routeTable/properties/routes/properties/nextHopIpAddress",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/routeTable/properties/routes/properties/nextHopType",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/routeTable/properties/subnets",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/routeTable/tags",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/serviceEndpointPolicies",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/serviceEndpointPolicies/location",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/serviceEndpointPolicies/properties/serviceEndpointPolicyDefinitions/name",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/serviceEndpointPolicies/properties/serviceEndpointPolicyDefinitions/properties/description",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/serviceEndpointPolicies/properties/serviceEndpointPolicyDefinitions/properties/service",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/serviceEndpointPolicies/properties/serviceEndpointPolicyDefinitions/properties/serviceResources",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/serviceEndpointPolicies/tags",
+      "properties/loadBalancerFrontendIpConfigurations/properties/subnet/properties/serviceEndpoints",
+      "properties/loadBalancerFrontendIpConfigurations/zones",
       "properties/privateEndpointConnections/id",
       "properties/privateEndpointConnections/name",
       "properties/privateEndpointConnections/properties/privateEndpoint",
@@ -17222,13 +17557,29 @@
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/dnsSettings/internalDomainNameSuffix",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/enableAcceleratedNetworking",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/enableIPForwarding",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/id",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/name",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/applicationGatewayBackendAddressPools/id",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/applicationGatewayBackendAddressPools/name",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/applicationGatewayBackendAddressPools/properties/backendAddresses/fqdn",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/applicationGatewayBackendAddressPools/properties/backendAddresses/ipAddress",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerBackendAddressPools",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerBackendAddressPools/id",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerBackendAddressPools/name",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerBackendAddressPools/properties/backendIPConfigurations",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerBackendAddressPools/properties/loadBalancerBackendAddresses",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerBackendAddressPools/properties/loadBalancingRules/id",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerBackendAddressPools/properties/outboundRules/id",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerInboundNatRules/id",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerInboundNatRules/name",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/backendIPConfiguration",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/backendPort",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/enableFloatingIP",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/enableTcpReset",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/frontendIPConfiguration/id",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/frontendPort",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/idleTimeoutInMinutes",
+      "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/loadBalancerInboundNatRules/properties/protocol",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/primary",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/privateIPAddress",
       "properties/privateEndpointConnections/properties/privateEndpoint/properties/networkInterfaces/properties/ipConfigurations/properties/privateIPAddressVersion",
@@ -17416,12 +17767,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PUBLICIPADDRESSES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PUBLICIPADDRESSES/{}",
     "operation": "GET",
     "properties": [
@@ -17445,7 +17796,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PUBLICIPADDRESSES/{}",
     "operation": "PUT",
     "properties": [
@@ -17469,12 +17820,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PUBLICIPPREFIXES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PUBLICIPPREFIXES/{}",
     "operation": "GET",
     "properties": [
@@ -17488,7 +17839,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PUBLICIPPREFIXES/{}",
     "operation": "PUT",
     "properties": [
@@ -17502,12 +17853,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/ROUTEFILTERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/ROUTEFILTERS/{}",
     "operation": "GET",
     "properties": [
@@ -17522,7 +17873,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/ROUTEFILTERS/{}",
     "operation": "PUT",
     "properties": [
@@ -17537,12 +17888,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/ROUTETABLES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/ROUTETABLES/{}",
     "operation": "GET",
     "properties": [
@@ -17559,7 +17910,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/ROUTETABLES/{}",
     "operation": "PUT",
     "properties": [
@@ -17576,12 +17927,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/ROUTETABLES/{}/ROUTES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/ROUTETABLES/{}/ROUTES/{}",
     "operation": "GET",
     "properties": [
@@ -17592,7 +17943,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/ROUTETABLES/{}/ROUTES/{}",
     "operation": "PUT",
     "properties": [
@@ -17603,12 +17954,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/SECURITYPARTNERPROVIDERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/SECURITYPARTNERPROVIDERS/{}",
     "operation": "GET",
     "properties": [
@@ -17620,7 +17971,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/SECURITYPARTNERPROVIDERS/{}",
     "operation": "PATCH",
     "properties": [
@@ -17628,7 +17979,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/SECURITYPARTNERPROVIDERS/{}",
     "operation": "PUT",
     "properties": [
@@ -17640,12 +17991,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/SERVICEENDPOINTPOLICIES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/SERVICEENDPOINTPOLICIES/{}",
     "operation": "GET",
     "properties": [
@@ -17659,7 +18010,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/SERVICEENDPOINTPOLICIES/{}",
     "operation": "PUT",
     "properties": [
@@ -17815,12 +18166,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}",
     "operation": "GET",
     "properties": [
@@ -17837,7 +18188,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}",
     "operation": "PUT",
     "properties": [
@@ -17854,12 +18205,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/BGPCONNECTIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/BGPCONNECTIONS/{}",
     "operation": "GET",
     "properties": [
@@ -17870,7 +18221,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/BGPCONNECTIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -17881,12 +18232,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/HUBROUTETABLES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/HUBROUTETABLES/{}",
     "operation": "GET",
     "properties": [
@@ -17901,7 +18252,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/HUBROUTETABLES/{}",
     "operation": "PUT",
     "properties": [
@@ -17916,12 +18267,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/HUBVIRTUALNETWORKCONNECTIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/HUBVIRTUALNETWORKCONNECTIONS/{}",
     "operation": "GET",
     "properties": [
@@ -17938,7 +18289,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/HUBVIRTUALNETWORKCONNECTIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -17955,12 +18306,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/IPCONFIGURATIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/IPCONFIGURATIONS/{}",
     "operation": "GET",
     "properties": [
@@ -17973,7 +18324,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/IPCONFIGURATIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -17986,12 +18337,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALNETWORKGATEWAYS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALNETWORKGATEWAYS/{}",
     "operation": "GET",
     "properties": [
@@ -18034,7 +18385,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALNETWORKGATEWAYS/{}",
     "operation": "PUT",
     "properties": [
@@ -18077,12 +18428,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALNETWORKS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALNETWORKS/{}",
     "operation": "GET",
     "properties": [
@@ -18106,7 +18457,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALNETWORKS/{}",
     "operation": "PUT",
     "properties": [
@@ -18130,12 +18481,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALNETWORKS/{}/SUBNETS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALNETWORKS/{}/SUBNETS/{}",
     "operation": "GET",
     "properties": [
@@ -18156,7 +18507,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALNETWORKS/{}/SUBNETS/{}",
     "operation": "PUT",
     "properties": [
@@ -18177,7 +18528,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALNETWORKS/{}/SUBNETS/{}/RESOURCENAVIGATIONLINKS",
     "operation": "GET",
     "properties": [
@@ -18185,7 +18536,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALNETWORKS/{}/SUBNETS/{}/SERVICEASSOCIATIONLINKS",
     "operation": "GET",
     "properties": [
@@ -18194,12 +18545,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALNETWORKS/{}/VIRTUALNETWORKPEERINGS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALNETWORKS/{}/VIRTUALNETWORKPEERINGS/{}",
     "operation": "GET",
     "properties": [
@@ -18213,7 +18564,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALNETWORKS/{}/VIRTUALNETWORKPEERINGS/{}",
     "operation": "PUT",
     "properties": [
@@ -18227,12 +18578,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALWANS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALWANS/{}",
     "operation": "GET",
     "properties": [
@@ -18249,7 +18600,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALWANS/{}",
     "operation": "PUT",
     "properties": [
@@ -18266,12 +18617,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNGATEWAYS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNGATEWAYS/{}",
     "operation": "GET",
     "properties": [
@@ -18292,7 +18643,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNGATEWAYS/{}",
     "operation": "PUT",
     "properties": [
@@ -18313,12 +18664,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNGATEWAYS/{}/VPNCONNECTIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNGATEWAYS/{}/VPNCONNECTIONS/{}",
     "operation": "GET",
     "properties": [
@@ -18349,7 +18700,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNGATEWAYS/{}/VPNCONNECTIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -18380,12 +18731,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNSERVERCONFIGURATIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNSERVERCONFIGURATIONS/{}",
     "operation": "GET",
     "properties": [
@@ -18421,7 +18772,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNSERVERCONFIGURATIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -18457,12 +18808,12 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNSITES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNSITES/{}",
     "operation": "GET",
     "properties": [
@@ -18485,7 +18836,7 @@
     ]
   },
   {
-    "api_version": "2020-07-01",
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNSITES/{}",
     "operation": "PUT",
     "properties": [
@@ -21221,7 +21572,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/EXTENDEDAUDITINGSETTINGS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "properties/isAzureMonitorTargetEnabled",
       "properties/isStorageSecondaryKeyInUse",
       "properties/retentionDays",
@@ -21235,7 +21585,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/EXTENDEDAUDITINGSETTINGS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "properties/isAzureMonitorTargetEnabled",
       "properties/isStorageSecondaryKeyInUse",
       "properties/retentionDays",
@@ -21586,6 +21935,7 @@
       "identity/principalId",
       "identity/tenantId",
       "identity/type",
+      "identity/userAssignedIdentities",
       "kind",
       "location",
       "name",
@@ -21650,6 +22000,7 @@
       "identity/principalId",
       "identity/tenantId",
       "identity/type",
+      "identity/userAssignedIdentities",
       "kind",
       "properties/accessTier",
       "properties/allowBlobPublicAccess",
@@ -21696,6 +22047,7 @@
       "identity/principalId",
       "identity/tenantId",
       "identity/type",
+      "identity/userAssignedIdentities",
       "kind",
       "location",
       "properties/accessTier",
@@ -22178,12 +22530,12 @@
     ]
   },
   {
-    "api_version": "2016-03-01",
+    "api_version": "2017-04-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2016-03-01",
+    "api_version": "2017-04-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}",
     "operation": "GET",
     "properties": [
@@ -22205,7 +22557,7 @@
     ]
   },
   {
-    "api_version": "2016-03-01",
+    "api_version": "2017-04-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}",
     "operation": "PATCH",
     "properties": [
@@ -22227,7 +22579,7 @@
     ]
   },
   {
-    "api_version": "2016-03-01",
+    "api_version": "2017-04-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}",
     "operation": "PUT",
     "properties": [
@@ -22249,12 +22601,12 @@
     ]
   },
   {
-    "api_version": "2016-03-01",
+    "api_version": "2017-04-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}/FUNCTIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2016-03-01",
+    "api_version": "2017-04-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}/FUNCTIONS/{}",
     "operation": "GET",
     "properties": [
@@ -22267,7 +22619,7 @@
     ]
   },
   {
-    "api_version": "2016-03-01",
+    "api_version": "2017-04-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}/FUNCTIONS/{}",
     "operation": "PATCH",
     "properties": [
@@ -22280,7 +22632,7 @@
     ]
   },
   {
-    "api_version": "2016-03-01",
+    "api_version": "2017-04-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}/FUNCTIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -22293,12 +22645,12 @@
     ]
   },
   {
-    "api_version": "2016-03-01",
+    "api_version": "2017-04-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}/INPUTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2016-03-01",
+    "api_version": "2017-04-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}/INPUTS/{}",
     "operation": "GET",
     "properties": [
@@ -22349,7 +22701,7 @@
     ]
   },
   {
-    "api_version": "2016-03-01",
+    "api_version": "2017-04-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}/INPUTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -22400,7 +22752,7 @@
     ]
   },
   {
-    "api_version": "2016-03-01",
+    "api_version": "2017-04-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}/INPUTS/{}",
     "operation": "PUT",
     "properties": [
@@ -22451,12 +22803,12 @@
     ]
   },
   {
-    "api_version": "2016-03-01",
+    "api_version": "2017-04-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}/OUTPUTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2016-03-01",
+    "api_version": "2017-04-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}/OUTPUTS/{}",
     "operation": "GET",
     "properties": [
@@ -22501,7 +22853,7 @@
     ]
   },
   {
-    "api_version": "2016-03-01",
+    "api_version": "2017-04-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}/OUTPUTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -22546,7 +22898,7 @@
     ]
   },
   {
-    "api_version": "2016-03-01",
+    "api_version": "2017-04-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}/OUTPUTS/{}",
     "operation": "PUT",
     "properties": [
@@ -22591,7 +22943,7 @@
     ]
   },
   {
-    "api_version": "2016-03-01",
+    "api_version": "2017-04-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}/TRANSFORMATIONS/{}",
     "operation": "PATCH",
     "properties": [
