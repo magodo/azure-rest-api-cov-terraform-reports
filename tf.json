@@ -1246,11 +1246,14 @@
       "properties/additionalLocations/sku/capacity",
       "properties/additionalLocations/sku/name",
       "properties/additionalLocations/virtualNetworkConfiguration/subnetResourceId",
+      "properties/apiVersionConstraint/minApiVersion",
       "properties/certificates/certificatePassword",
       "properties/certificates/encodedCertificate",
       "properties/certificates/storeName",
       "properties/customProperties",
       "properties/developerPortalUrl",
+      "properties/disableGateway",
+      "properties/enableClientCertificate",
       "properties/gatewayRegionalUrl",
       "properties/gatewayUrl",
       "properties/hostnameConfigurations/certificatePassword",
@@ -1273,7 +1276,8 @@
       "properties/virtualNetworkType",
       "sku/capacity",
       "sku/name",
-      "tags"
+      "tags",
+      "zones"
     ]
   },
   {
@@ -1295,11 +1299,14 @@
       "properties/additionalLocations/sku/capacity",
       "properties/additionalLocations/sku/name",
       "properties/additionalLocations/virtualNetworkConfiguration/subnetResourceId",
+      "properties/apiVersionConstraint/minApiVersion",
       "properties/certificates/certificatePassword",
       "properties/certificates/encodedCertificate",
       "properties/certificates/storeName",
       "properties/customProperties",
       "properties/developerPortalUrl",
+      "properties/disableGateway",
+      "properties/enableClientCertificate",
       "properties/gatewayRegionalUrl",
       "properties/gatewayUrl",
       "properties/hostnameConfigurations/certificatePassword",
@@ -1322,7 +1329,8 @@
       "properties/virtualNetworkType",
       "sku/capacity",
       "sku/name",
-      "tags"
+      "tags",
+      "zones"
     ]
   },
   {
@@ -1621,6 +1629,7 @@
     "properties": [
       "id",
       "properties/contentType",
+      "properties/document/definitions",
       "properties/document/value"
     ]
   },
@@ -1631,6 +1640,7 @@
     "properties": [
       "id",
       "properties/contentType",
+      "properties/document/definitions",
       "properties/document/value"
     ]
   },
@@ -1783,6 +1793,33 @@
       "properties/tls/validateCertificateChain",
       "properties/tls/validateCertificateName",
       "properties/url"
+    ]
+  },
+  {
+    "api_version": "2020-12-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/CACHES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2020-12-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/CACHES/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/connectionString",
+      "properties/description",
+      "properties/resourceId",
+      "properties/useFromLocation"
+    ]
+  },
+  {
+    "api_version": "2020-12-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/CACHES/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/connectionString",
+      "properties/description",
+      "properties/resourceId",
+      "properties/useFromLocation"
     ]
   },
   {
@@ -6181,6 +6218,7 @@
       "properties/policies/trustPolicy/type",
       "properties/publicNetworkAccess",
       "properties/storageAccount/id",
+      "properties/zoneRedundancy",
       "sku/name",
       "sku/tier",
       "tags"
@@ -6240,6 +6278,7 @@
       "properties/policies/trustPolicy/type",
       "properties/publicNetworkAccess",
       "properties/storageAccount/id",
+      "properties/zoneRedundancy",
       "sku/name",
       "sku/tier",
       "tags"
@@ -6262,6 +6301,7 @@
     "properties": [
       "location",
       "name",
+      "properties/zoneRedundancy",
       "tags"
     ]
   },
@@ -6417,6 +6457,48 @@
       "properties/agentPoolProfiles/enableAutoScaling",
       "properties/agentPoolProfiles/enableEncryptionAtHost",
       "properties/agentPoolProfiles/enableNodePublicIP",
+      "properties/agentPoolProfiles/kubeletConfig/allowedUnsafeSysctls",
+      "properties/agentPoolProfiles/kubeletConfig/containerLogMaxFiles",
+      "properties/agentPoolProfiles/kubeletConfig/containerLogMaxSizeMB",
+      "properties/agentPoolProfiles/kubeletConfig/cpuCfsQuota",
+      "properties/agentPoolProfiles/kubeletConfig/cpuCfsQuotaPeriod",
+      "properties/agentPoolProfiles/kubeletConfig/cpuManagerPolicy",
+      "properties/agentPoolProfiles/kubeletConfig/failSwapOn",
+      "properties/agentPoolProfiles/kubeletConfig/imageGcHighThreshold",
+      "properties/agentPoolProfiles/kubeletConfig/imageGcLowThreshold",
+      "properties/agentPoolProfiles/kubeletConfig/podMaxPids",
+      "properties/agentPoolProfiles/kubeletConfig/topologyManagerPolicy",
+      "properties/agentPoolProfiles/linuxOSConfig/swapFileSizeMB",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/fsAioMaxNr",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/fsFileMax",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/fsInotifyMaxUserWatches",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/fsNrOpen",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/kernelThreadsMax",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netCoreNetdevMaxBacklog",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netCoreOptmemMax",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netCoreRmemDefault",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netCoreRmemMax",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netCoreSomaxconn",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netCoreWmemDefault",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netCoreWmemMax",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4IpLocalPortRange",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4NeighDefaultGcThresh1",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4NeighDefaultGcThresh2",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4NeighDefaultGcThresh3",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4TcpFinTimeout",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4TcpKeepaliveProbes",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4TcpKeepaliveTime",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4TcpMaxSynBacklog",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4TcpMaxTwBuckets",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4TcpTwReuse",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4TcpkeepaliveIntvl",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netNetfilterNfConntrackBuckets",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netNetfilterNfConntrackMax",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/vmMaxMapCount",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/vmSwappiness",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/vmVfsCachePressure",
+      "properties/agentPoolProfiles/linuxOSConfig/transparentHugePageDefrag",
+      "properties/agentPoolProfiles/linuxOSConfig/transparentHugePageEnabled",
       "properties/agentPoolProfiles/maxCount",
       "properties/agentPoolProfiles/maxPods",
       "properties/agentPoolProfiles/minCount",
@@ -6520,6 +6602,48 @@
       "properties/agentPoolProfiles/enableAutoScaling",
       "properties/agentPoolProfiles/enableEncryptionAtHost",
       "properties/agentPoolProfiles/enableNodePublicIP",
+      "properties/agentPoolProfiles/kubeletConfig/allowedUnsafeSysctls",
+      "properties/agentPoolProfiles/kubeletConfig/containerLogMaxFiles",
+      "properties/agentPoolProfiles/kubeletConfig/containerLogMaxSizeMB",
+      "properties/agentPoolProfiles/kubeletConfig/cpuCfsQuota",
+      "properties/agentPoolProfiles/kubeletConfig/cpuCfsQuotaPeriod",
+      "properties/agentPoolProfiles/kubeletConfig/cpuManagerPolicy",
+      "properties/agentPoolProfiles/kubeletConfig/failSwapOn",
+      "properties/agentPoolProfiles/kubeletConfig/imageGcHighThreshold",
+      "properties/agentPoolProfiles/kubeletConfig/imageGcLowThreshold",
+      "properties/agentPoolProfiles/kubeletConfig/podMaxPids",
+      "properties/agentPoolProfiles/kubeletConfig/topologyManagerPolicy",
+      "properties/agentPoolProfiles/linuxOSConfig/swapFileSizeMB",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/fsAioMaxNr",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/fsFileMax",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/fsInotifyMaxUserWatches",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/fsNrOpen",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/kernelThreadsMax",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netCoreNetdevMaxBacklog",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netCoreOptmemMax",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netCoreRmemDefault",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netCoreRmemMax",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netCoreSomaxconn",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netCoreWmemDefault",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netCoreWmemMax",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4IpLocalPortRange",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4NeighDefaultGcThresh1",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4NeighDefaultGcThresh2",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4NeighDefaultGcThresh3",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4TcpFinTimeout",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4TcpKeepaliveProbes",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4TcpKeepaliveTime",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4TcpMaxSynBacklog",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4TcpMaxTwBuckets",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4TcpTwReuse",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4TcpkeepaliveIntvl",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netNetfilterNfConntrackBuckets",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/netNetfilterNfConntrackMax",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/vmMaxMapCount",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/vmSwappiness",
+      "properties/agentPoolProfiles/linuxOSConfig/sysctls/vmVfsCachePressure",
+      "properties/agentPoolProfiles/linuxOSConfig/transparentHugePageDefrag",
+      "properties/agentPoolProfiles/linuxOSConfig/transparentHugePageEnabled",
       "properties/agentPoolProfiles/maxCount",
       "properties/agentPoolProfiles/maxPods",
       "properties/agentPoolProfiles/minCount",
@@ -6620,6 +6744,48 @@
       "properties/enableAutoScaling",
       "properties/enableEncryptionAtHost",
       "properties/enableNodePublicIP",
+      "properties/kubeletConfig/allowedUnsafeSysctls",
+      "properties/kubeletConfig/containerLogMaxFiles",
+      "properties/kubeletConfig/containerLogMaxSizeMB",
+      "properties/kubeletConfig/cpuCfsQuota",
+      "properties/kubeletConfig/cpuCfsQuotaPeriod",
+      "properties/kubeletConfig/cpuManagerPolicy",
+      "properties/kubeletConfig/failSwapOn",
+      "properties/kubeletConfig/imageGcHighThreshold",
+      "properties/kubeletConfig/imageGcLowThreshold",
+      "properties/kubeletConfig/podMaxPids",
+      "properties/kubeletConfig/topologyManagerPolicy",
+      "properties/linuxOSConfig/swapFileSizeMB",
+      "properties/linuxOSConfig/sysctls/fsAioMaxNr",
+      "properties/linuxOSConfig/sysctls/fsFileMax",
+      "properties/linuxOSConfig/sysctls/fsInotifyMaxUserWatches",
+      "properties/linuxOSConfig/sysctls/fsNrOpen",
+      "properties/linuxOSConfig/sysctls/kernelThreadsMax",
+      "properties/linuxOSConfig/sysctls/netCoreNetdevMaxBacklog",
+      "properties/linuxOSConfig/sysctls/netCoreOptmemMax",
+      "properties/linuxOSConfig/sysctls/netCoreRmemDefault",
+      "properties/linuxOSConfig/sysctls/netCoreRmemMax",
+      "properties/linuxOSConfig/sysctls/netCoreSomaxconn",
+      "properties/linuxOSConfig/sysctls/netCoreWmemDefault",
+      "properties/linuxOSConfig/sysctls/netCoreWmemMax",
+      "properties/linuxOSConfig/sysctls/netIpv4IpLocalPortRange",
+      "properties/linuxOSConfig/sysctls/netIpv4NeighDefaultGcThresh1",
+      "properties/linuxOSConfig/sysctls/netIpv4NeighDefaultGcThresh2",
+      "properties/linuxOSConfig/sysctls/netIpv4NeighDefaultGcThresh3",
+      "properties/linuxOSConfig/sysctls/netIpv4TcpFinTimeout",
+      "properties/linuxOSConfig/sysctls/netIpv4TcpKeepaliveProbes",
+      "properties/linuxOSConfig/sysctls/netIpv4TcpKeepaliveTime",
+      "properties/linuxOSConfig/sysctls/netIpv4TcpMaxSynBacklog",
+      "properties/linuxOSConfig/sysctls/netIpv4TcpMaxTwBuckets",
+      "properties/linuxOSConfig/sysctls/netIpv4TcpTwReuse",
+      "properties/linuxOSConfig/sysctls/netIpv4TcpkeepaliveIntvl",
+      "properties/linuxOSConfig/sysctls/netNetfilterNfConntrackBuckets",
+      "properties/linuxOSConfig/sysctls/netNetfilterNfConntrackMax",
+      "properties/linuxOSConfig/sysctls/vmMaxMapCount",
+      "properties/linuxOSConfig/sysctls/vmSwappiness",
+      "properties/linuxOSConfig/sysctls/vmVfsCachePressure",
+      "properties/linuxOSConfig/transparentHugePageDefrag",
+      "properties/linuxOSConfig/transparentHugePageEnabled",
       "properties/maxCount",
       "properties/maxPods",
       "properties/minCount",
@@ -6654,6 +6820,48 @@
       "properties/enableAutoScaling",
       "properties/enableEncryptionAtHost",
       "properties/enableNodePublicIP",
+      "properties/kubeletConfig/allowedUnsafeSysctls",
+      "properties/kubeletConfig/containerLogMaxFiles",
+      "properties/kubeletConfig/containerLogMaxSizeMB",
+      "properties/kubeletConfig/cpuCfsQuota",
+      "properties/kubeletConfig/cpuCfsQuotaPeriod",
+      "properties/kubeletConfig/cpuManagerPolicy",
+      "properties/kubeletConfig/failSwapOn",
+      "properties/kubeletConfig/imageGcHighThreshold",
+      "properties/kubeletConfig/imageGcLowThreshold",
+      "properties/kubeletConfig/podMaxPids",
+      "properties/kubeletConfig/topologyManagerPolicy",
+      "properties/linuxOSConfig/swapFileSizeMB",
+      "properties/linuxOSConfig/sysctls/fsAioMaxNr",
+      "properties/linuxOSConfig/sysctls/fsFileMax",
+      "properties/linuxOSConfig/sysctls/fsInotifyMaxUserWatches",
+      "properties/linuxOSConfig/sysctls/fsNrOpen",
+      "properties/linuxOSConfig/sysctls/kernelThreadsMax",
+      "properties/linuxOSConfig/sysctls/netCoreNetdevMaxBacklog",
+      "properties/linuxOSConfig/sysctls/netCoreOptmemMax",
+      "properties/linuxOSConfig/sysctls/netCoreRmemDefault",
+      "properties/linuxOSConfig/sysctls/netCoreRmemMax",
+      "properties/linuxOSConfig/sysctls/netCoreSomaxconn",
+      "properties/linuxOSConfig/sysctls/netCoreWmemDefault",
+      "properties/linuxOSConfig/sysctls/netCoreWmemMax",
+      "properties/linuxOSConfig/sysctls/netIpv4IpLocalPortRange",
+      "properties/linuxOSConfig/sysctls/netIpv4NeighDefaultGcThresh1",
+      "properties/linuxOSConfig/sysctls/netIpv4NeighDefaultGcThresh2",
+      "properties/linuxOSConfig/sysctls/netIpv4NeighDefaultGcThresh3",
+      "properties/linuxOSConfig/sysctls/netIpv4TcpFinTimeout",
+      "properties/linuxOSConfig/sysctls/netIpv4TcpKeepaliveProbes",
+      "properties/linuxOSConfig/sysctls/netIpv4TcpKeepaliveTime",
+      "properties/linuxOSConfig/sysctls/netIpv4TcpMaxSynBacklog",
+      "properties/linuxOSConfig/sysctls/netIpv4TcpMaxTwBuckets",
+      "properties/linuxOSConfig/sysctls/netIpv4TcpTwReuse",
+      "properties/linuxOSConfig/sysctls/netIpv4TcpkeepaliveIntvl",
+      "properties/linuxOSConfig/sysctls/netNetfilterNfConntrackBuckets",
+      "properties/linuxOSConfig/sysctls/netNetfilterNfConntrackMax",
+      "properties/linuxOSConfig/sysctls/vmMaxMapCount",
+      "properties/linuxOSConfig/sysctls/vmSwappiness",
+      "properties/linuxOSConfig/sysctls/vmVfsCachePressure",
+      "properties/linuxOSConfig/transparentHugePageDefrag",
+      "properties/linuxOSConfig/transparentHugePageEnabled",
       "properties/maxCount",
       "properties/maxPods",
       "properties/minCount",
@@ -6942,6 +7150,7 @@
       "properties/encryption/keyName",
       "properties/encryption/keyVersion",
       "properties/encryption/vaultBaseUrl",
+      "properties/globalParameters",
       "properties/publicNetworkAccess",
       "properties/repoConfiguration{FactoryGitHubConfiguration}/accountName",
       "properties/repoConfiguration{FactoryGitHubConfiguration}/collaborationBranch",
@@ -6971,6 +7180,7 @@
       "properties/encryption/keyName",
       "properties/encryption/keyVersion",
       "properties/encryption/vaultBaseUrl",
+      "properties/globalParameters",
       "properties/publicNetworkAccess",
       "properties/repoConfiguration{FactoryGitHubConfiguration}/accountName",
       "properties/repoConfiguration{FactoryGitHubConfiguration}/collaborationBranch",
@@ -7521,6 +7731,19 @@
       "properties{MySql}/parameters",
       "properties{MySql}/type",
       "properties{MySql}/typeProperties/connectionString",
+      "properties{OData}",
+      "properties{OData}/annotations",
+      "properties{OData}/connectVia/referenceName",
+      "properties{OData}/connectVia/type",
+      "properties{OData}/description",
+      "properties{OData}/parameters",
+      "properties{OData}/type",
+      "properties{OData}/typeProperties/authenticationType",
+      "properties{OData}/typeProperties/password{AzureKeyVaultSecret}",
+      "properties{OData}/typeProperties/password{SecureString}/type",
+      "properties{OData}/typeProperties/password{SecureString}/value",
+      "properties{OData}/typeProperties/url",
+      "properties{OData}/typeProperties/userName",
       "properties{PostgreSql}",
       "properties{PostgreSql}/annotations",
       "properties{PostgreSql}/connectVia/referenceName",
@@ -7767,6 +7990,19 @@
       "properties{MySql}/parameters",
       "properties{MySql}/type",
       "properties{MySql}/typeProperties/connectionString",
+      "properties{OData}",
+      "properties{OData}/annotations",
+      "properties{OData}/connectVia/referenceName",
+      "properties{OData}/connectVia/type",
+      "properties{OData}/description",
+      "properties{OData}/parameters",
+      "properties{OData}/type",
+      "properties{OData}/typeProperties/authenticationType",
+      "properties{OData}/typeProperties/password{AzureKeyVaultSecret}",
+      "properties{OData}/typeProperties/password{SecureString}/type",
+      "properties{OData}/typeProperties/password{SecureString}/value",
+      "properties{OData}/typeProperties/url",
+      "properties{OData}/typeProperties/userName",
       "properties{PostgreSql}",
       "properties{PostgreSql}/annotations",
       "properties{PostgreSql}/connectVia/referenceName",
@@ -9356,6 +9592,41 @@
   },
   {
     "api_version": "2020-11-02-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DESKTOPVIRTUALIZATION/APPLICATIONGROUPS/{}/APPLICATIONS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2020-11-02-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DESKTOPVIRTUALIZATION/APPLICATIONGROUPS/{}/APPLICATIONS/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/commandLineArguments",
+      "properties/commandLineSetting",
+      "properties/description",
+      "properties/filePath",
+      "properties/friendlyName",
+      "properties/iconIndex",
+      "properties/iconPath",
+      "properties/showInPortal"
+    ]
+  },
+  {
+    "api_version": "2020-11-02-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DESKTOPVIRTUALIZATION/APPLICATIONGROUPS/{}/APPLICATIONS/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/commandLineArguments",
+      "properties/commandLineSetting",
+      "properties/description",
+      "properties/filePath",
+      "properties/friendlyName",
+      "properties/iconIndex",
+      "properties/iconPath",
+      "properties/showInPortal"
+    ]
+  },
+  {
+    "api_version": "2020-11-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DESKTOPVIRTUALIZATION/HOSTPOOLS/{}",
     "operation": "DELETE"
   },
@@ -10343,6 +10614,8 @@
       "properties/resource/indexingPolicy/excludedPaths/path",
       "properties/resource/indexingPolicy/includedPaths/path",
       "properties/resource/indexingPolicy/indexingMode",
+      "properties/resource/indexingPolicy/spatialIndexes/path",
+      "properties/resource/indexingPolicy/spatialIndexes/types",
       "properties/resource/partitionKey/kind",
       "properties/resource/partitionKey/paths",
       "properties/resource/partitionKey/version",
@@ -10367,6 +10640,8 @@
       "properties/resource/indexingPolicy/excludedPaths/path",
       "properties/resource/indexingPolicy/includedPaths/path",
       "properties/resource/indexingPolicy/indexingMode",
+      "properties/resource/indexingPolicy/spatialIndexes/path",
+      "properties/resource/indexingPolicy/spatialIndexes/types",
       "properties/resource/partitionKey/kind",
       "properties/resource/partitionKey/paths",
       "properties/resource/partitionKey/version",
@@ -10576,6 +10851,8 @@
       "properties/resource/indexingPolicy/excludedPaths/path",
       "properties/resource/indexingPolicy/includedPaths/path",
       "properties/resource/indexingPolicy/indexingMode",
+      "properties/resource/indexingPolicy/spatialIndexes/path",
+      "properties/resource/indexingPolicy/spatialIndexes/types",
       "properties/resource/partitionKey/kind",
       "properties/resource/partitionKey/paths",
       "properties/resource/partitionKey/version",
@@ -10600,6 +10877,8 @@
       "properties/resource/indexingPolicy/excludedPaths/path",
       "properties/resource/indexingPolicy/includedPaths/path",
       "properties/resource/indexingPolicy/indexingMode",
+      "properties/resource/indexingPolicy/spatialIndexes/path",
+      "properties/resource/indexingPolicy/spatialIndexes/types",
       "properties/resource/partitionKey/kind",
       "properties/resource/partitionKey/paths",
       "properties/resource/partitionKey/version",
@@ -13125,6 +13404,9 @@
     "operation": "GET",
     "properties": [
       "id",
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
       "location",
       "properties{AKS}/computeLocation",
       "properties{AKS}/description",
@@ -13137,6 +13419,15 @@
       "properties{AKS}/properties/sslConfiguration/overwriteExistingDomain",
       "properties{AKS}/properties/sslConfiguration/status",
       "properties{AKS}/resourceId",
+      "properties{AmlCompute}/computeLocation",
+      "properties{AmlCompute}/description",
+      "properties{AmlCompute}/properties/scaleSettings/maxNodeCount",
+      "properties{AmlCompute}/properties/scaleSettings/minNodeCount",
+      "properties{AmlCompute}/properties/scaleSettings/nodeIdleTimeBeforeScaleDown",
+      "properties{AmlCompute}/properties/subnet/id",
+      "properties{AmlCompute}/properties/vmPriority",
+      "properties{AmlCompute}/properties/vmSize",
+      "sku",
       "tags"
     ]
   },
@@ -13146,6 +13437,9 @@
     "operation": "PUT",
     "properties": [
       "id",
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
       "location",
       "properties{AKS}/computeLocation",
       "properties{AKS}/description",
@@ -13158,6 +13452,15 @@
       "properties{AKS}/properties/sslConfiguration/overwriteExistingDomain",
       "properties{AKS}/properties/sslConfiguration/status",
       "properties{AKS}/resourceId",
+      "properties{AmlCompute}/computeLocation",
+      "properties{AmlCompute}/description",
+      "properties{AmlCompute}/properties/scaleSettings/maxNodeCount",
+      "properties{AmlCompute}/properties/scaleSettings/minNodeCount",
+      "properties{AmlCompute}/properties/scaleSettings/nodeIdleTimeBeforeScaleDown",
+      "properties{AmlCompute}/properties/subnet/id",
+      "properties{AmlCompute}/properties/vmPriority",
+      "properties{AmlCompute}/properties/vmSize",
+      "sku",
       "tags"
     ]
   },
@@ -14174,8 +14477,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/APPLICATIONGATEWAYS/{}",
     "operation": "GET",
     "properties": [
-      "identity/principalId",
-      "identity/tenantId",
       "identity/type",
       "identity/userAssignedIdentities",
       "location",
@@ -14328,8 +14629,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/APPLICATIONGATEWAYS/{}",
     "operation": "PUT",
     "properties": [
-      "identity/principalId",
-      "identity/tenantId",
       "identity/type",
       "identity/userAssignedIdentities",
       "location",
@@ -21344,6 +21643,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}/EXTENDEDAUDITINGSETTINGS/{}",
     "operation": "GET",
     "properties": [
+      "id",
       "properties/isAzureMonitorTargetEnabled",
       "properties/isStorageSecondaryKeyInUse",
       "properties/retentionDays",
@@ -21357,6 +21657,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}/EXTENDEDAUDITINGSETTINGS/{}",
     "operation": "PUT",
     "properties": [
+      "id",
       "properties/isAzureMonitorTargetEnabled",
       "properties/isStorageSecondaryKeyInUse",
       "properties/retentionDays",
@@ -21572,6 +21873,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/EXTENDEDAUDITINGSETTINGS/{}",
     "operation": "GET",
     "properties": [
+      "id",
       "properties/isAzureMonitorTargetEnabled",
       "properties/isStorageSecondaryKeyInUse",
       "properties/retentionDays",
@@ -21585,6 +21887,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/EXTENDEDAUDITINGSETTINGS/{}",
     "operation": "PUT",
     "properties": [
+      "id",
       "properties/isAzureMonitorTargetEnabled",
       "properties/isStorageSecondaryKeyInUse",
       "properties/retentionDays",
@@ -22161,6 +22464,42 @@
   },
   {
     "api_version": "2021-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/FILESERVICES/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/cors/corsRules/allowedHeaders",
+      "properties/cors/corsRules/allowedMethods",
+      "properties/cors/corsRules/allowedOrigins",
+      "properties/cors/corsRules/exposedHeaders",
+      "properties/cors/corsRules/maxAgeInSeconds",
+      "properties/protocolSettings/smb/authenticationMethods",
+      "properties/protocolSettings/smb/channelEncryption",
+      "properties/protocolSettings/smb/kerberosTicketEncryption",
+      "properties/protocolSettings/smb/versions",
+      "properties/shareDeleteRetentionPolicy/days",
+      "properties/shareDeleteRetentionPolicy/enabled"
+    ]
+  },
+  {
+    "api_version": "2021-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/FILESERVICES/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/cors/corsRules/allowedHeaders",
+      "properties/cors/corsRules/allowedMethods",
+      "properties/cors/corsRules/allowedOrigins",
+      "properties/cors/corsRules/exposedHeaders",
+      "properties/cors/corsRules/maxAgeInSeconds",
+      "properties/protocolSettings/smb/authenticationMethods",
+      "properties/protocolSettings/smb/channelEncryption",
+      "properties/protocolSettings/smb/kerberosTicketEncryption",
+      "properties/protocolSettings/smb/versions",
+      "properties/shareDeleteRetentionPolicy/days",
+      "properties/shareDeleteRetentionPolicy/enabled"
+    ]
+  },
+  {
+    "api_version": "2021-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/INVENTORYPOLICIES/{}",
     "operation": "DELETE"
   },
@@ -22540,6 +22879,9 @@
     "operation": "GET",
     "properties": [
       "id",
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
       "location",
       "name",
       "properties/compatibilityLevel",
@@ -22562,6 +22904,9 @@
     "operation": "PATCH",
     "properties": [
       "id",
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
       "location",
       "name",
       "properties/compatibilityLevel",
@@ -22584,6 +22929,9 @@
     "operation": "PUT",
     "properties": [
       "id",
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
       "location",
       "name",
       "properties/compatibilityLevel",
@@ -22953,12 +23301,12 @@
     ]
   },
   {
-    "api_version": "2019-06-01-preview",
+    "api_version": "2021-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2019-06-01-preview",
+    "api_version": "2021-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}",
     "operation": "GET",
     "properties": [
@@ -22974,6 +23322,7 @@
       "properties/encryption/cmk/key/name",
       "properties/managedResourceGroupName",
       "properties/managedVirtualNetwork",
+      "properties/managedVirtualNetworkSettings/preventDataExfiltration",
       "properties/sqlAdministratorLogin",
       "properties/sqlAdministratorLoginPassword",
       "properties/workspaceRepositoryConfiguration/accountName",
@@ -22987,7 +23336,7 @@
     ]
   },
   {
-    "api_version": "2019-06-01-preview",
+    "api_version": "2021-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}",
     "operation": "PATCH",
     "properties": [
@@ -23005,7 +23354,7 @@
     ]
   },
   {
-    "api_version": "2019-06-01-preview",
+    "api_version": "2021-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}",
     "operation": "PUT",
     "properties": [
@@ -23021,6 +23370,7 @@
       "properties/encryption/cmk/key/name",
       "properties/managedResourceGroupName",
       "properties/managedVirtualNetwork",
+      "properties/managedVirtualNetworkSettings/preventDataExfiltration",
       "properties/sqlAdministratorLogin",
       "properties/sqlAdministratorLoginPassword",
       "properties/workspaceRepositoryConfiguration/accountName",
@@ -23034,12 +23384,12 @@
     ]
   },
   {
-    "api_version": "2019-06-01-preview",
+    "api_version": "2021-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/ADMINISTRATORS/ACTIVEDIRECTORY",
     "operation": "DELETE"
   },
   {
-    "api_version": "2019-06-01-preview",
+    "api_version": "2021-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/ADMINISTRATORS/ACTIVEDIRECTORY",
     "operation": "GET",
     "properties": [
@@ -23050,7 +23400,7 @@
     ]
   },
   {
-    "api_version": "2019-06-01-preview",
+    "api_version": "2021-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/ADMINISTRATORS/ACTIVEDIRECTORY",
     "operation": "PUT",
     "properties": [
@@ -23061,12 +23411,12 @@
     ]
   },
   {
-    "api_version": "2019-06-01-preview",
+    "api_version": "2021-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/BIGDATAPOOLS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2019-06-01-preview",
+    "api_version": "2021-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/BIGDATAPOOLS/{}",
     "operation": "GET",
     "properties": [
@@ -23089,7 +23439,7 @@
     ]
   },
   {
-    "api_version": "2019-06-01-preview",
+    "api_version": "2021-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/BIGDATAPOOLS/{}",
     "operation": "PUT",
     "properties": [
@@ -23112,12 +23462,12 @@
     ]
   },
   {
-    "api_version": "2019-06-01-preview",
+    "api_version": "2021-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/FIREWALLRULES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2019-06-01-preview",
+    "api_version": "2021-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/FIREWALLRULES/{}",
     "operation": "GET",
     "properties": [
@@ -23127,7 +23477,7 @@
     ]
   },
   {
-    "api_version": "2019-06-01-preview",
+    "api_version": "2021-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/FIREWALLRULES/{}",
     "operation": "PUT",
     "properties": [
@@ -23137,7 +23487,7 @@
     ]
   },
   {
-    "api_version": "2019-06-01-preview",
+    "api_version": "2021-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/MANAGEDIDENTITYSQLCONTROLSETTINGS/DEFAULT",
     "operation": "GET",
     "properties": [
@@ -23145,7 +23495,7 @@
     ]
   },
   {
-    "api_version": "2019-06-01-preview",
+    "api_version": "2021-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/MANAGEDIDENTITYSQLCONTROLSETTINGS/DEFAULT",
     "operation": "PUT",
     "properties": [
@@ -23153,12 +23503,12 @@
     ]
   },
   {
-    "api_version": "2019-06-01-preview",
+    "api_version": "2021-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/SQLPOOLS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2019-06-01-preview",
+    "api_version": "2021-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/SQLPOOLS/{}",
     "operation": "GET",
     "properties": [
@@ -23175,7 +23525,7 @@
     ]
   },
   {
-    "api_version": "2019-06-01-preview",
+    "api_version": "2021-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/SQLPOOLS/{}",
     "operation": "PATCH",
     "properties": [
@@ -23184,7 +23534,7 @@
     ]
   },
   {
-    "api_version": "2019-06-01-preview",
+    "api_version": "2021-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/SQLPOOLS/{}",
     "operation": "PUT",
     "properties": [
@@ -23201,7 +23551,7 @@
     ]
   },
   {
-    "api_version": "2019-06-01-preview",
+    "api_version": "2021-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/SQLPOOLS/{}/TRANSPARENTDATAENCRYPTION/{}",
     "operation": "GET",
     "properties": [
@@ -23209,7 +23559,7 @@
     ]
   },
   {
-    "api_version": "2019-06-01-preview",
+    "api_version": "2021-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/SQLPOOLS/{}/TRANSPARENTDATAENCRYPTION/{}",
     "operation": "PUT",
     "properties": [
