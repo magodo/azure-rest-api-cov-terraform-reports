@@ -1,6 +1,6 @@
 {
   "commit": "9218f10f665d8058202a734e01f879f62fc099e0",
-  "additional_message": "Terraform Provider AzureRM: v2.64.0",
+  "additional_message": "Terraform Provider AzureRM: v2.65.0",
   "resource_providers": {
     "EnterpriseKnowledgeGraph": {
       "/PROVIDERS/MICROSOFT.ENTERPRISEKNOWLEDGEGRAPH/OPERATIONS": {
@@ -22070,7 +22070,7 @@
               "active": true,
               "node": {
                 "total_amount": 28,
-                "covered_amount": 22,
+                "covered_amount": 25,
                 "children": {
                   "{EventGrid}": {
                     "total_amount": 10,
@@ -22174,7 +22174,7 @@
                   },
                   "{IotHub}": {
                     "total_amount": 9,
-                    "covered_amount": 5,
+                    "covered_amount": 8,
                     "children": {
                       "kind": {
                         "total_amount": 1,
@@ -22186,7 +22186,7 @@
                       },
                       "properties": {
                         "total_amount": 7,
-                        "covered_amount": 4,
+                        "covered_amount": 7,
                         "children": {
                           "consumerGroup": {
                             "total_amount": 1,
@@ -22194,7 +22194,7 @@
                           },
                           "dataFormat": {
                             "total_amount": 1,
-                            "covered_amount": 0
+                            "covered_amount": 1
                           },
                           "eventSystemProperties": {
                             "total_amount": 1,
@@ -22206,7 +22206,7 @@
                           },
                           "mappingRuleName": {
                             "total_amount": 1,
-                            "covered_amount": 0
+                            "covered_amount": 1
                           },
                           "sharedAccessPolicyName": {
                             "total_amount": 1,
@@ -22214,7 +22214,7 @@
                           },
                           "tableName": {
                             "total_amount": 1,
-                            "covered_amount": 0
+                            "covered_amount": 1
                           }
                         }
                       }
@@ -121935,16 +121935,17 @@
       "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATALAKESTORE/ACCOUNTS/{}/FIREWALLRULES/{}": {
         "operations": {
           "DELETE": {
+            "2015-10-01-preview": null,
             "2016-11-01": null
           },
           "GET": {
+            "2015-10-01-preview": null,
             "2016-11-01": null
           },
           "PATCH": {
             "2016-11-01": null
           },
           "PUT": {
-            "2015-10-01-preview": null,
             "2016-11-01": null
           }
         }
@@ -139412,21 +139413,12 @@
             "2014-09-01": null,
             "2015-08-01": null,
             "2017-04-01": null,
-            "2018-01-01-preview": {
-              "name": "",
-              "url": "https://github.com/Azure/azure-rest-api-specs/blob/9218f10f665d8058202a734e01f879f62fc099e0/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2018-01-01-preview/namespaces-preview.json",
-              "is_preview": true,
-              "active": true,
-              "node": {
-                "total_amount": 0,
-                "covered_amount": 0
-              }
-            },
+            "2018-01-01-preview": null,
             "2021-01-01-preview": {
               "name": "",
               "url": "https://github.com/Azure/azure-rest-api-specs/blob/9218f10f665d8058202a734e01f879f62fc099e0/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2021-01-01-preview/namespaces-preview.json",
               "is_preview": true,
-              "active": false,
+              "active": true,
               "node": {
                 "total_amount": 0,
                 "covered_amount": 0
@@ -139451,121 +139443,12 @@
             "2014-09-01": null,
             "2015-08-01": null,
             "2017-04-01": null,
-            "2018-01-01-preview": {
-              "name": "EHNamespace",
-              "url": "https://github.com/Azure/azure-rest-api-specs/blob/9218f10f665d8058202a734e01f879f62fc099e0/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2018-01-01-preview/namespaces-preview.json",
-              "is_preview": true,
-              "active": true,
-              "node": {
-                "total_amount": 17,
-                "covered_amount": 12,
-                "children": {
-                  "identity": {
-                    "total_amount": 3,
-                    "covered_amount": 3,
-                    "children": {
-                      "principalId": {
-                        "total_amount": 1,
-                        "covered_amount": 1
-                      },
-                      "tenantId": {
-                        "total_amount": 1,
-                        "covered_amount": 1
-                      },
-                      "type": {
-                        "total_amount": 1,
-                        "covered_amount": 1
-                      }
-                    }
-                  },
-                  "location": {
-                    "total_amount": 1,
-                    "covered_amount": 1
-                  },
-                  "properties": {
-                    "total_amount": 9,
-                    "covered_amount": 4,
-                    "children": {
-                      "clusterArmId": {
-                        "total_amount": 1,
-                        "covered_amount": 1
-                      },
-                      "encryption": {
-                        "total_amount": 4,
-                        "covered_amount": 0,
-                        "children": {
-                          "keySource": {
-                            "total_amount": 1,
-                            "covered_amount": 0
-                          },
-                          "keyVaultProperties": {
-                            "total_amount": 3,
-                            "covered_amount": 0,
-                            "children": {
-                              "keyName": {
-                                "total_amount": 1,
-                                "covered_amount": 0
-                              },
-                              "keyVaultUri": {
-                                "total_amount": 1,
-                                "covered_amount": 0
-                              },
-                              "keyVersion": {
-                                "total_amount": 1,
-                                "covered_amount": 0
-                              }
-                            }
-                          }
-                        }
-                      },
-                      "isAutoInflateEnabled": {
-                        "total_amount": 1,
-                        "covered_amount": 1
-                      },
-                      "kafkaEnabled": {
-                        "total_amount": 1,
-                        "covered_amount": 0
-                      },
-                      "maximumThroughputUnits": {
-                        "total_amount": 1,
-                        "covered_amount": 1
-                      },
-                      "zoneRedundant": {
-                        "total_amount": 1,
-                        "covered_amount": 1
-                      }
-                    }
-                  },
-                  "sku": {
-                    "total_amount": 3,
-                    "covered_amount": 3,
-                    "children": {
-                      "capacity": {
-                        "total_amount": 1,
-                        "covered_amount": 1
-                      },
-                      "name": {
-                        "total_amount": 1,
-                        "covered_amount": 1
-                      },
-                      "tier": {
-                        "total_amount": 1,
-                        "covered_amount": 1
-                      }
-                    }
-                  },
-                  "tags": {
-                    "total_amount": 1,
-                    "covered_amount": 1
-                  }
-                }
-              }
-            },
+            "2018-01-01-preview": null,
             "2021-01-01-preview": {
               "name": "EHNamespace",
               "url": "https://github.com/Azure/azure-rest-api-specs/blob/9218f10f665d8058202a734e01f879f62fc099e0/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2021-01-01-preview/namespaces-preview.json",
               "is_preview": true,
-              "active": false,
+              "active": true,
               "node": {
                 "total_amount": 22,
                 "covered_amount": 10,
@@ -207326,7 +207209,7 @@
               "active": true,
               "node": {
                 "total_amount": 61,
-                "covered_amount": 30,
+                "covered_amount": 32,
                 "children": {
                   "id": {
                     "total_amount": 1,
@@ -207338,7 +207221,7 @@
                   },
                   "properties": {
                     "total_amount": 55,
-                    "covered_amount": 24,
+                    "covered_amount": 26,
                     "children": {
                       "allowClassicOperations": {
                         "total_amount": 1,
@@ -207374,7 +207257,7 @@
                       },
                       "bandwidthInGbps": {
                         "total_amount": 1,
-                        "covered_amount": 0
+                        "covered_amount": 1
                       },
                       "circuitProvisioningState": {
                         "total_amount": 1,
@@ -207384,11 +207267,11 @@
                       },
                       "expressRoutePort": {
                         "total_amount": 1,
-                        "covered_amount": 0,
+                        "covered_amount": 1,
                         "children": {
                           "id": {
                             "total_amount": 1,
-                            "covered_amount": 0
+                            "covered_amount": 1
                           }
                         }
                       },
@@ -207703,7 +207586,7 @@
               "active": false,
               "node": {
                 "total_amount": 61,
-                "covered_amount": 30,
+                "covered_amount": 32,
                 "children": {
                   "id": {
                     "total_amount": 1,
@@ -207715,7 +207598,7 @@
                   },
                   "properties": {
                     "total_amount": 55,
-                    "covered_amount": 24,
+                    "covered_amount": 26,
                     "children": {
                       "allowClassicOperations": {
                         "total_amount": 1,
@@ -207751,7 +207634,7 @@
                       },
                       "bandwidthInGbps": {
                         "total_amount": 1,
-                        "covered_amount": 0
+                        "covered_amount": 1
                       },
                       "circuitProvisioningState": {
                         "total_amount": 1,
@@ -207761,11 +207644,11 @@
                       },
                       "expressRoutePort": {
                         "total_amount": 1,
-                        "covered_amount": 0,
+                        "covered_amount": 1,
                         "children": {
                           "id": {
                             "total_amount": 1,
-                            "covered_amount": 0
+                            "covered_amount": 1
                           }
                         }
                       },
@@ -300852,11 +300735,11 @@
               "url": "https://github.com/Azure/azure-rest-api-specs/blob/9218f10f665d8058202a734e01f879f62fc099e0/specification/recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2021-02-10/service.json",
               "active": false,
               "node": {
-                "total_amount": 36,
+                "total_amount": 47,
                 "covered_amount": 4,
                 "children": {
                   "properties": {
-                    "total_amount": 36,
+                    "total_amount": 47,
                     "covered_amount": 4,
                     "children": {
                       "replicationProviderSettings{A2ACrossClusterMigration}": {
@@ -300896,10 +300779,54 @@
                         }
                       },
                       "replicationProviderSettings{HyperVReplica2012R2}": {
-                        "total_amount": 1,
+                        "total_amount": 12,
                         "covered_amount": 0,
                         "children": {
+                          "allowedAuthenticationType": {
+                            "total_amount": 1,
+                            "covered_amount": 0
+                          },
+                          "applicationConsistentSnapshotFrequencyInHours": {
+                            "total_amount": 1,
+                            "covered_amount": 0
+                          },
+                          "compression": {
+                            "total_amount": 1,
+                            "covered_amount": 0
+                          },
+                          "initialReplicationMethod": {
+                            "total_amount": 1,
+                            "covered_amount": 0
+                          },
+                          "instanceType": {
+                            "total_amount": 1,
+                            "covered_amount": 0
+                          },
+                          "offlineReplicationExportPath": {
+                            "total_amount": 1,
+                            "covered_amount": 0
+                          },
+                          "offlineReplicationImportPath": {
+                            "total_amount": 1,
+                            "covered_amount": 0
+                          },
+                          "onlineReplicationStartTime": {
+                            "total_amount": 1,
+                            "covered_amount": 0
+                          },
+                          "recoveryPoints": {
+                            "total_amount": 1,
+                            "covered_amount": 0
+                          },
+                          "replicaDeletion": {
+                            "total_amount": 1,
+                            "covered_amount": 0
+                          },
                           "replicationFrequencyInSeconds": {
+                            "total_amount": 1,
+                            "covered_amount": 0
+                          },
+                          "replicationPort": {
                             "total_amount": 1,
                             "covered_amount": 0
                           }
@@ -315038,11 +314965,11 @@
               "active": true,
               "node": {
                 "total_amount": 13,
-                "covered_amount": 12,
+                "covered_amount": 13,
                 "children": {
                   "properties": {
                     "total_amount": 13,
-                    "covered_amount": 12,
+                    "covered_amount": 13,
                     "children": {
                       "assessmentType": {
                         "total_amount": 1,
@@ -315050,7 +314977,7 @@
                       },
                       "categories": {
                         "total_amount": 1,
-                        "covered_amount": 0
+                        "covered_amount": 1
                       },
                       "description": {
                         "total_amount": 1,
@@ -346242,23 +346169,23 @@
               "active": true,
               "node": {
                 "total_amount": 12,
-                "covered_amount": 8,
+                "covered_amount": 10,
                 "children": {
                   "properties": {
                     "total_amount": 12,
-                    "covered_amount": 8,
+                    "covered_amount": 10,
                     "children": {
                       "blobNfs": {
                         "total_amount": 2,
-                        "covered_amount": 0,
+                        "covered_amount": 2,
                         "children": {
                           "target": {
                             "total_amount": 1,
-                            "covered_amount": 0
+                            "covered_amount": 1
                           },
                           "usageModel": {
                             "total_amount": 1,
-                            "covered_amount": 0
+                            "covered_amount": 1
                           }
                         }
                       },

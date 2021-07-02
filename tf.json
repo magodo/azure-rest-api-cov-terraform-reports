@@ -798,6 +798,7 @@
     "operation": "GET",
     "properties": [
       "properties/assessmentType",
+      "properties/categories",
       "properties/description",
       "properties/displayName",
       "properties/implementationEffort",
@@ -813,6 +814,7 @@
     "operation": "PUT",
     "properties": [
       "properties/assessmentType",
+      "properties/categories",
       "properties/description",
       "properties/displayName",
       "properties/implementationEffort",
@@ -11419,22 +11421,22 @@
     ]
   },
   {
-    "api_version": "2018-01-01-preview",
+    "api_version": "2021-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTHUB/NAMESPACES",
     "operation": "GET"
   },
   {
-    "api_version": "2018-01-01-preview",
+    "api_version": "2021-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTHUB/NAMESPACES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2018-01-01-preview",
+    "api_version": "2021-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTHUB/NAMESPACES/{}",
     "operation": "GET"
   },
   {
-    "api_version": "2018-01-01-preview",
+    "api_version": "2021-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTHUB/NAMESPACES/{}",
     "operation": "PUT",
     "properties": [
@@ -13063,9 +13065,12 @@
     "properties": [
       "location",
       "properties/consumerGroup",
+      "properties/dataFormat",
       "properties/eventSystemProperties",
       "properties/iotHubResourceId",
-      "properties/sharedAccessPolicyName"
+      "properties/mappingRuleName",
+      "properties/sharedAccessPolicyName",
+      "properties/tableName"
     ]
   },
   {
@@ -13111,9 +13116,12 @@
     "properties": [
       "location",
       "properties/consumerGroup",
+      "properties/dataFormat",
       "properties/eventSystemProperties",
       "properties/iotHubResourceId",
-      "properties/sharedAccessPolicyName"
+      "properties/mappingRuleName",
+      "properties/sharedAccessPolicyName",
+      "properties/tableName"
     ]
   },
   {
@@ -15314,6 +15322,8 @@
       "location",
       "name",
       "properties/allowClassicOperations",
+      "properties/bandwidthInGbps",
+      "properties/expressRoutePort/id",
       "properties/peerings",
       "properties/peerings/id",
       "properties/peerings/properties/azureASN",
@@ -15351,6 +15361,8 @@
       "location",
       "name",
       "properties/allowClassicOperations",
+      "properties/bandwidthInGbps",
+      "properties/expressRoutePort/id",
       "properties/peerings",
       "properties/peerings/id",
       "properties/peerings/properties/azureASN",
@@ -21873,7 +21885,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/EXTENDEDAUDITINGSETTINGS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "properties/isAzureMonitorTargetEnabled",
       "properties/isStorageSecondaryKeyInUse",
       "properties/retentionDays",
@@ -21887,7 +21898,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/EXTENDEDAUDITINGSETTINGS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "properties/isAzureMonitorTargetEnabled",
       "properties/isStorageSecondaryKeyInUse",
       "properties/retentionDays",
@@ -22765,6 +22775,8 @@
     "operation": "GET",
     "properties": [
       "id",
+      "properties/blobNfs/target",
+      "properties/blobNfs/usageModel",
       "properties/clfs/target",
       "properties/junctions/namespacePath",
       "properties/junctions/nfsAccessPolicy",
@@ -22781,6 +22793,8 @@
     "operation": "PUT",
     "properties": [
       "id",
+      "properties/blobNfs/target",
+      "properties/blobNfs/usageModel",
       "properties/clfs/target",
       "properties/junctions/namespacePath",
       "properties/junctions/nfsAccessPolicy",
