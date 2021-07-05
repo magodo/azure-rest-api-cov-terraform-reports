@@ -265,13 +265,34 @@
     "operation": "PUT"
   },
   {
-    "api_version": "2018-04-01",
+    "api_version": "2018-08-01",
     "api_path": "/PROVIDERS/MICROSOFT.NETWORK/TRAFFICMANAGERGEOGRAPHICHIERARCHIES/DEFAULT",
     "operation": "GET",
     "properties": [
       "properties/geographicHierarchy/code",
       "properties/geographicHierarchy/name",
       "properties/geographicHierarchy/regions"
+    ]
+  },
+  {
+    "api_version": "2019-01-01-preview",
+    "api_path": "/PROVIDERS/MICROSOFT.PORTAL/TENANTCONFIGURATIONS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2019-01-01-preview",
+    "api_path": "/PROVIDERS/MICROSOFT.PORTAL/TENANTCONFIGURATIONS/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/enforcePrivateMarkdownStorage"
+    ]
+  },
+  {
+    "api_version": "2019-01-01-preview",
+    "api_path": "/PROVIDERS/MICROSOFT.PORTAL/TENANTCONFIGURATIONS/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/enforcePrivateMarkdownStorage"
     ]
   },
   {
@@ -531,6 +552,11 @@
     "api_version": "2018-07-12",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.BOTSERVICE/LISTAUTHSERVICEPROVIDERS",
     "operation": "POST"
+  },
+  {
+    "api_version": "2021-04-30",
+    "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/LOCATIONS/{}/RESOURCEGROUPS/{}/DELETEDACCOUNTS/{}",
+    "operation": "DELETE"
   },
   {
     "api_version": "2020-12-01",
@@ -1347,7 +1373,9 @@
     "properties": [
       "id",
       "properties/apiRevision",
+      "properties/apiRevisionDescription",
       "properties/apiVersion",
+      "properties/apiVersionDescription",
       "properties/apiVersionSetId",
       "properties/authenticationSettings/oAuth2/authorizationServerId",
       "properties/authenticationSettings/oAuth2/scope",
@@ -1371,8 +1399,10 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/APIS/{}",
     "operation": "PUT",
     "properties": [
+      "properties/apiRevisionDescription",
       "properties/apiType",
       "properties/apiVersion",
+      "properties/apiVersionDescription",
       "properties/apiVersionSetId",
       "properties/authenticationSettings/oAuth2/authorizationServerId",
       "properties/authenticationSettings/oAuth2/scope",
@@ -1384,6 +1414,7 @@
       "properties/path",
       "properties/protocols",
       "properties/serviceUrl",
+      "properties/sourceApiId",
       "properties/subscriptionKeyParameterNames/header",
       "properties/subscriptionKeyParameterNames/query",
       "properties/subscriptionRequired",
@@ -1596,6 +1627,11 @@
   },
   {
     "api_version": "2020-12-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/APIS/{}/OPERATIONS/{}/TAGS/{}",
+    "operation": "PUT"
+  },
+  {
+    "api_version": "2020-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/APIS/{}/POLICIES/{}",
     "operation": "DELETE"
   },
@@ -1751,6 +1787,7 @@
       "properties/credentials/header",
       "properties/credentials/query",
       "properties/description",
+      "properties/properties/serviceFabricCluster/clientCertificateId",
       "properties/properties/serviceFabricCluster/clientCertificatethumbprint",
       "properties/properties/serviceFabricCluster/managementEndpoints",
       "properties/properties/serviceFabricCluster/maxPartitionResolutionRetries",
@@ -1780,6 +1817,7 @@
       "properties/credentials/header",
       "properties/credentials/query",
       "properties/description",
+      "properties/properties/serviceFabricCluster/clientCertificateId",
       "properties/properties/serviceFabricCluster/clientCertificatethumbprint",
       "properties/properties/serviceFabricCluster/managementEndpoints",
       "properties/properties/serviceFabricCluster/maxPartitionResolutionRetries",
@@ -2283,6 +2321,27 @@
     "api_version": "2020-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/SUBSCRIPTIONS/{}/LISTSECRETS",
     "operation": "POST"
+  },
+  {
+    "api_version": "2020-12-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/TAGS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2020-12-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/TAGS/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/displayName"
+    ]
+  },
+  {
+    "api_version": "2020-12-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/TAGS/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/displayName"
+    ]
   },
   {
     "api_version": "2020-12-01",
@@ -3294,6 +3353,7 @@
       "properties/keyVaultReference/id",
       "properties/keyVaultReference/url",
       "properties/poolAllocationMode",
+      "properties/publicNetworkAccess",
       "tags"
     ]
   },
@@ -3316,6 +3376,7 @@
       "properties/keyVaultReference/id",
       "properties/keyVaultReference/url",
       "properties/poolAllocationMode",
+      "properties/publicNetworkAccess",
       "tags"
     ]
   },
@@ -4574,16 +4635,15 @@
     ]
   },
   {
-    "api_version": "2017-04-18",
+    "api_version": "2021-04-30",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/ACCOUNTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2017-04-18",
+    "api_version": "2021-04-30",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/ACCOUNTS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "kind",
       "location",
       "name",
@@ -4600,11 +4660,10 @@
     ]
   },
   {
-    "api_version": "2017-04-18",
+    "api_version": "2021-04-30",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/ACCOUNTS/{}",
     "operation": "PATCH",
     "properties": [
-      "id",
       "kind",
       "location",
       "name",
@@ -4621,11 +4680,10 @@
     ]
   },
   {
-    "api_version": "2017-04-18",
+    "api_version": "2021-04-30",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/ACCOUNTS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "kind",
       "location",
       "name",
@@ -4642,7 +4700,7 @@
     ]
   },
   {
-    "api_version": "2017-04-18",
+    "api_version": "2021-04-30",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/ACCOUNTS/{}/LISTKEYS",
     "operation": "POST"
   },
@@ -6458,6 +6516,7 @@
       "properties/agentPoolProfiles/count",
       "properties/agentPoolProfiles/enableAutoScaling",
       "properties/agentPoolProfiles/enableEncryptionAtHost",
+      "properties/agentPoolProfiles/enableFIPS",
       "properties/agentPoolProfiles/enableNodePublicIP",
       "properties/agentPoolProfiles/kubeletConfig/allowedUnsafeSysctls",
       "properties/agentPoolProfiles/kubeletConfig/containerLogMaxFiles",
@@ -6470,6 +6529,7 @@
       "properties/agentPoolProfiles/kubeletConfig/imageGcLowThreshold",
       "properties/agentPoolProfiles/kubeletConfig/podMaxPids",
       "properties/agentPoolProfiles/kubeletConfig/topologyManagerPolicy",
+      "properties/agentPoolProfiles/kubeletDiskType",
       "properties/agentPoolProfiles/linuxOSConfig/swapFileSizeMB",
       "properties/agentPoolProfiles/linuxOSConfig/sysctls/fsAioMaxNr",
       "properties/agentPoolProfiles/linuxOSConfig/sysctls/fsFileMax",
@@ -6574,6 +6634,7 @@
       "properties/servicePrincipalProfile/secret",
       "properties/windowsProfile/adminPassword",
       "properties/windowsProfile/adminUsername",
+      "properties/windowsProfile/licenseType",
       "sku/name",
       "sku/tier",
       "tags"
@@ -6603,6 +6664,7 @@
       "properties/agentPoolProfiles/count",
       "properties/agentPoolProfiles/enableAutoScaling",
       "properties/agentPoolProfiles/enableEncryptionAtHost",
+      "properties/agentPoolProfiles/enableFIPS",
       "properties/agentPoolProfiles/enableNodePublicIP",
       "properties/agentPoolProfiles/kubeletConfig/allowedUnsafeSysctls",
       "properties/agentPoolProfiles/kubeletConfig/containerLogMaxFiles",
@@ -6615,6 +6677,7 @@
       "properties/agentPoolProfiles/kubeletConfig/imageGcLowThreshold",
       "properties/agentPoolProfiles/kubeletConfig/podMaxPids",
       "properties/agentPoolProfiles/kubeletConfig/topologyManagerPolicy",
+      "properties/agentPoolProfiles/kubeletDiskType",
       "properties/agentPoolProfiles/linuxOSConfig/swapFileSizeMB",
       "properties/agentPoolProfiles/linuxOSConfig/sysctls/fsAioMaxNr",
       "properties/agentPoolProfiles/linuxOSConfig/sysctls/fsFileMax",
@@ -6719,6 +6782,7 @@
       "properties/servicePrincipalProfile/secret",
       "properties/windowsProfile/adminPassword",
       "properties/windowsProfile/adminUsername",
+      "properties/windowsProfile/licenseType",
       "sku/name",
       "sku/tier",
       "tags"
@@ -6745,6 +6809,7 @@
       "properties/count",
       "properties/enableAutoScaling",
       "properties/enableEncryptionAtHost",
+      "properties/enableFIPS",
       "properties/enableNodePublicIP",
       "properties/kubeletConfig/allowedUnsafeSysctls",
       "properties/kubeletConfig/containerLogMaxFiles",
@@ -6757,6 +6822,7 @@
       "properties/kubeletConfig/imageGcLowThreshold",
       "properties/kubeletConfig/podMaxPids",
       "properties/kubeletConfig/topologyManagerPolicy",
+      "properties/kubeletDiskType",
       "properties/linuxOSConfig/swapFileSizeMB",
       "properties/linuxOSConfig/sysctls/fsAioMaxNr",
       "properties/linuxOSConfig/sysctls/fsFileMax",
@@ -6821,6 +6887,7 @@
       "properties/count",
       "properties/enableAutoScaling",
       "properties/enableEncryptionAtHost",
+      "properties/enableFIPS",
       "properties/enableNodePublicIP",
       "properties/kubeletConfig/allowedUnsafeSysctls",
       "properties/kubeletConfig/containerLogMaxFiles",
@@ -6833,6 +6900,7 @@
       "properties/kubeletConfig/imageGcLowThreshold",
       "properties/kubeletConfig/podMaxPids",
       "properties/kubeletConfig/topologyManagerPolicy",
+      "properties/kubeletDiskType",
       "properties/linuxOSConfig/swapFileSizeMB",
       "properties/linuxOSConfig/sysctls/fsAioMaxNr",
       "properties/linuxOSConfig/sysctls/fsFileMax",
@@ -8115,6 +8183,18 @@
     "properties": [
       "id",
       "name",
+      "properties{BlobEventsTrigger}",
+      "properties{BlobEventsTrigger}/annotations",
+      "properties{BlobEventsTrigger}/description",
+      "properties{BlobEventsTrigger}/pipelines/parameters",
+      "properties{BlobEventsTrigger}/pipelines/pipelineReference/referenceName",
+      "properties{BlobEventsTrigger}/pipelines/pipelineReference/type",
+      "properties{BlobEventsTrigger}/type",
+      "properties{BlobEventsTrigger}/typeProperties/blobPathBeginsWith",
+      "properties{BlobEventsTrigger}/typeProperties/blobPathEndsWith",
+      "properties{BlobEventsTrigger}/typeProperties/events",
+      "properties{BlobEventsTrigger}/typeProperties/ignoreEmptyBlobs",
+      "properties{BlobEventsTrigger}/typeProperties/scope",
       "properties{ScheduleTrigger}/annotations",
       "properties{ScheduleTrigger}/pipelines/parameters",
       "properties{ScheduleTrigger}/pipelines/pipelineReference/referenceName",
@@ -8133,6 +8213,18 @@
     "properties": [
       "id",
       "name",
+      "properties{BlobEventsTrigger}",
+      "properties{BlobEventsTrigger}/annotations",
+      "properties{BlobEventsTrigger}/description",
+      "properties{BlobEventsTrigger}/pipelines/parameters",
+      "properties{BlobEventsTrigger}/pipelines/pipelineReference/referenceName",
+      "properties{BlobEventsTrigger}/pipelines/pipelineReference/type",
+      "properties{BlobEventsTrigger}/type",
+      "properties{BlobEventsTrigger}/typeProperties/blobPathBeginsWith",
+      "properties{BlobEventsTrigger}/typeProperties/blobPathEndsWith",
+      "properties{BlobEventsTrigger}/typeProperties/events",
+      "properties{BlobEventsTrigger}/typeProperties/ignoreEmptyBlobs",
+      "properties{BlobEventsTrigger}/typeProperties/scope",
       "properties{ScheduleTrigger}/annotations",
       "properties{ScheduleTrigger}/pipelines/parameters",
       "properties{ScheduleTrigger}/pipelines/pipelineReference/referenceName",
@@ -11195,12 +11287,19 @@
       "properties/filter/advancedFilters{BoolEquals}/key",
       "properties/filter/advancedFilters{BoolEquals}/operatorType",
       "properties/filter/advancedFilters{BoolEquals}/value",
+      "properties/filter/advancedFilters{IsNotNull}/key",
+      "properties/filter/advancedFilters{IsNotNull}/operatorType",
+      "properties/filter/advancedFilters{IsNullOrUndefined}/key",
+      "properties/filter/advancedFilters{IsNullOrUndefined}/operatorType",
       "properties/filter/advancedFilters{NumberGreaterThanOrEquals}/key",
       "properties/filter/advancedFilters{NumberGreaterThanOrEquals}/operatorType",
       "properties/filter/advancedFilters{NumberGreaterThanOrEquals}/value",
       "properties/filter/advancedFilters{NumberGreaterThan}/key",
       "properties/filter/advancedFilters{NumberGreaterThan}/operatorType",
       "properties/filter/advancedFilters{NumberGreaterThan}/value",
+      "properties/filter/advancedFilters{NumberInRange}/key",
+      "properties/filter/advancedFilters{NumberInRange}/operatorType",
+      "properties/filter/advancedFilters{NumberInRange}/values",
       "properties/filter/advancedFilters{NumberIn}/key",
       "properties/filter/advancedFilters{NumberIn}/operatorType",
       "properties/filter/advancedFilters{NumberIn}/values",
@@ -11210,6 +11309,9 @@
       "properties/filter/advancedFilters{NumberLessThan}/key",
       "properties/filter/advancedFilters{NumberLessThan}/operatorType",
       "properties/filter/advancedFilters{NumberLessThan}/value",
+      "properties/filter/advancedFilters{NumberNotInRange}/key",
+      "properties/filter/advancedFilters{NumberNotInRange}/operatorType",
+      "properties/filter/advancedFilters{NumberNotInRange}/values",
       "properties/filter/advancedFilters{NumberNotIn}/key",
       "properties/filter/advancedFilters{NumberNotIn}/operatorType",
       "properties/filter/advancedFilters{NumberNotIn}/values",
@@ -11225,6 +11327,15 @@
       "properties/filter/advancedFilters{StringIn}/key",
       "properties/filter/advancedFilters{StringIn}/operatorType",
       "properties/filter/advancedFilters{StringIn}/values",
+      "properties/filter/advancedFilters{StringNotBeginsWith}/key",
+      "properties/filter/advancedFilters{StringNotBeginsWith}/operatorType",
+      "properties/filter/advancedFilters{StringNotBeginsWith}/values",
+      "properties/filter/advancedFilters{StringNotContains}/key",
+      "properties/filter/advancedFilters{StringNotContains}/operatorType",
+      "properties/filter/advancedFilters{StringNotContains}/values",
+      "properties/filter/advancedFilters{StringNotEndsWith}/key",
+      "properties/filter/advancedFilters{StringNotEndsWith}/operatorType",
+      "properties/filter/advancedFilters{StringNotEndsWith}/values",
       "properties/filter/advancedFilters{StringNotIn}/key",
       "properties/filter/advancedFilters{StringNotIn}/operatorType",
       "properties/filter/advancedFilters{StringNotIn}/values",
@@ -11274,12 +11385,19 @@
       "properties/filter/advancedFilters{BoolEquals}/key",
       "properties/filter/advancedFilters{BoolEquals}/operatorType",
       "properties/filter/advancedFilters{BoolEquals}/value",
+      "properties/filter/advancedFilters{IsNotNull}/key",
+      "properties/filter/advancedFilters{IsNotNull}/operatorType",
+      "properties/filter/advancedFilters{IsNullOrUndefined}/key",
+      "properties/filter/advancedFilters{IsNullOrUndefined}/operatorType",
       "properties/filter/advancedFilters{NumberGreaterThanOrEquals}/key",
       "properties/filter/advancedFilters{NumberGreaterThanOrEquals}/operatorType",
       "properties/filter/advancedFilters{NumberGreaterThanOrEquals}/value",
       "properties/filter/advancedFilters{NumberGreaterThan}/key",
       "properties/filter/advancedFilters{NumberGreaterThan}/operatorType",
       "properties/filter/advancedFilters{NumberGreaterThan}/value",
+      "properties/filter/advancedFilters{NumberInRange}/key",
+      "properties/filter/advancedFilters{NumberInRange}/operatorType",
+      "properties/filter/advancedFilters{NumberInRange}/values",
       "properties/filter/advancedFilters{NumberIn}/key",
       "properties/filter/advancedFilters{NumberIn}/operatorType",
       "properties/filter/advancedFilters{NumberIn}/values",
@@ -11289,6 +11407,9 @@
       "properties/filter/advancedFilters{NumberLessThan}/key",
       "properties/filter/advancedFilters{NumberLessThan}/operatorType",
       "properties/filter/advancedFilters{NumberLessThan}/value",
+      "properties/filter/advancedFilters{NumberNotInRange}/key",
+      "properties/filter/advancedFilters{NumberNotInRange}/operatorType",
+      "properties/filter/advancedFilters{NumberNotInRange}/values",
       "properties/filter/advancedFilters{NumberNotIn}/key",
       "properties/filter/advancedFilters{NumberNotIn}/operatorType",
       "properties/filter/advancedFilters{NumberNotIn}/values",
@@ -11304,6 +11425,15 @@
       "properties/filter/advancedFilters{StringIn}/key",
       "properties/filter/advancedFilters{StringIn}/operatorType",
       "properties/filter/advancedFilters{StringIn}/values",
+      "properties/filter/advancedFilters{StringNotBeginsWith}/key",
+      "properties/filter/advancedFilters{StringNotBeginsWith}/operatorType",
+      "properties/filter/advancedFilters{StringNotBeginsWith}/values",
+      "properties/filter/advancedFilters{StringNotContains}/key",
+      "properties/filter/advancedFilters{StringNotContains}/operatorType",
+      "properties/filter/advancedFilters{StringNotContains}/values",
+      "properties/filter/advancedFilters{StringNotEndsWith}/key",
+      "properties/filter/advancedFilters{StringNotEndsWith}/operatorType",
+      "properties/filter/advancedFilters{StringNotEndsWith}/values",
       "properties/filter/advancedFilters{StringNotIn}/key",
       "properties/filter/advancedFilters{StringNotIn}/operatorType",
       "properties/filter/advancedFilters{StringNotIn}/values",
@@ -15477,6 +15607,37 @@
   },
   {
     "api_version": "2020-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTECIRCUITS/{}/PEERINGS/{}/CONNECTIONS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2020-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTECIRCUITS/{}/PEERINGS/{}/CONNECTIONS/{}",
+    "operation": "GET",
+    "properties": [
+      "name",
+      "properties/addressPrefix",
+      "properties/authorizationKey",
+      "properties/expressRouteCircuitPeering/id",
+      "properties/ipv6CircuitConnectionConfig/addressPrefix",
+      "properties/peerExpressRouteCircuitPeering/id"
+    ]
+  },
+  {
+    "api_version": "2020-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTECIRCUITS/{}/PEERINGS/{}/CONNECTIONS/{}",
+    "operation": "PUT",
+    "properties": [
+      "name",
+      "properties/addressPrefix",
+      "properties/authorizationKey",
+      "properties/expressRouteCircuitPeering/id",
+      "properties/ipv6CircuitConnectionConfig/addressPrefix",
+      "properties/peerExpressRouteCircuitPeering/id"
+    ]
+  },
+  {
+    "api_version": "2020-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTEGATEWAYS/{}",
     "operation": "DELETE"
   },
@@ -15504,6 +15665,41 @@
       "properties/autoScaleConfiguration/bounds/min",
       "properties/virtualHub/id",
       "tags"
+    ]
+  },
+  {
+    "api_version": "2020-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTEGATEWAYS/{}/EXPRESSROUTECONNECTIONS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2020-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTEGATEWAYS/{}/EXPRESSROUTECONNECTIONS/{}",
+    "operation": "GET",
+    "properties": [
+      "name",
+      "properties/authorizationKey",
+      "properties/enableInternetSecurity",
+      "properties/expressRouteCircuitPeering/id",
+      "properties/routingConfiguration/associatedRouteTable/id",
+      "properties/routingConfiguration/propagatedRouteTables/ids/id",
+      "properties/routingConfiguration/propagatedRouteTables/labels",
+      "properties/routingWeight"
+    ]
+  },
+  {
+    "api_version": "2020-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTEGATEWAYS/{}/EXPRESSROUTECONNECTIONS/{}",
+    "operation": "PUT",
+    "properties": [
+      "name",
+      "properties/authorizationKey",
+      "properties/enableInternetSecurity",
+      "properties/expressRouteCircuitPeering/id",
+      "properties/routingConfiguration/associatedRouteTable/id",
+      "properties/routingConfiguration/propagatedRouteTables/ids/id",
+      "properties/routingConfiguration/propagatedRouteTables/labels",
+      "properties/routingWeight"
     ]
   },
   {
@@ -18335,12 +18531,12 @@
     ]
   },
   {
-    "api_version": "2018-04-01",
+    "api_version": "2018-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/TRAFFICMANAGERPROFILES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2018-04-01",
+    "api_version": "2018-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/TRAFFICMANAGERPROFILES/{}",
     "operation": "GET",
     "properties": [
@@ -18368,7 +18564,7 @@
     ]
   },
   {
-    "api_version": "2018-04-01",
+    "api_version": "2018-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/TRAFFICMANAGERPROFILES/{}",
     "operation": "PATCH",
     "properties": [
@@ -18396,7 +18592,7 @@
     ]
   },
   {
-    "api_version": "2018-04-01",
+    "api_version": "2018-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/TRAFFICMANAGERPROFILES/{}",
     "operation": "PUT",
     "properties": [
@@ -18424,12 +18620,12 @@
     ]
   },
   {
-    "api_version": "2018-04-01",
+    "api_version": "2018-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/TRAFFICMANAGERPROFILES/{}/{}/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2018-04-01",
+    "api_version": "2018-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/TRAFFICMANAGERPROFILES/{}/{}/{}",
     "operation": "GET",
     "properties": [
@@ -18442,6 +18638,8 @@
       "properties/endpointStatus",
       "properties/geoMapping",
       "properties/minChildEndpoints",
+      "properties/minChildEndpointsIPv4",
+      "properties/minChildEndpointsIPv6",
       "properties/priority",
       "properties/subnets/first",
       "properties/subnets/last",
@@ -18453,7 +18651,7 @@
     ]
   },
   {
-    "api_version": "2018-04-01",
+    "api_version": "2018-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/TRAFFICMANAGERPROFILES/{}/{}/{}",
     "operation": "PUT",
     "properties": [
@@ -18466,6 +18664,8 @@
       "properties/endpointStatus",
       "properties/geoMapping",
       "properties/minChildEndpoints",
+      "properties/minChildEndpointsIPv4",
+      "properties/minChildEndpointsIPv6",
       "properties/priority",
       "properties/subnets/first",
       "properties/subnets/last",
@@ -20097,6 +20297,7 @@
       "properties/providerSpecificDetails{A2A}/monitoringPercentageCompletion",
       "properties/providerSpecificDetails{A2A}/protectedManagedDisks/diskId",
       "properties/providerSpecificDetails{A2A}/protectedManagedDisks/primaryStagingAzureStorageAccountId",
+      "properties/providerSpecificDetails{A2A}/protectedManagedDisks/recoveryDiskEncryptionSetId",
       "properties/providerSpecificDetails{A2A}/protectedManagedDisks/recoveryReplicaDiskAccountType",
       "properties/providerSpecificDetails{A2A}/protectedManagedDisks/recoveryResourceGroupId",
       "properties/providerSpecificDetails{A2A}/protectedManagedDisks/recoveryTargetDiskAccountType",
@@ -20143,6 +20344,7 @@
       "properties/providerSpecificDetails{A2A}/recoveryResourceGroupId",
       "properties/providerSpecificDetails{A2A}/vmManagedDisks/diskId",
       "properties/providerSpecificDetails{A2A}/vmManagedDisks/primaryStagingAzureStorageAccountId",
+      "properties/providerSpecificDetails{A2A}/vmManagedDisks/recoveryDiskEncryptionSetId",
       "properties/providerSpecificDetails{A2A}/vmManagedDisks/recoveryReplicaDiskAccountType",
       "properties/providerSpecificDetails{A2A}/vmManagedDisks/recoveryResourceGroupId",
       "properties/providerSpecificDetails{A2A}/vmManagedDisks/recoveryTargetDiskAccountType"
@@ -21885,6 +22087,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/EXTENDEDAUDITINGSETTINGS/{}",
     "operation": "GET",
     "properties": [
+      "id",
       "properties/isAzureMonitorTargetEnabled",
       "properties/isStorageSecondaryKeyInUse",
       "properties/retentionDays",
@@ -21898,6 +22101,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/EXTENDEDAUDITINGSETTINGS/{}",
     "operation": "PUT",
     "properties": [
+      "id",
       "properties/isAzureMonitorTargetEnabled",
       "properties/isStorageSecondaryKeyInUse",
       "properties/retentionDays",
@@ -25329,11 +25533,6 @@
     ]
   },
   {
-    "api_version": "2019-09-01",
-    "api_path": "/{}",
-    "operation": "DELETE"
-  },
-  {
     "api_version": "2018-01-01-preview",
     "api_path": "/{}",
     "operation": "GET",
@@ -25347,27 +25546,6 @@
       "properties/permissions/notDataActions",
       "properties/roleName",
       "properties/type"
-    ]
-  },
-  {
-    "api_version": "2019-09-01",
-    "api_path": "/{}",
-    "operation": "GET",
-    "properties": [
-      "id",
-      "identity/principalId",
-      "identity/tenantId",
-      "identity/type",
-      "location",
-      "name",
-      "properties/description",
-      "properties/displayName",
-      "properties/enforcementMode",
-      "properties/metadata",
-      "properties/notScopes",
-      "properties/parameters",
-      "properties/policyDefinitionId",
-      "properties/scope"
     ]
   },
   {
@@ -25417,14 +25595,17 @@
   {
     "api_version": "2019-09-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/POLICYASSIGNMENTS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2019-09-01",
+    "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/POLICYASSIGNMENTS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "identity/principalId",
       "identity/tenantId",
       "identity/type",
       "location",
-      "name",
       "properties/description",
       "properties/displayName",
       "properties/enforcementMode",
@@ -25440,12 +25621,10 @@
     "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/POLICYASSIGNMENTS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "identity/principalId",
       "identity/tenantId",
       "identity/type",
       "location",
-      "name",
       "properties/description",
       "properties/displayName",
       "properties/enforcementMode",
@@ -25764,12 +25943,19 @@
       "properties/filter/advancedFilters{BoolEquals}/key",
       "properties/filter/advancedFilters{BoolEquals}/operatorType",
       "properties/filter/advancedFilters{BoolEquals}/value",
+      "properties/filter/advancedFilters{IsNotNull}/key",
+      "properties/filter/advancedFilters{IsNotNull}/operatorType",
+      "properties/filter/advancedFilters{IsNullOrUndefined}/key",
+      "properties/filter/advancedFilters{IsNullOrUndefined}/operatorType",
       "properties/filter/advancedFilters{NumberGreaterThanOrEquals}/key",
       "properties/filter/advancedFilters{NumberGreaterThanOrEquals}/operatorType",
       "properties/filter/advancedFilters{NumberGreaterThanOrEquals}/value",
       "properties/filter/advancedFilters{NumberGreaterThan}/key",
       "properties/filter/advancedFilters{NumberGreaterThan}/operatorType",
       "properties/filter/advancedFilters{NumberGreaterThan}/value",
+      "properties/filter/advancedFilters{NumberInRange}/key",
+      "properties/filter/advancedFilters{NumberInRange}/operatorType",
+      "properties/filter/advancedFilters{NumberInRange}/values",
       "properties/filter/advancedFilters{NumberIn}/key",
       "properties/filter/advancedFilters{NumberIn}/operatorType",
       "properties/filter/advancedFilters{NumberIn}/values",
@@ -25779,6 +25965,9 @@
       "properties/filter/advancedFilters{NumberLessThan}/key",
       "properties/filter/advancedFilters{NumberLessThan}/operatorType",
       "properties/filter/advancedFilters{NumberLessThan}/value",
+      "properties/filter/advancedFilters{NumberNotInRange}/key",
+      "properties/filter/advancedFilters{NumberNotInRange}/operatorType",
+      "properties/filter/advancedFilters{NumberNotInRange}/values",
       "properties/filter/advancedFilters{NumberNotIn}/key",
       "properties/filter/advancedFilters{NumberNotIn}/operatorType",
       "properties/filter/advancedFilters{NumberNotIn}/values",
@@ -25794,6 +25983,15 @@
       "properties/filter/advancedFilters{StringIn}/key",
       "properties/filter/advancedFilters{StringIn}/operatorType",
       "properties/filter/advancedFilters{StringIn}/values",
+      "properties/filter/advancedFilters{StringNotBeginsWith}/key",
+      "properties/filter/advancedFilters{StringNotBeginsWith}/operatorType",
+      "properties/filter/advancedFilters{StringNotBeginsWith}/values",
+      "properties/filter/advancedFilters{StringNotContains}/key",
+      "properties/filter/advancedFilters{StringNotContains}/operatorType",
+      "properties/filter/advancedFilters{StringNotContains}/values",
+      "properties/filter/advancedFilters{StringNotEndsWith}/key",
+      "properties/filter/advancedFilters{StringNotEndsWith}/operatorType",
+      "properties/filter/advancedFilters{StringNotEndsWith}/values",
       "properties/filter/advancedFilters{StringNotIn}/key",
       "properties/filter/advancedFilters{StringNotIn}/operatorType",
       "properties/filter/advancedFilters{StringNotIn}/values",
@@ -25843,12 +26041,19 @@
       "properties/filter/advancedFilters{BoolEquals}/key",
       "properties/filter/advancedFilters{BoolEquals}/operatorType",
       "properties/filter/advancedFilters{BoolEquals}/value",
+      "properties/filter/advancedFilters{IsNotNull}/key",
+      "properties/filter/advancedFilters{IsNotNull}/operatorType",
+      "properties/filter/advancedFilters{IsNullOrUndefined}/key",
+      "properties/filter/advancedFilters{IsNullOrUndefined}/operatorType",
       "properties/filter/advancedFilters{NumberGreaterThanOrEquals}/key",
       "properties/filter/advancedFilters{NumberGreaterThanOrEquals}/operatorType",
       "properties/filter/advancedFilters{NumberGreaterThanOrEquals}/value",
       "properties/filter/advancedFilters{NumberGreaterThan}/key",
       "properties/filter/advancedFilters{NumberGreaterThan}/operatorType",
       "properties/filter/advancedFilters{NumberGreaterThan}/value",
+      "properties/filter/advancedFilters{NumberInRange}/key",
+      "properties/filter/advancedFilters{NumberInRange}/operatorType",
+      "properties/filter/advancedFilters{NumberInRange}/values",
       "properties/filter/advancedFilters{NumberIn}/key",
       "properties/filter/advancedFilters{NumberIn}/operatorType",
       "properties/filter/advancedFilters{NumberIn}/values",
@@ -25858,6 +26063,9 @@
       "properties/filter/advancedFilters{NumberLessThan}/key",
       "properties/filter/advancedFilters{NumberLessThan}/operatorType",
       "properties/filter/advancedFilters{NumberLessThan}/value",
+      "properties/filter/advancedFilters{NumberNotInRange}/key",
+      "properties/filter/advancedFilters{NumberNotInRange}/operatorType",
+      "properties/filter/advancedFilters{NumberNotInRange}/values",
       "properties/filter/advancedFilters{NumberNotIn}/key",
       "properties/filter/advancedFilters{NumberNotIn}/operatorType",
       "properties/filter/advancedFilters{NumberNotIn}/values",
@@ -25873,6 +26081,15 @@
       "properties/filter/advancedFilters{StringIn}/key",
       "properties/filter/advancedFilters{StringIn}/operatorType",
       "properties/filter/advancedFilters{StringIn}/values",
+      "properties/filter/advancedFilters{StringNotBeginsWith}/key",
+      "properties/filter/advancedFilters{StringNotBeginsWith}/operatorType",
+      "properties/filter/advancedFilters{StringNotBeginsWith}/values",
+      "properties/filter/advancedFilters{StringNotContains}/key",
+      "properties/filter/advancedFilters{StringNotContains}/operatorType",
+      "properties/filter/advancedFilters{StringNotContains}/values",
+      "properties/filter/advancedFilters{StringNotEndsWith}/key",
+      "properties/filter/advancedFilters{StringNotEndsWith}/operatorType",
+      "properties/filter/advancedFilters{StringNotEndsWith}/values",
       "properties/filter/advancedFilters{StringNotIn}/key",
       "properties/filter/advancedFilters{StringNotIn}/operatorType",
       "properties/filter/advancedFilters{StringNotIn}/values",
@@ -25983,6 +26200,10 @@
     "properties": [
       "id",
       "name",
+      "plan/name",
+      "plan/product",
+      "plan/publisher",
+      "plan/version",
       "properties/authorizations/delegatedRoleDefinitionIds",
       "properties/authorizations/principalId",
       "properties/authorizations/principalIdDisplayName",
@@ -25999,6 +26220,10 @@
     "properties": [
       "id",
       "name",
+      "plan/name",
+      "plan/product",
+      "plan/publisher",
+      "plan/version",
       "properties/authorizations/delegatedRoleDefinitionIds",
       "properties/authorizations/principalId",
       "properties/authorizations/principalIdDisplayName",
