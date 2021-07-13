@@ -1946,6 +1946,39 @@
   },
   {
     "api_version": "2020-12-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/GATEWAYS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2020-12-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/GATEWAYS/{}",
+    "operation": "GET",
+    "properties": [
+      "id",
+      "name",
+      "properties/description",
+      "properties/locationData/city",
+      "properties/locationData/countryOrRegion",
+      "properties/locationData/district",
+      "properties/locationData/name"
+    ]
+  },
+  {
+    "api_version": "2020-12-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/GATEWAYS/{}",
+    "operation": "PUT",
+    "properties": [
+      "id",
+      "name",
+      "properties/description",
+      "properties/locationData/city",
+      "properties/locationData/countryOrRegion",
+      "properties/locationData/district",
+      "properties/locationData/name"
+    ]
+  },
+  {
+    "api_version": "2020-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/GROUPS/{}",
     "operation": "DELETE"
   },
@@ -7165,10 +7198,20 @@
       "id",
       "location",
       "properties/managedResourceGroupId",
+      "properties/parameters/amlWorkspaceId/value",
       "properties/parameters/customPrivateSubnetName/value",
       "properties/parameters/customPublicSubnetName/value",
       "properties/parameters/customVirtualNetworkId/value",
       "properties/parameters/enableNoPublicIp/value",
+      "properties/parameters/encryption/value/KeyName",
+      "properties/parameters/encryption/value/keySource",
+      "properties/parameters/encryption/value/keyvaulturi",
+      "properties/parameters/encryption/value/keyversion",
+      "properties/parameters/prepareEncryption/value",
+      "properties/parameters/requireInfrastructureEncryption/value",
+      "properties/storageAccountIdentity/principalId",
+      "properties/storageAccountIdentity/tenantId",
+      "properties/storageAccountIdentity/type",
       "properties/workspaceId",
       "properties/workspaceUrl",
       "sku/name",
@@ -7191,10 +7234,20 @@
       "id",
       "location",
       "properties/managedResourceGroupId",
+      "properties/parameters/amlWorkspaceId/value",
       "properties/parameters/customPrivateSubnetName/value",
       "properties/parameters/customPublicSubnetName/value",
       "properties/parameters/customVirtualNetworkId/value",
       "properties/parameters/enableNoPublicIp/value",
+      "properties/parameters/encryption/value/KeyName",
+      "properties/parameters/encryption/value/keySource",
+      "properties/parameters/encryption/value/keyvaulturi",
+      "properties/parameters/encryption/value/keyversion",
+      "properties/parameters/prepareEncryption/value",
+      "properties/parameters/requireInfrastructureEncryption/value",
+      "properties/storageAccountIdentity/principalId",
+      "properties/storageAccountIdentity/tenantId",
+      "properties/storageAccountIdentity/type",
       "properties/workspaceId",
       "properties/workspaceUrl",
       "sku/name",
@@ -9218,12 +9271,12 @@
     ]
   },
   {
-    "api_version": "2020-02-14-preview",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-02-14-preview",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}",
     "operation": "GET",
     "properties": [
@@ -9231,21 +9284,18 @@
       "properties/administratorLogin",
       "properties/administratorLoginPassword",
       "properties/availabilityZone",
-      "properties/byokEnforcement",
+      "properties/backup/backupRetentionDays",
       "properties/createMode",
-      "properties/delegatedSubnetArguments/subnetArmResourceId",
       "properties/fullyQualifiedDomainName",
       "properties/maintenanceWindow/customWindow",
       "properties/maintenanceWindow/dayOfWeek",
       "properties/maintenanceWindow/startHour",
       "properties/maintenanceWindow/startMinute",
+      "properties/network/delegatedSubnetResourceId",
+      "properties/network/publicNetworkAccess",
       "properties/pointInTimeUTC",
-      "properties/publicNetworkAccess",
-      "properties/sourceResourceGroupName",
-      "properties/sourceServerName",
-      "properties/sourceSubscriptionId",
-      "properties/storageProfile/backupRetentionDays",
-      "properties/storageProfile/storageMB",
+      "properties/sourceServerResourceId",
+      "properties/storage/storageSizeGB",
       "properties/version",
       "sku/name",
       "sku/tier",
@@ -9253,25 +9303,25 @@
     ]
   },
   {
-    "api_version": "2020-02-14-preview",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}",
     "operation": "PATCH",
     "properties": [
       "location",
       "properties/administratorLoginPassword",
+      "properties/backup/backupRetentionDays",
       "properties/maintenanceWindow/customWindow",
       "properties/maintenanceWindow/dayOfWeek",
       "properties/maintenanceWindow/startHour",
       "properties/maintenanceWindow/startMinute",
-      "properties/storageProfile/backupRetentionDays",
-      "properties/storageProfile/storageMB",
+      "properties/storage/storageSizeGB",
       "sku/name",
       "sku/tier",
       "tags"
     ]
   },
   {
-    "api_version": "2020-02-14-preview",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}",
     "operation": "PUT",
     "properties": [
@@ -9279,21 +9329,18 @@
       "properties/administratorLogin",
       "properties/administratorLoginPassword",
       "properties/availabilityZone",
-      "properties/byokEnforcement",
+      "properties/backup/backupRetentionDays",
       "properties/createMode",
-      "properties/delegatedSubnetArguments/subnetArmResourceId",
       "properties/fullyQualifiedDomainName",
       "properties/maintenanceWindow/customWindow",
       "properties/maintenanceWindow/dayOfWeek",
       "properties/maintenanceWindow/startHour",
       "properties/maintenanceWindow/startMinute",
+      "properties/network/delegatedSubnetResourceId",
+      "properties/network/publicNetworkAccess",
       "properties/pointInTimeUTC",
-      "properties/publicNetworkAccess",
-      "properties/sourceResourceGroupName",
-      "properties/sourceServerName",
-      "properties/sourceSubscriptionId",
-      "properties/storageProfile/backupRetentionDays",
-      "properties/storageProfile/storageMB",
+      "properties/sourceServerResourceId",
+      "properties/storage/storageSizeGB",
       "properties/version",
       "sku/name",
       "sku/tier",
@@ -9301,12 +9348,12 @@
     ]
   },
   {
-    "api_version": "2020-02-14-preview",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/FIREWALLRULES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-02-14-preview",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/FIREWALLRULES/{}",
     "operation": "GET",
     "properties": [
@@ -9315,7 +9362,7 @@
     ]
   },
   {
-    "api_version": "2020-02-14-preview",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/FIREWALLRULES/{}",
     "operation": "PUT",
     "properties": [
@@ -21857,7 +21904,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}/EXTENDEDAUDITINGSETTINGS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "properties/isAzureMonitorTargetEnabled",
       "properties/isStorageSecondaryKeyInUse",
       "properties/retentionDays",
@@ -21871,7 +21917,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}/EXTENDEDAUDITINGSETTINGS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "properties/isAzureMonitorTargetEnabled",
       "properties/isStorageSecondaryKeyInUse",
       "properties/retentionDays",
