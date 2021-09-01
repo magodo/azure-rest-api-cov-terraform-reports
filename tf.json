@@ -1383,6 +1383,9 @@
       "properties/additionalLocations/sku/name",
       "properties/additionalLocations/virtualNetworkConfiguration/subnetResourceId",
       "properties/apiVersionConstraint/minApiVersion",
+      "properties/certificates/certificate/expiry",
+      "properties/certificates/certificate/subject",
+      "properties/certificates/certificate/thumbprint",
       "properties/certificates/certificatePassword",
       "properties/certificates/encodedCertificate",
       "properties/certificates/storeName",
@@ -1392,10 +1395,14 @@
       "properties/enableClientCertificate",
       "properties/gatewayRegionalUrl",
       "properties/gatewayUrl",
+      "properties/hostnameConfigurations/certificate/expiry",
+      "properties/hostnameConfigurations/certificate/subject",
+      "properties/hostnameConfigurations/certificate/thumbprint",
       "properties/hostnameConfigurations/certificatePassword",
       "properties/hostnameConfigurations/defaultSslBinding",
       "properties/hostnameConfigurations/encodedCertificate",
       "properties/hostnameConfigurations/hostName",
+      "properties/hostnameConfigurations/identityClientId",
       "properties/hostnameConfigurations/keyVaultId",
       "properties/hostnameConfigurations/negotiateClientCertificate",
       "properties/hostnameConfigurations/type",
@@ -1436,6 +1443,9 @@
       "properties/additionalLocations/sku/name",
       "properties/additionalLocations/virtualNetworkConfiguration/subnetResourceId",
       "properties/apiVersionConstraint/minApiVersion",
+      "properties/certificates/certificate/expiry",
+      "properties/certificates/certificate/subject",
+      "properties/certificates/certificate/thumbprint",
       "properties/certificates/certificatePassword",
       "properties/certificates/encodedCertificate",
       "properties/certificates/storeName",
@@ -1445,10 +1455,14 @@
       "properties/enableClientCertificate",
       "properties/gatewayRegionalUrl",
       "properties/gatewayUrl",
+      "properties/hostnameConfigurations/certificate/expiry",
+      "properties/hostnameConfigurations/certificate/subject",
+      "properties/hostnameConfigurations/certificate/thumbprint",
       "properties/hostnameConfigurations/certificatePassword",
       "properties/hostnameConfigurations/defaultSslBinding",
       "properties/hostnameConfigurations/encodedCertificate",
       "properties/hostnameConfigurations/hostName",
+      "properties/hostnameConfigurations/identityClientId",
       "properties/hostnameConfigurations/keyVaultId",
       "properties/hostnameConfigurations/negotiateClientCertificate",
       "properties/hostnameConfigurations/type",
@@ -4409,6 +4423,14 @@
   {
     "api_version": "2021-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}",
+    "operation": "PATCH",
+    "properties": [
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2021-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}",
     "operation": "PUT",
     "properties": [
       "location",
@@ -6993,6 +7015,7 @@
       "properties/agentPoolProfiles/osDiskSizeGB",
       "properties/agentPoolProfiles/osDiskType",
       "properties/agentPoolProfiles/osType",
+      "properties/agentPoolProfiles/podSubnetID",
       "properties/agentPoolProfiles/proximityPlacementGroupID",
       "properties/agentPoolProfiles/scaleSetEvictionPolicy",
       "properties/agentPoolProfiles/scaleSetPriority",
@@ -7144,6 +7167,7 @@
       "properties/agentPoolProfiles/osDiskSizeGB",
       "properties/agentPoolProfiles/osDiskType",
       "properties/agentPoolProfiles/osType",
+      "properties/agentPoolProfiles/podSubnetID",
       "properties/agentPoolProfiles/proximityPlacementGroupID",
       "properties/agentPoolProfiles/scaleSetEvictionPolicy",
       "properties/agentPoolProfiles/scaleSetPriority",
@@ -7291,6 +7315,7 @@
       "properties/osDiskSizeGB",
       "properties/osDiskType",
       "properties/osType",
+      "properties/podSubnetID",
       "properties/proximityPlacementGroupID",
       "properties/scaleSetEvictionPolicy",
       "properties/scaleSetPriority",
@@ -7370,6 +7395,7 @@
       "properties/osDiskSizeGB",
       "properties/osDiskType",
       "properties/osType",
+      "properties/podSubnetID",
       "properties/proximityPlacementGroupID",
       "properties/scaleSetEvictionPolicy",
       "properties/scaleSetPriority",
@@ -10983,12 +11009,12 @@
     ]
   },
   {
-    "api_version": "2016-05-15",
+    "api_version": "2018-09-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVTESTLAB/LABS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2016-05-15",
+    "api_version": "2018-09-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVTESTLAB/LABS/{}",
     "operation": "GET",
     "properties": [
@@ -11006,7 +11032,7 @@
     ]
   },
   {
-    "api_version": "2016-05-15",
+    "api_version": "2018-09-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVTESTLAB/LABS/{}",
     "operation": "PUT",
     "properties": [
@@ -11024,12 +11050,12 @@
     ]
   },
   {
-    "api_version": "2016-05-15",
+    "api_version": "2018-09-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVTESTLAB/LABS/{}/POLICYSETS/{}/POLICIES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2016-05-15",
+    "api_version": "2018-09-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVTESTLAB/LABS/{}/POLICYSETS/{}/POLICIES/{}",
     "operation": "GET",
     "properties": [
@@ -11044,7 +11070,7 @@
     ]
   },
   {
-    "api_version": "2016-05-15",
+    "api_version": "2018-09-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVTESTLAB/LABS/{}/POLICYSETS/{}/POLICIES/{}",
     "operation": "PUT",
     "properties": [
@@ -11059,7 +11085,7 @@
     ]
   },
   {
-    "api_version": "2016-05-15",
+    "api_version": "2018-09-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVTESTLAB/LABS/{}/SCHEDULES/{}",
     "operation": "GET",
     "properties": [
@@ -11068,6 +11094,7 @@
       "name",
       "properties/dailyRecurrence/time",
       "properties/hourlyRecurrence/minute",
+      "properties/notificationSettings/emailRecipient",
       "properties/notificationSettings/status",
       "properties/notificationSettings/timeInMinutes",
       "properties/notificationSettings/webhookUrl",
@@ -11081,7 +11108,7 @@
     ]
   },
   {
-    "api_version": "2016-05-15",
+    "api_version": "2018-09-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVTESTLAB/LABS/{}/SCHEDULES/{}",
     "operation": "PUT",
     "properties": [
@@ -11090,6 +11117,7 @@
       "name",
       "properties/dailyRecurrence/time",
       "properties/hourlyRecurrence/minute",
+      "properties/notificationSettings/emailRecipient",
       "properties/notificationSettings/status",
       "properties/notificationSettings/timeInMinutes",
       "properties/notificationSettings/webhookUrl",
@@ -11103,12 +11131,12 @@
     ]
   },
   {
-    "api_version": "2016-05-15",
+    "api_version": "2018-09-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVTESTLAB/LABS/{}/VIRTUALMACHINES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2016-05-15",
+    "api_version": "2018-09-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVTESTLAB/LABS/{}/VIRTUALMACHINES/{}",
     "operation": "GET",
     "properties": [
@@ -11140,7 +11168,7 @@
     ]
   },
   {
-    "api_version": "2016-05-15",
+    "api_version": "2018-09-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVTESTLAB/LABS/{}/VIRTUALMACHINES/{}",
     "operation": "PUT",
     "properties": [
@@ -11172,12 +11200,12 @@
     ]
   },
   {
-    "api_version": "2016-05-15",
+    "api_version": "2018-09-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVTESTLAB/LABS/{}/VIRTUALNETWORKS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2016-05-15",
+    "api_version": "2018-09-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVTESTLAB/LABS/{}/VIRTUALNETWORKS/{}",
     "operation": "GET",
     "properties": [
@@ -11197,7 +11225,7 @@
     ]
   },
   {
-    "api_version": "2016-05-15",
+    "api_version": "2018-09-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVTESTLAB/LABS/{}/VIRTUALNETWORKS/{}",
     "operation": "PUT",
     "properties": [
@@ -11217,12 +11245,12 @@
     ]
   },
   {
-    "api_version": "2016-05-15",
+    "api_version": "2018-09-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVTESTLAB/SCHEDULES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2016-05-15",
+    "api_version": "2018-09-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVTESTLAB/SCHEDULES/{}",
     "operation": "GET",
     "properties": [
@@ -11231,6 +11259,7 @@
       "name",
       "properties/dailyRecurrence/time",
       "properties/hourlyRecurrence/minute",
+      "properties/notificationSettings/emailRecipient",
       "properties/notificationSettings/status",
       "properties/notificationSettings/timeInMinutes",
       "properties/notificationSettings/webhookUrl",
@@ -11244,7 +11273,7 @@
     ]
   },
   {
-    "api_version": "2016-05-15",
+    "api_version": "2018-09-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVTESTLAB/SCHEDULES/{}",
     "operation": "PUT",
     "properties": [
@@ -11253,6 +11282,7 @@
       "name",
       "properties/dailyRecurrence/time",
       "properties/hourlyRecurrence/minute",
+      "properties/notificationSettings/emailRecipient",
       "properties/notificationSettings/status",
       "properties/notificationSettings/timeInMinutes",
       "properties/notificationSettings/webhookUrl",
@@ -13185,6 +13215,7 @@
       "properties/profiles/rules/metricTrigger/dimensions/DimensionName",
       "properties/profiles/rules/metricTrigger/dimensions/Operator",
       "properties/profiles/rules/metricTrigger/dimensions/Values",
+      "properties/profiles/rules/metricTrigger/dividePerInstance",
       "properties/profiles/rules/metricTrigger/metricName",
       "properties/profiles/rules/metricTrigger/metricNamespace",
       "properties/profiles/rules/metricTrigger/metricResourceUri",
@@ -13231,6 +13262,7 @@
       "properties/profiles/rules/metricTrigger/dimensions/DimensionName",
       "properties/profiles/rules/metricTrigger/dimensions/Operator",
       "properties/profiles/rules/metricTrigger/dimensions/Values",
+      "properties/profiles/rules/metricTrigger/dividePerInstance",
       "properties/profiles/rules/metricTrigger/metricName",
       "properties/profiles/rules/metricTrigger/metricNamespace",
       "properties/profiles/rules/metricTrigger/metricResourceUri",
@@ -14303,6 +14335,35 @@
       "properties/key/keyVersion",
       "properties/metadata",
       "properties/publicCertificate"
+    ]
+  },
+  {
+    "api_version": "2019-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.LOGIC/INTEGRATIONACCOUNTS/{}/SCHEMAS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2019-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.LOGIC/INTEGRATIONACCOUNTS/{}/SCHEMAS/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/content",
+      "properties/contentType",
+      "properties/fileName",
+      "properties/metadata",
+      "properties/schemaType"
+    ]
+  },
+  {
+    "api_version": "2019-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.LOGIC/INTEGRATIONACCOUNTS/{}/SCHEMAS/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/content",
+      "properties/contentType",
+      "properties/fileName",
+      "properties/metadata",
+      "properties/schemaType"
     ]
   },
   {
@@ -16800,18 +16861,35 @@
     "operation": "GET",
     "properties": [
       "id",
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
+      "identity/userAssignedIdentities",
       "location",
       "properties/basePolicy/id",
       "properties/childPolicies/id",
       "properties/dnsSettings/enableProxy",
       "properties/dnsSettings/servers",
       "properties/firewalls/id",
+      "properties/intrusionDetection/configuration/bypassTrafficSettings/description",
+      "properties/intrusionDetection/configuration/bypassTrafficSettings/destinationAddresses",
+      "properties/intrusionDetection/configuration/bypassTrafficSettings/destinationIpGroups",
+      "properties/intrusionDetection/configuration/bypassTrafficSettings/destinationPorts",
+      "properties/intrusionDetection/configuration/bypassTrafficSettings/name",
+      "properties/intrusionDetection/configuration/bypassTrafficSettings/protocol",
+      "properties/intrusionDetection/configuration/bypassTrafficSettings/sourceAddresses",
+      "properties/intrusionDetection/configuration/bypassTrafficSettings/sourceIpGroups",
+      "properties/intrusionDetection/configuration/signatureOverrides/id",
+      "properties/intrusionDetection/configuration/signatureOverrides/mode",
+      "properties/intrusionDetection/mode",
       "properties/ruleCollectionGroups/id",
       "properties/sku/tier",
       "properties/snat/privateRanges",
       "properties/threatIntelMode",
       "properties/threatIntelWhitelist/fqdns",
       "properties/threatIntelWhitelist/ipAddresses",
+      "properties/transportSecurity/certificateAuthority/keyVaultSecretId",
+      "properties/transportSecurity/certificateAuthority/name",
       "tags"
     ]
   },
@@ -16821,18 +16899,35 @@
     "operation": "PUT",
     "properties": [
       "id",
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
+      "identity/userAssignedIdentities",
       "location",
       "properties/basePolicy/id",
       "properties/childPolicies/id",
       "properties/dnsSettings/enableProxy",
       "properties/dnsSettings/servers",
       "properties/firewalls/id",
+      "properties/intrusionDetection/configuration/bypassTrafficSettings/description",
+      "properties/intrusionDetection/configuration/bypassTrafficSettings/destinationAddresses",
+      "properties/intrusionDetection/configuration/bypassTrafficSettings/destinationIpGroups",
+      "properties/intrusionDetection/configuration/bypassTrafficSettings/destinationPorts",
+      "properties/intrusionDetection/configuration/bypassTrafficSettings/name",
+      "properties/intrusionDetection/configuration/bypassTrafficSettings/protocol",
+      "properties/intrusionDetection/configuration/bypassTrafficSettings/sourceAddresses",
+      "properties/intrusionDetection/configuration/bypassTrafficSettings/sourceIpGroups",
+      "properties/intrusionDetection/configuration/signatureOverrides/id",
+      "properties/intrusionDetection/configuration/signatureOverrides/mode",
+      "properties/intrusionDetection/mode",
       "properties/ruleCollectionGroups/id",
       "properties/sku/tier",
       "properties/snat/privateRanges",
       "properties/threatIntelMode",
       "properties/threatIntelWhitelist/fqdns",
       "properties/threatIntelWhitelist/ipAddresses",
+      "properties/transportSecurity/certificateAuthority/keyVaultSecretId",
+      "properties/transportSecurity/certificateAuthority/name",
       "tags"
     ]
   },
@@ -21486,6 +21581,25 @@
   },
   {
     "api_version": "2017-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RELAY/NAMESPACES/{}/AUTHORIZATIONRULES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2017-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RELAY/NAMESPACES/{}/AUTHORIZATIONRULES/{}",
+    "operation": "GET"
+  },
+  {
+    "api_version": "2017-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RELAY/NAMESPACES/{}/AUTHORIZATIONRULES/{}",
+    "operation": "PUT",
+    "properties": [
+      "name",
+      "properties/rights"
+    ]
+  },
+  {
+    "api_version": "2017-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RELAY/NAMESPACES/{}/AUTHORIZATIONRULES/{}/LISTKEYS",
     "operation": "POST"
   },
@@ -21517,6 +21631,30 @@
     "api_version": "2017-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RELAY/NAMESPACES/{}/HYBRIDCONNECTIONS/{}/AUTHORIZATIONRULES",
     "operation": "GET"
+  },
+  {
+    "api_version": "2017-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RELAY/NAMESPACES/{}/HYBRIDCONNECTIONS/{}/AUTHORIZATIONRULES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2017-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RELAY/NAMESPACES/{}/HYBRIDCONNECTIONS/{}/AUTHORIZATIONRULES/{}",
+    "operation": "GET"
+  },
+  {
+    "api_version": "2017-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RELAY/NAMESPACES/{}/HYBRIDCONNECTIONS/{}/AUTHORIZATIONRULES/{}",
+    "operation": "PUT",
+    "properties": [
+      "name",
+      "properties/rights"
+    ]
+  },
+  {
+    "api_version": "2017-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RELAY/NAMESPACES/{}/HYBRIDCONNECTIONS/{}/AUTHORIZATIONRULES/{}/LISTKEYS",
+    "operation": "POST"
   },
   {
     "api_version": "2020-06-01",
@@ -21824,6 +21962,7 @@
     "operation": "GET",
     "properties": [
       "id",
+      "name",
       "properties/partnerNamespace",
       "properties/provisioningState"
     ]
@@ -21834,6 +21973,7 @@
     "operation": "PUT",
     "properties": [
       "id",
+      "name",
       "properties/partnerNamespace",
       "properties/provisioningState"
     ]
@@ -23125,7 +23265,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/EXTENDEDAUDITINGSETTINGS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "properties/isAzureMonitorTargetEnabled",
       "properties/isStorageSecondaryKeyInUse",
       "properties/retentionDays",
@@ -23139,7 +23278,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/EXTENDEDAUDITINGSETTINGS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "properties/isAzureMonitorTargetEnabled",
       "properties/isStorageSecondaryKeyInUse",
       "properties/retentionDays",
@@ -23290,7 +23428,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/SECURITYALERTPOLICIES/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "properties/disabledAlerts",
       "properties/emailAccountAdmins",
       "properties/emailAddresses",
@@ -23305,7 +23442,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/SECURITYALERTPOLICIES/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "properties/disabledAlerts",
       "properties/emailAccountAdmins",
       "properties/emailAddresses",
@@ -25122,6 +25258,7 @@
       "properties/maximumNumberOfWorkers",
       "properties/perSiteScaling",
       "properties/reserved",
+      "properties/zoneRedundant",
       "sku/capacity",
       "sku/name",
       "sku/size",
@@ -25144,6 +25281,7 @@
       "properties/maximumNumberOfWorkers",
       "properties/perSiteScaling",
       "properties/reserved",
+      "properties/zoneRedundant",
       "sku/capacity",
       "sku/name",
       "sku/size",
@@ -25228,6 +25366,7 @@
       "properties/siteConfig/scmIpSecurityRestrictionsUseMain",
       "properties/siteConfig/scmType",
       "properties/siteConfig/use32BitWorkerProcess",
+      "properties/siteConfig/vnetRouteAllEnabled",
       "properties/siteConfig/webSocketsEnabled",
       "properties/siteConfig/windowsFxVersion",
       "properties/slotSwapStatus/sourceSlotName",
@@ -25319,6 +25458,7 @@
       "properties/siteConfig/scmIpSecurityRestrictionsUseMain",
       "properties/siteConfig/scmType",
       "properties/siteConfig/use32BitWorkerProcess",
+      "properties/siteConfig/vnetRouteAllEnabled",
       "properties/siteConfig/webSocketsEnabled",
       "properties/siteConfig/windowsFxVersion",
       "properties/slotSwapStatus/sourceSlotName",
@@ -25522,6 +25662,7 @@
       "properties/scmIpSecurityRestrictionsUseMain",
       "properties/scmType",
       "properties/use32BitWorkerProcess",
+      "properties/vnetRouteAllEnabled",
       "properties/webSocketsEnabled",
       "properties/windowsFxVersion"
     ]
@@ -25578,6 +25719,7 @@
       "properties/scmIpSecurityRestrictionsUseMain",
       "properties/scmType",
       "properties/use32BitWorkerProcess",
+      "properties/vnetRouteAllEnabled",
       "properties/webSocketsEnabled",
       "properties/windowsFxVersion"
     ]
@@ -25751,6 +25893,7 @@
       "properties/siteConfig/scmIpSecurityRestrictionsUseMain",
       "properties/siteConfig/scmType",
       "properties/siteConfig/use32BitWorkerProcess",
+      "properties/siteConfig/vnetRouteAllEnabled",
       "properties/siteConfig/webSocketsEnabled",
       "properties/siteConfig/windowsFxVersion",
       "properties/slotSwapStatus/sourceSlotName",
@@ -25842,6 +25985,7 @@
       "properties/siteConfig/scmIpSecurityRestrictionsUseMain",
       "properties/siteConfig/scmType",
       "properties/siteConfig/use32BitWorkerProcess",
+      "properties/siteConfig/vnetRouteAllEnabled",
       "properties/siteConfig/webSocketsEnabled",
       "properties/siteConfig/windowsFxVersion",
       "properties/slotSwapStatus/sourceSlotName",
@@ -26007,6 +26151,7 @@
       "properties/scmIpSecurityRestrictionsUseMain",
       "properties/scmType",
       "properties/use32BitWorkerProcess",
+      "properties/vnetRouteAllEnabled",
       "properties/webSocketsEnabled",
       "properties/windowsFxVersion"
     ]
@@ -26063,6 +26208,7 @@
       "properties/scmIpSecurityRestrictionsUseMain",
       "properties/scmType",
       "properties/use32BitWorkerProcess",
+      "properties/vnetRouteAllEnabled",
       "properties/webSocketsEnabled",
       "properties/windowsFxVersion"
     ]
