@@ -5051,6 +5051,11 @@
       "properties/apiProperties/websiteName",
       "properties/customSubDomainName",
       "properties/disableLocalAuth",
+      "properties/encryption/keySource",
+      "properties/encryption/keyVaultProperties/identityClientId",
+      "properties/encryption/keyVaultProperties/keyName",
+      "properties/encryption/keyVaultProperties/keyVaultUri",
+      "properties/encryption/keyVaultProperties/keyVersion",
       "properties/endpoint",
       "properties/networkAcls/defaultAction",
       "properties/networkAcls/ipRules/value",
@@ -5085,6 +5090,11 @@
       "properties/apiProperties/websiteName",
       "properties/customSubDomainName",
       "properties/disableLocalAuth",
+      "properties/encryption/keySource",
+      "properties/encryption/keyVaultProperties/identityClientId",
+      "properties/encryption/keyVaultProperties/keyName",
+      "properties/encryption/keyVaultProperties/keyVaultUri",
+      "properties/encryption/keyVaultProperties/keyVersion",
       "properties/endpoint",
       "properties/networkAcls/defaultAction",
       "properties/networkAcls/ipRules/value",
@@ -5119,6 +5129,11 @@
       "properties/apiProperties/websiteName",
       "properties/customSubDomainName",
       "properties/disableLocalAuth",
+      "properties/encryption/keySource",
+      "properties/encryption/keyVaultProperties/identityClientId",
+      "properties/encryption/keyVaultProperties/keyName",
+      "properties/encryption/keyVaultProperties/keyVaultUri",
+      "properties/encryption/keyVaultProperties/keyVersion",
       "properties/endpoint",
       "properties/networkAcls/defaultAction",
       "properties/networkAcls/ipRules/value",
@@ -6073,8 +6088,11 @@
     "properties": [
       "location",
       "name",
+      "properties/guestConfiguration/assignmentType",
       "properties/guestConfiguration/configurationParameter/name",
       "properties/guestConfiguration/configurationParameter/value",
+      "properties/guestConfiguration/contentHash",
+      "properties/guestConfiguration/contentUri",
       "properties/guestConfiguration/name",
       "properties/guestConfiguration/version"
     ]
@@ -6086,8 +6104,11 @@
     "properties": [
       "location",
       "name",
+      "properties/guestConfiguration/assignmentType",
       "properties/guestConfiguration/configurationParameter/name",
       "properties/guestConfiguration/configurationParameter/value",
+      "properties/guestConfiguration/contentHash",
+      "properties/guestConfiguration/contentUri",
       "properties/guestConfiguration/name",
       "properties/guestConfiguration/version"
     ]
@@ -8406,10 +8427,15 @@
       "properties{AzureBlobStorage}/parameters",
       "properties{AzureBlobStorage}/type",
       "properties{AzureBlobStorage}/typeProperties/connectionString",
+      "properties{AzureBlobStorage}/typeProperties/sasToken/secretName",
+      "properties{AzureBlobStorage}/typeProperties/sasToken/store/referenceName",
+      "properties{AzureBlobStorage}/typeProperties/sasToken/store/type",
       "properties{AzureBlobStorage}/typeProperties/sasUri",
       "properties{AzureBlobStorage}/typeProperties/serviceEndpoint",
       "properties{AzureBlobStorage}/typeProperties/servicePrincipalId",
-      "properties{AzureBlobStorage}/typeProperties/servicePrincipalKey{AzureKeyVaultSecret}",
+      "properties{AzureBlobStorage}/typeProperties/servicePrincipalKey{AzureKeyVaultSecret}/secretName",
+      "properties{AzureBlobStorage}/typeProperties/servicePrincipalKey{AzureKeyVaultSecret}/store/referenceName",
+      "properties{AzureBlobStorage}/typeProperties/servicePrincipalKey{AzureKeyVaultSecret}/store/type",
       "properties{AzureBlobStorage}/typeProperties/servicePrincipalKey{SecureString}/type",
       "properties{AzureBlobStorage}/typeProperties/servicePrincipalKey{SecureString}/value",
       "properties{AzureBlobStorage}/typeProperties/tenant",
@@ -8477,7 +8503,10 @@
       "properties{AzureFunction}/parameters",
       "properties{AzureFunction}/type",
       "properties{AzureFunction}/typeProperties/functionAppUrl",
-      "properties{AzureFunction}/typeProperties/functionKey{AzureKeyVaultSecret}",
+      "properties{AzureFunction}/typeProperties/functionKey{AzureKeyVaultSecret}/secretName",
+      "properties{AzureFunction}/typeProperties/functionKey{AzureKeyVaultSecret}/store/referenceName",
+      "properties{AzureFunction}/typeProperties/functionKey{AzureKeyVaultSecret}/store/type",
+      "properties{AzureFunction}/typeProperties/functionKey{AzureKeyVaultSecret}/type",
       "properties{AzureFunction}/typeProperties/functionKey{SecureString}/type",
       "properties{AzureFunction}/typeProperties/functionKey{SecureString}/value",
       "properties{AzureKeyVault}",
@@ -8665,10 +8694,15 @@
       "properties{AzureBlobStorage}/parameters",
       "properties{AzureBlobStorage}/type",
       "properties{AzureBlobStorage}/typeProperties/connectionString",
+      "properties{AzureBlobStorage}/typeProperties/sasToken/secretName",
+      "properties{AzureBlobStorage}/typeProperties/sasToken/store/referenceName",
+      "properties{AzureBlobStorage}/typeProperties/sasToken/store/type",
       "properties{AzureBlobStorage}/typeProperties/sasUri",
       "properties{AzureBlobStorage}/typeProperties/serviceEndpoint",
       "properties{AzureBlobStorage}/typeProperties/servicePrincipalId",
-      "properties{AzureBlobStorage}/typeProperties/servicePrincipalKey{AzureKeyVaultSecret}",
+      "properties{AzureBlobStorage}/typeProperties/servicePrincipalKey{AzureKeyVaultSecret}/secretName",
+      "properties{AzureBlobStorage}/typeProperties/servicePrincipalKey{AzureKeyVaultSecret}/store/referenceName",
+      "properties{AzureBlobStorage}/typeProperties/servicePrincipalKey{AzureKeyVaultSecret}/store/type",
       "properties{AzureBlobStorage}/typeProperties/servicePrincipalKey{SecureString}/type",
       "properties{AzureBlobStorage}/typeProperties/servicePrincipalKey{SecureString}/value",
       "properties{AzureBlobStorage}/typeProperties/tenant",
@@ -8736,7 +8770,10 @@
       "properties{AzureFunction}/parameters",
       "properties{AzureFunction}/type",
       "properties{AzureFunction}/typeProperties/functionAppUrl",
-      "properties{AzureFunction}/typeProperties/functionKey{AzureKeyVaultSecret}",
+      "properties{AzureFunction}/typeProperties/functionKey{AzureKeyVaultSecret}/secretName",
+      "properties{AzureFunction}/typeProperties/functionKey{AzureKeyVaultSecret}/store/referenceName",
+      "properties{AzureFunction}/typeProperties/functionKey{AzureKeyVaultSecret}/store/type",
+      "properties{AzureFunction}/typeProperties/functionKey{AzureKeyVaultSecret}/type",
       "properties{AzureFunction}/typeProperties/functionKey{SecureString}/type",
       "properties{AzureFunction}/typeProperties/functionKey{SecureString}/value",
       "properties{AzureKeyVault}",
@@ -11723,7 +11760,8 @@
     "operation": "GET",
     "properties": [
       "id",
-      "properties/resource/id"
+      "properties/resource/id",
+      "tags"
     ]
   },
   {
@@ -12757,6 +12795,14 @@
       "properties/minSupportedTlsVersion",
       "properties/networkProperties/privateLink",
       "properties/networkProperties/resourceProviderConnection",
+      "properties/securityProfile/aaddsResourceId",
+      "properties/securityProfile/clusterUsersGroupDNs",
+      "properties/securityProfile/directoryType",
+      "properties/securityProfile/domain",
+      "properties/securityProfile/domainUserPassword",
+      "properties/securityProfile/domainUsername",
+      "properties/securityProfile/ldapsUrls",
+      "properties/securityProfile/msiResourceId",
       "properties/tier",
       "tags"
     ]
@@ -12805,6 +12851,14 @@
       "properties/networkProperties/privateLink",
       "properties/networkProperties/resourceProviderConnection",
       "properties/osType",
+      "properties/securityProfile/aaddsResourceId",
+      "properties/securityProfile/clusterUsersGroupDNs",
+      "properties/securityProfile/directoryType",
+      "properties/securityProfile/domain",
+      "properties/securityProfile/domainUserPassword",
+      "properties/securityProfile/domainUsername",
+      "properties/securityProfile/ldapsUrls",
+      "properties/securityProfile/msiResourceId",
       "properties/storageProfile/storageaccounts/container",
       "properties/storageProfile/storageaccounts/fileSystem",
       "properties/storageProfile/storageaccounts/isDefault",
@@ -13299,6 +13353,7 @@
       "properties/Application_Type",
       "properties/ConnectionString",
       "properties/DisableIpMasking",
+      "properties/DisableLocalAuth",
       "properties/InstrumentationKey",
       "properties/RetentionInDays",
       "properties/SamplingPercentage",
@@ -13320,6 +13375,7 @@
       "properties/Application_Type",
       "properties/ConnectionString",
       "properties/DisableIpMasking",
+      "properties/DisableLocalAuth",
       "properties/InstrumentationKey",
       "properties/RetentionInDays",
       "properties/SamplingPercentage",
@@ -14335,6 +14391,60 @@
       "properties/key/keyVersion",
       "properties/metadata",
       "properties/publicCertificate"
+    ]
+  },
+  {
+    "api_version": "2019-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.LOGIC/INTEGRATIONACCOUNTS/{}/MAPS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2019-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.LOGIC/INTEGRATIONACCOUNTS/{}/MAPS/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/content",
+      "properties/contentType",
+      "properties/mapType",
+      "properties/metadata"
+    ]
+  },
+  {
+    "api_version": "2019-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.LOGIC/INTEGRATIONACCOUNTS/{}/MAPS/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/content",
+      "properties/contentType",
+      "properties/mapType",
+      "properties/metadata"
+    ]
+  },
+  {
+    "api_version": "2019-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.LOGIC/INTEGRATIONACCOUNTS/{}/PARTNERS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2019-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.LOGIC/INTEGRATIONACCOUNTS/{}/PARTNERS/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/content/b2b/businessIdentities/qualifier",
+      "properties/content/b2b/businessIdentities/value",
+      "properties/metadata",
+      "properties/partnerType"
+    ]
+  },
+  {
+    "api_version": "2019-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.LOGIC/INTEGRATIONACCOUNTS/{}/PARTNERS/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/content/b2b/businessIdentities/qualifier",
+      "properties/content/b2b/businessIdentities/value",
+      "properties/metadata",
+      "properties/partnerType"
     ]
   },
   {
@@ -23265,6 +23375,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/EXTENDEDAUDITINGSETTINGS/{}",
     "operation": "GET",
     "properties": [
+      "id",
       "properties/isAzureMonitorTargetEnabled",
       "properties/isStorageSecondaryKeyInUse",
       "properties/retentionDays",
@@ -23278,6 +23389,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/EXTENDEDAUDITINGSETTINGS/{}",
     "operation": "PUT",
     "properties": [
+      "id",
       "properties/isAzureMonitorTargetEnabled",
       "properties/isStorageSecondaryKeyInUse",
       "properties/retentionDays",
