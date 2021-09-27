@@ -623,7 +623,7 @@
     ]
   },
   {
-    "api_version": "2020-03-01",
+    "api_version": "2021-03-31",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.DEVICES/CHECKNAMEAVAILABILITY",
     "operation": "POST",
     "properties": [
@@ -3096,7 +3096,6 @@
     "properties": [
       "id",
       "location",
-      "name",
       "properties/sku/name",
       "tags"
     ]
@@ -3132,7 +3131,6 @@
     "operation": "GET",
     "properties": [
       "id",
-      "name",
       "properties/description",
       "properties/isExportable",
       "properties/thumbprint"
@@ -3161,7 +3159,6 @@
     "properties": [
       "id",
       "location",
-      "name",
       "properties/description",
       "properties/logVerbose",
       "properties/state",
@@ -3228,7 +3225,6 @@
     "operation": "GET",
     "properties": [
       "id",
-      "name",
       "properties/description",
       "properties/userName"
     ]
@@ -3284,7 +3280,6 @@
     "operation": "GET",
     "properties": [
       "id",
-      "name",
       "properties/error/message",
       "properties/provisioningState"
     ]
@@ -3310,7 +3305,6 @@
     "operation": "GET",
     "properties": [
       "id",
-      "name",
       "properties/configuration/name"
     ]
   },
@@ -3337,7 +3331,6 @@
     "properties": [
       "id",
       "location",
-      "name",
       "properties/description",
       "properties/logProgress",
       "properties/logVerbose",
@@ -3384,7 +3377,6 @@
     "operation": "GET",
     "properties": [
       "id",
-      "name",
       "properties/advancedSchedule/monthDays",
       "properties/advancedSchedule/monthlyOccurrences/day",
       "properties/advancedSchedule/monthlyOccurrences/occurrence",
@@ -4047,6 +4039,7 @@
       "properties{SlackChannel}/properties/isEnabled",
       "properties{SlackChannel}/properties/landingPageUrl",
       "properties{SlackChannel}/properties/registerBeforeOAuthFlow",
+      "properties{SlackChannel}/properties/signingSecret",
       "properties{SlackChannel}/properties/verificationToken",
       "properties{SmsChannel}/channelName",
       "properties{SmsChannel}/properties/accountSID",
@@ -4109,6 +4102,7 @@
       "properties{SlackChannel}/properties/isEnabled",
       "properties{SlackChannel}/properties/landingPageUrl",
       "properties{SlackChannel}/properties/registerBeforeOAuthFlow",
+      "properties{SlackChannel}/properties/signingSecret",
       "properties{SlackChannel}/properties/verificationToken",
       "properties{SmsChannel}/channelName",
       "properties{SmsChannel}/properties/accountSID",
@@ -4171,6 +4165,7 @@
       "properties{SlackChannel}/properties/isEnabled",
       "properties{SlackChannel}/properties/landingPageUrl",
       "properties{SlackChannel}/properties/registerBeforeOAuthFlow",
+      "properties{SlackChannel}/properties/signingSecret",
       "properties{SlackChannel}/properties/verificationToken",
       "properties{SmsChannel}/channelName",
       "properties{SmsChannel}/properties/accountSID",
@@ -8074,6 +8069,7 @@
       "properties{SnowflakeTable}/linkedServiceName/referenceName",
       "properties{SnowflakeTable}/linkedServiceName/type",
       "properties{SnowflakeTable}/parameters",
+      "properties{SnowflakeTable}/schema",
       "properties{SnowflakeTable}/structure",
       "properties{SnowflakeTable}/typeProperties/schema",
       "properties{SnowflakeTable}/typeProperties/table",
@@ -8241,6 +8237,7 @@
       "properties{SnowflakeTable}/linkedServiceName/referenceName",
       "properties{SnowflakeTable}/linkedServiceName/type",
       "properties{SnowflakeTable}/parameters",
+      "properties{SnowflakeTable}/schema",
       "properties{SnowflakeTable}/structure",
       "properties{SnowflakeTable}/typeProperties/schema",
       "properties{SnowflakeTable}/typeProperties/table",
@@ -10792,12 +10789,12 @@
     ]
   },
   {
-    "api_version": "2020-03-01",
+    "api_version": "2021-03-31",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVICES/IOTHUBS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-03-01",
+    "api_version": "2021-03-31",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVICES/IOTHUBS/{}",
     "operation": "GET",
     "properties": [
@@ -10860,7 +10857,7 @@
     ]
   },
   {
-    "api_version": "2020-03-01",
+    "api_version": "2021-03-31",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVICES/IOTHUBS/{}",
     "operation": "PUT",
     "properties": [
@@ -10923,12 +10920,12 @@
     ]
   },
   {
-    "api_version": "2020-03-01",
+    "api_version": "2021-03-31",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVICES/IOTHUBS/{}/EVENTHUBENDPOINTS/{}/CONSUMERGROUPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-03-01",
+    "api_version": "2021-03-31",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVICES/IOTHUBS/{}/EVENTHUBENDPOINTS/{}/CONSUMERGROUPS/{}",
     "operation": "GET",
     "properties": [
@@ -10936,17 +10933,20 @@
     ]
   },
   {
-    "api_version": "2020-03-01",
+    "api_version": "2021-03-31",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVICES/IOTHUBS/{}/EVENTHUBENDPOINTS/{}/CONSUMERGROUPS/{}",
-    "operation": "PUT"
+    "operation": "PUT",
+    "properties": [
+      "properties/name"
+    ]
   },
   {
-    "api_version": "2020-03-01",
+    "api_version": "2021-03-31",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVICES/IOTHUBS/{}/IOTHUBKEYS/{}/LISTKEYS",
     "operation": "POST"
   },
   {
-    "api_version": "2020-03-01",
+    "api_version": "2021-03-31",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVICES/IOTHUBS/{}/LISTKEYS",
     "operation": "POST"
   },
@@ -13587,6 +13587,22 @@
   },
   {
     "api_version": "2015-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/COMPONENTS/{}/{}",
+    "operation": "GET",
+    "properties": [
+      "value/Content",
+      "value/Id",
+      "value/Name",
+      "value/Properties/functionAlias",
+      "value/Scope",
+      "value/TimeCreated",
+      "value/TimeModified",
+      "value/Type",
+      "value/Version"
+    ]
+  },
+  {
+    "api_version": "2015-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/COMPONENTS/{}/{}/ITEM",
     "operation": "DELETE"
   },
@@ -14846,11 +14862,14 @@
       "identity/type",
       "location",
       "name",
+      "properties/allowPublicAccessWhenBehindVnet",
       "properties/applicationInsights",
       "properties/containerRegistry",
       "properties/description",
+      "properties/discoveryUrl",
       "properties/friendlyName",
       "properties/hbiWorkspace",
+      "properties/imageBuildCompute",
       "properties/keyVault",
       "properties/storageAccount",
       "sku/name",
@@ -14881,11 +14900,14 @@
       "identity/type",
       "location",
       "name",
+      "properties/allowPublicAccessWhenBehindVnet",
       "properties/applicationInsights",
       "properties/containerRegistry",
       "properties/description",
+      "properties/discoveryUrl",
       "properties/friendlyName",
       "properties/hbiWorkspace",
+      "properties/imageBuildCompute",
       "properties/keyVault",
       "properties/storageAccount",
       "sku/name",
@@ -17659,6 +17681,55 @@
       "keyVaultCertificateSourceParameters/vault/id",
       "minimumTlsVersion",
       "protocolType"
+    ]
+  },
+  {
+    "api_version": "2020-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/FRONTDOORS/{}/RULESENGINES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2020-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/FRONTDOORS/{}/RULESENGINES/{}",
+    "operation": "GET",
+    "properties": [
+      "name",
+      "properties/rules/action/requestHeaderActions/headerActionType",
+      "properties/rules/action/requestHeaderActions/headerName",
+      "properties/rules/action/requestHeaderActions/value",
+      "properties/rules/action/responseHeaderActions/headerActionType",
+      "properties/rules/action/responseHeaderActions/headerName",
+      "properties/rules/action/responseHeaderActions/value",
+      "properties/rules/matchConditions/negateCondition",
+      "properties/rules/matchConditions/rulesEngineMatchValue",
+      "properties/rules/matchConditions/rulesEngineMatchVariable",
+      "properties/rules/matchConditions/rulesEngineOperator",
+      "properties/rules/matchConditions/selector",
+      "properties/rules/matchConditions/transforms",
+      "properties/rules/name",
+      "properties/rules/priority"
+    ]
+  },
+  {
+    "api_version": "2020-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/FRONTDOORS/{}/RULESENGINES/{}",
+    "operation": "PUT",
+    "properties": [
+      "name",
+      "properties/rules/action/requestHeaderActions/headerActionType",
+      "properties/rules/action/requestHeaderActions/headerName",
+      "properties/rules/action/requestHeaderActions/value",
+      "properties/rules/action/responseHeaderActions/headerActionType",
+      "properties/rules/action/responseHeaderActions/headerName",
+      "properties/rules/action/responseHeaderActions/value",
+      "properties/rules/matchConditions/negateCondition",
+      "properties/rules/matchConditions/rulesEngineMatchValue",
+      "properties/rules/matchConditions/rulesEngineMatchVariable",
+      "properties/rules/matchConditions/rulesEngineOperator",
+      "properties/rules/matchConditions/selector",
+      "properties/rules/matchConditions/transforms",
+      "properties/rules/name",
+      "properties/rules/priority"
     ]
   },
   {
@@ -25643,6 +25714,34 @@
   },
   {
     "api_version": "2021-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/EXTENDEDAUDITINGSETTINGS/{}",
+    "operation": "GET",
+    "properties": [
+      "id",
+      "properties/isAzureMonitorTargetEnabled",
+      "properties/isStorageSecondaryKeyInUse",
+      "properties/retentionDays",
+      "properties/state",
+      "properties/storageAccountAccessKey",
+      "properties/storageEndpoint"
+    ]
+  },
+  {
+    "api_version": "2021-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/EXTENDEDAUDITINGSETTINGS/{}",
+    "operation": "PUT",
+    "properties": [
+      "id",
+      "properties/isAzureMonitorTargetEnabled",
+      "properties/isStorageSecondaryKeyInUse",
+      "properties/retentionDays",
+      "properties/state",
+      "properties/storageAccountAccessKey",
+      "properties/storageEndpoint"
+    ]
+  },
+  {
+    "api_version": "2021-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/FIREWALLRULES/{}",
     "operation": "DELETE"
   },
@@ -25827,6 +25926,34 @@
       "properties/status",
       "sku/name",
       "tags"
+    ]
+  },
+  {
+    "api_version": "2021-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/SQLPOOLS/{}/EXTENDEDAUDITINGSETTINGS/{}",
+    "operation": "GET",
+    "properties": [
+      "id",
+      "properties/isAzureMonitorTargetEnabled",
+      "properties/isStorageSecondaryKeyInUse",
+      "properties/retentionDays",
+      "properties/state",
+      "properties/storageAccountAccessKey",
+      "properties/storageEndpoint"
+    ]
+  },
+  {
+    "api_version": "2021-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/SQLPOOLS/{}/EXTENDEDAUDITINGSETTINGS/{}",
+    "operation": "PUT",
+    "properties": [
+      "id",
+      "properties/isAzureMonitorTargetEnabled",
+      "properties/isStorageSecondaryKeyInUse",
+      "properties/retentionDays",
+      "properties/state",
+      "properties/storageAccountAccessKey",
+      "properties/storageEndpoint"
     ]
   },
   {
