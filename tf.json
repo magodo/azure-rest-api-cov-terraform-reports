@@ -5206,6 +5206,11 @@
     ]
   },
   {
+    "api_version": "2020-08-20",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMMUNICATION/COMMUNICATIONSERVICES/{}/LISTKEYS",
+    "operation": "POST"
+  },
+  {
     "api_version": "2020-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/AVAILABILITYSETS/{}",
     "operation": "DELETE"
@@ -5342,6 +5347,7 @@
       "properties/encryptionSettingsCollection/encryptionSettings/diskEncryptionKey/sourceVault/id",
       "properties/encryptionSettingsCollection/encryptionSettings/keyEncryptionKey/keyUrl",
       "properties/encryptionSettingsCollection/encryptionSettings/keyEncryptionKey/sourceVault/id",
+      "properties/maxShares",
       "properties/networkAccessPolicy",
       "properties/osType",
       "properties/tier",
@@ -5361,6 +5367,7 @@
       "properties/diskSizeGB",
       "properties/encryption/diskEncryptionSetId",
       "properties/encryption/type",
+      "properties/maxShares",
       "properties/networkAccessPolicy",
       "properties/osType",
       "properties/tier",
@@ -5393,6 +5400,7 @@
       "properties/encryptionSettingsCollection/encryptionSettings/diskEncryptionKey/sourceVault/id",
       "properties/encryptionSettingsCollection/encryptionSettings/keyEncryptionKey/keyUrl",
       "properties/encryptionSettingsCollection/encryptionSettings/keyEncryptionKey/sourceVault/id",
+      "properties/maxShares",
       "properties/networkAccessPolicy",
       "properties/osType",
       "properties/tier",
@@ -5707,7 +5715,6 @@
     "properties": [
       "id",
       "location",
-      "name",
       "properties/creationData/createOption",
       "properties/creationData/sourceResourceId",
       "properties/creationData/sourceUri",
@@ -5730,7 +5737,6 @@
     "properties": [
       "id",
       "location",
-      "name",
       "properties/creationData/createOption",
       "properties/creationData/sourceResourceId",
       "properties/creationData/sourceUri",
@@ -20481,6 +20487,7 @@
       "id",
       "name",
       "properties/enableInternetSecurity",
+      "properties/provisioningState",
       "properties/remoteVirtualNetwork/id",
       "properties/routingConfiguration/associatedRouteTable/id",
       "properties/routingConfiguration/propagatedRouteTables/ids/id",
@@ -20498,6 +20505,7 @@
       "id",
       "name",
       "properties/enableInternetSecurity",
+      "properties/provisioningState",
       "properties/remoteVirtualNetwork/id",
       "properties/routingConfiguration/associatedRouteTable/id",
       "properties/routingConfiguration/propagatedRouteTables/ids/id",
@@ -23825,6 +23833,14 @@
     ]
   },
   {
+    "api_version": "2019-06-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}",
+    "operation": "PATCH",
+    "properties": [
+      "sku/name"
+    ]
+  },
+  {
     "api_version": "2014-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}",
     "operation": "PUT",
@@ -24183,6 +24199,7 @@
     "operation": "GET",
     "properties": [
       "id",
+      "location",
       "properties/databases",
       "properties/partnerServers/id",
       "properties/partnerServers/location",
@@ -24190,6 +24207,7 @@
       "properties/readOnlyEndpoint/failoverPolicy",
       "properties/readWriteEndpoint/failoverPolicy",
       "properties/readWriteEndpoint/failoverWithDataLossGracePeriodMinutes",
+      "properties/replicationRole",
       "tags"
     ]
   },
@@ -24199,6 +24217,7 @@
     "operation": "PUT",
     "properties": [
       "id",
+      "location",
       "properties/databases",
       "properties/partnerServers/id",
       "properties/partnerServers/location",
@@ -24206,6 +24225,7 @@
       "properties/readOnlyEndpoint/failoverPolicy",
       "properties/readWriteEndpoint/failoverPolicy",
       "properties/readWriteEndpoint/failoverWithDataLossGracePeriodMinutes",
+      "properties/replicationRole",
       "tags"
     ]
   },
@@ -28548,6 +28568,7 @@
     "api_path": "/{}/PROVIDERS/MICROSOFT.CONSUMPTION/BUDGETS/{}",
     "operation": "GET",
     "properties": [
+      "eTag",
       "id",
       "name",
       "properties/amount",
@@ -28581,6 +28602,7 @@
     "api_path": "/{}/PROVIDERS/MICROSOFT.CONSUMPTION/BUDGETS/{}",
     "operation": "PUT",
     "properties": [
+      "eTag",
       "id",
       "name",
       "properties/amount",
