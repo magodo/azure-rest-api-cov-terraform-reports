@@ -905,21 +905,11 @@
   },
   {
     "api_version": "2018-06-01",
-    "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.SECURITY/PRICINGS",
-    "operation": "GET",
-    "properties": [
-      "value/properties/pricingTier",
-      "value/type"
-    ]
-  },
-  {
-    "api_version": "2018-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.SECURITY/PRICINGS/{}",
     "operation": "GET",
     "properties": [
       "id",
-      "properties/pricingTier",
-      "type"
+      "properties/pricingTier"
     ]
   },
   {
@@ -928,8 +918,7 @@
     "operation": "PUT",
     "properties": [
       "id",
-      "properties/pricingTier",
-      "type"
+      "properties/pricingTier"
     ]
   },
   {
@@ -3613,12 +3602,12 @@
     ]
   },
   {
-    "api_version": "2020-03-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-03-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}",
     "operation": "GET",
     "properties": [
@@ -3634,7 +3623,7 @@
     ]
   },
   {
-    "api_version": "2020-03-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -3643,7 +3632,7 @@
     ]
   },
   {
-    "api_version": "2020-03-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}",
     "operation": "PUT",
     "properties": [
@@ -3657,12 +3646,12 @@
     ]
   },
   {
-    "api_version": "2020-03-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}/APPLICATIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-03-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}/APPLICATIONS/{}",
     "operation": "GET",
     "properties": [
@@ -3673,7 +3662,7 @@
     ]
   },
   {
-    "api_version": "2020-03-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}/APPLICATIONS/{}",
     "operation": "PATCH",
     "properties": [
@@ -3684,7 +3673,7 @@
     ]
   },
   {
-    "api_version": "2020-03-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}/APPLICATIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -3695,12 +3684,12 @@
     ]
   },
   {
-    "api_version": "2020-03-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}/CERTIFICATES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-03-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}/CERTIFICATES/{}",
     "operation": "GET",
     "properties": [
@@ -3713,7 +3702,7 @@
     ]
   },
   {
-    "api_version": "2020-03-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}/CERTIFICATES/{}",
     "operation": "PATCH",
     "properties": [
@@ -3726,7 +3715,7 @@
     ]
   },
   {
-    "api_version": "2020-03-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}/CERTIFICATES/{}",
     "operation": "PUT",
     "properties": [
@@ -3739,17 +3728,17 @@
     ]
   },
   {
-    "api_version": "2020-03-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}/LISTKEYS",
     "operation": "POST"
   },
   {
-    "api_version": "2020-03-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}/POOLS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-03-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}/POOLS/{}",
     "operation": "GET",
     "properties": [
@@ -3771,7 +3760,6 @@
       "properties/deploymentConfiguration/virtualMachineConfiguration/imageReference/version",
       "properties/deploymentConfiguration/virtualMachineConfiguration/nodeAgentSkuId",
       "properties/displayName",
-      "properties/maxTasksPerNode",
       "properties/metadata/name",
       "properties/metadata/value",
       "properties/networkConfiguration/endpointConfiguration/inboundNatPools/backendPort",
@@ -3804,11 +3792,12 @@
       "properties/startTask/userIdentity/autoUser/scope",
       "properties/startTask/userIdentity/userName",
       "properties/startTask/waitForSuccess",
+      "properties/taskSlotsPerNode",
       "properties/vmSize"
     ]
   },
   {
-    "api_version": "2020-03-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}/POOLS/{}",
     "operation": "PATCH",
     "properties": [
@@ -3830,7 +3819,6 @@
       "properties/deploymentConfiguration/virtualMachineConfiguration/imageReference/version",
       "properties/deploymentConfiguration/virtualMachineConfiguration/nodeAgentSkuId",
       "properties/displayName",
-      "properties/maxTasksPerNode",
       "properties/metadata/name",
       "properties/metadata/value",
       "properties/networkConfiguration/endpointConfiguration/inboundNatPools/backendPort",
@@ -3863,11 +3851,12 @@
       "properties/startTask/userIdentity/autoUser/scope",
       "properties/startTask/userIdentity/userName",
       "properties/startTask/waitForSuccess",
+      "properties/taskSlotsPerNode",
       "properties/vmSize"
     ]
   },
   {
-    "api_version": "2020-03-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}/POOLS/{}",
     "operation": "PUT",
     "properties": [
@@ -3889,7 +3878,6 @@
       "properties/deploymentConfiguration/virtualMachineConfiguration/imageReference/version",
       "properties/deploymentConfiguration/virtualMachineConfiguration/nodeAgentSkuId",
       "properties/displayName",
-      "properties/maxTasksPerNode",
       "properties/metadata/name",
       "properties/metadata/value",
       "properties/networkConfiguration/endpointConfiguration/inboundNatPools/backendPort",
@@ -3922,11 +3910,12 @@
       "properties/startTask/userIdentity/autoUser/scope",
       "properties/startTask/userIdentity/userName",
       "properties/startTask/waitForSuccess",
+      "properties/taskSlotsPerNode",
       "properties/vmSize"
     ]
   },
   {
-    "api_version": "2020-03-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}/POOLS/{}/STOPRESIZE",
     "operation": "POST"
   },
@@ -8619,6 +8608,16 @@
       "properties{AzureTableStorage}/parameters",
       "properties{AzureTableStorage}/type",
       "properties{AzureTableStorage}/typeProperties/connectionString",
+      "properties{CosmosDbMongoDbApi}",
+      "properties{CosmosDbMongoDbApi}/annotations",
+      "properties{CosmosDbMongoDbApi}/connectVia/referenceName",
+      "properties{CosmosDbMongoDbApi}/connectVia/type",
+      "properties{CosmosDbMongoDbApi}/description",
+      "properties{CosmosDbMongoDbApi}/parameters",
+      "properties{CosmosDbMongoDbApi}/type",
+      "properties{CosmosDbMongoDbApi}/typeProperties/connectionString",
+      "properties{CosmosDbMongoDbApi}/typeProperties/database",
+      "properties{CosmosDbMongoDbApi}/typeProperties/isServerVersionAbove32",
       "properties{CosmosDb}",
       "properties{CosmosDb}/annotations",
       "properties{CosmosDb}/connectVia/referenceName",
@@ -8886,6 +8885,16 @@
       "properties{AzureTableStorage}/parameters",
       "properties{AzureTableStorage}/type",
       "properties{AzureTableStorage}/typeProperties/connectionString",
+      "properties{CosmosDbMongoDbApi}",
+      "properties{CosmosDbMongoDbApi}/annotations",
+      "properties{CosmosDbMongoDbApi}/connectVia/referenceName",
+      "properties{CosmosDbMongoDbApi}/connectVia/type",
+      "properties{CosmosDbMongoDbApi}/description",
+      "properties{CosmosDbMongoDbApi}/parameters",
+      "properties{CosmosDbMongoDbApi}/type",
+      "properties{CosmosDbMongoDbApi}/typeProperties/connectionString",
+      "properties{CosmosDbMongoDbApi}/typeProperties/database",
+      "properties{CosmosDbMongoDbApi}/typeProperties/isServerVersionAbove32",
       "properties{CosmosDb}",
       "properties{CosmosDb}/annotations",
       "properties{CosmosDb}/connectVia/referenceName",
@@ -9006,7 +9015,8 @@
     "properties": [
       "name",
       "properties/groupId",
-      "properties/privateLinkResourceId"
+      "properties/privateLinkResourceId",
+      "properties/provisioningState"
     ]
   },
   {
@@ -9016,7 +9026,8 @@
     "properties": [
       "name",
       "properties/groupId",
-      "properties/privateLinkResourceId"
+      "properties/privateLinkResourceId",
+      "properties/provisioningState"
     ]
   },
   {
@@ -9913,6 +9924,109 @@
       "properties/state",
       "properties/virtualNetworkSubnetId"
     ]
+  },
+  {
+    "api_version": "2021-05-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORMYSQL/FLEXIBLESERVERS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2021-05-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORMYSQL/FLEXIBLESERVERS/{}",
+    "operation": "GET",
+    "properties": [
+      "location",
+      "properties/administratorLogin",
+      "properties/administratorLoginPassword",
+      "properties/availabilityZone",
+      "properties/backup/backupRetentionDays",
+      "properties/backup/geoRedundantBackup",
+      "properties/createMode",
+      "properties/fullyQualifiedDomainName",
+      "properties/highAvailability/mode",
+      "properties/highAvailability/standbyAvailabilityZone",
+      "properties/maintenanceWindow/customWindow",
+      "properties/maintenanceWindow/dayOfWeek",
+      "properties/maintenanceWindow/startHour",
+      "properties/maintenanceWindow/startMinute",
+      "properties/network/delegatedSubnetResourceId",
+      "properties/network/privateDnsZoneResourceId",
+      "properties/network/publicNetworkAccess",
+      "properties/replicaCapacity",
+      "properties/replicationRole",
+      "properties/restorePointInTime",
+      "properties/sourceServerResourceId",
+      "properties/storage/autoGrow",
+      "properties/storage/iops",
+      "properties/storage/storageSizeGB",
+      "properties/version",
+      "sku/name",
+      "sku/tier",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2021-05-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORMYSQL/FLEXIBLESERVERS/{}",
+    "operation": "PATCH",
+    "properties": [
+      "properties/administratorLoginPassword",
+      "properties/backup/backupRetentionDays",
+      "properties/backup/geoRedundantBackup",
+      "properties/highAvailability/mode",
+      "properties/highAvailability/standbyAvailabilityZone",
+      "properties/maintenanceWindow/customWindow",
+      "properties/maintenanceWindow/dayOfWeek",
+      "properties/maintenanceWindow/startHour",
+      "properties/maintenanceWindow/startMinute",
+      "properties/replicationRole",
+      "properties/storage/autoGrow",
+      "properties/storage/iops",
+      "properties/storage/storageSizeGB",
+      "sku/name",
+      "sku/tier",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2021-05-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORMYSQL/FLEXIBLESERVERS/{}",
+    "operation": "PUT",
+    "properties": [
+      "location",
+      "properties/administratorLogin",
+      "properties/administratorLoginPassword",
+      "properties/availabilityZone",
+      "properties/backup/backupRetentionDays",
+      "properties/backup/geoRedundantBackup",
+      "properties/createMode",
+      "properties/fullyQualifiedDomainName",
+      "properties/highAvailability/mode",
+      "properties/highAvailability/standbyAvailabilityZone",
+      "properties/maintenanceWindow/customWindow",
+      "properties/maintenanceWindow/dayOfWeek",
+      "properties/maintenanceWindow/startHour",
+      "properties/maintenanceWindow/startMinute",
+      "properties/network/delegatedSubnetResourceId",
+      "properties/network/privateDnsZoneResourceId",
+      "properties/network/publicNetworkAccess",
+      "properties/replicaCapacity",
+      "properties/replicationRole",
+      "properties/restorePointInTime",
+      "properties/sourceServerResourceId",
+      "properties/storage/autoGrow",
+      "properties/storage/iops",
+      "properties/storage/storageSizeGB",
+      "properties/version",
+      "sku/name",
+      "sku/tier",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2021-05-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORMYSQL/FLEXIBLESERVERS/{}/FAILOVER",
+    "operation": "POST"
   },
   {
     "api_version": "2017-12-01",
@@ -12316,16 +12430,51 @@
       "properties/deadLetterWithResourceIdentity/deadLetterDestination{StorageBlob}/properties/resourceId",
       "properties/deadLetterWithResourceIdentity/identity/type",
       "properties/deliveryWithResourceIdentity/destination{AzureFunction}/endpointType",
+      "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/type",
       "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/maxEventsPerBatch",
       "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/preferredBatchSizeInKilobytes",
       "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/resourceId",
       "properties/deliveryWithResourceIdentity/destination{EventHub}/endpointType",
+      "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/deliveryAttributeMappings{Static}/type",
       "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/resourceId",
       "properties/deliveryWithResourceIdentity/destination{HybridConnection}/endpointType",
+      "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/type",
       "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/resourceId",
       "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/endpointType",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/type",
       "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/resourceId",
       "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/endpointType",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/type",
       "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/resourceId",
       "properties/deliveryWithResourceIdentity/destination{StorageQueue}/endpointType",
       "properties/deliveryWithResourceIdentity/destination{StorageQueue}/properties/queueName",
@@ -12333,22 +12482,64 @@
       "properties/deliveryWithResourceIdentity/destination{WebHook}/endpointType",
       "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/azureActiveDirectoryApplicationIdOrUri",
       "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/azureActiveDirectoryTenantId",
+      "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/deliveryAttributeMappings{Static}/type",
       "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/endpointBaseUrl",
       "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/endpointUrl",
       "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/maxEventsPerBatch",
       "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/preferredBatchSizeInKilobytes",
       "properties/deliveryWithResourceIdentity/identity/type",
       "properties/destination{AzureFunction}/endpointType",
+      "properties/destination{AzureFunction}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/destination{AzureFunction}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/destination{AzureFunction}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/type",
       "properties/destination{AzureFunction}/properties/maxEventsPerBatch",
       "properties/destination{AzureFunction}/properties/preferredBatchSizeInKilobytes",
       "properties/destination{AzureFunction}/properties/resourceId",
       "properties/destination{EventHub}/endpointType",
+      "properties/destination{EventHub}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/destination{EventHub}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/destination{EventHub}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/destination{EventHub}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/destination{EventHub}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/destination{EventHub}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/destination{EventHub}/properties/deliveryAttributeMappings{Static}/type",
       "properties/destination{EventHub}/properties/resourceId",
       "properties/destination{HybridConnection}/endpointType",
+      "properties/destination{HybridConnection}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/destination{HybridConnection}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/destination{HybridConnection}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/type",
       "properties/destination{HybridConnection}/properties/resourceId",
       "properties/destination{ServiceBusQueue}/endpointType",
+      "properties/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/type",
       "properties/destination{ServiceBusQueue}/properties/resourceId",
       "properties/destination{ServiceBusTopic}/endpointType",
+      "properties/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/type",
       "properties/destination{ServiceBusTopic}/properties/resourceId",
       "properties/destination{StorageQueue}/endpointType",
       "properties/destination{StorageQueue}/properties/queueName",
@@ -12356,6 +12547,13 @@
       "properties/destination{WebHook}/endpointType",
       "properties/destination{WebHook}/properties/azureActiveDirectoryApplicationIdOrUri",
       "properties/destination{WebHook}/properties/azureActiveDirectoryTenantId",
+      "properties/destination{WebHook}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/destination{WebHook}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/destination{WebHook}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/destination{WebHook}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/destination{WebHook}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/destination{WebHook}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/destination{WebHook}/properties/deliveryAttributeMappings{Static}/type",
       "properties/destination{WebHook}/properties/endpointBaseUrl",
       "properties/destination{WebHook}/properties/endpointUrl",
       "properties/destination{WebHook}/properties/maxEventsPerBatch",
@@ -12442,16 +12640,51 @@
       "properties/deadLetterWithResourceIdentity/deadLetterDestination{StorageBlob}/properties/resourceId",
       "properties/deadLetterWithResourceIdentity/identity/type",
       "properties/deliveryWithResourceIdentity/destination{AzureFunction}/endpointType",
+      "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/type",
       "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/maxEventsPerBatch",
       "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/preferredBatchSizeInKilobytes",
       "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/resourceId",
       "properties/deliveryWithResourceIdentity/destination{EventHub}/endpointType",
+      "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/deliveryAttributeMappings{Static}/type",
       "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/resourceId",
       "properties/deliveryWithResourceIdentity/destination{HybridConnection}/endpointType",
+      "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/type",
       "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/resourceId",
       "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/endpointType",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/type",
       "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/resourceId",
       "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/endpointType",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/type",
       "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/resourceId",
       "properties/deliveryWithResourceIdentity/destination{StorageQueue}/endpointType",
       "properties/deliveryWithResourceIdentity/destination{StorageQueue}/properties/queueName",
@@ -12459,22 +12692,64 @@
       "properties/deliveryWithResourceIdentity/destination{WebHook}/endpointType",
       "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/azureActiveDirectoryApplicationIdOrUri",
       "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/azureActiveDirectoryTenantId",
+      "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/deliveryAttributeMappings{Static}/type",
       "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/endpointBaseUrl",
       "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/endpointUrl",
       "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/maxEventsPerBatch",
       "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/preferredBatchSizeInKilobytes",
       "properties/deliveryWithResourceIdentity/identity/type",
       "properties/destination{AzureFunction}/endpointType",
+      "properties/destination{AzureFunction}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/destination{AzureFunction}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/destination{AzureFunction}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/type",
       "properties/destination{AzureFunction}/properties/maxEventsPerBatch",
       "properties/destination{AzureFunction}/properties/preferredBatchSizeInKilobytes",
       "properties/destination{AzureFunction}/properties/resourceId",
       "properties/destination{EventHub}/endpointType",
+      "properties/destination{EventHub}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/destination{EventHub}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/destination{EventHub}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/destination{EventHub}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/destination{EventHub}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/destination{EventHub}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/destination{EventHub}/properties/deliveryAttributeMappings{Static}/type",
       "properties/destination{EventHub}/properties/resourceId",
       "properties/destination{HybridConnection}/endpointType",
+      "properties/destination{HybridConnection}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/destination{HybridConnection}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/destination{HybridConnection}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/type",
       "properties/destination{HybridConnection}/properties/resourceId",
       "properties/destination{ServiceBusQueue}/endpointType",
+      "properties/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/type",
       "properties/destination{ServiceBusQueue}/properties/resourceId",
       "properties/destination{ServiceBusTopic}/endpointType",
+      "properties/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/type",
       "properties/destination{ServiceBusTopic}/properties/resourceId",
       "properties/destination{StorageQueue}/endpointType",
       "properties/destination{StorageQueue}/properties/queueName",
@@ -12482,6 +12757,13 @@
       "properties/destination{WebHook}/endpointType",
       "properties/destination{WebHook}/properties/azureActiveDirectoryApplicationIdOrUri",
       "properties/destination{WebHook}/properties/azureActiveDirectoryTenantId",
+      "properties/destination{WebHook}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/destination{WebHook}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/destination{WebHook}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/destination{WebHook}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/destination{WebHook}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/destination{WebHook}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/destination{WebHook}/properties/deliveryAttributeMappings{Static}/type",
       "properties/destination{WebHook}/properties/endpointBaseUrl",
       "properties/destination{WebHook}/properties/endpointUrl",
       "properties/destination{WebHook}/properties/maxEventsPerBatch",
@@ -14273,7 +14555,13 @@
       "properties/attachedDatabaseNames",
       "properties/clusterResourceId",
       "properties/databaseName",
-      "properties/defaultPrincipalsModificationKind"
+      "properties/defaultPrincipalsModificationKind",
+      "properties/tableLevelSharingProperties/externalTablesToExclude",
+      "properties/tableLevelSharingProperties/externalTablesToInclude",
+      "properties/tableLevelSharingProperties/materializedViewsToExclude",
+      "properties/tableLevelSharingProperties/materializedViewsToInclude",
+      "properties/tableLevelSharingProperties/tablesToExclude",
+      "properties/tableLevelSharingProperties/tablesToInclude"
     ]
   },
   {
@@ -14286,7 +14574,13 @@
       "properties/attachedDatabaseNames",
       "properties/clusterResourceId",
       "properties/databaseName",
-      "properties/defaultPrincipalsModificationKind"
+      "properties/defaultPrincipalsModificationKind",
+      "properties/tableLevelSharingProperties/externalTablesToExclude",
+      "properties/tableLevelSharingProperties/externalTablesToInclude",
+      "properties/tableLevelSharingProperties/materializedViewsToExclude",
+      "properties/tableLevelSharingProperties/materializedViewsToInclude",
+      "properties/tableLevelSharingProperties/tablesToExclude",
+      "properties/tableLevelSharingProperties/tablesToInclude"
     ]
   },
   {
@@ -18011,6 +18305,7 @@
       "properties/probes/properties/protocol",
       "properties/probes/properties/requestPath",
       "sku/name",
+      "sku/tier",
       "tags"
     ]
   },
@@ -18087,6 +18382,7 @@
       "properties/probes/properties/protocol",
       "properties/probes/properties/requestPath",
       "sku/name",
+      "sku/tier",
       "tags"
     ]
   },
@@ -18895,6 +19191,7 @@
       "properties/testConfigurations/protocol",
       "properties/testConfigurations/successThreshold/checksFailedPercent",
       "properties/testConfigurations/successThreshold/roundTripTimeMs",
+      "properties/testConfigurations/tcpConfiguration/destinationPortBehavior",
       "properties/testConfigurations/tcpConfiguration/disableTraceRoute",
       "properties/testConfigurations/tcpConfiguration/port",
       "properties/testConfigurations/testFrequencySec",
@@ -18938,6 +19235,7 @@
       "properties/testConfigurations/protocol",
       "properties/testConfigurations/successThreshold/checksFailedPercent",
       "properties/testConfigurations/successThreshold/roundTripTimeMs",
+      "properties/testConfigurations/tcpConfiguration/destinationPortBehavior",
       "properties/testConfigurations/tcpConfiguration/disableTraceRoute",
       "properties/testConfigurations/tcpConfiguration/port",
       "properties/testConfigurations/testFrequencySec",
@@ -23699,7 +23997,7 @@
     "operation": "DELETE"
   },
   {
-    "api_version": "2019-06-01-preview",
+    "api_version": "2021-02-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}",
     "operation": "DELETE"
   },
@@ -23721,7 +24019,7 @@
     ]
   },
   {
-    "api_version": "2019-06-01-preview",
+    "api_version": "2021-02-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}",
     "operation": "GET",
     "properties": [
@@ -23729,11 +24027,13 @@
       "identity/principalId",
       "identity/tenantId",
       "identity/type",
+      "identity/userAssignedIdentities",
       "location",
       "properties/administratorLogin",
       "properties/administratorLoginPassword",
       "properties/fullyQualifiedDomainName",
       "properties/minimalTlsVersion",
+      "properties/primaryUserAssignedIdentityId",
       "properties/publicNetworkAccess",
       "properties/version",
       "tags"
@@ -23757,7 +24057,7 @@
     ]
   },
   {
-    "api_version": "2019-06-01-preview",
+    "api_version": "2021-02-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}",
     "operation": "PUT",
     "properties": [
@@ -23765,11 +24065,13 @@
       "identity/principalId",
       "identity/tenantId",
       "identity/type",
+      "identity/userAssignedIdentities",
       "location",
       "properties/administratorLogin",
       "properties/administratorLoginPassword",
       "properties/fullyQualifiedDomainName",
       "properties/minimalTlsVersion",
+      "properties/primaryUserAssignedIdentityId",
       "properties/publicNetworkAccess",
       "properties/version",
       "tags"
@@ -23781,7 +24083,7 @@
     "operation": "DELETE"
   },
   {
-    "api_version": "2019-06-01-preview",
+    "api_version": "2020-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/ADMINISTRATORS/{}",
     "operation": "DELETE"
   },
@@ -23798,7 +24100,7 @@
     ]
   },
   {
-    "api_version": "2019-06-01-preview",
+    "api_version": "2020-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/ADMINISTRATORS/{}",
     "operation": "GET",
     "properties": [
@@ -23821,7 +24123,7 @@
     ]
   },
   {
-    "api_version": "2019-06-01-preview",
+    "api_version": "2020-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/ADMINISTRATORS/{}",
     "operation": "PUT",
     "properties": [
@@ -23853,7 +24155,7 @@
     "operation": "DELETE"
   },
   {
-    "api_version": "2019-06-01-preview",
+    "api_version": "2021-02-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}",
     "operation": "DELETE"
   },
@@ -23885,7 +24187,7 @@
     ]
   },
   {
-    "api_version": "2019-06-01-preview",
+    "api_version": "2021-02-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}",
     "operation": "GET",
     "properties": [
@@ -23895,26 +24197,26 @@
       "properties/autoPauseDelay",
       "properties/collation",
       "properties/createMode",
+      "properties/currentBackupStorageRedundancy",
       "properties/currentServiceObjectiveName",
       "properties/elasticPoolId",
+      "properties/highAvailabilityReplicaCount",
       "properties/licenseType",
       "properties/maxSizeBytes",
       "properties/minCapacity",
-      "properties/readReplicaCount",
       "properties/readScale",
       "properties/recoverableDatabaseId",
       "properties/restorableDroppedDatabaseId",
       "properties/restorePointInTime",
       "properties/sampleName",
       "properties/sourceDatabaseId",
-      "properties/storageAccountType",
       "properties/zoneRedundant",
       "sku/name",
       "tags"
     ]
   },
   {
-    "api_version": "2019-06-01-preview",
+    "api_version": "2021-02-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}",
     "operation": "PATCH",
     "properties": [
@@ -23949,7 +24251,7 @@
     ]
   },
   {
-    "api_version": "2019-06-01-preview",
+    "api_version": "2021-02-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}",
     "operation": "PUT",
     "properties": [
@@ -23959,26 +24261,26 @@
       "properties/autoPauseDelay",
       "properties/collation",
       "properties/createMode",
+      "properties/currentBackupStorageRedundancy",
       "properties/currentServiceObjectiveName",
       "properties/elasticPoolId",
+      "properties/highAvailabilityReplicaCount",
       "properties/licenseType",
       "properties/maxSizeBytes",
       "properties/minCapacity",
-      "properties/readReplicaCount",
       "properties/readScale",
       "properties/recoverableDatabaseId",
       "properties/restorableDroppedDatabaseId",
       "properties/restorePointInTime",
       "properties/sampleName",
       "properties/sourceDatabaseId",
-      "properties/storageAccountType",
       "properties/zoneRedundant",
       "sku/name",
       "tags"
     ]
   },
   {
-    "api_version": "2017-03-01-preview",
+    "api_version": "2020-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}/BACKUPLONGTERMRETENTIONPOLICIES/{}",
     "operation": "GET",
     "properties": [
@@ -23989,7 +24291,7 @@
     ]
   },
   {
-    "api_version": "2017-03-01-preview",
+    "api_version": "2020-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}/BACKUPLONGTERMRETENTIONPOLICIES/{}",
     "operation": "PUT",
     "properties": [
@@ -24000,7 +24302,7 @@
     ]
   },
   {
-    "api_version": "2017-10-01-preview",
+    "api_version": "2021-02-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}/BACKUPSHORTTERMRETENTIONPOLICIES/{}",
     "operation": "GET",
     "properties": [
@@ -24008,7 +24310,7 @@
     ]
   },
   {
-    "api_version": "2017-10-01-preview",
+    "api_version": "2021-02-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}/BACKUPSHORTTERMRETENTIONPOLICIES/{}",
     "operation": "PUT",
     "properties": [
@@ -24029,10 +24331,38 @@
     ]
   },
   {
+    "api_version": "2020-11-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}/EXTENDEDAUDITINGSETTINGS/{}",
+    "operation": "GET",
+    "properties": [
+      "id",
+      "properties/isAzureMonitorTargetEnabled",
+      "properties/isStorageSecondaryKeyInUse",
+      "properties/retentionDays",
+      "properties/state",
+      "properties/storageAccountAccessKey",
+      "properties/storageEndpoint"
+    ]
+  },
+  {
     "api_version": "2017-03-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}/EXTENDEDAUDITINGSETTINGS/{}",
     "operation": "PUT",
     "properties": [
+      "properties/isAzureMonitorTargetEnabled",
+      "properties/isStorageSecondaryKeyInUse",
+      "properties/retentionDays",
+      "properties/state",
+      "properties/storageAccountAccessKey",
+      "properties/storageEndpoint"
+    ]
+  },
+  {
+    "api_version": "2020-11-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}/EXTENDEDAUDITINGSETTINGS/{}",
+    "operation": "PUT",
+    "properties": [
+      "id",
       "properties/isAzureMonitorTargetEnabled",
       "properties/isStorageSecondaryKeyInUse",
       "properties/retentionDays",
@@ -24074,18 +24404,6 @@
   },
   {
     "api_version": "2014-04-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}/REPLICATIONLINKS",
-    "operation": "GET",
-    "properties": [
-      "value/location",
-      "value/properties/partnerDatabase",
-      "value/properties/partnerLocation",
-      "value/properties/partnerServer",
-      "value/properties/role"
-    ]
-  },
-  {
-    "api_version": "2014-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}/SECURITYALERTPOLICIES/{}",
     "operation": "GET",
     "properties": [
@@ -24098,6 +24416,20 @@
       "properties/storageAccountAccessKey",
       "properties/storageEndpoint",
       "properties/useServerDefault"
+    ]
+  },
+  {
+    "api_version": "2020-11-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}/SECURITYALERTPOLICIES/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/disabledAlerts",
+      "properties/emailAccountAdmins",
+      "properties/emailAddresses",
+      "properties/retentionDays",
+      "properties/state",
+      "properties/storageAccountAccessKey",
+      "properties/storageEndpoint"
     ]
   },
   {
@@ -24117,12 +24449,26 @@
     ]
   },
   {
-    "api_version": "2017-03-01-preview",
+    "api_version": "2020-11-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}/SECURITYALERTPOLICIES/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/disabledAlerts",
+      "properties/emailAccountAdmins",
+      "properties/emailAddresses",
+      "properties/retentionDays",
+      "properties/state",
+      "properties/storageAccountAccessKey",
+      "properties/storageEndpoint"
+    ]
+  },
+  {
+    "api_version": "2020-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}/VULNERABILITYASSESSMENTS/{}/RULES/{}/BASELINES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2017-03-01-preview",
+    "api_version": "2020-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}/VULNERABILITYASSESSMENTS/{}/RULES/{}/BASELINES/{}",
     "operation": "GET",
     "properties": [
@@ -24131,7 +24477,7 @@
     ]
   },
   {
-    "api_version": "2017-03-01-preview",
+    "api_version": "2020-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}/VULNERABILITYASSESSMENTS/{}/RULES/{}/BASELINES/{}",
     "operation": "PUT",
     "properties": [
@@ -24145,7 +24491,7 @@
     "operation": "DELETE"
   },
   {
-    "api_version": "2017-10-01-preview",
+    "api_version": "2020-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/ELASTICPOOLS/{}",
     "operation": "DELETE"
   },
@@ -24167,7 +24513,7 @@
     ]
   },
   {
-    "api_version": "2017-10-01-preview",
+    "api_version": "2020-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/ELASTICPOOLS/{}",
     "operation": "GET",
     "properties": [
@@ -24204,7 +24550,7 @@
     ]
   },
   {
-    "api_version": "2017-10-01-preview",
+    "api_version": "2020-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/ELASTICPOOLS/{}",
     "operation": "PUT",
     "properties": [
@@ -24224,7 +24570,7 @@
     ]
   },
   {
-    "api_version": "2015-05-01-preview",
+    "api_version": "2020-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/ENCRYPTIONPROTECTOR/{}",
     "operation": "GET",
     "properties": [
@@ -24234,7 +24580,7 @@
     ]
   },
   {
-    "api_version": "2015-05-01-preview",
+    "api_version": "2020-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/ENCRYPTIONPROTECTOR/{}",
     "operation": "PUT",
     "properties": [
@@ -24245,6 +24591,19 @@
   },
   {
     "api_version": "2017-03-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/EXTENDEDAUDITINGSETTINGS/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/isAzureMonitorTargetEnabled",
+      "properties/isStorageSecondaryKeyInUse",
+      "properties/retentionDays",
+      "properties/state",
+      "properties/storageAccountAccessKey",
+      "properties/storageEndpoint"
+    ]
+  },
+  {
+    "api_version": "2020-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/EXTENDEDAUDITINGSETTINGS/{}",
     "operation": "GET",
     "properties": [
@@ -24259,6 +24618,19 @@
   },
   {
     "api_version": "2017-03-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/EXTENDEDAUDITINGSETTINGS/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/isAzureMonitorTargetEnabled",
+      "properties/isStorageSecondaryKeyInUse",
+      "properties/retentionDays",
+      "properties/state",
+      "properties/storageAccountAccessKey",
+      "properties/storageEndpoint"
+    ]
+  },
+  {
+    "api_version": "2020-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/EXTENDEDAUDITINGSETTINGS/{}",
     "operation": "PUT",
     "properties": [
@@ -24277,7 +24649,30 @@
     "operation": "DELETE"
   },
   {
+    "api_version": "2020-11-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/FAILOVERGROUPS/{}",
+    "operation": "DELETE"
+  },
+  {
     "api_version": "2015-05-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/FAILOVERGROUPS/{}",
+    "operation": "GET",
+    "properties": [
+      "id",
+      "location",
+      "properties/databases",
+      "properties/partnerServers/id",
+      "properties/partnerServers/location",
+      "properties/partnerServers/replicationRole",
+      "properties/readOnlyEndpoint/failoverPolicy",
+      "properties/readWriteEndpoint/failoverPolicy",
+      "properties/readWriteEndpoint/failoverWithDataLossGracePeriodMinutes",
+      "properties/replicationRole",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2020-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/FAILOVERGROUPS/{}",
     "operation": "GET",
     "properties": [
@@ -24298,6 +24693,24 @@
     "operation": "PUT",
     "properties": [
       "id",
+      "location",
+      "properties/databases",
+      "properties/partnerServers/id",
+      "properties/partnerServers/location",
+      "properties/partnerServers/replicationRole",
+      "properties/readOnlyEndpoint/failoverPolicy",
+      "properties/readWriteEndpoint/failoverPolicy",
+      "properties/readWriteEndpoint/failoverWithDataLossGracePeriodMinutes",
+      "properties/replicationRole",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2020-11-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/FAILOVERGROUPS/{}",
+    "operation": "PUT",
+    "properties": [
+      "id",
       "properties/databases",
       "properties/partnerServers/id",
       "properties/partnerServers/location",
@@ -24314,7 +24727,22 @@
     "operation": "DELETE"
   },
   {
+    "api_version": "2020-11-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/FIREWALLRULES/{}",
+    "operation": "DELETE"
+  },
+  {
     "api_version": "2014-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/FIREWALLRULES/{}",
+    "operation": "GET",
+    "properties": [
+      "id",
+      "properties/endIpAddress",
+      "properties/startIpAddress"
+    ]
+  },
+  {
+    "api_version": "2020-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/FIREWALLRULES/{}",
     "operation": "GET",
     "properties": [
@@ -24334,12 +24762,22 @@
     ]
   },
   {
-    "api_version": "2017-03-01-preview",
+    "api_version": "2020-11-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/FIREWALLRULES/{}",
+    "operation": "PUT",
+    "properties": [
+      "id",
+      "properties/endIpAddress",
+      "properties/startIpAddress"
+    ]
+  },
+  {
+    "api_version": "2020-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/JOBAGENTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2017-03-01-preview",
+    "api_version": "2020-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/JOBAGENTS/{}",
     "operation": "GET",
     "properties": [
@@ -24351,7 +24789,7 @@
     ]
   },
   {
-    "api_version": "2017-03-01-preview",
+    "api_version": "2020-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/JOBAGENTS/{}",
     "operation": "PUT",
     "properties": [
@@ -24363,12 +24801,12 @@
     ]
   },
   {
-    "api_version": "2017-03-01-preview",
+    "api_version": "2020-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/JOBAGENTS/{}/CREDENTIALS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2017-03-01-preview",
+    "api_version": "2020-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/JOBAGENTS/{}/CREDENTIALS/{}",
     "operation": "GET",
     "properties": [
@@ -24378,7 +24816,7 @@
     ]
   },
   {
-    "api_version": "2017-03-01-preview",
+    "api_version": "2020-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/JOBAGENTS/{}/CREDENTIALS/{}",
     "operation": "PUT",
     "properties": [
@@ -24388,7 +24826,7 @@
     ]
   },
   {
-    "api_version": "2015-05-01-preview",
+    "api_version": "2020-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/KEYS/{}",
     "operation": "PUT",
     "properties": [
@@ -24397,7 +24835,7 @@
     ]
   },
   {
-    "api_version": "2014-04-01",
+    "api_version": "2021-02-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/RESTORABLEDROPPEDDATABASES",
     "operation": "GET",
     "properties": [
@@ -24409,6 +24847,20 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/SECURITYALERTPOLICIES/{}",
     "operation": "GET",
     "properties": [
+      "properties/disabledAlerts",
+      "properties/emailAccountAdmins",
+      "properties/emailAddresses",
+      "properties/retentionDays",
+      "properties/state",
+      "properties/storageAccountAccessKey",
+      "properties/storageEndpoint"
+    ]
+  },
+  {
+    "api_version": "2020-11-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/SECURITYALERTPOLICIES/{}",
+    "operation": "GET",
+    "properties": [
       "id",
       "properties/disabledAlerts",
       "properties/emailAccountAdmins",
@@ -24421,6 +24873,20 @@
   },
   {
     "api_version": "2017-03-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/SECURITYALERTPOLICIES/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/disabledAlerts",
+      "properties/emailAccountAdmins",
+      "properties/emailAddresses",
+      "properties/retentionDays",
+      "properties/state",
+      "properties/storageAccountAccessKey",
+      "properties/storageEndpoint"
+    ]
+  },
+  {
+    "api_version": "2020-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/SECURITYALERTPOLICIES/{}",
     "operation": "PUT",
     "properties": [
@@ -24440,7 +24906,23 @@
     "operation": "DELETE"
   },
   {
+    "api_version": "2020-11-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/VIRTUALNETWORKRULES/{}",
+    "operation": "DELETE"
+  },
+  {
     "api_version": "2015-05-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/VIRTUALNETWORKRULES/{}",
+    "operation": "GET",
+    "properties": [
+      "id",
+      "properties/ignoreMissingVnetServiceEndpoint",
+      "properties/state",
+      "properties/virtualNetworkSubnetId"
+    ]
+  },
+  {
+    "api_version": "2020-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/VIRTUALNETWORKRULES/{}",
     "operation": "GET",
     "properties": [
@@ -24462,12 +24944,23 @@
     ]
   },
   {
-    "api_version": "2018-06-01-preview",
+    "api_version": "2020-11-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/VIRTUALNETWORKRULES/{}",
+    "operation": "PUT",
+    "properties": [
+      "id",
+      "properties/ignoreMissingVnetServiceEndpoint",
+      "properties/state",
+      "properties/virtualNetworkSubnetId"
+    ]
+  },
+  {
+    "api_version": "2020-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/VULNERABILITYASSESSMENTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2018-06-01-preview",
+    "api_version": "2020-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/VULNERABILITYASSESSMENTS/{}",
     "operation": "GET",
     "properties": [
@@ -24481,7 +24974,7 @@
     ]
   },
   {
-    "api_version": "2018-06-01-preview",
+    "api_version": "2020-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/VULNERABILITYASSESSMENTS/{}",
     "operation": "PUT",
     "properties": [
@@ -26603,6 +27096,7 @@
       "properties/defaultHostName",
       "properties/enabled",
       "properties/httpsOnly",
+      "properties/keyVaultReferenceIdentity",
       "properties/outboundIpAddresses",
       "properties/possibleOutboundIpAddresses",
       "properties/resourceGroup",
@@ -26722,6 +27216,7 @@
       "properties/defaultHostName",
       "properties/enabled",
       "properties/httpsOnly",
+      "properties/keyVaultReferenceIdentity",
       "properties/outboundIpAddresses",
       "properties/possibleOutboundIpAddresses",
       "properties/resourceGroup",
@@ -27270,6 +27765,7 @@
       "properties/defaultHostName",
       "properties/enabled",
       "properties/httpsOnly",
+      "properties/keyVaultReferenceIdentity",
       "properties/outboundIpAddresses",
       "properties/possibleOutboundIpAddresses",
       "properties/resourceGroup",
@@ -27389,6 +27885,7 @@
       "properties/defaultHostName",
       "properties/enabled",
       "properties/httpsOnly",
+      "properties/keyVaultReferenceIdentity",
       "properties/outboundIpAddresses",
       "properties/possibleOutboundIpAddresses",
       "properties/resourceGroup",
@@ -28776,16 +29273,51 @@
       "properties/deadLetterWithResourceIdentity/deadLetterDestination{StorageBlob}/properties/resourceId",
       "properties/deadLetterWithResourceIdentity/identity/type",
       "properties/deliveryWithResourceIdentity/destination{AzureFunction}/endpointType",
+      "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/type",
       "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/maxEventsPerBatch",
       "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/preferredBatchSizeInKilobytes",
       "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/resourceId",
       "properties/deliveryWithResourceIdentity/destination{EventHub}/endpointType",
+      "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/deliveryAttributeMappings{Static}/type",
       "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/resourceId",
       "properties/deliveryWithResourceIdentity/destination{HybridConnection}/endpointType",
+      "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/type",
       "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/resourceId",
       "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/endpointType",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/type",
       "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/resourceId",
       "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/endpointType",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/type",
       "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/resourceId",
       "properties/deliveryWithResourceIdentity/destination{StorageQueue}/endpointType",
       "properties/deliveryWithResourceIdentity/destination{StorageQueue}/properties/queueName",
@@ -28793,22 +29325,64 @@
       "properties/deliveryWithResourceIdentity/destination{WebHook}/endpointType",
       "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/azureActiveDirectoryApplicationIdOrUri",
       "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/azureActiveDirectoryTenantId",
+      "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/deliveryAttributeMappings{Static}/type",
       "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/endpointBaseUrl",
       "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/endpointUrl",
       "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/maxEventsPerBatch",
       "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/preferredBatchSizeInKilobytes",
       "properties/deliveryWithResourceIdentity/identity/type",
       "properties/destination{AzureFunction}/endpointType",
+      "properties/destination{AzureFunction}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/destination{AzureFunction}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/destination{AzureFunction}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/type",
       "properties/destination{AzureFunction}/properties/maxEventsPerBatch",
       "properties/destination{AzureFunction}/properties/preferredBatchSizeInKilobytes",
       "properties/destination{AzureFunction}/properties/resourceId",
       "properties/destination{EventHub}/endpointType",
+      "properties/destination{EventHub}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/destination{EventHub}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/destination{EventHub}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/destination{EventHub}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/destination{EventHub}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/destination{EventHub}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/destination{EventHub}/properties/deliveryAttributeMappings{Static}/type",
       "properties/destination{EventHub}/properties/resourceId",
       "properties/destination{HybridConnection}/endpointType",
+      "properties/destination{HybridConnection}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/destination{HybridConnection}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/destination{HybridConnection}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/type",
       "properties/destination{HybridConnection}/properties/resourceId",
       "properties/destination{ServiceBusQueue}/endpointType",
+      "properties/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/type",
       "properties/destination{ServiceBusQueue}/properties/resourceId",
       "properties/destination{ServiceBusTopic}/endpointType",
+      "properties/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/type",
       "properties/destination{ServiceBusTopic}/properties/resourceId",
       "properties/destination{StorageQueue}/endpointType",
       "properties/destination{StorageQueue}/properties/queueName",
@@ -28816,6 +29390,13 @@
       "properties/destination{WebHook}/endpointType",
       "properties/destination{WebHook}/properties/azureActiveDirectoryApplicationIdOrUri",
       "properties/destination{WebHook}/properties/azureActiveDirectoryTenantId",
+      "properties/destination{WebHook}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/destination{WebHook}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/destination{WebHook}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/destination{WebHook}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/destination{WebHook}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/destination{WebHook}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/destination{WebHook}/properties/deliveryAttributeMappings{Static}/type",
       "properties/destination{WebHook}/properties/endpointBaseUrl",
       "properties/destination{WebHook}/properties/endpointUrl",
       "properties/destination{WebHook}/properties/maxEventsPerBatch",
@@ -28902,16 +29483,51 @@
       "properties/deadLetterWithResourceIdentity/deadLetterDestination{StorageBlob}/properties/resourceId",
       "properties/deadLetterWithResourceIdentity/identity/type",
       "properties/deliveryWithResourceIdentity/destination{AzureFunction}/endpointType",
+      "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/type",
       "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/maxEventsPerBatch",
       "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/preferredBatchSizeInKilobytes",
       "properties/deliveryWithResourceIdentity/destination{AzureFunction}/properties/resourceId",
       "properties/deliveryWithResourceIdentity/destination{EventHub}/endpointType",
+      "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/deliveryAttributeMappings{Static}/type",
       "properties/deliveryWithResourceIdentity/destination{EventHub}/properties/resourceId",
       "properties/deliveryWithResourceIdentity/destination{HybridConnection}/endpointType",
+      "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/type",
       "properties/deliveryWithResourceIdentity/destination{HybridConnection}/properties/resourceId",
       "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/endpointType",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/type",
       "properties/deliveryWithResourceIdentity/destination{ServiceBusQueue}/properties/resourceId",
       "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/endpointType",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/type",
       "properties/deliveryWithResourceIdentity/destination{ServiceBusTopic}/properties/resourceId",
       "properties/deliveryWithResourceIdentity/destination{StorageQueue}/endpointType",
       "properties/deliveryWithResourceIdentity/destination{StorageQueue}/properties/queueName",
@@ -28919,22 +29535,64 @@
       "properties/deliveryWithResourceIdentity/destination{WebHook}/endpointType",
       "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/azureActiveDirectoryApplicationIdOrUri",
       "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/azureActiveDirectoryTenantId",
+      "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/deliveryAttributeMappings{Static}/type",
       "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/endpointBaseUrl",
       "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/endpointUrl",
       "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/maxEventsPerBatch",
       "properties/deliveryWithResourceIdentity/destination{WebHook}/properties/preferredBatchSizeInKilobytes",
       "properties/deliveryWithResourceIdentity/identity/type",
       "properties/destination{AzureFunction}/endpointType",
+      "properties/destination{AzureFunction}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/destination{AzureFunction}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/destination{AzureFunction}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/destination{AzureFunction}/properties/deliveryAttributeMappings{Static}/type",
       "properties/destination{AzureFunction}/properties/maxEventsPerBatch",
       "properties/destination{AzureFunction}/properties/preferredBatchSizeInKilobytes",
       "properties/destination{AzureFunction}/properties/resourceId",
       "properties/destination{EventHub}/endpointType",
+      "properties/destination{EventHub}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/destination{EventHub}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/destination{EventHub}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/destination{EventHub}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/destination{EventHub}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/destination{EventHub}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/destination{EventHub}/properties/deliveryAttributeMappings{Static}/type",
       "properties/destination{EventHub}/properties/resourceId",
       "properties/destination{HybridConnection}/endpointType",
+      "properties/destination{HybridConnection}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/destination{HybridConnection}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/destination{HybridConnection}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/destination{HybridConnection}/properties/deliveryAttributeMappings{Static}/type",
       "properties/destination{HybridConnection}/properties/resourceId",
       "properties/destination{ServiceBusQueue}/endpointType",
+      "properties/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/destination{ServiceBusQueue}/properties/deliveryAttributeMappings{Static}/type",
       "properties/destination{ServiceBusQueue}/properties/resourceId",
       "properties/destination{ServiceBusTopic}/endpointType",
+      "properties/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/destination{ServiceBusTopic}/properties/deliveryAttributeMappings{Static}/type",
       "properties/destination{ServiceBusTopic}/properties/resourceId",
       "properties/destination{StorageQueue}/endpointType",
       "properties/destination{StorageQueue}/properties/queueName",
@@ -28942,6 +29600,13 @@
       "properties/destination{WebHook}/endpointType",
       "properties/destination{WebHook}/properties/azureActiveDirectoryApplicationIdOrUri",
       "properties/destination{WebHook}/properties/azureActiveDirectoryTenantId",
+      "properties/destination{WebHook}/properties/deliveryAttributeMappings{Dynamic}/name",
+      "properties/destination{WebHook}/properties/deliveryAttributeMappings{Dynamic}/properties/sourceField",
+      "properties/destination{WebHook}/properties/deliveryAttributeMappings{Dynamic}/type",
+      "properties/destination{WebHook}/properties/deliveryAttributeMappings{Static}/name",
+      "properties/destination{WebHook}/properties/deliveryAttributeMappings{Static}/properties/isSecret",
+      "properties/destination{WebHook}/properties/deliveryAttributeMappings{Static}/properties/value",
+      "properties/destination{WebHook}/properties/deliveryAttributeMappings{Static}/type",
       "properties/destination{WebHook}/properties/endpointBaseUrl",
       "properties/destination{WebHook}/properties/endpointUrl",
       "properties/destination{WebHook}/properties/maxEventsPerBatch",
