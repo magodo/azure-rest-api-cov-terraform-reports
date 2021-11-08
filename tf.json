@@ -75,7 +75,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTNAMES/{}",
     "operation": "HEAD"
   },
@@ -6126,6 +6126,7 @@
       "properties/osProfile/computerName",
       "properties/osProfile/customData",
       "properties/osProfile/linuxConfiguration/disablePasswordAuthentication",
+      "properties/osProfile/linuxConfiguration/patchSettings/patchMode",
       "properties/osProfile/linuxConfiguration/provisionVMAgent",
       "properties/osProfile/linuxConfiguration/ssh/publicKeys/keyData",
       "properties/osProfile/linuxConfiguration/ssh/publicKeys/path",
@@ -6216,6 +6217,7 @@
       "properties/osProfile/allowExtensionOperations",
       "properties/osProfile/computerName",
       "properties/osProfile/linuxConfiguration/disablePasswordAuthentication",
+      "properties/osProfile/linuxConfiguration/patchSettings/patchMode",
       "properties/osProfile/linuxConfiguration/provisionVMAgent",
       "properties/osProfile/linuxConfiguration/ssh/publicKeys/keyData",
       "properties/osProfile/linuxConfiguration/ssh/publicKeys/path",
@@ -6286,6 +6288,7 @@
       "properties/osProfile/computerName",
       "properties/osProfile/customData",
       "properties/osProfile/linuxConfiguration/disablePasswordAuthentication",
+      "properties/osProfile/linuxConfiguration/patchSettings/patchMode",
       "properties/osProfile/linuxConfiguration/provisionVMAgent",
       "properties/osProfile/linuxConfiguration/ssh/publicKeys/keyData",
       "properties/osProfile/linuxConfiguration/ssh/publicKeys/path",
@@ -7083,7 +7086,6 @@
       "properties/policies/trustPolicy/status",
       "properties/policies/trustPolicy/type",
       "properties/publicNetworkAccess",
-      "properties/storageAccount/id",
       "properties/zoneRedundancy",
       "sku/name",
       "sku/tier",
@@ -7147,7 +7149,6 @@
       "properties/policies/trustPolicy/status",
       "properties/policies/trustPolicy/type",
       "properties/publicNetworkAccess",
-      "properties/storageAccount/id",
       "properties/zoneRedundancy",
       "sku/name",
       "sku/tier",
@@ -7299,12 +7300,12 @@
     "operation": "POST"
   },
   {
-    "api_version": "2021-05-01",
+    "api_version": "2021-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-05-01",
+    "api_version": "2021-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
     "operation": "GET",
     "properties": [
@@ -7458,7 +7459,7 @@
     ]
   },
   {
-    "api_version": "2021-05-01",
+    "api_version": "2021-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
     "operation": "PUT",
     "properties": [
@@ -7612,17 +7613,17 @@
     ]
   },
   {
-    "api_version": "2021-05-01",
+    "api_version": "2021-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/ACCESSPROFILES/{}/LISTCREDENTIAL",
     "operation": "POST"
   },
   {
-    "api_version": "2021-05-01",
+    "api_version": "2021-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/AGENTPOOLS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-05-01",
+    "api_version": "2021-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/AGENTPOOLS/{}",
     "operation": "GET",
     "properties": [
@@ -7703,7 +7704,7 @@
     ]
   },
   {
-    "api_version": "2021-05-01",
+    "api_version": "2021-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/AGENTPOOLS/{}",
     "operation": "PUT",
     "properties": [
@@ -7784,12 +7785,12 @@
     ]
   },
   {
-    "api_version": "2021-05-01",
+    "api_version": "2021-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/MAINTENANCECONFIGURATIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-05-01",
+    "api_version": "2021-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/MAINTENANCECONFIGURATIONS/{}",
     "operation": "GET",
     "properties": [
@@ -7800,7 +7801,7 @@
     ]
   },
   {
-    "api_version": "2021-05-01",
+    "api_version": "2021-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/MAINTENANCECONFIGURATIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -7811,7 +7812,7 @@
     ]
   },
   {
-    "api_version": "2021-05-01",
+    "api_version": "2021-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/RESETAADPROFILE",
     "operation": "POST",
     "properties": [
@@ -7825,7 +7826,7 @@
     ]
   },
   {
-    "api_version": "2021-05-01",
+    "api_version": "2021-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/RESETSERVICEPRINCIPALPROFILE",
     "operation": "POST",
     "properties": [
@@ -10181,8 +10182,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORMARIADB/SERVERS/{}/CONFIGURATIONS/{}",
     "operation": "GET",
     "properties": [
-      "id",
-      "name",
       "properties/defaultValue",
       "properties/value"
     ]
@@ -10192,8 +10191,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORMARIADB/SERVERS/{}/CONFIGURATIONS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
-      "name",
       "properties/defaultValue",
       "properties/value"
     ]
@@ -10209,7 +10206,6 @@
     "operation": "GET",
     "properties": [
       "id",
-      "name",
       "properties/charset",
       "properties/collation"
     ]
@@ -10220,7 +10216,6 @@
     "operation": "PUT",
     "properties": [
       "id",
-      "name",
       "properties/charset",
       "properties/collation"
     ]
@@ -10236,7 +10231,6 @@
     "operation": "GET",
     "properties": [
       "id",
-      "name",
       "properties/endIpAddress",
       "properties/startIpAddress"
     ]
@@ -10247,7 +10241,6 @@
     "operation": "PUT",
     "properties": [
       "id",
-      "name",
       "properties/endIpAddress",
       "properties/startIpAddress"
     ]
@@ -10263,7 +10256,6 @@
     "operation": "GET",
     "properties": [
       "id",
-      "name",
       "properties/ignoreMissingVnetServiceEndpoint",
       "properties/state",
       "properties/virtualNetworkSubnetId"
@@ -10275,7 +10267,6 @@
     "operation": "PUT",
     "properties": [
       "id",
-      "name",
       "properties/ignoreMissingVnetServiceEndpoint",
       "properties/state",
       "properties/virtualNetworkSubnetId"
@@ -11979,12 +11970,66 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/CASSANDRACLUSTERS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2021-10-15",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/CASSANDRACLUSTERS/{}",
+    "operation": "GET",
+    "properties": [
+      "location",
+      "properties/delegatedManagementSubnetId",
+      "properties/initialCassandraAdminPassword"
+    ]
+  },
+  {
+    "api_version": "2021-10-15",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/CASSANDRACLUSTERS/{}",
+    "operation": "PUT",
+    "properties": [
+      "location",
+      "properties/delegatedManagementSubnetId",
+      "properties/initialCassandraAdminPassword"
+    ]
+  },
+  {
+    "api_version": "2021-10-15",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/CASSANDRACLUSTERS/{}/DATACENTERS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2021-10-15",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/CASSANDRACLUSTERS/{}/DATACENTERS/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/dataCenterLocation",
+      "properties/delegatedSubnetId",
+      "properties/diskCapacity",
+      "properties/nodeCount",
+      "properties/sku"
+    ]
+  },
+  {
+    "api_version": "2021-10-15",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/CASSANDRACLUSTERS/{}/DATACENTERS/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/dataCenterLocation",
+      "properties/delegatedSubnetId",
+      "properties/diskCapacity",
+      "properties/nodeCount",
+      "properties/sku"
+    ]
+  },
+  {
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}",
     "operation": "GET",
     "properties": [
@@ -12050,7 +12095,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}",
     "operation": "PUT",
     "properties": [
@@ -12098,12 +12143,12 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/CASSANDRAKEYSPACES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/CASSANDRAKEYSPACES/{}",
     "operation": "GET",
     "properties": [
@@ -12112,7 +12157,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/CASSANDRAKEYSPACES/{}",
     "operation": "PUT",
     "properties": [
@@ -12122,12 +12167,12 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/CASSANDRAKEYSPACES/{}/TABLES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/CASSANDRAKEYSPACES/{}/TABLES/{}",
     "operation": "GET",
     "properties": [
@@ -12142,7 +12187,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/CASSANDRAKEYSPACES/{}/TABLES/{}",
     "operation": "PUT",
     "properties": [
@@ -12159,7 +12204,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/CASSANDRAKEYSPACES/{}/TABLES/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "GET",
     "properties": [
@@ -12168,7 +12213,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/CASSANDRAKEYSPACES/{}/TABLES/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "PUT",
     "properties": [
@@ -12177,7 +12222,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/CASSANDRAKEYSPACES/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "GET",
     "properties": [
@@ -12186,7 +12231,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/CASSANDRAKEYSPACES/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "PUT",
     "properties": [
@@ -12195,12 +12240,12 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/GREMLINDATABASES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/GREMLINDATABASES/{}",
     "operation": "GET",
     "properties": [
@@ -12209,7 +12254,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/GREMLINDATABASES/{}",
     "operation": "PUT",
     "properties": [
@@ -12219,12 +12264,12 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/GREMLINDATABASES/{}/GRAPHS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/GREMLINDATABASES/{}/GRAPHS/{}",
     "operation": "GET",
     "properties": [
@@ -12248,7 +12293,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/GREMLINDATABASES/{}/GRAPHS/{}",
     "operation": "PUT",
     "properties": [
@@ -12274,7 +12319,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/GREMLINDATABASES/{}/GRAPHS/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "GET",
     "properties": [
@@ -12283,7 +12328,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/GREMLINDATABASES/{}/GRAPHS/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "PUT",
     "properties": [
@@ -12292,7 +12337,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/GREMLINDATABASES/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "GET",
     "properties": [
@@ -12301,7 +12346,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/GREMLINDATABASES/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "PUT",
     "properties": [
@@ -12310,22 +12355,22 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/LISTCONNECTIONSTRINGS",
     "operation": "POST"
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/LISTKEYS",
     "operation": "POST"
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/MONGODBDATABASES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/MONGODBDATABASES/{}",
     "operation": "GET",
     "properties": [
@@ -12335,7 +12380,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/MONGODBDATABASES/{}",
     "operation": "PUT",
     "properties": [
@@ -12345,12 +12390,12 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/MONGODBDATABASES/{}/COLLECTIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/MONGODBDATABASES/{}/COLLECTIONS/{}",
     "operation": "GET",
     "properties": [
@@ -12364,7 +12409,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/MONGODBDATABASES/{}/COLLECTIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -12379,7 +12424,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/MONGODBDATABASES/{}/COLLECTIONS/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "GET",
     "properties": [
@@ -12388,7 +12433,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/MONGODBDATABASES/{}/COLLECTIONS/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "PUT",
     "properties": [
@@ -12397,7 +12442,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/MONGODBDATABASES/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "GET",
     "properties": [
@@ -12406,7 +12451,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/MONGODBDATABASES/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "PUT",
     "properties": [
@@ -12415,12 +12460,12 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/NOTEBOOKWORKSPACES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/NOTEBOOKWORKSPACES/{}",
     "operation": "GET",
     "properties": [
@@ -12428,17 +12473,17 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/READONLYKEYS",
     "operation": "POST"
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}",
     "operation": "GET",
     "properties": [
@@ -12447,7 +12492,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}",
     "operation": "PUT",
     "properties": [
@@ -12457,12 +12502,12 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/CONTAINERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/CONTAINERS/{}",
     "operation": "GET",
     "properties": [
@@ -12486,7 +12531,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/CONTAINERS/{}",
     "operation": "PUT",
     "properties": [
@@ -12512,12 +12557,12 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/CONTAINERS/{}/STOREDPROCEDURES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/CONTAINERS/{}/STOREDPROCEDURES/{}",
     "operation": "GET",
     "properties": [
@@ -12526,7 +12571,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/CONTAINERS/{}/STOREDPROCEDURES/{}",
     "operation": "PUT",
     "properties": [
@@ -12536,7 +12581,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/CONTAINERS/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "GET",
     "properties": [
@@ -12545,7 +12590,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/CONTAINERS/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "PUT",
     "properties": [
@@ -12554,12 +12599,12 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/CONTAINERS/{}/TRIGGERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/CONTAINERS/{}/TRIGGERS/{}",
     "operation": "GET",
     "properties": [
@@ -12569,7 +12614,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/CONTAINERS/{}/TRIGGERS/{}",
     "operation": "PUT",
     "properties": [
@@ -12581,12 +12626,12 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/CONTAINERS/{}/USERDEFINEDFUNCTIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/CONTAINERS/{}/USERDEFINEDFUNCTIONS/{}",
     "operation": "GET",
     "properties": [
@@ -12594,7 +12639,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/CONTAINERS/{}/USERDEFINEDFUNCTIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -12604,7 +12649,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "GET",
     "properties": [
@@ -12613,7 +12658,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "PUT",
     "properties": [
@@ -12622,12 +12667,12 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/TABLES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/TABLES/{}",
     "operation": "GET",
     "properties": [
@@ -12636,7 +12681,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/TABLES/{}",
     "operation": "PUT",
     "properties": [
@@ -12646,7 +12691,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/TABLES/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "GET",
     "properties": [
@@ -12655,7 +12700,7 @@
     ]
   },
   {
-    "api_version": "2021-06-15",
+    "api_version": "2021-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/TABLES/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "PUT",
     "properties": [
@@ -15400,7 +15445,7 @@
     "properties": [
       "id",
       "location",
-      "properties",
+      "properties/integrationServiceEnvironment/id",
       "sku/name",
       "tags"
     ]
@@ -15412,7 +15457,7 @@
     "properties": [
       "id",
       "location",
-      "properties",
+      "properties/integrationServiceEnvironment/id",
       "sku/name",
       "tags"
     ]
@@ -15762,6 +15807,66 @@
       "properties/integrationServiceEnvironment/id",
       "properties/parameters",
       "properties/state",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2020-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.LOGZ/MONITORS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2020-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.LOGZ/MONITORS/{}",
+    "operation": "GET",
+    "properties": [
+      "id",
+      "location",
+      "properties/logzOrganizationProperties/companyName",
+      "properties/logzOrganizationProperties/enterpriseAppId",
+      "properties/logzOrganizationProperties/id",
+      "properties/logzOrganizationProperties/singleSignOnUrl",
+      "properties/monitoringStatus",
+      "properties/planData/billingCycle",
+      "properties/planData/effectiveDate",
+      "properties/planData/planDetails",
+      "properties/planData/usageType",
+      "properties/userInfo/emailAddress",
+      "properties/userInfo/firstName",
+      "properties/userInfo/lastName",
+      "properties/userInfo/phoneNumber",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2020-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.LOGZ/MONITORS/{}",
+    "operation": "PATCH",
+    "properties": [
+      "properties/monitoringStatus",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2020-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.LOGZ/MONITORS/{}",
+    "operation": "PUT",
+    "properties": [
+      "id",
+      "location",
+      "properties/logzOrganizationProperties/companyName",
+      "properties/logzOrganizationProperties/enterpriseAppId",
+      "properties/logzOrganizationProperties/id",
+      "properties/logzOrganizationProperties/singleSignOnUrl",
+      "properties/monitoringStatus",
+      "properties/planData/billingCycle",
+      "properties/planData/effectiveDate",
+      "properties/planData/planDetails",
+      "properties/planData/usageType",
+      "properties/userInfo/emailAddress",
+      "properties/userInfo/firstName",
+      "properties/userInfo/lastName",
+      "properties/userInfo/phoneNumber",
       "tags"
     ]
   },
@@ -15863,6 +15968,7 @@
       "properties{AKS}/resourceId",
       "properties{AmlCompute}/computeLocation",
       "properties{AmlCompute}/description",
+      "properties{AmlCompute}/disableLocalAuth",
       "properties{AmlCompute}/properties/remoteLoginPortPublicAccess",
       "properties{AmlCompute}/properties/scaleSettings/maxNodeCount",
       "properties{AmlCompute}/properties/scaleSettings/minNodeCount",
@@ -15875,6 +15981,7 @@
       "properties{AmlCompute}/properties/vmSize",
       "properties{ComputeInstance}/computeLocation",
       "properties{ComputeInstance}/description",
+      "properties{ComputeInstance}/disableLocalAuth",
       "properties{ComputeInstance}/properties/computeInstanceAuthorizationType",
       "properties{ComputeInstance}/properties/personalComputeInstanceSettings/assignedUser/objectId",
       "properties{ComputeInstance}/properties/personalComputeInstanceSettings/assignedUser/tenantId",
@@ -15886,6 +15993,7 @@
       "properties{ComputeInstance}/properties/vmSize",
       "properties{SynapseSpark}/computeLocation",
       "properties{SynapseSpark}/description",
+      "properties{SynapseSpark}/disableLocalAuth",
       "properties{SynapseSpark}/properties",
       "properties{SynapseSpark}/resourceId",
       "sku",
@@ -15916,6 +16024,7 @@
       "properties{AKS}/resourceId",
       "properties{AmlCompute}/computeLocation",
       "properties{AmlCompute}/description",
+      "properties{AmlCompute}/disableLocalAuth",
       "properties{AmlCompute}/properties/remoteLoginPortPublicAccess",
       "properties{AmlCompute}/properties/scaleSettings/maxNodeCount",
       "properties{AmlCompute}/properties/scaleSettings/minNodeCount",
@@ -15928,6 +16037,7 @@
       "properties{AmlCompute}/properties/vmSize",
       "properties{ComputeInstance}/computeLocation",
       "properties{ComputeInstance}/description",
+      "properties{ComputeInstance}/disableLocalAuth",
       "properties{ComputeInstance}/properties/computeInstanceAuthorizationType",
       "properties{ComputeInstance}/properties/personalComputeInstanceSettings/assignedUser/objectId",
       "properties{ComputeInstance}/properties/personalComputeInstanceSettings/assignedUser/tenantId",
@@ -15939,6 +16049,7 @@
       "properties{ComputeInstance}/properties/vmSize",
       "properties{SynapseSpark}/computeLocation",
       "properties{SynapseSpark}/description",
+      "properties{SynapseSpark}/disableLocalAuth",
       "properties{SynapseSpark}/properties",
       "properties{SynapseSpark}/resourceId",
       "sku",
@@ -18284,6 +18395,11 @@
       "properties/dnsSettings/enableProxy",
       "properties/dnsSettings/servers",
       "properties/firewalls/id",
+      "properties/insights/isEnabled",
+      "properties/insights/logAnalyticsResources/defaultWorkspaceId/id",
+      "properties/insights/logAnalyticsResources/workspaces/region",
+      "properties/insights/logAnalyticsResources/workspaces/workspaceId/id",
+      "properties/insights/retentionDays",
       "properties/intrusionDetection/configuration/bypassTrafficSettings/description",
       "properties/intrusionDetection/configuration/bypassTrafficSettings/destinationAddresses",
       "properties/intrusionDetection/configuration/bypassTrafficSettings/destinationIpGroups",
@@ -18322,6 +18438,11 @@
       "properties/dnsSettings/enableProxy",
       "properties/dnsSettings/servers",
       "properties/firewalls/id",
+      "properties/insights/isEnabled",
+      "properties/insights/logAnalyticsResources/defaultWorkspaceId/id",
+      "properties/insights/logAnalyticsResources/workspaces/region",
+      "properties/insights/logAnalyticsResources/workspaces/workspaceId/id",
+      "properties/insights/retentionDays",
       "properties/intrusionDetection/configuration/bypassTrafficSettings/description",
       "properties/intrusionDetection/configuration/bypassTrafficSettings/destinationAddresses",
       "properties/intrusionDetection/configuration/bypassTrafficSettings/destinationIpGroups",
@@ -18382,6 +18503,7 @@
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/sourceAddresses",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/sourceIpGroups",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/translatedAddress",
+      "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/translatedFqdn",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/translatedPort",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NetworkRule}/destinationAddresses",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NetworkRule}/destinationFqdns",
@@ -18417,6 +18539,7 @@
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/sourceAddresses",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/sourceIpGroups",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/translatedAddress",
+      "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/translatedFqdn",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/translatedPort",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NetworkRule}/destinationAddresses",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NetworkRule}/destinationFqdns",
@@ -18462,6 +18585,7 @@
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/sourceAddresses",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/sourceIpGroups",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/translatedAddress",
+      "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/translatedFqdn",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/translatedPort",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NetworkRule}/destinationAddresses",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NetworkRule}/destinationFqdns",
@@ -18497,6 +18621,7 @@
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/sourceAddresses",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/sourceIpGroups",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/translatedAddress",
+      "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/translatedFqdn",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/translatedPort",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NetworkRule}/destinationAddresses",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NetworkRule}/destinationFqdns",
@@ -22095,7 +22220,6 @@
     "properties": [
       "id",
       "location",
-      "name",
       "properties/bgpSettings/asn",
       "properties/bgpSettings/bgpPeeringAddress",
       "properties/bgpSettings/bgpPeeringAddresses/customBgpIpAddresses",
@@ -22117,7 +22241,6 @@
     "properties": [
       "id",
       "location",
-      "name",
       "properties/bgpSettings/asn",
       "properties/bgpSettings/bgpPeeringAddress",
       "properties/bgpSettings/bgpPeeringAddresses/customBgpIpAddresses",
@@ -22851,12 +22974,12 @@
     "operation": "POST"
   },
   {
-    "api_version": "2020-12-01-preview",
+    "api_version": "2021-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.PURVIEW/ACCOUNTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-12-01-preview",
+    "api_version": "2021-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.PURVIEW/ACCOUNTS/{}",
     "operation": "GET",
     "properties": [
@@ -22868,13 +22991,11 @@
       "properties/endpoints/guardian",
       "properties/endpoints/scan",
       "properties/publicNetworkAccess",
-      "sku/capacity",
-      "sku/name",
       "tags"
     ]
   },
   {
-    "api_version": "2020-12-01-preview",
+    "api_version": "2021-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.PURVIEW/ACCOUNTS/{}",
     "operation": "PUT",
     "properties": [
@@ -22886,13 +23007,11 @@
       "properties/endpoints/guardian",
       "properties/endpoints/scan",
       "properties/publicNetworkAccess",
-      "sku/capacity",
-      "sku/name",
       "tags"
     ]
   },
   {
-    "api_version": "2020-12-01-preview",
+    "api_version": "2021-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.PURVIEW/ACCOUNTS/{}/LISTKEYS",
     "operation": "POST"
   },
@@ -24726,6 +24845,7 @@
       "properties/administratorLogin",
       "properties/administratorLoginPassword",
       "properties/collation",
+      "properties/dnsZonePartner",
       "properties/fullyQualifiedDomainName",
       "properties/licenseType",
       "properties/minimalTlsVersion",
@@ -24751,6 +24871,7 @@
       "properties/administratorLogin",
       "properties/administratorLoginPassword",
       "properties/collation",
+      "properties/dnsZonePartner",
       "properties/fullyQualifiedDomainName",
       "properties/licenseType",
       "properties/minimalTlsVersion",
@@ -25018,6 +25139,7 @@
       "properties/minCapacity",
       "properties/readScale",
       "properties/recoverableDatabaseId",
+      "properties/requestedBackupStorageRedundancy",
       "properties/restorableDroppedDatabaseId",
       "properties/restorePointInTime",
       "properties/sampleName",
@@ -25082,6 +25204,7 @@
       "properties/minCapacity",
       "properties/readScale",
       "properties/recoverableDatabaseId",
+      "properties/requestedBackupStorageRedundancy",
       "properties/restorableDroppedDatabaseId",
       "properties/restorePointInTime",
       "properties/sampleName",
@@ -26877,6 +27000,9 @@
     "properties": [
       "id",
       "name",
+      "properties/datasource{Microsoft.AzureFunction}/type",
+      "properties/datasource{Microsoft.DataLake/Accounts}/type",
+      "properties/datasource{Microsoft.EventHub/EventHub}/type",
       "properties/datasource{Microsoft.ServiceBus/EventHub}/properties/eventHubName",
       "properties/datasource{Microsoft.ServiceBus/EventHub}/properties/partitionKey",
       "properties/datasource{Microsoft.ServiceBus/EventHub}/properties/propertyColumns",
@@ -26894,6 +27020,12 @@
       "properties/datasource{Microsoft.ServiceBus/Topic}/properties/sharedAccessPolicyName",
       "properties/datasource{Microsoft.ServiceBus/Topic}/properties/topicName",
       "properties/datasource{Microsoft.ServiceBus/Topic}/type",
+      "properties/datasource{Microsoft.Sql/Server/DataWarehouse}/properties/database",
+      "properties/datasource{Microsoft.Sql/Server/DataWarehouse}/properties/password",
+      "properties/datasource{Microsoft.Sql/Server/DataWarehouse}/properties/server",
+      "properties/datasource{Microsoft.Sql/Server/DataWarehouse}/properties/table",
+      "properties/datasource{Microsoft.Sql/Server/DataWarehouse}/properties/user",
+      "properties/datasource{Microsoft.Sql/Server/DataWarehouse}/type",
       "properties/datasource{Microsoft.Sql/Server/Database}/properties/database",
       "properties/datasource{Microsoft.Sql/Server/Database}/properties/password",
       "properties/datasource{Microsoft.Sql/Server/Database}/properties/server",
@@ -26907,6 +27039,7 @@
       "properties/datasource{Microsoft.Storage/Blob}/properties/storageAccounts/accountName",
       "properties/datasource{Microsoft.Storage/Blob}/properties/timeFormat",
       "properties/datasource{Microsoft.Storage/Blob}/type",
+      "properties/datasource{Microsoft.Storage/DocumentDB}/type",
       "properties/datasource{Microsoft.Storage/Table}/properties/accountKey",
       "properties/datasource{Microsoft.Storage/Table}/properties/accountName",
       "properties/datasource{Microsoft.Storage/Table}/properties/batchSize",
@@ -26914,6 +27047,7 @@
       "properties/datasource{Microsoft.Storage/Table}/properties/rowKey",
       "properties/datasource{Microsoft.Storage/Table}/properties/table",
       "properties/datasource{Microsoft.Storage/Table}/type",
+      "properties/datasource{PowerBI}/type",
       "properties/serialization{Avro}/properties",
       "properties/serialization{Avro}/type",
       "properties/serialization{Csv}/properties/encoding",
@@ -26935,6 +27069,9 @@
     "properties": [
       "id",
       "name",
+      "properties/datasource{Microsoft.AzureFunction}/type",
+      "properties/datasource{Microsoft.DataLake/Accounts}/type",
+      "properties/datasource{Microsoft.EventHub/EventHub}/type",
       "properties/datasource{Microsoft.ServiceBus/EventHub}/properties/eventHubName",
       "properties/datasource{Microsoft.ServiceBus/EventHub}/properties/partitionKey",
       "properties/datasource{Microsoft.ServiceBus/EventHub}/properties/propertyColumns",
@@ -26952,6 +27089,12 @@
       "properties/datasource{Microsoft.ServiceBus/Topic}/properties/sharedAccessPolicyName",
       "properties/datasource{Microsoft.ServiceBus/Topic}/properties/topicName",
       "properties/datasource{Microsoft.ServiceBus/Topic}/type",
+      "properties/datasource{Microsoft.Sql/Server/DataWarehouse}/properties/database",
+      "properties/datasource{Microsoft.Sql/Server/DataWarehouse}/properties/password",
+      "properties/datasource{Microsoft.Sql/Server/DataWarehouse}/properties/server",
+      "properties/datasource{Microsoft.Sql/Server/DataWarehouse}/properties/table",
+      "properties/datasource{Microsoft.Sql/Server/DataWarehouse}/properties/user",
+      "properties/datasource{Microsoft.Sql/Server/DataWarehouse}/type",
       "properties/datasource{Microsoft.Sql/Server/Database}/properties/database",
       "properties/datasource{Microsoft.Sql/Server/Database}/properties/password",
       "properties/datasource{Microsoft.Sql/Server/Database}/properties/server",
@@ -26965,6 +27108,7 @@
       "properties/datasource{Microsoft.Storage/Blob}/properties/storageAccounts/accountName",
       "properties/datasource{Microsoft.Storage/Blob}/properties/timeFormat",
       "properties/datasource{Microsoft.Storage/Blob}/type",
+      "properties/datasource{Microsoft.Storage/DocumentDB}/type",
       "properties/datasource{Microsoft.Storage/Table}/properties/accountKey",
       "properties/datasource{Microsoft.Storage/Table}/properties/accountName",
       "properties/datasource{Microsoft.Storage/Table}/properties/batchSize",
@@ -26972,6 +27116,7 @@
       "properties/datasource{Microsoft.Storage/Table}/properties/rowKey",
       "properties/datasource{Microsoft.Storage/Table}/properties/table",
       "properties/datasource{Microsoft.Storage/Table}/type",
+      "properties/datasource{PowerBI}/type",
       "properties/serialization{Avro}/properties",
       "properties/serialization{Avro}/type",
       "properties/serialization{Csv}/properties/encoding",
@@ -26993,6 +27138,9 @@
     "properties": [
       "id",
       "name",
+      "properties/datasource{Microsoft.AzureFunction}/type",
+      "properties/datasource{Microsoft.DataLake/Accounts}/type",
+      "properties/datasource{Microsoft.EventHub/EventHub}/type",
       "properties/datasource{Microsoft.ServiceBus/EventHub}/properties/eventHubName",
       "properties/datasource{Microsoft.ServiceBus/EventHub}/properties/partitionKey",
       "properties/datasource{Microsoft.ServiceBus/EventHub}/properties/propertyColumns",
@@ -27010,6 +27158,12 @@
       "properties/datasource{Microsoft.ServiceBus/Topic}/properties/sharedAccessPolicyName",
       "properties/datasource{Microsoft.ServiceBus/Topic}/properties/topicName",
       "properties/datasource{Microsoft.ServiceBus/Topic}/type",
+      "properties/datasource{Microsoft.Sql/Server/DataWarehouse}/properties/database",
+      "properties/datasource{Microsoft.Sql/Server/DataWarehouse}/properties/password",
+      "properties/datasource{Microsoft.Sql/Server/DataWarehouse}/properties/server",
+      "properties/datasource{Microsoft.Sql/Server/DataWarehouse}/properties/table",
+      "properties/datasource{Microsoft.Sql/Server/DataWarehouse}/properties/user",
+      "properties/datasource{Microsoft.Sql/Server/DataWarehouse}/type",
       "properties/datasource{Microsoft.Sql/Server/Database}/properties/database",
       "properties/datasource{Microsoft.Sql/Server/Database}/properties/password",
       "properties/datasource{Microsoft.Sql/Server/Database}/properties/server",
@@ -27023,6 +27177,7 @@
       "properties/datasource{Microsoft.Storage/Blob}/properties/storageAccounts/accountName",
       "properties/datasource{Microsoft.Storage/Blob}/properties/timeFormat",
       "properties/datasource{Microsoft.Storage/Blob}/type",
+      "properties/datasource{Microsoft.Storage/DocumentDB}/type",
       "properties/datasource{Microsoft.Storage/Table}/properties/accountKey",
       "properties/datasource{Microsoft.Storage/Table}/properties/accountName",
       "properties/datasource{Microsoft.Storage/Table}/properties/batchSize",
@@ -27030,6 +27185,7 @@
       "properties/datasource{Microsoft.Storage/Table}/properties/rowKey",
       "properties/datasource{Microsoft.Storage/Table}/properties/table",
       "properties/datasource{Microsoft.Storage/Table}/type",
+      "properties/datasource{PowerBI}/type",
       "properties/serialization{Avro}/properties",
       "properties/serialization{Avro}/type",
       "properties/serialization{Csv}/properties/encoding",
@@ -27442,6 +27598,33 @@
       "properties/state",
       "properties/storageAccountAccessKey",
       "properties/storageEndpoint"
+    ]
+  },
+  {
+    "api_version": "2021-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/SQLADMINISTRATORS/ACTIVEDIRECTORY",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2021-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/SQLADMINISTRATORS/ACTIVEDIRECTORY",
+    "operation": "GET",
+    "properties": [
+      "properties/administratorType",
+      "properties/login",
+      "properties/sid",
+      "properties/tenantId"
+    ]
+  },
+  {
+    "api_version": "2021-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/SQLADMINISTRATORS/ACTIVEDIRECTORY",
+    "operation": "PUT",
+    "properties": [
+      "properties/administratorType",
+      "properties/login",
+      "properties/sid",
+      "properties/tenantId"
     ]
   },
   {
