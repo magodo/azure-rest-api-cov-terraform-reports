@@ -208,7 +208,6 @@
     "api_path": "/PROVIDERS/MICROSOFT.MANAGEMENT/MANAGEMENTGROUPS/{}/PROVIDERS/MICROSOFT.RESOURCES/DEPLOYMENTS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "location",
       "properties/debugSetting/detailLevel",
       "properties/mode",
@@ -305,7 +304,6 @@
     "api_path": "/PROVIDERS/MICROSOFT.RESOURCES/DEPLOYMENTS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "location",
       "properties/debugSetting/detailLevel",
       "properties/mode",
@@ -1077,7 +1075,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.RESOURCES/DEPLOYMENTS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "location",
       "properties/debugSetting/detailLevel",
       "properties/mode",
@@ -1183,7 +1180,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.SECURITY/PRICINGS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "properties/pricingTier"
     ]
   },
@@ -1192,7 +1188,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.SECURITY/PRICINGS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "properties/pricingTier"
     ]
   },
@@ -1206,7 +1201,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.SECURITY/SECURITYCONTACTS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "properties/alertNotifications",
       "properties/alertsToAdmins",
       "properties/email",
@@ -1218,7 +1212,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.SECURITY/SECURITYCONTACTS/{}",
     "operation": "PATCH",
     "properties": [
-      "id",
       "properties/alertNotifications",
       "properties/alertsToAdmins",
       "properties/email",
@@ -1231,7 +1224,6 @@
     "operation": "PUT",
     "variant": "DataExportSettings",
     "properties": [
-      "id",
       "kind",
       "properties/enabled"
     ]
@@ -1246,7 +1238,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.SECURITY/WORKSPACESETTINGS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "properties/scope",
       "properties/workspaceId"
     ]
@@ -1256,7 +1247,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.SECURITY/WORKSPACESETTINGS/{}",
     "operation": "PATCH",
     "properties": [
-      "id",
       "properties/scope",
       "properties/workspaceId"
     ]
@@ -1266,7 +1256,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.SECURITY/WORKSPACESETTINGS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "properties/scope",
       "properties/workspaceId"
     ]
@@ -3804,7 +3793,6 @@
     "operation": "GET",
     "properties": [
       "id",
-      "name",
       "properties/description",
       "properties/isEncrypted",
       "properties/value"
@@ -4231,7 +4219,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}/POOLS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "identity/type",
       "identity/userAssignedIdentities",
       "properties/allocationState",
@@ -4292,7 +4279,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}/POOLS/{}",
     "operation": "PATCH",
     "properties": [
-      "id",
       "identity/type",
       "identity/userAssignedIdentities",
       "properties/allocationState",
@@ -4353,7 +4339,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}/POOLS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "identity/type",
       "identity/userAssignedIdentities",
       "properties/allocationState",
@@ -5041,7 +5026,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/ENDPOINTS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "location",
       "properties/contentTypesToCompress",
       "properties/deliveryPolicy/description",
@@ -5322,7 +5306,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/ENDPOINTS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "location",
       "properties/contentTypesToCompress",
       "properties/deliveryPolicy/description",
@@ -9619,6 +9602,7 @@
     "operation": "GET",
     "properties": [
       "name",
+      "properties/fqdns",
       "properties/groupId",
       "properties/privateLinkResourceId",
       "properties/provisioningState"
@@ -9630,6 +9614,7 @@
     "operation": "PUT",
     "properties": [
       "name",
+      "properties/fqdns",
       "properties/groupId",
       "properties/privateLinkResourceId",
       "properties/provisioningState"
@@ -10440,9 +10425,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORMARIADB/SERVERS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "location",
-      "name",
       "properties/administratorLogin",
       "properties/fullyQualifiedDomainName",
       "properties/publicNetworkAccess",
@@ -10739,6 +10722,29 @@
   },
   {
     "api_version": "2021-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORMYSQL/FLEXIBLESERVERS/{}/DATABASES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2021-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORMYSQL/FLEXIBLESERVERS/{}/DATABASES/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/charset",
+      "properties/collation"
+    ]
+  },
+  {
+    "api_version": "2021-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORMYSQL/FLEXIBLESERVERS/{}/DATABASES/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/charset",
+      "properties/collation"
+    ]
+  },
+  {
+    "api_version": "2021-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORMYSQL/FLEXIBLESERVERS/{}/FAILOVER",
     "operation": "POST"
   },
@@ -10775,7 +10781,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORMYSQL/SERVERS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "identity/principalId",
       "identity/tenantId",
       "identity/type",
@@ -14100,7 +14105,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.HARDWARESECURITYMODULES/DEDICATEDHSMS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "location",
       "properties/networkProfile/networkInterfaces/privateIpAddress",
       "properties/networkProfile/subnet/id",
@@ -14123,7 +14127,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.HARDWARESECURITYMODULES/DEDICATEDHSMS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "location",
       "properties/networkProfile/networkInterfaces/privateIpAddress",
       "properties/networkProfile/subnet/id",
@@ -14423,7 +14426,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.HEALTHCAREAPIS/SERVICES/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "kind",
       "location",
       "properties/accessPolicies/objectId",
@@ -14446,7 +14448,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.HEALTHCAREAPIS/SERVICES/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "kind",
       "location",
       "properties/accessPolicies/objectId",
@@ -17114,7 +17115,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MEDIA/MEDIASERVICES/{}/STREAMINGLOCATORS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "properties/alternativeMediaId",
       "properties/assetName",
       "properties/contentKeys/id",
@@ -17134,7 +17134,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MEDIA/MEDIASERVICES/{}/STREAMINGLOCATORS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "properties/alternativeMediaId",
       "properties/assetName",
       "properties/contentKeys/id",
@@ -17263,7 +17262,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MEDIA/MEDIASERVICES/{}/TRANSFORMS/{}/JOBS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "properties/description",
       "properties/input{#Microsoft.Media.JobInputAsset}/assetName",
       "properties/input{#Microsoft.Media.JobInputAsset}/label",
@@ -17277,7 +17275,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MEDIA/MEDIASERVICES/{}/TRANSFORMS/{}/JOBS/{}",
     "operation": "PATCH",
     "properties": [
-      "id",
       "properties/description",
       "properties/input{#Microsoft.Media.JobInputAsset}/assetName",
       "properties/input{#Microsoft.Media.JobInputAsset}/label",
@@ -17291,7 +17288,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MEDIA/MEDIASERVICES/{}/TRANSFORMS/{}/JOBS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "properties/description",
       "properties/input{#Microsoft.Media.JobInputAsset}/assetName",
       "properties/input{#Microsoft.Media.JobInputAsset}/label",
@@ -17351,9 +17347,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MIXEDREALITY/SPATIALANCHORSACCOUNTS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "location",
-      "name",
       "properties/accountDomain",
       "properties/accountId",
       "tags"
@@ -17364,9 +17358,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MIXEDREALITY/SPATIALANCHORSACCOUNTS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "location",
-      "name",
       "properties/accountDomain",
       "properties/accountId",
       "tags"
@@ -17382,9 +17374,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "location",
-      "name",
       "properties/activeDirectories/dns",
       "properties/activeDirectories/domain",
       "properties/activeDirectories/organizationalUnit",
@@ -17399,9 +17389,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "location",
-      "name",
       "properties/activeDirectories/dns",
       "properties/activeDirectories/domain",
       "properties/activeDirectories/organizationalUnit",
@@ -17421,7 +17409,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "location",
       "properties/serviceLevel",
       "properties/size",
@@ -17433,7 +17420,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "location",
       "properties/serviceLevel",
       "properties/size",
@@ -17548,7 +17534,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/SNAPSHOTS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "location",
       "properties/snapshotId"
     ]
@@ -17558,7 +17543,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/SNAPSHOTS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "location",
       "properties/snapshotId"
     ]
@@ -18022,9 +18006,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/AZUREFIREWALLS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "location",
-      "name",
       "properties/additionalProperties",
       "properties/applicationRuleCollections",
       "properties/applicationRuleCollections/id",
@@ -18092,9 +18074,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/AZUREFIREWALLS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "location",
-      "name",
       "properties/additionalProperties",
       "properties/applicationRuleCollections",
       "properties/applicationRuleCollections/id",
@@ -18173,6 +18153,7 @@
       "properties/ipConfigurations/name",
       "properties/ipConfigurations/properties/publicIPAddress/id",
       "properties/ipConfigurations/properties/subnet/id",
+      "sku/name",
       "tags"
     ]
   },
@@ -18187,6 +18168,7 @@
       "properties/ipConfigurations/name",
       "properties/ipConfigurations/properties/publicIPAddress/id",
       "properties/ipConfigurations/properties/subnet/id",
+      "sku/name",
       "tags"
     ]
   },
@@ -18363,7 +18345,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/DNSZONES/{}/{}/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "name",
       "properties/AAAARecords/ipv6Address",
       "properties/ARecords/ipv4Address",
@@ -18398,7 +18379,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/DNSZONES/{}/{}/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "name",
       "properties/AAAARecords/ipv6Address",
       "properties/ARecords/ipv4Address",
@@ -20243,6 +20223,7 @@
       "location",
       "properties/customDnsServers",
       "properties/p2SConnectionConfigurations/name",
+      "properties/p2SConnectionConfigurations/properties/enableInternetSecurity",
       "properties/p2SConnectionConfigurations/properties/routingConfiguration/associatedRouteTable/id",
       "properties/p2SConnectionConfigurations/properties/routingConfiguration/propagatedRouteTables/ids/id",
       "properties/p2SConnectionConfigurations/properties/routingConfiguration/propagatedRouteTables/labels",
@@ -20262,6 +20243,7 @@
       "location",
       "properties/customDnsServers",
       "properties/p2SConnectionConfigurations/name",
+      "properties/p2SConnectionConfigurations/properties/enableInternetSecurity",
       "properties/p2SConnectionConfigurations/properties/routingConfiguration/associatedRouteTable/id",
       "properties/p2SConnectionConfigurations/properties/routingConfiguration/propagatedRouteTables/ids/id",
       "properties/p2SConnectionConfigurations/properties/routingConfiguration/propagatedRouteTables/labels",
@@ -20342,7 +20324,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PRIVATEDNSZONES/{}/{}/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "name",
       "properties/aRecords/ipv4Address",
       "properties/aaaaRecords/ipv6Address",
@@ -20372,7 +20353,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PRIVATEDNSZONES/{}/{}/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "name",
       "properties/aRecords/ipv4Address",
       "properties/aaaaRecords/ipv6Address",
@@ -22239,7 +22219,6 @@
       "identity/tenantId",
       "identity/type",
       "location",
-      "name",
       "properties",
       "sku/name",
       "tags"
@@ -22255,7 +22234,6 @@
       "identity/tenantId",
       "identity/type",
       "location",
-      "name",
       "properties",
       "sku/name",
       "tags"
@@ -22901,7 +22879,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RESOURCES/DEPLOYMENTS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "location",
       "properties/debugSetting/detailLevel",
       "properties/mode",
@@ -22966,7 +22943,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "identity/principalId",
       "identity/tenantId",
       "identity/type",
@@ -22984,7 +22960,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "identity/principalId",
       "identity/tenantId",
       "identity/type",
@@ -23017,7 +22992,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SECURITY/AUTOMATIONS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "location",
       "properties/actions{EventHub}/actionType",
       "properties/actions{EventHub}/connectionString",
@@ -23044,7 +23018,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SECURITY/AUTOMATIONS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "location",
       "properties/actions{EventHub}/actionType",
       "properties/actions{EventHub}/connectionString",
@@ -23196,7 +23169,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/DISASTERRECOVERYCONFIGS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "name",
       "properties/partnerNamespace",
       "properties/provisioningState"
@@ -23207,7 +23179,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/DISASTERRECOVERYCONFIGS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "name",
       "properties/partnerNamespace",
       "properties/provisioningState"
@@ -23503,7 +23474,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEFABRIC/CLUSTERS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "location",
       "properties/addOnFeatures",
       "properties/azureActiveDirectory/clientApplication",
@@ -23577,7 +23547,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEFABRIC/CLUSTERS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "location",
       "properties/addOnFeatures",
       "properties/azureActiveDirectory/clientApplication",
@@ -24511,6 +24480,7 @@
       "properties/restorePointInTime",
       "properties/sampleName",
       "properties/sourceDatabaseId",
+      "properties/status",
       "properties/zoneRedundant",
       "sku/name",
       "tags"
@@ -24576,6 +24546,7 @@
       "properties/restorePointInTime",
       "properties/sampleName",
       "properties/sourceDatabaseId",
+      "properties/status",
       "properties/zoneRedundant",
       "sku/name",
       "tags"
@@ -24762,6 +24733,22 @@
       "properties/state",
       "properties/storageAccountAccessKey",
       "properties/storageEndpoint"
+    ]
+  },
+  {
+    "api_version": "2014-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}/TRANSPARENTDATAENCRYPTION/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/status"
+    ]
+  },
+  {
+    "api_version": "2014-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}/TRANSPARENTDATAENCRYPTION/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/status"
     ]
   },
   {
@@ -25826,12 +25813,12 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2021-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGECACHE/CACHES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2021-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGECACHE/CACHES/{}",
     "operation": "GET",
     "properties": [
@@ -25880,7 +25867,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2021-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGECACHE/CACHES/{}",
     "operation": "PUT",
     "properties": [
@@ -25929,12 +25916,12 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2021-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGECACHE/CACHES/{}/STORAGETARGETS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2021-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGECACHE/CACHES/{}/STORAGETARGETS/{}",
     "operation": "GET",
     "properties": [
@@ -25952,7 +25939,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2021-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGECACHE/CACHES/{}/STORAGETARGETS/{}",
     "operation": "PUT",
     "properties": [
@@ -26244,7 +26231,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}/FUNCTIONS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "properties{Scalar}/properties/binding{Microsoft.StreamAnalytics/JavascriptUdf}/properties/script",
       "properties{Scalar}/properties/binding{Microsoft.StreamAnalytics/JavascriptUdf}/type",
       "properties{Scalar}/properties/inputs/dataType",
@@ -26257,7 +26243,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}/FUNCTIONS/{}",
     "operation": "PATCH",
     "properties": [
-      "id",
       "properties{Scalar}/properties/binding{Microsoft.StreamAnalytics/JavascriptUdf}/properties/script",
       "properties{Scalar}/properties/binding{Microsoft.StreamAnalytics/JavascriptUdf}/type",
       "properties{Scalar}/properties/inputs/dataType",
@@ -26270,7 +26255,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}/FUNCTIONS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "properties{Scalar}/properties/binding{Microsoft.StreamAnalytics/JavascriptUdf}/properties/script",
       "properties{Scalar}/properties/binding{Microsoft.StreamAnalytics/JavascriptUdf}/type",
       "properties{Scalar}/properties/inputs/dataType",
@@ -26717,7 +26701,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "identity/principalId",
       "identity/tenantId",
       "identity/type",
@@ -26777,7 +26760,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "identity/principalId",
       "identity/tenantId",
       "identity/type",
@@ -26845,7 +26827,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/BIGDATAPOOLS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "location",
       "properties/autoPause/delayInMinutes",
       "properties/autoPause/enabled",
@@ -26874,7 +26855,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/BIGDATAPOOLS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "location",
       "properties/autoPause/delayInMinutes",
       "properties/autoPause/enabled",
@@ -26903,7 +26883,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/EXTENDEDAUDITINGSETTINGS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "properties/isAzureMonitorTargetEnabled",
       "properties/isStorageSecondaryKeyInUse",
       "properties/retentionDays",
@@ -26917,7 +26896,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/EXTENDEDAUDITINGSETTINGS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "properties/isAzureMonitorTargetEnabled",
       "properties/isStorageSecondaryKeyInUse",
       "properties/retentionDays",
@@ -26936,7 +26914,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/FIREWALLRULES/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "properties/endIpAddress",
       "properties/startIpAddress"
     ]
@@ -26946,7 +26923,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/FIREWALLRULES/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "properties/endIpAddress",
       "properties/startIpAddress"
     ]
@@ -26961,7 +26937,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/INTEGRATIONRUNTIMES/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "name",
       "properties{Managed}/description",
       "properties{Managed}/type",
@@ -26978,7 +26953,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/INTEGRATIONRUNTIMES/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "name",
       "properties{Managed}/description",
       "properties{Managed}/type",
@@ -27146,7 +27120,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/SQLPOOLS/{}/EXTENDEDAUDITINGSETTINGS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "properties/isAzureMonitorTargetEnabled",
       "properties/isStorageSecondaryKeyInUse",
       "properties/retentionDays",
@@ -27160,7 +27133,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/SQLPOOLS/{}/EXTENDEDAUDITINGSETTINGS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "properties/isAzureMonitorTargetEnabled",
       "properties/isStorageSecondaryKeyInUse",
       "properties/retentionDays",
@@ -27265,6 +27237,37 @@
     "operation": "PUT",
     "properties": [
       "properties/baselineResults/result"
+    ]
+  },
+  {
+    "api_version": "2021-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/SQLPOOLS/{}/WORKLOADGROUPS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2021-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/SQLPOOLS/{}/WORKLOADGROUPS/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/importance",
+      "properties/maxResourcePercent",
+      "properties/maxResourcePercentPerRequest",
+      "properties/minResourcePercent",
+      "properties/minResourcePercentPerRequest",
+      "properties/queryExecutionTimeout"
+    ]
+  },
+  {
+    "api_version": "2021-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/SQLPOOLS/{}/WORKLOADGROUPS/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/importance",
+      "properties/maxResourcePercent",
+      "properties/maxResourcePercentPerRequest",
+      "properties/minResourcePercent",
+      "properties/minResourcePercentPerRequest",
+      "properties/queryExecutionTimeout"
     ]
   },
   {
@@ -29751,8 +29754,6 @@
     "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/LOCKS/{}",
     "operation": "GET",
     "properties": [
-      "id",
-      "name",
       "properties/level",
       "properties/notes"
     ]
@@ -29762,8 +29763,6 @@
     "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/LOCKS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
-      "name",
       "properties/level",
       "properties/notes"
     ]
@@ -30678,6 +30677,14 @@
     "api_version": "2019-07-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.POLICYINSIGHTS/REMEDIATIONS/{}/CANCEL",
     "operation": "POST"
+  },
+  {
+    "api_version": "2020-06-01",
+    "api_path": "/{}/PROVIDERS/MICROSOFT.RESOURCES/TAGS/DEFAULT",
+    "operation": "PUT",
+    "properties": [
+      "properties/tags"
+    ]
   },
   {
     "api_version": "2019-01-01",
