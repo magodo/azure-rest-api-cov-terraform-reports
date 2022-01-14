@@ -733,7 +733,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/LOCATIONS/{}/ORCHESTRATORS",
     "operation": "GET",
     "properties": [
-      "id",
       "properties/orchestrators/isPreview",
       "properties/orchestrators/orchestratorType",
       "properties/orchestrators/orchestratorVersion"
@@ -1876,7 +1875,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/APIS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "properties/apiRevision",
       "properties/apiRevisionDescription",
       "properties/apiVersion",
@@ -2241,6 +2239,24 @@
       "properties/document/definitions",
       "properties/document/value"
     ]
+  },
+  {
+    "api_version": "2021-08-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/APIS/{}/TAGS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2021-08-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/APIS/{}/TAGS/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/displayName"
+    ]
+  },
+  {
+    "api_version": "2021-08-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/APIS/{}/TAGS/{}",
+    "operation": "PUT"
   },
   {
     "api_version": "2021-08-01",
@@ -2867,7 +2883,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/PRODUCTS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "properties/approvalRequired",
       "properties/description",
       "properties/displayName",
@@ -2882,7 +2897,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/PRODUCTS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "properties/approvalRequired",
       "properties/description",
       "properties/displayName",
@@ -3054,7 +3068,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/USERS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "properties/email",
       "properties/firstName",
       "properties/lastName",
@@ -13526,12 +13539,12 @@
     ]
   },
   {
-    "api_version": "2020-10-15-preview",
+    "api_version": "2021-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTGRID/DOMAINS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-10-15-preview",
+    "api_version": "2021-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTGRID/DOMAINS/{}",
     "operation": "GET",
     "properties": [
@@ -13542,6 +13555,9 @@
       "identity/userAssignedIdentities",
       "location",
       "name",
+      "properties/autoCreateTopicWithFirstSubscription",
+      "properties/autoDeleteTopicWithLastSubscription",
+      "properties/disableLocalAuth",
       "properties/endpoint",
       "properties/inboundIpRules/action",
       "properties/inboundIpRules/ipMask",
@@ -13561,7 +13577,7 @@
     ]
   },
   {
-    "api_version": "2020-10-15-preview",
+    "api_version": "2021-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTGRID/DOMAINS/{}",
     "operation": "PUT",
     "properties": [
@@ -13572,6 +13588,9 @@
       "identity/userAssignedIdentities",
       "location",
       "name",
+      "properties/autoCreateTopicWithFirstSubscription",
+      "properties/autoDeleteTopicWithLastSubscription",
+      "properties/disableLocalAuth",
       "properties/endpoint",
       "properties/inboundIpRules/action",
       "properties/inboundIpRules/ipMask",
@@ -13591,17 +13610,17 @@
     ]
   },
   {
-    "api_version": "2020-10-15-preview",
+    "api_version": "2021-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTGRID/DOMAINS/{}/LISTKEYS",
     "operation": "POST"
   },
   {
-    "api_version": "2020-10-15-preview",
+    "api_version": "2021-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTGRID/DOMAINS/{}/TOPICS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-10-15-preview",
+    "api_version": "2021-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTGRID/DOMAINS/{}/TOPICS/{}",
     "operation": "GET",
     "properties": [
@@ -13610,17 +13629,17 @@
     ]
   },
   {
-    "api_version": "2020-10-15-preview",
+    "api_version": "2021-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTGRID/DOMAINS/{}/TOPICS/{}",
     "operation": "PUT"
   },
   {
-    "api_version": "2020-10-15-preview",
+    "api_version": "2021-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTGRID/SYSTEMTOPICS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-10-15-preview",
+    "api_version": "2021-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTGRID/SYSTEMTOPICS/{}",
     "operation": "GET",
     "properties": [
@@ -13638,7 +13657,7 @@
     ]
   },
   {
-    "api_version": "2020-10-15-preview",
+    "api_version": "2021-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTGRID/SYSTEMTOPICS/{}",
     "operation": "PUT",
     "properties": [
@@ -13656,12 +13675,12 @@
     ]
   },
   {
-    "api_version": "2020-10-15-preview",
+    "api_version": "2021-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTGRID/SYSTEMTOPICS/{}/EVENTSUBSCRIPTIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-10-15-preview",
+    "api_version": "2021-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTGRID/SYSTEMTOPICS/{}/EVENTSUBSCRIPTIONS/{}",
     "operation": "GET",
     "properties": [
@@ -13875,7 +13894,7 @@
     ]
   },
   {
-    "api_version": "2020-10-15-preview",
+    "api_version": "2021-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTGRID/SYSTEMTOPICS/{}/EVENTSUBSCRIPTIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -14089,17 +14108,17 @@
     ]
   },
   {
-    "api_version": "2020-10-15-preview",
+    "api_version": "2021-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTGRID/SYSTEMTOPICS/{}/EVENTSUBSCRIPTIONS/{}/GETFULLURL",
     "operation": "POST"
   },
   {
-    "api_version": "2020-10-15-preview",
+    "api_version": "2021-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTGRID/TOPICS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-10-15-preview",
+    "api_version": "2021-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTGRID/TOPICS/{}",
     "operation": "GET",
     "properties": [
@@ -14110,6 +14129,7 @@
       "identity/userAssignedIdentities",
       "location",
       "name",
+      "properties/disableLocalAuth",
       "properties/endpoint",
       "properties/inboundIpRules/action",
       "properties/inboundIpRules/ipMask",
@@ -14129,7 +14149,7 @@
     ]
   },
   {
-    "api_version": "2020-10-15-preview",
+    "api_version": "2021-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTGRID/TOPICS/{}",
     "operation": "PUT",
     "properties": [
@@ -14140,6 +14160,7 @@
       "identity/userAssignedIdentities",
       "location",
       "name",
+      "properties/disableLocalAuth",
       "properties/endpoint",
       "properties/inboundIpRules/action",
       "properties/inboundIpRules/ipMask",
@@ -14159,7 +14180,7 @@
     ]
   },
   {
-    "api_version": "2020-10-15-preview",
+    "api_version": "2021-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTGRID/TOPICS/{}/LISTKEYS",
     "operation": "POST"
   },
@@ -14879,12 +14900,12 @@
     ]
   },
   {
-    "api_version": "2019-06-01",
+    "api_version": "2021-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/ACTIONGROUPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2019-06-01",
+    "api_version": "2021-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/ACTIONGROUPS/{}",
     "operation": "GET",
     "properties": [
@@ -14911,6 +14932,12 @@
       "properties/emailReceivers/name",
       "properties/emailReceivers/useCommonAlertSchema",
       "properties/enabled",
+      "properties/eventHubReceivers/eventHubName",
+      "properties/eventHubReceivers/eventHubNameSpace",
+      "properties/eventHubReceivers/name",
+      "properties/eventHubReceivers/subscriptionId",
+      "properties/eventHubReceivers/tenantId",
+      "properties/eventHubReceivers/useCommonAlertSchema",
       "properties/groupShortName",
       "properties/itsmReceivers/connectionId",
       "properties/itsmReceivers/name",
@@ -14938,7 +14965,7 @@
     ]
   },
   {
-    "api_version": "2019-06-01",
+    "api_version": "2021-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/ACTIONGROUPS/{}",
     "operation": "PUT",
     "properties": [
@@ -14965,6 +14992,12 @@
       "properties/emailReceivers/name",
       "properties/emailReceivers/useCommonAlertSchema",
       "properties/enabled",
+      "properties/eventHubReceivers/eventHubName",
+      "properties/eventHubReceivers/eventHubNameSpace",
+      "properties/eventHubReceivers/name",
+      "properties/eventHubReceivers/subscriptionId",
+      "properties/eventHubReceivers/tenantId",
+      "properties/eventHubReceivers/useCommonAlertSchema",
       "properties/groupShortName",
       "properties/itsmReceivers/connectionId",
       "properties/itsmReceivers/name",
@@ -22814,6 +22847,9 @@
       "properties/endpoints/guardian",
       "properties/endpoints/scan",
       "properties/managedResourceGroupName",
+      "properties/managedResources/eventHubNamespace",
+      "properties/managedResources/resourceGroup",
+      "properties/managedResources/storageAccount",
       "properties/publicNetworkAccess",
       "tags"
     ]
@@ -22831,6 +22867,9 @@
       "properties/endpoints/guardian",
       "properties/endpoints/scan",
       "properties/managedResourceGroupName",
+      "properties/managedResources/eventHubNamespace",
+      "properties/managedResources/resourceGroup",
+      "properties/managedResources/storageAccount",
       "properties/publicNetworkAccess",
       "tags"
     ]
@@ -22841,12 +22880,12 @@
     "operation": "POST"
   },
   {
-    "api_version": "2016-06-01",
+    "api_version": "2021-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2016-06-01",
+    "api_version": "2021-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}",
     "operation": "GET",
     "properties": [
@@ -22855,13 +22894,25 @@
       "identity/tenantId",
       "identity/type",
       "location",
-      "properties",
+      "properties/encryption/infrastructureEncryption",
+      "properties/encryption/kekIdentity/useSystemAssignedIdentity",
+      "properties/encryption/keyVaultProperties/keyUri",
       "sku/name",
       "tags"
     ]
   },
   {
-    "api_version": "2016-06-01",
+    "api_version": "2021-08-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}",
+    "operation": "PATCH",
+    "properties": [
+      "properties/encryption/infrastructureEncryption",
+      "properties/encryption/kekIdentity/useSystemAssignedIdentity",
+      "properties/encryption/keyVaultProperties/keyUri"
+    ]
+  },
+  {
+    "api_version": "2021-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}",
     "operation": "PUT",
     "properties": [
@@ -22870,7 +22921,9 @@
       "identity/tenantId",
       "identity/type",
       "location",
-      "properties",
+      "properties/encryption/infrastructureEncryption",
+      "properties/encryption/kekIdentity/useSystemAssignedIdentity",
+      "properties/encryption/keyVaultProperties/keyUri",
       "sku/name",
       "tags"
     ]
@@ -25615,6 +25668,7 @@
       "properties/retentionDays",
       "properties/state",
       "properties/storageAccountAccessKey",
+      "properties/storageAccountSubscriptionId",
       "properties/storageEndpoint"
     ]
   },
@@ -25642,6 +25696,7 @@
       "properties/retentionDays",
       "properties/state",
       "properties/storageAccountAccessKey",
+      "properties/storageAccountSubscriptionId",
       "properties/storageEndpoint"
     ]
   },
@@ -26114,6 +26169,7 @@
       "properties/encryption/keyvaultproperties/keyname",
       "properties/encryption/keyvaultproperties/keyvaulturi",
       "properties/encryption/keyvaultproperties/keyversion",
+      "properties/encryption/requireInfrastructureEncryption",
       "properties/encryption/services/blob/enabled",
       "properties/encryption/services/file/enabled",
       "properties/encryption/services/queue/keyType",
@@ -26225,6 +26281,7 @@
       "properties/customDomain/name",
       "properties/customDomain/useSubDomainName",
       "properties/encryption/keySource",
+      "properties/encryption/requireInfrastructureEncryption",
       "properties/encryption/services/queue/keyType",
       "properties/encryption/services/table/keyType",
       "properties/isHnsEnabled",
@@ -26663,6 +26720,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGEPOOL/DISKPOOLS/{}",
     "operation": "PATCH",
     "properties": [
+      "properties/disks/id",
       "sku/name",
       "sku/tier",
       "tags"
@@ -30845,12 +30903,12 @@
     ]
   },
   {
-    "api_version": "2020-10-15-preview",
+    "api_version": "2021-12-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.EVENTGRID/EVENTSUBSCRIPTIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-10-15-preview",
+    "api_version": "2021-12-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.EVENTGRID/EVENTSUBSCRIPTIONS/{}",
     "operation": "GET",
     "properties": [
@@ -31064,7 +31122,7 @@
     ]
   },
   {
-    "api_version": "2020-10-15-preview",
+    "api_version": "2021-12-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.EVENTGRID/EVENTSUBSCRIPTIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -31278,7 +31336,7 @@
     ]
   },
   {
-    "api_version": "2020-10-15-preview",
+    "api_version": "2021-12-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.EVENTGRID/EVENTSUBSCRIPTIONS/{}/GETFULLURL",
     "operation": "POST"
   },
