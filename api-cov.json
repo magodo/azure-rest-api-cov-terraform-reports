@@ -3137,6 +3137,11 @@
             "is_preview": true,
             "is_active": false,
             "swagger_rel_path": "appconfiguration/resource-manager/Microsoft.AppConfiguration/preview/2021-03-01-preview/appconfiguration.json"
+          },
+          "2021-10-01-preview": {
+            "is_preview": true,
+            "is_active": false,
+            "swagger_rel_path": "appconfiguration/resource-manager/Microsoft.AppConfiguration/preview/2021-10-01-preview/appconfiguration.json"
           }
         },
         "PUT": {
@@ -3378,6 +3383,119 @@
                   "state": "Ignored"
                 },
                 "properties/publicNetworkAccess": {
+                  "state": "Uncovered"
+                },
+                "sku/name": {
+                  "state": "Covered"
+                },
+                "systemData/createdAt": {
+                  "state": "Ignored"
+                },
+                "systemData/createdBy": {
+                  "state": "Ignored"
+                },
+                "systemData/createdByType": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedAt": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedBy": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedByType": {
+                  "state": "Ignored"
+                },
+                "tags": {
+                  "state": "Covered"
+                },
+                "type": {
+                  "state": "Ignored"
+                }
+              }
+            }
+          },
+          "2021-10-01-preview": {
+            "is_preview": true,
+            "is_active": false,
+            "swagger_rel_path": "appconfiguration/resource-manager/Microsoft.AppConfiguration/preview/2021-10-01-preview/appconfiguration.json",
+            "model": {
+              "name": "ConfigurationStore",
+              "swagger_rel_path": "appconfiguration/resource-manager/Microsoft.AppConfiguration/preview/2021-10-01-preview/appconfiguration.json",
+              "properties": {
+                "id": {
+                  "state": "Ignored"
+                },
+                "identity/principalId": {
+                  "state": "Ignored"
+                },
+                "identity/tenantId": {
+                  "state": "Ignored"
+                },
+                "identity/type": {
+                  "state": "Covered"
+                },
+                "identity/userAssignedIdentities": {
+                  "state": "Covered"
+                },
+                "location": {
+                  "state": "Covered"
+                },
+                "name": {
+                  "state": "Ignored"
+                },
+                "properties/createMode": {
+                  "state": "Uncovered"
+                },
+                "properties/creationDate": {
+                  "state": "Ignored"
+                },
+                "properties/disableLocalAuth": {
+                  "state": "Uncovered"
+                },
+                "properties/enablePurgeProtection": {
+                  "state": "Uncovered"
+                },
+                "properties/encryption/keyVaultProperties/identityClientId": {
+                  "state": "Uncovered"
+                },
+                "properties/encryption/keyVaultProperties/keyIdentifier": {
+                  "state": "Uncovered"
+                },
+                "properties/endpoint": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/id": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/name": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/properties/privateEndpoint/id": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/actionsRequired": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/description": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/status": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/properties/provisioningState": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/type": {
+                  "state": "Ignored"
+                },
+                "properties/provisioningState": {
+                  "state": "Ignored"
+                },
+                "properties/publicNetworkAccess": {
+                  "state": "Uncovered"
+                },
+                "properties/softDeleteRetentionInDays": {
                   "state": "Uncovered"
                 },
                 "sku/name": {
@@ -7423,143 +7541,16 @@
     "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.KUSTO/CLUSTERS/{}": {
       "operations": {
         "DELETE": {
-          "2021-01-01": {
-            "is_preview": false,
-            "is_active": true,
-            "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-01-01/kusto.json"
-          },
           "2021-08-27": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-08-27/kusto.json"
           }
         },
         "PUT": {
-          "2021-01-01": {
-            "is_preview": false,
-            "is_active": true,
-            "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-01-01/kusto.json",
-            "model": {
-              "name": "Cluster",
-              "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-01-01/kusto.json",
-              "properties": {
-                "etag": {
-                  "state": "Ignored"
-                },
-                "id": {
-                  "state": "Ignored"
-                },
-                "identity/principalId": {
-                  "state": "Ignored"
-                },
-                "identity/tenantId": {
-                  "state": "Ignored"
-                },
-                "identity/type": {
-                  "state": "Covered"
-                },
-                "identity/userAssignedIdentities": {
-                  "state": "Covered"
-                },
-                "location": {
-                  "state": "Covered"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/dataIngestionUri": {
-                  "state": "Ignored"
-                },
-                "properties/enableDiskEncryption": {
-                  "state": "Covered"
-                },
-                "properties/enableDoubleEncryption": {
-                  "state": "Covered"
-                },
-                "properties/enablePurge": {
-                  "state": "Covered"
-                },
-                "properties/enableStreamingIngest": {
-                  "state": "Covered"
-                },
-                "properties/engineType": {
-                  "state": "Covered"
-                },
-                "properties/keyVaultProperties/keyName": {
-                  "state": "Covered"
-                },
-                "properties/keyVaultProperties/keyVaultUri": {
-                  "state": "Covered"
-                },
-                "properties/keyVaultProperties/keyVersion": {
-                  "state": "Covered"
-                },
-                "properties/keyVaultProperties/userIdentity": {
-                  "state": "Covered"
-                },
-                "properties/languageExtensions/value/languageExtensionName": {
-                  "state": "Ignored"
-                },
-                "properties/optimizedAutoscale/isEnabled": {
-                  "state": "Covered"
-                },
-                "properties/optimizedAutoscale/maximum": {
-                  "state": "Covered"
-                },
-                "properties/optimizedAutoscale/minimum": {
-                  "state": "Covered"
-                },
-                "properties/optimizedAutoscale/version": {
-                  "state": "Covered"
-                },
-                "properties/provisioningState": {
-                  "state": "Ignored"
-                },
-                "properties/state": {
-                  "state": "Ignored"
-                },
-                "properties/stateReason": {
-                  "state": "Ignored"
-                },
-                "properties/trustedExternalTenants/value": {
-                  "state": "Covered"
-                },
-                "properties/uri": {
-                  "state": "Ignored"
-                },
-                "properties/virtualNetworkConfiguration/dataManagementPublicIpId": {
-                  "state": "Covered"
-                },
-                "properties/virtualNetworkConfiguration/enginePublicIpId": {
-                  "state": "Covered"
-                },
-                "properties/virtualNetworkConfiguration/subnetId": {
-                  "state": "Covered"
-                },
-                "sku/capacity": {
-                  "state": "Covered"
-                },
-                "sku/name": {
-                  "state": "Covered"
-                },
-                "sku/tier": {
-                  "state": "Covered"
-                },
-                "tags": {
-                  "state": "Covered"
-                },
-                "type": {
-                  "state": "Ignored"
-                },
-                "zones": {
-                  "state": "Covered"
-                }
-              }
-            }
-          },
           "2021-08-27": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-08-27/kusto.json",
             "model": {
               "name": "Cluster",
@@ -7721,77 +7712,16 @@
     "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.KUSTO/CLUSTERS/{}/ATTACHEDDATABASECONFIGURATIONS/{}": {
       "operations": {
         "DELETE": {
-          "2021-01-01": {
-            "is_preview": false,
-            "is_active": true,
-            "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-01-01/kusto.json"
-          },
           "2021-08-27": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-08-27/kusto.json"
           }
         },
         "PUT": {
-          "2021-01-01": {
-            "is_preview": false,
-            "is_active": true,
-            "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-01-01/kusto.json",
-            "model": {
-              "name": "AttachedDatabaseConfiguration",
-              "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-01-01/kusto.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "location": {
-                  "state": "Covered"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/attachedDatabaseNames": {
-                  "state": "Ignored"
-                },
-                "properties/clusterResourceId": {
-                  "state": "Covered"
-                },
-                "properties/databaseName": {
-                  "state": "Covered"
-                },
-                "properties/defaultPrincipalsModificationKind": {
-                  "state": "Covered"
-                },
-                "properties/provisioningState": {
-                  "state": "Ignored"
-                },
-                "properties/tableLevelSharingProperties/externalTablesToExclude": {
-                  "state": "Covered"
-                },
-                "properties/tableLevelSharingProperties/externalTablesToInclude": {
-                  "state": "Covered"
-                },
-                "properties/tableLevelSharingProperties/materializedViewsToExclude": {
-                  "state": "Covered"
-                },
-                "properties/tableLevelSharingProperties/materializedViewsToInclude": {
-                  "state": "Covered"
-                },
-                "properties/tableLevelSharingProperties/tablesToExclude": {
-                  "state": "Covered"
-                },
-                "properties/tableLevelSharingProperties/tablesToInclude": {
-                  "state": "Covered"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
           "2021-08-27": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-08-27/kusto.json",
             "model": {
               "name": "AttachedDatabaseConfiguration",
@@ -7851,98 +7781,16 @@
     "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.KUSTO/CLUSTERS/{}/DATABASES/{}": {
       "operations": {
         "DELETE": {
-          "2021-01-01": {
-            "is_preview": false,
-            "is_active": true,
-            "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-01-01/kusto.json"
-          },
           "2021-08-27": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-08-27/kusto.json"
           }
         },
         "PUT": {
-          "2021-01-01": {
-            "is_preview": false,
-            "is_active": true,
-            "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-01-01/kusto.json",
-            "model": {
-              "name": "Database",
-              "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-01-01/kusto.json",
-              "properties": {
-                "{ReadOnlyFollowing}/id": {
-                  "state": "Ignored"
-                },
-                "{ReadOnlyFollowing}/kind": {
-                  "state": "Uncovered"
-                },
-                "{ReadOnlyFollowing}/location": {
-                  "state": "Uncovered"
-                },
-                "{ReadOnlyFollowing}/name": {
-                  "state": "Ignored"
-                },
-                "{ReadOnlyFollowing}/properties/attachedDatabaseConfigurationName": {
-                  "state": "Ignored"
-                },
-                "{ReadOnlyFollowing}/properties/hotCachePeriod": {
-                  "state": "Uncovered"
-                },
-                "{ReadOnlyFollowing}/properties/leaderClusterResourceId": {
-                  "state": "Ignored"
-                },
-                "{ReadOnlyFollowing}/properties/principalsModificationKind": {
-                  "state": "Ignored"
-                },
-                "{ReadOnlyFollowing}/properties/provisioningState": {
-                  "state": "Ignored"
-                },
-                "{ReadOnlyFollowing}/properties/softDeletePeriod": {
-                  "state": "Ignored"
-                },
-                "{ReadOnlyFollowing}/properties/statistics/size": {
-                  "state": "Ignored"
-                },
-                "{ReadOnlyFollowing}/type": {
-                  "state": "Ignored"
-                },
-                "{ReadWrite}/id": {
-                  "state": "Ignored"
-                },
-                "{ReadWrite}/kind": {
-                  "state": "Uncovered"
-                },
-                "{ReadWrite}/location": {
-                  "state": "Covered"
-                },
-                "{ReadWrite}/name": {
-                  "state": "Ignored"
-                },
-                "{ReadWrite}/properties/hotCachePeriod": {
-                  "state": "Covered"
-                },
-                "{ReadWrite}/properties/isFollowed": {
-                  "state": "Ignored"
-                },
-                "{ReadWrite}/properties/provisioningState": {
-                  "state": "Ignored"
-                },
-                "{ReadWrite}/properties/softDeletePeriod": {
-                  "state": "Covered"
-                },
-                "{ReadWrite}/properties/statistics/size": {
-                  "state": "Ignored"
-                },
-                "{ReadWrite}/type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
           "2021-08-27": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-08-27/kusto.json",
             "model": {
               "name": "Database",
@@ -7952,10 +7800,10 @@
                   "state": "Ignored"
                 },
                 "{ReadOnlyFollowing}/kind": {
-                  "state": "Covered"
+                  "state": "Uncovered"
                 },
                 "{ReadOnlyFollowing}/location": {
-                  "state": "Covered"
+                  "state": "Uncovered"
                 },
                 "{ReadOnlyFollowing}/name": {
                   "state": "Ignored"
@@ -7964,7 +7812,7 @@
                   "state": "Ignored"
                 },
                 "{ReadOnlyFollowing}/properties/hotCachePeriod": {
-                  "state": "Covered"
+                  "state": "Uncovered"
                 },
                 "{ReadOnlyFollowing}/properties/leaderClusterResourceId": {
                   "state": "Ignored"
@@ -7988,7 +7836,7 @@
                   "state": "Ignored"
                 },
                 "{ReadWrite}/kind": {
-                  "state": "Covered"
+                  "state": "Uncovered"
                 },
                 "{ReadWrite}/location": {
                   "state": "Covered"
@@ -8023,155 +7871,16 @@
     "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.KUSTO/CLUSTERS/{}/DATABASES/{}/DATACONNECTIONS/{}": {
       "operations": {
         "DELETE": {
-          "2021-01-01": {
-            "is_preview": false,
-            "is_active": true,
-            "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-01-01/kusto.json"
-          },
           "2021-08-27": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-08-27/kusto.json"
           }
         },
         "PUT": {
-          "2021-01-01": {
-            "is_preview": false,
-            "is_active": true,
-            "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-01-01/kusto.json",
-            "model": {
-              "name": "DataConnection",
-              "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-01-01/kusto.json",
-              "properties": {
-                "{EventGrid}/id": {
-                  "state": "Ignored"
-                },
-                "{EventGrid}/kind": {
-                  "state": "Uncovered"
-                },
-                "{EventGrid}/location": {
-                  "state": "Covered"
-                },
-                "{EventGrid}/name": {
-                  "state": "Ignored"
-                },
-                "{EventGrid}/properties/blobStorageEventType": {
-                  "state": "Covered"
-                },
-                "{EventGrid}/properties/consumerGroup": {
-                  "state": "Covered"
-                },
-                "{EventGrid}/properties/dataFormat": {
-                  "state": "Covered"
-                },
-                "{EventGrid}/properties/eventHubResourceId": {
-                  "state": "Covered"
-                },
-                "{EventGrid}/properties/ignoreFirstRecord": {
-                  "state": "Covered"
-                },
-                "{EventGrid}/properties/mappingRuleName": {
-                  "state": "Covered"
-                },
-                "{EventGrid}/properties/provisioningState": {
-                  "state": "Ignored"
-                },
-                "{EventGrid}/properties/storageAccountResourceId": {
-                  "state": "Covered"
-                },
-                "{EventGrid}/properties/tableName": {
-                  "state": "Covered"
-                },
-                "{EventGrid}/type": {
-                  "state": "Ignored"
-                },
-                "{EventHub}/id": {
-                  "state": "Ignored"
-                },
-                "{EventHub}/kind": {
-                  "state": "Uncovered"
-                },
-                "{EventHub}/location": {
-                  "state": "Covered"
-                },
-                "{EventHub}/name": {
-                  "state": "Ignored"
-                },
-                "{EventHub}/properties/compression": {
-                  "state": "Covered"
-                },
-                "{EventHub}/properties/consumerGroup": {
-                  "state": "Covered"
-                },
-                "{EventHub}/properties/dataFormat": {
-                  "state": "Covered"
-                },
-                "{EventHub}/properties/eventHubResourceId": {
-                  "state": "Covered"
-                },
-                "{EventHub}/properties/eventSystemProperties": {
-                  "state": "Covered"
-                },
-                "{EventHub}/properties/managedIdentityResourceId": {
-                  "state": "Covered"
-                },
-                "{EventHub}/properties/mappingRuleName": {
-                  "state": "Covered"
-                },
-                "{EventHub}/properties/provisioningState": {
-                  "state": "Ignored"
-                },
-                "{EventHub}/properties/tableName": {
-                  "state": "Covered"
-                },
-                "{EventHub}/type": {
-                  "state": "Ignored"
-                },
-                "{IotHub}/id": {
-                  "state": "Ignored"
-                },
-                "{IotHub}/kind": {
-                  "state": "Uncovered"
-                },
-                "{IotHub}/location": {
-                  "state": "Covered"
-                },
-                "{IotHub}/name": {
-                  "state": "Ignored"
-                },
-                "{IotHub}/properties/consumerGroup": {
-                  "state": "Covered"
-                },
-                "{IotHub}/properties/dataFormat": {
-                  "state": "Covered"
-                },
-                "{IotHub}/properties/eventSystemProperties": {
-                  "state": "Covered"
-                },
-                "{IotHub}/properties/iotHubResourceId": {
-                  "state": "Covered"
-                },
-                "{IotHub}/properties/mappingRuleName": {
-                  "state": "Covered"
-                },
-                "{IotHub}/properties/provisioningState": {
-                  "state": "Ignored"
-                },
-                "{IotHub}/properties/sharedAccessPolicyName": {
-                  "state": "Covered"
-                },
-                "{IotHub}/properties/tableName": {
-                  "state": "Covered"
-                },
-                "{IotHub}/type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
           "2021-08-27": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-08-27/kusto.json",
             "model": {
               "name": "DataConnection",
@@ -8181,7 +7890,7 @@
                   "state": "Ignored"
                 },
                 "{EventGrid}/kind": {
-                  "state": "Covered"
+                  "state": "Uncovered"
                 },
                 "{EventGrid}/location": {
                   "state": "Covered"
@@ -8223,7 +7932,7 @@
                   "state": "Ignored"
                 },
                 "{EventHub}/kind": {
-                  "state": "Covered"
+                  "state": "Uncovered"
                 },
                 "{EventHub}/location": {
                   "state": "Covered"
@@ -8265,7 +7974,7 @@
                   "state": "Ignored"
                 },
                 "{IotHub}/kind": {
-                  "state": "Covered"
+                  "state": "Uncovered"
                 },
                 "{IotHub}/location": {
                   "state": "Covered"
@@ -8309,62 +8018,16 @@
     "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.KUSTO/CLUSTERS/{}/DATABASES/{}/PRINCIPALASSIGNMENTS/{}": {
       "operations": {
         "DELETE": {
-          "2021-01-01": {
-            "is_preview": false,
-            "is_active": true,
-            "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-01-01/kusto.json"
-          },
           "2021-08-27": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-08-27/kusto.json"
           }
         },
         "PUT": {
-          "2021-01-01": {
-            "is_preview": false,
-            "is_active": true,
-            "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-01-01/kusto.json",
-            "model": {
-              "name": "DatabasePrincipalAssignment",
-              "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-01-01/kusto.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/principalId": {
-                  "state": "Covered"
-                },
-                "properties/principalName": {
-                  "state": "Ignored"
-                },
-                "properties/principalType": {
-                  "state": "Covered"
-                },
-                "properties/provisioningState": {
-                  "state": "Ignored"
-                },
-                "properties/role": {
-                  "state": "Covered"
-                },
-                "properties/tenantId": {
-                  "state": "Covered"
-                },
-                "properties/tenantName": {
-                  "state": "Ignored"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
           "2021-08-27": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-08-27/kusto.json",
             "model": {
               "name": "DatabasePrincipalAssignment",
@@ -8409,74 +8072,16 @@
     "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.KUSTO/CLUSTERS/{}/DATABASES/{}/SCRIPTS/{}": {
       "operations": {
         "DELETE": {
-          "2021-01-01": {
-            "is_preview": false,
-            "is_active": true,
-            "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-01-01/kusto.json"
-          },
           "2021-08-27": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-08-27/kusto.json"
           }
         },
         "PUT": {
-          "2021-01-01": {
-            "is_preview": false,
-            "is_active": true,
-            "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-01-01/kusto.json",
-            "model": {
-              "name": "Script",
-              "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-01-01/kusto.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/continueOnErrors": {
-                  "state": "Covered"
-                },
-                "properties/forceUpdateTag": {
-                  "state": "Covered"
-                },
-                "properties/provisioningState": {
-                  "state": "Ignored"
-                },
-                "properties/scriptUrl": {
-                  "state": "Covered"
-                },
-                "properties/scriptUrlSasToken": {
-                  "state": "Covered"
-                },
-                "systemData/createdAt": {
-                  "state": "Ignored"
-                },
-                "systemData/createdBy": {
-                  "state": "Ignored"
-                },
-                "systemData/createdByType": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedAt": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedBy": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedByType": {
-                  "state": "Ignored"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
           "2021-08-27": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-08-27/kusto.json",
             "model": {
               "name": "Script",
@@ -8533,62 +8138,16 @@
     "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.KUSTO/CLUSTERS/{}/PRINCIPALASSIGNMENTS/{}": {
       "operations": {
         "DELETE": {
-          "2021-01-01": {
-            "is_preview": false,
-            "is_active": true,
-            "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-01-01/kusto.json"
-          },
           "2021-08-27": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-08-27/kusto.json"
           }
         },
         "PUT": {
-          "2021-01-01": {
-            "is_preview": false,
-            "is_active": true,
-            "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-01-01/kusto.json",
-            "model": {
-              "name": "ClusterPrincipalAssignment",
-              "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-01-01/kusto.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/principalId": {
-                  "state": "Covered"
-                },
-                "properties/principalName": {
-                  "state": "Ignored"
-                },
-                "properties/principalType": {
-                  "state": "Covered"
-                },
-                "properties/provisioningState": {
-                  "state": "Ignored"
-                },
-                "properties/role": {
-                  "state": "Covered"
-                },
-                "properties/tenantId": {
-                  "state": "Covered"
-                },
-                "properties/tenantName": {
-                  "state": "Ignored"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
           "2021-08-27": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2021-08-27/kusto.json",
             "model": {
               "name": "ClusterPrincipalAssignment",
@@ -8763,6 +8322,11 @@
             "is_preview": false,
             "is_active": false,
             "swagger_rel_path": "azurestackhci/resource-manager/Microsoft.AzureStackHCI/stable/2021-09-01/clusters.json"
+          },
+          "2022-01-01": {
+            "is_preview": false,
+            "is_active": false,
+            "swagger_rel_path": "azurestackhci/resource-manager/Microsoft.AzureStackHCI/stable/2022-01-01/clusters.json"
           }
         },
         "PUT": {
@@ -9002,6 +8566,137 @@
             "model": {
               "name": "Cluster",
               "swagger_rel_path": "azurestackhci/resource-manager/Microsoft.AzureStackHCI/stable/2021-09-01/clusters.json",
+              "properties": {
+                "id": {
+                  "state": "Ignored"
+                },
+                "location": {
+                  "state": "Covered"
+                },
+                "name": {
+                  "state": "Ignored"
+                },
+                "properties/aadClientId": {
+                  "state": "Covered"
+                },
+                "properties/aadTenantId": {
+                  "state": "Covered"
+                },
+                "properties/billingModel": {
+                  "state": "Ignored"
+                },
+                "properties/cloudId": {
+                  "state": "Ignored"
+                },
+                "properties/cloudManagementEndpoint": {
+                  "state": "Uncovered"
+                },
+                "properties/desiredProperties/diagnosticLevel": {
+                  "state": "Uncovered"
+                },
+                "properties/desiredProperties/windowsServerSubscription": {
+                  "state": "Uncovered"
+                },
+                "properties/lastBillingTimestamp": {
+                  "state": "Ignored"
+                },
+                "properties/lastSyncTimestamp": {
+                  "state": "Ignored"
+                },
+                "properties/provisioningState": {
+                  "state": "Ignored"
+                },
+                "properties/registrationTimestamp": {
+                  "state": "Ignored"
+                },
+                "properties/reportedProperties/clusterId": {
+                  "state": "Ignored"
+                },
+                "properties/reportedProperties/clusterName": {
+                  "state": "Ignored"
+                },
+                "properties/reportedProperties/clusterVersion": {
+                  "state": "Ignored"
+                },
+                "properties/reportedProperties/diagnosticLevel": {
+                  "state": "Ignored"
+                },
+                "properties/reportedProperties/imdsAttestation": {
+                  "state": "Ignored"
+                },
+                "properties/reportedProperties/lastUpdated": {
+                  "state": "Ignored"
+                },
+                "properties/reportedProperties/nodes/coreCount": {
+                  "state": "Ignored"
+                },
+                "properties/reportedProperties/nodes/id": {
+                  "state": "Ignored"
+                },
+                "properties/reportedProperties/nodes/manufacturer": {
+                  "state": "Ignored"
+                },
+                "properties/reportedProperties/nodes/memoryInGiB": {
+                  "state": "Ignored"
+                },
+                "properties/reportedProperties/nodes/model": {
+                  "state": "Ignored"
+                },
+                "properties/reportedProperties/nodes/name": {
+                  "state": "Ignored"
+                },
+                "properties/reportedProperties/nodes/osName": {
+                  "state": "Ignored"
+                },
+                "properties/reportedProperties/nodes/osVersion": {
+                  "state": "Ignored"
+                },
+                "properties/reportedProperties/nodes/serialNumber": {
+                  "state": "Ignored"
+                },
+                "properties/reportedProperties/nodes/windowsServerSubscription": {
+                  "state": "Ignored"
+                },
+                "properties/status": {
+                  "state": "Ignored"
+                },
+                "properties/trialDaysRemaining": {
+                  "state": "Ignored"
+                },
+                "systemData/createdAt": {
+                  "state": "Ignored"
+                },
+                "systemData/createdBy": {
+                  "state": "Ignored"
+                },
+                "systemData/createdByType": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedAt": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedBy": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedByType": {
+                  "state": "Ignored"
+                },
+                "tags": {
+                  "state": "Covered"
+                },
+                "type": {
+                  "state": "Ignored"
+                }
+              }
+            }
+          },
+          "2022-01-01": {
+            "is_preview": false,
+            "is_active": false,
+            "swagger_rel_path": "azurestackhci/resource-manager/Microsoft.AzureStackHCI/stable/2022-01-01/clusters.json",
+            "model": {
+              "name": "Cluster",
+              "swagger_rel_path": "azurestackhci/resource-manager/Microsoft.AzureStackHCI/stable/2022-01-01/clusters.json",
               "properties": {
                 "id": {
                   "state": "Ignored"
@@ -20907,6 +20602,11 @@
             "is_preview": false,
             "is_active": false,
             "swagger_rel_path": "containerregistry/resource-manager/Microsoft.ContainerRegistry/stable/2021-09-01/containerregistry.json"
+          },
+          "2021-12-01-preview": {
+            "is_preview": true,
+            "is_active": false,
+            "swagger_rel_path": "containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2021-12-01-preview/containerregistry.json"
           }
         },
         "PUT": {
@@ -21294,6 +20994,203 @@
                 }
               }
             }
+          },
+          "2021-12-01-preview": {
+            "is_preview": true,
+            "is_active": false,
+            "swagger_rel_path": "containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2021-12-01-preview/containerregistry.json",
+            "model": {
+              "name": "Registry",
+              "swagger_rel_path": "containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2021-12-01-preview/containerregistry.json",
+              "properties": {
+                "id": {
+                  "state": "Ignored"
+                },
+                "identity/principalId": {
+                  "state": "Covered"
+                },
+                "identity/tenantId": {
+                  "state": "Covered"
+                },
+                "identity/type": {
+                  "state": "Covered"
+                },
+                "identity/userAssignedIdentities": {
+                  "state": "Covered"
+                },
+                "location": {
+                  "state": "Covered"
+                },
+                "name": {
+                  "state": "Ignored"
+                },
+                "properties/adminUserEnabled": {
+                  "state": "Covered"
+                },
+                "properties/anonymousPullEnabled": {
+                  "state": "Covered"
+                },
+                "properties/creationDate": {
+                  "state": "Ignored"
+                },
+                "properties/dataEndpointEnabled": {
+                  "state": "Covered"
+                },
+                "properties/dataEndpointHostNames": {
+                  "state": "Ignored"
+                },
+                "properties/encryption/keyVaultProperties/identity": {
+                  "state": "Covered"
+                },
+                "properties/encryption/keyVaultProperties/keyIdentifier": {
+                  "state": "Covered"
+                },
+                "properties/encryption/keyVaultProperties/keyRotationEnabled": {
+                  "state": "Ignored"
+                },
+                "properties/encryption/keyVaultProperties/lastKeyRotationTimestamp": {
+                  "state": "Ignored"
+                },
+                "properties/encryption/keyVaultProperties/versionedKeyIdentifier": {
+                  "state": "Ignored"
+                },
+                "properties/encryption/status": {
+                  "state": "Covered"
+                },
+                "properties/loginServer": {
+                  "state": "Ignored"
+                },
+                "properties/networkRuleBypassOptions": {
+                  "state": "Covered"
+                },
+                "properties/networkRuleSet/defaultAction": {
+                  "state": "Covered"
+                },
+                "properties/networkRuleSet/ipRules/action": {
+                  "state": "Covered"
+                },
+                "properties/networkRuleSet/ipRules/value": {
+                  "state": "Covered"
+                },
+                "properties/networkRuleSet/virtualNetworkRules/action": {
+                  "state": "Covered"
+                },
+                "properties/networkRuleSet/virtualNetworkRules/id": {
+                  "state": "Covered"
+                },
+                "properties/policies/exportPolicy/status": {
+                  "state": "Uncovered"
+                },
+                "properties/policies/quarantinePolicy/status": {
+                  "state": "Covered"
+                },
+                "properties/policies/retentionPolicy/days": {
+                  "state": "Covered"
+                },
+                "properties/policies/retentionPolicy/lastUpdatedTime": {
+                  "state": "Ignored"
+                },
+                "properties/policies/retentionPolicy/status": {
+                  "state": "Covered"
+                },
+                "properties/policies/trustPolicy/status": {
+                  "state": "Covered"
+                },
+                "properties/policies/trustPolicy/type": {
+                  "state": "Covered"
+                },
+                "properties/privateEndpointConnections/id": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/name": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/properties/privateEndpoint/id": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/actionsRequired": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/description": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/status": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/properties/provisioningState": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/systemData/createdAt": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/systemData/createdBy": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/systemData/createdByType": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/systemData/lastModifiedAt": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/systemData/lastModifiedBy": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/systemData/lastModifiedByType": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/type": {
+                  "state": "Ignored"
+                },
+                "properties/provisioningState": {
+                  "state": "Ignored"
+                },
+                "properties/publicNetworkAccess": {
+                  "state": "Covered"
+                },
+                "properties/status/displayStatus": {
+                  "state": "Ignored"
+                },
+                "properties/status/message": {
+                  "state": "Ignored"
+                },
+                "properties/status/timestamp": {
+                  "state": "Ignored"
+                },
+                "properties/zoneRedundancy": {
+                  "state": "Covered"
+                },
+                "sku/name": {
+                  "state": "Covered"
+                },
+                "sku/tier": {
+                  "state": "Ignored"
+                },
+                "systemData/createdAt": {
+                  "state": "Ignored"
+                },
+                "systemData/createdBy": {
+                  "state": "Ignored"
+                },
+                "systemData/createdByType": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedAt": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedBy": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedByType": {
+                  "state": "Ignored"
+                },
+                "tags": {
+                  "state": "Covered"
+                },
+                "type": {
+                  "state": "Ignored"
+                }
+              }
+            }
           }
         }
       }
@@ -21310,6 +21207,11 @@
             "is_preview": false,
             "is_active": false,
             "swagger_rel_path": "containerregistry/resource-manager/Microsoft.ContainerRegistry/stable/2021-09-01/containerregistry.json"
+          },
+          "2021-12-01-preview": {
+            "is_preview": true,
+            "is_active": false,
+            "swagger_rel_path": "containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2021-12-01-preview/containerregistry.json"
           }
         },
         "PUT": {
@@ -21436,6 +21338,68 @@
                 }
               }
             }
+          },
+          "2021-12-01-preview": {
+            "is_preview": true,
+            "is_active": false,
+            "swagger_rel_path": "containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2021-12-01-preview/containerregistry.json",
+            "model": {
+              "name": "Replication",
+              "swagger_rel_path": "containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2021-12-01-preview/containerregistry.json",
+              "properties": {
+                "id": {
+                  "state": "Ignored"
+                },
+                "location": {
+                  "state": "Covered"
+                },
+                "name": {
+                  "state": "Ignored"
+                },
+                "properties/provisioningState": {
+                  "state": "Ignored"
+                },
+                "properties/regionEndpointEnabled": {
+                  "state": "Covered"
+                },
+                "properties/status/displayStatus": {
+                  "state": "Ignored"
+                },
+                "properties/status/message": {
+                  "state": "Ignored"
+                },
+                "properties/status/timestamp": {
+                  "state": "Ignored"
+                },
+                "properties/zoneRedundancy": {
+                  "state": "Covered"
+                },
+                "systemData/createdAt": {
+                  "state": "Ignored"
+                },
+                "systemData/createdBy": {
+                  "state": "Ignored"
+                },
+                "systemData/createdByType": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedAt": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedBy": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedByType": {
+                  "state": "Ignored"
+                },
+                "tags": {
+                  "state": "Covered"
+                },
+                "type": {
+                  "state": "Ignored"
+                }
+              }
+            }
           }
         }
       }
@@ -21447,6 +21411,11 @@
             "is_preview": true,
             "is_active": true,
             "swagger_rel_path": "containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2021-08-01-preview/containerregistry.json"
+          },
+          "2021-12-01-preview": {
+            "is_preview": true,
+            "is_active": false,
+            "swagger_rel_path": "containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2021-12-01-preview/containerregistry.json"
           }
         },
         "PUT": {
@@ -21457,6 +21426,59 @@
             "model": {
               "name": "ScopeMap",
               "swagger_rel_path": "containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2021-08-01-preview/containerregistry.json",
+              "properties": {
+                "id": {
+                  "state": "Ignored"
+                },
+                "name": {
+                  "state": "Ignored"
+                },
+                "properties/actions": {
+                  "state": "Covered"
+                },
+                "properties/creationDate": {
+                  "state": "Ignored"
+                },
+                "properties/description": {
+                  "state": "Covered"
+                },
+                "properties/provisioningState": {
+                  "state": "Ignored"
+                },
+                "properties/type": {
+                  "state": "Ignored"
+                },
+                "systemData/createdAt": {
+                  "state": "Ignored"
+                },
+                "systemData/createdBy": {
+                  "state": "Ignored"
+                },
+                "systemData/createdByType": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedAt": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedBy": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedByType": {
+                  "state": "Ignored"
+                },
+                "type": {
+                  "state": "Ignored"
+                }
+              }
+            }
+          },
+          "2021-12-01-preview": {
+            "is_preview": true,
+            "is_active": false,
+            "swagger_rel_path": "containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2021-12-01-preview/containerregistry.json",
+            "model": {
+              "name": "ScopeMap",
+              "swagger_rel_path": "containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2021-12-01-preview/containerregistry.json",
               "properties": {
                 "id": {
                   "state": "Ignored"
@@ -21804,6 +21826,11 @@
             "is_preview": true,
             "is_active": true,
             "swagger_rel_path": "containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2021-08-01-preview/containerregistry.json"
+          },
+          "2021-12-01-preview": {
+            "is_preview": true,
+            "is_active": false,
+            "swagger_rel_path": "containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2021-12-01-preview/containerregistry.json"
           }
         },
         "PUT": {
@@ -21814,6 +21841,80 @@
             "model": {
               "name": "Token",
               "swagger_rel_path": "containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2021-08-01-preview/containerregistry.json",
+              "properties": {
+                "id": {
+                  "state": "Ignored"
+                },
+                "name": {
+                  "state": "Ignored"
+                },
+                "properties/creationDate": {
+                  "state": "Ignored"
+                },
+                "properties/credentials/certificates/encodedPemCertificate": {
+                  "state": "Uncovered"
+                },
+                "properties/credentials/certificates/expiry": {
+                  "state": "Uncovered"
+                },
+                "properties/credentials/certificates/name": {
+                  "state": "Uncovered"
+                },
+                "properties/credentials/certificates/thumbprint": {
+                  "state": "Uncovered"
+                },
+                "properties/credentials/passwords/creationTime": {
+                  "state": "Uncovered"
+                },
+                "properties/credentials/passwords/expiry": {
+                  "state": "Uncovered"
+                },
+                "properties/credentials/passwords/name": {
+                  "state": "Uncovered"
+                },
+                "properties/credentials/passwords/value": {
+                  "state": "Ignored"
+                },
+                "properties/provisioningState": {
+                  "state": "Ignored"
+                },
+                "properties/scopeMapId": {
+                  "state": "Covered"
+                },
+                "properties/status": {
+                  "state": "Covered"
+                },
+                "systemData/createdAt": {
+                  "state": "Ignored"
+                },
+                "systemData/createdBy": {
+                  "state": "Ignored"
+                },
+                "systemData/createdByType": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedAt": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedBy": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedByType": {
+                  "state": "Ignored"
+                },
+                "type": {
+                  "state": "Ignored"
+                }
+              }
+            }
+          },
+          "2021-12-01-preview": {
+            "is_preview": true,
+            "is_active": false,
+            "swagger_rel_path": "containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2021-12-01-preview/containerregistry.json",
+            "model": {
+              "name": "Token",
+              "swagger_rel_path": "containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2021-12-01-preview/containerregistry.json",
               "properties": {
                 "id": {
                   "state": "Ignored"
@@ -21896,6 +21997,11 @@
             "is_preview": false,
             "is_active": false,
             "swagger_rel_path": "containerregistry/resource-manager/Microsoft.ContainerRegistry/stable/2021-09-01/containerregistry.json"
+          },
+          "2021-12-01-preview": {
+            "is_preview": true,
+            "is_active": false,
+            "swagger_rel_path": "containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2021-12-01-preview/containerregistry.json"
           }
         },
         "PUT": {
@@ -21938,6 +22044,38 @@
             "model": {
               "name": "WebhookCreateParameters",
               "swagger_rel_path": "containerregistry/resource-manager/Microsoft.ContainerRegistry/stable/2021-09-01/containerregistry.json",
+              "properties": {
+                "location": {
+                  "state": "Covered"
+                },
+                "properties/actions": {
+                  "state": "Covered"
+                },
+                "properties/customHeaders": {
+                  "state": "Covered"
+                },
+                "properties/scope": {
+                  "state": "Covered"
+                },
+                "properties/serviceUri": {
+                  "state": "Covered"
+                },
+                "properties/status": {
+                  "state": "Covered"
+                },
+                "tags": {
+                  "state": "Covered"
+                }
+              }
+            }
+          },
+          "2021-12-01-preview": {
+            "is_preview": true,
+            "is_active": false,
+            "swagger_rel_path": "containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2021-12-01-preview/containerregistry.json",
+            "model": {
+              "name": "WebhookCreateParameters",
+              "swagger_rel_path": "containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2021-12-01-preview/containerregistry.json",
               "properties": {
                 "location": {
                   "state": "Covered"
@@ -29127,7 +29265,7 @@
               "swagger_rel_path": "cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.exports.json",
               "properties": {
                 "eTag": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "id": {
                   "state": "Ignored"
@@ -29237,7 +29375,7 @@
               "swagger_rel_path": "cost-management/resource-manager/Microsoft.CostManagement/preview/2020-12-01-preview/costmanagement.exports.json",
               "properties": {
                 "eTag": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "id": {
                   "state": "Ignored"
@@ -29353,7 +29491,7 @@
               "swagger_rel_path": "cost-management/resource-manager/Microsoft.CostManagement/stable/2021-01-01/costmanagement.exports.json",
               "properties": {
                 "eTag": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "id": {
                   "state": "Ignored"
@@ -29472,7 +29610,7 @@
               "swagger_rel_path": "cost-management/resource-manager/Microsoft.CostManagement/stable/2021-10-01/costmanagement.exports.json",
               "properties": {
                 "eTag": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "id": {
                   "state": "Ignored"
@@ -307637,6 +307775,9 @@
                 "properties/redisConfiguration/rdb-storage-connection-string": {
                   "state": "Uncovered"
                 },
+                "properties/redisConfiguration/zonal-configuration": {
+                  "state": "Ignored"
+                },
                 "properties/redisVersion": {
                   "state": "Covered"
                 },
@@ -307892,6 +308033,11 @@
             "is_preview": false,
             "is_active": true,
             "swagger_rel_path": "redisenterprise/resource-manager/Microsoft.Cache/stable/2021-08-01/redisenterprise.json"
+          },
+          "2022-01-01": {
+            "is_preview": false,
+            "is_active": false,
+            "swagger_rel_path": "redisenterprise/resource-manager/Microsoft.Cache/stable/2022-01-01/redisenterprise.json"
           }
         },
         "PUT": {
@@ -307902,6 +308048,80 @@
             "model": {
               "name": "Cluster",
               "swagger_rel_path": "redisenterprise/resource-manager/Microsoft.Cache/stable/2021-08-01/redisenterprise.json",
+              "properties": {
+                "id": {
+                  "state": "Ignored"
+                },
+                "location": {
+                  "state": "Covered"
+                },
+                "name": {
+                  "state": "Ignored"
+                },
+                "properties/hostName": {
+                  "state": "Ignored"
+                },
+                "properties/minimumTlsVersion": {
+                  "state": "Covered"
+                },
+                "properties/privateEndpointConnections/id": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/name": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/properties/privateEndpoint/id": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/actionsRequired": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/description": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/status": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/properties/provisioningState": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/type": {
+                  "state": "Ignored"
+                },
+                "properties/provisioningState": {
+                  "state": "Ignored"
+                },
+                "properties/redisVersion": {
+                  "state": "Ignored"
+                },
+                "properties/resourceState": {
+                  "state": "Ignored"
+                },
+                "sku/capacity": {
+                  "state": "Covered"
+                },
+                "sku/name": {
+                  "state": "Covered"
+                },
+                "tags": {
+                  "state": "Covered"
+                },
+                "type": {
+                  "state": "Ignored"
+                },
+                "zones": {
+                  "state": "Covered"
+                }
+              }
+            }
+          },
+          "2022-01-01": {
+            "is_preview": false,
+            "is_active": false,
+            "swagger_rel_path": "redisenterprise/resource-manager/Microsoft.Cache/stable/2022-01-01/redisenterprise.json",
+            "model": {
+              "name": "Cluster",
+              "swagger_rel_path": "redisenterprise/resource-manager/Microsoft.Cache/stable/2022-01-01/redisenterprise.json",
               "properties": {
                 "id": {
                   "state": "Ignored"
@@ -307979,6 +308199,11 @@
             "is_preview": false,
             "is_active": true,
             "swagger_rel_path": "redisenterprise/resource-manager/Microsoft.Cache/stable/2021-08-01/redisenterprise.json"
+          },
+          "2022-01-01": {
+            "is_preview": false,
+            "is_active": false,
+            "swagger_rel_path": "redisenterprise/resource-manager/Microsoft.Cache/stable/2022-01-01/redisenterprise.json"
           }
         },
         "PUT": {
@@ -308004,6 +308229,74 @@
                 },
                 "properties/evictionPolicy": {
                   "state": "Covered"
+                },
+                "properties/modules/args": {
+                  "state": "Covered"
+                },
+                "properties/modules/name": {
+                  "state": "Covered"
+                },
+                "properties/modules/version": {
+                  "state": "Ignored"
+                },
+                "properties/persistence/aofEnabled": {
+                  "state": "Uncovered"
+                },
+                "properties/persistence/aofFrequency": {
+                  "state": "Uncovered"
+                },
+                "properties/persistence/rdbEnabled": {
+                  "state": "Uncovered"
+                },
+                "properties/persistence/rdbFrequency": {
+                  "state": "Uncovered"
+                },
+                "properties/port": {
+                  "state": "Covered"
+                },
+                "properties/provisioningState": {
+                  "state": "Ignored"
+                },
+                "properties/resourceState": {
+                  "state": "Ignored"
+                },
+                "type": {
+                  "state": "Ignored"
+                }
+              }
+            }
+          },
+          "2022-01-01": {
+            "is_preview": false,
+            "is_active": false,
+            "swagger_rel_path": "redisenterprise/resource-manager/Microsoft.Cache/stable/2022-01-01/redisenterprise.json",
+            "model": {
+              "name": "Database",
+              "swagger_rel_path": "redisenterprise/resource-manager/Microsoft.Cache/stable/2022-01-01/redisenterprise.json",
+              "properties": {
+                "id": {
+                  "state": "Ignored"
+                },
+                "name": {
+                  "state": "Ignored"
+                },
+                "properties/clientProtocol": {
+                  "state": "Covered"
+                },
+                "properties/clusteringPolicy": {
+                  "state": "Covered"
+                },
+                "properties/evictionPolicy": {
+                  "state": "Covered"
+                },
+                "properties/geoReplication/groupNickname": {
+                  "state": "Uncovered"
+                },
+                "properties/geoReplication/linkedDatabases/id": {
+                  "state": "Uncovered"
+                },
+                "properties/geoReplication/linkedDatabases/state": {
+                  "state": "Ignored"
                 },
                 "properties/modules/args": {
                   "state": "Covered"
@@ -334687,7 +334980,7 @@
                   "state": "Ignored"
                 },
                 "properties{Stream}/partitionKey": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{Stream}/serialization{Avro}/properties": {
                   "state": "Covered"
@@ -334953,7 +335246,7 @@
                   "state": "Ignored"
                 },
                 "properties{Stream}/partitionKey": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{Stream}/serialization{Avro}/properties": {
                   "state": "Covered"
@@ -335237,7 +335530,7 @@
                   "state": "Ignored"
                 },
                 "properties{Stream}/partitionKey": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{Stream}/serialization{Avro}/properties": {
                   "state": "Covered"
@@ -353506,6 +353799,314 @@
                 },
                 "properties/validationMethod": {
                   "state": "Covered"
+                },
+                "type": {
+                  "state": "Ignored"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "webpubsub": {
+    "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SIGNALRSERVICE/WEBPUBSUB/{}": {
+      "operations": {
+        "DELETE": {
+          "2021-10-01": {
+            "is_preview": false,
+            "is_active": true,
+            "swagger_rel_path": "webpubsub/resource-manager/Microsoft.SignalRService/stable/2021-10-01/webpubsub.json"
+          }
+        },
+        "PUT": {
+          "2021-10-01": {
+            "is_preview": false,
+            "is_active": true,
+            "swagger_rel_path": "webpubsub/resource-manager/Microsoft.SignalRService/stable/2021-10-01/webpubsub.json",
+            "model": {
+              "name": "WebPubSubResource",
+              "swagger_rel_path": "webpubsub/resource-manager/Microsoft.SignalRService/stable/2021-10-01/webpubsub.json",
+              "properties": {
+                "id": {
+                  "state": "Ignored"
+                },
+                "identity/principalId": {
+                  "state": "Ignored"
+                },
+                "identity/tenantId": {
+                  "state": "Ignored"
+                },
+                "identity/type": {
+                  "state": "Uncovered"
+                },
+                "identity/userAssignedIdentities": {
+                  "state": "Uncovered"
+                },
+                "location": {
+                  "state": "Covered"
+                },
+                "name": {
+                  "state": "Ignored"
+                },
+                "properties/disableAadAuth": {
+                  "state": "Covered"
+                },
+                "properties/disableLocalAuth": {
+                  "state": "Covered"
+                },
+                "properties/externalIP": {
+                  "state": "Ignored"
+                },
+                "properties/hostName": {
+                  "state": "Ignored"
+                },
+                "properties/hostNamePrefix": {
+                  "state": "Ignored"
+                },
+                "properties/liveTraceConfiguration/categories/enabled": {
+                  "state": "Covered"
+                },
+                "properties/liveTraceConfiguration/categories/name": {
+                  "state": "Covered"
+                },
+                "properties/liveTraceConfiguration/enabled": {
+                  "state": "Covered"
+                },
+                "properties/networkACLs/defaultAction": {
+                  "state": "Uncovered"
+                },
+                "properties/networkACLs/privateEndpoints/allow": {
+                  "state": "Uncovered"
+                },
+                "properties/networkACLs/privateEndpoints/deny": {
+                  "state": "Uncovered"
+                },
+                "properties/networkACLs/privateEndpoints/name": {
+                  "state": "Uncovered"
+                },
+                "properties/networkACLs/publicNetwork/allow": {
+                  "state": "Uncovered"
+                },
+                "properties/networkACLs/publicNetwork/deny": {
+                  "state": "Uncovered"
+                },
+                "properties/privateEndpointConnections/id": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/name": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/properties/groupIds": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/properties/privateEndpoint/id": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/actionsRequired": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/description": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/status": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/properties/provisioningState": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/systemData/createdAt": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/systemData/createdBy": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/systemData/createdByType": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/systemData/lastModifiedAt": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/systemData/lastModifiedBy": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/systemData/lastModifiedByType": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/type": {
+                  "state": "Ignored"
+                },
+                "properties/provisioningState": {
+                  "state": "Ignored"
+                },
+                "properties/publicNetworkAccess": {
+                  "state": "Covered"
+                },
+                "properties/publicPort": {
+                  "state": "Ignored"
+                },
+                "properties/resourceLogConfiguration/categories/enabled": {
+                  "state": "Uncovered"
+                },
+                "properties/resourceLogConfiguration/categories/name": {
+                  "state": "Uncovered"
+                },
+                "properties/serverPort": {
+                  "state": "Ignored"
+                },
+                "properties/sharedPrivateLinkResources/id": {
+                  "state": "Ignored"
+                },
+                "properties/sharedPrivateLinkResources/name": {
+                  "state": "Ignored"
+                },
+                "properties/sharedPrivateLinkResources/properties/groupId": {
+                  "state": "Ignored"
+                },
+                "properties/sharedPrivateLinkResources/properties/privateLinkResourceId": {
+                  "state": "Ignored"
+                },
+                "properties/sharedPrivateLinkResources/properties/provisioningState": {
+                  "state": "Ignored"
+                },
+                "properties/sharedPrivateLinkResources/properties/requestMessage": {
+                  "state": "Ignored"
+                },
+                "properties/sharedPrivateLinkResources/properties/status": {
+                  "state": "Ignored"
+                },
+                "properties/sharedPrivateLinkResources/systemData/createdAt": {
+                  "state": "Ignored"
+                },
+                "properties/sharedPrivateLinkResources/systemData/createdBy": {
+                  "state": "Ignored"
+                },
+                "properties/sharedPrivateLinkResources/systemData/createdByType": {
+                  "state": "Ignored"
+                },
+                "properties/sharedPrivateLinkResources/systemData/lastModifiedAt": {
+                  "state": "Ignored"
+                },
+                "properties/sharedPrivateLinkResources/systemData/lastModifiedBy": {
+                  "state": "Ignored"
+                },
+                "properties/sharedPrivateLinkResources/systemData/lastModifiedByType": {
+                  "state": "Ignored"
+                },
+                "properties/sharedPrivateLinkResources/type": {
+                  "state": "Ignored"
+                },
+                "properties/tls/clientCertEnabled": {
+                  "state": "Covered"
+                },
+                "properties/version": {
+                  "state": "Ignored"
+                },
+                "sku/capacity": {
+                  "state": "Covered"
+                },
+                "sku/family": {
+                  "state": "Ignored"
+                },
+                "sku/name": {
+                  "state": "Covered"
+                },
+                "sku/size": {
+                  "state": "Ignored"
+                },
+                "sku/tier": {
+                  "state": "Uncovered"
+                },
+                "systemData/createdAt": {
+                  "state": "Ignored"
+                },
+                "systemData/createdBy": {
+                  "state": "Ignored"
+                },
+                "systemData/createdByType": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedAt": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedBy": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedByType": {
+                  "state": "Ignored"
+                },
+                "tags": {
+                  "state": "Covered"
+                },
+                "type": {
+                  "state": "Ignored"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SIGNALRSERVICE/WEBPUBSUB/{}/HUBS/{}": {
+      "operations": {
+        "DELETE": {
+          "2021-10-01": {
+            "is_preview": false,
+            "is_active": true,
+            "swagger_rel_path": "webpubsub/resource-manager/Microsoft.SignalRService/stable/2021-10-01/webpubsub.json"
+          }
+        },
+        "PUT": {
+          "2021-10-01": {
+            "is_preview": false,
+            "is_active": true,
+            "swagger_rel_path": "webpubsub/resource-manager/Microsoft.SignalRService/stable/2021-10-01/webpubsub.json",
+            "model": {
+              "name": "WebPubSubHub",
+              "swagger_rel_path": "webpubsub/resource-manager/Microsoft.SignalRService/stable/2021-10-01/webpubsub.json",
+              "properties": {
+                "id": {
+                  "state": "Ignored"
+                },
+                "name": {
+                  "state": "Ignored"
+                },
+                "properties/anonymousConnectPolicy": {
+                  "state": "Covered"
+                },
+                "properties/eventHandlers/auth/managedIdentity/resource": {
+                  "state": "Covered"
+                },
+                "properties/eventHandlers/auth/type": {
+                  "state": "Covered"
+                },
+                "properties/eventHandlers/systemEvents": {
+                  "state": "Covered"
+                },
+                "properties/eventHandlers/urlTemplate": {
+                  "state": "Covered"
+                },
+                "properties/eventHandlers/userEventPattern": {
+                  "state": "Covered"
+                },
+                "systemData/createdAt": {
+                  "state": "Ignored"
+                },
+                "systemData/createdBy": {
+                  "state": "Ignored"
+                },
+                "systemData/createdByType": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedAt": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedBy": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedByType": {
+                  "state": "Ignored"
                 },
                 "type": {
                   "state": "Ignored"
