@@ -79704,6 +79704,18 @@
                 "id": {
                   "state": "Ignored"
                 },
+                "identity/principalId": {
+                  "state": "Ignored"
+                },
+                "identity/tenantId": {
+                  "state": "Ignored"
+                },
+                "identity/type": {
+                  "state": "Uncovered"
+                },
+                "identity/userAssignedIdentities": {
+                  "state": "Uncovered"
+                },
                 "location": {
                   "state": "Covered"
                 },
@@ -79730,6 +79742,21 @@
                 },
                 "properties/createMode": {
                   "state": "Covered"
+                },
+                "properties/dataEncryption/geoBackupKeyUri": {
+                  "state": "Uncovered"
+                },
+                "properties/dataEncryption/geoBackupUserAssignedIdentityId": {
+                  "state": "Uncovered"
+                },
+                "properties/dataEncryption/primaryKeyUri": {
+                  "state": "Uncovered"
+                },
+                "properties/dataEncryption/primaryUserAssignedIdentityId": {
+                  "state": "Uncovered"
+                },
+                "properties/dataEncryption/type": {
+                  "state": "Uncovered"
                 },
                 "properties/fullyQualifiedDomainName": {
                   "state": "Ignored"
@@ -291216,135 +291243,6 @@
             "is_active": false,
             "swagger_rel_path": "redisenterprise/resource-manager/Microsoft.Cache/stable/2022-01-01/redisenterprise.json"
           }
-        },
-        "PUT": {
-          "2021-08-01": {
-            "is_preview": false,
-            "is_active": true,
-            "swagger_rel_path": "redisenterprise/resource-manager/Microsoft.Cache/stable/2021-08-01/redisenterprise.json",
-            "model": {
-              "name": "Database",
-              "swagger_rel_path": "redisenterprise/resource-manager/Microsoft.Cache/stable/2021-08-01/redisenterprise.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/clientProtocol": {
-                  "state": "Covered"
-                },
-                "properties/clusteringPolicy": {
-                  "state": "Covered"
-                },
-                "properties/evictionPolicy": {
-                  "state": "Covered"
-                },
-                "properties/modules/args": {
-                  "state": "Covered"
-                },
-                "properties/modules/name": {
-                  "state": "Covered"
-                },
-                "properties/modules/version": {
-                  "state": "Ignored"
-                },
-                "properties/persistence/aofEnabled": {
-                  "state": "Uncovered"
-                },
-                "properties/persistence/aofFrequency": {
-                  "state": "Uncovered"
-                },
-                "properties/persistence/rdbEnabled": {
-                  "state": "Uncovered"
-                },
-                "properties/persistence/rdbFrequency": {
-                  "state": "Uncovered"
-                },
-                "properties/port": {
-                  "state": "Covered"
-                },
-                "properties/provisioningState": {
-                  "state": "Ignored"
-                },
-                "properties/resourceState": {
-                  "state": "Ignored"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
-          "2022-01-01": {
-            "is_preview": false,
-            "is_active": false,
-            "swagger_rel_path": "redisenterprise/resource-manager/Microsoft.Cache/stable/2022-01-01/redisenterprise.json",
-            "model": {
-              "name": "Database",
-              "swagger_rel_path": "redisenterprise/resource-manager/Microsoft.Cache/stable/2022-01-01/redisenterprise.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/clientProtocol": {
-                  "state": "Covered"
-                },
-                "properties/clusteringPolicy": {
-                  "state": "Covered"
-                },
-                "properties/evictionPolicy": {
-                  "state": "Covered"
-                },
-                "properties/geoReplication/groupNickname": {
-                  "state": "Uncovered"
-                },
-                "properties/geoReplication/linkedDatabases/id": {
-                  "state": "Uncovered"
-                },
-                "properties/geoReplication/linkedDatabases/state": {
-                  "state": "Ignored"
-                },
-                "properties/modules/args": {
-                  "state": "Covered"
-                },
-                "properties/modules/name": {
-                  "state": "Covered"
-                },
-                "properties/modules/version": {
-                  "state": "Ignored"
-                },
-                "properties/persistence/aofEnabled": {
-                  "state": "Uncovered"
-                },
-                "properties/persistence/aofFrequency": {
-                  "state": "Uncovered"
-                },
-                "properties/persistence/rdbEnabled": {
-                  "state": "Uncovered"
-                },
-                "properties/persistence/rdbFrequency": {
-                  "state": "Uncovered"
-                },
-                "properties/port": {
-                  "state": "Covered"
-                },
-                "properties/provisioningState": {
-                  "state": "Ignored"
-                },
-                "properties/resourceState": {
-                  "state": "Ignored"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          }
         }
       }
     }
@@ -315692,6 +315590,9 @@
                 "properties/inputs/properties{Reference}/datasource{Microsoft.Sql/Server/Database}/type": {
                   "state": "Uncovered"
                 },
+                "properties/inputs/properties{Reference}/datasource{Microsoft.Storage/Blob}/properties/authenticationMode": {
+                  "state": "Uncovered"
+                },
                 "properties/inputs/properties{Reference}/datasource{Microsoft.Storage/Blob}/properties/container": {
                   "state": "Uncovered"
                 },
@@ -315840,6 +315741,9 @@
                   "state": "Uncovered"
                 },
                 "properties/inputs/properties{Stream}/datasource{Microsoft.ServiceBus/EventHub}/type": {
+                  "state": "Uncovered"
+                },
+                "properties/inputs/properties{Stream}/datasource{Microsoft.Storage/Blob}/properties/authenticationMode": {
                   "state": "Uncovered"
                 },
                 "properties/inputs/properties{Stream}/datasource{Microsoft.Storage/Blob}/properties/container": {
@@ -316507,6 +316411,9 @@
                 "properties/inputs/properties{Reference}/datasource{Microsoft.Sql/Server/Database}/type": {
                   "state": "Uncovered"
                 },
+                "properties/inputs/properties{Reference}/datasource{Microsoft.Storage/Blob}/properties/authenticationMode": {
+                  "state": "Uncovered"
+                },
                 "properties/inputs/properties{Reference}/datasource{Microsoft.Storage/Blob}/properties/container": {
                   "state": "Uncovered"
                 },
@@ -316639,6 +316546,9 @@
                 "properties/inputs/properties{Stream}/datasource{Microsoft.ServiceBus/EventHub}/type": {
                   "state": "Uncovered"
                 },
+                "properties/inputs/properties{Stream}/datasource{Microsoft.Storage/Blob}/properties/authenticationMode": {
+                  "state": "Uncovered"
+                },
                 "properties/inputs/properties{Stream}/datasource{Microsoft.Storage/Blob}/properties/container": {
                   "state": "Uncovered"
                 },
@@ -316748,6 +316658,24 @@
                   "state": "Ignored"
                 },
                 "properties/outputs/name": {
+                  "state": "Uncovered"
+                },
+                "properties/outputs/properties/datasource{Microsoft.AzureFunction}/properties/apiKey": {
+                  "state": "Uncovered"
+                },
+                "properties/outputs/properties/datasource{Microsoft.AzureFunction}/properties/functionAppName": {
+                  "state": "Uncovered"
+                },
+                "properties/outputs/properties/datasource{Microsoft.AzureFunction}/properties/functionName": {
+                  "state": "Uncovered"
+                },
+                "properties/outputs/properties/datasource{Microsoft.AzureFunction}/properties/maxBatchCount": {
+                  "state": "Uncovered"
+                },
+                "properties/outputs/properties/datasource{Microsoft.AzureFunction}/properties/maxBatchSize": {
+                  "state": "Uncovered"
+                },
+                "properties/outputs/properties/datasource{Microsoft.AzureFunction}/type": {
                   "state": "Uncovered"
                 },
                 "properties/outputs/properties/datasource{Microsoft.DataLake/Accounts}/properties/accountName": {
@@ -317418,6 +317346,9 @@
                 "properties/inputs/properties{Reference}/datasource{Microsoft.Sql/Server/Database}/type": {
                   "state": "Uncovered"
                 },
+                "properties/inputs/properties{Reference}/datasource{Microsoft.Storage/Blob}/properties/authenticationMode": {
+                  "state": "Uncovered"
+                },
                 "properties/inputs/properties{Reference}/datasource{Microsoft.Storage/Blob}/properties/container": {
                   "state": "Uncovered"
                 },
@@ -317566,6 +317497,9 @@
                   "state": "Uncovered"
                 },
                 "properties/inputs/properties{Stream}/datasource{Microsoft.ServiceBus/EventHub}/type": {
+                  "state": "Uncovered"
+                },
+                "properties/inputs/properties{Stream}/datasource{Microsoft.Storage/Blob}/properties/authenticationMode": {
                   "state": "Uncovered"
                 },
                 "properties/inputs/properties{Stream}/datasource{Microsoft.Storage/Blob}/properties/container": {
@@ -318684,6 +318618,9 @@
                 "properties{Reference}/datasource{Microsoft.Sql/Server/Database}/type": {
                   "state": "Covered"
                 },
+                "properties{Reference}/datasource{Microsoft.Storage/Blob}/properties/authenticationMode": {
+                  "state": "Uncovered"
+                },
                 "properties{Reference}/datasource{Microsoft.Storage/Blob}/properties/container": {
                   "state": "Covered"
                 },
@@ -318833,6 +318770,9 @@
                 },
                 "properties{Stream}/datasource{Microsoft.ServiceBus/EventHub}/type": {
                   "state": "Covered"
+                },
+                "properties{Stream}/datasource{Microsoft.Storage/Blob}/properties/authenticationMode": {
+                  "state": "Uncovered"
                 },
                 "properties{Stream}/datasource{Microsoft.Storage/Blob}/properties/container": {
                   "state": "Covered"
@@ -318977,6 +318917,9 @@
                 "properties{Reference}/datasource{Microsoft.Sql/Server/Database}/type": {
                   "state": "Covered"
                 },
+                "properties{Reference}/datasource{Microsoft.Storage/Blob}/properties/authenticationMode": {
+                  "state": "Uncovered"
+                },
                 "properties{Reference}/datasource{Microsoft.Storage/Blob}/properties/container": {
                   "state": "Covered"
                 },
@@ -319109,6 +319052,9 @@
                 "properties{Stream}/datasource{Microsoft.ServiceBus/EventHub}/type": {
                   "state": "Covered"
                 },
+                "properties{Stream}/datasource{Microsoft.Storage/Blob}/properties/authenticationMode": {
+                  "state": "Uncovered"
+                },
                 "properties{Stream}/datasource{Microsoft.Storage/Blob}/properties/container": {
                   "state": "Covered"
                 },
@@ -319233,6 +319179,9 @@
                 },
                 "properties{Reference}/datasource{Microsoft.Sql/Server/Database}/type": {
                   "state": "Covered"
+                },
+                "properties{Reference}/datasource{Microsoft.Storage/Blob}/properties/authenticationMode": {
+                  "state": "Uncovered"
                 },
                 "properties{Reference}/datasource{Microsoft.Storage/Blob}/properties/container": {
                   "state": "Covered"
@@ -319383,6 +319332,9 @@
                 },
                 "properties{Stream}/datasource{Microsoft.ServiceBus/EventHub}/type": {
                   "state": "Covered"
+                },
+                "properties{Stream}/datasource{Microsoft.Storage/Blob}/properties/authenticationMode": {
+                  "state": "Uncovered"
                 },
                 "properties{Stream}/datasource{Microsoft.Storage/Blob}/properties/container": {
                   "state": "Covered"
@@ -319883,6 +319835,24 @@
                   "state": "Ignored"
                 },
                 "name": {
+                  "state": "Covered"
+                },
+                "properties/datasource{Microsoft.AzureFunction}/properties/apiKey": {
+                  "state": "Covered"
+                },
+                "properties/datasource{Microsoft.AzureFunction}/properties/functionAppName": {
+                  "state": "Covered"
+                },
+                "properties/datasource{Microsoft.AzureFunction}/properties/functionName": {
+                  "state": "Covered"
+                },
+                "properties/datasource{Microsoft.AzureFunction}/properties/maxBatchCount": {
+                  "state": "Covered"
+                },
+                "properties/datasource{Microsoft.AzureFunction}/properties/maxBatchSize": {
+                  "state": "Covered"
+                },
+                "properties/datasource{Microsoft.AzureFunction}/type": {
                   "state": "Covered"
                 },
                 "properties/datasource{Microsoft.DataLake/Accounts}/properties/accountName": {
