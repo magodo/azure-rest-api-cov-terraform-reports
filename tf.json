@@ -643,6 +643,7 @@
       "properties/allowedFqdnList",
       "properties/apiProperties/aadClientId",
       "properties/apiProperties/aadTenantId",
+      "properties/apiProperties/qnaAzureSearchEndpointId",
       "properties/apiProperties/qnaRuntimeEndpoint",
       "properties/apiProperties/superUser",
       "properties/apiProperties/websiteName",
@@ -682,6 +683,7 @@
       "properties/allowedFqdnList",
       "properties/apiProperties/aadClientId",
       "properties/apiProperties/aadTenantId",
+      "properties/apiProperties/qnaAzureSearchEndpointId",
       "properties/apiProperties/qnaRuntimeEndpoint",
       "properties/apiProperties/superUser",
       "properties/apiProperties/websiteName",
@@ -2162,6 +2164,14 @@
     "properties": [
       "properties/format",
       "properties/value"
+    ]
+  },
+  {
+    "api_version": "2021-08-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/APIS/{}/OPERATIONS/{}/TAGS/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/displayName"
     ]
   },
   {
@@ -5734,6 +5744,7 @@
       "properties/allowedFqdnList",
       "properties/apiProperties/aadClientId",
       "properties/apiProperties/aadTenantId",
+      "properties/apiProperties/qnaAzureSearchEndpointId",
       "properties/apiProperties/qnaRuntimeEndpoint",
       "properties/apiProperties/superUser",
       "properties/apiProperties/websiteName",
@@ -5778,6 +5789,7 @@
       "properties/allowedFqdnList",
       "properties/apiProperties/aadClientId",
       "properties/apiProperties/aadTenantId",
+      "properties/apiProperties/qnaAzureSearchEndpointId",
       "properties/apiProperties/qnaRuntimeEndpoint",
       "properties/apiProperties/superUser",
       "properties/apiProperties/websiteName",
@@ -5817,6 +5829,7 @@
       "properties/allowedFqdnList",
       "properties/apiProperties/aadClientId",
       "properties/apiProperties/aadTenantId",
+      "properties/apiProperties/qnaAzureSearchEndpointId",
       "properties/apiProperties/qnaRuntimeEndpoint",
       "properties/apiProperties/superUser",
       "properties/apiProperties/websiteName",
@@ -5856,6 +5869,7 @@
       "properties/allowedFqdnList",
       "properties/apiProperties/aadClientId",
       "properties/apiProperties/aadTenantId",
+      "properties/apiProperties/qnaAzureSearchEndpointId",
       "properties/apiProperties/qnaRuntimeEndpoint",
       "properties/apiProperties/superUser",
       "properties/apiProperties/websiteName",
@@ -7622,6 +7636,49 @@
     ]
   },
   {
+    "api_version": "2019-06-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/AGENTPOOLS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2019-06-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/AGENTPOOLS/{}",
+    "operation": "GET",
+    "properties": [
+      "id",
+      "location",
+      "name",
+      "properties/count",
+      "properties/os",
+      "properties/tier",
+      "properties/virtualNetworkSubnetResourceId",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2019-06-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/AGENTPOOLS/{}",
+    "operation": "PATCH",
+    "properties": [
+      "properties/count"
+    ]
+  },
+  {
+    "api_version": "2019-06-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/AGENTPOOLS/{}",
+    "operation": "PUT",
+    "properties": [
+      "id",
+      "location",
+      "name",
+      "properties/count",
+      "properties/os",
+      "properties/tier",
+      "properties/virtualNetworkSubnetResourceId",
+      "tags"
+    ]
+  },
+  {
     "api_version": "2021-08-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/LISTCREDENTIALS",
     "operation": "POST"
@@ -8044,6 +8101,7 @@
       "properties/linuxProfile/ssh/publicKeys/keyData",
       "properties/networkProfile/dnsServiceIP",
       "properties/networkProfile/dockerBridgeCidr",
+      "properties/networkProfile/ipFamilies",
       "properties/networkProfile/loadBalancerProfile/allocatedOutboundPorts",
       "properties/networkProfile/loadBalancerProfile/effectiveOutboundIPs/id",
       "properties/networkProfile/loadBalancerProfile/idleTimeoutInMinutes",
@@ -8061,6 +8119,8 @@
       "properties/networkProfile/podCidr",
       "properties/networkProfile/serviceCidr",
       "properties/nodeResourceGroup",
+      "properties/oidcIssuerProfile/enabled",
+      "properties/oidcIssuerProfile/issuerURL",
       "properties/privateFQDN",
       "properties/publicNetworkAccess",
       "properties/servicePrincipalProfile/clientId",
@@ -8207,6 +8267,7 @@
       "properties/linuxProfile/ssh/publicKeys/keyData",
       "properties/networkProfile/dnsServiceIP",
       "properties/networkProfile/dockerBridgeCidr",
+      "properties/networkProfile/ipFamilies",
       "properties/networkProfile/loadBalancerProfile/allocatedOutboundPorts",
       "properties/networkProfile/loadBalancerProfile/effectiveOutboundIPs/id",
       "properties/networkProfile/loadBalancerProfile/idleTimeoutInMinutes",
@@ -8224,6 +8285,8 @@
       "properties/networkProfile/podCidr",
       "properties/networkProfile/serviceCidr",
       "properties/nodeResourceGroup",
+      "properties/oidcIssuerProfile/enabled",
+      "properties/oidcIssuerProfile/issuerURL",
       "properties/privateFQDN",
       "properties/publicNetworkAccess",
       "properties/servicePrincipalProfile/clientId",
@@ -9060,7 +9123,6 @@
       "properties{SnowflakeTable}/linkedServiceName/type",
       "properties{SnowflakeTable}/parameters",
       "properties{SnowflakeTable}/schema",
-      "properties{SnowflakeTable}/structure",
       "properties{SnowflakeTable}/typeProperties/schema",
       "properties{SnowflakeTable}/typeProperties/table",
       "properties{SqlServerTable}",
@@ -9220,7 +9282,6 @@
       "properties{SnowflakeTable}/linkedServiceName/type",
       "properties{SnowflakeTable}/parameters",
       "properties{SnowflakeTable}/schema",
-      "properties{SnowflakeTable}/structure",
       "properties{SnowflakeTable}/typeProperties/schema",
       "properties{SnowflakeTable}/typeProperties/table",
       "properties{SqlServerTable}",
@@ -12671,12 +12732,12 @@
     ]
   },
   {
-    "api_version": "2020-10-31",
+    "api_version": "2020-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DIGITALTWINS/DIGITALTWINSINSTANCES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-10-31",
+    "api_version": "2020-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DIGITALTWINS/DIGITALTWINSINSTANCES/{}",
     "operation": "GET",
     "properties": [
@@ -12686,7 +12747,7 @@
     ]
   },
   {
-    "api_version": "2020-10-31",
+    "api_version": "2020-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DIGITALTWINS/DIGITALTWINSINSTANCES/{}",
     "operation": "PATCH",
     "properties": [
@@ -12694,7 +12755,7 @@
     ]
   },
   {
-    "api_version": "2020-10-31",
+    "api_version": "2020-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DIGITALTWINS/DIGITALTWINSINSTANCES/{}",
     "operation": "PUT",
     "properties": [
@@ -12704,24 +12765,27 @@
     ]
   },
   {
-    "api_version": "2020-10-31",
+    "api_version": "2020-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DIGITALTWINS/DIGITALTWINSINSTANCES/{}/ENDPOINTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-10-31",
+    "api_version": "2020-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DIGITALTWINS/DIGITALTWINSINSTANCES/{}/ENDPOINTS/{}",
     "operation": "GET",
     "properties": [
       "properties{EventGrid}/TopicEndpoint",
       "properties{EventGrid}/accessKey1",
       "properties{EventGrid}/accessKey2",
+      "properties{EventGrid}/authenticationType",
       "properties{EventGrid}/deadLetterSecret",
       "properties{EventGrid}/endpointType",
+      "properties{EventHub}/authenticationType",
       "properties{EventHub}/connectionStringPrimaryKey",
       "properties{EventHub}/connectionStringSecondaryKey",
       "properties{EventHub}/deadLetterSecret",
       "properties{EventHub}/endpointType",
+      "properties{ServiceBus}/authenticationType",
       "properties{ServiceBus}/deadLetterSecret",
       "properties{ServiceBus}/endpointType",
       "properties{ServiceBus}/primaryConnectionString",
@@ -12729,19 +12793,22 @@
     ]
   },
   {
-    "api_version": "2020-10-31",
+    "api_version": "2020-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DIGITALTWINS/DIGITALTWINSINSTANCES/{}/ENDPOINTS/{}",
     "operation": "PUT",
     "properties": [
       "properties{EventGrid}/TopicEndpoint",
       "properties{EventGrid}/accessKey1",
       "properties{EventGrid}/accessKey2",
+      "properties{EventGrid}/authenticationType",
       "properties{EventGrid}/deadLetterSecret",
       "properties{EventGrid}/endpointType",
+      "properties{EventHub}/authenticationType",
       "properties{EventHub}/connectionStringPrimaryKey",
       "properties{EventHub}/connectionStringSecondaryKey",
       "properties{EventHub}/deadLetterSecret",
       "properties{EventHub}/endpointType",
+      "properties{ServiceBus}/authenticationType",
       "properties{ServiceBus}/deadLetterSecret",
       "properties{ServiceBus}/endpointType",
       "properties{ServiceBus}/primaryConnectionString",
@@ -24399,6 +24466,13 @@
       "identity/type",
       "identity/userAssignedIdentities",
       "location",
+      "properties/disableLocalAuth",
+      "properties/encryption/keySource",
+      "properties/encryption/keyVaultProperties/identity/userAssignedIdentity",
+      "properties/encryption/keyVaultProperties/keyName",
+      "properties/encryption/keyVaultProperties/keyVaultUri",
+      "properties/encryption/keyVaultProperties/keyVersion",
+      "properties/encryption/requireInfrastructureEncryption",
       "properties/zoneRedundant",
       "sku/capacity",
       "sku/name",
@@ -24416,6 +24490,13 @@
       "identity/type",
       "identity/userAssignedIdentities",
       "location",
+      "properties/disableLocalAuth",
+      "properties/encryption/keySource",
+      "properties/encryption/keyVaultProperties/identity/userAssignedIdentity",
+      "properties/encryption/keyVaultProperties/keyName",
+      "properties/encryption/keyVaultProperties/keyVaultUri",
+      "properties/encryption/keyVaultProperties/keyVersion",
+      "properties/encryption/requireInfrastructureEncryption",
       "properties/zoneRedundant",
       "sku/capacity",
       "sku/name",
@@ -25868,6 +25949,7 @@
       "properties/currentServiceObjectiveName",
       "properties/elasticPoolId",
       "properties/highAvailabilityReplicaCount",
+      "properties/isLedgerOn",
       "properties/licenseType",
       "properties/maxSizeBytes",
       "properties/minCapacity",
@@ -25932,6 +26014,7 @@
       "properties/currentServiceObjectiveName",
       "properties/elasticPoolId",
       "properties/highAvailabilityReplicaCount",
+      "properties/isLedgerOn",
       "properties/licenseType",
       "properties/maxSizeBytes",
       "properties/minCapacity",
@@ -27446,12 +27529,12 @@
     ]
   },
   {
-    "api_version": "2020-03-01-preview",
+    "api_version": "2020-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/CLUSTERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-03-01-preview",
+    "api_version": "2020-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/CLUSTERS/{}",
     "operation": "GET",
     "properties": [
@@ -27463,7 +27546,7 @@
     ]
   },
   {
-    "api_version": "2020-03-01-preview",
+    "api_version": "2020-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/CLUSTERS/{}",
     "operation": "PATCH",
     "properties": [
@@ -27475,7 +27558,7 @@
     ]
   },
   {
-    "api_version": "2020-03-01-preview",
+    "api_version": "2020-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/CLUSTERS/{}",
     "operation": "PUT",
     "properties": [
@@ -27487,12 +27570,12 @@
     ]
   },
   {
-    "api_version": "2020-03-01-preview",
+    "api_version": "2020-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/CLUSTERS/{}/PRIVATEENDPOINTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-03-01-preview",
+    "api_version": "2020-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/CLUSTERS/{}/PRIVATEENDPOINTS/{}",
     "operation": "GET",
     "properties": [
@@ -27501,7 +27584,7 @@
     ]
   },
   {
-    "api_version": "2020-03-01-preview",
+    "api_version": "2020-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/CLUSTERS/{}/PRIVATEENDPOINTS/{}",
     "operation": "PUT",
     "properties": [
@@ -27510,12 +27593,12 @@
     ]
   },
   {
-    "api_version": "2017-04-01-preview",
+    "api_version": "2020-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2017-04-01-preview",
+    "api_version": "2020-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}",
     "operation": "GET",
     "properties": [
@@ -27540,7 +27623,7 @@
     ]
   },
   {
-    "api_version": "2017-04-01-preview",
+    "api_version": "2020-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}",
     "operation": "PATCH",
     "properties": [
@@ -27565,7 +27648,7 @@
     ]
   },
   {
-    "api_version": "2017-04-01-preview",
+    "api_version": "2020-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}",
     "operation": "PUT",
     "properties": [
@@ -27590,12 +27673,12 @@
     ]
   },
   {
-    "api_version": "2017-04-01-preview",
+    "api_version": "2020-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}/FUNCTIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2017-04-01-preview",
+    "api_version": "2020-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}/FUNCTIONS/{}",
     "operation": "GET",
     "properties": [
@@ -27612,7 +27695,7 @@
     ]
   },
   {
-    "api_version": "2017-04-01-preview",
+    "api_version": "2020-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}/FUNCTIONS/{}",
     "operation": "PATCH",
     "properties": [
@@ -27629,7 +27712,7 @@
     ]
   },
   {
-    "api_version": "2017-04-01-preview",
+    "api_version": "2020-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}/FUNCTIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -27646,12 +27729,12 @@
     ]
   },
   {
-    "api_version": "2017-04-01-preview",
+    "api_version": "2020-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}/INPUTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2017-04-01-preview",
+    "api_version": "2020-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}/INPUTS/{}",
     "operation": "GET",
     "properties": [
@@ -27711,7 +27794,7 @@
     ]
   },
   {
-    "api_version": "2017-04-01-preview",
+    "api_version": "2020-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}/INPUTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -27771,7 +27854,7 @@
     ]
   },
   {
-    "api_version": "2017-04-01-preview",
+    "api_version": "2020-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}/INPUTS/{}",
     "operation": "PUT",
     "properties": [
@@ -27831,12 +27914,12 @@
     ]
   },
   {
-    "api_version": "2017-04-01-preview",
+    "api_version": "2020-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}/OUTPUTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2017-04-01-preview",
+    "api_version": "2020-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}/OUTPUTS/{}",
     "operation": "GET",
     "properties": [
@@ -27907,7 +27990,7 @@
     ]
   },
   {
-    "api_version": "2017-04-01-preview",
+    "api_version": "2020-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}/OUTPUTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -27978,7 +28061,7 @@
     ]
   },
   {
-    "api_version": "2017-04-01-preview",
+    "api_version": "2020-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}/OUTPUTS/{}",
     "operation": "PUT",
     "properties": [
@@ -28049,7 +28132,7 @@
     ]
   },
   {
-    "api_version": "2017-04-01-preview",
+    "api_version": "2020-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STREAMANALYTICS/STREAMINGJOBS/{}/TRANSFORMATIONS/{}",
     "operation": "PATCH",
     "properties": [
