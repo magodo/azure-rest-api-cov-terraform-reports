@@ -8157,6 +8157,7 @@
       "properties/agentPoolProfiles/vmSize",
       "properties/agentPoolProfiles/vnetSubnetID",
       "properties/apiServerAccessProfile/authorizedIPRanges",
+      "properties/apiServerAccessProfile/disableRunCommand",
       "properties/apiServerAccessProfile/enablePrivateCluster",
       "properties/apiServerAccessProfile/enablePrivateClusterPublicFQDN",
       "properties/apiServerAccessProfile/privateDNSZone",
@@ -8325,6 +8326,7 @@
       "properties/agentPoolProfiles/vmSize",
       "properties/agentPoolProfiles/vnetSubnetID",
       "properties/apiServerAccessProfile/authorizedIPRanges",
+      "properties/apiServerAccessProfile/disableRunCommand",
       "properties/apiServerAccessProfile/enablePrivateCluster",
       "properties/apiServerAccessProfile/enablePrivateClusterPublicFQDN",
       "properties/apiServerAccessProfile/privateDNSZone",
@@ -11711,7 +11713,6 @@
       "properties{PointInTimeRestore}/createMode",
       "properties{PointInTimeRestore}/infrastructureEncryption",
       "properties{PointInTimeRestore}/minimalTlsVersion",
-      "properties{PointInTimeRestore}/publicNetworkAccess",
       "properties{PointInTimeRestore}/restorePointInTime",
       "properties{PointInTimeRestore}/sourceServerId",
       "properties{PointInTimeRestore}/sslEnforcement",
@@ -26168,6 +26169,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}/BACKUPSHORTTERMRETENTIONPOLICIES/{}",
     "operation": "GET",
     "properties": [
+      "properties/diffBackupIntervalInHours",
       "properties/retentionDays"
     ]
   },
@@ -26176,6 +26178,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}/BACKUPSHORTTERMRETENTIONPOLICIES/{}",
     "operation": "PUT",
     "properties": [
+      "properties/diffBackupIntervalInHours",
       "properties/retentionDays"
     ]
   },
@@ -26817,12 +26820,12 @@
     ]
   },
   {
-    "api_version": "2017-03-01-preview",
+    "api_version": "2021-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQLVIRTUALMACHINE/SQLVIRTUALMACHINES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2017-03-01-preview",
+    "api_version": "2021-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQLVIRTUALMACHINE/SQLVIRTUALMACHINES/{}",
     "operation": "GET",
     "properties": [
@@ -26870,7 +26873,7 @@
     ]
   },
   {
-    "api_version": "2017-03-01-preview",
+    "api_version": "2021-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQLVIRTUALMACHINE/SQLVIRTUALMACHINES/{}",
     "operation": "PUT",
     "properties": [
@@ -27729,6 +27732,7 @@
       "properties/eventsOutOfOrderPolicy",
       "properties/jobId",
       "properties/jobState",
+      "properties/jobType",
       "properties/lastOutputEventTime",
       "properties/outputErrorPolicy",
       "properties/outputStartMode",
@@ -27758,6 +27762,7 @@
       "properties/eventsOutOfOrderPolicy",
       "properties/jobId",
       "properties/jobState",
+      "properties/jobType",
       "properties/lastOutputEventTime",
       "properties/outputErrorPolicy",
       "properties/outputStartMode",
@@ -27787,6 +27792,7 @@
       "properties/eventsOutOfOrderPolicy",
       "properties/jobId",
       "properties/jobState",
+      "properties/jobType",
       "properties/lastOutputEventTime",
       "properties/outputErrorPolicy",
       "properties/outputStartMode",
@@ -28097,6 +28103,12 @@
       "properties/datasource{Microsoft.Storage/Blob}/properties/storageAccounts/accountName",
       "properties/datasource{Microsoft.Storage/Blob}/properties/timeFormat",
       "properties/datasource{Microsoft.Storage/Blob}/type",
+      "properties/datasource{Microsoft.Storage/DocumentDB}/properties/accountId",
+      "properties/datasource{Microsoft.Storage/DocumentDB}/properties/accountKey",
+      "properties/datasource{Microsoft.Storage/DocumentDB}/properties/collectionNamePattern",
+      "properties/datasource{Microsoft.Storage/DocumentDB}/properties/database",
+      "properties/datasource{Microsoft.Storage/DocumentDB}/properties/documentId",
+      "properties/datasource{Microsoft.Storage/DocumentDB}/type",
       "properties/datasource{Microsoft.Storage/Table}/properties/accountKey",
       "properties/datasource{Microsoft.Storage/Table}/properties/accountName",
       "properties/datasource{Microsoft.Storage/Table}/properties/batchSize",
@@ -28172,6 +28184,12 @@
       "properties/datasource{Microsoft.Storage/Blob}/properties/storageAccounts/accountName",
       "properties/datasource{Microsoft.Storage/Blob}/properties/timeFormat",
       "properties/datasource{Microsoft.Storage/Blob}/type",
+      "properties/datasource{Microsoft.Storage/DocumentDB}/properties/accountId",
+      "properties/datasource{Microsoft.Storage/DocumentDB}/properties/accountKey",
+      "properties/datasource{Microsoft.Storage/DocumentDB}/properties/collectionNamePattern",
+      "properties/datasource{Microsoft.Storage/DocumentDB}/properties/database",
+      "properties/datasource{Microsoft.Storage/DocumentDB}/properties/documentId",
+      "properties/datasource{Microsoft.Storage/DocumentDB}/type",
       "properties/datasource{Microsoft.Storage/Table}/properties/accountKey",
       "properties/datasource{Microsoft.Storage/Table}/properties/accountName",
       "properties/datasource{Microsoft.Storage/Table}/properties/batchSize",
@@ -28247,6 +28265,12 @@
       "properties/datasource{Microsoft.Storage/Blob}/properties/storageAccounts/accountName",
       "properties/datasource{Microsoft.Storage/Blob}/properties/timeFormat",
       "properties/datasource{Microsoft.Storage/Blob}/type",
+      "properties/datasource{Microsoft.Storage/DocumentDB}/properties/accountId",
+      "properties/datasource{Microsoft.Storage/DocumentDB}/properties/accountKey",
+      "properties/datasource{Microsoft.Storage/DocumentDB}/properties/collectionNamePattern",
+      "properties/datasource{Microsoft.Storage/DocumentDB}/properties/database",
+      "properties/datasource{Microsoft.Storage/DocumentDB}/properties/documentId",
+      "properties/datasource{Microsoft.Storage/DocumentDB}/type",
       "properties/datasource{Microsoft.Storage/Table}/properties/accountKey",
       "properties/datasource{Microsoft.Storage/Table}/properties/accountName",
       "properties/datasource{Microsoft.Storage/Table}/properties/batchSize",
@@ -29750,6 +29774,24 @@
     "api_version": "2021-02-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/CONFIG/PUBLISHINGCREDENTIALS/LIST",
     "operation": "POST"
+  },
+  {
+    "api_version": "2021-02-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/CONFIG/SLOTCONFIGNAMES",
+    "operation": "GET",
+    "properties": [
+      "properties/appSettingNames",
+      "properties/connectionStringNames"
+    ]
+  },
+  {
+    "api_version": "2021-02-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/CONFIG/SLOTCONFIGNAMES",
+    "operation": "PUT",
+    "properties": [
+      "properties/appSettingNames",
+      "properties/connectionStringNames"
+    ]
   },
   {
     "api_version": "2021-02-01",
