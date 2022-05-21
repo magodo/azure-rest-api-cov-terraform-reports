@@ -846,6 +846,25 @@
     ]
   },
   {
+    "api_version": "2020-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.ELASTIC/MONITORS",
+    "operation": "GET",
+    "properties": [
+      "location",
+      "properties/elasticProperties/elasticCloudDeployment/deploymentId",
+      "properties/elasticProperties/elasticCloudDeployment/elasticsearchServiceUrl",
+      "properties/elasticProperties/elasticCloudDeployment/kibanaServiceUrl",
+      "properties/elasticProperties/elasticCloudDeployment/kibanaSsoUrl",
+      "properties/elasticProperties/elasticCloudUser/elasticCloudSsoDefaultUrl",
+      "properties/elasticProperties/elasticCloudUser/emailAddress",
+      "properties/elasticProperties/elasticCloudUser/id",
+      "properties/monitoringStatus",
+      "properties/userInfo/emailAddress",
+      "sku/name",
+      "tags"
+    ]
+  },
+  {
     "api_version": "2021-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.EVENTHUB/NAMESPACES",
     "operation": "GET",
@@ -1186,6 +1205,21 @@
       "properties/parameters",
       "properties/template",
       "properties/templateLink/id",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2020-03-13",
+    "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES",
+    "operation": "GET",
+    "properties": [
+      "identity",
+      "location",
+      "properties/networkRuleSet/ipRules/value",
+      "properties/partitionCount",
+      "properties/publicNetworkAccess",
+      "properties/replicaCount",
+      "sku/name",
       "tags"
     ]
   },
@@ -3272,7 +3306,9 @@
       "identity/principalId",
       "identity/tenantId",
       "identity/type",
+      "identity/userAssignedIdentities",
       "location",
+      "properties/addonConfigs",
       "properties/customPersistentDisks/customPersistentDiskProperties{AzureFileVolume}/mountOptions",
       "properties/customPersistentDisks/customPersistentDiskProperties{AzureFileVolume}/mountPath",
       "properties/customPersistentDisks/customPersistentDiskProperties{AzureFileVolume}/readOnly",
@@ -3296,7 +3332,9 @@
       "identity/principalId",
       "identity/tenantId",
       "identity/type",
+      "identity/userAssignedIdentities",
       "location",
+      "properties/addonConfigs",
       "properties/customPersistentDisks/customPersistentDiskProperties{AzureFileVolume}/mountOptions",
       "properties/customPersistentDisks/customPersistentDiskProperties{AzureFileVolume}/mountPath",
       "properties/customPersistentDisks/customPersistentDiskProperties{AzureFileVolume}/readOnly",
@@ -5095,12 +5133,12 @@
     ]
   },
   {
-    "api_version": "2020-12-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-12-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}",
     "operation": "GET",
     "properties": [
@@ -5112,6 +5150,17 @@
       "properties/provisioningState",
       "properties/publicNetworkAccess",
       "properties/redisConfiguration",
+      "properties/redisConfiguration/aof-storage-connection-string-0",
+      "properties/redisConfiguration/aof-storage-connection-string-1",
+      "properties/redisConfiguration/maxclients",
+      "properties/redisConfiguration/maxfragmentationmemory-reserved",
+      "properties/redisConfiguration/maxmemory-delta",
+      "properties/redisConfiguration/maxmemory-policy",
+      "properties/redisConfiguration/maxmemory-reserved",
+      "properties/redisConfiguration/rdb-backup-enabled",
+      "properties/redisConfiguration/rdb-backup-frequency",
+      "properties/redisConfiguration/rdb-backup-max-snapshot-count",
+      "properties/redisConfiguration/rdb-storage-connection-string",
       "properties/redisVersion",
       "properties/replicasPerMaster",
       "properties/replicasPerPrimary",
@@ -5128,7 +5177,7 @@
     ]
   },
   {
-    "api_version": "2020-12-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}",
     "operation": "PATCH",
     "properties": [
@@ -5136,6 +5185,17 @@
       "properties/minimumTlsVersion",
       "properties/publicNetworkAccess",
       "properties/redisConfiguration",
+      "properties/redisConfiguration/aof-storage-connection-string-0",
+      "properties/redisConfiguration/aof-storage-connection-string-1",
+      "properties/redisConfiguration/maxclients",
+      "properties/redisConfiguration/maxfragmentationmemory-reserved",
+      "properties/redisConfiguration/maxmemory-delta",
+      "properties/redisConfiguration/maxmemory-policy",
+      "properties/redisConfiguration/maxmemory-reserved",
+      "properties/redisConfiguration/rdb-backup-enabled",
+      "properties/redisConfiguration/rdb-backup-frequency",
+      "properties/redisConfiguration/rdb-backup-max-snapshot-count",
+      "properties/redisConfiguration/rdb-storage-connection-string",
       "properties/redisVersion",
       "properties/replicasPerMaster",
       "properties/replicasPerPrimary",
@@ -5148,7 +5208,7 @@
     ]
   },
   {
-    "api_version": "2020-12-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}",
     "operation": "PUT",
     "properties": [
@@ -5157,6 +5217,17 @@
       "properties/minimumTlsVersion",
       "properties/publicNetworkAccess",
       "properties/redisConfiguration",
+      "properties/redisConfiguration/aof-storage-connection-string-0",
+      "properties/redisConfiguration/aof-storage-connection-string-1",
+      "properties/redisConfiguration/maxclients",
+      "properties/redisConfiguration/maxfragmentationmemory-reserved",
+      "properties/redisConfiguration/maxmemory-delta",
+      "properties/redisConfiguration/maxmemory-policy",
+      "properties/redisConfiguration/maxmemory-reserved",
+      "properties/redisConfiguration/rdb-backup-enabled",
+      "properties/redisConfiguration/rdb-backup-frequency",
+      "properties/redisConfiguration/rdb-backup-max-snapshot-count",
+      "properties/redisConfiguration/rdb-storage-connection-string",
       "properties/redisVersion",
       "properties/replicasPerMaster",
       "properties/replicasPerPrimary",
@@ -5172,12 +5243,12 @@
     ]
   },
   {
-    "api_version": "2020-12-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}/FIREWALLRULES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-12-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}/FIREWALLRULES/{}",
     "operation": "GET",
     "properties": [
@@ -5186,7 +5257,7 @@
     ]
   },
   {
-    "api_version": "2020-12-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}/FIREWALLRULES/{}",
     "operation": "PUT",
     "properties": [
@@ -5195,12 +5266,12 @@
     ]
   },
   {
-    "api_version": "2020-12-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}/LINKEDSERVERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-12-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}/LINKEDSERVERS/{}",
     "operation": "GET",
     "properties": [
@@ -5211,7 +5282,7 @@
     ]
   },
   {
-    "api_version": "2020-12-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}/LINKEDSERVERS/{}",
     "operation": "PUT",
     "properties": [
@@ -5221,17 +5292,17 @@
     ]
   },
   {
-    "api_version": "2020-12-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}/LISTKEYS",
     "operation": "POST"
   },
   {
-    "api_version": "2020-12-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}/PATCHSCHEDULES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-12-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}/PATCHSCHEDULES/{}",
     "operation": "GET",
     "properties": [
@@ -5241,7 +5312,7 @@
     ]
   },
   {
-    "api_version": "2020-12-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}/PATCHSCHEDULES/{}",
     "operation": "PUT",
     "properties": [
@@ -8090,6 +8161,18 @@
     "api_version": "2021-08-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/REPLICATIONS/{}",
     "operation": "DELETE"
+  },
+  {
+    "api_version": "2021-08-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/REPLICATIONS/{}",
+    "operation": "GET",
+    "properties": [
+      "location",
+      "name",
+      "properties/regionEndpointEnabled",
+      "properties/zoneRedundancy",
+      "tags"
+    ]
   },
   {
     "api_version": "2021-08-01-preview",
@@ -14050,6 +14133,120 @@
     ]
   },
   {
+    "api_version": "2020-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.ELASTIC/MONITORS",
+    "operation": "GET",
+    "properties": [
+      "location",
+      "properties/elasticProperties/elasticCloudDeployment/deploymentId",
+      "properties/elasticProperties/elasticCloudDeployment/elasticsearchServiceUrl",
+      "properties/elasticProperties/elasticCloudDeployment/kibanaServiceUrl",
+      "properties/elasticProperties/elasticCloudDeployment/kibanaSsoUrl",
+      "properties/elasticProperties/elasticCloudUser/elasticCloudSsoDefaultUrl",
+      "properties/elasticProperties/elasticCloudUser/emailAddress",
+      "properties/elasticProperties/elasticCloudUser/id",
+      "properties/monitoringStatus",
+      "properties/userInfo/emailAddress",
+      "sku/name",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2020-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.ELASTIC/MONITORS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2020-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.ELASTIC/MONITORS/{}",
+    "operation": "GET",
+    "properties": [
+      "location",
+      "properties/elasticProperties/elasticCloudDeployment/deploymentId",
+      "properties/elasticProperties/elasticCloudDeployment/elasticsearchServiceUrl",
+      "properties/elasticProperties/elasticCloudDeployment/kibanaServiceUrl",
+      "properties/elasticProperties/elasticCloudDeployment/kibanaSsoUrl",
+      "properties/elasticProperties/elasticCloudUser/elasticCloudSsoDefaultUrl",
+      "properties/elasticProperties/elasticCloudUser/emailAddress",
+      "properties/elasticProperties/elasticCloudUser/id",
+      "properties/monitoringStatus",
+      "properties/userInfo/emailAddress",
+      "sku/name",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2020-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.ELASTIC/MONITORS/{}",
+    "operation": "PATCH",
+    "properties": [
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2020-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.ELASTIC/MONITORS/{}",
+    "operation": "PUT",
+    "properties": [
+      "location",
+      "properties/elasticProperties/elasticCloudDeployment/deploymentId",
+      "properties/elasticProperties/elasticCloudDeployment/elasticsearchServiceUrl",
+      "properties/elasticProperties/elasticCloudDeployment/kibanaServiceUrl",
+      "properties/elasticProperties/elasticCloudDeployment/kibanaSsoUrl",
+      "properties/elasticProperties/elasticCloudUser/elasticCloudSsoDefaultUrl",
+      "properties/elasticProperties/elasticCloudUser/emailAddress",
+      "properties/elasticProperties/elasticCloudUser/id",
+      "properties/monitoringStatus",
+      "properties/userInfo/emailAddress",
+      "sku/name",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2020-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.ELASTIC/MONITORS/{}/TAGRULES",
+    "operation": "GET",
+    "properties": [
+      "properties/logRules/filteringTags/action",
+      "properties/logRules/filteringTags/name",
+      "properties/logRules/filteringTags/value",
+      "properties/logRules/sendAadLogs",
+      "properties/logRules/sendActivityLogs",
+      "properties/logRules/sendSubscriptionLogs"
+    ]
+  },
+  {
+    "api_version": "2020-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.ELASTIC/MONITORS/{}/TAGRULES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2020-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.ELASTIC/MONITORS/{}/TAGRULES/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/logRules/filteringTags/action",
+      "properties/logRules/filteringTags/name",
+      "properties/logRules/filteringTags/value",
+      "properties/logRules/sendAadLogs",
+      "properties/logRules/sendActivityLogs",
+      "properties/logRules/sendSubscriptionLogs"
+    ]
+  },
+  {
+    "api_version": "2020-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.ELASTIC/MONITORS/{}/TAGRULES/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/logRules/filteringTags/action",
+      "properties/logRules/filteringTags/name",
+      "properties/logRules/filteringTags/value",
+      "properties/logRules/sendAadLogs",
+      "properties/logRules/sendActivityLogs",
+      "properties/logRules/sendSubscriptionLogs"
+    ]
+  },
+  {
     "api_version": "2021-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTGRID/DOMAINS/{}",
     "operation": "DELETE"
@@ -15502,6 +15699,61 @@
     ]
   },
   {
+    "api_version": "2021-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.HEALTHCAREAPIS/WORKSPACES/{}/FHIRSERVICES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2021-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.HEALTHCAREAPIS/WORKSPACES/{}/FHIRSERVICES/{}",
+    "operation": "GET",
+    "properties": [
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
+      "kind",
+      "location",
+      "properties/accessPolicies/objectId",
+      "properties/acrConfiguration/loginServers",
+      "properties/authenticationConfiguration/audience",
+      "properties/authenticationConfiguration/authority",
+      "properties/authenticationConfiguration/smartProxyEnabled",
+      "properties/corsConfiguration/allowCredentials",
+      "properties/corsConfiguration/headers",
+      "properties/corsConfiguration/maxAge",
+      "properties/corsConfiguration/methods",
+      "properties/corsConfiguration/origins",
+      "properties/exportConfiguration/storageAccountName",
+      "properties/provisioningState",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2021-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.HEALTHCAREAPIS/WORKSPACES/{}/FHIRSERVICES/{}",
+    "operation": "PUT",
+    "properties": [
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
+      "kind",
+      "location",
+      "properties/accessPolicies/objectId",
+      "properties/acrConfiguration/loginServers",
+      "properties/authenticationConfiguration/audience",
+      "properties/authenticationConfiguration/authority",
+      "properties/authenticationConfiguration/smartProxyEnabled",
+      "properties/corsConfiguration/allowCredentials",
+      "properties/corsConfiguration/headers",
+      "properties/corsConfiguration/maxAge",
+      "properties/corsConfiguration/methods",
+      "properties/corsConfiguration/origins",
+      "properties/exportConfiguration/storageAccountName",
+      "properties/provisioningState",
+      "tags"
+    ]
+  },
+  {
     "api_version": "2021-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/ACTIONGROUPS/{}",
     "operation": "DELETE"
@@ -16197,53 +16449,6 @@
       "properties/source/dataSourceId",
       "properties/source/query",
       "properties/source/queryType",
-      "tags"
-    ]
-  },
-  {
-    "api_version": "2015-05-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/WEBTESTS/{}",
-    "operation": "DELETE"
-  },
-  {
-    "api_version": "2015-05-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/WEBTESTS/{}",
-    "operation": "GET",
-    "properties": [
-      "kind",
-      "location",
-      "name",
-      "properties/Configuration/WebTest",
-      "properties/Description",
-      "properties/Enabled",
-      "properties/Frequency",
-      "properties/Kind",
-      "properties/Locations/Id",
-      "properties/Name",
-      "properties/RetryEnabled",
-      "properties/SyntheticMonitorId",
-      "properties/Timeout",
-      "tags"
-    ]
-  },
-  {
-    "api_version": "2015-05-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/WEBTESTS/{}",
-    "operation": "PUT",
-    "properties": [
-      "kind",
-      "location",
-      "name",
-      "properties/Configuration/WebTest",
-      "properties/Description",
-      "properties/Enabled",
-      "properties/Frequency",
-      "properties/Kind",
-      "properties/Locations/Id",
-      "properties/Name",
-      "properties/RetryEnabled",
-      "properties/SyntheticMonitorId",
-      "properties/Timeout",
       "tags"
     ]
   },
@@ -22405,6 +22610,7 @@
       "properties/gatewayDefaultSite/id",
       "properties/gatewayType",
       "properties/ipConfigurations",
+      "properties/ipConfigurations/id",
       "properties/ipConfigurations/name",
       "properties/ipConfigurations/properties/privateIPAllocationMethod",
       "properties/ipConfigurations/properties/publicIPAddress/id",
@@ -22452,6 +22658,7 @@
       "properties/gatewayDefaultSite/id",
       "properties/gatewayType",
       "properties/ipConfigurations",
+      "properties/ipConfigurations/id",
       "properties/ipConfigurations/name",
       "properties/ipConfigurations/properties/privateIPAllocationMethod",
       "properties/ipConfigurations/properties/publicIPAddress/id",
@@ -22473,6 +22680,41 @@
       "properties/vpnGatewayGeneration",
       "properties/vpnType",
       "tags"
+    ]
+  },
+  {
+    "api_version": "2021-08-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALNETWORKGATEWAYS/{}/NATRULES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2021-08-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALNETWORKGATEWAYS/{}/NATRULES/{}",
+    "operation": "GET",
+    "properties": [
+      "name",
+      "properties/externalMappings/addressSpace",
+      "properties/externalMappings/portRange",
+      "properties/internalMappings/addressSpace",
+      "properties/internalMappings/portRange",
+      "properties/ipConfigurationId",
+      "properties/mode",
+      "properties/type"
+    ]
+  },
+  {
+    "api_version": "2021-08-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALNETWORKGATEWAYS/{}/NATRULES/{}",
+    "operation": "PUT",
+    "properties": [
+      "name",
+      "properties/externalMappings/addressSpace",
+      "properties/externalMappings/portRange",
+      "properties/internalMappings/addressSpace",
+      "properties/internalMappings/portRange",
+      "properties/ipConfigurationId",
+      "properties/mode",
+      "properties/type"
     ]
   },
   {
@@ -24830,6 +25072,21 @@
   },
   {
     "api_version": "2020-03-13",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES",
+    "operation": "GET",
+    "properties": [
+      "identity",
+      "location",
+      "properties/networkRuleSet/ipRules/value",
+      "properties/partitionCount",
+      "properties/publicNetworkAccess",
+      "properties/replicaCount",
+      "sku/name",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2020-03-13",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}",
     "operation": "DELETE"
   },
@@ -24838,9 +25095,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}",
     "operation": "GET",
     "properties": [
-      "identity/principalId",
-      "identity/tenantId",
-      "identity/type",
+      "identity",
       "location",
       "properties/networkRuleSet/ipRules/value",
       "properties/partitionCount",
@@ -24849,33 +25104,6 @@
       "sku/name",
       "tags"
     ]
-  },
-  {
-    "api_version": "2020-03-13",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}",
-    "operation": "PUT",
-    "properties": [
-      "identity/principalId",
-      "identity/tenantId",
-      "identity/type",
-      "location",
-      "properties/networkRuleSet/ipRules/value",
-      "properties/partitionCount",
-      "properties/publicNetworkAccess",
-      "properties/replicaCount",
-      "sku/name",
-      "tags"
-    ]
-  },
-  {
-    "api_version": "2020-03-13",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}/LISTADMINKEYS",
-    "operation": "POST"
-  },
-  {
-    "api_version": "2020-03-13",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}/LISTQUERYKEYS",
-    "operation": "POST"
   },
   {
     "api_version": "2019-01-01-preview",
@@ -26144,6 +26372,7 @@
       "properties/dnsZonePartner",
       "properties/fullyQualifiedDomainName",
       "properties/licenseType",
+      "properties/maintenanceConfigurationId",
       "properties/minimalTlsVersion",
       "properties/proxyOverride",
       "properties/publicDataEndpointEnabled",
@@ -26173,6 +26402,7 @@
       "properties/dnsZonePartner",
       "properties/fullyQualifiedDomainName",
       "properties/licenseType",
+      "properties/maintenanceConfigurationId",
       "properties/minimalTlsVersion",
       "properties/proxyOverride",
       "properties/publicDataEndpointEnabled",
