@@ -609,7 +609,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2021-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.BOTSERVICE/LISTAUTHSERVICEPROVIDERS",
     "operation": "POST"
   },
@@ -945,7 +945,7 @@
     ]
   },
   {
-    "api_version": "2019-09-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.KEYVAULT/LOCATIONS/{}/DELETEDVAULTS/{}",
     "operation": "GET",
     "properties": [
@@ -954,7 +954,7 @@
     ]
   },
   {
-    "api_version": "2019-09-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.KEYVAULT/LOCATIONS/{}/DELETEDVAULTS/{}/PURGE",
     "operation": "POST"
   },
@@ -1101,6 +1101,19 @@
       "values/name",
       "values/properties/addressPrefixes",
       "values/properties/region"
+    ]
+  },
+  {
+    "api_version": "2018-09-01",
+    "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.NETWORK/PRIVATEDNSZONES",
+    "operation": "GET",
+    "properties": [
+      "location",
+      "properties/maxNumberOfRecordSets",
+      "properties/maxNumberOfVirtualNetworkLinks",
+      "properties/maxNumberOfVirtualNetworkLinksWithRegistration",
+      "properties/numberOfRecordSets",
+      "tags"
     ]
   },
   {
@@ -3241,6 +3254,7 @@
       "properties/networkProfile/serviceCidr",
       "properties/networkProfile/serviceRuntimeNetworkResourceGroup",
       "properties/networkProfile/serviceRuntimeSubnetId",
+      "properties/zoneRedundant",
       "sku/capacity",
       "sku/name",
       "sku/tier",
@@ -3264,6 +3278,7 @@
       "properties/networkProfile/serviceCidr",
       "properties/networkProfile/serviceRuntimeNetworkResourceGroup",
       "properties/networkProfile/serviceRuntimeSubnetId",
+      "properties/zoneRedundant",
       "sku/capacity",
       "sku/name",
       "sku/tier",
@@ -3287,10 +3302,52 @@
       "properties/networkProfile/serviceCidr",
       "properties/networkProfile/serviceRuntimeNetworkResourceGroup",
       "properties/networkProfile/serviceRuntimeSubnetId",
+      "properties/zoneRedundant",
       "sku/capacity",
       "sku/name",
       "sku/tier",
       "tags"
+    ]
+  },
+  {
+    "api_version": "2022-03-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APIPORTALS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-03-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APIPORTALS/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/gatewayIds",
+      "properties/httpsOnly",
+      "properties/public",
+      "properties/ssoProperties/clientId",
+      "properties/ssoProperties/clientSecret",
+      "properties/ssoProperties/issuerUri",
+      "properties/ssoProperties/scope",
+      "properties/url",
+      "sku/capacity",
+      "sku/name",
+      "sku/tier"
+    ]
+  },
+  {
+    "api_version": "2022-03-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APIPORTALS/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/gatewayIds",
+      "properties/httpsOnly",
+      "properties/public",
+      "properties/ssoProperties/clientId",
+      "properties/ssoProperties/clientSecret",
+      "properties/ssoProperties/issuerUri",
+      "properties/ssoProperties/scope",
+      "properties/url",
+      "sku/capacity",
+      "sku/name",
+      "sku/tier"
     ]
   },
   {
@@ -3392,6 +3449,7 @@
       "properties/deploymentSettings/environmentVariables",
       "properties/deploymentSettings/resourceRequests/cpu",
       "properties/deploymentSettings/resourceRequests/memory",
+      "properties/source{BuildResult}/buildResultId",
       "properties/source{Container}/customContainer/args",
       "properties/source{Container}/customContainer/command",
       "properties/source{Container}/customContainer/containerImage",
@@ -3416,6 +3474,7 @@
       "properties/deploymentSettings/environmentVariables",
       "properties/deploymentSettings/resourceRequests/cpu",
       "properties/deploymentSettings/resourceRequests/memory",
+      "properties/source{BuildResult}/buildResultId",
       "properties/source{Container}/customContainer/args",
       "properties/source{Container}/customContainer/command",
       "properties/source{Container}/customContainer/containerImage",
@@ -3463,6 +3522,22 @@
   },
   {
     "api_version": "2022-03-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/BUILDSERVICES/{}/AGENTPOOLS/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/poolSize/name"
+    ]
+  },
+  {
+    "api_version": "2022-03-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/BUILDSERVICES/{}/AGENTPOOLS/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/poolSize/name"
+    ]
+  },
+  {
+    "api_version": "2022-03-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/BUILDSERVICES/{}/BUILDERS/{}",
     "operation": "DELETE"
   },
@@ -3723,6 +3798,45 @@
     "operation": "PUT",
     "properties": [
       "properties/thumbprint"
+    ]
+  },
+  {
+    "api_version": "2022-03-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/GATEWAYS/{}/ROUTECONFIGS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-03-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/GATEWAYS/{}/ROUTECONFIGS/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/appResourceId",
+      "properties/routes/description",
+      "properties/routes/filters",
+      "properties/routes/order",
+      "properties/routes/predicates",
+      "properties/routes/ssoEnabled",
+      "properties/routes/tags",
+      "properties/routes/title",
+      "properties/routes/tokenRelay",
+      "properties/routes/uri"
+    ]
+  },
+  {
+    "api_version": "2022-03-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/GATEWAYS/{}/ROUTECONFIGS/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/appResourceId",
+      "properties/routes/description",
+      "properties/routes/filters",
+      "properties/routes/order",
+      "properties/routes/predicates",
+      "properties/routes/ssoEnabled",
+      "properties/routes/tags",
+      "properties/routes/title",
+      "properties/routes/tokenRelay",
+      "properties/routes/uri"
     ]
   },
   {
@@ -4801,12 +4915,12 @@
     "operation": "POST"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2021-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BOTSERVICE/BOTSERVICES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2021-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BOTSERVICE/BOTSERVICES/{}",
     "operation": "GET",
     "properties": [
@@ -4821,16 +4935,16 @@
       "properties/endpoint",
       "properties/iconUrl",
       "properties/isCmekEnabled",
-      "properties/isIsolated",
       "properties/luisAppIds",
       "properties/luisKey",
       "properties/msaAppId",
+      "properties/publicNetworkAccess",
       "sku/name",
       "tags"
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2021-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BOTSERVICE/BOTSERVICES/{}",
     "operation": "PATCH",
     "properties": [
@@ -4845,16 +4959,16 @@
       "properties/endpoint",
       "properties/iconUrl",
       "properties/isCmekEnabled",
-      "properties/isIsolated",
       "properties/luisAppIds",
       "properties/luisKey",
       "properties/msaAppId",
+      "properties/publicNetworkAccess",
       "sku/name",
       "tags"
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2021-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BOTSERVICE/BOTSERVICES/{}",
     "operation": "PUT",
     "properties": [
@@ -4869,21 +4983,21 @@
       "properties/endpoint",
       "properties/iconUrl",
       "properties/isCmekEnabled",
-      "properties/isIsolated",
       "properties/luisAppIds",
       "properties/luisKey",
       "properties/msaAppId",
+      "properties/publicNetworkAccess",
       "sku/name",
       "tags"
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2021-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BOTSERVICE/BOTSERVICES/{}/CHANNELS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2021-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BOTSERVICE/BOTSERVICES/{}/CHANNELS/{}",
     "operation": "GET",
     "properties": [
@@ -4946,7 +5060,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2021-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BOTSERVICE/BOTSERVICES/{}/CHANNELS/{}",
     "operation": "PATCH",
     "properties": [
@@ -5009,7 +5123,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2021-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BOTSERVICE/BOTSERVICES/{}/CHANNELS/{}",
     "operation": "PUT",
     "properties": [
@@ -5072,17 +5186,17 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2021-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BOTSERVICE/BOTSERVICES/{}/CHANNELS/{}/LISTCHANNELWITHKEYS",
     "operation": "POST"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2021-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BOTSERVICE/BOTSERVICES/{}/CONNECTIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2021-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BOTSERVICE/BOTSERVICES/{}/CONNECTIONS/{}",
     "operation": "GET",
     "properties": [
@@ -5094,12 +5208,11 @@
       "properties/parameters/value",
       "properties/scopes",
       "properties/serviceProviderDisplayName",
-      "properties/serviceProviderId",
-      "tags"
+      "properties/serviceProviderId"
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2021-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BOTSERVICE/BOTSERVICES/{}/CONNECTIONS/{}",
     "operation": "PATCH",
     "properties": [
@@ -5111,12 +5224,11 @@
       "properties/parameters/value",
       "properties/scopes",
       "properties/serviceProviderDisplayName",
-      "properties/serviceProviderId",
-      "tags"
+      "properties/serviceProviderId"
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2021-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BOTSERVICE/BOTSERVICES/{}/CONNECTIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -5128,8 +5240,7 @@
       "properties/parameters/value",
       "properties/scopes",
       "properties/serviceProviderDisplayName",
-      "properties/serviceProviderId",
-      "tags"
+      "properties/serviceProviderId"
     ]
   },
   {
@@ -6388,6 +6499,7 @@
       "properties/networkAccessPolicy",
       "properties/osType",
       "properties/publicNetworkAccess",
+      "properties/securityProfile/secureVMDiskEncryptionSetId",
       "properties/securityProfile/securityType",
       "properties/tier",
       "sku/name",
@@ -6456,6 +6568,7 @@
       "properties/networkAccessPolicy",
       "properties/osType",
       "properties/publicNetworkAccess",
+      "properties/securityProfile/secureVMDiskEncryptionSetId",
       "properties/securityProfile/securityType",
       "properties/tier",
       "sku/name",
@@ -6936,6 +7049,8 @@
       "properties/storageProfile/osDisk/image/uri",
       "properties/storageProfile/osDisk/managedDisk/diskEncryptionSet/id",
       "properties/storageProfile/osDisk/managedDisk/id",
+      "properties/storageProfile/osDisk/managedDisk/securityProfile/diskEncryptionSet/id",
+      "properties/storageProfile/osDisk/managedDisk/securityProfile/securityEncryptionType",
       "properties/storageProfile/osDisk/managedDisk/storageAccountType",
       "properties/storageProfile/osDisk/name",
       "properties/storageProfile/osDisk/osType",
@@ -7011,6 +7126,8 @@
       "properties/storageProfile/osDisk/diskSizeGB",
       "properties/storageProfile/osDisk/managedDisk/diskEncryptionSet/id",
       "properties/storageProfile/osDisk/managedDisk/id",
+      "properties/storageProfile/osDisk/managedDisk/securityProfile/diskEncryptionSet/id",
+      "properties/storageProfile/osDisk/managedDisk/securityProfile/securityEncryptionType",
       "properties/storageProfile/osDisk/managedDisk/storageAccountType",
       "properties/storageProfile/osDisk/name",
       "properties/storageProfile/osDisk/osType",
@@ -7110,6 +7227,8 @@
       "properties/storageProfile/osDisk/image/uri",
       "properties/storageProfile/osDisk/managedDisk/diskEncryptionSet/id",
       "properties/storageProfile/osDisk/managedDisk/id",
+      "properties/storageProfile/osDisk/managedDisk/securityProfile/diskEncryptionSet/id",
+      "properties/storageProfile/osDisk/managedDisk/securityProfile/securityEncryptionType",
       "properties/storageProfile/osDisk/managedDisk/storageAccountType",
       "properties/storageProfile/osDisk/name",
       "properties/storageProfile/osDisk/osType",
@@ -7356,6 +7475,8 @@
       "properties/virtualMachineProfile/storageProfile/dataDisks/diskSizeGB",
       "properties/virtualMachineProfile/storageProfile/dataDisks/lun",
       "properties/virtualMachineProfile/storageProfile/dataDisks/managedDisk/diskEncryptionSet/id",
+      "properties/virtualMachineProfile/storageProfile/dataDisks/managedDisk/securityProfile/diskEncryptionSet/id",
+      "properties/virtualMachineProfile/storageProfile/dataDisks/managedDisk/securityProfile/securityEncryptionType",
       "properties/virtualMachineProfile/storageProfile/dataDisks/managedDisk/storageAccountType",
       "properties/virtualMachineProfile/storageProfile/dataDisks/writeAcceleratorEnabled",
       "properties/virtualMachineProfile/storageProfile/imageReference/id",
@@ -7370,6 +7491,8 @@
       "properties/virtualMachineProfile/storageProfile/osDisk/image",
       "properties/virtualMachineProfile/storageProfile/osDisk/image/uri",
       "properties/virtualMachineProfile/storageProfile/osDisk/managedDisk/diskEncryptionSet/id",
+      "properties/virtualMachineProfile/storageProfile/osDisk/managedDisk/securityProfile/diskEncryptionSet/id",
+      "properties/virtualMachineProfile/storageProfile/osDisk/managedDisk/securityProfile/securityEncryptionType",
       "properties/virtualMachineProfile/storageProfile/osDisk/managedDisk/storageAccountType",
       "properties/virtualMachineProfile/storageProfile/osDisk/name",
       "properties/virtualMachineProfile/storageProfile/osDisk/osType",
@@ -7473,6 +7596,8 @@
       "properties/virtualMachineProfile/storageProfile/dataDisks/diskSizeGB",
       "properties/virtualMachineProfile/storageProfile/dataDisks/lun",
       "properties/virtualMachineProfile/storageProfile/dataDisks/managedDisk/diskEncryptionSet/id",
+      "properties/virtualMachineProfile/storageProfile/dataDisks/managedDisk/securityProfile/diskEncryptionSet/id",
+      "properties/virtualMachineProfile/storageProfile/dataDisks/managedDisk/securityProfile/securityEncryptionType",
       "properties/virtualMachineProfile/storageProfile/dataDisks/managedDisk/storageAccountType",
       "properties/virtualMachineProfile/storageProfile/dataDisks/writeAcceleratorEnabled",
       "properties/virtualMachineProfile/storageProfile/imageReference/id",
@@ -7484,6 +7609,8 @@
       "properties/virtualMachineProfile/storageProfile/osDisk/diskSizeGB",
       "properties/virtualMachineProfile/storageProfile/osDisk/image",
       "properties/virtualMachineProfile/storageProfile/osDisk/managedDisk/diskEncryptionSet/id",
+      "properties/virtualMachineProfile/storageProfile/osDisk/managedDisk/securityProfile/diskEncryptionSet/id",
+      "properties/virtualMachineProfile/storageProfile/osDisk/managedDisk/securityProfile/securityEncryptionType",
       "properties/virtualMachineProfile/storageProfile/osDisk/managedDisk/storageAccountType",
       "properties/virtualMachineProfile/storageProfile/osDisk/vhdContainers",
       "properties/virtualMachineProfile/storageProfile/osDisk/writeAcceleratorEnabled",
@@ -7606,6 +7733,8 @@
       "properties/virtualMachineProfile/storageProfile/dataDisks/diskSizeGB",
       "properties/virtualMachineProfile/storageProfile/dataDisks/lun",
       "properties/virtualMachineProfile/storageProfile/dataDisks/managedDisk/diskEncryptionSet/id",
+      "properties/virtualMachineProfile/storageProfile/dataDisks/managedDisk/securityProfile/diskEncryptionSet/id",
+      "properties/virtualMachineProfile/storageProfile/dataDisks/managedDisk/securityProfile/securityEncryptionType",
       "properties/virtualMachineProfile/storageProfile/dataDisks/managedDisk/storageAccountType",
       "properties/virtualMachineProfile/storageProfile/dataDisks/writeAcceleratorEnabled",
       "properties/virtualMachineProfile/storageProfile/imageReference/id",
@@ -7620,6 +7749,8 @@
       "properties/virtualMachineProfile/storageProfile/osDisk/image",
       "properties/virtualMachineProfile/storageProfile/osDisk/image/uri",
       "properties/virtualMachineProfile/storageProfile/osDisk/managedDisk/diskEncryptionSet/id",
+      "properties/virtualMachineProfile/storageProfile/osDisk/managedDisk/securityProfile/diskEncryptionSet/id",
+      "properties/virtualMachineProfile/storageProfile/osDisk/managedDisk/securityProfile/securityEncryptionType",
       "properties/virtualMachineProfile/storageProfile/osDisk/managedDisk/storageAccountType",
       "properties/virtualMachineProfile/storageProfile/osDisk/name",
       "properties/virtualMachineProfile/storageProfile/osDisk/osType",
@@ -9403,6 +9534,7 @@
       "properties{MappingDataFlow}/folder/name",
       "properties{MappingDataFlow}/type",
       "properties{MappingDataFlow}/typeProperties/script",
+      "properties{MappingDataFlow}/typeProperties/scriptLines",
       "properties{MappingDataFlow}/typeProperties/sinks/dataset/parameters",
       "properties{MappingDataFlow}/typeProperties/sinks/dataset/referenceName",
       "properties{MappingDataFlow}/typeProperties/sinks/dataset/type",
@@ -9425,7 +9557,13 @@
       "properties{MappingDataFlow}/typeProperties/sources/schemaLinkedService/parameters",
       "properties{MappingDataFlow}/typeProperties/sources/schemaLinkedService/referenceName",
       "properties{MappingDataFlow}/typeProperties/sources/schemaLinkedService/type",
+      "properties{MappingDataFlow}/typeProperties/transformations/dataset/parameters",
+      "properties{MappingDataFlow}/typeProperties/transformations/dataset/referenceName",
+      "properties{MappingDataFlow}/typeProperties/transformations/dataset/type",
       "properties{MappingDataFlow}/typeProperties/transformations/description",
+      "properties{MappingDataFlow}/typeProperties/transformations/linkedService/parameters",
+      "properties{MappingDataFlow}/typeProperties/transformations/linkedService/referenceName",
+      "properties{MappingDataFlow}/typeProperties/transformations/linkedService/type",
       "properties{MappingDataFlow}/typeProperties/transformations/name"
     ]
   },
@@ -9439,6 +9577,7 @@
       "properties{MappingDataFlow}/folder/name",
       "properties{MappingDataFlow}/type",
       "properties{MappingDataFlow}/typeProperties/script",
+      "properties{MappingDataFlow}/typeProperties/scriptLines",
       "properties{MappingDataFlow}/typeProperties/sinks/dataset/parameters",
       "properties{MappingDataFlow}/typeProperties/sinks/dataset/referenceName",
       "properties{MappingDataFlow}/typeProperties/sinks/dataset/type",
@@ -9461,7 +9600,13 @@
       "properties{MappingDataFlow}/typeProperties/sources/schemaLinkedService/parameters",
       "properties{MappingDataFlow}/typeProperties/sources/schemaLinkedService/referenceName",
       "properties{MappingDataFlow}/typeProperties/sources/schemaLinkedService/type",
+      "properties{MappingDataFlow}/typeProperties/transformations/dataset/parameters",
+      "properties{MappingDataFlow}/typeProperties/transformations/dataset/referenceName",
+      "properties{MappingDataFlow}/typeProperties/transformations/dataset/type",
       "properties{MappingDataFlow}/typeProperties/transformations/description",
+      "properties{MappingDataFlow}/typeProperties/transformations/linkedService/parameters",
+      "properties{MappingDataFlow}/typeProperties/transformations/linkedService/referenceName",
+      "properties{MappingDataFlow}/typeProperties/transformations/linkedService/type",
       "properties{MappingDataFlow}/typeProperties/transformations/name"
     ]
   },
@@ -10638,6 +10783,7 @@
       "properties{ScheduleTrigger}/typeProperties/recurrence/schedule/monthlyOccurrences/occurrence",
       "properties{ScheduleTrigger}/typeProperties/recurrence/schedule/weekDays",
       "properties{ScheduleTrigger}/typeProperties/recurrence/startTime",
+      "properties{ScheduleTrigger}/typeProperties/recurrence/timeZone",
       "properties{TumblingWindowTrigger}",
       "properties{TumblingWindowTrigger}/annotations",
       "properties{TumblingWindowTrigger}/description",
@@ -10710,6 +10856,7 @@
       "properties{ScheduleTrigger}/typeProperties/recurrence/schedule/monthlyOccurrences/occurrence",
       "properties{ScheduleTrigger}/typeProperties/recurrence/schedule/weekDays",
       "properties{ScheduleTrigger}/typeProperties/recurrence/startTime",
+      "properties{ScheduleTrigger}/typeProperties/recurrence/timeZone",
       "properties{TumblingWindowTrigger}",
       "properties{TumblingWindowTrigger}/annotations",
       "properties{TumblingWindowTrigger}/description",
@@ -16495,12 +16642,12 @@
     ]
   },
   {
-    "api_version": "2020-04-01-preview",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.KEYVAULT/MANAGEDHSMS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-04-01-preview",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.KEYVAULT/MANAGEDHSMS/{}",
     "operation": "GET",
     "properties": [
@@ -16518,7 +16665,7 @@
     ]
   },
   {
-    "api_version": "2020-04-01-preview",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.KEYVAULT/MANAGEDHSMS/{}",
     "operation": "PUT",
     "properties": [
@@ -16536,12 +16683,12 @@
     ]
   },
   {
-    "api_version": "2019-09-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.KEYVAULT/VAULTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2019-09-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.KEYVAULT/VAULTS/{}",
     "operation": "GET",
     "properties": [
@@ -16574,7 +16721,7 @@
     ]
   },
   {
-    "api_version": "2019-09-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.KEYVAULT/VAULTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -16602,7 +16749,7 @@
     ]
   },
   {
-    "api_version": "2019-09-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.KEYVAULT/VAULTS/{}",
     "operation": "PUT",
     "properties": [
@@ -16634,7 +16781,7 @@
     ]
   },
   {
-    "api_version": "2019-09-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.KEYVAULT/VAULTS/{}/ACCESSPOLICIES/{}",
     "operation": "PUT",
     "properties": [
@@ -19653,11 +19800,13 @@
       "properties/connectionType",
       "properties/dpdTimeoutSeconds",
       "properties/egressBytesTransferred",
+      "properties/egressNatRules/id",
       "properties/enableBgp",
       "properties/expressRouteGatewayBypass",
       "properties/gatewayCustomBgpIpAddresses/customBgpIpAddress",
       "properties/gatewayCustomBgpIpAddresses/ipConfigurationId",
       "properties/ingressBytesTransferred",
+      "properties/ingressNatRules/id",
       "properties/ipsecPolicies/dhGroup",
       "properties/ipsecPolicies/ikeEncryption",
       "properties/ipsecPolicies/ikeIntegrity",
@@ -19705,11 +19854,13 @@
       "properties/connectionType",
       "properties/dpdTimeoutSeconds",
       "properties/egressBytesTransferred",
+      "properties/egressNatRules/id",
       "properties/enableBgp",
       "properties/expressRouteGatewayBypass",
       "properties/gatewayCustomBgpIpAddresses/customBgpIpAddress",
       "properties/gatewayCustomBgpIpAddresses/ipConfigurationId",
       "properties/ingressBytesTransferred",
+      "properties/ingressNatRules/id",
       "properties/ipsecPolicies/dhGroup",
       "properties/ipsecPolicies/ikeEncryption",
       "properties/ipsecPolicies/ikeIntegrity",
@@ -21736,6 +21887,19 @@
   },
   {
     "api_version": "2018-09-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PRIVATEDNSZONES",
+    "operation": "GET",
+    "properties": [
+      "location",
+      "properties/maxNumberOfRecordSets",
+      "properties/maxNumberOfVirtualNetworkLinks",
+      "properties/maxNumberOfVirtualNetworkLinksWithRegistration",
+      "properties/numberOfRecordSets",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2018-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PRIVATEDNSZONES/{}",
     "operation": "DELETE"
   },
@@ -21755,13 +21919,45 @@
   {
     "api_version": "2018-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PRIVATEDNSZONES/{}",
-    "operation": "PUT",
+    "operation": "PUT"
+  },
+  {
+    "api_version": "2018-09-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PRIVATEDNSZONES/{}/ALL",
+    "operation": "GET",
+    "properties": [
+      "name",
+      "properties/aRecords/ipv4Address",
+      "properties/aaaaRecords/ipv6Address",
+      "properties/cnameRecord/cname",
+      "properties/fqdn",
+      "properties/metadata",
+      "properties/mxRecords/exchange",
+      "properties/mxRecords/preference",
+      "properties/ptrRecords/ptrdname",
+      "properties/soaRecord/email",
+      "properties/soaRecord/expireTime",
+      "properties/soaRecord/host",
+      "properties/soaRecord/minimumTtl",
+      "properties/soaRecord/refreshTime",
+      "properties/soaRecord/retryTime",
+      "properties/soaRecord/serialNumber",
+      "properties/srvRecords/port",
+      "properties/srvRecords/priority",
+      "properties/srvRecords/target",
+      "properties/srvRecords/weight",
+      "properties/ttl",
+      "properties/txtRecords/value"
+    ]
+  },
+  {
+    "api_version": "2018-09-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PRIVATEDNSZONES/{}/VIRTUALNETWORKLINKS",
+    "operation": "GET",
     "properties": [
       "location",
-      "properties/maxNumberOfRecordSets",
-      "properties/maxNumberOfVirtualNetworkLinks",
-      "properties/maxNumberOfVirtualNetworkLinksWithRegistration",
-      "properties/numberOfRecordSets",
+      "properties/registrationEnabled",
+      "properties/virtualNetwork/id",
       "tags"
     ]
   },
@@ -21784,12 +21980,35 @@
   {
     "api_version": "2018-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PRIVATEDNSZONES/{}/VIRTUALNETWORKLINKS/{}",
-    "operation": "PUT",
+    "operation": "PUT"
+  },
+  {
+    "api_version": "2018-09-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PRIVATEDNSZONES/{}/{}",
+    "operation": "GET",
     "properties": [
-      "location",
-      "properties/registrationEnabled",
-      "properties/virtualNetwork/id",
-      "tags"
+      "name",
+      "properties/aRecords/ipv4Address",
+      "properties/aaaaRecords/ipv6Address",
+      "properties/cnameRecord/cname",
+      "properties/fqdn",
+      "properties/metadata",
+      "properties/mxRecords/exchange",
+      "properties/mxRecords/preference",
+      "properties/ptrRecords/ptrdname",
+      "properties/soaRecord/email",
+      "properties/soaRecord/expireTime",
+      "properties/soaRecord/host",
+      "properties/soaRecord/minimumTtl",
+      "properties/soaRecord/refreshTime",
+      "properties/soaRecord/retryTime",
+      "properties/soaRecord/serialNumber",
+      "properties/srvRecords/port",
+      "properties/srvRecords/priority",
+      "properties/srvRecords/target",
+      "properties/srvRecords/weight",
+      "properties/ttl",
+      "properties/txtRecords/value"
     ]
   },
   {
@@ -21829,31 +22048,7 @@
   {
     "api_version": "2018-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PRIVATEDNSZONES/{}/{}/{}",
-    "operation": "PUT",
-    "properties": [
-      "name",
-      "properties/aRecords/ipv4Address",
-      "properties/aaaaRecords/ipv6Address",
-      "properties/cnameRecord/cname",
-      "properties/fqdn",
-      "properties/metadata",
-      "properties/mxRecords/exchange",
-      "properties/mxRecords/preference",
-      "properties/ptrRecords/ptrdname",
-      "properties/soaRecord/email",
-      "properties/soaRecord/expireTime",
-      "properties/soaRecord/host",
-      "properties/soaRecord/minimumTtl",
-      "properties/soaRecord/refreshTime",
-      "properties/soaRecord/retryTime",
-      "properties/soaRecord/serialNumber",
-      "properties/srvRecords/port",
-      "properties/srvRecords/priority",
-      "properties/srvRecords/target",
-      "properties/srvRecords/weight",
-      "properties/ttl",
-      "properties/txtRecords/value"
-    ]
+    "operation": "PUT"
   },
   {
     "api_version": "2021-08-01",
@@ -22915,6 +23110,7 @@
       "properties/bgpSettings/bgpPeeringAddresses/ipconfigurationId",
       "properties/bgpSettings/bgpPeeringAddresses/tunnelIpAddresses",
       "properties/bgpSettings/peerWeight",
+      "properties/enableBgpRouteTranslationForNat",
       "properties/isRoutingPreferenceInternet",
       "properties/provisioningState",
       "properties/virtualHub/id",
@@ -22935,6 +23131,7 @@
       "properties/bgpSettings/bgpPeeringAddresses/ipconfigurationId",
       "properties/bgpSettings/bgpPeeringAddresses/tunnelIpAddresses",
       "properties/bgpSettings/peerWeight",
+      "properties/enableBgpRouteTranslationForNat",
       "properties/isRoutingPreferenceInternet",
       "properties/provisioningState",
       "properties/virtualHub/id",
@@ -23011,6 +23208,8 @@
       "properties/vpnLinkConnections/properties/useLocalAzureIpAddress",
       "properties/vpnLinkConnections/properties/usePolicyBasedTrafficSelectors",
       "properties/vpnLinkConnections/properties/vpnConnectionProtocolType",
+      "properties/vpnLinkConnections/properties/vpnGatewayCustomBgpAddresses/customBgpIpAddress",
+      "properties/vpnLinkConnections/properties/vpnGatewayCustomBgpAddresses/ipConfigurationId",
       "properties/vpnLinkConnections/properties/vpnLinkConnectionMode",
       "properties/vpnLinkConnections/properties/vpnSiteLink/id"
     ]
@@ -23048,6 +23247,8 @@
       "properties/vpnLinkConnections/properties/useLocalAzureIpAddress",
       "properties/vpnLinkConnections/properties/usePolicyBasedTrafficSelectors",
       "properties/vpnLinkConnections/properties/vpnConnectionProtocolType",
+      "properties/vpnLinkConnections/properties/vpnGatewayCustomBgpAddresses/customBgpIpAddress",
+      "properties/vpnLinkConnections/properties/vpnGatewayCustomBgpAddresses/ipConfigurationId",
       "properties/vpnLinkConnections/properties/vpnLinkConnectionMode",
       "properties/vpnLinkConnections/properties/vpnSiteLink/id"
     ]
@@ -24189,6 +24390,7 @@
     "operation": "GET",
     "properties": [
       "location",
+      "name",
       "properties",
       "tags"
     ]
@@ -24199,6 +24401,7 @@
     "operation": "PUT",
     "properties": [
       "location",
+      "name",
       "properties",
       "tags"
     ]
@@ -24444,6 +24647,7 @@
       "properties{Microsoft.Compute/virtualMachines}/friendlyName",
       "properties{Microsoft.Compute/virtualMachines}/policyId",
       "properties{Microsoft.Compute/virtualMachines}/protectedItemType",
+      "properties{Microsoft.Compute/virtualMachines}/protectionState",
       "properties{Microsoft.Compute/virtualMachines}/sourceResourceId",
       "properties{Microsoft.Compute/virtualMachines}/virtualMachineId",
       "properties{Microsoft.Compute/virtualMachines}/workloadType"
@@ -24466,6 +24670,7 @@
       "properties{Microsoft.Compute/virtualMachines}/friendlyName",
       "properties{Microsoft.Compute/virtualMachines}/policyId",
       "properties{Microsoft.Compute/virtualMachines}/protectedItemType",
+      "properties{Microsoft.Compute/virtualMachines}/protectionState",
       "properties{Microsoft.Compute/virtualMachines}/sourceResourceId",
       "properties{Microsoft.Compute/virtualMachines}/virtualMachineId",
       "properties{Microsoft.Compute/virtualMachines}/workloadType"
@@ -27017,6 +27222,24 @@
     "properties": [
       "properties/baselineResults/result"
     ]
+  },
+  {
+    "api_version": "2020-11-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DNSALIASES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2020-11-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DNSALIASES/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/azureDnsRecord"
+    ]
+  },
+  {
+    "api_version": "2020-11-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DNSALIASES/{}",
+    "operation": "PUT"
   },
   {
     "api_version": "2014-04-01",
@@ -30128,6 +30351,8 @@
       "properties/dailyMemoryTimeQuota",
       "properties/defaultHostName",
       "properties/enabled",
+      "properties/hostNameSslStates/hostType",
+      "properties/hostNameSslStates/name",
       "properties/httpsOnly",
       "properties/inProgressOperationId",
       "properties/keyVaultReferenceIdentity",
@@ -30339,6 +30564,8 @@
       "properties/dailyMemoryTimeQuota",
       "properties/defaultHostName",
       "properties/enabled",
+      "properties/hostNameSslStates/hostType",
+      "properties/hostNameSslStates/name",
       "properties/httpsOnly",
       "properties/inProgressOperationId",
       "properties/keyVaultReferenceIdentity",
@@ -31075,6 +31302,8 @@
       "properties/dailyMemoryTimeQuota",
       "properties/defaultHostName",
       "properties/enabled",
+      "properties/hostNameSslStates/hostType",
+      "properties/hostNameSslStates/name",
       "properties/httpsOnly",
       "properties/inProgressOperationId",
       "properties/keyVaultReferenceIdentity",
@@ -31286,6 +31515,8 @@
       "properties/dailyMemoryTimeQuota",
       "properties/defaultHostName",
       "properties/enabled",
+      "properties/hostNameSslStates/hostType",
+      "properties/hostNameSslStates/name",
       "properties/httpsOnly",
       "properties/inProgressOperationId",
       "properties/keyVaultReferenceIdentity",
