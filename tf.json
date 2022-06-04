@@ -5253,6 +5253,10 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}",
     "operation": "GET",
     "properties": [
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
+      "identity/userAssignedIdentities",
       "location",
       "properties/enableNonSslPort",
       "properties/hostName",
@@ -5292,6 +5296,10 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}",
     "operation": "PATCH",
     "properties": [
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
+      "identity/userAssignedIdentities",
       "properties/enableNonSslPort",
       "properties/minimumTlsVersion",
       "properties/publicNetworkAccess",
@@ -5323,6 +5331,10 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}",
     "operation": "PUT",
     "properties": [
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
+      "identity/userAssignedIdentities",
       "location",
       "properties/enableNonSslPort",
       "properties/minimumTlsVersion",
@@ -5565,11 +5577,28 @@
     "operation": "DELETE"
   },
   {
+    "api_version": "2021-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}",
+    "operation": "DELETE"
+  },
+  {
     "api_version": "2020-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}",
     "operation": "GET",
     "properties": [
       "location",
+      "sku/name",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2021-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}",
+    "operation": "GET",
+    "properties": [
+      "location",
+      "properties/frontDoorId",
+      "properties/originResponseTimeoutSeconds",
       "sku/name",
       "tags"
     ]
@@ -5583,12 +5612,70 @@
     ]
   },
   {
+    "api_version": "2021-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}",
+    "operation": "PATCH",
+    "properties": [
+      "tags"
+    ]
+  },
+  {
     "api_version": "2020-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}",
     "operation": "PUT",
     "properties": [
       "location",
       "sku/name",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2021-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}",
+    "operation": "PUT",
+    "properties": [
+      "location",
+      "properties/frontDoorId",
+      "properties/originResponseTimeoutSeconds",
+      "sku/name",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2021-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/AFDENDPOINTS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2021-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/AFDENDPOINTS/{}",
+    "operation": "GET",
+    "properties": [
+      "location",
+      "name",
+      "properties/enabledState",
+      "properties/hostName",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2021-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/AFDENDPOINTS/{}",
+    "operation": "PATCH",
+    "properties": [
+      "properties/enabledState",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2021-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/AFDENDPOINTS/{}",
+    "operation": "PUT",
+    "properties": [
+      "location",
+      "name",
+      "properties/enabledState",
+      "properties/hostName",
       "tags"
     ]
   },
@@ -18818,12 +18905,12 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}",
     "operation": "GET",
     "properties": [
@@ -18838,7 +18925,7 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -18852,7 +18939,7 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}",
     "operation": "PUT",
     "properties": [
@@ -18867,12 +18954,12 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}",
     "operation": "GET",
     "properties": [
@@ -18884,7 +18971,7 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}",
     "operation": "PATCH",
     "properties": [
@@ -18894,7 +18981,7 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}",
     "operation": "PUT",
     "properties": [
@@ -18906,12 +18993,12 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}",
     "operation": "GET",
     "properties": [
@@ -18932,6 +19019,7 @@
       "properties/exportPolicy/rules/unixReadOnly",
       "properties/exportPolicy/rules/unixReadWrite",
       "properties/mountTargets/ipAddress",
+      "properties/networkFeatures",
       "properties/protocolTypes",
       "properties/securityStyle",
       "properties/serviceLevel",
@@ -18945,7 +19033,7 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}",
     "operation": "PATCH",
     "properties": [
@@ -18964,7 +19052,7 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}",
     "operation": "PUT",
     "properties": [
@@ -18985,6 +19073,7 @@
       "properties/exportPolicy/rules/unixReadOnly",
       "properties/exportPolicy/rules/unixReadWrite",
       "properties/mountTargets/ipAddress",
+      "properties/networkFeatures",
       "properties/protocolTypes",
       "properties/securityStyle",
       "properties/serviceLevel",
@@ -18998,7 +19087,7 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/AUTHORIZEREPLICATION",
     "operation": "POST",
     "properties": [
@@ -19006,7 +19095,7 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/BREAKREPLICATION",
     "operation": "POST",
     "properties": [
@@ -19014,12 +19103,12 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/DELETEREPLICATION",
     "operation": "POST"
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/REPLICATIONSTATUS",
     "operation": "GET",
     "properties": [
@@ -19027,12 +19116,12 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/SNAPSHOTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/SNAPSHOTS/{}",
     "operation": "GET",
     "properties": [
@@ -19041,7 +19130,7 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/SNAPSHOTS/{}",
     "operation": "PUT",
     "properties": [
@@ -19050,12 +19139,12 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/SNAPSHOTPOLICIES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/SNAPSHOTPOLICIES/{}",
     "operation": "GET",
     "properties": [
@@ -19080,7 +19169,7 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/SNAPSHOTPOLICIES/{}",
     "operation": "PATCH",
     "properties": [
@@ -19104,7 +19193,7 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/SNAPSHOTPOLICIES/{}",
     "operation": "PUT",
     "properties": [
@@ -23151,7 +23240,9 @@
     "properties": [
       "name",
       "properties/externalMappings/addressSpace",
+      "properties/externalMappings/portRange",
       "properties/internalMappings/addressSpace",
+      "properties/internalMappings/portRange",
       "properties/ipConfigurationId",
       "properties/mode",
       "properties/type"
@@ -23164,7 +23255,9 @@
     "properties": [
       "name",
       "properties/externalMappings/addressSpace",
+      "properties/externalMappings/portRange",
       "properties/internalMappings/addressSpace",
+      "properties/internalMappings/portRange",
       "properties/ipConfigurationId",
       "properties/mode",
       "properties/type"
@@ -23326,6 +23419,37 @@
       "properties/vpnClientRootCertificates/publicCertData",
       "properties/vpnProtocols",
       "tags"
+    ]
+  },
+  {
+    "api_version": "2021-08-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNSERVERCONFIGURATIONS/{}/CONFIGURATIONPOLICYGROUPS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2021-08-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNSERVERCONFIGURATIONS/{}/CONFIGURATIONPOLICYGROUPS/{}",
+    "operation": "GET",
+    "properties": [
+      "name",
+      "properties/isDefault",
+      "properties/policyMembers/attributeType",
+      "properties/policyMembers/attributeValue",
+      "properties/policyMembers/name",
+      "properties/priority"
+    ]
+  },
+  {
+    "api_version": "2021-08-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNSERVERCONFIGURATIONS/{}/CONFIGURATIONPOLICYGROUPS/{}",
+    "operation": "PUT",
+    "properties": [
+      "name",
+      "properties/isDefault",
+      "properties/policyMembers/attributeType",
+      "properties/policyMembers/attributeValue",
+      "properties/policyMembers/name",
+      "properties/priority"
     ]
   },
   {
@@ -24698,6 +24822,7 @@
       "id",
       "properties{AzureIaasVM}/backupManagementType",
       "properties{AzureIaasVM}/instantRpRetentionRangeInDays",
+      "properties{AzureIaasVM}/policyType",
       "properties{AzureIaasVM}/retentionPolicy{LongTermRetentionPolicy}/dailySchedule/retentionDuration/count",
       "properties{AzureIaasVM}/retentionPolicy{LongTermRetentionPolicy}/dailySchedule/retentionDuration/durationType",
       "properties{AzureIaasVM}/retentionPolicy{LongTermRetentionPolicy}/dailySchedule/retentionTimes",
@@ -24721,6 +24846,14 @@
       "properties{AzureIaasVM}/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleWeekly/daysOfTheWeek",
       "properties{AzureIaasVM}/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleWeekly/weeksOfTheMonth",
       "properties{AzureIaasVM}/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionTimes",
+      "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicyV2}/dailySchedule/scheduleRunTimes",
+      "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicyV2}/hourlySchedule/interval",
+      "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicyV2}/hourlySchedule/scheduleWindowDuration",
+      "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicyV2}/hourlySchedule/scheduleWindowStartTime",
+      "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicyV2}/schedulePolicyType",
+      "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicyV2}/scheduleRunFrequency",
+      "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicyV2}/weeklySchedule/scheduleRunDays",
+      "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicyV2}/weeklySchedule/scheduleRunTimes",
       "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicy}/schedulePolicyType",
       "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicy}/scheduleRunDays",
       "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicy}/scheduleRunFrequency",
@@ -24765,6 +24898,7 @@
       "id",
       "properties{AzureIaasVM}/backupManagementType",
       "properties{AzureIaasVM}/instantRpRetentionRangeInDays",
+      "properties{AzureIaasVM}/policyType",
       "properties{AzureIaasVM}/retentionPolicy{LongTermRetentionPolicy}/dailySchedule/retentionDuration/count",
       "properties{AzureIaasVM}/retentionPolicy{LongTermRetentionPolicy}/dailySchedule/retentionDuration/durationType",
       "properties{AzureIaasVM}/retentionPolicy{LongTermRetentionPolicy}/dailySchedule/retentionTimes",
@@ -24788,6 +24922,14 @@
       "properties{AzureIaasVM}/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleWeekly/daysOfTheWeek",
       "properties{AzureIaasVM}/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleWeekly/weeksOfTheMonth",
       "properties{AzureIaasVM}/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionTimes",
+      "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicyV2}/dailySchedule/scheduleRunTimes",
+      "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicyV2}/hourlySchedule/interval",
+      "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicyV2}/hourlySchedule/scheduleWindowDuration",
+      "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicyV2}/hourlySchedule/scheduleWindowStartTime",
+      "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicyV2}/schedulePolicyType",
+      "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicyV2}/scheduleRunFrequency",
+      "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicyV2}/weeklySchedule/scheduleRunDays",
+      "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicyV2}/weeklySchedule/scheduleRunTimes",
       "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicy}/schedulePolicyType",
       "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicy}/scheduleRunDays",
       "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicy}/scheduleRunFrequency",
