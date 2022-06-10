@@ -946,6 +946,11 @@
   },
   {
     "api_version": "2021-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.KEYVAULT/LOCATIONS/{}/DELETEDMANAGEDHSMS/{}/PURGE",
+    "operation": "POST"
+  },
+  {
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.KEYVAULT/LOCATIONS/{}/DELETEDVAULTS/{}",
     "operation": "GET",
     "properties": [
@@ -6183,6 +6188,21 @@
     ]
   },
   {
+    "api_version": "2021-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/RULESETS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2021-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/RULESETS/{}",
+    "operation": "GET"
+  },
+  {
+    "api_version": "2021-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/RULESETS/{}",
+    "operation": "PUT"
+  },
+  {
     "api_version": "2021-02-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CERTIFICATEREGISTRATION/CERTIFICATEORDERS/{}",
     "operation": "DELETE"
@@ -6468,6 +6488,82 @@
       "properties/proximityPlacementGroup/id",
       "sku/name",
       "tags"
+    ]
+  },
+  {
+    "api_version": "2021-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/CAPACITYRESERVATIONGROUPS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2021-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/CAPACITYRESERVATIONGROUPS/{}",
+    "operation": "GET",
+    "properties": [
+      "location",
+      "name",
+      "tags",
+      "zones"
+    ]
+  },
+  {
+    "api_version": "2021-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/CAPACITYRESERVATIONGROUPS/{}",
+    "operation": "PATCH",
+    "properties": [
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2021-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/CAPACITYRESERVATIONGROUPS/{}",
+    "operation": "PUT",
+    "properties": [
+      "location",
+      "name",
+      "tags",
+      "zones"
+    ]
+  },
+  {
+    "api_version": "2021-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/CAPACITYRESERVATIONGROUPS/{}/CAPACITYRESERVATIONS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2021-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/CAPACITYRESERVATIONGROUPS/{}/CAPACITYRESERVATIONS/{}",
+    "operation": "GET",
+    "properties": [
+      "location",
+      "name",
+      "sku/capacity",
+      "sku/name",
+      "tags",
+      "zones"
+    ]
+  },
+  {
+    "api_version": "2021-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/CAPACITYRESERVATIONGROUPS/{}/CAPACITYRESERVATIONS/{}",
+    "operation": "PATCH",
+    "properties": [
+      "sku/capacity",
+      "sku/name",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2021-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/CAPACITYRESERVATIONGROUPS/{}/CAPACITYRESERVATIONS/{}",
+    "operation": "PUT",
+    "properties": [
+      "location",
+      "name",
+      "sku/capacity",
+      "sku/name",
+      "tags",
+      "zones"
     ]
   },
   {
@@ -13550,10 +13646,19 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/CASSANDRACLUSTERS/{}",
     "operation": "GET",
     "properties": [
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
       "location",
+      "properties/authenticationMethod",
+      "properties/cassandraVersion",
+      "properties/clientCertificates/pem",
       "properties/delegatedManagementSubnetId",
+      "properties/externalGossipCertificates/pem",
+      "properties/externalSeedNodes/ipAddress",
       "properties/initialCassandraAdminPassword",
       "properties/provisioningState",
+      "properties/repairEnabled",
       "tags"
     ]
   },
@@ -13562,10 +13667,19 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/CASSANDRACLUSTERS/{}",
     "operation": "PUT",
     "properties": [
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
       "location",
+      "properties/authenticationMethod",
+      "properties/cassandraVersion",
+      "properties/clientCertificates/pem",
       "properties/delegatedManagementSubnetId",
+      "properties/externalGossipCertificates/pem",
+      "properties/externalSeedNodes/ipAddress",
       "properties/initialCassandraAdminPassword",
       "properties/provisioningState",
+      "properties/repairEnabled",
       "tags"
     ]
   },
@@ -28441,6 +28555,8 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGECACHE/CACHES/{}",
     "operation": "GET",
     "properties": [
+      "identity/type",
+      "identity/userAssignedIdentities",
       "location",
       "name",
       "properties/cacheSizeGB",
@@ -28465,6 +28581,9 @@
       "properties/directoryServicesSettings/usernameDownload/userFileURI",
       "properties/directoryServicesSettings/usernameDownload/usernameDownloaded",
       "properties/directoryServicesSettings/usernameDownload/usernameSource",
+      "properties/encryptionSettings/keyEncryptionKey/keyUrl",
+      "properties/encryptionSettings/keyEncryptionKey/sourceVault/id",
+      "properties/encryptionSettings/rotationToLatestKeyVersionEnabled",
       "properties/mountAddresses",
       "properties/networkSettings/dnsSearchDomain",
       "properties/networkSettings/dnsServers",
@@ -28489,6 +28608,8 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGECACHE/CACHES/{}",
     "operation": "PUT",
     "properties": [
+      "identity/type",
+      "identity/userAssignedIdentities",
       "location",
       "name",
       "properties/cacheSizeGB",
@@ -28513,6 +28634,9 @@
       "properties/directoryServicesSettings/usernameDownload/userFileURI",
       "properties/directoryServicesSettings/usernameDownload/usernameDownloaded",
       "properties/directoryServicesSettings/usernameDownload/usernameSource",
+      "properties/encryptionSettings/keyEncryptionKey/keyUrl",
+      "properties/encryptionSettings/keyEncryptionKey/sourceVault/id",
+      "properties/encryptionSettings/rotationToLatestKeyVersionEnabled",
       "properties/mountAddresses",
       "properties/networkSettings/dnsSearchDomain",
       "properties/networkSettings/dnsServers",
