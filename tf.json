@@ -207,6 +207,7 @@
     "api_path": "/PROVIDERS/MICROSOFT.MANAGEMENT/MANAGEMENTGROUPS/{}/PROVIDERS/MICROSOFT.RESOURCES/DEPLOYMENTS/{}",
     "operation": "GET",
     "properties": [
+      "id",
       "location",
       "properties/debugSetting/detailLevel",
       "properties/mode",
@@ -293,6 +294,7 @@
     "api_path": "/PROVIDERS/MICROSOFT.RESOURCES/DEPLOYMENTS/{}",
     "operation": "GET",
     "properties": [
+      "id",
       "location",
       "properties/debugSetting/detailLevel",
       "properties/mode",
@@ -466,21 +468,6 @@
     "operation": "GET"
   },
   {
-    "api_version": "2020-06-01",
-    "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.APPCONFIGURATION/CONFIGURATIONSTORES",
-    "operation": "GET",
-    "properties": [
-      "identity/principalId",
-      "identity/tenantId",
-      "identity/type",
-      "identity/userAssignedIdentities",
-      "location",
-      "properties/endpoint",
-      "sku/name",
-      "tags"
-    ]
-  },
-  {
     "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/POLICYDEFINITIONS/{}",
     "operation": "DELETE"
@@ -631,86 +618,6 @@
   },
   {
     "api_version": "2021-04-30",
-    "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/ACCOUNTS",
-    "operation": "GET",
-    "properties": [
-      "identity/principalId",
-      "identity/tenantId",
-      "identity/type",
-      "identity/userAssignedIdentities",
-      "kind",
-      "location",
-      "properties/allowedFqdnList",
-      "properties/apiProperties/aadClientId",
-      "properties/apiProperties/aadTenantId",
-      "properties/apiProperties/qnaAzureSearchEndpointId",
-      "properties/apiProperties/qnaRuntimeEndpoint",
-      "properties/apiProperties/superUser",
-      "properties/apiProperties/websiteName",
-      "properties/customSubDomainName",
-      "properties/disableLocalAuth",
-      "properties/encryption/keySource",
-      "properties/encryption/keyVaultProperties/identityClientId",
-      "properties/encryption/keyVaultProperties/keyName",
-      "properties/encryption/keyVaultProperties/keyVaultUri",
-      "properties/encryption/keyVaultProperties/keyVersion",
-      "properties/endpoint",
-      "properties/networkAcls/defaultAction",
-      "properties/networkAcls/ipRules/value",
-      "properties/networkAcls/virtualNetworkRules/id",
-      "properties/networkAcls/virtualNetworkRules/ignoreMissingVnetServiceEndpoint",
-      "properties/provisioningState",
-      "properties/publicNetworkAccess",
-      "properties/restrictOutboundNetworkAccess",
-      "properties/userOwnedStorage/identityClientId",
-      "properties/userOwnedStorage/resourceId",
-      "sku/name",
-      "sku/tier",
-      "tags"
-    ]
-  },
-  {
-    "api_version": "2021-04-30",
-    "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/DELETEDACCOUNTS",
-    "operation": "GET",
-    "properties": [
-      "identity/principalId",
-      "identity/tenantId",
-      "identity/type",
-      "identity/userAssignedIdentities",
-      "kind",
-      "location",
-      "properties/allowedFqdnList",
-      "properties/apiProperties/aadClientId",
-      "properties/apiProperties/aadTenantId",
-      "properties/apiProperties/qnaAzureSearchEndpointId",
-      "properties/apiProperties/qnaRuntimeEndpoint",
-      "properties/apiProperties/superUser",
-      "properties/apiProperties/websiteName",
-      "properties/customSubDomainName",
-      "properties/disableLocalAuth",
-      "properties/encryption/keySource",
-      "properties/encryption/keyVaultProperties/identityClientId",
-      "properties/encryption/keyVaultProperties/keyName",
-      "properties/encryption/keyVaultProperties/keyVaultUri",
-      "properties/encryption/keyVaultProperties/keyVersion",
-      "properties/endpoint",
-      "properties/networkAcls/defaultAction",
-      "properties/networkAcls/ipRules/value",
-      "properties/networkAcls/virtualNetworkRules/id",
-      "properties/networkAcls/virtualNetworkRules/ignoreMissingVnetServiceEndpoint",
-      "properties/provisioningState",
-      "properties/publicNetworkAccess",
-      "properties/restrictOutboundNetworkAccess",
-      "properties/userOwnedStorage/identityClientId",
-      "properties/userOwnedStorage/resourceId",
-      "sku/name",
-      "sku/tier",
-      "tags"
-    ]
-  },
-  {
-    "api_version": "2021-04-30",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/LOCATIONS/{}/RESOURCEGROUPS/{}/DELETEDACCOUNTS/{}",
     "operation": "DELETE"
   },
@@ -722,23 +629,6 @@
       "value/id",
       "value/location",
       "value/name"
-    ]
-  },
-  {
-    "api_version": "2021-05-13-preview",
-    "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.CONFIDENTIALLEDGER/LEDGERS",
-    "operation": "GET",
-    "properties": [
-      "location",
-      "properties/aadBasedSecurityPrincipals/ledgerRoleName",
-      "properties/aadBasedSecurityPrincipals/principalId",
-      "properties/aadBasedSecurityPrincipals/tenantId",
-      "properties/certBasedSecurityPrincipals/cert",
-      "properties/certBasedSecurityPrincipals/ledgerRoleName",
-      "properties/identityServiceUri",
-      "properties/ledgerType",
-      "properties/ledgerUri",
-      "tags"
     ]
   },
   {
@@ -937,7 +827,7 @@
     ]
   },
   {
-    "api_version": "2018-09-01",
+    "api_version": "2021-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.IOTCENTRAL/CHECKNAMEAVAILABILITY",
     "operation": "POST",
     "properties": [
@@ -1181,6 +1071,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.RESOURCES/DEPLOYMENTS/{}",
     "operation": "GET",
     "properties": [
+      "id",
       "location",
       "properties/debugSetting/detailLevel",
       "properties/mode",
@@ -1231,7 +1122,9 @@
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES",
     "operation": "GET",
     "properties": [
-      "identity",
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
       "location",
       "properties/networkRuleSet/ipRules/value",
       "properties/partitionCount",
@@ -3171,21 +3064,6 @@
   },
   {
     "api_version": "2020-06-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPCONFIGURATION/CONFIGURATIONSTORES",
-    "operation": "GET",
-    "properties": [
-      "identity/principalId",
-      "identity/tenantId",
-      "identity/type",
-      "identity/userAssignedIdentities",
-      "location",
-      "properties/endpoint",
-      "sku/name",
-      "tags"
-    ]
-  },
-  {
-    "api_version": "2020-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPCONFIGURATION/CONFIGURATIONSTORES/{}",
     "operation": "DELETE"
   },
@@ -3231,11 +3109,6 @@
       "sku/name",
       "tags"
     ]
-  },
-  {
-    "api_version": "2020-06-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPCONFIGURATION/CONFIGURATIONSTORES/{}/LISTKEYS",
-    "operation": "POST"
   },
   {
     "api_version": "2022-03-01-preview",
@@ -4582,12 +4455,12 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2022-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2022-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}",
     "operation": "GET",
     "properties": [
@@ -4608,7 +4481,7 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2022-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -4623,7 +4496,7 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2022-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}",
     "operation": "PUT",
     "properties": [
@@ -4643,12 +4516,12 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2022-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}/APPLICATIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2022-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}/APPLICATIONS/{}",
     "operation": "GET",
     "properties": [
@@ -4659,7 +4532,7 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2022-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}/APPLICATIONS/{}",
     "operation": "PATCH",
     "properties": [
@@ -4670,7 +4543,7 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2022-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}/APPLICATIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -4681,12 +4554,12 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2022-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}/CERTIFICATES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2022-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}/CERTIFICATES/{}",
     "operation": "GET",
     "properties": [
@@ -4699,7 +4572,7 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2022-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}/CERTIFICATES/{}",
     "operation": "PATCH",
     "properties": [
@@ -4712,7 +4585,7 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2022-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}/CERTIFICATES/{}",
     "operation": "PUT",
     "properties": [
@@ -4725,17 +4598,17 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2022-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}/LISTKEYS",
     "operation": "POST"
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2022-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}/POOLS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2022-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}/POOLS/{}",
     "operation": "GET",
     "properties": [
@@ -4795,7 +4668,7 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2022-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}/POOLS/{}",
     "operation": "PATCH",
     "properties": [
@@ -4855,7 +4728,7 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2022-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}/POOLS/{}",
     "operation": "PUT",
     "properties": [
@@ -4915,7 +4788,7 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2022-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.BATCH/BATCHACCOUNTS/{}/POOLS/{}/STOPRESIZE",
     "operation": "POST"
   },
@@ -6254,46 +6127,6 @@
       "properties/signedCertificate/thumbprint",
       "properties/status",
       "properties/validityInYears",
-      "tags"
-    ]
-  },
-  {
-    "api_version": "2021-04-30",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/ACCOUNTS",
-    "operation": "GET",
-    "properties": [
-      "identity/principalId",
-      "identity/tenantId",
-      "identity/type",
-      "identity/userAssignedIdentities",
-      "kind",
-      "location",
-      "properties/allowedFqdnList",
-      "properties/apiProperties/aadClientId",
-      "properties/apiProperties/aadTenantId",
-      "properties/apiProperties/qnaAzureSearchEndpointId",
-      "properties/apiProperties/qnaRuntimeEndpoint",
-      "properties/apiProperties/superUser",
-      "properties/apiProperties/websiteName",
-      "properties/customSubDomainName",
-      "properties/disableLocalAuth",
-      "properties/encryption/keySource",
-      "properties/encryption/keyVaultProperties/identityClientId",
-      "properties/encryption/keyVaultProperties/keyName",
-      "properties/encryption/keyVaultProperties/keyVaultUri",
-      "properties/encryption/keyVaultProperties/keyVersion",
-      "properties/endpoint",
-      "properties/networkAcls/defaultAction",
-      "properties/networkAcls/ipRules/value",
-      "properties/networkAcls/virtualNetworkRules/id",
-      "properties/networkAcls/virtualNetworkRules/ignoreMissingVnetServiceEndpoint",
-      "properties/provisioningState",
-      "properties/publicNetworkAccess",
-      "properties/restrictOutboundNetworkAccess",
-      "properties/userOwnedStorage/identityClientId",
-      "properties/userOwnedStorage/resourceId",
-      "sku/name",
-      "sku/tier",
       "tags"
     ]
   },
@@ -8011,29 +7844,12 @@
     ]
   },
   {
-    "api_version": "2021-05-13-preview",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONFIDENTIALLEDGER/LEDGERS",
-    "operation": "GET",
-    "properties": [
-      "location",
-      "properties/aadBasedSecurityPrincipals/ledgerRoleName",
-      "properties/aadBasedSecurityPrincipals/principalId",
-      "properties/aadBasedSecurityPrincipals/tenantId",
-      "properties/certBasedSecurityPrincipals/cert",
-      "properties/certBasedSecurityPrincipals/ledgerRoleName",
-      "properties/identityServiceUri",
-      "properties/ledgerType",
-      "properties/ledgerUri",
-      "tags"
-    ]
-  },
-  {
-    "api_version": "2021-05-13-preview",
+    "api_version": "2022-05-13",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONFIDENTIALLEDGER/LEDGERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-05-13-preview",
+    "api_version": "2022-05-13",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONFIDENTIALLEDGER/LEDGERS/{}",
     "operation": "GET",
     "properties": [
@@ -8050,7 +7866,7 @@
     ]
   },
   {
-    "api_version": "2021-05-13-preview",
+    "api_version": "2022-05-13",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONFIDENTIALLEDGER/LEDGERS/{}",
     "operation": "PATCH",
     "properties": [
@@ -8067,7 +7883,7 @@
     ]
   },
   {
-    "api_version": "2021-05-13-preview",
+    "api_version": "2022-05-13",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONFIDENTIALLEDGER/LEDGERS/{}",
     "operation": "PUT",
     "properties": [
@@ -12900,14 +12716,6 @@
   {
     "api_version": "2021-09-03-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DESKTOPVIRTUALIZATION/APPLICATIONGROUPS/{}/DESKTOPS/{}",
-    "operation": "GET",
-    "properties": [
-      "properties/friendlyName"
-    ]
-  },
-  {
-    "api_version": "2021-09-03-preview",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DESKTOPVIRTUALIZATION/APPLICATIONGROUPS/{}/DESKTOPS/{}",
     "operation": "PATCH",
     "properties": [
       "properties/friendlyName"
@@ -13112,6 +12920,14 @@
       "properties/description",
       "properties/friendlyName",
       "tags"
+    ]
+  },
+  {
+    "api_version": "2021-09-03-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DESKTOPVIRTUALIZATION/WORKSPACES/{}",
+    "operation": "PATCH",
+    "properties": [
+      "properties/applicationGroupReferences"
     ]
   },
   {
@@ -16976,12 +16792,12 @@
     ]
   },
   {
-    "api_version": "2018-09-01",
+    "api_version": "2021-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.IOTCENTRAL/IOTAPPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2018-09-01",
+    "api_version": "2021-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.IOTCENTRAL/IOTAPPS/{}",
     "operation": "GET",
     "properties": [
@@ -16994,7 +16810,7 @@
     ]
   },
   {
-    "api_version": "2018-09-01",
+    "api_version": "2021-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.IOTCENTRAL/IOTAPPS/{}",
     "operation": "PATCH",
     "properties": [
@@ -17005,7 +16821,7 @@
     ]
   },
   {
-    "api_version": "2018-09-01",
+    "api_version": "2021-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.IOTCENTRAL/IOTAPPS/{}",
     "operation": "PUT",
     "properties": [
@@ -23800,20 +23616,6 @@
   {
     "api_version": "2017-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NOTIFICATIONHUBS/NAMESPACES/{}",
-    "operation": "GET",
-    "properties": [
-      "location",
-      "properties/enabled",
-      "properties/namespaceType",
-      "properties/region",
-      "properties/serviceBusEndpoint",
-      "sku/name",
-      "tags"
-    ]
-  },
-  {
-    "api_version": "2017-04-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NOTIFICATIONHUBS/NAMESPACES/{}",
     "operation": "PUT",
     "properties": [
       "location",
@@ -23829,16 +23631,6 @@
     "api_version": "2017-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NOTIFICATIONHUBS/NAMESPACES/{}/NOTIFICATIONHUBS/{}",
     "operation": "DELETE"
-  },
-  {
-    "api_version": "2017-04-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NOTIFICATIONHUBS/NAMESPACES/{}/NOTIFICATIONHUBS/{}",
-    "operation": "GET",
-    "properties": [
-      "location",
-      "name",
-      "tags"
-    ]
   },
   {
     "api_version": "2017-04-01",
@@ -23859,14 +23651,6 @@
     "api_version": "2017-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NOTIFICATIONHUBS/NAMESPACES/{}/NOTIFICATIONHUBS/{}/AUTHORIZATIONRULES/{}",
     "operation": "DELETE"
-  },
-  {
-    "api_version": "2017-04-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NOTIFICATIONHUBS/NAMESPACES/{}/NOTIFICATIONHUBS/{}/AUTHORIZATIONRULES/{}",
-    "operation": "GET",
-    "properties": [
-      "properties/rights"
-    ]
   },
   {
     "api_version": "2017-04-01",
@@ -24803,7 +24587,6 @@
     "operation": "GET",
     "properties": [
       "location",
-      "name",
       "properties",
       "tags"
     ]
@@ -24814,7 +24597,6 @@
     "operation": "PUT",
     "properties": [
       "location",
-      "name",
       "properties",
       "tags"
     ]
@@ -25652,6 +25434,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RESOURCES/DEPLOYMENTS/{}",
     "operation": "GET",
     "properties": [
+      "id",
       "location",
       "properties/debugSetting/detailLevel",
       "properties/mode",
@@ -25711,7 +25494,9 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES",
     "operation": "GET",
     "properties": [
-      "identity",
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
       "location",
       "properties/networkRuleSet/ipRules/value",
       "properties/partitionCount",
@@ -25731,7 +25516,9 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}",
     "operation": "GET",
     "properties": [
-      "identity",
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
       "location",
       "properties/networkRuleSet/ipRules/value",
       "properties/partitionCount",
