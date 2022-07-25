@@ -15314,6 +15314,11 @@
   },
   {
     "api_version": "2017-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTHUB/NAMESPACES/{}/EVENTHUBS/{}/AUTHORIZATIONRULES/{}/LISTKEYS",
+    "operation": "POST"
+  },
+  {
+    "api_version": "2017-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTHUB/NAMESPACES/{}/EVENTHUBS/{}/CONSUMERGROUPS/{}",
     "operation": "DELETE"
   },
@@ -16724,7 +16729,22 @@
   {
     "api_version": "2022-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/WORKBOOKS/{}",
-    "operation": "PUT"
+    "operation": "PUT",
+    "properties": [
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
+      "identity/userAssignedIdentities",
+      "kind",
+      "location",
+      "properties/category",
+      "properties/description",
+      "properties/displayName",
+      "properties/serializedData",
+      "properties/sourceId",
+      "properties/storageUri",
+      "tags"
+    ]
   },
   {
     "api_version": "2020-11-20",
@@ -19231,6 +19251,11 @@
     "properties": [
       "forceBreakReplication"
     ]
+  },
+  {
+    "api_version": "2021-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/DELETEREPLICATION",
+    "operation": "POST"
   },
   {
     "api_version": "2021-10-01",
@@ -22126,7 +22151,15 @@
   {
     "api_version": "2018-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PRIVATEDNSZONES/{}",
-    "operation": "PUT"
+    "operation": "PUT",
+    "properties": [
+      "location",
+      "properties/maxNumberOfRecordSets",
+      "properties/maxNumberOfVirtualNetworkLinks",
+      "properties/maxNumberOfVirtualNetworkLinksWithRegistration",
+      "properties/numberOfRecordSets",
+      "tags"
+    ]
   },
   {
     "api_version": "2018-09-01",
@@ -22147,7 +22180,13 @@
   {
     "api_version": "2018-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PRIVATEDNSZONES/{}/VIRTUALNETWORKLINKS/{}",
-    "operation": "PUT"
+    "operation": "PUT",
+    "properties": [
+      "location",
+      "properties/registrationEnabled",
+      "properties/virtualNetwork/id",
+      "tags"
+    ]
   },
   {
     "api_version": "2018-09-01",
@@ -22186,7 +22225,31 @@
   {
     "api_version": "2018-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PRIVATEDNSZONES/{}/{}/{}",
-    "operation": "PUT"
+    "operation": "PUT",
+    "properties": [
+      "name",
+      "properties/aRecords/ipv4Address",
+      "properties/aaaaRecords/ipv6Address",
+      "properties/cnameRecord/cname",
+      "properties/fqdn",
+      "properties/metadata",
+      "properties/mxRecords/exchange",
+      "properties/mxRecords/preference",
+      "properties/ptrRecords/ptrdname",
+      "properties/soaRecord/email",
+      "properties/soaRecord/expireTime",
+      "properties/soaRecord/host",
+      "properties/soaRecord/minimumTtl",
+      "properties/soaRecord/refreshTime",
+      "properties/soaRecord/retryTime",
+      "properties/soaRecord/serialNumber",
+      "properties/srvRecords/port",
+      "properties/srvRecords/priority",
+      "properties/srvRecords/target",
+      "properties/srvRecords/weight",
+      "properties/ttl",
+      "properties/txtRecords/value"
+    ]
   },
   {
     "api_version": "2021-08-01",
@@ -25415,6 +25478,33 @@
       "sku/name",
       "tags"
     ]
+  },
+  {
+    "api_version": "2020-03-13",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}",
+    "operation": "PUT",
+    "properties": [
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
+      "location",
+      "properties/networkRuleSet/ipRules/value",
+      "properties/partitionCount",
+      "properties/publicNetworkAccess",
+      "properties/replicaCount",
+      "sku/name",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2020-03-13",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}/LISTADMINKEYS",
+    "operation": "POST"
+  },
+  {
+    "api_version": "2020-03-13",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}/LISTQUERYKEYS",
+    "operation": "POST"
   },
   {
     "api_version": "2019-01-01-preview",
