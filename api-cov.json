@@ -7808,6 +7808,11 @@
             "is_preview": true,
             "is_active": false,
             "swagger_rel_path": "authorization/resource-manager/Microsoft.Authorization/preview/2020-10-01-preview/authorization-RoleAssignmentsCalls.json"
+          },
+          "2022-04-01": {
+            "is_preview": false,
+            "is_active": false,
+            "swagger_rel_path": "authorization/resource-manager/Microsoft.Authorization/stable/2022-04-01/authorization-RoleAssignmentsCalls.json"
           }
         },
         "PUT": {
@@ -7939,6 +7944,53 @@
                 }
               }
             }
+          },
+          "2022-04-01": {
+            "is_preview": false,
+            "is_active": false,
+            "swagger_rel_path": "authorization/resource-manager/Microsoft.Authorization/stable/2022-04-01/authorization-RoleAssignmentsCalls.json",
+            "model": {
+              "name": "RoleAssignmentCreateParameters",
+              "swagger_rel_path": "authorization/resource-manager/Microsoft.Authorization/stable/2022-04-01/authorization-RoleAssignmentsCalls.json",
+              "properties": {
+                "properties/condition": {
+                  "state": "Covered"
+                },
+                "properties/conditionVersion": {
+                  "state": "Covered"
+                },
+                "properties/createdBy": {
+                  "state": "Ignored"
+                },
+                "properties/createdOn": {
+                  "state": "Ignored"
+                },
+                "properties/delegatedManagedIdentityResourceId": {
+                  "state": "Covered"
+                },
+                "properties/description": {
+                  "state": "Covered"
+                },
+                "properties/principalId": {
+                  "state": "Covered"
+                },
+                "properties/principalType": {
+                  "state": "Covered"
+                },
+                "properties/roleDefinitionId": {
+                  "state": "Covered"
+                },
+                "properties/scope": {
+                  "state": "Ignored"
+                },
+                "properties/updatedBy": {
+                  "state": "Ignored"
+                },
+                "properties/updatedOn": {
+                  "state": "Ignored"
+                }
+              }
+            }
           }
         }
       }
@@ -7950,6 +8002,11 @@
             "is_preview": true,
             "is_active": true,
             "swagger_rel_path": "authorization/resource-manager/Microsoft.Authorization/preview/2018-01-01-preview/authorization-RoleDefinitionsCalls.json"
+          },
+          "2022-04-01": {
+            "is_preview": false,
+            "is_active": false,
+            "swagger_rel_path": "authorization/resource-manager/Microsoft.Authorization/stable/2022-04-01/authorization-RoleDefinitionsCalls.json"
           }
         },
         "PUT": {
@@ -7996,6 +8053,50 @@
                 }
               }
             }
+          },
+          "2022-04-01": {
+            "is_preview": false,
+            "is_active": false,
+            "swagger_rel_path": "authorization/resource-manager/Microsoft.Authorization/stable/2022-04-01/authorization-RoleDefinitionsCalls.json",
+            "model": {
+              "name": "RoleDefinition",
+              "swagger_rel_path": "authorization/resource-manager/Microsoft.Authorization/stable/2022-04-01/authorization-RoleDefinitionsCalls.json",
+              "properties": {
+                "id": {
+                  "state": "Ignored"
+                },
+                "name": {
+                  "state": "Ignored"
+                },
+                "properties/assignableScopes": {
+                  "state": "Covered"
+                },
+                "properties/description": {
+                  "state": "Covered"
+                },
+                "properties/permissions/actions": {
+                  "state": "Covered"
+                },
+                "properties/permissions/dataActions": {
+                  "state": "Covered"
+                },
+                "properties/permissions/notActions": {
+                  "state": "Covered"
+                },
+                "properties/permissions/notDataActions": {
+                  "state": "Covered"
+                },
+                "properties/roleName": {
+                  "state": "Covered"
+                },
+                "properties/type": {
+                  "state": "Covered"
+                },
+                "type": {
+                  "state": "Ignored"
+                }
+              }
+            }
           }
         }
       }
@@ -8005,80 +8106,16 @@
     "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}": {
       "operations": {
         "DELETE": {
-          "2020-01-13-preview": {
-            "is_preview": true,
-            "is_active": true,
-            "swagger_rel_path": "automation/resource-manager/Microsoft.Automation/preview/2020-01-13-preview/account.json"
-          },
           "2021-06-22": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "automation/resource-manager/Microsoft.Automation/stable/2021-06-22/account.json"
           }
         },
         "PUT": {
-          "2020-01-13-preview": {
-            "is_preview": true,
-            "is_active": true,
-            "swagger_rel_path": "automation/resource-manager/Microsoft.Automation/preview/2020-01-13-preview/account.json",
-            "model": {
-              "name": "AutomationAccountCreateOrUpdateParameters",
-              "swagger_rel_path": "automation/resource-manager/Microsoft.Automation/preview/2020-01-13-preview/account.json",
-              "properties": {
-                "identity/principalId": {
-                  "state": "Ignored"
-                },
-                "identity/tenantId": {
-                  "state": "Ignored"
-                },
-                "identity/type": {
-                  "state": "Covered"
-                },
-                "identity/userAssignedIdentities": {
-                  "state": "Covered"
-                },
-                "location": {
-                  "state": "Covered"
-                },
-                "name": {
-                  "state": "Uncovered"
-                },
-                "properties/encryption/identity/userAssignedIdentity": {
-                  "state": "Uncovered"
-                },
-                "properties/encryption/keySource": {
-                  "state": "Uncovered"
-                },
-                "properties/encryption/keyVaultProperties/keyName": {
-                  "state": "Uncovered"
-                },
-                "properties/encryption/keyVaultProperties/keyVersion": {
-                  "state": "Uncovered"
-                },
-                "properties/encryption/keyVaultProperties/keyvaultUri": {
-                  "state": "Uncovered"
-                },
-                "properties/publicNetworkAccess": {
-                  "state": "Covered"
-                },
-                "properties/sku/capacity": {
-                  "state": "Uncovered"
-                },
-                "properties/sku/family": {
-                  "state": "Uncovered"
-                },
-                "properties/sku/name": {
-                  "state": "Covered"
-                },
-                "tags": {
-                  "state": "Covered"
-                }
-              }
-            }
-          },
           "2021-06-22": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "automation/resource-manager/Microsoft.Automation/stable/2021-06-22/account.json",
             "model": {
               "name": "AutomationAccountCreateOrUpdateParameters",
@@ -9412,6 +9449,72 @@
                   "state": "Covered"
                 },
                 "properties/scriptUrlSasToken": {
+                  "state": "Covered"
+                },
+                "systemData/createdAt": {
+                  "state": "Ignored"
+                },
+                "systemData/createdBy": {
+                  "state": "Ignored"
+                },
+                "systemData/createdByType": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedAt": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedBy": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedByType": {
+                  "state": "Ignored"
+                },
+                "type": {
+                  "state": "Ignored"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.KUSTO/CLUSTERS/{}/MANAGEDPRIVATEENDPOINTS/{}": {
+      "operations": {
+        "DELETE": {
+          "2022-02-01": {
+            "is_preview": false,
+            "is_active": true,
+            "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2022-02-01/kusto.json"
+          }
+        },
+        "PUT": {
+          "2022-02-01": {
+            "is_preview": false,
+            "is_active": true,
+            "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2022-02-01/kusto.json",
+            "model": {
+              "name": "ManagedPrivateEndpoint",
+              "swagger_rel_path": "azure-kusto/resource-manager/Microsoft.Kusto/stable/2022-02-01/kusto.json",
+              "properties": {
+                "id": {
+                  "state": "Ignored"
+                },
+                "name": {
+                  "state": "Ignored"
+                },
+                "properties/groupId": {
+                  "state": "Covered"
+                },
+                "properties/privateLinkResourceId": {
+                  "state": "Covered"
+                },
+                "properties/privateLinkResourceRegion": {
+                  "state": "Covered"
+                },
+                "properties/provisioningState": {
+                  "state": "Ignored"
+                },
+                "properties/requestMessage": {
                   "state": "Covered"
                 },
                 "systemData/createdAt": {
@@ -14294,7 +14397,7 @@
                   "state": "Covered"
                 },
                 "properties/apiProperties/qnaAzureSearchEndpointKey": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/apiProperties/qnaRuntimeEndpoint": {
                   "state": "Covered"
@@ -14596,7 +14699,7 @@
                   "state": "Covered"
                 },
                 "properties/apiProperties/qnaAzureSearchEndpointKey": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/apiProperties/qnaRuntimeEndpoint": {
                   "state": "Covered"
@@ -14898,7 +15001,7 @@
                   "state": "Covered"
                 },
                 "properties/apiProperties/qnaAzureSearchEndpointKey": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/apiProperties/qnaRuntimeEndpoint": {
                   "state": "Covered"
@@ -43941,6 +44044,125 @@
       }
     }
   },
+  "datadog": {
+    "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATADOG/MONITORS/{}": {
+      "operations": {
+        "DELETE": {
+          "2021-03-01": {
+            "is_preview": false,
+            "is_active": true,
+            "swagger_rel_path": "datadog/resource-manager/Microsoft.Datadog/stable/2021-03-01/datadog.json"
+          }
+        },
+        "PUT": {
+          "2021-03-01": {
+            "is_preview": false,
+            "is_active": true,
+            "swagger_rel_path": "datadog/resource-manager/Microsoft.Datadog/stable/2021-03-01/datadog.json",
+            "model": {
+              "name": "DatadogMonitorResource",
+              "swagger_rel_path": "datadog/resource-manager/Microsoft.Datadog/stable/2021-03-01/datadog.json",
+              "properties": {
+                "id": {
+                  "state": "Ignored"
+                },
+                "identity/principalId": {
+                  "state": "Ignored"
+                },
+                "identity/tenantId": {
+                  "state": "Ignored"
+                },
+                "identity/type": {
+                  "state": "Covered"
+                },
+                "location": {
+                  "state": "Covered"
+                },
+                "name": {
+                  "state": "Ignored"
+                },
+                "properties/datadogOrganizationProperties/apiKey": {
+                  "state": "Covered"
+                },
+                "properties/datadogOrganizationProperties/applicationKey": {
+                  "state": "Covered"
+                },
+                "properties/datadogOrganizationProperties/enterpriseAppId": {
+                  "state": "Covered"
+                },
+                "properties/datadogOrganizationProperties/id": {
+                  "state": "Ignored"
+                },
+                "properties/datadogOrganizationProperties/linkingAuthCode": {
+                  "state": "Covered"
+                },
+                "properties/datadogOrganizationProperties/linkingClientId": {
+                  "state": "Covered"
+                },
+                "properties/datadogOrganizationProperties/name": {
+                  "state": "Ignored"
+                },
+                "properties/datadogOrganizationProperties/redirectUri": {
+                  "state": "Covered"
+                },
+                "properties/liftrResourceCategory": {
+                  "state": "Ignored"
+                },
+                "properties/liftrResourcePreference": {
+                  "state": "Ignored"
+                },
+                "properties/marketplaceSubscriptionStatus": {
+                  "state": "Ignored"
+                },
+                "properties/monitoringStatus": {
+                  "state": "Covered"
+                },
+                "properties/provisioningState": {
+                  "state": "Ignored"
+                },
+                "properties/userInfo/emailAddress": {
+                  "state": "Covered"
+                },
+                "properties/userInfo/name": {
+                  "state": "Covered"
+                },
+                "properties/userInfo/phoneNumber": {
+                  "state": "Covered"
+                },
+                "sku/name": {
+                  "state": "Covered"
+                },
+                "systemData/createdAt": {
+                  "state": "Ignored"
+                },
+                "systemData/createdBy": {
+                  "state": "Ignored"
+                },
+                "systemData/createdByType": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedAt": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedBy": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedByType": {
+                  "state": "Ignored"
+                },
+                "tags": {
+                  "state": "Covered"
+                },
+                "type": {
+                  "state": "Ignored"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
   "datafactory": {
     "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAFACTORY/FACTORIES/{}": {
       "operations": {
@@ -65585,7 +65807,7 @@
                   "state": "Covered"
                 },
                 "isVerified": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 }
               }
             }
@@ -72322,19 +72544,9 @@
     "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTHUB/CLUSTERS/{}": {
       "operations": {
         "DELETE": {
-          "2018-01-01-preview": {
-            "is_preview": true,
-            "is_active": true,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2018-01-01-preview/Clusters-preview.json"
-          },
-          "2021-06-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-06-01-preview/Clusters-preview.json"
-          },
           "2021-11-01": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/stable/2021-11-01/Clusters-preview.json"
           },
           "2022-01-01-preview": {
@@ -72344,115 +72556,9 @@
           }
         },
         "PUT": {
-          "2018-01-01-preview": {
-            "is_preview": true,
-            "is_active": true,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2018-01-01-preview/Clusters-preview.json",
-            "model": {
-              "name": "Cluster",
-              "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2018-01-01-preview/Clusters-preview.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "location": {
-                  "state": "Covered"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/createdAt": {
-                  "state": "Ignored"
-                },
-                "properties/metricId": {
-                  "state": "Ignored"
-                },
-                "properties/status": {
-                  "state": "Ignored"
-                },
-                "properties/updatedAt": {
-                  "state": "Ignored"
-                },
-                "sku/capacity": {
-                  "state": "Covered"
-                },
-                "sku/name": {
-                  "state": "Covered"
-                },
-                "tags": {
-                  "state": "Covered"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
-          "2021-06-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-06-01-preview/Clusters-preview.json",
-            "model": {
-              "name": "Cluster",
-              "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-06-01-preview/Clusters-preview.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "location": {
-                  "state": "Covered"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/createdAt": {
-                  "state": "Ignored"
-                },
-                "properties/metricId": {
-                  "state": "Ignored"
-                },
-                "properties/status": {
-                  "state": "Ignored"
-                },
-                "properties/updatedAt": {
-                  "state": "Ignored"
-                },
-                "sku/capacity": {
-                  "state": "Covered"
-                },
-                "sku/name": {
-                  "state": "Covered"
-                },
-                "systemData/createdAt": {
-                  "state": "Ignored"
-                },
-                "systemData/createdBy": {
-                  "state": "Ignored"
-                },
-                "systemData/createdByType": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedAt": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedBy": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedByType": {
-                  "state": "Ignored"
-                },
-                "tags": {
-                  "state": "Covered"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
           "2021-11-01": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/stable/2021-11-01/Clusters-preview.json",
             "model": {
               "name": "Cluster",
@@ -72583,19 +72689,9 @@
     "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTHUB/NAMESPACES/{}": {
       "operations": {
         "DELETE": {
-          "2021-01-01-preview": {
-            "is_preview": true,
-            "is_active": true,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-01-01-preview/namespaces-preview.json"
-          },
-          "2021-06-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-06-01-preview/namespaces-preview.json"
-          },
           "2021-11-01": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/stable/2021-11-01/namespaces-preview.json"
           },
           "2022-01-01-preview": {
@@ -72605,322 +72701,9 @@
           }
         },
         "PUT": {
-          "2021-01-01-preview": {
-            "is_preview": true,
-            "is_active": true,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-01-01-preview/namespaces-preview.json",
-            "model": {
-              "name": "EHNamespace",
-              "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-01-01-preview/namespaces-preview.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "identity/principalId": {
-                  "state": "Ignored"
-                },
-                "identity/tenantId": {
-                  "state": "Ignored"
-                },
-                "identity/type": {
-                  "state": "Covered"
-                },
-                "identity/userAssignedIdentities": {
-                  "state": "Covered"
-                },
-                "location": {
-                  "state": "Covered"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/clusterArmId": {
-                  "state": "Covered"
-                },
-                "properties/createdAt": {
-                  "state": "Ignored"
-                },
-                "properties/encryption/keySource": {
-                  "state": "Uncovered"
-                },
-                "properties/encryption/keyVaultProperties/identity/userAssignedIdentity": {
-                  "state": "Uncovered"
-                },
-                "properties/encryption/keyVaultProperties/keyName": {
-                  "state": "Uncovered"
-                },
-                "properties/encryption/keyVaultProperties/keyVaultUri": {
-                  "state": "Uncovered"
-                },
-                "properties/encryption/keyVaultProperties/keyVersion": {
-                  "state": "Uncovered"
-                },
-                "properties/encryption/requireInfrastructureEncryption": {
-                  "state": "Uncovered"
-                },
-                "properties/isAutoInflateEnabled": {
-                  "state": "Covered"
-                },
-                "properties/kafkaEnabled": {
-                  "state": "Uncovered"
-                },
-                "properties/maximumThroughputUnits": {
-                  "state": "Covered"
-                },
-                "properties/metricId": {
-                  "state": "Ignored"
-                },
-                "properties/privateEndpointConnections/id": {
-                  "state": "Ignored"
-                },
-                "properties/privateEndpointConnections/name": {
-                  "state": "Ignored"
-                },
-                "properties/privateEndpointConnections/properties/privateEndpoint/id": {
-                  "state": "Uncovered"
-                },
-                "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/description": {
-                  "state": "Uncovered"
-                },
-                "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/status": {
-                  "state": "Uncovered"
-                },
-                "properties/privateEndpointConnections/properties/provisioningState": {
-                  "state": "Uncovered"
-                },
-                "properties/privateEndpointConnections/systemData/createdAt": {
-                  "state": "Ignored"
-                },
-                "properties/privateEndpointConnections/systemData/createdBy": {
-                  "state": "Ignored"
-                },
-                "properties/privateEndpointConnections/systemData/createdByType": {
-                  "state": "Ignored"
-                },
-                "properties/privateEndpointConnections/systemData/lastModifiedAt": {
-                  "state": "Ignored"
-                },
-                "properties/privateEndpointConnections/systemData/lastModifiedBy": {
-                  "state": "Ignored"
-                },
-                "properties/privateEndpointConnections/systemData/lastModifiedByType": {
-                  "state": "Ignored"
-                },
-                "properties/privateEndpointConnections/type": {
-                  "state": "Ignored"
-                },
-                "properties/provisioningState": {
-                  "state": "Ignored"
-                },
-                "properties/serviceBusEndpoint": {
-                  "state": "Ignored"
-                },
-                "properties/status": {
-                  "state": "Ignored"
-                },
-                "properties/updatedAt": {
-                  "state": "Ignored"
-                },
-                "properties/zoneRedundant": {
-                  "state": "Covered"
-                },
-                "sku/capacity": {
-                  "state": "Covered"
-                },
-                "sku/name": {
-                  "state": "Covered"
-                },
-                "sku/tier": {
-                  "state": "Covered"
-                },
-                "systemData/createdAt": {
-                  "state": "Ignored"
-                },
-                "systemData/createdBy": {
-                  "state": "Ignored"
-                },
-                "systemData/createdByType": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedAt": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedBy": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedByType": {
-                  "state": "Ignored"
-                },
-                "tags": {
-                  "state": "Covered"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
-          "2021-06-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-06-01-preview/namespaces-preview.json",
-            "model": {
-              "name": "EHNamespace",
-              "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-06-01-preview/namespaces-preview.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "identity/principalId": {
-                  "state": "Ignored"
-                },
-                "identity/tenantId": {
-                  "state": "Ignored"
-                },
-                "identity/type": {
-                  "state": "Covered"
-                },
-                "identity/userAssignedIdentities": {
-                  "state": "Covered"
-                },
-                "location": {
-                  "state": "Covered"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/clusterArmId": {
-                  "state": "Covered"
-                },
-                "properties/createdAt": {
-                  "state": "Ignored"
-                },
-                "properties/disableLocalAuth": {
-                  "state": "Uncovered"
-                },
-                "properties/encryption/keySource": {
-                  "state": "Uncovered"
-                },
-                "properties/encryption/keyVaultProperties/identity/userAssignedIdentity": {
-                  "state": "Uncovered"
-                },
-                "properties/encryption/keyVaultProperties/keyName": {
-                  "state": "Uncovered"
-                },
-                "properties/encryption/keyVaultProperties/keyVaultUri": {
-                  "state": "Uncovered"
-                },
-                "properties/encryption/keyVaultProperties/keyVersion": {
-                  "state": "Uncovered"
-                },
-                "properties/encryption/requireInfrastructureEncryption": {
-                  "state": "Uncovered"
-                },
-                "properties/isAutoInflateEnabled": {
-                  "state": "Covered"
-                },
-                "properties/kafkaEnabled": {
-                  "state": "Uncovered"
-                },
-                "properties/maximumThroughputUnits": {
-                  "state": "Covered"
-                },
-                "properties/metricId": {
-                  "state": "Ignored"
-                },
-                "properties/privateEndpointConnections/id": {
-                  "state": "Ignored"
-                },
-                "properties/privateEndpointConnections/name": {
-                  "state": "Ignored"
-                },
-                "properties/privateEndpointConnections/properties/privateEndpoint/id": {
-                  "state": "Uncovered"
-                },
-                "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/description": {
-                  "state": "Uncovered"
-                },
-                "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/status": {
-                  "state": "Uncovered"
-                },
-                "properties/privateEndpointConnections/properties/provisioningState": {
-                  "state": "Uncovered"
-                },
-                "properties/privateEndpointConnections/systemData/createdAt": {
-                  "state": "Ignored"
-                },
-                "properties/privateEndpointConnections/systemData/createdBy": {
-                  "state": "Ignored"
-                },
-                "properties/privateEndpointConnections/systemData/createdByType": {
-                  "state": "Ignored"
-                },
-                "properties/privateEndpointConnections/systemData/lastModifiedAt": {
-                  "state": "Ignored"
-                },
-                "properties/privateEndpointConnections/systemData/lastModifiedBy": {
-                  "state": "Ignored"
-                },
-                "properties/privateEndpointConnections/systemData/lastModifiedByType": {
-                  "state": "Ignored"
-                },
-                "properties/privateEndpointConnections/type": {
-                  "state": "Ignored"
-                },
-                "properties/provisioningState": {
-                  "state": "Ignored"
-                },
-                "properties/serviceBusEndpoint": {
-                  "state": "Ignored"
-                },
-                "properties/status": {
-                  "state": "Ignored"
-                },
-                "properties/updatedAt": {
-                  "state": "Ignored"
-                },
-                "properties/zoneRedundant": {
-                  "state": "Covered"
-                },
-                "sku/capacity": {
-                  "state": "Covered"
-                },
-                "sku/name": {
-                  "state": "Covered"
-                },
-                "sku/tier": {
-                  "state": "Covered"
-                },
-                "systemData/createdAt": {
-                  "state": "Ignored"
-                },
-                "systemData/createdBy": {
-                  "state": "Ignored"
-                },
-                "systemData/createdByType": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedAt": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedBy": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedByType": {
-                  "state": "Ignored"
-                },
-                "tags": {
-                  "state": "Covered"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
           "2021-11-01": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/stable/2021-11-01/namespaces-preview.json",
             "model": {
               "name": "EHNamespace",
@@ -72960,19 +72743,19 @@
                   "state": "Uncovered"
                 },
                 "properties/encryption/keySource": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/encryption/keyVaultProperties/identity/userAssignedIdentity": {
                   "state": "Uncovered"
                 },
                 "properties/encryption/keyVaultProperties/keyName": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/encryption/keyVaultProperties/keyVaultUri": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/encryption/keyVaultProperties/keyVersion": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/encryption/requireInfrastructureEncryption": {
                   "state": "Uncovered"
@@ -72981,7 +72764,7 @@
                   "state": "Covered"
                 },
                 "properties/kafkaEnabled": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/maximumThroughputUnits": {
                   "state": "Covered"
@@ -73124,19 +72907,19 @@
                   "state": "Uncovered"
                 },
                 "properties/encryption/keySource": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/encryption/keyVaultProperties/identity/userAssignedIdentity": {
                   "state": "Uncovered"
                 },
                 "properties/encryption/keyVaultProperties/keyName": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/encryption/keyVaultProperties/keyVaultUri": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/encryption/keyVaultProperties/keyVersion": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/encryption/requireInfrastructureEncryption": {
                   "state": "Uncovered"
@@ -73145,7 +72928,7 @@
                   "state": "Covered"
                 },
                 "properties/kafkaEnabled": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/maximumThroughputUnits": {
                   "state": "Covered"
@@ -73258,29 +73041,9 @@
     "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTHUB/NAMESPACES/{}/AUTHORIZATIONRULES/{}": {
       "operations": {
         "DELETE": {
-          "2017-04-01": {
-            "is_preview": false,
-            "is_active": true,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/stable/2017-04-01/AuthorizationRules.json"
-          },
-          "2018-01-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2018-01-01-preview/AuthorizationRules.json"
-          },
-          "2021-01-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-01-01-preview/AuthorizationRules.json"
-          },
-          "2021-06-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-06-01-preview/AuthorizationRules.json"
-          },
           "2021-11-01": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/stable/2021-11-01/AuthorizationRules.json"
           },
           "2022-01-01-preview": {
@@ -73290,137 +73053,9 @@
           }
         },
         "PUT": {
-          "2017-04-01": {
-            "is_preview": false,
-            "is_active": true,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/stable/2017-04-01/AuthorizationRules.json",
-            "model": {
-              "name": "AuthorizationRule",
-              "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/stable/2017-04-01/AuthorizationRules.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/rights": {
-                  "state": "Covered"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
-          "2018-01-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2018-01-01-preview/AuthorizationRules.json",
-            "model": {
-              "name": "AuthorizationRule",
-              "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2018-01-01-preview/AuthorizationRules.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/rights": {
-                  "state": "Covered"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
-          "2021-01-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-01-01-preview/AuthorizationRules.json",
-            "model": {
-              "name": "AuthorizationRule",
-              "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-01-01-preview/AuthorizationRules.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/rights": {
-                  "state": "Covered"
-                },
-                "systemData/createdAt": {
-                  "state": "Ignored"
-                },
-                "systemData/createdBy": {
-                  "state": "Ignored"
-                },
-                "systemData/createdByType": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedAt": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedBy": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedByType": {
-                  "state": "Ignored"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
-          "2021-06-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-06-01-preview/AuthorizationRules.json",
-            "model": {
-              "name": "AuthorizationRule",
-              "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-06-01-preview/AuthorizationRules.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/rights": {
-                  "state": "Covered"
-                },
-                "systemData/createdAt": {
-                  "state": "Ignored"
-                },
-                "systemData/createdBy": {
-                  "state": "Ignored"
-                },
-                "systemData/createdByType": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedAt": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedBy": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedByType": {
-                  "state": "Ignored"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
           "2021-11-01": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/stable/2021-11-01/AuthorizationRules.json",
             "model": {
               "name": "AuthorizationRule",
@@ -73512,29 +73147,9 @@
     "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTHUB/NAMESPACES/{}/DISASTERRECOVERYCONFIGS/{}": {
       "operations": {
         "DELETE": {
-          "2017-04-01": {
-            "is_preview": false,
-            "is_active": true,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/stable/2017-04-01/disasterRecoveryConfigs.json"
-          },
-          "2018-01-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2018-01-01-preview/disasterRecoveryConfigs.json"
-          },
-          "2021-01-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-01-01-preview/disasterRecoveryConfigs.json"
-          },
-          "2021-06-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-06-01-preview/disasterRecoveryConfigs.json"
-          },
           "2021-11-01": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/stable/2021-11-01/disasterRecoveryConfigs.json"
           },
           "2022-01-01-preview": {
@@ -73544,185 +73159,9 @@
           }
         },
         "PUT": {
-          "2017-04-01": {
-            "is_preview": false,
-            "is_active": true,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/stable/2017-04-01/disasterRecoveryConfigs.json",
-            "model": {
-              "name": "ArmDisasterRecovery",
-              "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/stable/2017-04-01/disasterRecoveryConfigs.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/alternateName": {
-                  "state": "Uncovered"
-                },
-                "properties/partnerNamespace": {
-                  "state": "Covered"
-                },
-                "properties/pendingReplicationOperationsCount": {
-                  "state": "Ignored"
-                },
-                "properties/provisioningState": {
-                  "state": "Ignored"
-                },
-                "properties/role": {
-                  "state": "Ignored"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
-          "2018-01-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2018-01-01-preview/disasterRecoveryConfigs.json",
-            "model": {
-              "name": "ArmDisasterRecovery",
-              "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2018-01-01-preview/disasterRecoveryConfigs.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/alternateName": {
-                  "state": "Uncovered"
-                },
-                "properties/partnerNamespace": {
-                  "state": "Covered"
-                },
-                "properties/pendingReplicationOperationsCount": {
-                  "state": "Ignored"
-                },
-                "properties/provisioningState": {
-                  "state": "Ignored"
-                },
-                "properties/role": {
-                  "state": "Ignored"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
-          "2021-01-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-01-01-preview/disasterRecoveryConfigs.json",
-            "model": {
-              "name": "ArmDisasterRecovery",
-              "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-01-01-preview/disasterRecoveryConfigs.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/alternateName": {
-                  "state": "Uncovered"
-                },
-                "properties/partnerNamespace": {
-                  "state": "Covered"
-                },
-                "properties/pendingReplicationOperationsCount": {
-                  "state": "Ignored"
-                },
-                "properties/provisioningState": {
-                  "state": "Ignored"
-                },
-                "properties/role": {
-                  "state": "Ignored"
-                },
-                "systemData/createdAt": {
-                  "state": "Ignored"
-                },
-                "systemData/createdBy": {
-                  "state": "Ignored"
-                },
-                "systemData/createdByType": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedAt": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedBy": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedByType": {
-                  "state": "Ignored"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
-          "2021-06-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-06-01-preview/disasterRecoveryConfigs.json",
-            "model": {
-              "name": "ArmDisasterRecovery",
-              "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-06-01-preview/disasterRecoveryConfigs.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/alternateName": {
-                  "state": "Uncovered"
-                },
-                "properties/partnerNamespace": {
-                  "state": "Covered"
-                },
-                "properties/pendingReplicationOperationsCount": {
-                  "state": "Ignored"
-                },
-                "properties/provisioningState": {
-                  "state": "Ignored"
-                },
-                "properties/role": {
-                  "state": "Ignored"
-                },
-                "systemData/createdAt": {
-                  "state": "Ignored"
-                },
-                "systemData/createdBy": {
-                  "state": "Ignored"
-                },
-                "systemData/createdByType": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedAt": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedBy": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedByType": {
-                  "state": "Ignored"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
           "2021-11-01": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/stable/2021-11-01/disasterRecoveryConfigs.json",
             "model": {
               "name": "ArmDisasterRecovery",
@@ -73838,29 +73277,9 @@
     "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTHUB/NAMESPACES/{}/EVENTHUBS/{}": {
       "operations": {
         "DELETE": {
-          "2017-04-01": {
-            "is_preview": false,
-            "is_active": true,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/stable/2017-04-01/eventhubs.json"
-          },
-          "2018-01-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2018-01-01-preview/eventhubs.json"
-          },
-          "2021-01-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-01-01-preview/eventhubs.json"
-          },
-          "2021-06-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-06-01-preview/eventhubs.json"
-          },
           "2021-11-01": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/stable/2021-11-01/eventhubs.json"
           },
           "2022-01-01-preview": {
@@ -73870,305 +73289,9 @@
           }
         },
         "PUT": {
-          "2017-04-01": {
-            "is_preview": false,
-            "is_active": true,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/stable/2017-04-01/eventhubs.json",
-            "model": {
-              "name": "Eventhub",
-              "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/stable/2017-04-01/eventhubs.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/captureDescription/destination/name": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/destination/properties/archiveNameFormat": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/destination/properties/blobContainer": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/destination/properties/storageAccountResourceId": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/enabled": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/encoding": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/intervalInSeconds": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/sizeLimitInBytes": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/skipEmptyArchives": {
-                  "state": "Covered"
-                },
-                "properties/createdAt": {
-                  "state": "Ignored"
-                },
-                "properties/messageRetentionInDays": {
-                  "state": "Covered"
-                },
-                "properties/partitionCount": {
-                  "state": "Covered"
-                },
-                "properties/partitionIds": {
-                  "state": "Ignored"
-                },
-                "properties/status": {
-                  "state": "Covered"
-                },
-                "properties/updatedAt": {
-                  "state": "Ignored"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
-          "2018-01-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2018-01-01-preview/eventhubs.json",
-            "model": {
-              "name": "Eventhub",
-              "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2018-01-01-preview/eventhubs.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/captureDescription/destination/name": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/destination/properties/archiveNameFormat": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/destination/properties/blobContainer": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/destination/properties/storageAccountResourceId": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/enabled": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/encoding": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/intervalInSeconds": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/sizeLimitInBytes": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/skipEmptyArchives": {
-                  "state": "Covered"
-                },
-                "properties/createdAt": {
-                  "state": "Ignored"
-                },
-                "properties/messageRetentionInDays": {
-                  "state": "Covered"
-                },
-                "properties/partitionCount": {
-                  "state": "Covered"
-                },
-                "properties/partitionIds": {
-                  "state": "Ignored"
-                },
-                "properties/status": {
-                  "state": "Covered"
-                },
-                "properties/updatedAt": {
-                  "state": "Ignored"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
-          "2021-01-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-01-01-preview/eventhubs.json",
-            "model": {
-              "name": "Eventhub",
-              "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-01-01-preview/eventhubs.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/captureDescription/destination/name": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/destination/properties/archiveNameFormat": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/destination/properties/blobContainer": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/destination/properties/storageAccountResourceId": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/enabled": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/encoding": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/intervalInSeconds": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/sizeLimitInBytes": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/skipEmptyArchives": {
-                  "state": "Covered"
-                },
-                "properties/createdAt": {
-                  "state": "Ignored"
-                },
-                "properties/messageRetentionInDays": {
-                  "state": "Covered"
-                },
-                "properties/partitionCount": {
-                  "state": "Covered"
-                },
-                "properties/partitionIds": {
-                  "state": "Ignored"
-                },
-                "properties/status": {
-                  "state": "Covered"
-                },
-                "properties/updatedAt": {
-                  "state": "Ignored"
-                },
-                "systemData/createdAt": {
-                  "state": "Ignored"
-                },
-                "systemData/createdBy": {
-                  "state": "Ignored"
-                },
-                "systemData/createdByType": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedAt": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedBy": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedByType": {
-                  "state": "Ignored"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
-          "2021-06-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-06-01-preview/eventhubs.json",
-            "model": {
-              "name": "Eventhub",
-              "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-06-01-preview/eventhubs.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/captureDescription/destination/name": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/destination/properties/archiveNameFormat": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/destination/properties/blobContainer": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/destination/properties/storageAccountResourceId": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/enabled": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/encoding": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/intervalInSeconds": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/sizeLimitInBytes": {
-                  "state": "Covered"
-                },
-                "properties/captureDescription/skipEmptyArchives": {
-                  "state": "Covered"
-                },
-                "properties/createdAt": {
-                  "state": "Ignored"
-                },
-                "properties/messageRetentionInDays": {
-                  "state": "Covered"
-                },
-                "properties/partitionCount": {
-                  "state": "Covered"
-                },
-                "properties/partitionIds": {
-                  "state": "Ignored"
-                },
-                "properties/status": {
-                  "state": "Covered"
-                },
-                "properties/updatedAt": {
-                  "state": "Ignored"
-                },
-                "systemData/createdAt": {
-                  "state": "Ignored"
-                },
-                "systemData/createdBy": {
-                  "state": "Ignored"
-                },
-                "systemData/createdByType": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedAt": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedBy": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedByType": {
-                  "state": "Ignored"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
           "2021-11-01": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/stable/2021-11-01/eventhubs.json",
             "model": {
               "name": "Eventhub",
@@ -74362,29 +73485,9 @@
     "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTHUB/NAMESPACES/{}/EVENTHUBS/{}/AUTHORIZATIONRULES/{}": {
       "operations": {
         "DELETE": {
-          "2017-04-01": {
-            "is_preview": false,
-            "is_active": true,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/stable/2017-04-01/AuthorizationRules.json"
-          },
-          "2018-01-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2018-01-01-preview/AuthorizationRules.json"
-          },
-          "2021-01-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-01-01-preview/AuthorizationRules.json"
-          },
-          "2021-06-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-06-01-preview/AuthorizationRules.json"
-          },
           "2021-11-01": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/stable/2021-11-01/AuthorizationRules.json"
           },
           "2022-01-01-preview": {
@@ -74394,137 +73497,9 @@
           }
         },
         "PUT": {
-          "2017-04-01": {
-            "is_preview": false,
-            "is_active": true,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/stable/2017-04-01/AuthorizationRules.json",
-            "model": {
-              "name": "AuthorizationRule",
-              "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/stable/2017-04-01/AuthorizationRules.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/rights": {
-                  "state": "Covered"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
-          "2018-01-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2018-01-01-preview/AuthorizationRules.json",
-            "model": {
-              "name": "AuthorizationRule",
-              "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2018-01-01-preview/AuthorizationRules.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/rights": {
-                  "state": "Covered"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
-          "2021-01-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-01-01-preview/AuthorizationRules.json",
-            "model": {
-              "name": "AuthorizationRule",
-              "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-01-01-preview/AuthorizationRules.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/rights": {
-                  "state": "Covered"
-                },
-                "systemData/createdAt": {
-                  "state": "Ignored"
-                },
-                "systemData/createdBy": {
-                  "state": "Ignored"
-                },
-                "systemData/createdByType": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedAt": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedBy": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedByType": {
-                  "state": "Ignored"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
-          "2021-06-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-06-01-preview/AuthorizationRules.json",
-            "model": {
-              "name": "AuthorizationRule",
-              "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-06-01-preview/AuthorizationRules.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/rights": {
-                  "state": "Covered"
-                },
-                "systemData/createdAt": {
-                  "state": "Ignored"
-                },
-                "systemData/createdBy": {
-                  "state": "Ignored"
-                },
-                "systemData/createdByType": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedAt": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedBy": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedByType": {
-                  "state": "Ignored"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
           "2021-11-01": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/stable/2021-11-01/AuthorizationRules.json",
             "model": {
               "name": "AuthorizationRule",
@@ -74616,29 +73591,9 @@
     "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTHUB/NAMESPACES/{}/EVENTHUBS/{}/CONSUMERGROUPS/{}": {
       "operations": {
         "DELETE": {
-          "2017-04-01": {
-            "is_preview": false,
-            "is_active": true,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/stable/2017-04-01/consumergroups.json"
-          },
-          "2018-01-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2018-01-01-preview/consumergroups.json"
-          },
-          "2021-01-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-01-01-preview/consumergroups.json"
-          },
-          "2021-06-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-06-01-preview/consumergroups.json"
-          },
           "2021-11-01": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/stable/2021-11-01/consumergroups.json"
           },
           "2022-01-01-preview": {
@@ -74648,161 +73603,9 @@
           }
         },
         "PUT": {
-          "2017-04-01": {
-            "is_preview": false,
-            "is_active": true,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/stable/2017-04-01/consumergroups.json",
-            "model": {
-              "name": "ConsumerGroup",
-              "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/stable/2017-04-01/consumergroups.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/createdAt": {
-                  "state": "Ignored"
-                },
-                "properties/updatedAt": {
-                  "state": "Ignored"
-                },
-                "properties/userMetadata": {
-                  "state": "Covered"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
-          "2018-01-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2018-01-01-preview/consumergroups.json",
-            "model": {
-              "name": "ConsumerGroup",
-              "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2018-01-01-preview/consumergroups.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/createdAt": {
-                  "state": "Ignored"
-                },
-                "properties/updatedAt": {
-                  "state": "Ignored"
-                },
-                "properties/userMetadata": {
-                  "state": "Covered"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
-          "2021-01-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-01-01-preview/consumergroups.json",
-            "model": {
-              "name": "ConsumerGroup",
-              "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-01-01-preview/consumergroups.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/createdAt": {
-                  "state": "Ignored"
-                },
-                "properties/updatedAt": {
-                  "state": "Ignored"
-                },
-                "properties/userMetadata": {
-                  "state": "Covered"
-                },
-                "systemData/createdAt": {
-                  "state": "Ignored"
-                },
-                "systemData/createdBy": {
-                  "state": "Ignored"
-                },
-                "systemData/createdByType": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedAt": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedBy": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedByType": {
-                  "state": "Ignored"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
-          "2021-06-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-06-01-preview/consumergroups.json",
-            "model": {
-              "name": "ConsumerGroup",
-              "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-06-01-preview/consumergroups.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/createdAt": {
-                  "state": "Ignored"
-                },
-                "properties/updatedAt": {
-                  "state": "Ignored"
-                },
-                "properties/userMetadata": {
-                  "state": "Covered"
-                },
-                "systemData/createdAt": {
-                  "state": "Ignored"
-                },
-                "systemData/createdBy": {
-                  "state": "Ignored"
-                },
-                "systemData/createdByType": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedAt": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedBy": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedByType": {
-                  "state": "Ignored"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
           "2021-11-01": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/stable/2021-11-01/consumergroups.json",
             "model": {
               "name": "ConsumerGroup",
@@ -74906,162 +73709,9 @@
     "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTHUB/NAMESPACES/{}/NETWORKRULESETS/DEFAULT": {
       "operations": {
         "PUT": {
-          "2018-01-01-preview": {
-            "is_preview": true,
-            "is_active": true,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2018-01-01-preview/networkrulessets-preview.json",
-            "model": {
-              "name": "NetworkRuleSet",
-              "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2018-01-01-preview/networkrulessets-preview.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/defaultAction": {
-                  "state": "Covered"
-                },
-                "properties/ipRules/action": {
-                  "state": "Covered"
-                },
-                "properties/ipRules/ipMask": {
-                  "state": "Covered"
-                },
-                "properties/trustedServiceAccessEnabled": {
-                  "state": "Covered"
-                },
-                "properties/virtualNetworkRules/ignoreMissingVnetServiceEndpoint": {
-                  "state": "Covered"
-                },
-                "properties/virtualNetworkRules/subnet/id": {
-                  "state": "Covered"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
-          "2021-01-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-01-01-preview/networkrulessets-preview.json",
-            "model": {
-              "name": "NetworkRuleSet",
-              "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-01-01-preview/networkrulessets-preview.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/defaultAction": {
-                  "state": "Covered"
-                },
-                "properties/ipRules/action": {
-                  "state": "Covered"
-                },
-                "properties/ipRules/ipMask": {
-                  "state": "Covered"
-                },
-                "properties/trustedServiceAccessEnabled": {
-                  "state": "Covered"
-                },
-                "properties/virtualNetworkRules/ignoreMissingVnetServiceEndpoint": {
-                  "state": "Covered"
-                },
-                "properties/virtualNetworkRules/subnet/id": {
-                  "state": "Covered"
-                },
-                "systemData/createdAt": {
-                  "state": "Ignored"
-                },
-                "systemData/createdBy": {
-                  "state": "Ignored"
-                },
-                "systemData/createdByType": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedAt": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedBy": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedByType": {
-                  "state": "Ignored"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
-          "2021-06-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-06-01-preview/networkrulessets-preview.json",
-            "model": {
-              "name": "NetworkRuleSet",
-              "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/preview/2021-06-01-preview/networkrulessets-preview.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/defaultAction": {
-                  "state": "Covered"
-                },
-                "properties/ipRules/action": {
-                  "state": "Covered"
-                },
-                "properties/ipRules/ipMask": {
-                  "state": "Covered"
-                },
-                "properties/publicNetworkAccess": {
-                  "state": "Uncovered"
-                },
-                "properties/trustedServiceAccessEnabled": {
-                  "state": "Covered"
-                },
-                "properties/virtualNetworkRules/ignoreMissingVnetServiceEndpoint": {
-                  "state": "Covered"
-                },
-                "properties/virtualNetworkRules/subnet/id": {
-                  "state": "Covered"
-                },
-                "systemData/createdAt": {
-                  "state": "Ignored"
-                },
-                "systemData/createdBy": {
-                  "state": "Ignored"
-                },
-                "systemData/createdByType": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedAt": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedBy": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedByType": {
-                  "state": "Ignored"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
           "2021-11-01": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "eventhub/resource-manager/Microsoft.EventHub/stable/2021-11-01/networkrulessets-preview.json",
             "model": {
               "name": "NetworkRuleSet",
@@ -75381,6 +74031,11 @@
             "is_preview": false,
             "is_active": true,
             "swagger_rel_path": "frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json"
+          },
+          "2021-06-01": {
+            "is_preview": false,
+            "is_active": false,
+            "swagger_rel_path": "frontdoor/resource-manager/Microsoft.Network/stable/2021-06-01/frontdoor.json"
           }
         },
         "PUT": {
@@ -75763,6 +74418,389 @@
                 }
               }
             }
+          },
+          "2021-06-01": {
+            "is_preview": false,
+            "is_active": false,
+            "swagger_rel_path": "frontdoor/resource-manager/Microsoft.Network/stable/2021-06-01/frontdoor.json",
+            "model": {
+              "name": "FrontDoor",
+              "swagger_rel_path": "frontdoor/resource-manager/Microsoft.Network/stable/2021-06-01/frontdoor.json",
+              "properties": {
+                "id": {
+                  "state": "Ignored"
+                },
+                "location": {
+                  "state": "Covered"
+                },
+                "name": {
+                  "state": "Ignored"
+                },
+                "properties/backendPools/id": {
+                  "state": "Covered"
+                },
+                "properties/backendPools/name": {
+                  "state": "Covered"
+                },
+                "properties/backendPools/properties/backends/address": {
+                  "state": "Covered"
+                },
+                "properties/backendPools/properties/backends/backendHostHeader": {
+                  "state": "Covered"
+                },
+                "properties/backendPools/properties/backends/enabledState": {
+                  "state": "Covered"
+                },
+                "properties/backendPools/properties/backends/httpPort": {
+                  "state": "Covered"
+                },
+                "properties/backendPools/properties/backends/httpsPort": {
+                  "state": "Covered"
+                },
+                "properties/backendPools/properties/backends/priority": {
+                  "state": "Covered"
+                },
+                "properties/backendPools/properties/backends/privateEndpointStatus": {
+                  "state": "Ignored"
+                },
+                "properties/backendPools/properties/backends/privateLinkAlias": {
+                  "state": "Uncovered"
+                },
+                "properties/backendPools/properties/backends/privateLinkApprovalMessage": {
+                  "state": "Uncovered"
+                },
+                "properties/backendPools/properties/backends/privateLinkLocation": {
+                  "state": "Uncovered"
+                },
+                "properties/backendPools/properties/backends/privateLinkResourceId": {
+                  "state": "Uncovered"
+                },
+                "properties/backendPools/properties/backends/weight": {
+                  "state": "Covered"
+                },
+                "properties/backendPools/properties/healthProbeSettings/id": {
+                  "state": "Covered"
+                },
+                "properties/backendPools/properties/loadBalancingSettings/id": {
+                  "state": "Covered"
+                },
+                "properties/backendPools/properties/resourceState": {
+                  "state": "Ignored"
+                },
+                "properties/backendPools/type": {
+                  "state": "Ignored"
+                },
+                "properties/backendPoolsSettings/enforceCertificateNameCheck": {
+                  "state": "Covered"
+                },
+                "properties/backendPoolsSettings/sendRecvTimeoutSeconds": {
+                  "state": "Covered"
+                },
+                "properties/cname": {
+                  "state": "Ignored"
+                },
+                "properties/enabledState": {
+                  "state": "Covered"
+                },
+                "properties/extendedProperties": {
+                  "state": "Ignored"
+                },
+                "properties/friendlyName": {
+                  "state": "Covered"
+                },
+                "properties/frontdoorId": {
+                  "state": "Ignored"
+                },
+                "properties/frontendEndpoints/id": {
+                  "state": "Covered"
+                },
+                "properties/frontendEndpoints/name": {
+                  "state": "Covered"
+                },
+                "properties/frontendEndpoints/properties/customHttpsConfiguration/certificateSource": {
+                  "state": "Ignored"
+                },
+                "properties/frontendEndpoints/properties/customHttpsConfiguration/frontDoorCertificateSourceParameters/certificateType": {
+                  "state": "Ignored"
+                },
+                "properties/frontendEndpoints/properties/customHttpsConfiguration/keyVaultCertificateSourceParameters/secretName": {
+                  "state": "Ignored"
+                },
+                "properties/frontendEndpoints/properties/customHttpsConfiguration/keyVaultCertificateSourceParameters/secretVersion": {
+                  "state": "Ignored"
+                },
+                "properties/frontendEndpoints/properties/customHttpsConfiguration/keyVaultCertificateSourceParameters/vault/id": {
+                  "state": "Ignored"
+                },
+                "properties/frontendEndpoints/properties/customHttpsConfiguration/minimumTlsVersion": {
+                  "state": "Ignored"
+                },
+                "properties/frontendEndpoints/properties/customHttpsConfiguration/protocolType": {
+                  "state": "Ignored"
+                },
+                "properties/frontendEndpoints/properties/customHttpsProvisioningState": {
+                  "state": "Ignored"
+                },
+                "properties/frontendEndpoints/properties/customHttpsProvisioningSubstate": {
+                  "state": "Ignored"
+                },
+                "properties/frontendEndpoints/properties/hostName": {
+                  "state": "Covered"
+                },
+                "properties/frontendEndpoints/properties/resourceState": {
+                  "state": "Ignored"
+                },
+                "properties/frontendEndpoints/properties/sessionAffinityEnabledState": {
+                  "state": "Covered"
+                },
+                "properties/frontendEndpoints/properties/sessionAffinityTtlSeconds": {
+                  "state": "Covered"
+                },
+                "properties/frontendEndpoints/properties/webApplicationFirewallPolicyLink/id": {
+                  "state": "Covered"
+                },
+                "properties/frontendEndpoints/type": {
+                  "state": "Ignored"
+                },
+                "properties/healthProbeSettings/id": {
+                  "state": "Covered"
+                },
+                "properties/healthProbeSettings/name": {
+                  "state": "Covered"
+                },
+                "properties/healthProbeSettings/properties/enabledState": {
+                  "state": "Covered"
+                },
+                "properties/healthProbeSettings/properties/healthProbeMethod": {
+                  "state": "Covered"
+                },
+                "properties/healthProbeSettings/properties/intervalInSeconds": {
+                  "state": "Covered"
+                },
+                "properties/healthProbeSettings/properties/path": {
+                  "state": "Covered"
+                },
+                "properties/healthProbeSettings/properties/protocol": {
+                  "state": "Covered"
+                },
+                "properties/healthProbeSettings/properties/resourceState": {
+                  "state": "Ignored"
+                },
+                "properties/healthProbeSettings/type": {
+                  "state": "Ignored"
+                },
+                "properties/loadBalancingSettings/id": {
+                  "state": "Covered"
+                },
+                "properties/loadBalancingSettings/name": {
+                  "state": "Covered"
+                },
+                "properties/loadBalancingSettings/properties/additionalLatencyMilliseconds": {
+                  "state": "Covered"
+                },
+                "properties/loadBalancingSettings/properties/resourceState": {
+                  "state": "Ignored"
+                },
+                "properties/loadBalancingSettings/properties/sampleSize": {
+                  "state": "Covered"
+                },
+                "properties/loadBalancingSettings/properties/successfulSamplesRequired": {
+                  "state": "Covered"
+                },
+                "properties/loadBalancingSettings/type": {
+                  "state": "Ignored"
+                },
+                "properties/provisioningState": {
+                  "state": "Ignored"
+                },
+                "properties/resourceState": {
+                  "state": "Ignored"
+                },
+                "properties/routingRules/id": {
+                  "state": "Covered"
+                },
+                "properties/routingRules/name": {
+                  "state": "Covered"
+                },
+                "properties/routingRules/properties/acceptedProtocols": {
+                  "state": "Covered"
+                },
+                "properties/routingRules/properties/enabledState": {
+                  "state": "Covered"
+                },
+                "properties/routingRules/properties/frontendEndpoints/id": {
+                  "state": "Covered"
+                },
+                "properties/routingRules/properties/patternsToMatch": {
+                  "state": "Covered"
+                },
+                "properties/routingRules/properties/resourceState": {
+                  "state": "Ignored"
+                },
+                "properties/routingRules/properties/routeConfiguration{#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration}/@odata.type": {
+                  "state": "Uncovered"
+                },
+                "properties/routingRules/properties/routeConfiguration{#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration}/backendPool/id": {
+                  "state": "Covered"
+                },
+                "properties/routingRules/properties/routeConfiguration{#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration}/cacheConfiguration/cacheDuration": {
+                  "state": "Covered"
+                },
+                "properties/routingRules/properties/routeConfiguration{#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration}/cacheConfiguration/dynamicCompression": {
+                  "state": "Covered"
+                },
+                "properties/routingRules/properties/routeConfiguration{#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration}/cacheConfiguration/queryParameterStripDirective": {
+                  "state": "Covered"
+                },
+                "properties/routingRules/properties/routeConfiguration{#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration}/cacheConfiguration/queryParameters": {
+                  "state": "Covered"
+                },
+                "properties/routingRules/properties/routeConfiguration{#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration}/customForwardingPath": {
+                  "state": "Covered"
+                },
+                "properties/routingRules/properties/routeConfiguration{#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration}/forwardingProtocol": {
+                  "state": "Covered"
+                },
+                "properties/routingRules/properties/routeConfiguration{#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration}/@odata.type": {
+                  "state": "Uncovered"
+                },
+                "properties/routingRules/properties/routeConfiguration{#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration}/customFragment": {
+                  "state": "Covered"
+                },
+                "properties/routingRules/properties/routeConfiguration{#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration}/customHost": {
+                  "state": "Covered"
+                },
+                "properties/routingRules/properties/routeConfiguration{#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration}/customPath": {
+                  "state": "Covered"
+                },
+                "properties/routingRules/properties/routeConfiguration{#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration}/customQueryString": {
+                  "state": "Covered"
+                },
+                "properties/routingRules/properties/routeConfiguration{#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration}/redirectProtocol": {
+                  "state": "Covered"
+                },
+                "properties/routingRules/properties/routeConfiguration{#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration}/redirectType": {
+                  "state": "Covered"
+                },
+                "properties/routingRules/properties/rulesEngine/id": {
+                  "state": "Covered"
+                },
+                "properties/routingRules/properties/webApplicationFirewallPolicyLink/id": {
+                  "state": "Uncovered"
+                },
+                "properties/routingRules/type": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/id": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/name": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/properties/resourceState": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/properties/rules/action/requestHeaderActions/headerActionType": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/properties/rules/action/requestHeaderActions/headerName": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/properties/rules/action/requestHeaderActions/value": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/properties/rules/action/responseHeaderActions/headerActionType": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/properties/rules/action/responseHeaderActions/headerName": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/properties/rules/action/responseHeaderActions/value": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/properties/rules/action/routeConfigurationOverride{#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration}/@odata.type": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/properties/rules/action/routeConfigurationOverride{#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration}/backendPool/id": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/properties/rules/action/routeConfigurationOverride{#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration}/cacheConfiguration/cacheDuration": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/properties/rules/action/routeConfigurationOverride{#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration}/cacheConfiguration/dynamicCompression": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/properties/rules/action/routeConfigurationOverride{#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration}/cacheConfiguration/queryParameterStripDirective": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/properties/rules/action/routeConfigurationOverride{#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration}/cacheConfiguration/queryParameters": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/properties/rules/action/routeConfigurationOverride{#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration}/customForwardingPath": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/properties/rules/action/routeConfigurationOverride{#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration}/forwardingProtocol": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/properties/rules/action/routeConfigurationOverride{#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration}/@odata.type": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/properties/rules/action/routeConfigurationOverride{#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration}/customFragment": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/properties/rules/action/routeConfigurationOverride{#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration}/customHost": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/properties/rules/action/routeConfigurationOverride{#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration}/customPath": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/properties/rules/action/routeConfigurationOverride{#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration}/customQueryString": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/properties/rules/action/routeConfigurationOverride{#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration}/redirectProtocol": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/properties/rules/action/routeConfigurationOverride{#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration}/redirectType": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/properties/rules/matchConditions/negateCondition": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/properties/rules/matchConditions/rulesEngineMatchValue": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/properties/rules/matchConditions/rulesEngineMatchVariable": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/properties/rules/matchConditions/rulesEngineOperator": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/properties/rules/matchConditions/selector": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/properties/rules/matchConditions/transforms": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/properties/rules/matchProcessingBehavior": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/properties/rules/name": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/properties/rules/priority": {
+                  "state": "Ignored"
+                },
+                "properties/rulesEngines/type": {
+                  "state": "Ignored"
+                },
+                "tags": {
+                  "state": "Covered"
+                },
+                "type": {
+                  "state": "Ignored"
+                }
+              }
+            }
           }
         }
       }
@@ -75774,6 +74812,11 @@
             "is_preview": false,
             "is_active": true,
             "swagger_rel_path": "frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json"
+          },
+          "2021-06-01": {
+            "is_preview": false,
+            "is_active": false,
+            "swagger_rel_path": "frontdoor/resource-manager/Microsoft.Network/stable/2021-06-01/frontdoor.json"
           }
         },
         "PUT": {
@@ -75784,6 +74827,119 @@
             "model": {
               "name": "RulesEngine",
               "swagger_rel_path": "frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json",
+              "properties": {
+                "id": {
+                  "state": "Ignored"
+                },
+                "name": {
+                  "state": "Ignored"
+                },
+                "properties/resourceState": {
+                  "state": "Ignored"
+                },
+                "properties/rules/action/requestHeaderActions/headerActionType": {
+                  "state": "Covered"
+                },
+                "properties/rules/action/requestHeaderActions/headerName": {
+                  "state": "Covered"
+                },
+                "properties/rules/action/requestHeaderActions/value": {
+                  "state": "Covered"
+                },
+                "properties/rules/action/responseHeaderActions/headerActionType": {
+                  "state": "Covered"
+                },
+                "properties/rules/action/responseHeaderActions/headerName": {
+                  "state": "Covered"
+                },
+                "properties/rules/action/responseHeaderActions/value": {
+                  "state": "Covered"
+                },
+                "properties/rules/action/routeConfigurationOverride{#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration}/@odata.type": {
+                  "state": "Uncovered"
+                },
+                "properties/rules/action/routeConfigurationOverride{#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration}/backendPool/id": {
+                  "state": "Uncovered"
+                },
+                "properties/rules/action/routeConfigurationOverride{#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration}/cacheConfiguration/cacheDuration": {
+                  "state": "Uncovered"
+                },
+                "properties/rules/action/routeConfigurationOverride{#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration}/cacheConfiguration/dynamicCompression": {
+                  "state": "Uncovered"
+                },
+                "properties/rules/action/routeConfigurationOverride{#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration}/cacheConfiguration/queryParameterStripDirective": {
+                  "state": "Uncovered"
+                },
+                "properties/rules/action/routeConfigurationOverride{#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration}/cacheConfiguration/queryParameters": {
+                  "state": "Uncovered"
+                },
+                "properties/rules/action/routeConfigurationOverride{#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration}/customForwardingPath": {
+                  "state": "Uncovered"
+                },
+                "properties/rules/action/routeConfigurationOverride{#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration}/forwardingProtocol": {
+                  "state": "Uncovered"
+                },
+                "properties/rules/action/routeConfigurationOverride{#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration}/@odata.type": {
+                  "state": "Uncovered"
+                },
+                "properties/rules/action/routeConfigurationOverride{#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration}/customFragment": {
+                  "state": "Uncovered"
+                },
+                "properties/rules/action/routeConfigurationOverride{#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration}/customHost": {
+                  "state": "Uncovered"
+                },
+                "properties/rules/action/routeConfigurationOverride{#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration}/customPath": {
+                  "state": "Uncovered"
+                },
+                "properties/rules/action/routeConfigurationOverride{#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration}/customQueryString": {
+                  "state": "Uncovered"
+                },
+                "properties/rules/action/routeConfigurationOverride{#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration}/redirectProtocol": {
+                  "state": "Uncovered"
+                },
+                "properties/rules/action/routeConfigurationOverride{#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration}/redirectType": {
+                  "state": "Uncovered"
+                },
+                "properties/rules/matchConditions/negateCondition": {
+                  "state": "Covered"
+                },
+                "properties/rules/matchConditions/rulesEngineMatchValue": {
+                  "state": "Covered"
+                },
+                "properties/rules/matchConditions/rulesEngineMatchVariable": {
+                  "state": "Covered"
+                },
+                "properties/rules/matchConditions/rulesEngineOperator": {
+                  "state": "Covered"
+                },
+                "properties/rules/matchConditions/selector": {
+                  "state": "Covered"
+                },
+                "properties/rules/matchConditions/transforms": {
+                  "state": "Covered"
+                },
+                "properties/rules/matchProcessingBehavior": {
+                  "state": "Uncovered"
+                },
+                "properties/rules/name": {
+                  "state": "Covered"
+                },
+                "properties/rules/priority": {
+                  "state": "Covered"
+                },
+                "type": {
+                  "state": "Ignored"
+                }
+              }
+            }
+          },
+          "2021-06-01": {
+            "is_preview": false,
+            "is_active": false,
+            "swagger_rel_path": "frontdoor/resource-manager/Microsoft.Network/stable/2021-06-01/frontdoor.json",
+            "model": {
+              "name": "RulesEngine",
+              "swagger_rel_path": "frontdoor/resource-manager/Microsoft.Network/stable/2021-06-01/frontdoor.json",
               "properties": {
                 "id": {
                   "state": "Ignored"
@@ -75905,6 +75061,11 @@
             "is_preview": false,
             "is_active": false,
             "swagger_rel_path": "frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json"
+          },
+          "2021-06-01": {
+            "is_preview": false,
+            "is_active": false,
+            "swagger_rel_path": "frontdoor/resource-manager/Microsoft.Network/stable/2021-06-01/webapplicationfirewall.json"
           },
           "2022-05-01": {
             "is_preview": false,
@@ -76111,6 +75272,161 @@
                 },
                 "properties/customRules/rules/ruleType": {
                   "state": "Covered"
+                },
+                "properties/frontendEndpointLinks/id": {
+                  "state": "Ignored"
+                },
+                "properties/managedRules/managedRuleSets/exclusions/matchVariable": {
+                  "state": "Covered"
+                },
+                "properties/managedRules/managedRuleSets/exclusions/selector": {
+                  "state": "Covered"
+                },
+                "properties/managedRules/managedRuleSets/exclusions/selectorMatchOperator": {
+                  "state": "Covered"
+                },
+                "properties/managedRules/managedRuleSets/ruleGroupOverrides/exclusions/matchVariable": {
+                  "state": "Covered"
+                },
+                "properties/managedRules/managedRuleSets/ruleGroupOverrides/exclusions/selector": {
+                  "state": "Covered"
+                },
+                "properties/managedRules/managedRuleSets/ruleGroupOverrides/exclusions/selectorMatchOperator": {
+                  "state": "Covered"
+                },
+                "properties/managedRules/managedRuleSets/ruleGroupOverrides/ruleGroupName": {
+                  "state": "Covered"
+                },
+                "properties/managedRules/managedRuleSets/ruleGroupOverrides/rules/action": {
+                  "state": "Covered"
+                },
+                "properties/managedRules/managedRuleSets/ruleGroupOverrides/rules/enabledState": {
+                  "state": "Covered"
+                },
+                "properties/managedRules/managedRuleSets/ruleGroupOverrides/rules/exclusions/matchVariable": {
+                  "state": "Covered"
+                },
+                "properties/managedRules/managedRuleSets/ruleGroupOverrides/rules/exclusions/selector": {
+                  "state": "Covered"
+                },
+                "properties/managedRules/managedRuleSets/ruleGroupOverrides/rules/exclusions/selectorMatchOperator": {
+                  "state": "Covered"
+                },
+                "properties/managedRules/managedRuleSets/ruleGroupOverrides/rules/ruleId": {
+                  "state": "Covered"
+                },
+                "properties/managedRules/managedRuleSets/ruleSetAction": {
+                  "state": "Uncovered"
+                },
+                "properties/managedRules/managedRuleSets/ruleSetType": {
+                  "state": "Covered"
+                },
+                "properties/managedRules/managedRuleSets/ruleSetVersion": {
+                  "state": "Covered"
+                },
+                "properties/policySettings/customBlockResponseBody": {
+                  "state": "Covered"
+                },
+                "properties/policySettings/customBlockResponseStatusCode": {
+                  "state": "Covered"
+                },
+                "properties/policySettings/enabledState": {
+                  "state": "Covered"
+                },
+                "properties/policySettings/mode": {
+                  "state": "Covered"
+                },
+                "properties/policySettings/redirectUrl": {
+                  "state": "Covered"
+                },
+                "properties/policySettings/requestBodyCheck": {
+                  "state": "Uncovered"
+                },
+                "properties/provisioningState": {
+                  "state": "Ignored"
+                },
+                "properties/resourceState": {
+                  "state": "Ignored"
+                },
+                "properties/routingRuleLinks/id": {
+                  "state": "Ignored"
+                },
+                "properties/securityPolicyLinks/id": {
+                  "state": "Ignored"
+                },
+                "sku/name": {
+                  "state": "Uncovered"
+                },
+                "tags": {
+                  "state": "Covered"
+                },
+                "type": {
+                  "state": "Ignored"
+                }
+              }
+            }
+          },
+          "2021-06-01": {
+            "is_preview": false,
+            "is_active": false,
+            "swagger_rel_path": "frontdoor/resource-manager/Microsoft.Network/stable/2021-06-01/webapplicationfirewall.json",
+            "model": {
+              "name": "WebApplicationFirewallPolicy",
+              "swagger_rel_path": "frontdoor/resource-manager/Microsoft.Network/stable/2021-06-01/webapplicationfirewall.json",
+              "properties": {
+                "etag": {
+                  "state": "Uncovered"
+                },
+                "id": {
+                  "state": "Ignored"
+                },
+                "location": {
+                  "state": "Covered"
+                },
+                "name": {
+                  "state": "Ignored"
+                },
+                "properties/customRules/rules/action": {
+                  "state": "Covered"
+                },
+                "properties/customRules/rules/enabledState": {
+                  "state": "Covered"
+                },
+                "properties/customRules/rules/matchConditions/matchValue": {
+                  "state": "Covered"
+                },
+                "properties/customRules/rules/matchConditions/matchVariable": {
+                  "state": "Covered"
+                },
+                "properties/customRules/rules/matchConditions/negateCondition": {
+                  "state": "Covered"
+                },
+                "properties/customRules/rules/matchConditions/operator": {
+                  "state": "Covered"
+                },
+                "properties/customRules/rules/matchConditions/selector": {
+                  "state": "Covered"
+                },
+                "properties/customRules/rules/matchConditions/transforms": {
+                  "state": "Covered"
+                },
+                "properties/customRules/rules/name": {
+                  "state": "Covered"
+                },
+                "properties/customRules/rules/priority": {
+                  "state": "Covered"
+                },
+                "properties/customRules/rules/rateLimitDurationInMinutes": {
+                  "state": "Covered"
+                },
+                "properties/customRules/rules/rateLimitThreshold": {
+                  "state": "Covered"
+                },
+                "properties/customRules/rules/ruleType": {
+                  "state": "Covered"
+                },
+                "properties/extendedProperties": {
+                  "state": "Ignored"
                 },
                 "properties/frontendEndpointLinks/id": {
                   "state": "Ignored"
@@ -77632,25 +76948,25 @@
                   "state": "Uncovered"
                 },
                 "properties/httpsEndpoints/accessModes": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/httpsEndpoints/destinationPort": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/httpsEndpoints/disableGatewayAuth": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/httpsEndpoints/location": {
                   "state": "Ignored"
                 },
                 "properties/httpsEndpoints/privateIPAddress": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/httpsEndpoints/publicPort": {
                   "state": "Ignored"
                 },
                 "properties/httpsEndpoints/subDomainSuffix": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/installScriptActions/applicationName": {
                   "state": "Ignored"
@@ -77659,7 +76975,7 @@
                   "state": "Covered"
                 },
                 "properties/installScriptActions/parameters": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/installScriptActions/roles": {
                   "state": "Covered"
@@ -77689,16 +77005,16 @@
                   "state": "Ignored"
                 },
                 "properties/uninstallScriptActions/name": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/uninstallScriptActions/parameters": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/uninstallScriptActions/roles": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/uninstallScriptActions/uri": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "tags": {
                   "state": "Uncovered"
@@ -77814,25 +77130,25 @@
                   "state": "Uncovered"
                 },
                 "properties/httpsEndpoints/accessModes": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/httpsEndpoints/destinationPort": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/httpsEndpoints/disableGatewayAuth": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/httpsEndpoints/location": {
                   "state": "Ignored"
                 },
                 "properties/httpsEndpoints/privateIPAddress": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/httpsEndpoints/publicPort": {
                   "state": "Ignored"
                 },
                 "properties/httpsEndpoints/subDomainSuffix": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/installScriptActions/applicationName": {
                   "state": "Ignored"
@@ -77841,7 +77157,7 @@
                   "state": "Covered"
                 },
                 "properties/installScriptActions/parameters": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/installScriptActions/roles": {
                   "state": "Covered"
@@ -77910,16 +77226,16 @@
                   "state": "Ignored"
                 },
                 "properties/uninstallScriptActions/name": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/uninstallScriptActions/parameters": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/uninstallScriptActions/roles": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/uninstallScriptActions/uri": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "systemData/createdAt": {
                   "state": "Ignored"
@@ -81410,6 +80726,12 @@
                 "properties/networkAcls/virtualNetworkRules/id": {
                   "state": "Uncovered"
                 },
+                "properties/privateEndpointConnections/etag": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/id": {
+                  "state": "Ignored"
+                },
                 "properties/privateEndpointConnections/properties/privateEndpoint/id": {
                   "state": "Ignored"
                 },
@@ -81520,6 +80842,12 @@
                 "properties/networkAcls/virtualNetworkRules/id": {
                   "state": "Uncovered"
                 },
+                "properties/privateEndpointConnections/etag": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/id": {
+                  "state": "Ignored"
+                },
                 "properties/privateEndpointConnections/properties/privateEndpoint/id": {
                   "state": "Ignored"
                 },
@@ -81629,6 +80957,12 @@
                 },
                 "properties/networkAcls/virtualNetworkRules/id": {
                   "state": "Uncovered"
+                },
+                "properties/privateEndpointConnections/etag": {
+                  "state": "Ignored"
+                },
+                "properties/privateEndpointConnections/id": {
+                  "state": "Ignored"
                 },
                 "properties/privateEndpointConnections/properties/privateEndpoint/id": {
                   "state": "Ignored"
@@ -85566,6 +84900,260 @@
                 },
                 "tags": {
                   "state": "Covered"
+                },
+                "type": {
+                  "state": "Ignored"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.LOGZ/MONITORS/{}/ACCOUNTS/{}/TAGRULES/{}": {
+      "operations": {
+        "DELETE": {
+          "2020-10-01": {
+            "is_preview": false,
+            "is_active": true,
+            "swagger_rel_path": "logz/resource-manager/Microsoft.Logz/stable/2020-10-01/logz.json"
+          },
+          "2020-10-01-preview": {
+            "is_preview": true,
+            "is_active": false,
+            "swagger_rel_path": "logz/resource-manager/Microsoft.Logz/preview/2020-10-01-preview/logz.json"
+          },
+          "2022-01-01-preview": {
+            "is_preview": true,
+            "is_active": false,
+            "swagger_rel_path": "logz/resource-manager/Microsoft.Logz/preview/2022-01-01-preview/logz.json"
+          }
+        },
+        "PUT": {
+          "2020-10-01": {
+            "is_preview": false,
+            "is_active": true,
+            "swagger_rel_path": "logz/resource-manager/Microsoft.Logz/stable/2020-10-01/logz.json",
+            "model": {
+              "name": "MonitoringTagRules",
+              "swagger_rel_path": "logz/resource-manager/Microsoft.Logz/stable/2020-10-01/logz.json",
+              "properties": {
+                "id": {
+                  "state": "Ignored"
+                },
+                "name": {
+                  "state": "Ignored"
+                },
+                "properties/logRules/filteringTags/action": {
+                  "state": "Covered"
+                },
+                "properties/logRules/filteringTags/name": {
+                  "state": "Covered"
+                },
+                "properties/logRules/filteringTags/value": {
+                  "state": "Covered"
+                },
+                "properties/logRules/sendAadLogs": {
+                  "state": "Covered"
+                },
+                "properties/logRules/sendActivityLogs": {
+                  "state": "Covered"
+                },
+                "properties/logRules/sendSubscriptionLogs": {
+                  "state": "Covered"
+                },
+                "properties/provisioningState": {
+                  "state": "Ignored"
+                },
+                "properties/systemData/createdAt": {
+                  "state": "Ignored"
+                },
+                "properties/systemData/createdBy": {
+                  "state": "Ignored"
+                },
+                "properties/systemData/createdByType": {
+                  "state": "Ignored"
+                },
+                "properties/systemData/lastModifiedAt": {
+                  "state": "Ignored"
+                },
+                "properties/systemData/lastModifiedBy": {
+                  "state": "Ignored"
+                },
+                "properties/systemData/lastModifiedByType": {
+                  "state": "Ignored"
+                },
+                "systemData/createdAt": {
+                  "state": "Ignored"
+                },
+                "systemData/createdBy": {
+                  "state": "Ignored"
+                },
+                "systemData/createdByType": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedAt": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedBy": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedByType": {
+                  "state": "Ignored"
+                },
+                "type": {
+                  "state": "Ignored"
+                }
+              }
+            }
+          },
+          "2020-10-01-preview": {
+            "is_preview": true,
+            "is_active": false,
+            "swagger_rel_path": "logz/resource-manager/Microsoft.Logz/preview/2020-10-01-preview/logz.json",
+            "model": {
+              "name": "MonitoringTagRules",
+              "swagger_rel_path": "logz/resource-manager/Microsoft.Logz/preview/2020-10-01-preview/logz.json",
+              "properties": {
+                "id": {
+                  "state": "Ignored"
+                },
+                "name": {
+                  "state": "Ignored"
+                },
+                "properties/logRules/filteringTags/action": {
+                  "state": "Covered"
+                },
+                "properties/logRules/filteringTags/name": {
+                  "state": "Covered"
+                },
+                "properties/logRules/filteringTags/value": {
+                  "state": "Covered"
+                },
+                "properties/logRules/sendAadLogs": {
+                  "state": "Covered"
+                },
+                "properties/logRules/sendActivityLogs": {
+                  "state": "Covered"
+                },
+                "properties/logRules/sendSubscriptionLogs": {
+                  "state": "Covered"
+                },
+                "properties/provisioningState": {
+                  "state": "Ignored"
+                },
+                "properties/systemData/createdAt": {
+                  "state": "Ignored"
+                },
+                "properties/systemData/createdBy": {
+                  "state": "Ignored"
+                },
+                "properties/systemData/createdByType": {
+                  "state": "Ignored"
+                },
+                "properties/systemData/lastModifiedAt": {
+                  "state": "Ignored"
+                },
+                "properties/systemData/lastModifiedBy": {
+                  "state": "Ignored"
+                },
+                "properties/systemData/lastModifiedByType": {
+                  "state": "Ignored"
+                },
+                "systemData/createdAt": {
+                  "state": "Ignored"
+                },
+                "systemData/createdBy": {
+                  "state": "Ignored"
+                },
+                "systemData/createdByType": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedAt": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedBy": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedByType": {
+                  "state": "Ignored"
+                },
+                "type": {
+                  "state": "Ignored"
+                }
+              }
+            }
+          },
+          "2022-01-01-preview": {
+            "is_preview": true,
+            "is_active": false,
+            "swagger_rel_path": "logz/resource-manager/Microsoft.Logz/preview/2022-01-01-preview/logz.json",
+            "model": {
+              "name": "MonitoringTagRules",
+              "swagger_rel_path": "logz/resource-manager/Microsoft.Logz/preview/2022-01-01-preview/logz.json",
+              "properties": {
+                "id": {
+                  "state": "Ignored"
+                },
+                "name": {
+                  "state": "Ignored"
+                },
+                "properties/logRules/filteringTags/action": {
+                  "state": "Covered"
+                },
+                "properties/logRules/filteringTags/name": {
+                  "state": "Covered"
+                },
+                "properties/logRules/filteringTags/value": {
+                  "state": "Covered"
+                },
+                "properties/logRules/sendAadLogs": {
+                  "state": "Covered"
+                },
+                "properties/logRules/sendActivityLogs": {
+                  "state": "Covered"
+                },
+                "properties/logRules/sendSubscriptionLogs": {
+                  "state": "Covered"
+                },
+                "properties/provisioningState": {
+                  "state": "Ignored"
+                },
+                "properties/systemData/createdAt": {
+                  "state": "Ignored"
+                },
+                "properties/systemData/createdBy": {
+                  "state": "Ignored"
+                },
+                "properties/systemData/createdByType": {
+                  "state": "Ignored"
+                },
+                "properties/systemData/lastModifiedAt": {
+                  "state": "Ignored"
+                },
+                "properties/systemData/lastModifiedBy": {
+                  "state": "Ignored"
+                },
+                "properties/systemData/lastModifiedByType": {
+                  "state": "Ignored"
+                },
+                "systemData/createdAt": {
+                  "state": "Ignored"
+                },
+                "systemData/createdBy": {
+                  "state": "Ignored"
+                },
+                "systemData/createdByType": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedAt": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedBy": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedByType": {
+                  "state": "Ignored"
                 },
                 "type": {
                   "state": "Ignored"
@@ -104005,12 +103593,6 @@
                 "id": {
                   "state": "Ignored"
                 },
-                "identity": {
-                  "state": "Ignored"
-                },
-                "kind": {
-                  "state": "Ignored"
-                },
                 "location": {
                   "state": "Covered"
                 },
@@ -104193,12 +103775,6 @@
                 "id": {
                   "state": "Ignored"
                 },
-                "identity": {
-                  "state": "Ignored"
-                },
-                "kind": {
-                  "state": "Ignored"
-                },
                 "location": {
                   "state": "Covered"
                 },
@@ -104379,12 +103955,6 @@
               "swagger_rel_path": "monitor/resource-manager/Microsoft.Insights/stable/2022-06-01/actionGroups_API.json",
               "properties": {
                 "id": {
-                  "state": "Ignored"
-                },
-                "identity": {
-                  "state": "Ignored"
-                },
-                "kind": {
                   "state": "Ignored"
                 },
                 "location": {
@@ -486358,6 +485928,100 @@
         }
       }
     },
+    "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/QUERYPACKS/{}": {
+      "operations": {
+        "DELETE": {
+          "2019-09-01": {
+            "is_preview": false,
+            "is_active": true,
+            "swagger_rel_path": "operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2019-09-01/QueryPacks.json"
+          },
+          "2019-09-01-preview": {
+            "is_preview": true,
+            "is_active": false,
+            "swagger_rel_path": "operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-09-01-preview/QueryPacks_API.json"
+          }
+        },
+        "PUT": {
+          "2019-09-01": {
+            "is_preview": false,
+            "is_active": true,
+            "swagger_rel_path": "operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2019-09-01/QueryPacks.json",
+            "model": {
+              "name": "LogAnalyticsQueryPack",
+              "swagger_rel_path": "operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2019-09-01/QueryPacks.json",
+              "properties": {
+                "id": {
+                  "state": "Ignored"
+                },
+                "location": {
+                  "state": "Covered"
+                },
+                "name": {
+                  "state": "Ignored"
+                },
+                "properties/provisioningState": {
+                  "state": "Ignored"
+                },
+                "properties/queryPackId": {
+                  "state": "Ignored"
+                },
+                "properties/timeCreated": {
+                  "state": "Ignored"
+                },
+                "properties/timeModified": {
+                  "state": "Ignored"
+                },
+                "tags": {
+                  "state": "Covered"
+                },
+                "type": {
+                  "state": "Ignored"
+                }
+              }
+            }
+          },
+          "2019-09-01-preview": {
+            "is_preview": true,
+            "is_active": false,
+            "swagger_rel_path": "operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-09-01-preview/QueryPacks_API.json",
+            "model": {
+              "name": "LogAnalyticsQueryPack",
+              "swagger_rel_path": "operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-09-01-preview/QueryPacks_API.json",
+              "properties": {
+                "id": {
+                  "state": "Ignored"
+                },
+                "location": {
+                  "state": "Covered"
+                },
+                "name": {
+                  "state": "Ignored"
+                },
+                "properties/provisioningState": {
+                  "state": "Ignored"
+                },
+                "properties/queryPackId": {
+                  "state": "Ignored"
+                },
+                "properties/timeCreated": {
+                  "state": "Ignored"
+                },
+                "properties/timeModified": {
+                  "state": "Ignored"
+                },
+                "tags": {
+                  "state": "Covered"
+                },
+                "type": {
+                  "state": "Ignored"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}": {
       "operations": {
         "DELETE": {
@@ -515849,593 +515513,6 @@
         }
       }
     },
-    "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SOLUTIONS/APPLICATIONDEFINITIONS/{}": {
-      "operations": {
-        "DELETE": {
-          "2019-07-01": {
-            "is_preview": false,
-            "is_active": true,
-            "swagger_rel_path": "resources/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json"
-          },
-          "2020-08-21-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "resources/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json"
-          }
-        },
-        "PUT": {
-          "2019-07-01": {
-            "is_preview": false,
-            "is_active": true,
-            "swagger_rel_path": "resources/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json",
-            "model": {
-              "name": "ApplicationDefinition",
-              "swagger_rel_path": "resources/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "location": {
-                  "state": "Covered"
-                },
-                "managedBy": {
-                  "state": "Uncovered"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/artifacts/name": {
-                  "state": "Uncovered"
-                },
-                "properties/artifacts/type": {
-                  "state": "Uncovered"
-                },
-                "properties/artifacts/uri": {
-                  "state": "Uncovered"
-                },
-                "properties/authorizations/principalId": {
-                  "state": "Covered"
-                },
-                "properties/authorizations/roleDefinitionId": {
-                  "state": "Covered"
-                },
-                "properties/createUiDefinition": {
-                  "state": "Covered"
-                },
-                "properties/deploymentPolicy/deploymentMode": {
-                  "state": "Uncovered"
-                },
-                "properties/description": {
-                  "state": "Covered"
-                },
-                "properties/displayName": {
-                  "state": "Covered"
-                },
-                "properties/isEnabled": {
-                  "state": "Covered"
-                },
-                "properties/lockLevel": {
-                  "state": "Covered"
-                },
-                "properties/lockingPolicy/allowedActions": {
-                  "state": "Uncovered"
-                },
-                "properties/lockingPolicy/allowedDataActions": {
-                  "state": "Uncovered"
-                },
-                "properties/mainTemplate": {
-                  "state": "Covered"
-                },
-                "properties/managementPolicy/mode": {
-                  "state": "Uncovered"
-                },
-                "properties/notificationPolicy/notificationEndpoints/uri": {
-                  "state": "Uncovered"
-                },
-                "properties/packageFileUri": {
-                  "state": "Covered"
-                },
-                "properties/policies/name": {
-                  "state": "Uncovered"
-                },
-                "properties/policies/parameters": {
-                  "state": "Uncovered"
-                },
-                "properties/policies/policyDefinitionId": {
-                  "state": "Uncovered"
-                },
-                "sku/capacity": {
-                  "state": "Uncovered"
-                },
-                "sku/family": {
-                  "state": "Uncovered"
-                },
-                "sku/model": {
-                  "state": "Uncovered"
-                },
-                "sku/name": {
-                  "state": "Uncovered"
-                },
-                "sku/size": {
-                  "state": "Uncovered"
-                },
-                "sku/tier": {
-                  "state": "Uncovered"
-                },
-                "tags": {
-                  "state": "Covered"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
-          "2020-08-21-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "resources/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json",
-            "model": {
-              "name": "ApplicationDefinition",
-              "swagger_rel_path": "resources/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "location": {
-                  "state": "Covered"
-                },
-                "managedBy": {
-                  "state": "Uncovered"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/artifacts/name": {
-                  "state": "Uncovered"
-                },
-                "properties/artifacts/type": {
-                  "state": "Uncovered"
-                },
-                "properties/artifacts/uri": {
-                  "state": "Uncovered"
-                },
-                "properties/authorizations/principalId": {
-                  "state": "Covered"
-                },
-                "properties/authorizations/roleDefinitionId": {
-                  "state": "Covered"
-                },
-                "properties/createUiDefinition": {
-                  "state": "Covered"
-                },
-                "properties/deploymentPolicy/deploymentMode": {
-                  "state": "Uncovered"
-                },
-                "properties/description": {
-                  "state": "Covered"
-                },
-                "properties/displayName": {
-                  "state": "Covered"
-                },
-                "properties/isEnabled": {
-                  "state": "Covered"
-                },
-                "properties/lockLevel": {
-                  "state": "Covered"
-                },
-                "properties/lockingPolicy/allowedActions": {
-                  "state": "Uncovered"
-                },
-                "properties/lockingPolicy/allowedDataActions": {
-                  "state": "Uncovered"
-                },
-                "properties/mainTemplate": {
-                  "state": "Covered"
-                },
-                "properties/managementPolicy/mode": {
-                  "state": "Uncovered"
-                },
-                "properties/notificationPolicy/notificationEndpoints/uri": {
-                  "state": "Uncovered"
-                },
-                "properties/packageFileUri": {
-                  "state": "Covered"
-                },
-                "properties/policies/name": {
-                  "state": "Uncovered"
-                },
-                "properties/policies/parameters": {
-                  "state": "Uncovered"
-                },
-                "properties/policies/policyDefinitionId": {
-                  "state": "Uncovered"
-                },
-                "properties/storageAccountId": {
-                  "state": "Uncovered"
-                },
-                "sku/capacity": {
-                  "state": "Uncovered"
-                },
-                "sku/family": {
-                  "state": "Uncovered"
-                },
-                "sku/model": {
-                  "state": "Uncovered"
-                },
-                "sku/name": {
-                  "state": "Uncovered"
-                },
-                "sku/size": {
-                  "state": "Uncovered"
-                },
-                "sku/tier": {
-                  "state": "Uncovered"
-                },
-                "tags": {
-                  "state": "Covered"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SOLUTIONS/APPLICATIONS/{}": {
-      "operations": {
-        "DELETE": {
-          "2019-07-01": {
-            "is_preview": false,
-            "is_active": true,
-            "swagger_rel_path": "resources/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json"
-          },
-          "2020-08-21-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "resources/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json"
-          }
-        },
-        "PUT": {
-          "2019-07-01": {
-            "is_preview": false,
-            "is_active": true,
-            "swagger_rel_path": "resources/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json",
-            "model": {
-              "name": "Application",
-              "swagger_rel_path": "resources/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "identity/principalId": {
-                  "state": "Ignored"
-                },
-                "identity/tenantId": {
-                  "state": "Ignored"
-                },
-                "identity/type": {
-                  "state": "Uncovered"
-                },
-                "identity/userAssignedIdentities": {
-                  "state": "Uncovered"
-                },
-                "kind": {
-                  "state": "Covered"
-                },
-                "location": {
-                  "state": "Covered"
-                },
-                "managedBy": {
-                  "state": "Uncovered"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "plan/name": {
-                  "state": "Covered"
-                },
-                "plan/product": {
-                  "state": "Covered"
-                },
-                "plan/promotionCode": {
-                  "state": "Covered"
-                },
-                "plan/publisher": {
-                  "state": "Covered"
-                },
-                "plan/version": {
-                  "state": "Covered"
-                },
-                "properties/applicationDefinitionId": {
-                  "state": "Covered"
-                },
-                "properties/artifacts/name": {
-                  "state": "Ignored"
-                },
-                "properties/artifacts/type": {
-                  "state": "Ignored"
-                },
-                "properties/artifacts/uri": {
-                  "state": "Ignored"
-                },
-                "properties/authorizations/principalId": {
-                  "state": "Ignored"
-                },
-                "properties/authorizations/roleDefinitionId": {
-                  "state": "Ignored"
-                },
-                "properties/billingDetails/resourceUsageId": {
-                  "state": "Ignored"
-                },
-                "properties/createdBy/applicationId": {
-                  "state": "Ignored"
-                },
-                "properties/createdBy/oid": {
-                  "state": "Ignored"
-                },
-                "properties/createdBy/puid": {
-                  "state": "Ignored"
-                },
-                "properties/customerSupport/contactName": {
-                  "state": "Ignored"
-                },
-                "properties/customerSupport/email": {
-                  "state": "Ignored"
-                },
-                "properties/customerSupport/phone": {
-                  "state": "Ignored"
-                },
-                "properties/jitAccessPolicy/jitAccessEnabled": {
-                  "state": "Uncovered"
-                },
-                "properties/jitAccessPolicy/jitApprovalMode": {
-                  "state": "Uncovered"
-                },
-                "properties/jitAccessPolicy/jitApprovers/displayName": {
-                  "state": "Uncovered"
-                },
-                "properties/jitAccessPolicy/jitApprovers/id": {
-                  "state": "Uncovered"
-                },
-                "properties/jitAccessPolicy/jitApprovers/type": {
-                  "state": "Uncovered"
-                },
-                "properties/jitAccessPolicy/maximumJitAccessDuration": {
-                  "state": "Uncovered"
-                },
-                "properties/managedResourceGroupId": {
-                  "state": "Covered"
-                },
-                "properties/managementMode": {
-                  "state": "Ignored"
-                },
-                "properties/outputs": {
-                  "state": "Ignored"
-                },
-                "properties/parameters": {
-                  "state": "Covered"
-                },
-                "properties/provisioningState": {
-                  "state": "Ignored"
-                },
-                "properties/publisherTenantId": {
-                  "state": "Ignored"
-                },
-                "properties/supportUrls/governmentCloud": {
-                  "state": "Ignored"
-                },
-                "properties/supportUrls/publicAzure": {
-                  "state": "Ignored"
-                },
-                "properties/updatedBy/applicationId": {
-                  "state": "Ignored"
-                },
-                "properties/updatedBy/oid": {
-                  "state": "Ignored"
-                },
-                "properties/updatedBy/puid": {
-                  "state": "Ignored"
-                },
-                "sku/capacity": {
-                  "state": "Uncovered"
-                },
-                "sku/family": {
-                  "state": "Uncovered"
-                },
-                "sku/model": {
-                  "state": "Uncovered"
-                },
-                "sku/name": {
-                  "state": "Uncovered"
-                },
-                "sku/size": {
-                  "state": "Uncovered"
-                },
-                "sku/tier": {
-                  "state": "Uncovered"
-                },
-                "tags": {
-                  "state": "Covered"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
-          "2020-08-21-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "resources/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json",
-            "model": {
-              "name": "Application",
-              "swagger_rel_path": "resources/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "identity/principalId": {
-                  "state": "Ignored"
-                },
-                "identity/tenantId": {
-                  "state": "Ignored"
-                },
-                "identity/type": {
-                  "state": "Uncovered"
-                },
-                "identity/userAssignedIdentities": {
-                  "state": "Uncovered"
-                },
-                "kind": {
-                  "state": "Covered"
-                },
-                "location": {
-                  "state": "Covered"
-                },
-                "managedBy": {
-                  "state": "Uncovered"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "plan/name": {
-                  "state": "Covered"
-                },
-                "plan/product": {
-                  "state": "Covered"
-                },
-                "plan/promotionCode": {
-                  "state": "Covered"
-                },
-                "plan/publisher": {
-                  "state": "Covered"
-                },
-                "plan/version": {
-                  "state": "Covered"
-                },
-                "properties/applicationDefinitionId": {
-                  "state": "Covered"
-                },
-                "properties/artifacts/name": {
-                  "state": "Ignored"
-                },
-                "properties/artifacts/type": {
-                  "state": "Ignored"
-                },
-                "properties/artifacts/uri": {
-                  "state": "Ignored"
-                },
-                "properties/authorizations/principalId": {
-                  "state": "Ignored"
-                },
-                "properties/authorizations/roleDefinitionId": {
-                  "state": "Ignored"
-                },
-                "properties/billingDetails/resourceUsageId": {
-                  "state": "Ignored"
-                },
-                "properties/createdBy/applicationId": {
-                  "state": "Ignored"
-                },
-                "properties/createdBy/oid": {
-                  "state": "Ignored"
-                },
-                "properties/createdBy/puid": {
-                  "state": "Ignored"
-                },
-                "properties/customerSupport/contactName": {
-                  "state": "Ignored"
-                },
-                "properties/customerSupport/email": {
-                  "state": "Ignored"
-                },
-                "properties/customerSupport/phone": {
-                  "state": "Ignored"
-                },
-                "properties/jitAccessPolicy/jitAccessEnabled": {
-                  "state": "Uncovered"
-                },
-                "properties/jitAccessPolicy/jitApprovalMode": {
-                  "state": "Uncovered"
-                },
-                "properties/jitAccessPolicy/jitApprovers/displayName": {
-                  "state": "Uncovered"
-                },
-                "properties/jitAccessPolicy/jitApprovers/id": {
-                  "state": "Uncovered"
-                },
-                "properties/jitAccessPolicy/jitApprovers/type": {
-                  "state": "Uncovered"
-                },
-                "properties/jitAccessPolicy/maximumJitAccessDuration": {
-                  "state": "Uncovered"
-                },
-                "properties/managedResourceGroupId": {
-                  "state": "Covered"
-                },
-                "properties/managementMode": {
-                  "state": "Ignored"
-                },
-                "properties/outputs": {
-                  "state": "Ignored"
-                },
-                "properties/parameters": {
-                  "state": "Covered"
-                },
-                "properties/provisioningState": {
-                  "state": "Ignored"
-                },
-                "properties/publisherTenantId": {
-                  "state": "Ignored"
-                },
-                "properties/supportUrls/governmentCloud": {
-                  "state": "Ignored"
-                },
-                "properties/supportUrls/publicAzure": {
-                  "state": "Ignored"
-                },
-                "properties/updatedBy/applicationId": {
-                  "state": "Ignored"
-                },
-                "properties/updatedBy/oid": {
-                  "state": "Ignored"
-                },
-                "properties/updatedBy/puid": {
-                  "state": "Ignored"
-                },
-                "sku/capacity": {
-                  "state": "Uncovered"
-                },
-                "sku/family": {
-                  "state": "Uncovered"
-                },
-                "sku/model": {
-                  "state": "Uncovered"
-                },
-                "sku/name": {
-                  "state": "Uncovered"
-                },
-                "sku/size": {
-                  "state": "Uncovered"
-                },
-                "sku/tier": {
-                  "state": "Uncovered"
-                },
-                "tags": {
-                  "state": "Covered"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/LOCKS/{}": {
       "operations": {
         "DELETE": {
@@ -536488,6 +535565,11 @@
             "is_preview": true,
             "is_active": false,
             "swagger_rel_path": "servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/preview/2022-02-01-preview/managedcluster.json"
+          },
+          "2022-06-01-preview": {
+            "is_preview": true,
+            "is_active": false,
+            "swagger_rel_path": "servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/preview/2022-06-01-preview/managedcluster.json"
           }
         },
         "PUT": {
@@ -537783,6 +536865,245 @@
                 }
               }
             }
+          },
+          "2022-06-01-preview": {
+            "is_preview": true,
+            "is_active": false,
+            "swagger_rel_path": "servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/preview/2022-06-01-preview/managedcluster.json",
+            "model": {
+              "name": "ManagedCluster",
+              "swagger_rel_path": "servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/preview/2022-06-01-preview/managedcluster.json",
+              "properties": {
+                "etag": {
+                  "state": "Ignored"
+                },
+                "id": {
+                  "state": "Ignored"
+                },
+                "location": {
+                  "state": "Covered"
+                },
+                "name": {
+                  "state": "Ignored"
+                },
+                "properties/addonFeatures": {
+                  "state": "Covered"
+                },
+                "properties/adminPassword": {
+                  "state": "Covered"
+                },
+                "properties/adminUserName": {
+                  "state": "Covered"
+                },
+                "properties/allowRdpAccess": {
+                  "state": "Uncovered"
+                },
+                "properties/applicationTypeVersionsCleanupPolicy/maxUnusedVersionsToKeep": {
+                  "state": "Uncovered"
+                },
+                "properties/auxiliarySubnets/enableIpv6": {
+                  "state": "Uncovered"
+                },
+                "properties/auxiliarySubnets/name": {
+                  "state": "Uncovered"
+                },
+                "properties/auxiliarySubnets/networkSecurityGroupId": {
+                  "state": "Uncovered"
+                },
+                "properties/auxiliarySubnets/privateEndpointNetworkPolicies": {
+                  "state": "Uncovered"
+                },
+                "properties/auxiliarySubnets/privateLinkServiceNetworkPolicies": {
+                  "state": "Uncovered"
+                },
+                "properties/azureActiveDirectory/clientApplication": {
+                  "state": "Covered"
+                },
+                "properties/azureActiveDirectory/clusterApplication": {
+                  "state": "Covered"
+                },
+                "properties/azureActiveDirectory/tenantId": {
+                  "state": "Covered"
+                },
+                "properties/clientConnectionPort": {
+                  "state": "Covered"
+                },
+                "properties/clients/commonName": {
+                  "state": "Covered"
+                },
+                "properties/clients/isAdmin": {
+                  "state": "Covered"
+                },
+                "properties/clients/issuerThumbprint": {
+                  "state": "Uncovered"
+                },
+                "properties/clients/thumbprint": {
+                  "state": "Covered"
+                },
+                "properties/clusterCertificateThumbprints": {
+                  "state": "Ignored"
+                },
+                "properties/clusterCodeVersion": {
+                  "state": "Uncovered"
+                },
+                "properties/clusterId": {
+                  "state": "Ignored"
+                },
+                "properties/clusterState": {
+                  "state": "Ignored"
+                },
+                "properties/clusterUpgradeCadence": {
+                  "state": "Covered"
+                },
+                "properties/clusterUpgradeMode": {
+                  "state": "Uncovered"
+                },
+                "properties/dnsName": {
+                  "state": "Covered"
+                },
+                "properties/enableAutoOSUpgrade": {
+                  "state": "Uncovered"
+                },
+                "properties/enableIpv6": {
+                  "state": "Uncovered"
+                },
+                "properties/enableServicePublicIP": {
+                  "state": "Uncovered"
+                },
+                "properties/fabricSettings/name": {
+                  "state": "Covered"
+                },
+                "properties/fabricSettings/parameters/name": {
+                  "state": "Covered"
+                },
+                "properties/fabricSettings/parameters/value": {
+                  "state": "Covered"
+                },
+                "properties/fqdn": {
+                  "state": "Ignored"
+                },
+                "properties/httpGatewayConnectionPort": {
+                  "state": "Covered"
+                },
+                "properties/ipTags/ipTagType": {
+                  "state": "Uncovered"
+                },
+                "properties/ipTags/tag": {
+                  "state": "Uncovered"
+                },
+                "properties/ipv4Address": {
+                  "state": "Ignored"
+                },
+                "properties/ipv6Address": {
+                  "state": "Ignored"
+                },
+                "properties/loadBalancingRules/backendPort": {
+                  "state": "Covered"
+                },
+                "properties/loadBalancingRules/frontendPort": {
+                  "state": "Covered"
+                },
+                "properties/loadBalancingRules/loadDistribution": {
+                  "state": "Uncovered"
+                },
+                "properties/loadBalancingRules/probePort": {
+                  "state": "Uncovered"
+                },
+                "properties/loadBalancingRules/probeProtocol": {
+                  "state": "Covered"
+                },
+                "properties/loadBalancingRules/probeRequestPath": {
+                  "state": "Covered"
+                },
+                "properties/loadBalancingRules/protocol": {
+                  "state": "Covered"
+                },
+                "properties/networkSecurityRules/access": {
+                  "state": "Covered"
+                },
+                "properties/networkSecurityRules/description": {
+                  "state": "Uncovered"
+                },
+                "properties/networkSecurityRules/destinationAddressPrefix": {
+                  "state": "Uncovered"
+                },
+                "properties/networkSecurityRules/destinationAddressPrefixes": {
+                  "state": "Covered"
+                },
+                "properties/networkSecurityRules/destinationPortRange": {
+                  "state": "Uncovered"
+                },
+                "properties/networkSecurityRules/destinationPortRanges": {
+                  "state": "Covered"
+                },
+                "properties/networkSecurityRules/direction": {
+                  "state": "Covered"
+                },
+                "properties/networkSecurityRules/name": {
+                  "state": "Covered"
+                },
+                "properties/networkSecurityRules/priority": {
+                  "state": "Covered"
+                },
+                "properties/networkSecurityRules/protocol": {
+                  "state": "Covered"
+                },
+                "properties/networkSecurityRules/sourceAddressPrefix": {
+                  "state": "Uncovered"
+                },
+                "properties/networkSecurityRules/sourceAddressPrefixes": {
+                  "state": "Covered"
+                },
+                "properties/networkSecurityRules/sourcePortRange": {
+                  "state": "Uncovered"
+                },
+                "properties/networkSecurityRules/sourcePortRanges": {
+                  "state": "Covered"
+                },
+                "properties/provisioningState": {
+                  "state": "Ignored"
+                },
+                "properties/serviceEndpoints/locations": {
+                  "state": "Uncovered"
+                },
+                "properties/serviceEndpoints/service": {
+                  "state": "Uncovered"
+                },
+                "properties/subnetId": {
+                  "state": "Uncovered"
+                },
+                "properties/zonalResiliency": {
+                  "state": "Uncovered"
+                },
+                "sku/name": {
+                  "state": "Covered"
+                },
+                "systemData/createdAt": {
+                  "state": "Ignored"
+                },
+                "systemData/createdBy": {
+                  "state": "Ignored"
+                },
+                "systemData/createdByType": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedAt": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedBy": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedByType": {
+                  "state": "Ignored"
+                },
+                "tags": {
+                  "state": "Covered"
+                },
+                "type": {
+                  "state": "Ignored"
+                }
+              }
+            }
           }
         }
       }
@@ -537819,6 +537140,11 @@
             "is_preview": true,
             "is_active": false,
             "swagger_rel_path": "servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/preview/2022-02-01-preview/nodetype.json"
+          },
+          "2022-06-01-preview": {
+            "is_preview": true,
+            "is_active": false,
+            "swagger_rel_path": "servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/preview/2022-06-01-preview/nodetype.json"
           }
         },
         "PUT": {
@@ -539018,6 +538344,254 @@
                 }
               }
             }
+          },
+          "2022-06-01-preview": {
+            "is_preview": true,
+            "is_active": false,
+            "swagger_rel_path": "servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/preview/2022-06-01-preview/nodetype.json",
+            "model": {
+              "name": "NodeType",
+              "swagger_rel_path": "servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/preview/2022-06-01-preview/nodetype.json",
+              "properties": {
+                "id": {
+                  "state": "Ignored"
+                },
+                "name": {
+                  "state": "Ignored"
+                },
+                "properties/additionalDataDisks/diskLetter": {
+                  "state": "Uncovered"
+                },
+                "properties/additionalDataDisks/diskSizeGB": {
+                  "state": "Uncovered"
+                },
+                "properties/additionalDataDisks/diskType": {
+                  "state": "Uncovered"
+                },
+                "properties/additionalDataDisks/lun": {
+                  "state": "Uncovered"
+                },
+                "properties/applicationPorts/endPort": {
+                  "state": "Covered"
+                },
+                "properties/applicationPorts/startPort": {
+                  "state": "Covered"
+                },
+                "properties/capacities": {
+                  "state": "Covered"
+                },
+                "properties/dataDiskLetter": {
+                  "state": "Uncovered"
+                },
+                "properties/dataDiskSizeGB": {
+                  "state": "Covered"
+                },
+                "properties/dataDiskType": {
+                  "state": "Covered"
+                },
+                "properties/enableAcceleratedNetworking": {
+                  "state": "Uncovered"
+                },
+                "properties/enableEncryptionAtHost": {
+                  "state": "Uncovered"
+                },
+                "properties/enableOverProvisioning": {
+                  "state": "Uncovered"
+                },
+                "properties/ephemeralPorts/endPort": {
+                  "state": "Covered"
+                },
+                "properties/ephemeralPorts/startPort": {
+                  "state": "Covered"
+                },
+                "properties/evictionPolicy": {
+                  "state": "Uncovered"
+                },
+                "properties/frontendConfigurations/ipAddressType": {
+                  "state": "Uncovered"
+                },
+                "properties/frontendConfigurations/loadBalancerBackendAddressPoolId": {
+                  "state": "Uncovered"
+                },
+                "properties/frontendConfigurations/loadBalancerInboundNatPoolId": {
+                  "state": "Uncovered"
+                },
+                "properties/hostGroupId": {
+                  "state": "Uncovered"
+                },
+                "properties/isPrimary": {
+                  "state": "Covered"
+                },
+                "properties/isSpotVM": {
+                  "state": "Uncovered"
+                },
+                "properties/isStateless": {
+                  "state": "Covered"
+                },
+                "properties/multiplePlacementGroups": {
+                  "state": "Covered"
+                },
+                "properties/networkSecurityRules/access": {
+                  "state": "Uncovered"
+                },
+                "properties/networkSecurityRules/description": {
+                  "state": "Uncovered"
+                },
+                "properties/networkSecurityRules/destinationAddressPrefix": {
+                  "state": "Uncovered"
+                },
+                "properties/networkSecurityRules/destinationAddressPrefixes": {
+                  "state": "Uncovered"
+                },
+                "properties/networkSecurityRules/destinationPortRange": {
+                  "state": "Uncovered"
+                },
+                "properties/networkSecurityRules/destinationPortRanges": {
+                  "state": "Uncovered"
+                },
+                "properties/networkSecurityRules/direction": {
+                  "state": "Uncovered"
+                },
+                "properties/networkSecurityRules/name": {
+                  "state": "Uncovered"
+                },
+                "properties/networkSecurityRules/priority": {
+                  "state": "Uncovered"
+                },
+                "properties/networkSecurityRules/protocol": {
+                  "state": "Uncovered"
+                },
+                "properties/networkSecurityRules/sourceAddressPrefix": {
+                  "state": "Uncovered"
+                },
+                "properties/networkSecurityRules/sourceAddressPrefixes": {
+                  "state": "Uncovered"
+                },
+                "properties/networkSecurityRules/sourcePortRange": {
+                  "state": "Uncovered"
+                },
+                "properties/networkSecurityRules/sourcePortRanges": {
+                  "state": "Uncovered"
+                },
+                "properties/placementProperties": {
+                  "state": "Covered"
+                },
+                "properties/provisioningState": {
+                  "state": "Ignored"
+                },
+                "properties/spotRestoreTimeout": {
+                  "state": "Uncovered"
+                },
+                "properties/useDefaultPublicLoadBalancer": {
+                  "state": "Uncovered"
+                },
+                "properties/useEphemeralOSDisk": {
+                  "state": "Uncovered"
+                },
+                "properties/useTempDataDisk": {
+                  "state": "Uncovered"
+                },
+                "properties/vmExtensions/name": {
+                  "state": "Uncovered"
+                },
+                "properties/vmExtensions/properties/autoUpgradeMinorVersion": {
+                  "state": "Uncovered"
+                },
+                "properties/vmExtensions/properties/enableAutomaticUpgrade": {
+                  "state": "Uncovered"
+                },
+                "properties/vmExtensions/properties/forceUpdateTag": {
+                  "state": "Uncovered"
+                },
+                "properties/vmExtensions/properties/protectedSettings": {
+                  "state": "Uncovered"
+                },
+                "properties/vmExtensions/properties/provisionAfterExtensions": {
+                  "state": "Uncovered"
+                },
+                "properties/vmExtensions/properties/provisioningState": {
+                  "state": "Ignored"
+                },
+                "properties/vmExtensions/properties/publisher": {
+                  "state": "Uncovered"
+                },
+                "properties/vmExtensions/properties/settings": {
+                  "state": "Uncovered"
+                },
+                "properties/vmExtensions/properties/type": {
+                  "state": "Uncovered"
+                },
+                "properties/vmExtensions/properties/typeHandlerVersion": {
+                  "state": "Uncovered"
+                },
+                "properties/vmImageOffer": {
+                  "state": "Covered"
+                },
+                "properties/vmImagePublisher": {
+                  "state": "Covered"
+                },
+                "properties/vmImageSku": {
+                  "state": "Covered"
+                },
+                "properties/vmImageVersion": {
+                  "state": "Covered"
+                },
+                "properties/vmInstanceCount": {
+                  "state": "Covered"
+                },
+                "properties/vmManagedIdentity/userAssignedIdentities": {
+                  "state": "Uncovered"
+                },
+                "properties/vmSecrets/sourceVault/id": {
+                  "state": "Covered"
+                },
+                "properties/vmSecrets/vaultCertificates/certificateStore": {
+                  "state": "Covered"
+                },
+                "properties/vmSecrets/vaultCertificates/certificateUrl": {
+                  "state": "Covered"
+                },
+                "properties/vmSize": {
+                  "state": "Covered"
+                },
+                "properties/zones": {
+                  "state": "Uncovered"
+                },
+                "sku/capacity": {
+                  "state": "Uncovered"
+                },
+                "sku/name": {
+                  "state": "Uncovered"
+                },
+                "sku/tier": {
+                  "state": "Uncovered"
+                },
+                "systemData/createdAt": {
+                  "state": "Ignored"
+                },
+                "systemData/createdBy": {
+                  "state": "Ignored"
+                },
+                "systemData/createdByType": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedAt": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedBy": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedByType": {
+                  "state": "Ignored"
+                },
+                "tags": {
+                  "state": "Uncovered"
+                },
+                "type": {
+                  "state": "Ignored"
+                }
+              }
+            }
           }
         }
       }
@@ -539293,320 +538867,45 @@
           }
         }
       }
-    }
-  },
-  "solutions": {
-    "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SOLUTIONS/APPLICATIONDEFINITIONS/{}": {
-      "operations": {
-        "DELETE": {
-          "2021-07-01": {
-            "is_preview": false,
-            "is_active": false,
-            "swagger_rel_path": "solutions/resource-manager/Microsoft.Solutions/stable/2021-07-01/managedapplications.json"
-          }
-        },
-        "PUT": {
-          "2021-07-01": {
-            "is_preview": false,
-            "is_active": false,
-            "swagger_rel_path": "solutions/resource-manager/Microsoft.Solutions/stable/2021-07-01/managedapplications.json",
-            "model": {
-              "name": "ApplicationDefinition",
-              "swagger_rel_path": "solutions/resource-manager/Microsoft.Solutions/stable/2021-07-01/managedapplications.json",
-              "properties": {
-                "id": {
-                  "state": "Ignored"
-                },
-                "location": {
-                  "state": "Covered"
-                },
-                "managedBy": {
-                  "state": "Uncovered"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/artifacts/name": {
-                  "state": "Uncovered"
-                },
-                "properties/artifacts/type": {
-                  "state": "Uncovered"
-                },
-                "properties/artifacts/uri": {
-                  "state": "Uncovered"
-                },
-                "properties/authorizations/principalId": {
-                  "state": "Covered"
-                },
-                "properties/authorizations/roleDefinitionId": {
-                  "state": "Covered"
-                },
-                "properties/createUiDefinition": {
-                  "state": "Covered"
-                },
-                "properties/deploymentPolicy/deploymentMode": {
-                  "state": "Uncovered"
-                },
-                "properties/description": {
-                  "state": "Covered"
-                },
-                "properties/displayName": {
-                  "state": "Covered"
-                },
-                "properties/isEnabled": {
-                  "state": "Covered"
-                },
-                "properties/lockLevel": {
-                  "state": "Covered"
-                },
-                "properties/lockingPolicy/allowedActions": {
-                  "state": "Uncovered"
-                },
-                "properties/lockingPolicy/allowedDataActions": {
-                  "state": "Uncovered"
-                },
-                "properties/mainTemplate": {
-                  "state": "Covered"
-                },
-                "properties/managementPolicy/mode": {
-                  "state": "Uncovered"
-                },
-                "properties/notificationPolicy/notificationEndpoints/uri": {
-                  "state": "Uncovered"
-                },
-                "properties/packageFileUri": {
-                  "state": "Covered"
-                },
-                "properties/policies/name": {
-                  "state": "Uncovered"
-                },
-                "properties/policies/parameters": {
-                  "state": "Uncovered"
-                },
-                "properties/policies/policyDefinitionId": {
-                  "state": "Uncovered"
-                },
-                "properties/provisioningState": {
-                  "state": "Ignored"
-                },
-                "properties/storageAccountId": {
-                  "state": "Uncovered"
-                },
-                "sku/capacity": {
-                  "state": "Uncovered"
-                },
-                "sku/family": {
-                  "state": "Uncovered"
-                },
-                "sku/model": {
-                  "state": "Uncovered"
-                },
-                "sku/name": {
-                  "state": "Uncovered"
-                },
-                "sku/size": {
-                  "state": "Uncovered"
-                },
-                "sku/tier": {
-                  "state": "Uncovered"
-                },
-                "systemData/createdAt": {
-                  "state": "Ignored"
-                },
-                "systemData/createdBy": {
-                  "state": "Ignored"
-                },
-                "systemData/createdByType": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedAt": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedBy": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedByType": {
-                  "state": "Ignored"
-                },
-                "tags": {
-                  "state": "Covered"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          }
-        }
-      }
     },
-    "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SOLUTIONS/APPLICATIONS/{}": {
+    "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SIGNALRSERVICE/SIGNALR/{}/SHAREDPRIVATELINKRESOURCES/{}": {
       "operations": {
         "DELETE": {
-          "2021-07-01": {
+          "2022-02-01": {
             "is_preview": false,
-            "is_active": false,
-            "swagger_rel_path": "solutions/resource-manager/Microsoft.Solutions/stable/2021-07-01/managedapplications.json"
+            "is_active": true,
+            "swagger_rel_path": "signalr/resource-manager/Microsoft.SignalRService/stable/2022-02-01/signalr.json"
           }
         },
         "PUT": {
-          "2021-07-01": {
+          "2022-02-01": {
             "is_preview": false,
-            "is_active": false,
-            "swagger_rel_path": "solutions/resource-manager/Microsoft.Solutions/stable/2021-07-01/managedapplications.json",
+            "is_active": true,
+            "swagger_rel_path": "signalr/resource-manager/Microsoft.SignalRService/stable/2022-02-01/signalr.json",
             "model": {
-              "name": "Application",
-              "swagger_rel_path": "solutions/resource-manager/Microsoft.Solutions/stable/2021-07-01/managedapplications.json",
+              "name": "SharedPrivateLinkResource",
+              "swagger_rel_path": "signalr/resource-manager/Microsoft.SignalRService/stable/2022-02-01/signalr.json",
               "properties": {
                 "id": {
                   "state": "Ignored"
                 },
-                "identity/principalId": {
-                  "state": "Ignored"
-                },
-                "identity/tenantId": {
-                  "state": "Ignored"
-                },
-                "identity/type": {
-                  "state": "Uncovered"
-                },
-                "identity/userAssignedIdentities": {
-                  "state": "Uncovered"
-                },
-                "kind": {
-                  "state": "Covered"
-                },
-                "location": {
-                  "state": "Covered"
-                },
-                "managedBy": {
-                  "state": "Uncovered"
-                },
                 "name": {
                   "state": "Ignored"
                 },
-                "plan/name": {
+                "properties/groupId": {
                   "state": "Covered"
                 },
-                "plan/product": {
-                  "state": "Covered"
-                },
-                "plan/promotionCode": {
-                  "state": "Covered"
-                },
-                "plan/publisher": {
-                  "state": "Covered"
-                },
-                "plan/version": {
-                  "state": "Covered"
-                },
-                "properties/applicationDefinitionId": {
-                  "state": "Covered"
-                },
-                "properties/artifacts/name": {
-                  "state": "Ignored"
-                },
-                "properties/artifacts/type": {
-                  "state": "Ignored"
-                },
-                "properties/artifacts/uri": {
-                  "state": "Ignored"
-                },
-                "properties/authorizations/principalId": {
-                  "state": "Ignored"
-                },
-                "properties/authorizations/roleDefinitionId": {
-                  "state": "Ignored"
-                },
-                "properties/billingDetails/resourceUsageId": {
-                  "state": "Ignored"
-                },
-                "properties/createdBy/applicationId": {
-                  "state": "Ignored"
-                },
-                "properties/createdBy/oid": {
-                  "state": "Ignored"
-                },
-                "properties/createdBy/puid": {
-                  "state": "Ignored"
-                },
-                "properties/customerSupport/contactName": {
-                  "state": "Ignored"
-                },
-                "properties/customerSupport/email": {
-                  "state": "Ignored"
-                },
-                "properties/customerSupport/phone": {
-                  "state": "Ignored"
-                },
-                "properties/jitAccessPolicy/jitAccessEnabled": {
-                  "state": "Uncovered"
-                },
-                "properties/jitAccessPolicy/jitApprovalMode": {
-                  "state": "Uncovered"
-                },
-                "properties/jitAccessPolicy/jitApprovers/displayName": {
-                  "state": "Uncovered"
-                },
-                "properties/jitAccessPolicy/jitApprovers/id": {
-                  "state": "Uncovered"
-                },
-                "properties/jitAccessPolicy/jitApprovers/type": {
-                  "state": "Uncovered"
-                },
-                "properties/jitAccessPolicy/maximumJitAccessDuration": {
-                  "state": "Uncovered"
-                },
-                "properties/managedResourceGroupId": {
-                  "state": "Covered"
-                },
-                "properties/managementMode": {
-                  "state": "Ignored"
-                },
-                "properties/outputs": {
-                  "state": "Ignored"
-                },
-                "properties/parameters": {
+                "properties/privateLinkResourceId": {
                   "state": "Covered"
                 },
                 "properties/provisioningState": {
                   "state": "Ignored"
                 },
-                "properties/publisherTenantId": {
+                "properties/requestMessage": {
+                  "state": "Covered"
+                },
+                "properties/status": {
                   "state": "Ignored"
-                },
-                "properties/supportUrls/governmentCloud": {
-                  "state": "Ignored"
-                },
-                "properties/supportUrls/publicAzure": {
-                  "state": "Ignored"
-                },
-                "properties/updatedBy/applicationId": {
-                  "state": "Ignored"
-                },
-                "properties/updatedBy/oid": {
-                  "state": "Ignored"
-                },
-                "properties/updatedBy/puid": {
-                  "state": "Ignored"
-                },
-                "sku/capacity": {
-                  "state": "Uncovered"
-                },
-                "sku/family": {
-                  "state": "Uncovered"
-                },
-                "sku/model": {
-                  "state": "Uncovered"
-                },
-                "sku/name": {
-                  "state": "Uncovered"
-                },
-                "sku/size": {
-                  "state": "Uncovered"
-                },
-                "sku/tier": {
-                  "state": "Uncovered"
                 },
                 "systemData/createdAt": {
                   "state": "Ignored"
@@ -539625,9 +538924,6 @@
                 },
                 "systemData/lastModifiedByType": {
                   "state": "Ignored"
-                },
-                "tags": {
-                  "state": "Covered"
                 },
                 "type": {
                   "state": "Ignored"
@@ -557298,7 +556594,7 @@
                   "state": "Uncovered"
                 },
                 "properties{Stream}/datasource{Microsoft.ServiceBus/EventHub}/properties/authenticationMode": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{Stream}/datasource{Microsoft.ServiceBus/EventHub}/properties/consumerGroupName": {
                   "state": "Covered"
@@ -557663,7 +556959,7 @@
                   "state": "Uncovered"
                 },
                 "properties{Stream}/datasource{Microsoft.ServiceBus/EventHub}/properties/authenticationMode": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{Stream}/datasource{Microsoft.ServiceBus/EventHub}/properties/consumerGroupName": {
                   "state": "Covered"
