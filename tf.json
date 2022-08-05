@@ -1129,12 +1129,12 @@
     ]
   },
   {
-    "api_version": "2020-01-01",
+    "api_version": "2021-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AAD/DOMAINSERVICES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-01-01",
+    "api_version": "2021-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AAD/DOMAINSERVICES/{}",
     "operation": "GET",
     "properties": [
@@ -1178,7 +1178,7 @@
     ]
   },
   {
-    "api_version": "2020-01-01",
+    "api_version": "2021-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AAD/DOMAINSERVICES/{}",
     "operation": "PATCH",
     "properties": [
@@ -1222,7 +1222,7 @@
     ]
   },
   {
-    "api_version": "2020-01-01",
+    "api_version": "2021-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AAD/DOMAINSERVICES/{}",
     "operation": "PUT",
     "properties": [
@@ -6860,7 +6860,6 @@
     "operation": "GET",
     "properties": [
       "location",
-      "name",
       "tags"
     ]
   },
@@ -6870,7 +6869,6 @@
     "operation": "PUT",
     "properties": [
       "location",
-      "name",
       "tags"
     ]
   },
@@ -15307,12 +15305,12 @@
     ]
   },
   {
-    "api_version": "2021-11-01",
+    "api_version": "2022-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTHUB/NAMESPACES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-11-01",
+    "api_version": "2022-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTHUB/NAMESPACES/{}",
     "operation": "GET",
     "properties": [
@@ -15322,6 +15320,7 @@
       "identity/userAssignedIdentities",
       "location",
       "properties/clusterArmId",
+      "properties/disableLocalAuth",
       "properties/encryption",
       "properties/encryption/keySource",
       "properties/encryption/keyVaultProperties/keyName",
@@ -15330,7 +15329,9 @@
       "properties/isAutoInflateEnabled",
       "properties/kafkaEnabled",
       "properties/maximumThroughputUnits",
+      "properties/minimumTlsVersion",
       "properties/provisioningState",
+      "properties/publicNetworkAccess",
       "properties/zoneRedundant",
       "sku/capacity",
       "sku/name",
@@ -15339,7 +15340,7 @@
     ]
   },
   {
-    "api_version": "2021-11-01",
+    "api_version": "2022-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTHUB/NAMESPACES/{}",
     "operation": "PATCH",
     "properties": [
@@ -15349,6 +15350,7 @@
       "identity/userAssignedIdentities",
       "location",
       "properties/clusterArmId",
+      "properties/disableLocalAuth",
       "properties/encryption",
       "properties/encryption/keySource",
       "properties/encryption/keyVaultProperties/keyName",
@@ -15357,7 +15359,9 @@
       "properties/isAutoInflateEnabled",
       "properties/kafkaEnabled",
       "properties/maximumThroughputUnits",
+      "properties/minimumTlsVersion",
       "properties/provisioningState",
+      "properties/publicNetworkAccess",
       "properties/zoneRedundant",
       "sku/capacity",
       "sku/name",
@@ -15366,7 +15370,7 @@
     ]
   },
   {
-    "api_version": "2021-11-01",
+    "api_version": "2022-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTHUB/NAMESPACES/{}",
     "operation": "PUT",
     "properties": [
@@ -15376,6 +15380,7 @@
       "identity/userAssignedIdentities",
       "location",
       "properties/clusterArmId",
+      "properties/disableLocalAuth",
       "properties/encryption",
       "properties/encryption/keySource",
       "properties/encryption/keyVaultProperties/keyName",
@@ -15384,7 +15389,9 @@
       "properties/isAutoInflateEnabled",
       "properties/kafkaEnabled",
       "properties/maximumThroughputUnits",
+      "properties/minimumTlsVersion",
       "properties/provisioningState",
+      "properties/publicNetworkAccess",
       "properties/zoneRedundant",
       "sku/capacity",
       "sku/name",
@@ -24170,7 +24177,9 @@
     "operation": "GET",
     "properties": [
       "properties/dataExportId",
+      "properties/destination/metaData/eventHubName",
       "properties/destination/resourceId",
+      "properties/destination/type",
       "properties/enable",
       "properties/tableNames"
     ]
@@ -24181,7 +24190,9 @@
     "operation": "PUT",
     "properties": [
       "properties/dataExportId",
+      "properties/destination/metaData/eventHubName",
       "properties/destination/resourceId",
+      "properties/destination/type",
       "properties/enable",
       "properties/tableNames"
     ]
