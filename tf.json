@@ -16626,6 +16626,37 @@
   },
   {
     "api_version": "2021-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/DATACOLLECTIONENDPOINTS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2021-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/DATACOLLECTIONENDPOINTS/{}",
+    "operation": "GET",
+    "properties": [
+      "kind",
+      "location",
+      "name",
+      "properties/description",
+      "properties/networkAcls/publicNetworkAccess",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2021-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/DATACOLLECTIONENDPOINTS/{}",
+    "operation": "PUT",
+    "properties": [
+      "kind",
+      "location",
+      "name",
+      "properties/description",
+      "properties/networkAcls/publicNetworkAccess",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2021-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/DATACOLLECTIONRULES/{}",
     "operation": "DELETE"
   },
@@ -20666,12 +20697,14 @@
     "operation": "GET",
     "properties": [
       "properties/azureASN",
+      "properties/gatewayManagerEtag",
       "properties/ipv6PeeringConfig/microsoftPeeringConfig/advertisedPublicPrefixes",
       "properties/ipv6PeeringConfig/microsoftPeeringConfig/customerASN",
       "properties/ipv6PeeringConfig/microsoftPeeringConfig/routingRegistryName",
       "properties/ipv6PeeringConfig/primaryPeerAddressPrefix",
       "properties/ipv6PeeringConfig/routeFilter/id",
       "properties/ipv6PeeringConfig/secondaryPeerAddressPrefix",
+      "properties/ipv6PeeringConfig/state",
       "properties/microsoftPeeringConfig/advertisedPublicPrefixes",
       "properties/microsoftPeeringConfig/customerASN",
       "properties/microsoftPeeringConfig/routingRegistryName",
@@ -20683,6 +20716,7 @@
       "properties/secondaryAzurePort",
       "properties/secondaryPeerAddressPrefix",
       "properties/sharedKey",
+      "properties/state",
       "properties/vlanId"
     ]
   },
@@ -20692,12 +20726,14 @@
     "operation": "PUT",
     "properties": [
       "properties/azureASN",
+      "properties/gatewayManagerEtag",
       "properties/ipv6PeeringConfig/microsoftPeeringConfig/advertisedPublicPrefixes",
       "properties/ipv6PeeringConfig/microsoftPeeringConfig/customerASN",
       "properties/ipv6PeeringConfig/microsoftPeeringConfig/routingRegistryName",
       "properties/ipv6PeeringConfig/primaryPeerAddressPrefix",
       "properties/ipv6PeeringConfig/routeFilter/id",
       "properties/ipv6PeeringConfig/secondaryPeerAddressPrefix",
+      "properties/ipv6PeeringConfig/state",
       "properties/microsoftPeeringConfig/advertisedPublicPrefixes",
       "properties/microsoftPeeringConfig/customerASN",
       "properties/microsoftPeeringConfig/routingRegistryName",
@@ -20709,6 +20745,7 @@
       "properties/secondaryAzurePort",
       "properties/secondaryPeerAddressPrefix",
       "properties/sharedKey",
+      "properties/state",
       "properties/vlanId"
     ]
   },
@@ -25536,12 +25573,16 @@
       "properties/policyId",
       "properties/providerSpecificDetails{A2A}/fabricObjectId",
       "properties/providerSpecificDetails{A2A}/monitoringPercentageCompletion",
+      "properties/providerSpecificDetails{A2A}/protectedManagedDisks/dekKeyVaultArmId",
       "properties/providerSpecificDetails{A2A}/protectedManagedDisks/diskId",
+      "properties/providerSpecificDetails{A2A}/protectedManagedDisks/kekKeyVaultArmId",
+      "properties/providerSpecificDetails{A2A}/protectedManagedDisks/keyIdentifier",
       "properties/providerSpecificDetails{A2A}/protectedManagedDisks/primaryStagingAzureStorageAccountId",
       "properties/providerSpecificDetails{A2A}/protectedManagedDisks/recoveryDiskEncryptionSetId",
       "properties/providerSpecificDetails{A2A}/protectedManagedDisks/recoveryReplicaDiskAccountType",
       "properties/providerSpecificDetails{A2A}/protectedManagedDisks/recoveryResourceGroupId",
       "properties/providerSpecificDetails{A2A}/protectedManagedDisks/recoveryTargetDiskAccountType",
+      "properties/providerSpecificDetails{A2A}/protectedManagedDisks/secretIdentifier",
       "properties/providerSpecificDetails{A2A}/recoveryAvailabilitySet",
       "properties/providerSpecificDetails{A2A}/recoveryAvailabilityZone",
       "properties/providerSpecificDetails{A2A}/recoveryAzureResourceGroupId",
@@ -25562,6 +25603,10 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/REPLICATIONFABRICS/{}/REPLICATIONPROTECTIONCONTAINERS/{}/REPLICATIONPROTECTEDITEMS/{}",
     "operation": "PATCH",
     "properties": [
+      "properties/providerSpecificDetails{A2A}/managedDiskUpdateDetails/diskEncryptionInfo/diskEncryptionKeyInfo/keyVaultResourceArmId",
+      "properties/providerSpecificDetails{A2A}/managedDiskUpdateDetails/diskEncryptionInfo/diskEncryptionKeyInfo/secretIdentifier",
+      "properties/providerSpecificDetails{A2A}/managedDiskUpdateDetails/diskEncryptionInfo/keyEncryptionKeyInfo/keyIdentifier",
+      "properties/providerSpecificDetails{A2A}/managedDiskUpdateDetails/diskEncryptionInfo/keyEncryptionKeyInfo/keyVaultResourceArmId",
       "properties/providerSpecificDetails{A2A}/managedDiskUpdateDetails/diskId",
       "properties/providerSpecificDetails{A2A}/managedDiskUpdateDetails/recoveryReplicaDiskAccountType",
       "properties/providerSpecificDetails{A2A}/managedDiskUpdateDetails/recoveryTargetDiskAccountType",
@@ -25585,6 +25630,10 @@
       "properties/providerSpecificDetails{A2A}/recoveryAvailabilityZone",
       "properties/providerSpecificDetails{A2A}/recoveryContainerId",
       "properties/providerSpecificDetails{A2A}/recoveryResourceGroupId",
+      "properties/providerSpecificDetails{A2A}/vmManagedDisks/diskEncryptionInfo/diskEncryptionKeyInfo/keyVaultResourceArmId",
+      "properties/providerSpecificDetails{A2A}/vmManagedDisks/diskEncryptionInfo/diskEncryptionKeyInfo/secretIdentifier",
+      "properties/providerSpecificDetails{A2A}/vmManagedDisks/diskEncryptionInfo/keyEncryptionKeyInfo/keyIdentifier",
+      "properties/providerSpecificDetails{A2A}/vmManagedDisks/diskEncryptionInfo/keyEncryptionKeyInfo/keyVaultResourceArmId",
       "properties/providerSpecificDetails{A2A}/vmManagedDisks/diskId",
       "properties/providerSpecificDetails{A2A}/vmManagedDisks/primaryStagingAzureStorageAccountId",
       "properties/providerSpecificDetails{A2A}/vmManagedDisks/recoveryDiskEncryptionSetId",
@@ -26326,12 +26375,16 @@
     "operation": "GET",
     "properties": [
       "properties/autoDeleteOnIdle",
+      "properties/clientAffineProperties/clientId",
+      "properties/clientAffineProperties/isDurable",
+      "properties/clientAffineProperties/isShared",
       "properties/deadLetteringOnFilterEvaluationExceptions",
       "properties/deadLetteringOnMessageExpiration",
       "properties/defaultMessageTimeToLive",
       "properties/enableBatchedOperations",
       "properties/forwardDeadLetteredMessagesTo",
       "properties/forwardTo",
+      "properties/isClientAffine",
       "properties/lockDuration",
       "properties/maxDeliveryCount",
       "properties/requiresSession",
@@ -26344,12 +26397,16 @@
     "operation": "PUT",
     "properties": [
       "properties/autoDeleteOnIdle",
+      "properties/clientAffineProperties/clientId",
+      "properties/clientAffineProperties/isDurable",
+      "properties/clientAffineProperties/isShared",
       "properties/deadLetteringOnFilterEvaluationExceptions",
       "properties/deadLetteringOnMessageExpiration",
       "properties/defaultMessageTimeToLive",
       "properties/enableBatchedOperations",
       "properties/forwardDeadLetteredMessagesTo",
       "properties/forwardTo",
+      "properties/isClientAffine",
       "properties/lockDuration",
       "properties/maxDeliveryCount",
       "properties/requiresSession",
@@ -26377,6 +26434,7 @@
       "properties/correlationFilter/sessionId",
       "properties/correlationFilter/to",
       "properties/filterType",
+      "properties/sqlFilter/compatibilityLevel",
       "properties/sqlFilter/sqlExpression"
     ]
   },
@@ -28374,12 +28432,12 @@
     ]
   },
   {
-    "api_version": "2021-04-01",
+    "api_version": "2021-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-04-01",
+    "api_version": "2021-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}",
     "operation": "GET",
     "properties": [
@@ -28459,7 +28517,7 @@
     ]
   },
   {
-    "api_version": "2021-04-01",
+    "api_version": "2021-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -28517,7 +28575,7 @@
     ]
   },
   {
-    "api_version": "2021-04-01",
+    "api_version": "2021-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}",
     "operation": "PUT",
     "properties": [
@@ -28578,7 +28636,7 @@
     ]
   },
   {
-    "api_version": "2021-04-01",
+    "api_version": "2021-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/BLOBSERVICES/{}",
     "operation": "GET",
     "properties": [
@@ -28599,7 +28657,7 @@
     ]
   },
   {
-    "api_version": "2021-04-01",
+    "api_version": "2021-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/BLOBSERVICES/{}",
     "operation": "PUT",
     "properties": [
@@ -28620,7 +28678,7 @@
     ]
   },
   {
-    "api_version": "2021-04-01",
+    "api_version": "2021-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/ENCRYPTIONSCOPES/{}",
     "operation": "GET",
     "properties": [
@@ -28632,7 +28690,7 @@
     ]
   },
   {
-    "api_version": "2021-04-01",
+    "api_version": "2021-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/ENCRYPTIONSCOPES/{}",
     "operation": "PATCH",
     "properties": [
@@ -28644,7 +28702,7 @@
     ]
   },
   {
-    "api_version": "2021-04-01",
+    "api_version": "2021-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/ENCRYPTIONSCOPES/{}",
     "operation": "PUT",
     "properties": [
@@ -28656,7 +28714,7 @@
     ]
   },
   {
-    "api_version": "2021-04-01",
+    "api_version": "2021-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/FILESERVICES/{}",
     "operation": "GET",
     "properties": [
@@ -28674,7 +28732,7 @@
     ]
   },
   {
-    "api_version": "2021-04-01",
+    "api_version": "2021-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/FILESERVICES/{}",
     "operation": "PUT",
     "properties": [
@@ -28692,12 +28750,12 @@
     ]
   },
   {
-    "api_version": "2021-04-01",
+    "api_version": "2021-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/INVENTORYPOLICIES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-04-01",
+    "api_version": "2021-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/INVENTORYPOLICIES/{}",
     "operation": "GET",
     "properties": [
@@ -28717,7 +28775,7 @@
     ]
   },
   {
-    "api_version": "2021-04-01",
+    "api_version": "2021-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/INVENTORYPOLICIES/{}",
     "operation": "PUT",
     "properties": [
@@ -28737,17 +28795,17 @@
     ]
   },
   {
-    "api_version": "2021-04-01",
+    "api_version": "2021-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/LISTKEYS",
     "operation": "POST"
   },
   {
-    "api_version": "2021-04-01",
+    "api_version": "2021-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/MANAGEMENTPOLICIES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-04-01",
+    "api_version": "2021-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/MANAGEMENTPOLICIES/{}",
     "operation": "GET",
     "properties": [
@@ -28775,7 +28833,7 @@
     ]
   },
   {
-    "api_version": "2021-04-01",
+    "api_version": "2021-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/MANAGEMENTPOLICIES/{}",
     "operation": "PUT",
     "properties": [
@@ -33286,8 +33344,7 @@
       "properties/displayName",
       "properties/status/lastModified",
       "properties/status/timeCreated",
-      "properties/targetScope",
-      "properties/versions"
+      "properties/targetScope"
     ]
   },
   {
@@ -33296,6 +33353,8 @@
     "operation": "GET",
     "properties": [
       "id",
+      "name",
+      "properties",
       "properties/description",
       "properties/displayName",
       "properties/status/lastModified",
