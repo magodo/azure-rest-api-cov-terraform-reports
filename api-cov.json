@@ -52,6 +52,12 @@
                 "properties{ActionGroup}/conditions/alertRuleId/values": {
                   "state": "Covered"
                 },
+                "properties{ActionGroup}/conditions/alertRuleName/operator": {
+                  "state": "Uncovered"
+                },
+                "properties{ActionGroup}/conditions/alertRuleName/values": {
+                  "state": "Uncovered"
+                },
                 "properties{ActionGroup}/conditions/description/operator": {
                   "state": "Covered"
                 },
@@ -119,6 +125,12 @@
                   "state": "Uncovered"
                 },
                 "properties{Diagnostics}/conditions/alertRuleId/values": {
+                  "state": "Uncovered"
+                },
+                "properties{Diagnostics}/conditions/alertRuleName/operator": {
+                  "state": "Uncovered"
+                },
+                "properties{Diagnostics}/conditions/alertRuleName/values": {
                   "state": "Uncovered"
                 },
                 "properties{Diagnostics}/conditions/description/operator": {
@@ -189,6 +201,12 @@
                 },
                 "properties{Suppression}/conditions/alertRuleId/values": {
                   "state": "Covered"
+                },
+                "properties{Suppression}/conditions/alertRuleName/operator": {
+                  "state": "Uncovered"
+                },
+                "properties{Suppression}/conditions/alertRuleName/values": {
+                  "state": "Uncovered"
                 },
                 "properties{Suppression}/conditions/description/operator": {
                   "state": "Covered"
@@ -28362,6 +28380,11 @@
             "is_active": false,
             "swagger_rel_path": "containerservice/resource-manager/Microsoft.ContainerService/preview/2022-06-02-preview/managedClusters.json"
           },
+          "2022-07-01": {
+            "is_preview": false,
+            "is_active": false,
+            "swagger_rel_path": "containerservice/resource-manager/Microsoft.ContainerService/stable/2022-07-01/managedClusters.json"
+          },
           "2022-07-02-preview": {
             "is_preview": true,
             "is_active": false,
@@ -32469,6 +32492,671 @@
                 },
                 "properties/workloadAutoScalerProfile/keda/enabled": {
                   "state": "Uncovered"
+                },
+                "sku/name": {
+                  "state": "Covered"
+                },
+                "sku/tier": {
+                  "state": "Covered"
+                },
+                "systemData/createdAt": {
+                  "state": "Ignored"
+                },
+                "systemData/createdBy": {
+                  "state": "Ignored"
+                },
+                "systemData/createdByType": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedAt": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedBy": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedByType": {
+                  "state": "Ignored"
+                },
+                "tags": {
+                  "state": "Covered"
+                },
+                "type": {
+                  "state": "Ignored"
+                }
+              }
+            }
+          },
+          "2022-07-01": {
+            "is_preview": false,
+            "is_active": false,
+            "swagger_rel_path": "containerservice/resource-manager/Microsoft.ContainerService/stable/2022-07-01/managedClusters.json",
+            "model": {
+              "name": "ManagedCluster",
+              "swagger_rel_path": "containerservice/resource-manager/Microsoft.ContainerService/stable/2022-07-01/managedClusters.json",
+              "properties": {
+                "extendedLocation/name": {
+                  "state": "Uncovered"
+                },
+                "extendedLocation/type": {
+                  "state": "Uncovered"
+                },
+                "id": {
+                  "state": "Ignored"
+                },
+                "identity/principalId": {
+                  "state": "Ignored"
+                },
+                "identity/tenantId": {
+                  "state": "Ignored"
+                },
+                "identity/type": {
+                  "state": "Covered"
+                },
+                "identity/userAssignedIdentities": {
+                  "state": "Covered"
+                },
+                "location": {
+                  "state": "Covered"
+                },
+                "name": {
+                  "state": "Ignored"
+                },
+                "properties/aadProfile/adminGroupObjectIDs": {
+                  "state": "Covered"
+                },
+                "properties/aadProfile/clientAppID": {
+                  "state": "Covered"
+                },
+                "properties/aadProfile/enableAzureRBAC": {
+                  "state": "Covered"
+                },
+                "properties/aadProfile/managed": {
+                  "state": "Covered"
+                },
+                "properties/aadProfile/serverAppID": {
+                  "state": "Covered"
+                },
+                "properties/aadProfile/serverAppSecret": {
+                  "state": "Covered"
+                },
+                "properties/aadProfile/tenantID": {
+                  "state": "Covered"
+                },
+                "properties/addonProfiles": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/availabilityZones": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/count": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/creationData/sourceResourceId": {
+                  "state": "Uncovered"
+                },
+                "properties/agentPoolProfiles/currentOrchestratorVersion": {
+                  "state": "Ignored"
+                },
+                "properties/agentPoolProfiles/enableAutoScaling": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/enableEncryptionAtHost": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/enableFIPS": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/enableNodePublicIP": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/enableUltraSSD": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/gpuInstanceProfile": {
+                  "state": "Uncovered"
+                },
+                "properties/agentPoolProfiles/hostGroupID": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/kubeletConfig/allowedUnsafeSysctls": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/kubeletConfig/containerLogMaxFiles": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/kubeletConfig/containerLogMaxSizeMB": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/kubeletConfig/cpuCfsQuota": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/kubeletConfig/cpuCfsQuotaPeriod": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/kubeletConfig/cpuManagerPolicy": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/kubeletConfig/failSwapOn": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/kubeletConfig/imageGcHighThreshold": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/kubeletConfig/imageGcLowThreshold": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/kubeletConfig/podMaxPids": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/kubeletConfig/topologyManagerPolicy": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/kubeletDiskType": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/linuxOSConfig/swapFileSizeMB": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/linuxOSConfig/sysctls/fsAioMaxNr": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/linuxOSConfig/sysctls/fsFileMax": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/linuxOSConfig/sysctls/fsInotifyMaxUserWatches": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/linuxOSConfig/sysctls/fsNrOpen": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/linuxOSConfig/sysctls/kernelThreadsMax": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/linuxOSConfig/sysctls/netCoreNetdevMaxBacklog": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/linuxOSConfig/sysctls/netCoreOptmemMax": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/linuxOSConfig/sysctls/netCoreRmemDefault": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/linuxOSConfig/sysctls/netCoreRmemMax": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/linuxOSConfig/sysctls/netCoreSomaxconn": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/linuxOSConfig/sysctls/netCoreWmemDefault": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/linuxOSConfig/sysctls/netCoreWmemMax": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4IpLocalPortRange": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4NeighDefaultGcThresh1": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4NeighDefaultGcThresh2": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4NeighDefaultGcThresh3": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4TcpFinTimeout": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4TcpKeepaliveProbes": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4TcpKeepaliveTime": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4TcpMaxSynBacklog": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4TcpMaxTwBuckets": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4TcpTwReuse": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/linuxOSConfig/sysctls/netIpv4TcpkeepaliveIntvl": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/linuxOSConfig/sysctls/netNetfilterNfConntrackBuckets": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/linuxOSConfig/sysctls/netNetfilterNfConntrackMax": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/linuxOSConfig/sysctls/vmMaxMapCount": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/linuxOSConfig/sysctls/vmSwappiness": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/linuxOSConfig/sysctls/vmVfsCachePressure": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/linuxOSConfig/transparentHugePageDefrag": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/linuxOSConfig/transparentHugePageEnabled": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/maxCount": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/maxPods": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/minCount": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/mode": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/name": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/nodeImageVersion": {
+                  "state": "Ignored"
+                },
+                "properties/agentPoolProfiles/nodeLabels": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/nodePublicIPPrefixID": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/nodeTaints": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/orchestratorVersion": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/osDiskSizeGB": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/osDiskType": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/osSKU": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/osType": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/podSubnetID": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/powerState/code": {
+                  "state": "Uncovered"
+                },
+                "properties/agentPoolProfiles/provisioningState": {
+                  "state": "Ignored"
+                },
+                "properties/agentPoolProfiles/proximityPlacementGroupID": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/scaleDownMode": {
+                  "state": "Uncovered"
+                },
+                "properties/agentPoolProfiles/scaleSetEvictionPolicy": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/scaleSetPriority": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/spotMaxPrice": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/tags": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/type": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/upgradeSettings/maxSurge": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/vmSize": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/vnetSubnetID": {
+                  "state": "Covered"
+                },
+                "properties/agentPoolProfiles/workloadRuntime": {
+                  "state": "Uncovered"
+                },
+                "properties/apiServerAccessProfile/authorizedIPRanges": {
+                  "state": "Covered"
+                },
+                "properties/apiServerAccessProfile/disableRunCommand": {
+                  "state": "Covered"
+                },
+                "properties/apiServerAccessProfile/enablePrivateCluster": {
+                  "state": "Covered"
+                },
+                "properties/apiServerAccessProfile/enablePrivateClusterPublicFQDN": {
+                  "state": "Covered"
+                },
+                "properties/apiServerAccessProfile/privateDNSZone": {
+                  "state": "Covered"
+                },
+                "properties/autoScalerProfile/balance-similar-node-groups": {
+                  "state": "Covered"
+                },
+                "properties/autoScalerProfile/expander": {
+                  "state": "Covered"
+                },
+                "properties/autoScalerProfile/max-empty-bulk-delete": {
+                  "state": "Covered"
+                },
+                "properties/autoScalerProfile/max-graceful-termination-sec": {
+                  "state": "Covered"
+                },
+                "properties/autoScalerProfile/max-node-provision-time": {
+                  "state": "Covered"
+                },
+                "properties/autoScalerProfile/max-total-unready-percentage": {
+                  "state": "Covered"
+                },
+                "properties/autoScalerProfile/new-pod-scale-up-delay": {
+                  "state": "Covered"
+                },
+                "properties/autoScalerProfile/ok-total-unready-count": {
+                  "state": "Covered"
+                },
+                "properties/autoScalerProfile/scale-down-delay-after-add": {
+                  "state": "Covered"
+                },
+                "properties/autoScalerProfile/scale-down-delay-after-delete": {
+                  "state": "Covered"
+                },
+                "properties/autoScalerProfile/scale-down-delay-after-failure": {
+                  "state": "Covered"
+                },
+                "properties/autoScalerProfile/scale-down-unneeded-time": {
+                  "state": "Covered"
+                },
+                "properties/autoScalerProfile/scale-down-unready-time": {
+                  "state": "Covered"
+                },
+                "properties/autoScalerProfile/scale-down-utilization-threshold": {
+                  "state": "Covered"
+                },
+                "properties/autoScalerProfile/scan-interval": {
+                  "state": "Covered"
+                },
+                "properties/autoScalerProfile/skip-nodes-with-local-storage": {
+                  "state": "Covered"
+                },
+                "properties/autoScalerProfile/skip-nodes-with-system-pods": {
+                  "state": "Covered"
+                },
+                "properties/autoUpgradeProfile/upgradeChannel": {
+                  "state": "Covered"
+                },
+                "properties/azurePortalFQDN": {
+                  "state": "Ignored"
+                },
+                "properties/currentKubernetesVersion": {
+                  "state": "Ignored"
+                },
+                "properties/disableLocalAccounts": {
+                  "state": "Covered"
+                },
+                "properties/diskEncryptionSetID": {
+                  "state": "Covered"
+                },
+                "properties/dnsPrefix": {
+                  "state": "Covered"
+                },
+                "properties/enablePodSecurityPolicy": {
+                  "state": "Covered"
+                },
+                "properties/enableRBAC": {
+                  "state": "Covered"
+                },
+                "properties/fqdn": {
+                  "state": "Ignored"
+                },
+                "properties/fqdnSubdomain": {
+                  "state": "Covered"
+                },
+                "properties/httpProxyConfig/httpProxy": {
+                  "state": "Covered"
+                },
+                "properties/httpProxyConfig/httpsProxy": {
+                  "state": "Covered"
+                },
+                "properties/httpProxyConfig/noProxy": {
+                  "state": "Covered"
+                },
+                "properties/httpProxyConfig/trustedCa": {
+                  "state": "Covered"
+                },
+                "properties/identityProfile": {
+                  "state": "Covered"
+                },
+                "properties/kubernetesVersion": {
+                  "state": "Covered"
+                },
+                "properties/linuxProfile/adminUsername": {
+                  "state": "Covered"
+                },
+                "properties/linuxProfile/ssh/publicKeys/keyData": {
+                  "state": "Covered"
+                },
+                "properties/maxAgentPools": {
+                  "state": "Ignored"
+                },
+                "properties/networkProfile/dnsServiceIP": {
+                  "state": "Covered"
+                },
+                "properties/networkProfile/dockerBridgeCidr": {
+                  "state": "Covered"
+                },
+                "properties/networkProfile/ipFamilies": {
+                  "state": "Covered"
+                },
+                "properties/networkProfile/loadBalancerProfile/allocatedOutboundPorts": {
+                  "state": "Covered"
+                },
+                "properties/networkProfile/loadBalancerProfile/effectiveOutboundIPs/id": {
+                  "state": "Covered"
+                },
+                "properties/networkProfile/loadBalancerProfile/enableMultipleStandardLoadBalancers": {
+                  "state": "Uncovered"
+                },
+                "properties/networkProfile/loadBalancerProfile/idleTimeoutInMinutes": {
+                  "state": "Covered"
+                },
+                "properties/networkProfile/loadBalancerProfile/managedOutboundIPs/count": {
+                  "state": "Covered"
+                },
+                "properties/networkProfile/loadBalancerProfile/managedOutboundIPs/countIPv6": {
+                  "state": "Uncovered"
+                },
+                "properties/networkProfile/loadBalancerProfile/outboundIPPrefixes/publicIPPrefixes/id": {
+                  "state": "Covered"
+                },
+                "properties/networkProfile/loadBalancerProfile/outboundIPs/publicIPs/id": {
+                  "state": "Covered"
+                },
+                "properties/networkProfile/loadBalancerSku": {
+                  "state": "Covered"
+                },
+                "properties/networkProfile/natGatewayProfile/effectiveOutboundIPs/id": {
+                  "state": "Covered"
+                },
+                "properties/networkProfile/natGatewayProfile/idleTimeoutInMinutes": {
+                  "state": "Covered"
+                },
+                "properties/networkProfile/natGatewayProfile/managedOutboundIPProfile/count": {
+                  "state": "Covered"
+                },
+                "properties/networkProfile/networkMode": {
+                  "state": "Covered"
+                },
+                "properties/networkProfile/networkPlugin": {
+                  "state": "Covered"
+                },
+                "properties/networkProfile/networkPolicy": {
+                  "state": "Covered"
+                },
+                "properties/networkProfile/outboundType": {
+                  "state": "Covered"
+                },
+                "properties/networkProfile/podCidr": {
+                  "state": "Covered"
+                },
+                "properties/networkProfile/podCidrs": {
+                  "state": "Uncovered"
+                },
+                "properties/networkProfile/serviceCidr": {
+                  "state": "Covered"
+                },
+                "properties/networkProfile/serviceCidrs": {
+                  "state": "Uncovered"
+                },
+                "properties/nodeResourceGroup": {
+                  "state": "Covered"
+                },
+                "properties/podIdentityProfile/allowNetworkPluginKubenet": {
+                  "state": "Uncovered"
+                },
+                "properties/podIdentityProfile/enabled": {
+                  "state": "Uncovered"
+                },
+                "properties/podIdentityProfile/userAssignedIdentities/bindingSelector": {
+                  "state": "Uncovered"
+                },
+                "properties/podIdentityProfile/userAssignedIdentities/identity/clientId": {
+                  "state": "Uncovered"
+                },
+                "properties/podIdentityProfile/userAssignedIdentities/identity/objectId": {
+                  "state": "Uncovered"
+                },
+                "properties/podIdentityProfile/userAssignedIdentities/identity/resourceId": {
+                  "state": "Uncovered"
+                },
+                "properties/podIdentityProfile/userAssignedIdentities/name": {
+                  "state": "Uncovered"
+                },
+                "properties/podIdentityProfile/userAssignedIdentities/namespace": {
+                  "state": "Uncovered"
+                },
+                "properties/podIdentityProfile/userAssignedIdentities/provisioningInfo/error/error/code": {
+                  "state": "Ignored"
+                },
+                "properties/podIdentityProfile/userAssignedIdentities/provisioningInfo/error/error/details": {
+                  "state": "Ignored"
+                },
+                "properties/podIdentityProfile/userAssignedIdentities/provisioningInfo/error/error/message": {
+                  "state": "Ignored"
+                },
+                "properties/podIdentityProfile/userAssignedIdentities/provisioningInfo/error/error/target": {
+                  "state": "Ignored"
+                },
+                "properties/podIdentityProfile/userAssignedIdentities/provisioningState": {
+                  "state": "Ignored"
+                },
+                "properties/podIdentityProfile/userAssignedIdentityExceptions/name": {
+                  "state": "Uncovered"
+                },
+                "properties/podIdentityProfile/userAssignedIdentityExceptions/namespace": {
+                  "state": "Uncovered"
+                },
+                "properties/podIdentityProfile/userAssignedIdentityExceptions/podLabels": {
+                  "state": "Uncovered"
+                },
+                "properties/powerState/code": {
+                  "state": "Ignored"
+                },
+                "properties/privateFQDN": {
+                  "state": "Ignored"
+                },
+                "properties/privateLinkResources/groupId": {
+                  "state": "Uncovered"
+                },
+                "properties/privateLinkResources/id": {
+                  "state": "Uncovered"
+                },
+                "properties/privateLinkResources/name": {
+                  "state": "Uncovered"
+                },
+                "properties/privateLinkResources/privateLinkServiceID": {
+                  "state": "Ignored"
+                },
+                "properties/privateLinkResources/requiredMembers": {
+                  "state": "Uncovered"
+                },
+                "properties/privateLinkResources/type": {
+                  "state": "Uncovered"
+                },
+                "properties/provisioningState": {
+                  "state": "Ignored"
+                },
+                "properties/publicNetworkAccess": {
+                  "state": "Covered"
+                },
+                "properties/securityProfile/azureKeyVaultKms/enabled": {
+                  "state": "Uncovered"
+                },
+                "properties/securityProfile/azureKeyVaultKms/keyId": {
+                  "state": "Uncovered"
+                },
+                "properties/securityProfile/azureKeyVaultKms/keyVaultNetworkAccess": {
+                  "state": "Uncovered"
+                },
+                "properties/securityProfile/azureKeyVaultKms/keyVaultResourceId": {
+                  "state": "Uncovered"
+                },
+                "properties/securityProfile/defender/logAnalyticsWorkspaceResourceId": {
+                  "state": "Uncovered"
+                },
+                "properties/securityProfile/defender/securityMonitoring/enabled": {
+                  "state": "Uncovered"
+                },
+                "properties/servicePrincipalProfile/clientId": {
+                  "state": "Covered"
+                },
+                "properties/servicePrincipalProfile/secret": {
+                  "state": "Covered"
+                },
+                "properties/storageProfile/diskCSIDriver/enabled": {
+                  "state": "Uncovered"
+                },
+                "properties/storageProfile/fileCSIDriver/enabled": {
+                  "state": "Uncovered"
+                },
+                "properties/storageProfile/snapshotController/enabled": {
+                  "state": "Uncovered"
+                },
+                "properties/windowsProfile/adminPassword": {
+                  "state": "Covered"
+                },
+                "properties/windowsProfile/adminUsername": {
+                  "state": "Covered"
+                },
+                "properties/windowsProfile/enableCSIProxy": {
+                  "state": "Uncovered"
+                },
+                "properties/windowsProfile/gmsaProfile/dnsServer": {
+                  "state": "Uncovered"
+                },
+                "properties/windowsProfile/gmsaProfile/enabled": {
+                  "state": "Uncovered"
+                },
+                "properties/windowsProfile/gmsaProfile/rootDomainName": {
+                  "state": "Uncovered"
+                },
+                "properties/windowsProfile/licenseType": {
+                  "state": "Covered"
                 },
                 "sku/name": {
                   "state": "Covered"
@@ -33282,6 +33970,11 @@
             "is_active": false,
             "swagger_rel_path": "containerservice/resource-manager/Microsoft.ContainerService/preview/2022-06-02-preview/managedClusters.json"
           },
+          "2022-07-01": {
+            "is_preview": false,
+            "is_active": false,
+            "swagger_rel_path": "containerservice/resource-manager/Microsoft.ContainerService/stable/2022-07-01/managedClusters.json"
+          },
           "2022-07-02-preview": {
             "is_preview": true,
             "is_active": false,
@@ -34815,6 +35508,269 @@
                 },
                 "properties/messageOfTheDay": {
                   "state": "Uncovered"
+                },
+                "properties/minCount": {
+                  "state": "Covered"
+                },
+                "properties/mode": {
+                  "state": "Covered"
+                },
+                "properties/nodeImageVersion": {
+                  "state": "Ignored"
+                },
+                "properties/nodeLabels": {
+                  "state": "Covered"
+                },
+                "properties/nodePublicIPPrefixID": {
+                  "state": "Covered"
+                },
+                "properties/nodeTaints": {
+                  "state": "Covered"
+                },
+                "properties/orchestratorVersion": {
+                  "state": "Covered"
+                },
+                "properties/osDiskSizeGB": {
+                  "state": "Covered"
+                },
+                "properties/osDiskType": {
+                  "state": "Covered"
+                },
+                "properties/osSKU": {
+                  "state": "Covered"
+                },
+                "properties/osType": {
+                  "state": "Covered"
+                },
+                "properties/podSubnetID": {
+                  "state": "Covered"
+                },
+                "properties/powerState/code": {
+                  "state": "Uncovered"
+                },
+                "properties/provisioningState": {
+                  "state": "Ignored"
+                },
+                "properties/proximityPlacementGroupID": {
+                  "state": "Covered"
+                },
+                "properties/scaleDownMode": {
+                  "state": "Covered"
+                },
+                "properties/scaleSetEvictionPolicy": {
+                  "state": "Covered"
+                },
+                "properties/scaleSetPriority": {
+                  "state": "Covered"
+                },
+                "properties/spotMaxPrice": {
+                  "state": "Covered"
+                },
+                "properties/tags": {
+                  "state": "Covered"
+                },
+                "properties/type": {
+                  "state": "Covered"
+                },
+                "properties/upgradeSettings/maxSurge": {
+                  "state": "Covered"
+                },
+                "properties/vmSize": {
+                  "state": "Covered"
+                },
+                "properties/vnetSubnetID": {
+                  "state": "Covered"
+                },
+                "properties/workloadRuntime": {
+                  "state": "Covered"
+                },
+                "type": {
+                  "state": "Ignored"
+                }
+              }
+            }
+          },
+          "2022-07-01": {
+            "is_preview": false,
+            "is_active": false,
+            "swagger_rel_path": "containerservice/resource-manager/Microsoft.ContainerService/stable/2022-07-01/managedClusters.json",
+            "model": {
+              "name": "AgentPool",
+              "swagger_rel_path": "containerservice/resource-manager/Microsoft.ContainerService/stable/2022-07-01/managedClusters.json",
+              "properties": {
+                "id": {
+                  "state": "Ignored"
+                },
+                "name": {
+                  "state": "Ignored"
+                },
+                "properties/availabilityZones": {
+                  "state": "Covered"
+                },
+                "properties/count": {
+                  "state": "Covered"
+                },
+                "properties/creationData/sourceResourceId": {
+                  "state": "Uncovered"
+                },
+                "properties/currentOrchestratorVersion": {
+                  "state": "Ignored"
+                },
+                "properties/enableAutoScaling": {
+                  "state": "Covered"
+                },
+                "properties/enableEncryptionAtHost": {
+                  "state": "Covered"
+                },
+                "properties/enableFIPS": {
+                  "state": "Covered"
+                },
+                "properties/enableNodePublicIP": {
+                  "state": "Covered"
+                },
+                "properties/enableUltraSSD": {
+                  "state": "Covered"
+                },
+                "properties/gpuInstanceProfile": {
+                  "state": "Uncovered"
+                },
+                "properties/hostGroupID": {
+                  "state": "Covered"
+                },
+                "properties/kubeletConfig/allowedUnsafeSysctls": {
+                  "state": "Covered"
+                },
+                "properties/kubeletConfig/containerLogMaxFiles": {
+                  "state": "Covered"
+                },
+                "properties/kubeletConfig/containerLogMaxSizeMB": {
+                  "state": "Covered"
+                },
+                "properties/kubeletConfig/cpuCfsQuota": {
+                  "state": "Covered"
+                },
+                "properties/kubeletConfig/cpuCfsQuotaPeriod": {
+                  "state": "Covered"
+                },
+                "properties/kubeletConfig/cpuManagerPolicy": {
+                  "state": "Covered"
+                },
+                "properties/kubeletConfig/failSwapOn": {
+                  "state": "Covered"
+                },
+                "properties/kubeletConfig/imageGcHighThreshold": {
+                  "state": "Covered"
+                },
+                "properties/kubeletConfig/imageGcLowThreshold": {
+                  "state": "Covered"
+                },
+                "properties/kubeletConfig/podMaxPids": {
+                  "state": "Covered"
+                },
+                "properties/kubeletConfig/topologyManagerPolicy": {
+                  "state": "Covered"
+                },
+                "properties/kubeletDiskType": {
+                  "state": "Covered"
+                },
+                "properties/linuxOSConfig/swapFileSizeMB": {
+                  "state": "Covered"
+                },
+                "properties/linuxOSConfig/sysctls/fsAioMaxNr": {
+                  "state": "Covered"
+                },
+                "properties/linuxOSConfig/sysctls/fsFileMax": {
+                  "state": "Covered"
+                },
+                "properties/linuxOSConfig/sysctls/fsInotifyMaxUserWatches": {
+                  "state": "Covered"
+                },
+                "properties/linuxOSConfig/sysctls/fsNrOpen": {
+                  "state": "Covered"
+                },
+                "properties/linuxOSConfig/sysctls/kernelThreadsMax": {
+                  "state": "Covered"
+                },
+                "properties/linuxOSConfig/sysctls/netCoreNetdevMaxBacklog": {
+                  "state": "Covered"
+                },
+                "properties/linuxOSConfig/sysctls/netCoreOptmemMax": {
+                  "state": "Covered"
+                },
+                "properties/linuxOSConfig/sysctls/netCoreRmemDefault": {
+                  "state": "Covered"
+                },
+                "properties/linuxOSConfig/sysctls/netCoreRmemMax": {
+                  "state": "Covered"
+                },
+                "properties/linuxOSConfig/sysctls/netCoreSomaxconn": {
+                  "state": "Covered"
+                },
+                "properties/linuxOSConfig/sysctls/netCoreWmemDefault": {
+                  "state": "Covered"
+                },
+                "properties/linuxOSConfig/sysctls/netCoreWmemMax": {
+                  "state": "Covered"
+                },
+                "properties/linuxOSConfig/sysctls/netIpv4IpLocalPortRange": {
+                  "state": "Covered"
+                },
+                "properties/linuxOSConfig/sysctls/netIpv4NeighDefaultGcThresh1": {
+                  "state": "Covered"
+                },
+                "properties/linuxOSConfig/sysctls/netIpv4NeighDefaultGcThresh2": {
+                  "state": "Covered"
+                },
+                "properties/linuxOSConfig/sysctls/netIpv4NeighDefaultGcThresh3": {
+                  "state": "Covered"
+                },
+                "properties/linuxOSConfig/sysctls/netIpv4TcpFinTimeout": {
+                  "state": "Covered"
+                },
+                "properties/linuxOSConfig/sysctls/netIpv4TcpKeepaliveProbes": {
+                  "state": "Covered"
+                },
+                "properties/linuxOSConfig/sysctls/netIpv4TcpKeepaliveTime": {
+                  "state": "Covered"
+                },
+                "properties/linuxOSConfig/sysctls/netIpv4TcpMaxSynBacklog": {
+                  "state": "Covered"
+                },
+                "properties/linuxOSConfig/sysctls/netIpv4TcpMaxTwBuckets": {
+                  "state": "Covered"
+                },
+                "properties/linuxOSConfig/sysctls/netIpv4TcpTwReuse": {
+                  "state": "Covered"
+                },
+                "properties/linuxOSConfig/sysctls/netIpv4TcpkeepaliveIntvl": {
+                  "state": "Covered"
+                },
+                "properties/linuxOSConfig/sysctls/netNetfilterNfConntrackBuckets": {
+                  "state": "Covered"
+                },
+                "properties/linuxOSConfig/sysctls/netNetfilterNfConntrackMax": {
+                  "state": "Covered"
+                },
+                "properties/linuxOSConfig/sysctls/vmMaxMapCount": {
+                  "state": "Covered"
+                },
+                "properties/linuxOSConfig/sysctls/vmSwappiness": {
+                  "state": "Covered"
+                },
+                "properties/linuxOSConfig/sysctls/vmVfsCachePressure": {
+                  "state": "Covered"
+                },
+                "properties/linuxOSConfig/transparentHugePageDefrag": {
+                  "state": "Covered"
+                },
+                "properties/linuxOSConfig/transparentHugePageEnabled": {
+                  "state": "Covered"
+                },
+                "properties/maxCount": {
+                  "state": "Covered"
+                },
+                "properties/maxPods": {
+                  "state": "Covered"
                 },
                 "properties/minCount": {
                   "state": "Covered"
@@ -35205,6 +36161,11 @@
             "is_active": false,
             "swagger_rel_path": "containerservice/resource-manager/Microsoft.ContainerService/preview/2022-06-02-preview/managedClusters.json"
           },
+          "2022-07-01": {
+            "is_preview": false,
+            "is_active": false,
+            "swagger_rel_path": "containerservice/resource-manager/Microsoft.ContainerService/stable/2022-07-01/managedClusters.json"
+          },
           "2022-07-02-preview": {
             "is_preview": true,
             "is_active": false,
@@ -35469,6 +36430,56 @@
             "model": {
               "name": "MaintenanceConfiguration",
               "swagger_rel_path": "containerservice/resource-manager/Microsoft.ContainerService/preview/2022-06-02-preview/managedClusters.json",
+              "properties": {
+                "id": {
+                  "state": "Ignored"
+                },
+                "name": {
+                  "state": "Ignored"
+                },
+                "properties/notAllowedTime/end": {
+                  "state": "Covered"
+                },
+                "properties/notAllowedTime/start": {
+                  "state": "Covered"
+                },
+                "properties/timeInWeek/day": {
+                  "state": "Covered"
+                },
+                "properties/timeInWeek/hourSlots": {
+                  "state": "Covered"
+                },
+                "systemData/createdAt": {
+                  "state": "Ignored"
+                },
+                "systemData/createdBy": {
+                  "state": "Ignored"
+                },
+                "systemData/createdByType": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedAt": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedBy": {
+                  "state": "Ignored"
+                },
+                "systemData/lastModifiedByType": {
+                  "state": "Ignored"
+                },
+                "type": {
+                  "state": "Ignored"
+                }
+              }
+            }
+          },
+          "2022-07-01": {
+            "is_preview": false,
+            "is_active": false,
+            "swagger_rel_path": "containerservice/resource-manager/Microsoft.ContainerService/stable/2022-07-01/managedClusters.json",
+            "model": {
+              "name": "MaintenanceConfiguration",
+              "swagger_rel_path": "containerservice/resource-manager/Microsoft.ContainerService/stable/2022-07-01/managedClusters.json",
               "properties": {
                 "id": {
                   "state": "Ignored"
@@ -53676,6 +54687,54 @@
                   "state": "Uncovered"
                 },
                 "properties{GoogleCloudStorage}/typeProperties/serviceUrl": {
+                  "state": "Uncovered"
+                },
+                "properties{GoogleSheets}/annotations": {
+                  "state": "Uncovered"
+                },
+                "properties{GoogleSheets}/connectVia/parameters": {
+                  "state": "Uncovered"
+                },
+                "properties{GoogleSheets}/connectVia/referenceName": {
+                  "state": "Uncovered"
+                },
+                "properties{GoogleSheets}/connectVia/type": {
+                  "state": "Uncovered"
+                },
+                "properties{GoogleSheets}/description": {
+                  "state": "Uncovered"
+                },
+                "properties{GoogleSheets}/parameters": {
+                  "state": "Uncovered"
+                },
+                "properties{GoogleSheets}/type": {
+                  "state": "Uncovered"
+                },
+                "properties{GoogleSheets}/typeProperties/apiToken{AzureKeyVaultSecret}/secretName": {
+                  "state": "Uncovered"
+                },
+                "properties{GoogleSheets}/typeProperties/apiToken{AzureKeyVaultSecret}/secretVersion": {
+                  "state": "Uncovered"
+                },
+                "properties{GoogleSheets}/typeProperties/apiToken{AzureKeyVaultSecret}/store/parameters": {
+                  "state": "Uncovered"
+                },
+                "properties{GoogleSheets}/typeProperties/apiToken{AzureKeyVaultSecret}/store/referenceName": {
+                  "state": "Uncovered"
+                },
+                "properties{GoogleSheets}/typeProperties/apiToken{AzureKeyVaultSecret}/store/type": {
+                  "state": "Uncovered"
+                },
+                "properties{GoogleSheets}/typeProperties/apiToken{AzureKeyVaultSecret}/type": {
+                  "state": "Uncovered"
+                },
+                "properties{GoogleSheets}/typeProperties/apiToken{SecureString}/type": {
+                  "state": "Uncovered"
+                },
+                "properties{GoogleSheets}/typeProperties/apiToken{SecureString}/value": {
+                  "state": "Uncovered"
+                },
+                "properties{GoogleSheets}/typeProperties/encryptedCredential": {
                   "state": "Uncovered"
                 },
                 "properties{Greenplum}/annotations": {
@@ -109354,19 +110413,9 @@
             "is_active": true,
             "swagger_rel_path": "monitor/resource-manager/Microsoft.Insights/stable/2018-04-16/scheduledQueryRule_API.json"
           },
-          "2020-05-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "monitor/resource-manager/Microsoft.Insights/preview/2020-05-01-preview/scheduledQueryRule_API.json"
-          },
-          "2021-02-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "monitor/resource-manager/Microsoft.Insights/preview/2021-02-01-preview/scheduledQueryRule_API.json"
-          },
           "2021-08-01": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "monitor/resource-manager/Microsoft.Insights/stable/2021-08-01/scheduledQueryRule_API.json"
           }
         },
@@ -109496,256 +110545,9 @@
               }
             }
           },
-          "2020-05-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "monitor/resource-manager/Microsoft.Insights/preview/2020-05-01-preview/scheduledQueryRule_API.json",
-            "model": {
-              "name": "ScheduledQueryRuleResource",
-              "swagger_rel_path": "monitor/resource-manager/Microsoft.Insights/preview/2020-05-01-preview/scheduledQueryRule_API.json",
-              "properties": {
-                "etag": {
-                  "state": "Ignored"
-                },
-                "id": {
-                  "state": "Ignored"
-                },
-                "kind": {
-                  "state": "Ignored"
-                },
-                "location": {
-                  "state": "Covered"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/actions/actionGroupId": {
-                  "state": "Uncovered"
-                },
-                "properties/actions/webHookProperties": {
-                  "state": "Uncovered"
-                },
-                "properties/createdWithApiVersion": {
-                  "state": "Ignored"
-                },
-                "properties/criteria/allOf/dimensions/name": {
-                  "state": "Uncovered"
-                },
-                "properties/criteria/allOf/dimensions/operator": {
-                  "state": "Uncovered"
-                },
-                "properties/criteria/allOf/dimensions/values": {
-                  "state": "Uncovered"
-                },
-                "properties/criteria/allOf/failingPeriods/minFailingPeriodsToAlert": {
-                  "state": "Uncovered"
-                },
-                "properties/criteria/allOf/failingPeriods/numberOfEvaluationPeriods": {
-                  "state": "Uncovered"
-                },
-                "properties/criteria/allOf/metricMeasureColumn": {
-                  "state": "Uncovered"
-                },
-                "properties/criteria/allOf/operator": {
-                  "state": "Uncovered"
-                },
-                "properties/criteria/allOf/query": {
-                  "state": "Uncovered"
-                },
-                "properties/criteria/allOf/resourceIdColumn": {
-                  "state": "Uncovered"
-                },
-                "properties/criteria/allOf/threshold": {
-                  "state": "Uncovered"
-                },
-                "properties/criteria/allOf/timeAggregation": {
-                  "state": "Uncovered"
-                },
-                "properties/description": {
-                  "state": "Covered"
-                },
-                "properties/displayName": {
-                  "state": "Uncovered"
-                },
-                "properties/enabled": {
-                  "state": "Covered"
-                },
-                "properties/evaluationFrequency": {
-                  "state": "Uncovered"
-                },
-                "properties/isLegacyLogAnalyticsRule": {
-                  "state": "Ignored"
-                },
-                "properties/muteActionsDuration": {
-                  "state": "Uncovered"
-                },
-                "properties/overrideQueryTimeRange": {
-                  "state": "Uncovered"
-                },
-                "properties/scopes": {
-                  "state": "Uncovered"
-                },
-                "properties/severity": {
-                  "state": "Uncovered"
-                },
-                "properties/targetResourceTypes": {
-                  "state": "Uncovered"
-                },
-                "properties/windowSize": {
-                  "state": "Uncovered"
-                },
-                "tags": {
-                  "state": "Covered"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
-          "2021-02-01-preview": {
-            "is_preview": true,
-            "is_active": false,
-            "swagger_rel_path": "monitor/resource-manager/Microsoft.Insights/preview/2021-02-01-preview/scheduledQueryRule_API.json",
-            "model": {
-              "name": "ScheduledQueryRuleResource",
-              "swagger_rel_path": "monitor/resource-manager/Microsoft.Insights/preview/2021-02-01-preview/scheduledQueryRule_API.json",
-              "properties": {
-                "etag": {
-                  "state": "Ignored"
-                },
-                "id": {
-                  "state": "Ignored"
-                },
-                "kind": {
-                  "state": "Uncovered"
-                },
-                "location": {
-                  "state": "Covered"
-                },
-                "name": {
-                  "state": "Ignored"
-                },
-                "properties/actions/actionGroups": {
-                  "state": "Uncovered"
-                },
-                "properties/actions/customProperties": {
-                  "state": "Uncovered"
-                },
-                "properties/autoMitigate": {
-                  "state": "Covered"
-                },
-                "properties/checkWorkspaceAlertsStorageConfigured": {
-                  "state": "Uncovered"
-                },
-                "properties/createdWithApiVersion": {
-                  "state": "Ignored"
-                },
-                "properties/criteria/allOf/dimensions/name": {
-                  "state": "Uncovered"
-                },
-                "properties/criteria/allOf/dimensions/operator": {
-                  "state": "Uncovered"
-                },
-                "properties/criteria/allOf/dimensions/values": {
-                  "state": "Uncovered"
-                },
-                "properties/criteria/allOf/failingPeriods/minFailingPeriodsToAlert": {
-                  "state": "Uncovered"
-                },
-                "properties/criteria/allOf/failingPeriods/numberOfEvaluationPeriods": {
-                  "state": "Uncovered"
-                },
-                "properties/criteria/allOf/metricMeasureColumn": {
-                  "state": "Uncovered"
-                },
-                "properties/criteria/allOf/metricName": {
-                  "state": "Uncovered"
-                },
-                "properties/criteria/allOf/operator": {
-                  "state": "Uncovered"
-                },
-                "properties/criteria/allOf/query": {
-                  "state": "Uncovered"
-                },
-                "properties/criteria/allOf/resourceIdColumn": {
-                  "state": "Uncovered"
-                },
-                "properties/criteria/allOf/threshold": {
-                  "state": "Uncovered"
-                },
-                "properties/criteria/allOf/timeAggregation": {
-                  "state": "Uncovered"
-                },
-                "properties/description": {
-                  "state": "Covered"
-                },
-                "properties/displayName": {
-                  "state": "Uncovered"
-                },
-                "properties/enabled": {
-                  "state": "Covered"
-                },
-                "properties/evaluationFrequency": {
-                  "state": "Uncovered"
-                },
-                "properties/isLegacyLogAnalyticsRule": {
-                  "state": "Ignored"
-                },
-                "properties/isWorkspaceAlertsStorageConfigured": {
-                  "state": "Ignored"
-                },
-                "properties/muteActionsDuration": {
-                  "state": "Uncovered"
-                },
-                "properties/overrideQueryTimeRange": {
-                  "state": "Uncovered"
-                },
-                "properties/scopes": {
-                  "state": "Uncovered"
-                },
-                "properties/severity": {
-                  "state": "Uncovered"
-                },
-                "properties/skipQueryValidation": {
-                  "state": "Uncovered"
-                },
-                "properties/targetResourceTypes": {
-                  "state": "Uncovered"
-                },
-                "properties/windowSize": {
-                  "state": "Uncovered"
-                },
-                "systemData/createdAt": {
-                  "state": "Ignored"
-                },
-                "systemData/createdBy": {
-                  "state": "Ignored"
-                },
-                "systemData/createdByType": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedAt": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedBy": {
-                  "state": "Ignored"
-                },
-                "systemData/lastModifiedByType": {
-                  "state": "Ignored"
-                },
-                "tags": {
-                  "state": "Covered"
-                },
-                "type": {
-                  "state": "Ignored"
-                }
-              }
-            }
-          },
           "2021-08-01": {
             "is_preview": false,
-            "is_active": false,
+            "is_active": true,
             "swagger_rel_path": "monitor/resource-manager/Microsoft.Insights/stable/2021-08-01/scheduledQueryRule_API.json",
             "model": {
               "name": "ScheduledQueryRuleResource",
@@ -109758,7 +110560,7 @@
                   "state": "Ignored"
                 },
                 "kind": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "location": {
                   "state": "Covered"
@@ -109767,67 +110569,67 @@
                   "state": "Ignored"
                 },
                 "properties/actions/actionGroups": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/actions/customProperties": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/autoMitigate": {
                   "state": "Covered"
                 },
                 "properties/checkWorkspaceAlertsStorageConfigured": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/createdWithApiVersion": {
                   "state": "Ignored"
                 },
                 "properties/criteria/allOf/dimensions/name": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/criteria/allOf/dimensions/operator": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/criteria/allOf/dimensions/values": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/criteria/allOf/failingPeriods/minFailingPeriodsToAlert": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/criteria/allOf/failingPeriods/numberOfEvaluationPeriods": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/criteria/allOf/metricMeasureColumn": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/criteria/allOf/metricName": {
                   "state": "Uncovered"
                 },
                 "properties/criteria/allOf/operator": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/criteria/allOf/query": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/criteria/allOf/resourceIdColumn": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/criteria/allOf/threshold": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/criteria/allOf/timeAggregation": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/description": {
                   "state": "Covered"
                 },
                 "properties/displayName": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/enabled": {
                   "state": "Covered"
                 },
                 "properties/evaluationFrequency": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/isLegacyLogAnalyticsRule": {
                   "state": "Ignored"
@@ -109836,25 +110638,25 @@
                   "state": "Ignored"
                 },
                 "properties/muteActionsDuration": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/overrideQueryTimeRange": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/scopes": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/severity": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/skipQueryValidation": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/targetResourceTypes": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties/windowSize": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "systemData/createdAt": {
                   "state": "Ignored"
@@ -502771,7 +503573,7 @@
                   "state": "Covered"
                 },
                 "properties{AzureWorkload}/backupManagementType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/makePolicyConsistent": {
                   "state": "Uncovered"
@@ -502783,106 +503585,106 @@
                   "state": "Uncovered"
                 },
                 "properties{AzureWorkload}/settings/isCompression": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/settings/issqlcompression": {
                   "state": "Uncovered"
                 },
                 "properties{AzureWorkload}/settings/timeZone": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/policyType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/dailySchedule/retentionDuration/count": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/dailySchedule/retentionDuration/durationType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/dailySchedule/retentionTimes": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionDuration/count": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionDuration/durationType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleDaily/daysOfTheMonth/date": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleDaily/daysOfTheMonth/isLast": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleFormatType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleWeekly/daysOfTheWeek": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleWeekly/weeksOfTheMonth": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionTimes": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/retentionPolicyType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/daysOfTheWeek": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/retentionDuration/count": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/retentionDuration/durationType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/retentionTimes": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/monthsOfYear": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionDuration/count": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionDuration/durationType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleDaily/daysOfTheMonth/date": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleDaily/daysOfTheMonth/isLast": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleFormatType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleWeekly/daysOfTheWeek": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleWeekly/weeksOfTheMonth": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionTimes": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{SimpleRetentionPolicy}/retentionDuration/count": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{SimpleRetentionPolicy}/retentionDuration/durationType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{SimpleRetentionPolicy}/retentionPolicyType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{LogSchedulePolicy}/scheduleFrequencyInMins": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{LogSchedulePolicy}/schedulePolicyType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{LongTermSchedulePolicy}/schedulePolicyType": {
                   "state": "Uncovered"
@@ -502921,16 +503723,16 @@
                   "state": "Uncovered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/schedulePolicyType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/scheduleRunDays": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/scheduleRunFrequency": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/scheduleRunTimes": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/scheduleWeeklyFrequency": {
                   "state": "Uncovered"
@@ -502939,7 +503741,7 @@
                   "state": "Uncovered"
                 },
                 "properties{AzureWorkload}/workLoadType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{GenericProtectionPolicy}/backupManagementType": {
                   "state": "Uncovered"
@@ -503697,7 +504499,7 @@
                   "state": "Covered"
                 },
                 "properties{AzureWorkload}/backupManagementType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/makePolicyConsistent": {
                   "state": "Uncovered"
@@ -503709,106 +504511,106 @@
                   "state": "Uncovered"
                 },
                 "properties{AzureWorkload}/settings/isCompression": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/settings/issqlcompression": {
                   "state": "Uncovered"
                 },
                 "properties{AzureWorkload}/settings/timeZone": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/policyType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/dailySchedule/retentionDuration/count": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/dailySchedule/retentionDuration/durationType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/dailySchedule/retentionTimes": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionDuration/count": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionDuration/durationType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleDaily/daysOfTheMonth/date": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleDaily/daysOfTheMonth/isLast": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleFormatType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleWeekly/daysOfTheWeek": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleWeekly/weeksOfTheMonth": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionTimes": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/retentionPolicyType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/daysOfTheWeek": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/retentionDuration/count": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/retentionDuration/durationType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/retentionTimes": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/monthsOfYear": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionDuration/count": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionDuration/durationType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleDaily/daysOfTheMonth/date": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleDaily/daysOfTheMonth/isLast": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleFormatType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleWeekly/daysOfTheWeek": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleWeekly/weeksOfTheMonth": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionTimes": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{SimpleRetentionPolicy}/retentionDuration/count": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{SimpleRetentionPolicy}/retentionDuration/durationType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{SimpleRetentionPolicy}/retentionPolicyType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{LogSchedulePolicy}/scheduleFrequencyInMins": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{LogSchedulePolicy}/schedulePolicyType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{LongTermSchedulePolicy}/schedulePolicyType": {
                   "state": "Uncovered"
@@ -503847,22 +504649,22 @@
                   "state": "Uncovered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/schedulePolicyType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/scheduleRunDays": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/scheduleRunFrequency": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/scheduleRunTimes": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/scheduleWeeklyFrequency": {
                   "state": "Uncovered"
                 },
                 "properties{AzureWorkload}/workLoadType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{GenericProtectionPolicy}/backupManagementType": {
                   "state": "Uncovered"
@@ -504617,7 +505419,7 @@
                   "state": "Covered"
                 },
                 "properties{AzureWorkload}/backupManagementType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/makePolicyConsistent": {
                   "state": "Uncovered"
@@ -504629,106 +505431,106 @@
                   "state": "Uncovered"
                 },
                 "properties{AzureWorkload}/settings/isCompression": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/settings/issqlcompression": {
                   "state": "Uncovered"
                 },
                 "properties{AzureWorkload}/settings/timeZone": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/policyType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/dailySchedule/retentionDuration/count": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/dailySchedule/retentionDuration/durationType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/dailySchedule/retentionTimes": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionDuration/count": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionDuration/durationType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleDaily/daysOfTheMonth/date": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleDaily/daysOfTheMonth/isLast": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleFormatType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleWeekly/daysOfTheWeek": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleWeekly/weeksOfTheMonth": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionTimes": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/retentionPolicyType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/daysOfTheWeek": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/retentionDuration/count": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/retentionDuration/durationType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/retentionTimes": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/monthsOfYear": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionDuration/count": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionDuration/durationType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleDaily/daysOfTheMonth/date": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleDaily/daysOfTheMonth/isLast": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleFormatType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleWeekly/daysOfTheWeek": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleWeekly/weeksOfTheMonth": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionTimes": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{SimpleRetentionPolicy}/retentionDuration/count": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{SimpleRetentionPolicy}/retentionDuration/durationType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{SimpleRetentionPolicy}/retentionPolicyType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{LogSchedulePolicy}/scheduleFrequencyInMins": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{LogSchedulePolicy}/schedulePolicyType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{LongTermSchedulePolicy}/schedulePolicyType": {
                   "state": "Uncovered"
@@ -504767,22 +505569,22 @@
                   "state": "Uncovered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/schedulePolicyType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/scheduleRunDays": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/scheduleRunFrequency": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/scheduleRunTimes": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/scheduleWeeklyFrequency": {
                   "state": "Uncovered"
                 },
                 "properties{AzureWorkload}/workLoadType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{GenericProtectionPolicy}/backupManagementType": {
                   "state": "Uncovered"
@@ -505537,7 +506339,7 @@
                   "state": "Covered"
                 },
                 "properties{AzureWorkload}/backupManagementType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/makePolicyConsistent": {
                   "state": "Uncovered"
@@ -505549,106 +506351,106 @@
                   "state": "Uncovered"
                 },
                 "properties{AzureWorkload}/settings/isCompression": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/settings/issqlcompression": {
                   "state": "Uncovered"
                 },
                 "properties{AzureWorkload}/settings/timeZone": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/policyType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/dailySchedule/retentionDuration/count": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/dailySchedule/retentionDuration/durationType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/dailySchedule/retentionTimes": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionDuration/count": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionDuration/durationType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleDaily/daysOfTheMonth/date": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleDaily/daysOfTheMonth/isLast": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleFormatType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleWeekly/daysOfTheWeek": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleWeekly/weeksOfTheMonth": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionTimes": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/retentionPolicyType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/daysOfTheWeek": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/retentionDuration/count": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/retentionDuration/durationType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/retentionTimes": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/monthsOfYear": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionDuration/count": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionDuration/durationType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleDaily/daysOfTheMonth/date": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleDaily/daysOfTheMonth/isLast": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleFormatType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleWeekly/daysOfTheWeek": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleWeekly/weeksOfTheMonth": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionTimes": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{SimpleRetentionPolicy}/retentionDuration/count": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{SimpleRetentionPolicy}/retentionDuration/durationType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{SimpleRetentionPolicy}/retentionPolicyType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{LogSchedulePolicy}/scheduleFrequencyInMins": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{LogSchedulePolicy}/schedulePolicyType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{LongTermSchedulePolicy}/schedulePolicyType": {
                   "state": "Uncovered"
@@ -505687,22 +506489,22 @@
                   "state": "Uncovered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/schedulePolicyType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/scheduleRunDays": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/scheduleRunFrequency": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/scheduleRunTimes": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/scheduleWeeklyFrequency": {
                   "state": "Uncovered"
                 },
                 "properties{AzureWorkload}/workLoadType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{GenericProtectionPolicy}/backupManagementType": {
                   "state": "Uncovered"
@@ -506460,7 +507262,7 @@
                   "state": "Covered"
                 },
                 "properties{AzureWorkload}/backupManagementType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/makePolicyConsistent": {
                   "state": "Uncovered"
@@ -506472,106 +507274,106 @@
                   "state": "Uncovered"
                 },
                 "properties{AzureWorkload}/settings/isCompression": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/settings/issqlcompression": {
                   "state": "Uncovered"
                 },
                 "properties{AzureWorkload}/settings/timeZone": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/policyType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/dailySchedule/retentionDuration/count": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/dailySchedule/retentionDuration/durationType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/dailySchedule/retentionTimes": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionDuration/count": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionDuration/durationType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleDaily/daysOfTheMonth/date": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleDaily/daysOfTheMonth/isLast": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleFormatType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleWeekly/daysOfTheWeek": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleWeekly/weeksOfTheMonth": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionTimes": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/retentionPolicyType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/daysOfTheWeek": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/retentionDuration/count": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/retentionDuration/durationType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/retentionTimes": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/monthsOfYear": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionDuration/count": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionDuration/durationType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleDaily/daysOfTheMonth/date": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleDaily/daysOfTheMonth/isLast": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleFormatType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleWeekly/daysOfTheWeek": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleWeekly/weeksOfTheMonth": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionTimes": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{SimpleRetentionPolicy}/retentionDuration/count": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{SimpleRetentionPolicy}/retentionDuration/durationType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{SimpleRetentionPolicy}/retentionPolicyType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{LogSchedulePolicy}/scheduleFrequencyInMins": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{LogSchedulePolicy}/schedulePolicyType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{LongTermSchedulePolicy}/schedulePolicyType": {
                   "state": "Uncovered"
@@ -506610,16 +507412,16 @@
                   "state": "Uncovered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/schedulePolicyType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/scheduleRunDays": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/scheduleRunFrequency": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/scheduleRunTimes": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/scheduleWeeklyFrequency": {
                   "state": "Uncovered"
@@ -506628,7 +507430,7 @@
                   "state": "Uncovered"
                 },
                 "properties{AzureWorkload}/workLoadType": {
-                  "state": "Uncovered"
+                  "state": "Covered"
                 },
                 "properties{GenericProtectionPolicy}/backupManagementType": {
                   "state": "Uncovered"
@@ -507994,6 +508796,59 @@
                 }
               }
             }
+          },
+          "2022-08-01": {
+            "is_preview": false,
+            "is_active": false,
+            "swagger_rel_path": "recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2022-08-01/service.json",
+            "model": {
+              "name": "FabricCreationInput",
+              "swagger_rel_path": "recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2022-08-01/service.json",
+              "properties": {
+                "properties/customDetails{Azure}/instanceType": {
+                  "state": "Covered"
+                },
+                "properties/customDetails{Azure}/location": {
+                  "state": "Covered"
+                },
+                "properties/customDetails{InMageRcm}/instanceType": {
+                  "state": "Uncovered"
+                },
+                "properties/customDetails{InMageRcm}/physicalSiteId": {
+                  "state": "Uncovered"
+                },
+                "properties/customDetails{InMageRcm}/sourceAgentIdentity/aadAuthority": {
+                  "state": "Uncovered"
+                },
+                "properties/customDetails{InMageRcm}/sourceAgentIdentity/applicationId": {
+                  "state": "Uncovered"
+                },
+                "properties/customDetails{InMageRcm}/sourceAgentIdentity/audience": {
+                  "state": "Uncovered"
+                },
+                "properties/customDetails{InMageRcm}/sourceAgentIdentity/objectId": {
+                  "state": "Uncovered"
+                },
+                "properties/customDetails{InMageRcm}/sourceAgentIdentity/tenantId": {
+                  "state": "Uncovered"
+                },
+                "properties/customDetails{InMageRcm}/vmwareSiteId": {
+                  "state": "Uncovered"
+                },
+                "properties/customDetails{VMwareV2}/instanceType": {
+                  "state": "Uncovered"
+                },
+                "properties/customDetails{VMwareV2}/migrationSolutionId": {
+                  "state": "Uncovered"
+                },
+                "properties/customDetails{VMwareV2}/physicalSiteId": {
+                  "state": "Uncovered"
+                },
+                "properties/customDetails{VMwareV2}/vmwareSiteId": {
+                  "state": "Uncovered"
+                }
+              }
+            }
           }
         }
       }
@@ -508075,6 +508930,11 @@
             "is_preview": false,
             "is_active": false,
             "swagger_rel_path": "recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2022-05-01/service.json"
+          },
+          "2022-08-01": {
+            "is_preview": false,
+            "is_active": false,
+            "swagger_rel_path": "recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2022-08-01/service.json"
           }
         },
         "PUT": {
@@ -508512,6 +509372,35 @@
                 }
               }
             }
+          },
+          "2022-08-01": {
+            "is_preview": false,
+            "is_active": false,
+            "swagger_rel_path": "recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2022-08-01/service.json",
+            "model": {
+              "name": "CreateNetworkMappingInput",
+              "swagger_rel_path": "recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2022-08-01/service.json",
+              "properties": {
+                "properties/fabricSpecificDetails{AzureToAzure}/instanceType": {
+                  "state": "Uncovered"
+                },
+                "properties/fabricSpecificDetails{AzureToAzure}/primaryNetworkId": {
+                  "state": "Covered"
+                },
+                "properties/fabricSpecificDetails{VmmToAzure}/instanceType": {
+                  "state": "Uncovered"
+                },
+                "properties/fabricSpecificDetails{VmmToVmm}/instanceType": {
+                  "state": "Uncovered"
+                },
+                "properties/recoveryFabricName": {
+                  "state": "Covered"
+                },
+                "properties/recoveryNetworkId": {
+                  "state": "Covered"
+                }
+              }
+            }
           }
         }
       }
@@ -508800,6 +509689,26 @@
             "model": {
               "name": "CreateProtectionContainerInput",
               "swagger_rel_path": "recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2022-05-01/service.json",
+              "properties": {
+                "properties/providerSpecificInput{A2ACrossClusterMigration}/instanceType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{A2A}/instanceType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{VMwareCbt}/instanceType": {
+                  "state": "Uncovered"
+                }
+              }
+            }
+          },
+          "2022-08-01": {
+            "is_preview": false,
+            "is_active": false,
+            "swagger_rel_path": "recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2022-08-01/service.json",
+            "model": {
+              "name": "CreateProtectionContainerInput",
+              "swagger_rel_path": "recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2022-08-01/service.json",
               "properties": {
                 "properties/providerSpecificInput{A2ACrossClusterMigration}/instanceType": {
                   "state": "Uncovered"
@@ -514989,6 +515898,431 @@
                 }
               }
             }
+          },
+          "2022-08-01": {
+            "is_preview": false,
+            "is_active": false,
+            "swagger_rel_path": "recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2022-08-01/service.json",
+            "model": {
+              "name": "EnableProtectionInput",
+              "swagger_rel_path": "recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2022-08-01/service.json",
+              "properties": {
+                "properties/policyId": {
+                  "state": "Covered"
+                },
+                "properties/protectableItemId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{A2ACrossClusterMigration}/fabricObjectId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{A2ACrossClusterMigration}/instanceType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{A2ACrossClusterMigration}/recoveryContainerId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{A2A}/diskEncryptionInfo/diskEncryptionKeyInfo/keyVaultResourceArmId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{A2A}/diskEncryptionInfo/diskEncryptionKeyInfo/secretIdentifier": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{A2A}/diskEncryptionInfo/keyEncryptionKeyInfo/keyIdentifier": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{A2A}/diskEncryptionInfo/keyEncryptionKeyInfo/keyVaultResourceArmId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{A2A}/fabricObjectId": {
+                  "state": "Covered"
+                },
+                "properties/providerSpecificDetails{A2A}/instanceType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{A2A}/multiVmGroupId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{A2A}/multiVmGroupName": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{A2A}/recoveryAvailabilitySetId": {
+                  "state": "Covered"
+                },
+                "properties/providerSpecificDetails{A2A}/recoveryAvailabilityZone": {
+                  "state": "Covered"
+                },
+                "properties/providerSpecificDetails{A2A}/recoveryAzureNetworkId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{A2A}/recoveryBootDiagStorageAccountId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{A2A}/recoveryCapacityReservationGroupId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{A2A}/recoveryCloudServiceId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{A2A}/recoveryContainerId": {
+                  "state": "Covered"
+                },
+                "properties/providerSpecificDetails{A2A}/recoveryExtendedLocation/name": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{A2A}/recoveryExtendedLocation/type": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{A2A}/recoveryProximityPlacementGroupId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{A2A}/recoveryResourceGroupId": {
+                  "state": "Covered"
+                },
+                "properties/providerSpecificDetails{A2A}/recoverySubnetName": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{A2A}/recoveryVirtualMachineScaleSetId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{A2A}/vmDisks/diskUri": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{A2A}/vmDisks/primaryStagingAzureStorageAccountId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{A2A}/vmDisks/recoveryAzureStorageAccountId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{A2A}/vmManagedDisks/diskEncryptionInfo/diskEncryptionKeyInfo/keyVaultResourceArmId": {
+                  "state": "Covered"
+                },
+                "properties/providerSpecificDetails{A2A}/vmManagedDisks/diskEncryptionInfo/diskEncryptionKeyInfo/secretIdentifier": {
+                  "state": "Covered"
+                },
+                "properties/providerSpecificDetails{A2A}/vmManagedDisks/diskEncryptionInfo/keyEncryptionKeyInfo/keyIdentifier": {
+                  "state": "Covered"
+                },
+                "properties/providerSpecificDetails{A2A}/vmManagedDisks/diskEncryptionInfo/keyEncryptionKeyInfo/keyVaultResourceArmId": {
+                  "state": "Covered"
+                },
+                "properties/providerSpecificDetails{A2A}/vmManagedDisks/diskId": {
+                  "state": "Covered"
+                },
+                "properties/providerSpecificDetails{A2A}/vmManagedDisks/primaryStagingAzureStorageAccountId": {
+                  "state": "Covered"
+                },
+                "properties/providerSpecificDetails{A2A}/vmManagedDisks/recoveryDiskEncryptionSetId": {
+                  "state": "Covered"
+                },
+                "properties/providerSpecificDetails{A2A}/vmManagedDisks/recoveryReplicaDiskAccountType": {
+                  "state": "Covered"
+                },
+                "properties/providerSpecificDetails{A2A}/vmManagedDisks/recoveryResourceGroupId": {
+                  "state": "Covered"
+                },
+                "properties/providerSpecificDetails{A2A}/vmManagedDisks/recoveryTargetDiskAccountType": {
+                  "state": "Covered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/diskEncryptionSetId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/diskType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/disksToInclude": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/disksToIncludeForManagedDisks/diskEncryptionSetId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/disksToIncludeForManagedDisks/diskId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/disksToIncludeForManagedDisks/diskType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/disksToIncludeForManagedDisks/logStorageAccountId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/enableRdpOnTargetOption": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/hvHostVmId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/instanceType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/licenseType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/logStorageAccountId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/osType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/seedManagedDiskTags": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/sqlServerLicenseType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/targetAvailabilitySetId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/targetAvailabilityZone": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/targetAzureNetworkId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/targetAzureSubnetId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/targetAzureV1ResourceGroupId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/targetAzureV2ResourceGroupId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/targetAzureVmName": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/targetManagedDiskTags": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/targetNicTags": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/targetProximityPlacementGroupId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/targetStorageAccountId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/targetVmSize": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/targetVmTags": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/useManagedDisks": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/useManagedDisksForReplication": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/vhdId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{HyperVReplicaAzure}/vmName": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageAzureV2}/diskEncryptionSetId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageAzureV2}/diskType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageAzureV2}/disksToInclude/diskEncryptionSetId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageAzureV2}/disksToInclude/diskId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageAzureV2}/disksToInclude/diskType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageAzureV2}/disksToInclude/logStorageAccountId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageAzureV2}/enableRdpOnTargetOption": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageAzureV2}/instanceType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageAzureV2}/licenseType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageAzureV2}/logStorageAccountId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageAzureV2}/masterTargetId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageAzureV2}/multiVmGroupId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageAzureV2}/multiVmGroupName": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageAzureV2}/processServerId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageAzureV2}/runAsAccountId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageAzureV2}/seedManagedDiskTags": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageAzureV2}/sqlServerLicenseType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageAzureV2}/storageAccountId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageAzureV2}/targetAvailabilitySetId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageAzureV2}/targetAvailabilityZone": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageAzureV2}/targetAzureNetworkId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageAzureV2}/targetAzureSubnetId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageAzureV2}/targetAzureV1ResourceGroupId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageAzureV2}/targetAzureV2ResourceGroupId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageAzureV2}/targetAzureVmName": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageAzureV2}/targetManagedDiskTags": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageAzureV2}/targetNicTags": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageAzureV2}/targetProximityPlacementGroupId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageAzureV2}/targetVmSize": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageAzureV2}/targetVmTags": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageRcm}/disksDefault/diskEncryptionSetId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageRcm}/disksDefault/diskType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageRcm}/disksDefault/logStorageAccountId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageRcm}/disksToInclude/diskEncryptionSetId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageRcm}/disksToInclude/diskId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageRcm}/disksToInclude/diskType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageRcm}/disksToInclude/logStorageAccountId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageRcm}/fabricDiscoveryMachineId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageRcm}/instanceType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageRcm}/licenseType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageRcm}/multiVmGroupName": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageRcm}/processServerId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageRcm}/runAsAccountId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageRcm}/targetAvailabilitySetId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageRcm}/targetAvailabilityZone": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageRcm}/targetBootDiagnosticsStorageAccountId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageRcm}/targetNetworkId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageRcm}/targetProximityPlacementGroupId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageRcm}/targetResourceGroupId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageRcm}/targetSubnetName": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageRcm}/targetVmName": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageRcm}/targetVmSize": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageRcm}/testNetworkId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMageRcm}/testSubnetName": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMage}/datastoreName": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMage}/diskExclusionInput/diskSignatureOptions/diskSignature": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMage}/diskExclusionInput/volumeOptions/onlyExcludeIfSingleVolume": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMage}/diskExclusionInput/volumeOptions/volumeLabel": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMage}/disksToInclude": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMage}/instanceType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMage}/masterTargetId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMage}/multiVmGroupId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMage}/multiVmGroupName": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMage}/processServerId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMage}/retentionDrive": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMage}/runAsAccountId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificDetails{InMage}/vmFriendlyName": {
+                  "state": "Uncovered"
+                }
+              }
+            }
           }
         }
       }
@@ -515727,6 +517061,56 @@
                 }
               }
             }
+          },
+          "2022-08-01": {
+            "is_preview": false,
+            "is_active": false,
+            "swagger_rel_path": "recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2022-08-01/service.json",
+            "model": {
+              "name": "CreateProtectionContainerMappingInput",
+              "swagger_rel_path": "recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2022-08-01/service.json",
+              "properties": {
+                "properties/policyId": {
+                  "state": "Covered"
+                },
+                "properties/providerSpecificInput{A2A}/agentAutoUpdateStatus": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{A2A}/automationAccountArmId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{A2A}/automationAccountAuthenticationType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{A2A}/instanceType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{VMwareCbt}/instanceType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{VMwareCbt}/keyVaultId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{VMwareCbt}/keyVaultUri": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{VMwareCbt}/serviceBusConnectionStringSecretName": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{VMwareCbt}/storageAccountId": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{VMwareCbt}/storageAccountSasSecretName": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{VMwareCbt}/targetLocation": {
+                  "state": "Uncovered"
+                },
+                "properties/targetProtectionContainerId": {
+                  "state": "Covered"
+                }
+              }
+            }
           }
         }
       }
@@ -515808,6 +517192,11 @@
             "is_preview": false,
             "is_active": false,
             "swagger_rel_path": "recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2022-05-01/service.json"
+          },
+          "2022-08-01": {
+            "is_preview": false,
+            "is_active": false,
+            "swagger_rel_path": "recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2022-08-01/service.json"
           }
         },
         "PUT": {
@@ -517988,6 +519377,158 @@
             "model": {
               "name": "CreatePolicyInput",
               "swagger_rel_path": "recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2022-05-01/service.json",
+              "properties": {
+                "properties/providerSpecificInput{A2ACrossClusterMigration}/instanceType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{A2A}/appConsistentFrequencyInMinutes": {
+                  "state": "Covered"
+                },
+                "properties/providerSpecificInput{A2A}/crashConsistentFrequencyInMinutes": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{A2A}/instanceType": {
+                  "state": "Covered"
+                },
+                "properties/providerSpecificInput{A2A}/multiVmSyncStatus": {
+                  "state": "Covered"
+                },
+                "properties/providerSpecificInput{A2A}/recoveryPointHistory": {
+                  "state": "Covered"
+                },
+                "properties/providerSpecificInput{HyperVReplica2012R2}/allowedAuthenticationType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{HyperVReplica2012R2}/applicationConsistentSnapshotFrequencyInHours": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{HyperVReplica2012R2}/compression": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{HyperVReplica2012R2}/initialReplicationMethod": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{HyperVReplica2012R2}/instanceType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{HyperVReplica2012R2}/offlineReplicationExportPath": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{HyperVReplica2012R2}/offlineReplicationImportPath": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{HyperVReplica2012R2}/onlineReplicationStartTime": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{HyperVReplica2012R2}/recoveryPoints": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{HyperVReplica2012R2}/replicaDeletion": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{HyperVReplica2012R2}/replicationFrequencyInSeconds": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{HyperVReplica2012R2}/replicationPort": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{HyperVReplicaAzure}/applicationConsistentSnapshotFrequencyInHours": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{HyperVReplicaAzure}/instanceType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{HyperVReplicaAzure}/onlineReplicationStartTime": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{HyperVReplicaAzure}/recoveryPointHistoryDuration": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{HyperVReplicaAzure}/replicationInterval": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{HyperVReplicaAzure}/storageAccounts": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{InMageAzureV2}/appConsistentFrequencyInMinutes": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{InMageAzureV2}/crashConsistentFrequencyInMinutes": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{InMageAzureV2}/instanceType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{InMageAzureV2}/multiVmSyncStatus": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{InMageAzureV2}/recoveryPointHistory": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{InMageAzureV2}/recoveryPointThresholdInMinutes": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{InMageRcmFailback}/appConsistentFrequencyInMinutes": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{InMageRcmFailback}/crashConsistentFrequencyInMinutes": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{InMageRcmFailback}/instanceType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{InMageRcm}/appConsistentFrequencyInMinutes": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{InMageRcm}/crashConsistentFrequencyInMinutes": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{InMageRcm}/enableMultiVmSync": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{InMageRcm}/instanceType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{InMageRcm}/recoveryPointHistoryInMinutes": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{InMage}/appConsistentFrequencyInMinutes": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{InMage}/instanceType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{InMage}/multiVmSyncStatus": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{InMage}/recoveryPointHistory": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{InMage}/recoveryPointThresholdInMinutes": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{VMwareCbt}/appConsistentFrequencyInMinutes": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{VMwareCbt}/crashConsistentFrequencyInMinutes": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{VMwareCbt}/instanceType": {
+                  "state": "Uncovered"
+                },
+                "properties/providerSpecificInput{VMwareCbt}/recoveryPointHistoryInMinutes": {
+                  "state": "Uncovered"
+                }
+              }
+            }
+          },
+          "2022-08-01": {
+            "is_preview": false,
+            "is_active": false,
+            "swagger_rel_path": "recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2022-08-01/service.json",
+            "model": {
+              "name": "CreatePolicyInput",
+              "swagger_rel_path": "recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2022-08-01/service.json",
               "properties": {
                 "properties/providerSpecificInput{A2ACrossClusterMigration}/instanceType": {
                   "state": "Uncovered"
@@ -569095,7 +570636,7 @@
                   "state": "Uncovered"
                 },
                 "properties/customLibraries/uploadedTimestamp": {
-                  "state": "Ignored"
+                  "state": "Uncovered"
                 },
                 "properties/defaultSparkLogFolder": {
                   "state": "Covered"
@@ -569107,6 +570648,9 @@
                   "state": "Uncovered"
                 },
                 "properties/dynamicExecutorAllocation/minExecutors": {
+                  "state": "Uncovered"
+                },
+                "properties/isAutotuneEnabled": {
                   "state": "Uncovered"
                 },
                 "properties/isComputeIsolationEnabled": {
@@ -569235,6 +570779,9 @@
                   "state": "Uncovered"
                 },
                 "properties/dynamicExecutorAllocation/minExecutors": {
+                  "state": "Uncovered"
+                },
+                "properties/isAutotuneEnabled": {
                   "state": "Uncovered"
                 },
                 "properties/isComputeIsolationEnabled": {
