@@ -10107,6 +10107,7 @@
     "properties": [
       "extendedLocation/name",
       "extendedLocation/type",
+      "id",
       "identity/principalId",
       "identity/tenantId",
       "identity/type",
@@ -10288,6 +10289,7 @@
     "properties": [
       "extendedLocation/name",
       "extendedLocation/type",
+      "id",
       "identity/principalId",
       "identity/tenantId",
       "identity/type",
@@ -19662,6 +19664,51 @@
     ]
   },
   {
+    "api_version": "2021-12-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.LOADTESTSERVICE/LOADTESTS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2021-12-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.LOADTESTSERVICE/LOADTESTS/{}",
+    "operation": "GET",
+    "properties": [
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
+      "location",
+      "properties/dataPlaneURI",
+      "properties/description",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2021-12-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.LOADTESTSERVICE/LOADTESTS/{}",
+    "operation": "PATCH",
+    "properties": [
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
+      "properties/description",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2021-12-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.LOADTESTSERVICE/LOADTESTS/{}",
+    "operation": "PUT",
+    "properties": [
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
+      "location",
+      "properties/dataPlaneURI",
+      "properties/description",
+      "tags"
+    ]
+  },
+  {
     "api_version": "2019-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.LOGIC/INTEGRATIONACCOUNTS/{}",
     "operation": "DELETE"
@@ -20241,6 +20288,196 @@
     ]
   },
   {
+    "api_version": "2022-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MACHINELEARNINGSERVICES/WORKSPACES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MACHINELEARNINGSERVICES/WORKSPACES/{}",
+    "operation": "GET",
+    "properties": [
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
+      "identity/userAssignedIdentities",
+      "location",
+      "name",
+      "properties/allowPublicAccessWhenBehindVnet",
+      "properties/applicationInsights",
+      "properties/containerRegistry",
+      "properties/description",
+      "properties/discoveryUrl",
+      "properties/encryption/identity/userAssignedIdentity",
+      "properties/encryption/keyVaultProperties/keyIdentifier",
+      "properties/encryption/keyVaultProperties/keyVaultArmId",
+      "properties/encryption/status",
+      "properties/friendlyName",
+      "properties/hbiWorkspace",
+      "properties/imageBuildCompute",
+      "properties/keyVault",
+      "properties/primaryUserAssignedIdentity",
+      "properties/publicNetworkAccess",
+      "properties/storageAccount",
+      "properties/v1LegacyMode",
+      "sku/name",
+      "sku/tier",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2022-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MACHINELEARNINGSERVICES/WORKSPACES/{}",
+    "operation": "PUT",
+    "properties": [
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
+      "identity/userAssignedIdentities",
+      "location",
+      "name",
+      "properties/allowPublicAccessWhenBehindVnet",
+      "properties/applicationInsights",
+      "properties/containerRegistry",
+      "properties/description",
+      "properties/discoveryUrl",
+      "properties/encryption/identity/userAssignedIdentity",
+      "properties/encryption/keyVaultProperties/keyIdentifier",
+      "properties/encryption/keyVaultProperties/keyVaultArmId",
+      "properties/encryption/status",
+      "properties/friendlyName",
+      "properties/hbiWorkspace",
+      "properties/imageBuildCompute",
+      "properties/keyVault",
+      "properties/primaryUserAssignedIdentity",
+      "properties/publicNetworkAccess",
+      "properties/storageAccount",
+      "properties/v1LegacyMode",
+      "sku/name",
+      "sku/tier",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2022-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MACHINELEARNINGSERVICES/WORKSPACES/{}/COMPUTES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MACHINELEARNINGSERVICES/WORKSPACES/{}/COMPUTES/{}",
+    "operation": "GET",
+    "properties": [
+      "id",
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
+      "identity/userAssignedIdentities",
+      "location",
+      "properties{AKS}/computeLocation",
+      "properties{AKS}/description",
+      "properties{AKS}/properties/clusterFqdn",
+      "properties{AKS}/properties/clusterPurpose",
+      "properties{AKS}/properties/sslConfiguration/cert",
+      "properties{AKS}/properties/sslConfiguration/cname",
+      "properties{AKS}/properties/sslConfiguration/key",
+      "properties{AKS}/properties/sslConfiguration/leafDomainLabel",
+      "properties{AKS}/properties/sslConfiguration/overwriteExistingDomain",
+      "properties{AKS}/properties/sslConfiguration/status",
+      "properties{AKS}/resourceId",
+      "properties{AmlCompute}/computeLocation",
+      "properties{AmlCompute}/description",
+      "properties{AmlCompute}/disableLocalAuth",
+      "properties{AmlCompute}/properties/remoteLoginPortPublicAccess",
+      "properties{AmlCompute}/properties/scaleSettings/maxNodeCount",
+      "properties{AmlCompute}/properties/scaleSettings/minNodeCount",
+      "properties{AmlCompute}/properties/scaleSettings/nodeIdleTimeBeforeScaleDown",
+      "properties{AmlCompute}/properties/subnet/id",
+      "properties{AmlCompute}/properties/userAccountCredentials/adminUserName",
+      "properties{AmlCompute}/properties/userAccountCredentials/adminUserPassword",
+      "properties{AmlCompute}/properties/userAccountCredentials/adminUserSshPublicKey",
+      "properties{AmlCompute}/properties/vmPriority",
+      "properties{AmlCompute}/properties/vmSize",
+      "properties{ComputeInstance}/computeLocation",
+      "properties{ComputeInstance}/description",
+      "properties{ComputeInstance}/disableLocalAuth",
+      "properties{ComputeInstance}/properties/computeInstanceAuthorizationType",
+      "properties{ComputeInstance}/properties/personalComputeInstanceSettings/assignedUser/objectId",
+      "properties{ComputeInstance}/properties/personalComputeInstanceSettings/assignedUser/tenantId",
+      "properties{ComputeInstance}/properties/sshSettings/adminPublicKey",
+      "properties{ComputeInstance}/properties/sshSettings/adminUserName",
+      "properties{ComputeInstance}/properties/sshSettings/sshPort",
+      "properties{ComputeInstance}/properties/sshSettings/sshPublicAccess",
+      "properties{ComputeInstance}/properties/subnet/id",
+      "properties{ComputeInstance}/properties/vmSize",
+      "properties{SynapseSpark}/computeLocation",
+      "properties{SynapseSpark}/description",
+      "properties{SynapseSpark}/disableLocalAuth",
+      "properties{SynapseSpark}/properties",
+      "properties{SynapseSpark}/resourceId",
+      "sku/name",
+      "sku/tier",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2022-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MACHINELEARNINGSERVICES/WORKSPACES/{}/COMPUTES/{}",
+    "operation": "PUT",
+    "properties": [
+      "id",
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
+      "identity/userAssignedIdentities",
+      "location",
+      "properties{AKS}/computeLocation",
+      "properties{AKS}/description",
+      "properties{AKS}/properties/clusterFqdn",
+      "properties{AKS}/properties/clusterPurpose",
+      "properties{AKS}/properties/sslConfiguration/cert",
+      "properties{AKS}/properties/sslConfiguration/cname",
+      "properties{AKS}/properties/sslConfiguration/key",
+      "properties{AKS}/properties/sslConfiguration/leafDomainLabel",
+      "properties{AKS}/properties/sslConfiguration/overwriteExistingDomain",
+      "properties{AKS}/properties/sslConfiguration/status",
+      "properties{AKS}/resourceId",
+      "properties{AmlCompute}/computeLocation",
+      "properties{AmlCompute}/description",
+      "properties{AmlCompute}/disableLocalAuth",
+      "properties{AmlCompute}/properties/remoteLoginPortPublicAccess",
+      "properties{AmlCompute}/properties/scaleSettings/maxNodeCount",
+      "properties{AmlCompute}/properties/scaleSettings/minNodeCount",
+      "properties{AmlCompute}/properties/scaleSettings/nodeIdleTimeBeforeScaleDown",
+      "properties{AmlCompute}/properties/subnet/id",
+      "properties{AmlCompute}/properties/userAccountCredentials/adminUserName",
+      "properties{AmlCompute}/properties/userAccountCredentials/adminUserPassword",
+      "properties{AmlCompute}/properties/userAccountCredentials/adminUserSshPublicKey",
+      "properties{AmlCompute}/properties/vmPriority",
+      "properties{AmlCompute}/properties/vmSize",
+      "properties{ComputeInstance}/computeLocation",
+      "properties{ComputeInstance}/description",
+      "properties{ComputeInstance}/disableLocalAuth",
+      "properties{ComputeInstance}/properties/computeInstanceAuthorizationType",
+      "properties{ComputeInstance}/properties/personalComputeInstanceSettings/assignedUser/objectId",
+      "properties{ComputeInstance}/properties/personalComputeInstanceSettings/assignedUser/tenantId",
+      "properties{ComputeInstance}/properties/sshSettings/adminPublicKey",
+      "properties{ComputeInstance}/properties/sshSettings/adminUserName",
+      "properties{ComputeInstance}/properties/sshSettings/sshPort",
+      "properties{ComputeInstance}/properties/sshSettings/sshPublicAccess",
+      "properties{ComputeInstance}/properties/subnet/id",
+      "properties{ComputeInstance}/properties/vmSize",
+      "properties{SynapseSpark}/computeLocation",
+      "properties{SynapseSpark}/description",
+      "properties{SynapseSpark}/disableLocalAuth",
+      "properties{SynapseSpark}/properties",
+      "properties{SynapseSpark}/resourceId",
+      "sku/name",
+      "sku/tier",
+      "tags"
+    ]
+  },
+  {
     "api_version": "2021-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MAINTENANCE/MAINTENANCECONFIGURATIONS/{}",
     "operation": "DELETE"
@@ -20280,6 +20517,49 @@
       "properties/maintenanceWindow/timeZone",
       "properties/namespace",
       "properties/visibility",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2018-11-30",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MANAGEDIDENTITY/USERASSIGNEDIDENTITIES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2018-11-30",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MANAGEDIDENTITY/USERASSIGNEDIDENTITIES/{}",
+    "operation": "GET",
+    "properties": [
+      "location",
+      "properties",
+      "properties/clientId",
+      "properties/principalId",
+      "properties/tenantId",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2018-11-30",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MANAGEDIDENTITY/USERASSIGNEDIDENTITIES/{}",
+    "operation": "PATCH",
+    "properties": [
+      "properties",
+      "properties/clientId",
+      "properties/principalId",
+      "properties/tenantId",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2018-11-30",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MANAGEDIDENTITY/USERASSIGNEDIDENTITIES/{}",
+    "operation": "PUT",
+    "properties": [
+      "location",
+      "properties",
+      "properties/clientId",
+      "properties/principalId",
+      "properties/tenantId",
       "tags"
     ]
   },
