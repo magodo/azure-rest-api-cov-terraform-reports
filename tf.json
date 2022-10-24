@@ -4832,12 +4832,12 @@
     ]
   },
   {
-    "api_version": "2020-10-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AZURESTACKHCI/CLUSTERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-10-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AZURESTACKHCI/CLUSTERS/{}",
     "operation": "GET",
     "properties": [
@@ -4848,7 +4848,7 @@
     ]
   },
   {
-    "api_version": "2020-10-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AZURESTACKHCI/CLUSTERS/{}",
     "operation": "PATCH",
     "properties": [
@@ -4856,7 +4856,7 @@
     ]
   },
   {
-    "api_version": "2020-10-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AZURESTACKHCI/CLUSTERS/{}",
     "operation": "PUT",
     "properties": [
@@ -10971,12 +10971,43 @@
     ]
   },
   {
-    "api_version": "2021-04-01-preview",
+    "api_version": "2022-04-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATABRICKS/ACCESSCONNECTORS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-04-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATABRICKS/ACCESSCONNECTORS/{}",
+    "operation": "GET",
+    "properties": [
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
+      "location",
+      "name",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2022-04-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATABRICKS/ACCESSCONNECTORS/{}",
+    "operation": "PUT",
+    "properties": [
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
+      "location",
+      "name",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2022-04-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATABRICKS/WORKSPACES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-04-01-preview",
+    "api_version": "2022-04-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATABRICKS/WORKSPACES/{}",
     "operation": "GET",
     "properties": [
@@ -11023,7 +11054,7 @@
     ]
   },
   {
-    "api_version": "2021-04-01-preview",
+    "api_version": "2022-04-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATABRICKS/WORKSPACES/{}",
     "operation": "PATCH",
     "properties": [
@@ -11031,7 +11062,7 @@
     ]
   },
   {
-    "api_version": "2021-04-01-preview",
+    "api_version": "2022-04-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATABRICKS/WORKSPACES/{}",
     "operation": "PUT",
     "properties": [
@@ -17422,6 +17453,7 @@
       "location",
       "name",
       "properties/fluidRelayEndpoints/ordererEndpoints",
+      "properties/fluidRelayEndpoints/serviceEndpoints",
       "properties/fluidRelayEndpoints/storageEndpoints",
       "properties/frsTenantId",
       "properties/storagesku",
@@ -17452,11 +17484,17 @@
       "location",
       "name",
       "properties/fluidRelayEndpoints/ordererEndpoints",
+      "properties/fluidRelayEndpoints/serviceEndpoints",
       "properties/fluidRelayEndpoints/storageEndpoints",
       "properties/frsTenantId",
       "properties/storagesku",
       "tags"
     ]
+  },
+  {
+    "api_version": "2022-05-26",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.FLUIDRELAY/FLUIDRELAYSERVERS/{}/LISTKEYS",
+    "operation": "POST"
   },
   {
     "api_version": "2021-11-30",
@@ -27030,6 +27068,30 @@
     "api_version": "2022-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/DATACONNECTORS/{}",
     "operation": "GET",
+    "variant": "Dynamics365",
+    "properties": [
+      "kind",
+      "name",
+      "properties/dataTypes/dynamics365CdsActivities/state",
+      "properties/tenantId"
+    ]
+  },
+  {
+    "api_version": "2022-01-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/DATACONNECTORS/{}",
+    "operation": "GET",
+    "variant": "IOT",
+    "properties": [
+      "kind",
+      "name",
+      "properties/dataTypes/alerts/state",
+      "properties/subscriptionId"
+    ]
+  },
+  {
+    "api_version": "2022-01-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/DATACONNECTORS/{}",
+    "operation": "GET",
     "variant": "MicrosoftCloudAppSecurity",
     "properties": [
       "kind",
@@ -27069,11 +27131,47 @@
     "api_version": "2022-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/DATACONNECTORS/{}",
     "operation": "GET",
+    "variant": "Office365Project",
+    "properties": [
+      "kind",
+      "name",
+      "properties/dataTypes/logs/state",
+      "properties/tenantId"
+    ]
+  },
+  {
+    "api_version": "2022-01-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/DATACONNECTORS/{}",
+    "operation": "GET",
     "variant": "OfficeATP",
     "properties": [
       "kind",
       "name",
       "properties/dataTypes/alerts/state",
+      "properties/tenantId"
+    ]
+  },
+  {
+    "api_version": "2022-01-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/DATACONNECTORS/{}",
+    "operation": "GET",
+    "variant": "OfficeIRM",
+    "properties": [
+      "kind",
+      "name",
+      "properties/dataTypes/alerts/state",
+      "properties/tenantId"
+    ]
+  },
+  {
+    "api_version": "2022-01-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/DATACONNECTORS/{}",
+    "operation": "GET",
+    "variant": "OfficePowerBI",
+    "properties": [
+      "kind",
+      "name",
+      "properties/dataTypes/logs/state",
       "properties/tenantId"
     ]
   },
@@ -27155,6 +27253,30 @@
     "api_version": "2022-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/DATACONNECTORS/{}",
     "operation": "PUT",
+    "variant": "Dynamics365",
+    "properties": [
+      "kind",
+      "name",
+      "properties/dataTypes/dynamics365CdsActivities/state",
+      "properties/tenantId"
+    ]
+  },
+  {
+    "api_version": "2022-01-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/DATACONNECTORS/{}",
+    "operation": "PUT",
+    "variant": "IOT",
+    "properties": [
+      "kind",
+      "name",
+      "properties/dataTypes/alerts/state",
+      "properties/subscriptionId"
+    ]
+  },
+  {
+    "api_version": "2022-01-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/DATACONNECTORS/{}",
+    "operation": "PUT",
     "variant": "MicrosoftCloudAppSecurity",
     "properties": [
       "kind",
@@ -27194,11 +27316,47 @@
     "api_version": "2022-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/DATACONNECTORS/{}",
     "operation": "PUT",
+    "variant": "Office365Project",
+    "properties": [
+      "kind",
+      "name",
+      "properties/dataTypes/logs/state",
+      "properties/tenantId"
+    ]
+  },
+  {
+    "api_version": "2022-01-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/DATACONNECTORS/{}",
+    "operation": "PUT",
     "variant": "OfficeATP",
     "properties": [
       "kind",
       "name",
       "properties/dataTypes/alerts/state",
+      "properties/tenantId"
+    ]
+  },
+  {
+    "api_version": "2022-01-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/DATACONNECTORS/{}",
+    "operation": "PUT",
+    "variant": "OfficeIRM",
+    "properties": [
+      "kind",
+      "name",
+      "properties/dataTypes/alerts/state",
+      "properties/tenantId"
+    ]
+  },
+  {
+    "api_version": "2022-01-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/DATACONNECTORS/{}",
+    "operation": "PUT",
+    "variant": "OfficePowerBI",
+    "properties": [
+      "kind",
+      "name",
+      "properties/dataTypes/logs/state",
       "properties/tenantId"
     ]
   },
@@ -31106,6 +31264,10 @@
       "properties/encryption/services/queue/keyType",
       "properties/encryption/services/table/enabled",
       "properties/encryption/services/table/keyType",
+      "properties/immutableStorageWithVersioning/enabled",
+      "properties/immutableStorageWithVersioning/immutabilityPolicy/allowProtectedAppendWrites",
+      "properties/immutableStorageWithVersioning/immutabilityPolicy/immutabilityPeriodSinceCreationInDays",
+      "properties/immutableStorageWithVersioning/immutabilityPolicy/state",
       "properties/isHnsEnabled",
       "properties/isNfsV3Enabled",
       "properties/largeFileSharesState",
@@ -31245,6 +31407,10 @@
       "properties/encryption/services/queue/keyType",
       "properties/encryption/services/table/enabled",
       "properties/encryption/services/table/keyType",
+      "properties/immutableStorageWithVersioning/enabled",
+      "properties/immutableStorageWithVersioning/immutabilityPolicy/allowProtectedAppendWrites",
+      "properties/immutableStorageWithVersioning/immutabilityPolicy/immutabilityPeriodSinceCreationInDays",
+      "properties/immutableStorageWithVersioning/immutabilityPolicy/state",
       "properties/isHnsEnabled",
       "properties/isNfsV3Enabled",
       "properties/largeFileSharesState",
@@ -31445,17 +31611,26 @@
     "properties": [
       "name",
       "properties/policy/rules/definition/actions/baseBlob/delete/daysAfterLastAccessTimeGreaterThan",
+      "properties/policy/rules/definition/actions/baseBlob/delete/daysAfterLastTierChangeGreaterThan",
       "properties/policy/rules/definition/actions/baseBlob/delete/daysAfterModificationGreaterThan",
       "properties/policy/rules/definition/actions/baseBlob/tierToArchive/daysAfterLastAccessTimeGreaterThan",
+      "properties/policy/rules/definition/actions/baseBlob/tierToArchive/daysAfterLastTierChangeGreaterThan",
       "properties/policy/rules/definition/actions/baseBlob/tierToArchive/daysAfterModificationGreaterThan",
       "properties/policy/rules/definition/actions/baseBlob/tierToCool/daysAfterLastAccessTimeGreaterThan",
+      "properties/policy/rules/definition/actions/baseBlob/tierToCool/daysAfterLastTierChangeGreaterThan",
       "properties/policy/rules/definition/actions/baseBlob/tierToCool/daysAfterModificationGreaterThan",
       "properties/policy/rules/definition/actions/snapshot/delete/daysAfterCreationGreaterThan",
+      "properties/policy/rules/definition/actions/snapshot/delete/daysAfterLastTierChangeGreaterThan",
       "properties/policy/rules/definition/actions/snapshot/tierToArchive/daysAfterCreationGreaterThan",
+      "properties/policy/rules/definition/actions/snapshot/tierToArchive/daysAfterLastTierChangeGreaterThan",
       "properties/policy/rules/definition/actions/snapshot/tierToCool/daysAfterCreationGreaterThan",
+      "properties/policy/rules/definition/actions/snapshot/tierToCool/daysAfterLastTierChangeGreaterThan",
       "properties/policy/rules/definition/actions/version/delete/daysAfterCreationGreaterThan",
+      "properties/policy/rules/definition/actions/version/delete/daysAfterLastTierChangeGreaterThan",
       "properties/policy/rules/definition/actions/version/tierToArchive/daysAfterCreationGreaterThan",
+      "properties/policy/rules/definition/actions/version/tierToArchive/daysAfterLastTierChangeGreaterThan",
       "properties/policy/rules/definition/actions/version/tierToCool/daysAfterCreationGreaterThan",
+      "properties/policy/rules/definition/actions/version/tierToCool/daysAfterLastTierChangeGreaterThan",
       "properties/policy/rules/definition/filters/blobIndexMatch/name",
       "properties/policy/rules/definition/filters/blobIndexMatch/op",
       "properties/policy/rules/definition/filters/blobIndexMatch/value",
@@ -31473,17 +31648,26 @@
     "properties": [
       "name",
       "properties/policy/rules/definition/actions/baseBlob/delete/daysAfterLastAccessTimeGreaterThan",
+      "properties/policy/rules/definition/actions/baseBlob/delete/daysAfterLastTierChangeGreaterThan",
       "properties/policy/rules/definition/actions/baseBlob/delete/daysAfterModificationGreaterThan",
       "properties/policy/rules/definition/actions/baseBlob/tierToArchive/daysAfterLastAccessTimeGreaterThan",
+      "properties/policy/rules/definition/actions/baseBlob/tierToArchive/daysAfterLastTierChangeGreaterThan",
       "properties/policy/rules/definition/actions/baseBlob/tierToArchive/daysAfterModificationGreaterThan",
       "properties/policy/rules/definition/actions/baseBlob/tierToCool/daysAfterLastAccessTimeGreaterThan",
+      "properties/policy/rules/definition/actions/baseBlob/tierToCool/daysAfterLastTierChangeGreaterThan",
       "properties/policy/rules/definition/actions/baseBlob/tierToCool/daysAfterModificationGreaterThan",
       "properties/policy/rules/definition/actions/snapshot/delete/daysAfterCreationGreaterThan",
+      "properties/policy/rules/definition/actions/snapshot/delete/daysAfterLastTierChangeGreaterThan",
       "properties/policy/rules/definition/actions/snapshot/tierToArchive/daysAfterCreationGreaterThan",
+      "properties/policy/rules/definition/actions/snapshot/tierToArchive/daysAfterLastTierChangeGreaterThan",
       "properties/policy/rules/definition/actions/snapshot/tierToCool/daysAfterCreationGreaterThan",
+      "properties/policy/rules/definition/actions/snapshot/tierToCool/daysAfterLastTierChangeGreaterThan",
       "properties/policy/rules/definition/actions/version/delete/daysAfterCreationGreaterThan",
+      "properties/policy/rules/definition/actions/version/delete/daysAfterLastTierChangeGreaterThan",
       "properties/policy/rules/definition/actions/version/tierToArchive/daysAfterCreationGreaterThan",
+      "properties/policy/rules/definition/actions/version/tierToArchive/daysAfterLastTierChangeGreaterThan",
       "properties/policy/rules/definition/actions/version/tierToCool/daysAfterCreationGreaterThan",
+      "properties/policy/rules/definition/actions/version/tierToCool/daysAfterLastTierChangeGreaterThan",
       "properties/policy/rules/definition/filters/blobIndexMatch/name",
       "properties/policy/rules/definition/filters/blobIndexMatch/op",
       "properties/policy/rules/definition/filters/blobIndexMatch/value",
@@ -33708,6 +33892,7 @@
       "name",
       "properties/clientAffinityEnabled",
       "properties/clientCertEnabled",
+      "properties/clientCertExclusionPaths",
       "properties/clientCertMode",
       "properties/customDomainVerificationId",
       "properties/dailyMemoryTimeQuota",
@@ -33922,6 +34107,7 @@
       "name",
       "properties/clientAffinityEnabled",
       "properties/clientCertEnabled",
+      "properties/clientCertExclusionPaths",
       "properties/clientCertMode",
       "properties/customDomainVerificationId",
       "properties/dailyMemoryTimeQuota",
@@ -34661,6 +34847,7 @@
       "name",
       "properties/clientAffinityEnabled",
       "properties/clientCertEnabled",
+      "properties/clientCertExclusionPaths",
       "properties/clientCertMode",
       "properties/customDomainVerificationId",
       "properties/dailyMemoryTimeQuota",
@@ -34875,6 +35062,7 @@
       "name",
       "properties/clientAffinityEnabled",
       "properties/clientCertEnabled",
+      "properties/clientCertExclusionPaths",
       "properties/clientCertMode",
       "properties/customDomainVerificationId",
       "properties/dailyMemoryTimeQuota",
