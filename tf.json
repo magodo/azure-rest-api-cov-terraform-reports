@@ -1004,19 +1004,21 @@
     ]
   },
   {
-    "api_version": "2018-06-01",
+    "api_version": "2022-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.SECURITY/PRICINGS/{}",
     "operation": "GET",
     "properties": [
-      "properties/pricingTier"
+      "properties/pricingTier",
+      "properties/subPlan"
     ]
   },
   {
-    "api_version": "2018-06-01",
+    "api_version": "2022-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.SECURITY/PRICINGS/{}",
     "operation": "PUT",
     "properties": [
-      "properties/pricingTier"
+      "properties/pricingTier",
+      "properties/subPlan"
     ]
   },
   {
@@ -10200,12 +10202,12 @@
     ]
   },
   {
-    "api_version": "2022-08-02-preview",
+    "api_version": "2022-09-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-08-02-preview",
+    "api_version": "2022-09-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
     "operation": "GET",
     "properties": [
@@ -10390,7 +10392,7 @@
     ]
   },
   {
-    "api_version": "2022-08-02-preview",
+    "api_version": "2022-09-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
     "operation": "PUT",
     "properties": [
@@ -10575,17 +10577,17 @@
     ]
   },
   {
-    "api_version": "2022-08-02-preview",
+    "api_version": "2022-09-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/ACCESSPROFILES/{}/LISTCREDENTIAL",
     "operation": "POST"
   },
   {
-    "api_version": "2022-08-02-preview",
+    "api_version": "2022-09-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/AGENTPOOLS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-08-02-preview",
+    "api_version": "2022-09-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/AGENTPOOLS/{}",
     "operation": "GET",
     "properties": [
@@ -10672,7 +10674,7 @@
     ]
   },
   {
-    "api_version": "2022-08-02-preview",
+    "api_version": "2022-09-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/AGENTPOOLS/{}",
     "operation": "PUT",
     "properties": [
@@ -10759,12 +10761,12 @@
     ]
   },
   {
-    "api_version": "2022-08-02-preview",
+    "api_version": "2022-09-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/MAINTENANCECONFIGURATIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-08-02-preview",
+    "api_version": "2022-09-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/MAINTENANCECONFIGURATIONS/{}",
     "operation": "GET",
     "properties": [
@@ -10775,7 +10777,7 @@
     ]
   },
   {
-    "api_version": "2022-08-02-preview",
+    "api_version": "2022-09-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/MAINTENANCECONFIGURATIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -10786,7 +10788,7 @@
     ]
   },
   {
-    "api_version": "2022-08-02-preview",
+    "api_version": "2022-09-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/RESETAADPROFILE",
     "operation": "POST",
     "properties": [
@@ -10800,7 +10802,7 @@
     ]
   },
   {
-    "api_version": "2022-08-02-preview",
+    "api_version": "2022-09-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/RESETSERVICEPRINCIPALPROFILE",
     "operation": "POST",
     "properties": [
@@ -31794,6 +31796,8 @@
       "properties/routingPreference/publishInternetEndpoints",
       "properties/routingPreference/publishMicrosoftEndpoints",
       "properties/routingPreference/routingChoice",
+      "properties/sasPolicy/expirationAction",
+      "properties/sasPolicy/sasExpirationPeriod",
       "properties/secondaryEndpoints/blob",
       "properties/secondaryEndpoints/dfs",
       "properties/secondaryEndpoints/file",
@@ -31861,6 +31865,8 @@
       "properties/routingPreference/publishInternetEndpoints",
       "properties/routingPreference/publishMicrosoftEndpoints",
       "properties/routingPreference/routingChoice",
+      "properties/sasPolicy/expirationAction",
+      "properties/sasPolicy/sasExpirationPeriod",
       "properties/supportsHttpsTrafficOnly",
       "sku/name",
       "sku/tier",
@@ -31928,6 +31934,8 @@
       "properties/routingPreference/publishInternetEndpoints",
       "properties/routingPreference/publishMicrosoftEndpoints",
       "properties/routingPreference/routingChoice",
+      "properties/sasPolicy/expirationAction",
+      "properties/sasPolicy/sasExpirationPeriod",
       "properties/supportsHttpsTrafficOnly",
       "sku/name",
       "sku/tier",
@@ -32063,6 +32071,7 @@
       "properties/policy/enabled",
       "properties/policy/rules/definition/filters/blobTypes",
       "properties/policy/rules/definition/filters/includeBlobVersions",
+      "properties/policy/rules/definition/filters/includeDeleted",
       "properties/policy/rules/definition/filters/includeSnapshots",
       "properties/policy/rules/definition/filters/prefixMatch",
       "properties/policy/rules/definition/format",
@@ -32083,6 +32092,7 @@
       "properties/policy/enabled",
       "properties/policy/rules/definition/filters/blobTypes",
       "properties/policy/rules/definition/filters/includeBlobVersions",
+      "properties/policy/rules/definition/filters/includeDeleted",
       "properties/policy/rules/definition/filters/includeSnapshots",
       "properties/policy/rules/definition/filters/prefixMatch",
       "properties/policy/rules/definition/format",
@@ -32180,7 +32190,7 @@
     ]
   },
   {
-    "api_version": "2021-04-01",
+    "api_version": "2022-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/OBJECTREPLICATIONPOLICIES",
     "operation": "GET",
     "properties": [
@@ -32196,12 +32206,12 @@
     ]
   },
   {
-    "api_version": "2021-04-01",
+    "api_version": "2022-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/OBJECTREPLICATIONPOLICIES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-04-01",
+    "api_version": "2022-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/OBJECTREPLICATIONPOLICIES/{}",
     "operation": "GET",
     "properties": [
@@ -32217,7 +32227,7 @@
     ]
   },
   {
-    "api_version": "2021-04-01",
+    "api_version": "2022-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/OBJECTREPLICATIONPOLICIES/{}",
     "operation": "PUT",
     "properties": [
@@ -33583,6 +33593,7 @@
     "operation": "GET",
     "properties": [
       "properties/endIpAddress",
+      "properties/provisioningState",
       "properties/startIpAddress"
     ]
   },
@@ -33592,6 +33603,7 @@
     "operation": "PUT",
     "properties": [
       "properties/endIpAddress",
+      "properties/provisioningState",
       "properties/startIpAddress"
     ]
   },
