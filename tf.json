@@ -2561,7 +2561,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/GATEWAYS/{}/CERTIFICATEAUTHORITIES/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "name",
       "properties/isTrusted"
     ]
@@ -2571,7 +2570,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/GATEWAYS/{}/CERTIFICATEAUTHORITIES/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "name",
       "properties/isTrusted"
     ]
@@ -3367,6 +3365,21 @@
   },
   {
     "api_version": "2022-11-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPLICATIONLIVEVIEWS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-11-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPLICATIONLIVEVIEWS/{}",
+    "operation": "GET"
+  },
+  {
+    "api_version": "2022-11-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPLICATIONLIVEVIEWS/{}",
+    "operation": "PUT"
+  },
+  {
+    "api_version": "2022-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPS/{}",
     "operation": "DELETE"
   },
@@ -3840,7 +3853,9 @@
     "operation": "GET",
     "properties": [
       "properties/appResourceId",
+      "properties/filters",
       "properties/openApi/uri",
+      "properties/predicates",
       "properties/protocol",
       "properties/routes/description",
       "properties/routes/filters",
@@ -3850,7 +3865,8 @@
       "properties/routes/tags",
       "properties/routes/title",
       "properties/routes/tokenRelay",
-      "properties/routes/uri"
+      "properties/routes/uri",
+      "properties/ssoEnabled"
     ]
   },
   {
@@ -3859,7 +3875,9 @@
     "operation": "PUT",
     "properties": [
       "properties/appResourceId",
+      "properties/filters",
       "properties/openApi/uri",
+      "properties/predicates",
       "properties/protocol",
       "properties/routes/description",
       "properties/routes/filters",
@@ -3869,7 +3887,8 @@
       "properties/routes/tags",
       "properties/routes/title",
       "properties/routes/tokenRelay",
-      "properties/routes/uri"
+      "properties/routes/uri",
+      "properties/ssoEnabled"
     ]
   },
   {
@@ -4700,6 +4719,7 @@
       "properties/nsxtCertificateThumbprint",
       "properties/nsxtPassword",
       "properties/provisioningNetwork",
+      "properties/provisioningState",
       "properties/vcenterCertificateThumbprint",
       "properties/vcenterPassword",
       "properties/vmotionNetwork",
@@ -4741,6 +4761,7 @@
       "properties/nsxtCertificateThumbprint",
       "properties/nsxtPassword",
       "properties/provisioningNetwork",
+      "properties/provisioningState",
       "properties/vcenterCertificateThumbprint",
       "properties/vcenterPassword",
       "properties/vmotionNetwork",
@@ -4804,6 +4825,29 @@
       "properties/clusterSize",
       "properties/hosts",
       "sku/name"
+    ]
+  },
+  {
+    "api_version": "2021-12-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AVS/PRIVATECLOUDS/{}/CLUSTERS/{}/DATASTORES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2021-12-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AVS/PRIVATECLOUDS/{}/CLUSTERS/{}/DATASTORES/{}",
+    "operation": "GET",
+    "properties": [
+      "name",
+      "properties/netAppVolume/id"
+    ]
+  },
+  {
+    "api_version": "2021-12-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AVS/PRIVATECLOUDS/{}/CLUSTERS/{}/DATASTORES/{}",
+    "operation": "PUT",
+    "properties": [
+      "name",
+      "properties/netAppVolume/id"
     ]
   },
   {
@@ -8303,12 +8347,12 @@
     ]
   },
   {
-    "api_version": "2021-11-01",
+    "api_version": "2022-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/PROXIMITYPLACEMENTGROUPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-11-01",
+    "api_version": "2022-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/PROXIMITYPLACEMENTGROUPS/{}",
     "operation": "GET",
     "properties": [
@@ -8317,7 +8361,7 @@
     ]
   },
   {
-    "api_version": "2021-11-01",
+    "api_version": "2022-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/PROXIMITYPLACEMENTGROUPS/{}",
     "operation": "PUT",
     "properties": [
@@ -10263,6 +10307,7 @@
       "properties/agentPoolProfiles/count",
       "properties/agentPoolProfiles/currentOrchestratorVersion",
       "properties/agentPoolProfiles/enableAutoScaling",
+      "properties/agentPoolProfiles/enableCustomCATrust",
       "properties/agentPoolProfiles/enableEncryptionAtHost",
       "properties/agentPoolProfiles/enableFIPS",
       "properties/agentPoolProfiles/enableNodePublicIP",
@@ -10381,6 +10426,7 @@
       "properties/linuxProfile/ssh/publicKeys/keyData",
       "properties/networkProfile/dnsServiceIP",
       "properties/networkProfile/dockerBridgeCidr",
+      "properties/networkProfile/ebpfDataplane",
       "properties/networkProfile/ipFamilies",
       "properties/networkProfile/loadBalancerProfile/allocatedOutboundPorts",
       "properties/networkProfile/loadBalancerProfile/effectiveOutboundIPs/id",
@@ -10395,6 +10441,7 @@
       "properties/networkProfile/natGatewayProfile/managedOutboundIPProfile/count",
       "properties/networkProfile/networkMode",
       "properties/networkProfile/networkPlugin",
+      "properties/networkProfile/networkPluginMode",
       "properties/networkProfile/networkPolicy",
       "properties/networkProfile/outboundType",
       "properties/networkProfile/podCidr",
@@ -10411,6 +10458,11 @@
       "properties/securityProfile/workloadIdentity/enabled",
       "properties/servicePrincipalProfile/clientId",
       "properties/servicePrincipalProfile/secret",
+      "properties/storageProfile/blobCSIDriver/enabled",
+      "properties/storageProfile/diskCSIDriver/enabled",
+      "properties/storageProfile/diskCSIDriver/version",
+      "properties/storageProfile/fileCSIDriver/enabled",
+      "properties/storageProfile/snapshotController/enabled",
       "properties/windowsProfile/adminPassword",
       "properties/windowsProfile/adminUsername",
       "properties/windowsProfile/gmsaProfile/dnsServer",
@@ -10448,6 +10500,7 @@
       "properties/agentPoolProfiles/count",
       "properties/agentPoolProfiles/currentOrchestratorVersion",
       "properties/agentPoolProfiles/enableAutoScaling",
+      "properties/agentPoolProfiles/enableCustomCATrust",
       "properties/agentPoolProfiles/enableEncryptionAtHost",
       "properties/agentPoolProfiles/enableFIPS",
       "properties/agentPoolProfiles/enableNodePublicIP",
@@ -10566,6 +10619,7 @@
       "properties/linuxProfile/ssh/publicKeys/keyData",
       "properties/networkProfile/dnsServiceIP",
       "properties/networkProfile/dockerBridgeCidr",
+      "properties/networkProfile/ebpfDataplane",
       "properties/networkProfile/ipFamilies",
       "properties/networkProfile/loadBalancerProfile/allocatedOutboundPorts",
       "properties/networkProfile/loadBalancerProfile/effectiveOutboundIPs/id",
@@ -10580,6 +10634,7 @@
       "properties/networkProfile/natGatewayProfile/managedOutboundIPProfile/count",
       "properties/networkProfile/networkMode",
       "properties/networkProfile/networkPlugin",
+      "properties/networkProfile/networkPluginMode",
       "properties/networkProfile/networkPolicy",
       "properties/networkProfile/outboundType",
       "properties/networkProfile/podCidr",
@@ -10596,6 +10651,11 @@
       "properties/securityProfile/workloadIdentity/enabled",
       "properties/servicePrincipalProfile/clientId",
       "properties/servicePrincipalProfile/secret",
+      "properties/storageProfile/blobCSIDriver/enabled",
+      "properties/storageProfile/diskCSIDriver/enabled",
+      "properties/storageProfile/diskCSIDriver/version",
+      "properties/storageProfile/fileCSIDriver/enabled",
+      "properties/storageProfile/snapshotController/enabled",
       "properties/windowsProfile/adminPassword",
       "properties/windowsProfile/adminUsername",
       "properties/windowsProfile/gmsaProfile/dnsServer",
@@ -10629,6 +10689,7 @@
       "properties/count",
       "properties/currentOrchestratorVersion",
       "properties/enableAutoScaling",
+      "properties/enableCustomCATrust",
       "properties/enableEncryptionAtHost",
       "properties/enableFIPS",
       "properties/enableNodePublicIP",
@@ -10716,6 +10777,7 @@
       "properties/count",
       "properties/currentOrchestratorVersion",
       "properties/enableAutoScaling",
+      "properties/enableCustomCATrust",
       "properties/enableEncryptionAtHost",
       "properties/enableFIPS",
       "properties/enableNodePublicIP",
@@ -14971,7 +15033,8 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DESKTOPVIRTUALIZATION/WORKSPACES/{}",
     "operation": "PATCH",
     "properties": [
-      "properties/applicationGroupReferences"
+      "properties/applicationGroupReferences",
+      "tags"
     ]
   },
   {
@@ -15763,6 +15826,41 @@
       "properties{ServiceBus}/endpointType",
       "properties{ServiceBus}/primaryConnectionString",
       "properties{ServiceBus}/secondaryConnectionString"
+    ]
+  },
+  {
+    "api_version": "2022-10-31",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DIGITALTWINS/DIGITALTWINSINSTANCES/{}/TIMESERIESDATABASECONNECTIONS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-10-31",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DIGITALTWINS/DIGITALTWINSINSTANCES/{}/TIMESERIESDATABASECONNECTIONS/{}",
+    "operation": "GET",
+    "properties": [
+      "properties{AzureDataExplorer}/adxDatabaseName",
+      "properties{AzureDataExplorer}/adxEndpointUri",
+      "properties{AzureDataExplorer}/adxResourceId",
+      "properties{AzureDataExplorer}/adxTableName",
+      "properties{AzureDataExplorer}/eventHubConsumerGroup",
+      "properties{AzureDataExplorer}/eventHubEndpointUri",
+      "properties{AzureDataExplorer}/eventHubEntityPath",
+      "properties{AzureDataExplorer}/eventHubNamespaceResourceId"
+    ]
+  },
+  {
+    "api_version": "2022-10-31",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DIGITALTWINS/DIGITALTWINSINSTANCES/{}/TIMESERIESDATABASECONNECTIONS/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties{AzureDataExplorer}/adxDatabaseName",
+      "properties{AzureDataExplorer}/adxEndpointUri",
+      "properties{AzureDataExplorer}/adxResourceId",
+      "properties{AzureDataExplorer}/adxTableName",
+      "properties{AzureDataExplorer}/eventHubConsumerGroup",
+      "properties{AzureDataExplorer}/eventHubEndpointUri",
+      "properties{AzureDataExplorer}/eventHubEntityPath",
+      "properties{AzureDataExplorer}/eventHubNamespaceResourceId"
     ]
   },
   {
@@ -21840,6 +21938,7 @@
     "operation": "GET",
     "properties": [
       "location",
+      "properties/avsDataStore",
       "properties/creationToken",
       "properties/dataProtection/replication/endpointType",
       "properties/dataProtection/replication/remoteVolumeRegion",
@@ -21893,6 +21992,7 @@
     "operation": "PUT",
     "properties": [
       "location",
+      "properties/avsDataStore",
       "properties/creationToken",
       "properties/dataProtection/replication/endpointType",
       "properties/dataProtection/replication/remoteVolumeRegion",
@@ -23507,6 +23607,12 @@
       "properties/childPolicies/id",
       "properties/dnsSettings/enableProxy",
       "properties/dnsSettings/servers",
+      "properties/explicitProxy/enableExplicitProxy",
+      "properties/explicitProxy/enablePacFile",
+      "properties/explicitProxy/httpPort",
+      "properties/explicitProxy/httpsPort",
+      "properties/explicitProxy/pacFile",
+      "properties/explicitProxy/pacFilePort",
       "properties/firewalls/id",
       "properties/insights/isEnabled",
       "properties/insights/logAnalyticsResources/defaultWorkspaceId/id",
@@ -23527,6 +23633,7 @@
       "properties/intrusionDetection/mode",
       "properties/ruleCollectionGroups/id",
       "properties/sku/tier",
+      "properties/snat/autoLearnPrivateRanges",
       "properties/snat/privateRanges",
       "properties/sql/allowSqlRedirect",
       "properties/threatIntelMode",
@@ -23552,6 +23659,12 @@
       "properties/childPolicies/id",
       "properties/dnsSettings/enableProxy",
       "properties/dnsSettings/servers",
+      "properties/explicitProxy/enableExplicitProxy",
+      "properties/explicitProxy/enablePacFile",
+      "properties/explicitProxy/httpPort",
+      "properties/explicitProxy/httpsPort",
+      "properties/explicitProxy/pacFile",
+      "properties/explicitProxy/pacFilePort",
       "properties/firewalls/id",
       "properties/insights/isEnabled",
       "properties/insights/logAnalyticsResources/defaultWorkspaceId/id",
@@ -23572,6 +23685,7 @@
       "properties/intrusionDetection/mode",
       "properties/ruleCollectionGroups/id",
       "properties/sku/tier",
+      "properties/snat/autoLearnPrivateRanges",
       "properties/snat/privateRanges",
       "properties/sql/allowSqlRedirect",
       "properties/threatIntelMode",
@@ -24434,6 +24548,7 @@
       "properties/probes/properties/loadBalancingRules/id",
       "properties/probes/properties/numberOfProbes",
       "properties/probes/properties/port",
+      "properties/probes/properties/probeThreshold",
       "properties/probes/properties/protocol",
       "properties/probes/properties/requestPath",
       "properties/provisioningState",
@@ -24525,6 +24640,7 @@
       "properties/probes/properties/loadBalancingRules/id",
       "properties/probes/properties/numberOfProbes",
       "properties/probes/properties/port",
+      "properties/probes/properties/probeThreshold",
       "properties/probes/properties/protocol",
       "properties/probes/properties/requestPath",
       "properties/provisioningState",
@@ -24767,6 +24883,39 @@
       "properties/networkSecurityGroup/id",
       "properties/primary",
       "properties/virtualMachine/id",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2022-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}",
+    "operation": "GET",
+    "properties": [
+      "location",
+      "name",
+      "properties/description",
+      "properties/networkManagerScopeAccesses",
+      "properties/networkManagerScopes/managementGroups",
+      "properties/networkManagerScopes/subscriptions",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2022-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}",
+    "operation": "PUT",
+    "properties": [
+      "location",
+      "name",
+      "properties/description",
+      "properties/networkManagerScopeAccesses",
+      "properties/networkManagerScopes/managementGroups",
+      "properties/networkManagerScopes/subscriptions",
       "tags"
     ]
   },
@@ -27307,7 +27456,6 @@
     "operation": "GET",
     "variant": "Fusion",
     "properties": [
-      "id",
       "name",
       "properties/displayName"
     ]
@@ -27318,7 +27466,6 @@
     "operation": "GET",
     "variant": "MLBehaviorAnalytics",
     "properties": [
-      "id",
       "name",
       "properties/displayName"
     ]
@@ -27329,7 +27476,6 @@
     "operation": "GET",
     "variant": "MicrosoftSecurityIncidentCreation",
     "properties": [
-      "id",
       "name",
       "properties/description",
       "properties/displayName",
@@ -27342,7 +27488,6 @@
     "operation": "GET",
     "variant": "NRT",
     "properties": [
-      "id",
       "name",
       "properties/description",
       "properties/displayName",
@@ -27357,7 +27502,6 @@
     "operation": "GET",
     "variant": "Scheduled",
     "properties": [
-      "id",
       "name",
       "properties/description",
       "properties/displayName",
@@ -27555,6 +27699,18 @@
     "api_version": "2022-10-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/DATACONNECTORS/{}",
     "operation": "GET",
+    "variant": "MicrosoftThreatProtection",
+    "properties": [
+      "kind",
+      "name",
+      "properties/dataTypes/incidents/state",
+      "properties/tenantId"
+    ]
+  },
+  {
+    "api_version": "2022-10-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/DATACONNECTORS/{}",
+    "operation": "GET",
     "variant": "Office365",
     "properties": [
       "kind",
@@ -27733,6 +27889,18 @@
       "kind",
       "name",
       "properties/dataTypes/alerts/state",
+      "properties/tenantId"
+    ]
+  },
+  {
+    "api_version": "2022-10-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/DATACONNECTORS/{}",
+    "operation": "PUT",
+    "variant": "MicrosoftThreatProtection",
+    "properties": [
+      "kind",
+      "name",
+      "properties/dataTypes/incidents/state",
       "properties/tenantId"
     ]
   },
@@ -31671,6 +31839,7 @@
       "properties/assessmentSettings/schedule/weeklyInterval",
       "properties/autoBackupSettings/backupScheduleType",
       "properties/autoBackupSettings/backupSystemDbs",
+      "properties/autoBackupSettings/daysOfWeek",
       "properties/autoBackupSettings/enable",
       "properties/autoBackupSettings/enableEncryption",
       "properties/autoBackupSettings/fullBackupFrequency",
@@ -31738,6 +31907,7 @@
       "properties/assessmentSettings/schedule/weeklyInterval",
       "properties/autoBackupSettings/backupScheduleType",
       "properties/autoBackupSettings/backupSystemDbs",
+      "properties/autoBackupSettings/daysOfWeek",
       "properties/autoBackupSettings/enable",
       "properties/autoBackupSettings/enableEncryption",
       "properties/autoBackupSettings/fullBackupFrequency",
@@ -37488,12 +37658,12 @@
     ]
   },
   {
-    "api_version": "2019-06-01",
+    "api_version": "2022-10-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.MANAGEDSERVICES/REGISTRATIONDEFINITIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2019-06-01",
+    "api_version": "2022-10-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.MANAGEDSERVICES/REGISTRATIONDEFINITIONS/{}",
     "operation": "GET",
     "properties": [
@@ -37511,7 +37681,7 @@
     ]
   },
   {
-    "api_version": "2019-06-01",
+    "api_version": "2022-10-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.MANAGEDSERVICES/REGISTRATIONDEFINITIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -37833,6 +38003,7 @@
       "id",
       "name",
       "properties/authInfo{secret}/name",
+      "properties/authInfo{secret}/secretInfo{rawValue}/value",
       "properties/authInfo{servicePrincipalCertificate}/certificate",
       "properties/authInfo{servicePrincipalCertificate}/clientId",
       "properties/authInfo{servicePrincipalCertificate}/principalId",
@@ -37863,6 +38034,7 @@
       "id",
       "name",
       "properties/authInfo{secret}/name",
+      "properties/authInfo{secret}/secretInfo{rawValue}/value",
       "properties/authInfo{servicePrincipalCertificate}/certificate",
       "properties/authInfo{servicePrincipalCertificate}/clientId",
       "properties/authInfo{servicePrincipalCertificate}/principalId",
