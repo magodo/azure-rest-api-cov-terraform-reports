@@ -3380,6 +3380,53 @@
   },
   {
     "api_version": "2022-11-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPLICATIONACCELERATORS/{}/CUSTOMIZEDACCELERATORS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-11-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPLICATIONACCELERATORS/{}/CUSTOMIZEDACCELERATORS/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/acceleratorTags",
+      "properties/description",
+      "properties/displayName",
+      "properties/gitRepository/authSetting{BasicAuth}/password",
+      "properties/gitRepository/authSetting{BasicAuth}/username",
+      "properties/gitRepository/authSetting{SSH}/hostKey",
+      "properties/gitRepository/authSetting{SSH}/hostKeyAlgorithm",
+      "properties/gitRepository/authSetting{SSH}/privateKey",
+      "properties/gitRepository/branch",
+      "properties/gitRepository/commit",
+      "properties/gitRepository/gitTag",
+      "properties/gitRepository/intervalInSeconds",
+      "properties/gitRepository/url",
+      "properties/iconUrl"
+    ]
+  },
+  {
+    "api_version": "2022-11-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPLICATIONACCELERATORS/{}/CUSTOMIZEDACCELERATORS/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/acceleratorTags",
+      "properties/description",
+      "properties/displayName",
+      "properties/gitRepository/authSetting{BasicAuth}/password",
+      "properties/gitRepository/authSetting{BasicAuth}/username",
+      "properties/gitRepository/authSetting{SSH}/hostKey",
+      "properties/gitRepository/authSetting{SSH}/hostKeyAlgorithm",
+      "properties/gitRepository/authSetting{SSH}/privateKey",
+      "properties/gitRepository/branch",
+      "properties/gitRepository/commit",
+      "properties/gitRepository/gitTag",
+      "properties/gitRepository/intervalInSeconds",
+      "properties/gitRepository/url",
+      "properties/iconUrl"
+    ]
+  },
+  {
+    "api_version": "2022-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPLICATIONLIVEVIEWS/{}",
     "operation": "DELETE"
   },
@@ -7668,6 +7715,35 @@
   },
   {
     "api_version": "2022-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/ACCOUNTS/{}/DEPLOYMENTS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/ACCOUNTS/{}/DEPLOYMENTS/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/model/format",
+      "properties/model/name",
+      "properties/model/version",
+      "properties/raiPolicyName",
+      "properties/scaleSettings/scaleType"
+    ]
+  },
+  {
+    "api_version": "2022-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/ACCOUNTS/{}/DEPLOYMENTS/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/model/format",
+      "properties/model/name",
+      "properties/model/version",
+      "properties/raiPolicyName",
+      "properties/scaleSettings/scaleType"
+    ]
+  },
+  {
+    "api_version": "2022-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/ACCOUNTS/{}/LISTKEYS",
     "operation": "POST"
   },
@@ -8405,7 +8481,9 @@
     "operation": "GET",
     "properties": [
       "location",
-      "tags"
+      "properties/intent/vmSizes",
+      "tags",
+      "zones"
     ]
   },
   {
@@ -8414,7 +8492,9 @@
     "operation": "PUT",
     "properties": [
       "location",
-      "tags"
+      "properties/intent/vmSizes",
+      "tags",
+      "zones"
     ]
   },
   {
@@ -11250,7 +11330,7 @@
       "properties/parameters/vnetAddressPrefix/value",
       "properties/privateEndpointConnections/id",
       "properties/privateEndpointConnections/name",
-      "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/actionRequired",
+      "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/actionsRequired",
       "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/description",
       "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/status",
       "properties/publicNetworkAccess",
@@ -11305,7 +11385,7 @@
       "properties/parameters/vnetAddressPrefix/value",
       "properties/privateEndpointConnections/id",
       "properties/privateEndpointConnections/name",
-      "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/actionRequired",
+      "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/actionsRequired",
       "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/description",
       "properties/privateEndpointConnections/properties/privateLinkServiceConnectionState/status",
       "properties/publicNetworkAccess",
@@ -20203,6 +20283,63 @@
     ]
   },
   {
+    "api_version": "2022-08-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.LABSERVICES/LABPLANS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-08-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.LABSERVICES/LABPLANS/{}",
+    "operation": "GET",
+    "properties": [
+      "location",
+      "properties/allowedRegions",
+      "properties/defaultAutoShutdownProfile/disconnectDelay",
+      "properties/defaultAutoShutdownProfile/idleDelay",
+      "properties/defaultAutoShutdownProfile/noConnectDelay",
+      "properties/defaultAutoShutdownProfile/shutdownOnDisconnect",
+      "properties/defaultAutoShutdownProfile/shutdownOnIdle",
+      "properties/defaultAutoShutdownProfile/shutdownWhenNotConnected",
+      "properties/defaultConnectionProfile/clientRdpAccess",
+      "properties/defaultConnectionProfile/clientSshAccess",
+      "properties/defaultConnectionProfile/webRdpAccess",
+      "properties/defaultConnectionProfile/webSshAccess",
+      "properties/defaultNetworkProfile/subnetId",
+      "properties/sharedGalleryId",
+      "properties/supportInfo/email",
+      "properties/supportInfo/instructions",
+      "properties/supportInfo/phone",
+      "properties/supportInfo/url",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2022-08-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.LABSERVICES/LABPLANS/{}",
+    "operation": "PUT",
+    "properties": [
+      "location",
+      "properties/allowedRegions",
+      "properties/defaultAutoShutdownProfile/disconnectDelay",
+      "properties/defaultAutoShutdownProfile/idleDelay",
+      "properties/defaultAutoShutdownProfile/noConnectDelay",
+      "properties/defaultAutoShutdownProfile/shutdownOnDisconnect",
+      "properties/defaultAutoShutdownProfile/shutdownOnIdle",
+      "properties/defaultAutoShutdownProfile/shutdownWhenNotConnected",
+      "properties/defaultConnectionProfile/clientRdpAccess",
+      "properties/defaultConnectionProfile/clientSshAccess",
+      "properties/defaultConnectionProfile/webRdpAccess",
+      "properties/defaultConnectionProfile/webSshAccess",
+      "properties/defaultNetworkProfile/subnetId",
+      "properties/sharedGalleryId",
+      "properties/supportInfo/email",
+      "properties/supportInfo/instructions",
+      "properties/supportInfo/phone",
+      "properties/supportInfo/url",
+      "tags"
+    ]
+  },
+  {
     "api_version": "2021-12-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.LOADTESTSERVICE/LOADTESTS/{}",
     "operation": "DELETE"
@@ -21916,12 +22053,12 @@
     ]
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2022-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2022-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}",
     "operation": "GET",
     "properties": [
@@ -21936,7 +22073,7 @@
     ]
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2022-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -21950,7 +22087,7 @@
     ]
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2022-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}",
     "operation": "PUT",
     "properties": [
@@ -21965,12 +22102,12 @@
     ]
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2022-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2022-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}",
     "operation": "GET",
     "properties": [
@@ -21982,7 +22119,7 @@
     ]
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2022-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}",
     "operation": "PATCH",
     "properties": [
@@ -21992,7 +22129,7 @@
     ]
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2022-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}",
     "operation": "PUT",
     "properties": [
@@ -22004,12 +22141,12 @@
     ]
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2022-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2022-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}",
     "operation": "GET",
     "properties": [
@@ -22040,11 +22177,12 @@
       "properties/throughputMibps",
       "properties/usageThreshold",
       "properties/volumeType",
-      "tags"
+      "tags",
+      "zones"
     ]
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2022-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}",
     "operation": "PATCH",
     "properties": [
@@ -22063,7 +22201,7 @@
     ]
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2022-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}",
     "operation": "PUT",
     "properties": [
@@ -22094,11 +22232,12 @@
       "properties/throughputMibps",
       "properties/usageThreshold",
       "properties/volumeType",
-      "tags"
+      "tags",
+      "zones"
     ]
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2022-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/AUTHORIZEREPLICATION",
     "operation": "POST",
     "properties": [
@@ -22106,7 +22245,7 @@
     ]
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2022-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/BREAKREPLICATION",
     "operation": "POST",
     "properties": [
@@ -22114,12 +22253,12 @@
     ]
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2022-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/DELETEREPLICATION",
     "operation": "POST"
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2022-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/REPLICATIONSTATUS",
     "operation": "GET",
     "properties": [
@@ -22127,12 +22266,12 @@
     ]
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2022-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/SNAPSHOTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2022-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/SNAPSHOTS/{}",
     "operation": "GET",
     "properties": [
@@ -22141,7 +22280,7 @@
     ]
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2022-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/SNAPSHOTS/{}",
     "operation": "PUT",
     "properties": [
@@ -22150,12 +22289,12 @@
     ]
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2022-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/SNAPSHOTPOLICIES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2022-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/SNAPSHOTPOLICIES/{}",
     "operation": "GET",
     "properties": [
@@ -22179,7 +22318,7 @@
     ]
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2022-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/SNAPSHOTPOLICIES/{}",
     "operation": "PATCH",
     "properties": [
@@ -22203,7 +22342,7 @@
     ]
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2022-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/SNAPSHOTPOLICIES/{}",
     "operation": "PUT",
     "properties": [
@@ -24995,6 +25134,29 @@
       "properties/networkManagerScopes/managementGroups",
       "properties/networkManagerScopes/subscriptions",
       "tags"
+    ]
+  },
+  {
+    "api_version": "2022-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/NETWORKGROUPS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/NETWORKGROUPS/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/description",
+      "systemData"
+    ]
+  },
+  {
+    "api_version": "2022-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/NETWORKGROUPS/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/description",
+      "systemData"
     ]
   },
   {
@@ -29364,6 +29526,131 @@
       "properties/parameters",
       "properties/template",
       "properties/templateLink/id",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2020-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RESOURCES/DEPLOYMENTSCRIPTS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2020-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RESOURCES/DEPLOYMENTSCRIPTS/{}",
+    "operation": "GET",
+    "variant": "AzureCLI",
+    "properties": [
+      "identity/type",
+      "identity/userAssignedIdentities",
+      "location",
+      "properties/arguments",
+      "properties/azCliVersion",
+      "properties/cleanupPreference",
+      "properties/containerSettings/containerGroupName",
+      "properties/environmentVariables/name",
+      "properties/environmentVariables/secureValue",
+      "properties/environmentVariables/value",
+      "properties/forceUpdateTag",
+      "properties/outputs",
+      "properties/primaryScriptUri",
+      "properties/retentionInterval",
+      "properties/scriptContent",
+      "properties/storageAccountSettings/storageAccountKey",
+      "properties/storageAccountSettings/storageAccountName",
+      "properties/supportingScriptUris",
+      "properties/timeout",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2020-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RESOURCES/DEPLOYMENTSCRIPTS/{}",
+    "operation": "GET",
+    "variant": "AzurePowerShell",
+    "properties": [
+      "identity/type",
+      "identity/userAssignedIdentities",
+      "location",
+      "properties/arguments",
+      "properties/azPowerShellVersion",
+      "properties/cleanupPreference",
+      "properties/containerSettings/containerGroupName",
+      "properties/environmentVariables/name",
+      "properties/environmentVariables/secureValue",
+      "properties/environmentVariables/value",
+      "properties/forceUpdateTag",
+      "properties/outputs",
+      "properties/primaryScriptUri",
+      "properties/retentionInterval",
+      "properties/scriptContent",
+      "properties/storageAccountSettings/storageAccountKey",
+      "properties/storageAccountSettings/storageAccountName",
+      "properties/supportingScriptUris",
+      "properties/timeout",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2020-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RESOURCES/DEPLOYMENTSCRIPTS/{}",
+    "operation": "PATCH",
+    "properties": [
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2020-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RESOURCES/DEPLOYMENTSCRIPTS/{}",
+    "operation": "PUT",
+    "variant": "AzureCLI",
+    "properties": [
+      "identity/type",
+      "identity/userAssignedIdentities",
+      "location",
+      "properties/arguments",
+      "properties/azCliVersion",
+      "properties/cleanupPreference",
+      "properties/containerSettings/containerGroupName",
+      "properties/environmentVariables/name",
+      "properties/environmentVariables/secureValue",
+      "properties/environmentVariables/value",
+      "properties/forceUpdateTag",
+      "properties/outputs",
+      "properties/primaryScriptUri",
+      "properties/retentionInterval",
+      "properties/scriptContent",
+      "properties/storageAccountSettings/storageAccountKey",
+      "properties/storageAccountSettings/storageAccountName",
+      "properties/supportingScriptUris",
+      "properties/timeout",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2020-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RESOURCES/DEPLOYMENTSCRIPTS/{}",
+    "operation": "PUT",
+    "variant": "AzurePowerShell",
+    "properties": [
+      "identity/type",
+      "identity/userAssignedIdentities",
+      "location",
+      "properties/arguments",
+      "properties/azPowerShellVersion",
+      "properties/cleanupPreference",
+      "properties/containerSettings/containerGroupName",
+      "properties/environmentVariables/name",
+      "properties/environmentVariables/secureValue",
+      "properties/environmentVariables/value",
+      "properties/forceUpdateTag",
+      "properties/outputs",
+      "properties/primaryScriptUri",
+      "properties/retentionInterval",
+      "properties/scriptContent",
+      "properties/storageAccountSettings/storageAccountKey",
+      "properties/storageAccountSettings/storageAccountName",
+      "properties/supportingScriptUris",
+      "properties/timeout",
       "tags"
     ]
   },
