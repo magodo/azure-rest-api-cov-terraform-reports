@@ -6968,22 +6968,6 @@
   {
     "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/ORIGINGROUPS/{}",
-    "operation": "PATCH",
-    "properties": [
-      "properties/healthProbeSettings/probeIntervalInSeconds",
-      "properties/healthProbeSettings/probePath",
-      "properties/healthProbeSettings/probeProtocol",
-      "properties/healthProbeSettings/probeRequestType",
-      "properties/loadBalancingSettings/additionalLatencyInMilliseconds",
-      "properties/loadBalancingSettings/sampleSize",
-      "properties/loadBalancingSettings/successfulSamplesRequired",
-      "properties/sessionAffinityState",
-      "properties/trafficRestorationTimeToHealedOrNewEndpointsInMinutes"
-    ]
-  },
-  {
-    "api_version": "2021-06-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/ORIGINGROUPS/{}",
     "operation": "PUT",
     "properties": [
       "properties/healthProbeSettings/probeIntervalInSeconds",
@@ -10642,6 +10626,10 @@
       "properties/oidcIssuerProfile/issuerURL",
       "properties/privateFQDN",
       "properties/publicNetworkAccess",
+      "properties/securityProfile/azureKeyVaultKms/enabled",
+      "properties/securityProfile/azureKeyVaultKms/keyId",
+      "properties/securityProfile/azureKeyVaultKms/keyVaultNetworkAccess",
+      "properties/securityProfile/azureKeyVaultKms/keyVaultResourceId",
       "properties/securityProfile/defender/logAnalyticsWorkspaceResourceId",
       "properties/securityProfile/defender/securityMonitoring/enabled",
       "properties/securityProfile/imageCleaner/enabled",
@@ -10842,6 +10830,10 @@
       "properties/oidcIssuerProfile/issuerURL",
       "properties/privateFQDN",
       "properties/publicNetworkAccess",
+      "properties/securityProfile/azureKeyVaultKms/enabled",
+      "properties/securityProfile/azureKeyVaultKms/keyId",
+      "properties/securityProfile/azureKeyVaultKms/keyVaultNetworkAccess",
+      "properties/securityProfile/azureKeyVaultKms/keyVaultResourceId",
       "properties/securityProfile/defender/logAnalyticsWorkspaceResourceId",
       "properties/securityProfile/defender/securityMonitoring/enabled",
       "properties/securityProfile/imageCleaner/enabled",
@@ -14573,6 +14565,8 @@
     "operation": "GET",
     "properties": [
       "properties/defaultValue",
+      "properties/isDynamicConfig",
+      "properties/isReadOnly",
       "properties/source",
       "properties/value"
     ]
@@ -14583,6 +14577,8 @@
     "operation": "PATCH",
     "properties": [
       "properties/defaultValue",
+      "properties/isDynamicConfig",
+      "properties/isReadOnly",
       "properties/source",
       "properties/value"
     ]
@@ -20582,6 +20578,41 @@
   },
   {
     "api_version": "2022-08-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.LABSERVICES/LABS/{}/SCHEDULES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-08-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.LABSERVICES/LABS/{}/SCHEDULES/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/notes",
+      "properties/recurrencePattern/expirationDate",
+      "properties/recurrencePattern/frequency",
+      "properties/recurrencePattern/interval",
+      "properties/recurrencePattern/weekDays",
+      "properties/startAt",
+      "properties/stopAt",
+      "properties/timeZoneId"
+    ]
+  },
+  {
+    "api_version": "2022-08-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.LABSERVICES/LABS/{}/SCHEDULES/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/notes",
+      "properties/recurrencePattern/expirationDate",
+      "properties/recurrencePattern/frequency",
+      "properties/recurrencePattern/interval",
+      "properties/recurrencePattern/weekDays",
+      "properties/startAt",
+      "properties/stopAt",
+      "properties/timeZoneId"
+    ]
+  },
+  {
+    "api_version": "2022-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.LABSERVICES/LABS/{}/USERS/{}",
     "operation": "DELETE"
   },
@@ -21417,6 +21448,41 @@
       "sku/name",
       "sku/tier",
       "tags"
+    ]
+  },
+  {
+    "api_version": "2022-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MACHINELEARNINGSERVICES/WORKSPACES/{}/DATASTORES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MACHINELEARNINGSERVICES/WORKSPACES/{}/DATASTORES/{}",
+    "operation": "GET",
+    "properties": [
+      "name",
+      "properties{AzureBlob}/accountName",
+      "properties{AzureBlob}/containerName",
+      "properties{AzureBlob}/description",
+      "properties{AzureBlob}/isDefault",
+      "properties{AzureBlob}/serviceDataAccessAuthIdentity",
+      "properties{AzureBlob}/tags",
+      "type"
+    ]
+  },
+  {
+    "api_version": "2022-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MACHINELEARNINGSERVICES/WORKSPACES/{}/DATASTORES/{}",
+    "operation": "PUT",
+    "properties": [
+      "name",
+      "properties{AzureBlob}/accountName",
+      "properties{AzureBlob}/containerName",
+      "properties{AzureBlob}/description",
+      "properties{AzureBlob}/isDefault",
+      "properties{AzureBlob}/serviceDataAccessAuthIdentity",
+      "properties{AzureBlob}/tags",
+      "type"
     ]
   },
   {
@@ -23609,7 +23675,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/DNSRESOLVERS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "location",
       "properties/virtualNetwork/id",
       "systemData",
@@ -23621,7 +23686,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/DNSRESOLVERS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "location",
       "properties/virtualNetwork/id",
       "systemData",
@@ -24998,6 +25062,8 @@
       "id",
       "location",
       "name",
+      "properties/firewallPolicies/id",
+      "properties/firewalls/id",
       "properties/ipAddresses",
       "tags"
     ]
@@ -25010,6 +25076,8 @@
       "id",
       "location",
       "name",
+      "properties/firewallPolicies/id",
+      "properties/firewalls/id",
       "properties/ipAddresses",
       "tags"
     ]
@@ -25494,6 +25562,56 @@
     "properties": [
       "properties/description",
       "systemData"
+    ]
+  },
+  {
+    "api_version": "2022-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/NETWORKGROUPS/{}/STATICMEMBERS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/NETWORKGROUPS/{}/STATICMEMBERS/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/region",
+      "properties/resourceId"
+    ]
+  },
+  {
+    "api_version": "2022-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/NETWORKGROUPS/{}/STATICMEMBERS/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/region",
+      "properties/resourceId"
+    ]
+  },
+  {
+    "api_version": "2022-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/SCOPECONNECTIONS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/SCOPECONNECTIONS/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/connectionState",
+      "properties/description",
+      "properties/resourceId",
+      "properties/tenantId"
+    ]
+  },
+  {
+    "api_version": "2022-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/SCOPECONNECTIONS/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/connectionState",
+      "properties/description",
+      "properties/resourceId",
+      "properties/tenantId"
     ]
   },
   {
@@ -28626,6 +28744,27 @@
     ]
   },
   {
+    "api_version": "2022-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/ONBOARDINGSTATES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/ONBOARDINGSTATES/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/customerManagedKey"
+    ]
+  },
+  {
+    "api_version": "2022-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/ONBOARDINGSTATES/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/customerManagedKey"
+    ]
+  },
+  {
     "api_version": "2022-10-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/WATCHLISTS/{}",
     "operation": "DELETE"
@@ -29043,55 +29182,65 @@
     "operation": "POST"
   },
   {
-    "api_version": "2021-08-01",
+    "api_version": "2022-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-08-01",
+    "api_version": "2022-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "identity/principalId",
       "identity/tenantId",
       "identity/type",
+      "identity/userAssignedIdentities",
       "location",
       "properties/encryption/infrastructureEncryption",
       "properties/encryption/kekIdentity/useSystemAssignedIdentity",
+      "properties/encryption/kekIdentity/userAssignedIdentity",
       "properties/encryption/keyVaultProperties/keyUri",
+      "properties/publicNetworkAccess",
+      "properties/securitySettings/immutabilitySettings/state",
       "sku/name",
       "sku/tier",
       "tags"
     ]
   },
   {
-    "api_version": "2021-08-01",
+    "api_version": "2022-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}",
     "operation": "PATCH",
     "properties": [
       "identity/principalId",
       "identity/tenantId",
       "identity/type",
+      "identity/userAssignedIdentities",
       "properties/encryption/infrastructureEncryption",
       "properties/encryption/kekIdentity/useSystemAssignedIdentity",
+      "properties/encryption/kekIdentity/userAssignedIdentity",
       "properties/encryption/keyVaultProperties/keyUri",
+      "properties/publicNetworkAccess",
+      "properties/securitySettings/immutabilitySettings/state",
       "tags"
     ]
   },
   {
-    "api_version": "2021-08-01",
+    "api_version": "2022-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "identity/principalId",
       "identity/tenantId",
       "identity/type",
+      "identity/userAssignedIdentities",
       "location",
       "properties/encryption/infrastructureEncryption",
       "properties/encryption/kekIdentity/useSystemAssignedIdentity",
+      "properties/encryption/kekIdentity/userAssignedIdentity",
       "properties/encryption/keyVaultProperties/keyUri",
+      "properties/publicNetworkAccess",
+      "properties/securitySettings/immutabilitySettings/state",
       "sku/name",
       "sku/tier",
       "tags"
@@ -34786,6 +34935,22 @@
       "properties/state",
       "properties/storageAccountAccessKey",
       "properties/storageEndpoint"
+    ]
+  },
+  {
+    "api_version": "2021-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/SQLPOOLS/{}/GEOBACKUPPOLICIES/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/state"
+    ]
+  },
+  {
+    "api_version": "2021-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/SQLPOOLS/{}/GEOBACKUPPOLICIES/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/state"
     ]
   },
   {
