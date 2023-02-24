@@ -4595,7 +4595,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/CONNECTIONS/{}",
     "operation": "GET",
     "properties": [
-      "name",
       "properties/connectionType/name",
       "properties/description",
       "properties/fieldDefinitionValues"
@@ -4622,7 +4621,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/CONNECTIONTYPES/{}",
     "operation": "GET",
     "properties": [
-      "name",
       "properties/fieldDefinitions",
       "properties/isGlobal"
     ]
@@ -4860,10 +4858,8 @@
       "properties/advancedSchedule/monthlyOccurrences/occurrence",
       "properties/advancedSchedule/weekDays",
       "properties/description",
-      "properties/expiryTime",
       "properties/frequency",
       "properties/interval",
-      "properties/startTime",
       "properties/timeZone"
     ]
   },
@@ -4878,10 +4874,8 @@
       "properties/advancedSchedule/monthlyOccurrences/occurrence",
       "properties/advancedSchedule/weekDays",
       "properties/description",
-      "properties/expiryTime",
       "properties/frequency",
       "properties/interval",
-      "properties/startTime",
       "properties/timeZone"
     ]
   },
@@ -5049,7 +5043,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/VARIABLES/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "properties/description",
       "properties/isEncrypted",
       "properties/value"
@@ -5127,7 +5120,6 @@
     "operation": "GET",
     "properties": [
       "id",
-      "name",
       "properties/expiryTime",
       "properties/isEnabled",
       "properties/parameters",
@@ -8155,23 +8147,22 @@
     ]
   },
   {
-    "api_version": "2022-08-01",
+    "api_version": "2022-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/CAPACITYRESERVATIONGROUPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-08-01",
+    "api_version": "2022-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/CAPACITYRESERVATIONGROUPS/{}",
     "operation": "GET",
     "properties": [
       "location",
-      "name",
       "tags",
       "zones"
     ]
   },
   {
-    "api_version": "2022-08-01",
+    "api_version": "2022-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/CAPACITYRESERVATIONGROUPS/{}",
     "operation": "PATCH",
     "properties": [
@@ -8179,28 +8170,26 @@
     ]
   },
   {
-    "api_version": "2022-08-01",
+    "api_version": "2022-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/CAPACITYRESERVATIONGROUPS/{}",
     "operation": "PUT",
     "properties": [
       "location",
-      "name",
       "tags",
       "zones"
     ]
   },
   {
-    "api_version": "2022-08-01",
+    "api_version": "2022-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/CAPACITYRESERVATIONGROUPS/{}/CAPACITYRESERVATIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-08-01",
+    "api_version": "2022-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/CAPACITYRESERVATIONGROUPS/{}/CAPACITYRESERVATIONS/{}",
     "operation": "GET",
     "properties": [
       "location",
-      "name",
       "sku/capacity",
       "sku/name",
       "tags",
@@ -8208,7 +8197,7 @@
     ]
   },
   {
-    "api_version": "2022-08-01",
+    "api_version": "2022-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/CAPACITYRESERVATIONGROUPS/{}/CAPACITYRESERVATIONS/{}",
     "operation": "PATCH",
     "properties": [
@@ -8218,12 +8207,11 @@
     ]
   },
   {
-    "api_version": "2022-08-01",
+    "api_version": "2022-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/CAPACITYRESERVATIONGROUPS/{}/CAPACITYRESERVATIONS/{}",
     "operation": "PUT",
     "properties": [
       "location",
-      "name",
       "sku/capacity",
       "sku/name",
       "tags",
@@ -8231,27 +8219,25 @@
     ]
   },
   {
-    "api_version": "2022-07-02",
+    "api_version": "2022-03-02",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/DISKACCESSES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-07-02",
+    "api_version": "2022-03-02",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/DISKACCESSES/{}",
     "operation": "GET",
     "properties": [
       "location",
-      "name",
       "tags"
     ]
   },
   {
-    "api_version": "2022-07-02",
+    "api_version": "2022-03-02",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/DISKACCESSES/{}",
     "operation": "PUT",
     "properties": [
       "location",
-      "name",
       "tags"
     ]
   },
@@ -22462,7 +22448,10 @@
       "properties/hostName",
       "properties/maxCacheAge",
       "properties/resourceState",
-      "properties/scaleUnits"
+      "properties/scaleUnits",
+      "sku/capacity",
+      "sku/name",
+      "tags"
     ]
   },
   {
@@ -22487,7 +22476,10 @@
       "properties/hostName",
       "properties/maxCacheAge",
       "properties/resourceState",
-      "properties/scaleUnits"
+      "properties/scaleUnits",
+      "sku/capacity",
+      "sku/name",
+      "tags"
     ]
   },
   {
@@ -22512,7 +22504,10 @@
       "properties/hostName",
       "properties/maxCacheAge",
       "properties/resourceState",
-      "properties/scaleUnits"
+      "properties/scaleUnits",
+      "sku/capacity",
+      "sku/name",
+      "tags"
     ]
   },
   {
@@ -24665,7 +24660,10 @@
       "properties/authorizationKey",
       "properties/enableInternetSecurity",
       "properties/expressRouteCircuitPeering/id",
+      "properties/expressRouteGatewayBypass",
       "properties/routingConfiguration/associatedRouteTable/id",
+      "properties/routingConfiguration/inboundRouteMap/id",
+      "properties/routingConfiguration/outboundRouteMap/id",
       "properties/routingConfiguration/propagatedRouteTables/ids/id",
       "properties/routingConfiguration/propagatedRouteTables/labels",
       "properties/routingWeight"
@@ -24680,7 +24678,10 @@
       "properties/authorizationKey",
       "properties/enableInternetSecurity",
       "properties/expressRouteCircuitPeering/id",
+      "properties/expressRouteGatewayBypass",
       "properties/routingConfiguration/associatedRouteTable/id",
+      "properties/routingConfiguration/inboundRouteMap/id",
+      "properties/routingConfiguration/outboundRouteMap/id",
       "properties/routingConfiguration/propagatedRouteTables/ids/id",
       "properties/routingConfiguration/propagatedRouteTables/labels",
       "properties/routingWeight"
@@ -29965,6 +29966,8 @@
     "properties": [
       "id",
       "properties{AzureIaasVM}/backupManagementType",
+      "properties{AzureIaasVM}/instantRPDetails/azureBackupRGNamePrefix",
+      "properties{AzureIaasVM}/instantRPDetails/azureBackupRGNameSuffix",
       "properties{AzureIaasVM}/instantRpRetentionRangeInDays",
       "properties{AzureIaasVM}/policyType",
       "properties{AzureIaasVM}/retentionPolicy{LongTermRetentionPolicy}/dailySchedule/retentionDuration/count",
@@ -30080,6 +30083,8 @@
     "properties": [
       "id",
       "properties{AzureIaasVM}/backupManagementType",
+      "properties{AzureIaasVM}/instantRPDetails/azureBackupRGNamePrefix",
+      "properties{AzureIaasVM}/instantRPDetails/azureBackupRGNameSuffix",
       "properties{AzureIaasVM}/instantRpRetentionRangeInDays",
       "properties{AzureIaasVM}/policyType",
       "properties{AzureIaasVM}/retentionPolicy{LongTermRetentionPolicy}/dailySchedule/retentionDuration/count",
@@ -30450,7 +30455,10 @@
     "properties": [
       "id",
       "properties/providerSpecificDetails{A2A}/appConsistentFrequencyInMinutes",
-      "properties/providerSpecificDetails{A2A}/recoveryPointHistory"
+      "properties/providerSpecificDetails{A2A}/recoveryPointHistory",
+      "properties/providerSpecificDetails{HyperVReplicaAzure}/applicationConsistentSnapshotFrequencyInHours",
+      "properties/providerSpecificDetails{HyperVReplicaAzure}/recoveryPointHistoryDurationInHours",
+      "properties/providerSpecificDetails{HyperVReplicaAzure}/replicationInterval"
     ]
   },
   {
@@ -30460,7 +30468,10 @@
     "properties": [
       "properties/replicationProviderSettings{A2A}/appConsistentFrequencyInMinutes",
       "properties/replicationProviderSettings{A2A}/multiVmSyncStatus",
-      "properties/replicationProviderSettings{A2A}/recoveryPointHistory"
+      "properties/replicationProviderSettings{A2A}/recoveryPointHistory",
+      "properties/replicationProviderSettings{HyperVReplicaAzure}/applicationConsistentSnapshotFrequencyInHours",
+      "properties/replicationProviderSettings{HyperVReplicaAzure}/recoveryPointHistoryDuration",
+      "properties/replicationProviderSettings{HyperVReplicaAzure}/replicationInterval"
     ]
   },
   {
@@ -30470,7 +30481,10 @@
     "properties": [
       "properties/providerSpecificInput{A2A}/appConsistentFrequencyInMinutes",
       "properties/providerSpecificInput{A2A}/multiVmSyncStatus",
-      "properties/providerSpecificInput{A2A}/recoveryPointHistory"
+      "properties/providerSpecificInput{A2A}/recoveryPointHistory",
+      "properties/providerSpecificInput{HyperVReplicaAzure}/applicationConsistentSnapshotFrequencyInHours",
+      "properties/providerSpecificInput{HyperVReplicaAzure}/recoveryPointHistoryDuration",
+      "properties/providerSpecificInput{HyperVReplicaAzure}/replicationInterval"
     ]
   },
   {
@@ -30557,6 +30571,22 @@
       "properties/groups/startGroupActions/failoverTypes",
       "properties/primaryFabricId",
       "properties/recoveryFabricId"
+    ]
+  },
+  {
+    "api_version": "2022-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/REPLICATIONVAULTSETTINGS/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/vmwareToAzureProviderType"
+    ]
+  },
+  {
+    "api_version": "2022-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/REPLICATIONVAULTSETTINGS/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/vmwareToAzureProviderType"
     ]
   },
   {
@@ -36862,7 +36892,9 @@
       "properties/allowedExternalRedirectUrls",
       "properties/clientId",
       "properties/clientSecret",
+      "properties/clientSecretCertificateThumbprint",
       "properties/clientSecretSettingName",
+      "properties/configVersion",
       "properties/defaultProvider",
       "properties/enabled",
       "properties/facebookAppId",
@@ -36900,6 +36932,150 @@
     "api_version": "2021-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/CONFIG/AUTHSETTINGS/LIST",
     "operation": "POST"
+  },
+  {
+    "api_version": "2021-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/CONFIG/AUTHSETTINGSV2",
+    "operation": "PUT",
+    "properties": [
+      "properties/globalValidation/excludedPaths",
+      "properties/globalValidation/redirectToProvider",
+      "properties/globalValidation/requireAuthentication",
+      "properties/globalValidation/unauthenticatedClientAction",
+      "properties/httpSettings/forwardProxy/convention",
+      "properties/httpSettings/forwardProxy/customHostHeaderName",
+      "properties/httpSettings/forwardProxy/customProtoHeaderName",
+      "properties/httpSettings/requireHttps",
+      "properties/httpSettings/routes/apiPrefix",
+      "properties/identityProviders/apple/enabled",
+      "properties/identityProviders/apple/login/scopes",
+      "properties/identityProviders/apple/registration/clientId",
+      "properties/identityProviders/apple/registration/clientSecretSettingName",
+      "properties/identityProviders/azureActiveDirectory/enabled",
+      "properties/identityProviders/azureActiveDirectory/login/disableWWWAuthenticate",
+      "properties/identityProviders/azureActiveDirectory/login/loginParameters",
+      "properties/identityProviders/azureActiveDirectory/registration/clientId",
+      "properties/identityProviders/azureActiveDirectory/registration/clientSecretCertificateThumbprint",
+      "properties/identityProviders/azureActiveDirectory/registration/clientSecretSettingName",
+      "properties/identityProviders/azureActiveDirectory/registration/openIdIssuer",
+      "properties/identityProviders/azureActiveDirectory/validation/allowedAudiences",
+      "properties/identityProviders/azureActiveDirectory/validation/defaultAuthorizationPolicy/allowedApplications",
+      "properties/identityProviders/azureActiveDirectory/validation/defaultAuthorizationPolicy/allowedPrincipals/groups",
+      "properties/identityProviders/azureActiveDirectory/validation/defaultAuthorizationPolicy/allowedPrincipals/identities",
+      "properties/identityProviders/azureActiveDirectory/validation/jwtClaimChecks/allowedClientApplications",
+      "properties/identityProviders/azureActiveDirectory/validation/jwtClaimChecks/allowedGroups",
+      "properties/identityProviders/azureStaticWebApps/enabled",
+      "properties/identityProviders/azureStaticWebApps/registration/clientId",
+      "properties/identityProviders/customOpenIdConnectProviders",
+      "properties/identityProviders/facebook/enabled",
+      "properties/identityProviders/facebook/graphApiVersion",
+      "properties/identityProviders/facebook/login/scopes",
+      "properties/identityProviders/facebook/registration/appId",
+      "properties/identityProviders/facebook/registration/appSecretSettingName",
+      "properties/identityProviders/gitHub/enabled",
+      "properties/identityProviders/gitHub/login/scopes",
+      "properties/identityProviders/gitHub/registration/clientId",
+      "properties/identityProviders/gitHub/registration/clientSecretSettingName",
+      "properties/identityProviders/google/enabled",
+      "properties/identityProviders/google/login/scopes",
+      "properties/identityProviders/google/registration/clientId",
+      "properties/identityProviders/google/registration/clientSecretSettingName",
+      "properties/identityProviders/google/validation/allowedAudiences",
+      "properties/identityProviders/legacyMicrosoftAccount/enabled",
+      "properties/identityProviders/legacyMicrosoftAccount/login/scopes",
+      "properties/identityProviders/legacyMicrosoftAccount/registration/clientId",
+      "properties/identityProviders/legacyMicrosoftAccount/registration/clientSecretSettingName",
+      "properties/identityProviders/legacyMicrosoftAccount/validation/allowedAudiences",
+      "properties/identityProviders/twitter/enabled",
+      "properties/identityProviders/twitter/registration/consumerKey",
+      "properties/identityProviders/twitter/registration/consumerSecretSettingName",
+      "properties/login/allowedExternalRedirectUrls",
+      "properties/login/cookieExpiration/convention",
+      "properties/login/cookieExpiration/timeToExpiration",
+      "properties/login/nonce/nonceExpirationInterval",
+      "properties/login/nonce/validateNonce",
+      "properties/login/preserveUrlFragmentsForLogins",
+      "properties/login/routes/logoutEndpoint",
+      "properties/login/tokenStore/azureBlobStorage/sasUrlSettingName",
+      "properties/login/tokenStore/enabled",
+      "properties/login/tokenStore/fileSystem/directory",
+      "properties/login/tokenStore/tokenRefreshExtensionHours",
+      "properties/platform/configFilePath",
+      "properties/platform/enabled",
+      "properties/platform/runtimeVersion"
+    ]
+  },
+  {
+    "api_version": "2021-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/CONFIG/AUTHSETTINGSV2/LIST",
+    "operation": "GET",
+    "properties": [
+      "properties/globalValidation/excludedPaths",
+      "properties/globalValidation/redirectToProvider",
+      "properties/globalValidation/requireAuthentication",
+      "properties/globalValidation/unauthenticatedClientAction",
+      "properties/httpSettings/forwardProxy/convention",
+      "properties/httpSettings/forwardProxy/customHostHeaderName",
+      "properties/httpSettings/forwardProxy/customProtoHeaderName",
+      "properties/httpSettings/requireHttps",
+      "properties/httpSettings/routes/apiPrefix",
+      "properties/identityProviders/apple/enabled",
+      "properties/identityProviders/apple/login/scopes",
+      "properties/identityProviders/apple/registration/clientId",
+      "properties/identityProviders/apple/registration/clientSecretSettingName",
+      "properties/identityProviders/azureActiveDirectory/enabled",
+      "properties/identityProviders/azureActiveDirectory/login/disableWWWAuthenticate",
+      "properties/identityProviders/azureActiveDirectory/login/loginParameters",
+      "properties/identityProviders/azureActiveDirectory/registration/clientId",
+      "properties/identityProviders/azureActiveDirectory/registration/clientSecretCertificateThumbprint",
+      "properties/identityProviders/azureActiveDirectory/registration/clientSecretSettingName",
+      "properties/identityProviders/azureActiveDirectory/registration/openIdIssuer",
+      "properties/identityProviders/azureActiveDirectory/validation/allowedAudiences",
+      "properties/identityProviders/azureActiveDirectory/validation/defaultAuthorizationPolicy/allowedApplications",
+      "properties/identityProviders/azureActiveDirectory/validation/defaultAuthorizationPolicy/allowedPrincipals/groups",
+      "properties/identityProviders/azureActiveDirectory/validation/defaultAuthorizationPolicy/allowedPrincipals/identities",
+      "properties/identityProviders/azureActiveDirectory/validation/jwtClaimChecks/allowedClientApplications",
+      "properties/identityProviders/azureActiveDirectory/validation/jwtClaimChecks/allowedGroups",
+      "properties/identityProviders/azureStaticWebApps/enabled",
+      "properties/identityProviders/azureStaticWebApps/registration/clientId",
+      "properties/identityProviders/customOpenIdConnectProviders",
+      "properties/identityProviders/facebook/enabled",
+      "properties/identityProviders/facebook/graphApiVersion",
+      "properties/identityProviders/facebook/login/scopes",
+      "properties/identityProviders/facebook/registration/appId",
+      "properties/identityProviders/facebook/registration/appSecretSettingName",
+      "properties/identityProviders/gitHub/enabled",
+      "properties/identityProviders/gitHub/login/scopes",
+      "properties/identityProviders/gitHub/registration/clientId",
+      "properties/identityProviders/gitHub/registration/clientSecretSettingName",
+      "properties/identityProviders/google/enabled",
+      "properties/identityProviders/google/login/scopes",
+      "properties/identityProviders/google/registration/clientId",
+      "properties/identityProviders/google/registration/clientSecretSettingName",
+      "properties/identityProviders/google/validation/allowedAudiences",
+      "properties/identityProviders/legacyMicrosoftAccount/enabled",
+      "properties/identityProviders/legacyMicrosoftAccount/login/scopes",
+      "properties/identityProviders/legacyMicrosoftAccount/registration/clientId",
+      "properties/identityProviders/legacyMicrosoftAccount/registration/clientSecretSettingName",
+      "properties/identityProviders/legacyMicrosoftAccount/validation/allowedAudiences",
+      "properties/identityProviders/twitter/enabled",
+      "properties/identityProviders/twitter/registration/consumerKey",
+      "properties/identityProviders/twitter/registration/consumerSecretSettingName",
+      "properties/login/allowedExternalRedirectUrls",
+      "properties/login/cookieExpiration/convention",
+      "properties/login/cookieExpiration/timeToExpiration",
+      "properties/login/nonce/nonceExpirationInterval",
+      "properties/login/nonce/validateNonce",
+      "properties/login/preserveUrlFragmentsForLogins",
+      "properties/login/routes/logoutEndpoint",
+      "properties/login/tokenStore/azureBlobStorage/sasUrlSettingName",
+      "properties/login/tokenStore/enabled",
+      "properties/login/tokenStore/fileSystem/directory",
+      "properties/login/tokenStore/tokenRefreshExtensionHours",
+      "properties/platform/configFilePath",
+      "properties/platform/enabled",
+      "properties/platform/runtimeVersion"
+    ]
   },
   {
     "api_version": "2021-02-01",
@@ -38196,7 +38372,9 @@
       "properties/allowedExternalRedirectUrls",
       "properties/clientId",
       "properties/clientSecret",
+      "properties/clientSecretCertificateThumbprint",
       "properties/clientSecretSettingName",
+      "properties/configVersion",
       "properties/defaultProvider",
       "properties/enabled",
       "properties/facebookAppId",
@@ -38234,6 +38412,150 @@
     "api_version": "2021-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/CONFIG/AUTHSETTINGS/LIST",
     "operation": "POST"
+  },
+  {
+    "api_version": "2021-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/CONFIG/AUTHSETTINGSV2",
+    "operation": "PUT",
+    "properties": [
+      "properties/globalValidation/excludedPaths",
+      "properties/globalValidation/redirectToProvider",
+      "properties/globalValidation/requireAuthentication",
+      "properties/globalValidation/unauthenticatedClientAction",
+      "properties/httpSettings/forwardProxy/convention",
+      "properties/httpSettings/forwardProxy/customHostHeaderName",
+      "properties/httpSettings/forwardProxy/customProtoHeaderName",
+      "properties/httpSettings/requireHttps",
+      "properties/httpSettings/routes/apiPrefix",
+      "properties/identityProviders/apple/enabled",
+      "properties/identityProviders/apple/login/scopes",
+      "properties/identityProviders/apple/registration/clientId",
+      "properties/identityProviders/apple/registration/clientSecretSettingName",
+      "properties/identityProviders/azureActiveDirectory/enabled",
+      "properties/identityProviders/azureActiveDirectory/login/disableWWWAuthenticate",
+      "properties/identityProviders/azureActiveDirectory/login/loginParameters",
+      "properties/identityProviders/azureActiveDirectory/registration/clientId",
+      "properties/identityProviders/azureActiveDirectory/registration/clientSecretCertificateThumbprint",
+      "properties/identityProviders/azureActiveDirectory/registration/clientSecretSettingName",
+      "properties/identityProviders/azureActiveDirectory/registration/openIdIssuer",
+      "properties/identityProviders/azureActiveDirectory/validation/allowedAudiences",
+      "properties/identityProviders/azureActiveDirectory/validation/defaultAuthorizationPolicy/allowedApplications",
+      "properties/identityProviders/azureActiveDirectory/validation/defaultAuthorizationPolicy/allowedPrincipals/groups",
+      "properties/identityProviders/azureActiveDirectory/validation/defaultAuthorizationPolicy/allowedPrincipals/identities",
+      "properties/identityProviders/azureActiveDirectory/validation/jwtClaimChecks/allowedClientApplications",
+      "properties/identityProviders/azureActiveDirectory/validation/jwtClaimChecks/allowedGroups",
+      "properties/identityProviders/azureStaticWebApps/enabled",
+      "properties/identityProviders/azureStaticWebApps/registration/clientId",
+      "properties/identityProviders/customOpenIdConnectProviders",
+      "properties/identityProviders/facebook/enabled",
+      "properties/identityProviders/facebook/graphApiVersion",
+      "properties/identityProviders/facebook/login/scopes",
+      "properties/identityProviders/facebook/registration/appId",
+      "properties/identityProviders/facebook/registration/appSecretSettingName",
+      "properties/identityProviders/gitHub/enabled",
+      "properties/identityProviders/gitHub/login/scopes",
+      "properties/identityProviders/gitHub/registration/clientId",
+      "properties/identityProviders/gitHub/registration/clientSecretSettingName",
+      "properties/identityProviders/google/enabled",
+      "properties/identityProviders/google/login/scopes",
+      "properties/identityProviders/google/registration/clientId",
+      "properties/identityProviders/google/registration/clientSecretSettingName",
+      "properties/identityProviders/google/validation/allowedAudiences",
+      "properties/identityProviders/legacyMicrosoftAccount/enabled",
+      "properties/identityProviders/legacyMicrosoftAccount/login/scopes",
+      "properties/identityProviders/legacyMicrosoftAccount/registration/clientId",
+      "properties/identityProviders/legacyMicrosoftAccount/registration/clientSecretSettingName",
+      "properties/identityProviders/legacyMicrosoftAccount/validation/allowedAudiences",
+      "properties/identityProviders/twitter/enabled",
+      "properties/identityProviders/twitter/registration/consumerKey",
+      "properties/identityProviders/twitter/registration/consumerSecretSettingName",
+      "properties/login/allowedExternalRedirectUrls",
+      "properties/login/cookieExpiration/convention",
+      "properties/login/cookieExpiration/timeToExpiration",
+      "properties/login/nonce/nonceExpirationInterval",
+      "properties/login/nonce/validateNonce",
+      "properties/login/preserveUrlFragmentsForLogins",
+      "properties/login/routes/logoutEndpoint",
+      "properties/login/tokenStore/azureBlobStorage/sasUrlSettingName",
+      "properties/login/tokenStore/enabled",
+      "properties/login/tokenStore/fileSystem/directory",
+      "properties/login/tokenStore/tokenRefreshExtensionHours",
+      "properties/platform/configFilePath",
+      "properties/platform/enabled",
+      "properties/platform/runtimeVersion"
+    ]
+  },
+  {
+    "api_version": "2021-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/CONFIG/AUTHSETTINGSV2/LIST",
+    "operation": "GET",
+    "properties": [
+      "properties/globalValidation/excludedPaths",
+      "properties/globalValidation/redirectToProvider",
+      "properties/globalValidation/requireAuthentication",
+      "properties/globalValidation/unauthenticatedClientAction",
+      "properties/httpSettings/forwardProxy/convention",
+      "properties/httpSettings/forwardProxy/customHostHeaderName",
+      "properties/httpSettings/forwardProxy/customProtoHeaderName",
+      "properties/httpSettings/requireHttps",
+      "properties/httpSettings/routes/apiPrefix",
+      "properties/identityProviders/apple/enabled",
+      "properties/identityProviders/apple/login/scopes",
+      "properties/identityProviders/apple/registration/clientId",
+      "properties/identityProviders/apple/registration/clientSecretSettingName",
+      "properties/identityProviders/azureActiveDirectory/enabled",
+      "properties/identityProviders/azureActiveDirectory/login/disableWWWAuthenticate",
+      "properties/identityProviders/azureActiveDirectory/login/loginParameters",
+      "properties/identityProviders/azureActiveDirectory/registration/clientId",
+      "properties/identityProviders/azureActiveDirectory/registration/clientSecretCertificateThumbprint",
+      "properties/identityProviders/azureActiveDirectory/registration/clientSecretSettingName",
+      "properties/identityProviders/azureActiveDirectory/registration/openIdIssuer",
+      "properties/identityProviders/azureActiveDirectory/validation/allowedAudiences",
+      "properties/identityProviders/azureActiveDirectory/validation/defaultAuthorizationPolicy/allowedApplications",
+      "properties/identityProviders/azureActiveDirectory/validation/defaultAuthorizationPolicy/allowedPrincipals/groups",
+      "properties/identityProviders/azureActiveDirectory/validation/defaultAuthorizationPolicy/allowedPrincipals/identities",
+      "properties/identityProviders/azureActiveDirectory/validation/jwtClaimChecks/allowedClientApplications",
+      "properties/identityProviders/azureActiveDirectory/validation/jwtClaimChecks/allowedGroups",
+      "properties/identityProviders/azureStaticWebApps/enabled",
+      "properties/identityProviders/azureStaticWebApps/registration/clientId",
+      "properties/identityProviders/customOpenIdConnectProviders",
+      "properties/identityProviders/facebook/enabled",
+      "properties/identityProviders/facebook/graphApiVersion",
+      "properties/identityProviders/facebook/login/scopes",
+      "properties/identityProviders/facebook/registration/appId",
+      "properties/identityProviders/facebook/registration/appSecretSettingName",
+      "properties/identityProviders/gitHub/enabled",
+      "properties/identityProviders/gitHub/login/scopes",
+      "properties/identityProviders/gitHub/registration/clientId",
+      "properties/identityProviders/gitHub/registration/clientSecretSettingName",
+      "properties/identityProviders/google/enabled",
+      "properties/identityProviders/google/login/scopes",
+      "properties/identityProviders/google/registration/clientId",
+      "properties/identityProviders/google/registration/clientSecretSettingName",
+      "properties/identityProviders/google/validation/allowedAudiences",
+      "properties/identityProviders/legacyMicrosoftAccount/enabled",
+      "properties/identityProviders/legacyMicrosoftAccount/login/scopes",
+      "properties/identityProviders/legacyMicrosoftAccount/registration/clientId",
+      "properties/identityProviders/legacyMicrosoftAccount/registration/clientSecretSettingName",
+      "properties/identityProviders/legacyMicrosoftAccount/validation/allowedAudiences",
+      "properties/identityProviders/twitter/enabled",
+      "properties/identityProviders/twitter/registration/consumerKey",
+      "properties/identityProviders/twitter/registration/consumerSecretSettingName",
+      "properties/login/allowedExternalRedirectUrls",
+      "properties/login/cookieExpiration/convention",
+      "properties/login/cookieExpiration/timeToExpiration",
+      "properties/login/nonce/nonceExpirationInterval",
+      "properties/login/nonce/validateNonce",
+      "properties/login/preserveUrlFragmentsForLogins",
+      "properties/login/routes/logoutEndpoint",
+      "properties/login/tokenStore/azureBlobStorage/sasUrlSettingName",
+      "properties/login/tokenStore/enabled",
+      "properties/login/tokenStore/fileSystem/directory",
+      "properties/login/tokenStore/tokenRefreshExtensionHours",
+      "properties/platform/configFilePath",
+      "properties/platform/enabled",
+      "properties/platform/runtimeVersion"
+    ]
   },
   {
     "api_version": "2021-02-01",
