@@ -20840,7 +20840,6 @@
     "operation": "GET",
     "variant": "EventHub",
     "properties": [
-      "id",
       "location",
       "name",
       "properties/compression",
@@ -20897,7 +20896,6 @@
     "operation": "PUT",
     "variant": "EventHub",
     "properties": [
-      "id",
       "location",
       "name",
       "properties/compression",
@@ -23343,6 +23341,65 @@
   },
   {
     "api_version": "2022-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/MOBILENETWORKS/{}/SIMPOLICIES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/MOBILENETWORKS/{}/SIMPOLICIES/{}",
+    "operation": "GET",
+    "properties": [
+      "location",
+      "properties/defaultSlice/id",
+      "properties/registrationTimer",
+      "properties/rfspIndex",
+      "properties/sliceConfigurations/dataNetworkConfigurations/5qi",
+      "properties/sliceConfigurations/dataNetworkConfigurations/additionalAllowedSessionTypes",
+      "properties/sliceConfigurations/dataNetworkConfigurations/allocationAndRetentionPriorityLevel",
+      "properties/sliceConfigurations/dataNetworkConfigurations/allowedServices/id",
+      "properties/sliceConfigurations/dataNetworkConfigurations/dataNetwork/id",
+      "properties/sliceConfigurations/dataNetworkConfigurations/defaultSessionType",
+      "properties/sliceConfigurations/dataNetworkConfigurations/maximumNumberOfBufferedPackets",
+      "properties/sliceConfigurations/dataNetworkConfigurations/preemptionCapability",
+      "properties/sliceConfigurations/dataNetworkConfigurations/preemptionVulnerability",
+      "properties/sliceConfigurations/dataNetworkConfigurations/sessionAmbr/downlink",
+      "properties/sliceConfigurations/dataNetworkConfigurations/sessionAmbr/uplink",
+      "properties/sliceConfigurations/defaultDataNetwork/id",
+      "properties/sliceConfigurations/slice/id",
+      "properties/ueAmbr/downlink",
+      "properties/ueAmbr/uplink",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2022-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/MOBILENETWORKS/{}/SIMPOLICIES/{}",
+    "operation": "PUT",
+    "properties": [
+      "location",
+      "properties/defaultSlice/id",
+      "properties/registrationTimer",
+      "properties/rfspIndex",
+      "properties/sliceConfigurations/dataNetworkConfigurations/5qi",
+      "properties/sliceConfigurations/dataNetworkConfigurations/additionalAllowedSessionTypes",
+      "properties/sliceConfigurations/dataNetworkConfigurations/allocationAndRetentionPriorityLevel",
+      "properties/sliceConfigurations/dataNetworkConfigurations/allowedServices/id",
+      "properties/sliceConfigurations/dataNetworkConfigurations/dataNetwork/id",
+      "properties/sliceConfigurations/dataNetworkConfigurations/defaultSessionType",
+      "properties/sliceConfigurations/dataNetworkConfigurations/maximumNumberOfBufferedPackets",
+      "properties/sliceConfigurations/dataNetworkConfigurations/preemptionCapability",
+      "properties/sliceConfigurations/dataNetworkConfigurations/preemptionVulnerability",
+      "properties/sliceConfigurations/dataNetworkConfigurations/sessionAmbr/downlink",
+      "properties/sliceConfigurations/dataNetworkConfigurations/sessionAmbr/uplink",
+      "properties/sliceConfigurations/defaultDataNetwork/id",
+      "properties/sliceConfigurations/slice/id",
+      "properties/ueAmbr/downlink",
+      "properties/ueAmbr/uplink",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2022-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/MOBILENETWORKS/{}/SITES/{}",
     "operation": "DELETE"
   },
@@ -25071,6 +25128,7 @@
     "properties": [
       "id",
       "location",
+      "properties/allowNonVirtualWanTraffic",
       "properties/autoScaleConfiguration/bounds/min",
       "properties/expressRouteConnections",
       "properties/virtualHub/id",
@@ -25084,6 +25142,7 @@
     "properties": [
       "id",
       "location",
+      "properties/allowNonVirtualWanTraffic",
       "properties/autoScaleConfiguration/bounds/min",
       "properties/expressRouteConnections",
       "properties/virtualHub/id",
@@ -25202,6 +25261,29 @@
       "properties/peeringLocation",
       "properties/resourceGuid",
       "tags"
+    ]
+  },
+  {
+    "api_version": "2022-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTEPORTS/{}/AUTHORIZATIONS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTEPORTS/{}/AUTHORIZATIONS/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/authorizationKey",
+      "properties/authorizationUseStatus"
+    ]
+  },
+  {
+    "api_version": "2022-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTEPORTS/{}/AUTHORIZATIONS/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/authorizationKey",
+      "properties/authorizationUseStatus"
     ]
   },
   {
@@ -29900,6 +29982,11 @@
   {
     "api_version": "2022-10-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/SECURITYMLANALYTICSSETTINGS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-10-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/SECURITYMLANALYTICSSETTINGS/{}",
     "operation": "PUT",
     "variant": "Anomaly",
     "properties": [
@@ -31069,7 +31156,9 @@
       "properties/providerSpecificDetails{A2A}/recoveryPointHistory",
       "properties/providerSpecificDetails{HyperVReplicaAzure}/applicationConsistentSnapshotFrequencyInHours",
       "properties/providerSpecificDetails{HyperVReplicaAzure}/recoveryPointHistoryDurationInHours",
-      "properties/providerSpecificDetails{HyperVReplicaAzure}/replicationInterval"
+      "properties/providerSpecificDetails{HyperVReplicaAzure}/replicationInterval",
+      "properties/providerSpecificDetails{InMageRcm}/appConsistentFrequencyInMinutes",
+      "properties/providerSpecificDetails{InMageRcm}/recoveryPointHistoryInMinutes"
     ]
   },
   {
@@ -31082,7 +31171,11 @@
       "properties/replicationProviderSettings{A2A}/recoveryPointHistory",
       "properties/replicationProviderSettings{HyperVReplicaAzure}/applicationConsistentSnapshotFrequencyInHours",
       "properties/replicationProviderSettings{HyperVReplicaAzure}/recoveryPointHistoryDuration",
-      "properties/replicationProviderSettings{HyperVReplicaAzure}/replicationInterval"
+      "properties/replicationProviderSettings{HyperVReplicaAzure}/replicationInterval",
+      "properties/replicationProviderSettings{InMageRcm}/appConsistentFrequencyInMinutes",
+      "properties/replicationProviderSettings{InMageRcm}/crashConsistentFrequencyInMinutes",
+      "properties/replicationProviderSettings{InMageRcm}/enableMultiVmSync",
+      "properties/replicationProviderSettings{InMageRcm}/recoveryPointHistoryInMinutes"
     ]
   },
   {
@@ -31095,7 +31188,11 @@
       "properties/providerSpecificInput{A2A}/recoveryPointHistory",
       "properties/providerSpecificInput{HyperVReplicaAzure}/applicationConsistentSnapshotFrequencyInHours",
       "properties/providerSpecificInput{HyperVReplicaAzure}/recoveryPointHistoryDuration",
-      "properties/providerSpecificInput{HyperVReplicaAzure}/replicationInterval"
+      "properties/providerSpecificInput{HyperVReplicaAzure}/replicationInterval",
+      "properties/providerSpecificInput{InMageRcm}/appConsistentFrequencyInMinutes",
+      "properties/providerSpecificInput{InMageRcm}/crashConsistentFrequencyInMinutes",
+      "properties/providerSpecificInput{InMageRcm}/enableMultiVmSync",
+      "properties/providerSpecificInput{InMageRcm}/recoveryPointHistoryInMinutes"
     ]
   },
   {
@@ -32374,12 +32471,12 @@
     ]
   },
   {
-    "api_version": "2022-02-01",
+    "api_version": "2023-02-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SIGNALRSERVICE/SIGNALR/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-02-01",
+    "api_version": "2023-02-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SIGNALRSERVICE/SIGNALR/{}",
     "operation": "GET",
     "properties": [
@@ -32413,7 +32510,7 @@
     ]
   },
   {
-    "api_version": "2022-02-01",
+    "api_version": "2023-02-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SIGNALRSERVICE/SIGNALR/{}",
     "operation": "PATCH",
     "properties": [
@@ -32447,7 +32544,7 @@
     ]
   },
   {
-    "api_version": "2022-02-01",
+    "api_version": "2023-02-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SIGNALRSERVICE/SIGNALR/{}",
     "operation": "PUT",
     "properties": [
@@ -32481,17 +32578,17 @@
     ]
   },
   {
-    "api_version": "2022-02-01",
+    "api_version": "2023-02-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SIGNALRSERVICE/SIGNALR/{}/LISTKEYS",
     "operation": "POST"
   },
   {
-    "api_version": "2022-02-01",
+    "api_version": "2023-02-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SIGNALRSERVICE/SIGNALR/{}/SHAREDPRIVATELINKRESOURCES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-02-01",
+    "api_version": "2023-02-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SIGNALRSERVICE/SIGNALR/{}/SHAREDPRIVATELINKRESOURCES/{}",
     "operation": "GET",
     "properties": [
@@ -32503,7 +32600,7 @@
     ]
   },
   {
-    "api_version": "2022-02-01",
+    "api_version": "2023-02-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SIGNALRSERVICE/SIGNALR/{}/SHAREDPRIVATELINKRESOURCES/{}",
     "operation": "PUT",
     "properties": [
@@ -32515,12 +32612,12 @@
     ]
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2023-02-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SIGNALRSERVICE/WEBPUBSUB/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2023-02-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SIGNALRSERVICE/WEBPUBSUB/{}",
     "operation": "GET",
     "properties": [
@@ -32555,7 +32652,7 @@
     ]
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2023-02-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SIGNALRSERVICE/WEBPUBSUB/{}",
     "operation": "PATCH",
     "properties": [
@@ -32590,7 +32687,7 @@
     ]
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2023-02-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SIGNALRSERVICE/WEBPUBSUB/{}",
     "operation": "PUT",
     "properties": [
@@ -32625,12 +32722,12 @@
     ]
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2023-02-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SIGNALRSERVICE/WEBPUBSUB/{}/HUBS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2023-02-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SIGNALRSERVICE/WEBPUBSUB/{}/HUBS/{}",
     "operation": "GET",
     "properties": [
@@ -32643,7 +32740,7 @@
     ]
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2023-02-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SIGNALRSERVICE/WEBPUBSUB/{}/HUBS/{}",
     "operation": "PUT",
     "properties": [
@@ -32656,17 +32753,17 @@
     ]
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2023-02-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SIGNALRSERVICE/WEBPUBSUB/{}/LISTKEYS",
     "operation": "POST"
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2023-02-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SIGNALRSERVICE/WEBPUBSUB/{}/SHAREDPRIVATELINKRESOURCES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2023-02-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SIGNALRSERVICE/WEBPUBSUB/{}/SHAREDPRIVATELINKRESOURCES/{}",
     "operation": "GET",
     "properties": [
@@ -32677,7 +32774,7 @@
     ]
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2023-02-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SIGNALRSERVICE/WEBPUBSUB/{}/SHAREDPRIVATELINKRESOURCES/{}",
     "operation": "PUT",
     "properties": [
