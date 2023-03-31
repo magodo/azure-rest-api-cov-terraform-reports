@@ -670,22 +670,12 @@
     ]
   },
   {
-    "api_version": "2020-09-01",
-    "api_path": "/PROVIDERS/MICROSOFT.SUBSCRIPTION/ALIASES",
-    "operation": "GET",
-    "properties": [
-      "value",
-      "value/name",
-      "value/properties/subscriptionId"
-    ]
-  },
-  {
-    "api_version": "2020-09-01",
+    "api_version": "2021-10-01",
     "api_path": "/PROVIDERS/MICROSOFT.SUBSCRIPTION/ALIASES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-09-01",
+    "api_version": "2021-10-01",
     "api_path": "/PROVIDERS/MICROSOFT.SUBSCRIPTION/ALIASES/{}",
     "operation": "GET",
     "properties": [
@@ -694,7 +684,7 @@
     ]
   },
   {
-    "api_version": "2020-09-01",
+    "api_version": "2021-10-01",
     "api_path": "/PROVIDERS/MICROSOFT.SUBSCRIPTION/ALIASES/{}",
     "operation": "PUT",
     "properties": [
@@ -1486,7 +1476,7 @@
     "operation": "POST"
   },
   {
-    "api_version": "2020-09-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.SUBSCRIPTION/RENAME",
     "operation": "POST",
     "properties": [
@@ -11981,31 +11971,33 @@
     ]
   },
   {
-    "api_version": "2022-04-01-preview",
+    "api_version": "2022-10-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATABRICKS/ACCESSCONNECTORS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-04-01-preview",
+    "api_version": "2022-10-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATABRICKS/ACCESSCONNECTORS/{}",
     "operation": "GET",
     "properties": [
       "identity/principalId",
       "identity/tenantId",
       "identity/type",
+      "identity/userAssignedIdentities",
       "location",
       "name",
       "tags"
     ]
   },
   {
-    "api_version": "2022-04-01-preview",
+    "api_version": "2022-10-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATABRICKS/ACCESSCONNECTORS/{}",
     "operation": "PUT",
     "properties": [
       "identity/principalId",
       "identity/tenantId",
       "identity/type",
+      "identity/userAssignedIdentities",
       "location",
       "name",
       "tags"
@@ -26963,7 +26955,6 @@
     "operation": "GET",
     "properties": [
       "location",
-      "name",
       "properties/enabled",
       "properties/flowAnalyticsConfiguration/networkWatcherFlowAnalyticsConfiguration/enabled",
       "properties/flowAnalyticsConfiguration/networkWatcherFlowAnalyticsConfiguration/trafficAnalyticsInterval",
@@ -26984,7 +26975,6 @@
     "operation": "PUT",
     "properties": [
       "location",
-      "name",
       "properties/enabled",
       "properties/flowAnalyticsConfiguration/networkWatcherFlowAnalyticsConfiguration/enabled",
       "properties/flowAnalyticsConfiguration/networkWatcherFlowAnalyticsConfiguration/trafficAnalyticsInterval",
@@ -32767,6 +32757,31 @@
       "sku/capacity",
       "sku/name",
       "tags"
+    ]
+  },
+  {
+    "api_version": "2023-02-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SIGNALRSERVICE/WEBPUBSUB/{}/CUSTOMCERTIFICATES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-02-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SIGNALRSERVICE/WEBPUBSUB/{}/CUSTOMCERTIFICATES/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/keyVaultBaseUri",
+      "properties/keyVaultSecretName",
+      "properties/keyVaultSecretVersion"
+    ]
+  },
+  {
+    "api_version": "2023-02-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SIGNALRSERVICE/WEBPUBSUB/{}/CUSTOMCERTIFICATES/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/keyVaultBaseUri",
+      "properties/keyVaultSecretName",
+      "properties/keyVaultSecretVersion"
     ]
   },
   {
