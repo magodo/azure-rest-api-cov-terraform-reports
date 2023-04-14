@@ -181,6 +181,46 @@
     "operation": "POST"
   },
   {
+    "api_version": "2022-01-01.15.0",
+    "api_path": "/JOBS",
+    "operation": "POST",
+    "properties": [
+      "commonEnvironmentSettings/name",
+      "commonEnvironmentSettings/value",
+      "constraints/maxTaskRetryCount",
+      "displayName",
+      "id",
+      "poolInfo/poolId",
+      "priority"
+    ]
+  },
+  {
+    "api_version": "2022-01-01.15.0",
+    "api_path": "/JOBS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-01-01.15.0",
+    "api_path": "/JOBS/{}",
+    "operation": "GET",
+    "properties": [
+      "commonEnvironmentSettings/name",
+      "commonEnvironmentSettings/value",
+      "constraints/maxTaskRetryCount",
+      "displayName",
+      "priority"
+    ]
+  },
+  {
+    "api_version": "2022-01-01.15.0",
+    "api_path": "/JOBS/{}",
+    "operation": "PATCH",
+    "properties": [
+      "constraints/maxTaskRetryCount",
+      "priority"
+    ]
+  },
+  {
     "api_version": "7.4",
     "api_path": "/KEYS/{}/CREATE",
     "operation": "POST",
@@ -9195,6 +9235,7 @@
       "properties/encryptionSettingsCollection/encryptionSettings/diskEncryptionKey/sourceVault/id",
       "properties/encryptionSettingsCollection/encryptionSettings/keyEncryptionKey/keyUrl",
       "properties/encryptionSettingsCollection/encryptionSettings/keyEncryptionKey/sourceVault/id",
+      "properties/incremental",
       "properties/osType",
       "properties/securityProfile/securityType",
       "properties/timeCreated",
@@ -9217,6 +9258,7 @@
       "properties/encryptionSettingsCollection/encryptionSettings/diskEncryptionKey/sourceVault/id",
       "properties/encryptionSettingsCollection/encryptionSettings/keyEncryptionKey/keyUrl",
       "properties/encryptionSettingsCollection/encryptionSettings/keyEncryptionKey/sourceVault/id",
+      "properties/incremental",
       "properties/osType",
       "properties/securityProfile/securityType",
       "properties/timeCreated",
@@ -10551,7 +10593,6 @@
       "identity/type",
       "identity/userAssignedIdentities",
       "location",
-      "name",
       "properties/adminUserEnabled",
       "properties/anonymousPullEnabled",
       "properties/dataEndpointEnabled",
@@ -10621,7 +10662,6 @@
       "identity/type",
       "identity/userAssignedIdentities",
       "location",
-      "name",
       "properties/adminUserEnabled",
       "properties/anonymousPullEnabled",
       "properties/dataEndpointEnabled",
@@ -10658,9 +10698,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/AGENTPOOLS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "location",
-      "name",
       "properties/count",
       "properties/os",
       "properties/tier",
@@ -10681,9 +10719,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/AGENTPOOLS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "location",
-      "name",
       "properties/count",
       "properties/os",
       "properties/tier",
@@ -10737,6 +10773,18 @@
   },
   {
     "api_version": "2021-08-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/REPLICATIONS",
+    "operation": "GET",
+    "properties": [
+      "location",
+      "name",
+      "properties/regionEndpointEnabled",
+      "properties/zoneRedundancy",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2021-08-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/REPLICATIONS/{}",
     "operation": "DELETE"
   },
@@ -10766,11 +10814,22 @@
   },
   {
     "api_version": "2019-06-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/RUNS",
+    "operation": "GET",
+    "properties": [
+      "name",
+      "properties/status",
+      "properties/task"
+    ]
+  },
+  {
+    "api_version": "2019-06-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/RUNS/{}",
     "operation": "GET",
     "properties": [
       "name",
-      "properties/status"
+      "properties/status",
+      "properties/task"
     ]
   },
   {
@@ -10779,8 +10838,7 @@
     "operation": "POST",
     "variant": "TaskRunRequest",
     "properties": [
-      "taskId",
-      "type"
+      "taskId"
     ]
   },
   {
@@ -10793,7 +10851,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/SCOPEMAPS/{}",
     "operation": "GET",
     "properties": [
-      "name",
       "properties/actions",
       "properties/description"
     ]
@@ -10812,7 +10869,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/SCOPEMAPS/{}",
     "operation": "PUT",
     "properties": [
-      "name",
       "properties/actions",
       "properties/description"
     ]
@@ -10853,19 +10909,16 @@
       "properties/step{Docker}/isPushEnabled",
       "properties/step{Docker}/noCache",
       "properties/step{Docker}/target",
-      "properties/step{Docker}/type",
       "properties/step{EncodedTask}/contextAccessToken",
       "properties/step{EncodedTask}/contextPath",
       "properties/step{EncodedTask}/encodedTaskContent",
       "properties/step{EncodedTask}/encodedValuesContent",
-      "properties/step{EncodedTask}/type",
       "properties/step{EncodedTask}/values/isSecret",
       "properties/step{EncodedTask}/values/name",
       "properties/step{EncodedTask}/values/value",
       "properties/step{FileTask}/contextAccessToken",
       "properties/step{FileTask}/contextPath",
       "properties/step{FileTask}/taskFilePath",
-      "properties/step{FileTask}/type",
       "properties/step{FileTask}/values/isSecret",
       "properties/step{FileTask}/values/name",
       "properties/step{FileTask}/values/value",
@@ -10924,19 +10977,16 @@
       "properties/step{Docker}/isPushEnabled",
       "properties/step{Docker}/noCache",
       "properties/step{Docker}/target",
-      "properties/step{Docker}/type",
       "properties/step{EncodedTask}/contextAccessToken",
       "properties/step{EncodedTask}/contextPath",
       "properties/step{EncodedTask}/encodedTaskContent",
       "properties/step{EncodedTask}/encodedValuesContent",
-      "properties/step{EncodedTask}/type",
       "properties/step{EncodedTask}/values/isSecret",
       "properties/step{EncodedTask}/values/name",
       "properties/step{EncodedTask}/values/value",
       "properties/step{FileTask}/contextAccessToken",
       "properties/step{FileTask}/contextPath",
       "properties/step{FileTask}/taskFilePath",
-      "properties/step{FileTask}/type",
       "properties/step{FileTask}/values/isSecret",
       "properties/step{FileTask}/values/name",
       "properties/step{FileTask}/values/value",
@@ -10974,7 +11024,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/TOKENS/{}",
     "operation": "GET",
     "properties": [
-      "name",
       "properties/credentials/passwords/expiry",
       "properties/credentials/passwords/name",
       "properties/credentials/passwords/value",
@@ -11000,7 +11049,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/TOKENS/{}",
     "operation": "PUT",
     "properties": [
-      "name",
       "properties/credentials/passwords/expiry",
       "properties/credentials/passwords/name",
       "properties/credentials/passwords/value",
@@ -11087,12 +11135,12 @@
     ]
   },
   {
-    "api_version": "2023-01-02-preview",
+    "api_version": "2023-02-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-01-02-preview",
+    "api_version": "2023-02-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
     "operation": "GET",
     "properties": [
@@ -11102,7 +11150,6 @@
       "identity/type",
       "identity/userAssignedIdentities",
       "location",
-      "name",
       "properties/aadProfile/adminGroupObjectIDs",
       "properties/aadProfile/clientAppID",
       "properties/aadProfile/enableAzureRBAC",
@@ -11242,7 +11289,6 @@
       "properties/linuxProfile/ssh/publicKeys/keyData",
       "properties/networkProfile/dnsServiceIP",
       "properties/networkProfile/dockerBridgeCidr",
-      "properties/networkProfile/ebpfDataplane",
       "properties/networkProfile/ipFamilies",
       "properties/networkProfile/loadBalancerProfile/allocatedOutboundPorts",
       "properties/networkProfile/loadBalancerProfile/effectiveOutboundIPs/id",
@@ -11255,6 +11301,7 @@
       "properties/networkProfile/natGatewayProfile/effectiveOutboundIPs/id",
       "properties/networkProfile/natGatewayProfile/idleTimeoutInMinutes",
       "properties/networkProfile/natGatewayProfile/managedOutboundIPProfile/count",
+      "properties/networkProfile/networkDataplane",
       "properties/networkProfile/networkMode",
       "properties/networkProfile/networkPlugin",
       "properties/networkProfile/networkPluginMode",
@@ -11301,7 +11348,7 @@
     ]
   },
   {
-    "api_version": "2023-01-02-preview",
+    "api_version": "2023-02-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
     "operation": "PUT",
     "properties": [
@@ -11311,7 +11358,6 @@
       "identity/type",
       "identity/userAssignedIdentities",
       "location",
-      "name",
       "properties/aadProfile/adminGroupObjectIDs",
       "properties/aadProfile/clientAppID",
       "properties/aadProfile/enableAzureRBAC",
@@ -11451,7 +11497,6 @@
       "properties/linuxProfile/ssh/publicKeys/keyData",
       "properties/networkProfile/dnsServiceIP",
       "properties/networkProfile/dockerBridgeCidr",
-      "properties/networkProfile/ebpfDataplane",
       "properties/networkProfile/ipFamilies",
       "properties/networkProfile/loadBalancerProfile/allocatedOutboundPorts",
       "properties/networkProfile/loadBalancerProfile/effectiveOutboundIPs/id",
@@ -11464,6 +11509,7 @@
       "properties/networkProfile/natGatewayProfile/effectiveOutboundIPs/id",
       "properties/networkProfile/natGatewayProfile/idleTimeoutInMinutes",
       "properties/networkProfile/natGatewayProfile/managedOutboundIPProfile/count",
+      "properties/networkProfile/networkDataplane",
       "properties/networkProfile/networkMode",
       "properties/networkProfile/networkPlugin",
       "properties/networkProfile/networkPluginMode",
@@ -11510,12 +11556,12 @@
     ]
   },
   {
-    "api_version": "2023-01-02-preview",
+    "api_version": "2023-02-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/AGENTPOOLS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-01-02-preview",
+    "api_version": "2023-02-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/AGENTPOOLS/{}",
     "operation": "GET",
     "properties": [
@@ -11606,7 +11652,7 @@
     ]
   },
   {
-    "api_version": "2023-01-02-preview",
+    "api_version": "2023-02-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/AGENTPOOLS/{}",
     "operation": "PUT",
     "properties": [
@@ -11697,22 +11743,22 @@
     ]
   },
   {
-    "api_version": "2023-01-02-preview",
+    "api_version": "2023-02-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/LISTCLUSTERADMINCREDENTIAL",
     "operation": "POST"
   },
   {
-    "api_version": "2023-01-02-preview",
+    "api_version": "2023-02-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/LISTCLUSTERUSERCREDENTIAL",
     "operation": "POST"
   },
   {
-    "api_version": "2023-01-02-preview",
+    "api_version": "2023-02-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/MAINTENANCECONFIGURATIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-01-02-preview",
+    "api_version": "2023-02-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/MAINTENANCECONFIGURATIONS/{}",
     "operation": "GET",
     "properties": [
@@ -11723,7 +11769,7 @@
     ]
   },
   {
-    "api_version": "2023-01-02-preview",
+    "api_version": "2023-02-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/MAINTENANCECONFIGURATIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -11734,7 +11780,7 @@
     ]
   },
   {
-    "api_version": "2023-01-02-preview",
+    "api_version": "2023-02-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/RESETAADPROFILE",
     "operation": "POST",
     "properties": [
@@ -11748,7 +11794,7 @@
     ]
   },
   {
-    "api_version": "2023-01-02-preview",
+    "api_version": "2023-02-02-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/RESETSERVICEPRINCIPALPROFILE",
     "operation": "POST",
     "properties": [
@@ -19036,12 +19082,12 @@
     ]
   },
   {
-    "api_version": "2020-12-08",
+    "api_version": "2022-08-08",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.HEALTHBOT/HEALTHBOTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-12-08",
+    "api_version": "2022-08-08",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.HEALTHBOT/HEALTHBOTS/{}",
     "operation": "GET",
     "properties": [
@@ -19052,7 +19098,7 @@
     ]
   },
   {
-    "api_version": "2020-12-08",
+    "api_version": "2022-08-08",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.HEALTHBOT/HEALTHBOTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -19061,7 +19107,7 @@
     ]
   },
   {
-    "api_version": "2020-12-08",
+    "api_version": "2022-08-08",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.HEALTHBOT/HEALTHBOTS/{}",
     "operation": "PUT",
     "properties": [
@@ -19897,20 +19943,44 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/DATACOLLECTIONRULES/{}",
     "operation": "GET",
     "properties": [
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
+      "identity/userAssignedIdentities",
       "kind",
       "location",
       "name",
+      "properties/dataCollectionEndpointId",
+      "properties/dataFlows/builtInTransform",
       "properties/dataFlows/destinations",
+      "properties/dataFlows/outputStream",
       "properties/dataFlows/streams",
+      "properties/dataFlows/transformKql",
+      "properties/dataSources/dataImports/eventHub/consumerGroup",
+      "properties/dataSources/dataImports/eventHub/name",
+      "properties/dataSources/dataImports/eventHub/stream",
       "properties/dataSources/extensions/extensionName",
       "properties/dataSources/extensions/extensionSettings",
       "properties/dataSources/extensions/inputDataSources",
       "properties/dataSources/extensions/name",
       "properties/dataSources/extensions/streams",
+      "properties/dataSources/iisLogs/logDirectories",
+      "properties/dataSources/iisLogs/name",
+      "properties/dataSources/iisLogs/streams",
+      "properties/dataSources/logFiles/filePatterns",
+      "properties/dataSources/logFiles/format",
+      "properties/dataSources/logFiles/name",
+      "properties/dataSources/logFiles/settings/text/recordStartTimestampFormat",
+      "properties/dataSources/logFiles/streams",
       "properties/dataSources/performanceCounters/counterSpecifiers",
       "properties/dataSources/performanceCounters/name",
       "properties/dataSources/performanceCounters/samplingFrequencyInSeconds",
       "properties/dataSources/performanceCounters/streams",
+      "properties/dataSources/platformTelemetry/name",
+      "properties/dataSources/platformTelemetry/streams",
+      "properties/dataSources/prometheusForwarder/labelIncludeFilter",
+      "properties/dataSources/prometheusForwarder/name",
+      "properties/dataSources/prometheusForwarder/streams",
       "properties/dataSources/syslog/facilityNames",
       "properties/dataSources/syslog/logLevels",
       "properties/dataSources/syslog/name",
@@ -19918,10 +19988,29 @@
       "properties/dataSources/windowsEventLogs/name",
       "properties/dataSources/windowsEventLogs/streams",
       "properties/dataSources/windowsEventLogs/xPathQueries",
+      "properties/dataSources/windowsFirewallLogs/name",
+      "properties/dataSources/windowsFirewallLogs/streams",
       "properties/description",
       "properties/destinations/azureMonitorMetrics/name",
+      "properties/destinations/eventHubs/eventHubResourceId",
+      "properties/destinations/eventHubs/name",
+      "properties/destinations/eventHubsDirect/eventHubResourceId",
+      "properties/destinations/eventHubsDirect/name",
       "properties/destinations/logAnalytics/name",
       "properties/destinations/logAnalytics/workspaceResourceId",
+      "properties/destinations/monitoringAccounts/accountResourceId",
+      "properties/destinations/monitoringAccounts/name",
+      "properties/destinations/storageAccounts/containerName",
+      "properties/destinations/storageAccounts/name",
+      "properties/destinations/storageAccounts/storageAccountResourceId",
+      "properties/destinations/storageBlobsDirect/containerName",
+      "properties/destinations/storageBlobsDirect/name",
+      "properties/destinations/storageBlobsDirect/storageAccountResourceId",
+      "properties/destinations/storageTablesDirect/name",
+      "properties/destinations/storageTablesDirect/storageAccountResourceId",
+      "properties/destinations/storageTablesDirect/tableName",
+      "properties/immutableId",
+      "properties/streamDeclarations",
       "tags"
     ]
   },
@@ -19930,20 +20019,44 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/DATACOLLECTIONRULES/{}",
     "operation": "PUT",
     "properties": [
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
+      "identity/userAssignedIdentities",
       "kind",
       "location",
       "name",
+      "properties/dataCollectionEndpointId",
+      "properties/dataFlows/builtInTransform",
       "properties/dataFlows/destinations",
+      "properties/dataFlows/outputStream",
       "properties/dataFlows/streams",
+      "properties/dataFlows/transformKql",
+      "properties/dataSources/dataImports/eventHub/consumerGroup",
+      "properties/dataSources/dataImports/eventHub/name",
+      "properties/dataSources/dataImports/eventHub/stream",
       "properties/dataSources/extensions/extensionName",
       "properties/dataSources/extensions/extensionSettings",
       "properties/dataSources/extensions/inputDataSources",
       "properties/dataSources/extensions/name",
       "properties/dataSources/extensions/streams",
+      "properties/dataSources/iisLogs/logDirectories",
+      "properties/dataSources/iisLogs/name",
+      "properties/dataSources/iisLogs/streams",
+      "properties/dataSources/logFiles/filePatterns",
+      "properties/dataSources/logFiles/format",
+      "properties/dataSources/logFiles/name",
+      "properties/dataSources/logFiles/settings/text/recordStartTimestampFormat",
+      "properties/dataSources/logFiles/streams",
       "properties/dataSources/performanceCounters/counterSpecifiers",
       "properties/dataSources/performanceCounters/name",
       "properties/dataSources/performanceCounters/samplingFrequencyInSeconds",
       "properties/dataSources/performanceCounters/streams",
+      "properties/dataSources/platformTelemetry/name",
+      "properties/dataSources/platformTelemetry/streams",
+      "properties/dataSources/prometheusForwarder/labelIncludeFilter",
+      "properties/dataSources/prometheusForwarder/name",
+      "properties/dataSources/prometheusForwarder/streams",
       "properties/dataSources/syslog/facilityNames",
       "properties/dataSources/syslog/logLevels",
       "properties/dataSources/syslog/name",
@@ -19951,10 +20064,29 @@
       "properties/dataSources/windowsEventLogs/name",
       "properties/dataSources/windowsEventLogs/streams",
       "properties/dataSources/windowsEventLogs/xPathQueries",
+      "properties/dataSources/windowsFirewallLogs/name",
+      "properties/dataSources/windowsFirewallLogs/streams",
       "properties/description",
       "properties/destinations/azureMonitorMetrics/name",
+      "properties/destinations/eventHubs/eventHubResourceId",
+      "properties/destinations/eventHubs/name",
+      "properties/destinations/eventHubsDirect/eventHubResourceId",
+      "properties/destinations/eventHubsDirect/name",
       "properties/destinations/logAnalytics/name",
       "properties/destinations/logAnalytics/workspaceResourceId",
+      "properties/destinations/monitoringAccounts/accountResourceId",
+      "properties/destinations/monitoringAccounts/name",
+      "properties/destinations/storageAccounts/containerName",
+      "properties/destinations/storageAccounts/name",
+      "properties/destinations/storageAccounts/storageAccountResourceId",
+      "properties/destinations/storageBlobsDirect/containerName",
+      "properties/destinations/storageBlobsDirect/name",
+      "properties/destinations/storageBlobsDirect/storageAccountResourceId",
+      "properties/destinations/storageTablesDirect/name",
+      "properties/destinations/storageTablesDirect/storageAccountResourceId",
+      "properties/destinations/storageTablesDirect/tableName",
+      "properties/immutableId",
+      "properties/streamDeclarations",
       "tags"
     ]
   },
@@ -19995,21 +20127,31 @@
       "properties/criteria{Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/skipMetricValidation",
       "properties/criteria{Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/threshold",
       "properties/criteria{Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/timeAggregation",
-      "properties/criteria{Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria}/odata.type",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/dimensions/name",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/dimensions/operator",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/dimensions/values",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/metricName",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/metricNamespace",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/name",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/operator",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/skipMetricValidation",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/threshold",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/timeAggregation",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/odata.type",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/alertSensitivity",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/dimensions/name",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/dimensions/operator",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/dimensions/values",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/failingPeriods/minFailingPeriodsToAlert",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/failingPeriods/numberOfEvaluationPeriods",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/ignoreDataBefore",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/metricName",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/metricNamespace",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/name",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/operator",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/skipMetricValidation",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/timeAggregation",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/dimensions/name",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/dimensions/operator",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/dimensions/values",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/metricName",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/metricNamespace",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/name",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/operator",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/skipMetricValidation",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/threshold",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/timeAggregation",
       "properties/criteria{Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria}/componentId",
       "properties/criteria{Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria}/failedLocationCount",
-      "properties/criteria{Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria}/odata.type",
       "properties/criteria{Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria}/webTestId",
       "properties/description",
       "properties/enabled",
@@ -20054,21 +20196,31 @@
       "properties/criteria{Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/skipMetricValidation",
       "properties/criteria{Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/threshold",
       "properties/criteria{Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/timeAggregation",
-      "properties/criteria{Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria}/odata.type",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/dimensions/name",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/dimensions/operator",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/dimensions/values",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/metricName",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/metricNamespace",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/name",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/operator",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/skipMetricValidation",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/threshold",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/timeAggregation",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/odata.type",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/alertSensitivity",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/dimensions/name",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/dimensions/operator",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/dimensions/values",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/failingPeriods/minFailingPeriodsToAlert",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/failingPeriods/numberOfEvaluationPeriods",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/ignoreDataBefore",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/metricName",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/metricNamespace",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/name",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/operator",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/skipMetricValidation",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/timeAggregation",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/dimensions/name",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/dimensions/operator",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/dimensions/values",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/metricName",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/metricNamespace",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/name",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/operator",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/skipMetricValidation",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/threshold",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/timeAggregation",
       "properties/criteria{Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria}/componentId",
       "properties/criteria{Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria}/failedLocationCount",
-      "properties/criteria{Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria}/odata.type",
       "properties/criteria{Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria}/webTestId",
       "properties/description",
       "properties/enabled",
@@ -20144,7 +20296,6 @@
       "properties/action{Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction}/aznsAction/actionGroup",
       "properties/action{Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction}/aznsAction/customWebhookPayload",
       "properties/action{Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction}/aznsAction/emailSubject",
-      "properties/action{Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction}/odata.type",
       "properties/action{Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction}/severity",
       "properties/action{Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction}/throttlingInMin",
       "properties/action{Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction}/trigger/metricTrigger/metricColumn",
@@ -20157,7 +20308,6 @@
       "properties/action{Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction}/criteria/dimensions/operator",
       "properties/action{Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction}/criteria/dimensions/values",
       "properties/action{Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction}/criteria/metricName",
-      "properties/action{Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction}/odata.type",
       "properties/autoMitigate",
       "properties/description",
       "properties/enabled",
@@ -20218,7 +20368,6 @@
       "properties/action{Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction}/aznsAction/actionGroup",
       "properties/action{Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction}/aznsAction/customWebhookPayload",
       "properties/action{Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction}/aznsAction/emailSubject",
-      "properties/action{Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction}/odata.type",
       "properties/action{Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction}/severity",
       "properties/action{Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction}/throttlingInMin",
       "properties/action{Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction}/trigger/metricTrigger/metricColumn",
@@ -20231,7 +20380,6 @@
       "properties/action{Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction}/criteria/dimensions/operator",
       "properties/action{Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction}/criteria/dimensions/values",
       "properties/action{Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction}/criteria/metricName",
-      "properties/action{Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction}/odata.type",
       "properties/autoMitigate",
       "properties/description",
       "properties/enabled",
@@ -20651,6 +20799,59 @@
       "properties/accessPolicies/permissions/secrets",
       "properties/accessPolicies/permissions/storage",
       "properties/accessPolicies/tenantId"
+    ]
+  },
+  {
+    "api_version": "2021-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.KUBERNETES/CONNECTEDCLUSTERS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2021-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.KUBERNETES/CONNECTEDCLUSTERS/{}",
+    "operation": "GET",
+    "properties": [
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
+      "location",
+      "properties/agentPublicKeyCertificate",
+      "properties/agentVersion",
+      "properties/distribution",
+      "properties/infrastructure",
+      "properties/kubernetesVersion",
+      "properties/offering",
+      "properties/totalCoreCount",
+      "properties/totalNodeCount",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2021-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.KUBERNETES/CONNECTEDCLUSTERS/{}",
+    "operation": "PATCH",
+    "properties": [
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2021-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.KUBERNETES/CONNECTEDCLUSTERS/{}",
+    "operation": "PUT",
+    "properties": [
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
+      "location",
+      "properties/agentPublicKeyCertificate",
+      "properties/agentVersion",
+      "properties/distribution",
+      "properties/infrastructure",
+      "properties/kubernetesVersion",
+      "properties/offering",
+      "properties/totalCoreCount",
+      "properties/totalNodeCount",
+      "tags"
     ]
   },
   {
@@ -30565,9 +30766,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/BACKUPFABRICS/{}/PROTECTIONCONTAINERS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "properties{StorageContainer}/backupManagementType",
-      "properties{StorageContainer}/containerType",
       "properties{StorageContainer}/friendlyName",
       "properties{StorageContainer}/sourceResourceId"
     ]
@@ -30577,9 +30776,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/BACKUPFABRICS/{}/PROTECTIONCONTAINERS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "properties{StorageContainer}/backupManagementType",
-      "properties{StorageContainer}/containerType",
       "properties{StorageContainer}/friendlyName",
       "properties{StorageContainer}/sourceResourceId"
     ]
@@ -30592,14 +30789,7 @@
   {
     "api_version": "2021-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/BACKUPFABRICS/{}/PROTECTIONCONTAINERS/{}/OPERATIONRESULTS/{}",
-    "operation": "GET",
-    "properties": [
-      "id",
-      "properties{StorageContainer}/backupManagementType",
-      "properties{StorageContainer}/containerType",
-      "properties{StorageContainer}/friendlyName",
-      "properties{StorageContainer}/sourceResourceId"
-    ]
+    "operation": "GET"
   },
   {
     "api_version": "2021-12-01",
@@ -30611,18 +30801,14 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/BACKUPFABRICS/{}/PROTECTIONCONTAINERS/{}/PROTECTEDITEMS/{}",
     "operation": "GET",
     "properties": [
-      "id",
-      "name",
       "properties{AzureFileShareProtectedItem}/friendlyName",
       "properties{AzureFileShareProtectedItem}/policyId",
-      "properties{AzureFileShareProtectedItem}/protectedItemType",
       "properties{AzureFileShareProtectedItem}/sourceResourceId",
       "properties{AzureFileShareProtectedItem}/workloadType",
       "properties{Microsoft.Compute/virtualMachines}/extendedProperties/diskExclusionProperties/diskLunList",
       "properties{Microsoft.Compute/virtualMachines}/extendedProperties/diskExclusionProperties/isInclusionList",
       "properties{Microsoft.Compute/virtualMachines}/friendlyName",
       "properties{Microsoft.Compute/virtualMachines}/policyId",
-      "properties{Microsoft.Compute/virtualMachines}/protectedItemType",
       "properties{Microsoft.Compute/virtualMachines}/protectionState",
       "properties{Microsoft.Compute/virtualMachines}/sourceResourceId",
       "properties{Microsoft.Compute/virtualMachines}/virtualMachineId",
@@ -30634,18 +30820,14 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/BACKUPFABRICS/{}/PROTECTIONCONTAINERS/{}/PROTECTEDITEMS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
-      "name",
       "properties{AzureFileShareProtectedItem}/friendlyName",
       "properties{AzureFileShareProtectedItem}/policyId",
-      "properties{AzureFileShareProtectedItem}/protectedItemType",
       "properties{AzureFileShareProtectedItem}/sourceResourceId",
       "properties{AzureFileShareProtectedItem}/workloadType",
       "properties{Microsoft.Compute/virtualMachines}/extendedProperties/diskExclusionProperties/diskLunList",
       "properties{Microsoft.Compute/virtualMachines}/extendedProperties/diskExclusionProperties/isInclusionList",
       "properties{Microsoft.Compute/virtualMachines}/friendlyName",
       "properties{Microsoft.Compute/virtualMachines}/policyId",
-      "properties{Microsoft.Compute/virtualMachines}/protectedItemType",
       "properties{Microsoft.Compute/virtualMachines}/protectionState",
       "properties{Microsoft.Compute/virtualMachines}/sourceResourceId",
       "properties{Microsoft.Compute/virtualMachines}/virtualMachineId",
@@ -30676,8 +30858,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/BACKUPPOLICIES/{}",
     "operation": "GET",
     "properties": [
-      "id",
-      "properties{AzureIaasVM}/backupManagementType",
       "properties{AzureIaasVM}/instantRPDetails/azureBackupRGNamePrefix",
       "properties{AzureIaasVM}/instantRPDetails/azureBackupRGNameSuffix",
       "properties{AzureIaasVM}/instantRpRetentionRangeInDays",
@@ -30692,7 +30872,6 @@
       "properties{AzureIaasVM}/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleWeekly/daysOfTheWeek",
       "properties{AzureIaasVM}/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleWeekly/weeksOfTheMonth",
       "properties{AzureIaasVM}/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionTimes",
-      "properties{AzureIaasVM}/retentionPolicy{LongTermRetentionPolicy}/retentionPolicyType",
       "properties{AzureIaasVM}/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/daysOfTheWeek",
       "properties{AzureIaasVM}/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/retentionDuration/count",
       "properties{AzureIaasVM}/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/retentionDuration/durationType",
@@ -30709,16 +30888,13 @@
       "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicyV2}/hourlySchedule/interval",
       "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicyV2}/hourlySchedule/scheduleWindowDuration",
       "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicyV2}/hourlySchedule/scheduleWindowStartTime",
-      "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicyV2}/schedulePolicyType",
       "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicyV2}/scheduleRunFrequency",
       "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicyV2}/weeklySchedule/scheduleRunDays",
       "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicyV2}/weeklySchedule/scheduleRunTimes",
-      "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicy}/schedulePolicyType",
       "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicy}/scheduleRunDays",
       "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicy}/scheduleRunFrequency",
       "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicy}/scheduleRunTimes",
       "properties{AzureIaasVM}/timeZone",
-      "properties{AzureStorage}/backupManagementType",
       "properties{AzureStorage}/retentionPolicy{LongTermRetentionPolicy}/dailySchedule/retentionDuration/count",
       "properties{AzureStorage}/retentionPolicy{LongTermRetentionPolicy}/dailySchedule/retentionDuration/durationType",
       "properties{AzureStorage}/retentionPolicy{LongTermRetentionPolicy}/dailySchedule/retentionTimes",
@@ -30729,7 +30905,6 @@
       "properties{AzureStorage}/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleWeekly/daysOfTheWeek",
       "properties{AzureStorage}/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleWeekly/weeksOfTheMonth",
       "properties{AzureStorage}/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionTimes",
-      "properties{AzureStorage}/retentionPolicy{LongTermRetentionPolicy}/retentionPolicyType",
       "properties{AzureStorage}/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/daysOfTheWeek",
       "properties{AzureStorage}/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/retentionDuration/count",
       "properties{AzureStorage}/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/retentionDuration/durationType",
@@ -30742,12 +30917,10 @@
       "properties{AzureStorage}/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleWeekly/daysOfTheWeek",
       "properties{AzureStorage}/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleWeekly/weeksOfTheMonth",
       "properties{AzureStorage}/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionTimes",
-      "properties{AzureStorage}/schedulePolicy{SimpleSchedulePolicy}/schedulePolicyType",
       "properties{AzureStorage}/schedulePolicy{SimpleSchedulePolicy}/scheduleRunFrequency",
       "properties{AzureStorage}/schedulePolicy{SimpleSchedulePolicy}/scheduleRunTimes",
       "properties{AzureStorage}/timeZone",
       "properties{AzureStorage}/workLoadType",
-      "properties{AzureWorkload}/backupManagementType",
       "properties{AzureWorkload}/settings/isCompression",
       "properties{AzureWorkload}/settings/timeZone",
       "properties{AzureWorkload}/subProtectionPolicy/policyType",
@@ -30762,7 +30935,6 @@
       "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleWeekly/daysOfTheWeek",
       "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleWeekly/weeksOfTheMonth",
       "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionTimes",
-      "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/retentionPolicyType",
       "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/daysOfTheWeek",
       "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/retentionDuration/count",
       "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/retentionDuration/durationType",
@@ -30778,10 +30950,7 @@
       "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionTimes",
       "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{SimpleRetentionPolicy}/retentionDuration/count",
       "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{SimpleRetentionPolicy}/retentionDuration/durationType",
-      "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{SimpleRetentionPolicy}/retentionPolicyType",
       "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{LogSchedulePolicy}/scheduleFrequencyInMins",
-      "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{LogSchedulePolicy}/schedulePolicyType",
-      "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/schedulePolicyType",
       "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/scheduleRunDays",
       "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/scheduleRunFrequency",
       "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/scheduleRunTimes",
@@ -30793,8 +30962,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/BACKUPPOLICIES/{}",
     "operation": "PUT",
     "properties": [
-      "id",
-      "properties{AzureIaasVM}/backupManagementType",
       "properties{AzureIaasVM}/instantRPDetails/azureBackupRGNamePrefix",
       "properties{AzureIaasVM}/instantRPDetails/azureBackupRGNameSuffix",
       "properties{AzureIaasVM}/instantRpRetentionRangeInDays",
@@ -30809,7 +30976,6 @@
       "properties{AzureIaasVM}/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleWeekly/daysOfTheWeek",
       "properties{AzureIaasVM}/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleWeekly/weeksOfTheMonth",
       "properties{AzureIaasVM}/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionTimes",
-      "properties{AzureIaasVM}/retentionPolicy{LongTermRetentionPolicy}/retentionPolicyType",
       "properties{AzureIaasVM}/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/daysOfTheWeek",
       "properties{AzureIaasVM}/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/retentionDuration/count",
       "properties{AzureIaasVM}/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/retentionDuration/durationType",
@@ -30826,16 +30992,13 @@
       "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicyV2}/hourlySchedule/interval",
       "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicyV2}/hourlySchedule/scheduleWindowDuration",
       "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicyV2}/hourlySchedule/scheduleWindowStartTime",
-      "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicyV2}/schedulePolicyType",
       "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicyV2}/scheduleRunFrequency",
       "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicyV2}/weeklySchedule/scheduleRunDays",
       "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicyV2}/weeklySchedule/scheduleRunTimes",
-      "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicy}/schedulePolicyType",
       "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicy}/scheduleRunDays",
       "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicy}/scheduleRunFrequency",
       "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicy}/scheduleRunTimes",
       "properties{AzureIaasVM}/timeZone",
-      "properties{AzureStorage}/backupManagementType",
       "properties{AzureStorage}/retentionPolicy{LongTermRetentionPolicy}/dailySchedule/retentionDuration/count",
       "properties{AzureStorage}/retentionPolicy{LongTermRetentionPolicy}/dailySchedule/retentionDuration/durationType",
       "properties{AzureStorage}/retentionPolicy{LongTermRetentionPolicy}/dailySchedule/retentionTimes",
@@ -30846,7 +31009,6 @@
       "properties{AzureStorage}/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleWeekly/daysOfTheWeek",
       "properties{AzureStorage}/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleWeekly/weeksOfTheMonth",
       "properties{AzureStorage}/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionTimes",
-      "properties{AzureStorage}/retentionPolicy{LongTermRetentionPolicy}/retentionPolicyType",
       "properties{AzureStorage}/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/daysOfTheWeek",
       "properties{AzureStorage}/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/retentionDuration/count",
       "properties{AzureStorage}/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/retentionDuration/durationType",
@@ -30859,12 +31021,10 @@
       "properties{AzureStorage}/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleWeekly/daysOfTheWeek",
       "properties{AzureStorage}/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleWeekly/weeksOfTheMonth",
       "properties{AzureStorage}/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionTimes",
-      "properties{AzureStorage}/schedulePolicy{SimpleSchedulePolicy}/schedulePolicyType",
       "properties{AzureStorage}/schedulePolicy{SimpleSchedulePolicy}/scheduleRunFrequency",
       "properties{AzureStorage}/schedulePolicy{SimpleSchedulePolicy}/scheduleRunTimes",
       "properties{AzureStorage}/timeZone",
       "properties{AzureStorage}/workLoadType",
-      "properties{AzureWorkload}/backupManagementType",
       "properties{AzureWorkload}/settings/isCompression",
       "properties{AzureWorkload}/settings/timeZone",
       "properties{AzureWorkload}/subProtectionPolicy/policyType",
@@ -30879,7 +31039,6 @@
       "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleWeekly/daysOfTheWeek",
       "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleWeekly/weeksOfTheMonth",
       "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/monthlySchedule/retentionTimes",
-      "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/retentionPolicyType",
       "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/daysOfTheWeek",
       "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/retentionDuration/count",
       "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/weeklySchedule/retentionDuration/durationType",
@@ -30895,14 +31054,31 @@
       "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{LongTermRetentionPolicy}/yearlySchedule/retentionTimes",
       "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{SimpleRetentionPolicy}/retentionDuration/count",
       "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{SimpleRetentionPolicy}/retentionDuration/durationType",
-      "properties{AzureWorkload}/subProtectionPolicy/retentionPolicy{SimpleRetentionPolicy}/retentionPolicyType",
       "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{LogSchedulePolicy}/scheduleFrequencyInMins",
-      "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{LogSchedulePolicy}/schedulePolicyType",
-      "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/schedulePolicyType",
       "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/scheduleRunDays",
       "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/scheduleRunFrequency",
       "properties{AzureWorkload}/subProtectionPolicy/schedulePolicy{SimpleSchedulePolicy}/scheduleRunTimes",
       "properties{AzureWorkload}/workLoadType"
+    ]
+  },
+  {
+    "api_version": "2021-12-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/BACKUPPROTECTABLEITEMS",
+    "operation": "GET",
+    "properties": [
+      "name",
+      "properties{AzureFileShare}/friendlyName",
+      "properties{AzureFileShare}/parentContainerFriendlyName"
+    ]
+  },
+  {
+    "api_version": "2021-12-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/BACKUPPROTECTEDITEMS",
+    "operation": "GET",
+    "properties": [
+      "name",
+      "properties{AzureFileShareProtectedItem}/friendlyName",
+      "properties{AzureFileShareProtectedItem}/sourceResourceId"
     ]
   },
   {
@@ -31614,12 +31790,12 @@
     ]
   },
   {
-    "api_version": "2020-03-13",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-03-13",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}",
     "operation": "GET",
     "properties": [
@@ -31636,7 +31812,7 @@
     ]
   },
   {
-    "api_version": "2020-03-13",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}",
     "operation": "PUT",
     "properties": [
@@ -31653,22 +31829,22 @@
     ]
   },
   {
-    "api_version": "2020-03-13",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}/LISTADMINKEYS",
     "operation": "POST"
   },
   {
-    "api_version": "2020-03-13",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}/LISTQUERYKEYS",
     "operation": "POST"
   },
   {
-    "api_version": "2020-08-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}/SHAREDPRIVATELINKRESOURCES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-08-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}/SHAREDPRIVATELINKRESOURCES/{}",
     "operation": "GET",
     "properties": [
@@ -31679,7 +31855,7 @@
     ]
   },
   {
-    "api_version": "2020-08-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}/SHAREDPRIVATELINKRESOURCES/{}",
     "operation": "PUT",
     "properties": [
@@ -32519,6 +32695,8 @@
       "properties/privateEndpointConnections/properties/privateEndpoint/id",
       "properties/publicNetworkAccess",
       "properties/publicPort",
+      "properties/resourceLogConfiguration/categories/enabled",
+      "properties/resourceLogConfiguration/categories/name",
       "properties/serverPort",
       "properties/serverless/connectionTimeoutInSeconds",
       "properties/tls/clientCertEnabled",
@@ -32561,6 +32739,8 @@
       "properties/privateEndpointConnections/properties/privateEndpoint/id",
       "properties/publicNetworkAccess",
       "properties/publicPort",
+      "properties/resourceLogConfiguration/categories/enabled",
+      "properties/resourceLogConfiguration/categories/name",
       "properties/serverPort",
       "properties/serverless/connectionTimeoutInSeconds",
       "properties/tls/clientCertEnabled",
@@ -32603,6 +32783,8 @@
       "properties/privateEndpointConnections/properties/privateEndpoint/id",
       "properties/publicNetworkAccess",
       "properties/publicPort",
+      "properties/resourceLogConfiguration/categories/enabled",
+      "properties/resourceLogConfiguration/categories/name",
       "properties/serverPort",
       "properties/serverless/connectionTimeoutInSeconds",
       "properties/tls/clientCertEnabled",
@@ -32613,6 +32795,31 @@
       "sku/capacity",
       "sku/name",
       "tags"
+    ]
+  },
+  {
+    "api_version": "2023-02-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SIGNALRSERVICE/SIGNALR/{}/CUSTOMCERTIFICATES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-02-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SIGNALRSERVICE/SIGNALR/{}/CUSTOMCERTIFICATES/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/keyVaultBaseUri",
+      "properties/keyVaultSecretName",
+      "properties/keyVaultSecretVersion"
+    ]
+  },
+  {
+    "api_version": "2023-02-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SIGNALRSERVICE/SIGNALR/{}/CUSTOMCERTIFICATES/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/keyVaultBaseUri",
+      "properties/keyVaultSecretName",
+      "properties/keyVaultSecretVersion"
     ]
   },
   {
@@ -32799,7 +33006,11 @@
       "properties/eventHandlers/auth/type",
       "properties/eventHandlers/systemEvents",
       "properties/eventHandlers/urlTemplate",
-      "properties/eventHandlers/userEventPattern"
+      "properties/eventHandlers/userEventPattern",
+      "properties/eventListeners/endpoint{EventHub}/eventHubName",
+      "properties/eventListeners/endpoint{EventHub}/fullyQualifiedNamespace",
+      "properties/eventListeners/filter{EventName}/systemEvents",
+      "properties/eventListeners/filter{EventName}/userEventPattern"
     ]
   },
   {
@@ -32812,7 +33023,11 @@
       "properties/eventHandlers/auth/type",
       "properties/eventHandlers/systemEvents",
       "properties/eventHandlers/urlTemplate",
-      "properties/eventHandlers/userEventPattern"
+      "properties/eventHandlers/userEventPattern",
+      "properties/eventListeners/endpoint{EventHub}/eventHubName",
+      "properties/eventListeners/endpoint{EventHub}/fullyQualifiedNamespace",
+      "properties/eventListeners/filter{EventName}/systemEvents",
+      "properties/eventListeners/filter{EventName}/userEventPattern"
     ]
   },
   {
@@ -35171,6 +35386,31 @@
     ]
   },
   {
+    "api_version": "2023-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGEMOVER/STORAGEMOVERS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGEMOVER/STORAGEMOVERS/{}",
+    "operation": "GET",
+    "properties": [
+      "location",
+      "properties/description",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2023-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGEMOVER/STORAGEMOVERS/{}",
+    "operation": "PUT",
+    "properties": [
+      "location",
+      "properties/description",
+      "tags"
+    ]
+  },
+  {
     "api_version": "2021-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGEPOOL/DISKPOOLS/{}",
     "operation": "DELETE"
@@ -36943,6 +37183,33 @@
       "properties/serviceLocations/primaryRegionProperties/esrpAddresses",
       "properties/serviceLocations/primaryRegionProperties/operatorAddresses",
       "properties/teamsVoicemailPilotNumber",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2023-01-31",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.VOICESERVICES/COMMUNICATIONSGATEWAYS/{}/TESTLINES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-01-31",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.VOICESERVICES/COMMUNICATIONSGATEWAYS/{}/TESTLINES/{}",
+    "operation": "GET",
+    "properties": [
+      "location",
+      "properties/phoneNumber",
+      "properties/purpose",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2023-01-31",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.VOICESERVICES/COMMUNICATIONSGATEWAYS/{}/TESTLINES/{}",
+    "operation": "PUT",
+    "properties": [
+      "location",
+      "properties/phoneNumber",
+      "properties/purpose",
       "tags"
     ]
   },
@@ -40870,6 +41137,57 @@
       "properties/schedule/frequency",
       "properties/status",
       "properties/viewId"
+    ]
+  },
+  {
+    "api_version": "2022-10-01",
+    "api_path": "/{}/PROVIDERS/MICROSOFT.COSTMANAGEMENT/VIEWS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-10-01",
+    "api_path": "/{}/PROVIDERS/MICROSOFT.COSTMANAGEMENT/VIEWS/{}",
+    "operation": "GET",
+    "properties": [
+      "eTag",
+      "properties/accumulated",
+      "properties/chart",
+      "properties/displayName",
+      "properties/kpis/enabled",
+      "properties/kpis/type",
+      "properties/pivots/name",
+      "properties/pivots/type",
+      "properties/query/dataSet/aggregation",
+      "properties/query/dataSet/granularity",
+      "properties/query/dataSet/grouping/name",
+      "properties/query/dataSet/grouping/type",
+      "properties/query/dataSet/sorting/direction",
+      "properties/query/dataSet/sorting/name",
+      "properties/query/timeframe",
+      "properties/query/type"
+    ]
+  },
+  {
+    "api_version": "2022-10-01",
+    "api_path": "/{}/PROVIDERS/MICROSOFT.COSTMANAGEMENT/VIEWS/{}",
+    "operation": "PUT",
+    "properties": [
+      "eTag",
+      "properties/accumulated",
+      "properties/chart",
+      "properties/displayName",
+      "properties/kpis/enabled",
+      "properties/kpis/type",
+      "properties/pivots/name",
+      "properties/pivots/type",
+      "properties/query/dataSet/aggregation",
+      "properties/query/dataSet/granularity",
+      "properties/query/dataSet/grouping/name",
+      "properties/query/dataSet/grouping/type",
+      "properties/query/dataSet/sorting/direction",
+      "properties/query/dataSet/sorting/name",
+      "properties/query/timeframe",
+      "properties/query/type"
     ]
   },
   {
