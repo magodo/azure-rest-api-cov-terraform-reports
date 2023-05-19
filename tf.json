@@ -365,6 +365,29 @@
     "operation": "PUT"
   },
   {
+    "api_version": "2019-06-01-preview",
+    "api_path": "/MANAGEDVIRTUALNETWORKS/{}/MANAGEDPRIVATEENDPOINTS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2019-06-01-preview",
+    "api_path": "/MANAGEDVIRTUALNETWORKS/{}/MANAGEDPRIVATEENDPOINTS/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/groupId",
+      "properties/privateLinkResourceId"
+    ]
+  },
+  {
+    "api_version": "2019-06-01-preview",
+    "api_path": "/MANAGEDVIRTUALNETWORKS/{}/MANAGEDPRIVATEENDPOINTS/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/groupId",
+      "properties/privateLinkResourceId"
+    ]
+  },
+  {
     "api_version": "2022-08-01",
     "api_path": "/POLICIES/{}",
     "operation": "GET",
@@ -826,6 +849,60 @@
     "properties": [
       "properties/token",
       "properties/tokenSecret"
+    ]
+  },
+  {
+    "api_version": "2020-08-01-preview",
+    "api_path": "/ROLEASSIGNMENTS",
+    "operation": "GET",
+    "properties": [
+      "value",
+      "value/id",
+      "value/principalId",
+      "value/roleDefinitionId"
+    ]
+  },
+  {
+    "api_version": "2020-08-01-preview",
+    "api_path": "/ROLEASSIGNMENTS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2020-08-01-preview",
+    "api_path": "/ROLEASSIGNMENTS/{}",
+    "operation": "GET",
+    "properties": [
+      "id",
+      "principalId",
+      "roleDefinitionId"
+    ]
+  },
+  {
+    "api_version": "2020-08-01-preview",
+    "api_path": "/ROLEASSIGNMENTS/{}",
+    "operation": "PUT",
+    "properties": [
+      "principalId",
+      "roleId",
+      "scope"
+    ]
+  },
+  {
+    "api_version": "2020-08-01-preview",
+    "api_path": "/ROLEDEFINITIONS",
+    "operation": "GET",
+    "properties": [
+      "value/id",
+      "value/name"
+    ]
+  },
+  {
+    "api_version": "2020-08-01-preview",
+    "api_path": "/ROLEDEFINITIONS/{}",
+    "operation": "GET",
+    "properties": [
+      "id",
+      "name"
     ]
   },
   {
@@ -23588,6 +23665,28 @@
       "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.H265Video}/sceneChangeDetection",
       "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.H265Video}/stretchMode",
       "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.H265Video}/syncMode",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.JpgImage}/keyFrameInterval",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.JpgImage}/label",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.JpgImage}/layers/height",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.JpgImage}/layers/label",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.JpgImage}/layers/quality",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.JpgImage}/layers/width",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.JpgImage}/range",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.JpgImage}/spriteColumn",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.JpgImage}/start",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.JpgImage}/step",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.JpgImage}/stretchMode",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.JpgImage}/syncMode",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.PngImage}/keyFrameInterval",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.PngImage}/label",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.PngImage}/layers/height",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.PngImage}/layers/label",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.PngImage}/layers/width",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.PngImage}/range",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.PngImage}/start",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.PngImage}/step",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.PngImage}/stretchMode",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.PngImage}/syncMode",
       "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/filters/crop/height",
       "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/filters/crop/left",
       "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/filters/crop/top",
@@ -23622,8 +23721,10 @@
       "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/filters/overlays{#Microsoft.Media.VideoOverlay}/position/width",
       "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/filters/overlays{#Microsoft.Media.VideoOverlay}/start",
       "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/filters/rotation",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/formats{#Microsoft.Media.JpgFormat}/filenamePattern",
       "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/formats{#Microsoft.Media.Mp4Format}/filenamePattern",
       "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/formats{#Microsoft.Media.Mp4Format}/outputFiles/labels",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/formats{#Microsoft.Media.PngFormat}/filenamePattern",
       "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/formats{#Microsoft.Media.TransportStreamFormat}/filenamePattern",
       "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/formats{#Microsoft.Media.TransportStreamFormat}/outputFiles/labels",
       "properties/outputs/preset{#Microsoft.Media.VideoAnalyzerPreset}/audioLanguage",
@@ -23709,6 +23810,28 @@
       "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.H265Video}/sceneChangeDetection",
       "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.H265Video}/stretchMode",
       "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.H265Video}/syncMode",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.JpgImage}/keyFrameInterval",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.JpgImage}/label",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.JpgImage}/layers/height",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.JpgImage}/layers/label",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.JpgImage}/layers/quality",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.JpgImage}/layers/width",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.JpgImage}/range",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.JpgImage}/spriteColumn",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.JpgImage}/start",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.JpgImage}/step",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.JpgImage}/stretchMode",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.JpgImage}/syncMode",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.PngImage}/keyFrameInterval",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.PngImage}/label",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.PngImage}/layers/height",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.PngImage}/layers/label",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.PngImage}/layers/width",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.PngImage}/range",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.PngImage}/start",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.PngImage}/step",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.PngImage}/stretchMode",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/codecs{#Microsoft.Media.PngImage}/syncMode",
       "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/filters/crop/height",
       "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/filters/crop/left",
       "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/filters/crop/top",
@@ -23743,8 +23866,10 @@
       "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/filters/overlays{#Microsoft.Media.VideoOverlay}/position/width",
       "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/filters/overlays{#Microsoft.Media.VideoOverlay}/start",
       "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/filters/rotation",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/formats{#Microsoft.Media.JpgFormat}/filenamePattern",
       "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/formats{#Microsoft.Media.Mp4Format}/filenamePattern",
       "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/formats{#Microsoft.Media.Mp4Format}/outputFiles/labels",
+      "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/formats{#Microsoft.Media.PngFormat}/filenamePattern",
       "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/formats{#Microsoft.Media.TransportStreamFormat}/filenamePattern",
       "properties/outputs/preset{#Microsoft.Media.StandardEncoderPreset}/formats{#Microsoft.Media.TransportStreamFormat}/outputFiles/labels",
       "properties/outputs/preset{#Microsoft.Media.VideoAnalyzerPreset}/audioLanguage",
@@ -31270,6 +31395,8 @@
       "properties/encryption/kekIdentity/useSystemAssignedIdentity",
       "properties/encryption/kekIdentity/userAssignedIdentity",
       "properties/encryption/keyVaultProperties/keyUri",
+      "properties/monitoringSettings/azureMonitorAlertSettings/alertsForAllJobFailures",
+      "properties/monitoringSettings/classicAlertSettings/alertsForCriticalOperations",
       "properties/publicNetworkAccess",
       "properties/securitySettings/immutabilitySettings/state",
       "sku/name",
@@ -31290,6 +31417,8 @@
       "properties/encryption/kekIdentity/useSystemAssignedIdentity",
       "properties/encryption/kekIdentity/userAssignedIdentity",
       "properties/encryption/keyVaultProperties/keyUri",
+      "properties/monitoringSettings/azureMonitorAlertSettings/alertsForAllJobFailures",
+      "properties/monitoringSettings/classicAlertSettings/alertsForCriticalOperations",
       "properties/publicNetworkAccess",
       "properties/securitySettings/immutabilitySettings/state",
       "tags"
@@ -31309,6 +31438,8 @@
       "properties/encryption/kekIdentity/useSystemAssignedIdentity",
       "properties/encryption/kekIdentity/userAssignedIdentity",
       "properties/encryption/keyVaultProperties/keyUri",
+      "properties/monitoringSettings/azureMonitorAlertSettings/alertsForAllJobFailures",
+      "properties/monitoringSettings/classicAlertSettings/alertsForCriticalOperations",
       "properties/publicNetworkAccess",
       "properties/securitySettings/immutabilitySettings/state",
       "sku/name",
