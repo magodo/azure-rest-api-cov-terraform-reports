@@ -1034,6 +1034,15 @@
   },
   {
     "api_version": "2023-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.APPCONFIGURATION/CHECKNAMEAVAILABILITY",
+    "operation": "POST",
+    "properties": [
+      "name",
+      "type"
+    ]
+  },
+  {
+    "api_version": "2023-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.APPCONFIGURATION/LOCATIONS/{}/DELETEDCONFIGURATIONSTORES/{}",
     "operation": "GET",
     "properties": [
@@ -4109,6 +4118,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPCONFIGURATION/CONFIGURATIONSTORES/{}",
     "operation": "GET",
     "properties": [
+      "id",
       "identity/principalId",
       "identity/tenantId",
       "identity/type",
@@ -4149,6 +4159,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPCONFIGURATION/CONFIGURATIONSTORES/{}",
     "operation": "PUT",
     "properties": [
+      "id",
       "identity/principalId",
       "identity/tenantId",
       "identity/type",
@@ -4167,12 +4178,12 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}",
     "operation": "GET",
     "properties": [
@@ -4198,7 +4209,7 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}",
     "operation": "PATCH",
     "properties": [
@@ -4224,7 +4235,7 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}",
     "operation": "PUT",
     "properties": [
@@ -4250,12 +4261,12 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APIPORTALS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APIPORTALS/{}",
     "operation": "GET",
     "properties": [
@@ -4273,7 +4284,7 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APIPORTALS/{}",
     "operation": "PUT",
     "properties": [
@@ -4291,12 +4302,12 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APIPORTALS/{}/DOMAINS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APIPORTALS/{}/DOMAINS/{}",
     "operation": "GET",
     "properties": [
@@ -4304,7 +4315,7 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APIPORTALS/{}/DOMAINS/{}",
     "operation": "PUT",
     "properties": [
@@ -4312,35 +4323,37 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPLICATIONACCELERATORS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPLICATIONACCELERATORS/{}",
     "operation": "GET"
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPLICATIONACCELERATORS/{}",
     "operation": "PUT"
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPLICATIONACCELERATORS/{}/CUSTOMIZEDACCELERATORS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPLICATIONACCELERATORS/{}/CUSTOMIZEDACCELERATORS/{}",
     "operation": "GET",
     "properties": [
       "properties/acceleratorTags",
       "properties/description",
       "properties/displayName",
+      "properties/gitRepository/authSetting{BasicAuth}/caCertResourceId",
       "properties/gitRepository/authSetting{BasicAuth}/password",
       "properties/gitRepository/authSetting{BasicAuth}/username",
+      "properties/gitRepository/authSetting{Public}/caCertResourceId",
       "properties/gitRepository/authSetting{SSH}/hostKey",
       "properties/gitRepository/authSetting{SSH}/hostKeyAlgorithm",
       "properties/gitRepository/authSetting{SSH}/privateKey",
@@ -4353,15 +4366,17 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPLICATIONACCELERATORS/{}/CUSTOMIZEDACCELERATORS/{}",
     "operation": "PUT",
     "properties": [
       "properties/acceleratorTags",
       "properties/description",
       "properties/displayName",
+      "properties/gitRepository/authSetting{BasicAuth}/caCertResourceId",
       "properties/gitRepository/authSetting{BasicAuth}/password",
       "properties/gitRepository/authSetting{BasicAuth}/username",
+      "properties/gitRepository/authSetting{Public}/caCertResourceId",
       "properties/gitRepository/authSetting{SSH}/hostKey",
       "properties/gitRepository/authSetting{SSH}/hostKeyAlgorithm",
       "properties/gitRepository/authSetting{SSH}/privateKey",
@@ -4374,27 +4389,27 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPLICATIONLIVEVIEWS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPLICATIONLIVEVIEWS/{}",
     "operation": "GET"
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPLICATIONLIVEVIEWS/{}",
     "operation": "PUT"
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPS/{}",
     "operation": "GET",
     "properties": [
@@ -4425,7 +4440,7 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPS/{}",
     "operation": "PUT",
     "properties": [
@@ -4456,12 +4471,12 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPS/{}/BINDINGS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPS/{}/BINDINGS/{}",
     "operation": "GET",
     "properties": [
@@ -4472,7 +4487,7 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPS/{}/BINDINGS/{}",
     "operation": "PUT",
     "properties": [
@@ -4483,12 +4498,12 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPS/{}/DEPLOYMENTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPS/{}/DEPLOYMENTS/{}",
     "operation": "GET",
     "properties": [
@@ -4514,7 +4529,7 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPS/{}/DEPLOYMENTS/{}",
     "operation": "PUT",
     "properties": [
@@ -4540,12 +4555,12 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPS/{}/DOMAINS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPS/{}/DOMAINS/{}",
     "operation": "GET",
     "properties": [
@@ -4554,7 +4569,7 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPS/{}/DOMAINS/{}",
     "operation": "PUT",
     "properties": [
@@ -4563,7 +4578,7 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPS/{}/SETACTIVEDEPLOYMENTS",
     "operation": "POST",
     "properties": [
@@ -4571,7 +4586,7 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/BUILDSERVICES/{}",
     "operation": "PUT",
     "properties": [
@@ -4579,7 +4594,7 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/BUILDSERVICES/{}/AGENTPOOLS/{}",
     "operation": "GET",
     "properties": [
@@ -4587,7 +4602,7 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/BUILDSERVICES/{}/AGENTPOOLS/{}",
     "operation": "PUT",
     "properties": [
@@ -4595,12 +4610,12 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/BUILDSERVICES/{}/BUILDERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/BUILDSERVICES/{}/BUILDERS/{}",
     "operation": "GET",
     "properties": [
@@ -4611,7 +4626,7 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/BUILDSERVICES/{}/BUILDERS/{}",
     "operation": "PUT",
     "properties": [
@@ -4622,12 +4637,12 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/BUILDSERVICES/{}/BUILDERS/{}/BUILDPACKBINDINGS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/BUILDSERVICES/{}/BUILDERS/{}/BUILDPACKBINDINGS/{}",
     "operation": "GET",
     "properties": [
@@ -4637,7 +4652,7 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/BUILDSERVICES/{}/BUILDERS/{}/BUILDPACKBINDINGS/{}",
     "operation": "PUT",
     "properties": [
@@ -4647,36 +4662,38 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/CERTIFICATES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/CERTIFICATES/{}",
     "operation": "GET",
     "properties": [
       "properties{ContentCertificate}/content",
       "properties{ContentCertificate}/thumbprint",
+      "properties{KeyVaultCertificate}/excludePrivateKey",
       "properties{KeyVaultCertificate}/keyVaultCertName",
       "properties{KeyVaultCertificate}/thumbprint",
       "properties{KeyVaultCertificate}/vaultUri"
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/CERTIFICATES/{}",
     "operation": "PUT",
     "properties": [
       "properties{ContentCertificate}/content",
       "properties{ContentCertificate}/thumbprint",
+      "properties{KeyVaultCertificate}/excludePrivateKey",
       "properties{KeyVaultCertificate}/keyVaultCertName",
       "properties{KeyVaultCertificate}/thumbprint",
       "properties{KeyVaultCertificate}/vaultUri"
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/CONFIGSERVERS/DEFAULT",
     "operation": "GET",
     "properties": [
@@ -4704,7 +4721,7 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/CONFIGSERVERS/DEFAULT",
     "operation": "PUT",
     "properties": [
@@ -4732,12 +4749,12 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/CONFIGURATIONSERVICES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/CONFIGURATIONSERVICES/{}",
     "operation": "GET",
     "properties": [
@@ -4755,7 +4772,7 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/CONFIGURATIONSERVICES/{}",
     "operation": "PUT",
     "properties": [
@@ -4773,12 +4790,12 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/DEVTOOLPORTALS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/DEVTOOLPORTALS/{}",
     "operation": "GET",
     "properties": [
@@ -4792,7 +4809,7 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/DEVTOOLPORTALS/{}",
     "operation": "PUT",
     "properties": [
@@ -4806,12 +4823,12 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/GATEWAYS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/GATEWAYS/{}",
     "operation": "GET",
     "properties": [
@@ -4844,7 +4861,7 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/GATEWAYS/{}",
     "operation": "PUT",
     "properties": [
@@ -4877,12 +4894,12 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/GATEWAYS/{}/DOMAINS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/GATEWAYS/{}/DOMAINS/{}",
     "operation": "GET",
     "properties": [
@@ -4890,7 +4907,7 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/GATEWAYS/{}/DOMAINS/{}",
     "operation": "PUT",
     "properties": [
@@ -4898,12 +4915,12 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/GATEWAYS/{}/ROUTECONFIGS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/GATEWAYS/{}/ROUTECONFIGS/{}",
     "operation": "GET",
     "properties": [
@@ -4925,7 +4942,7 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/GATEWAYS/{}/ROUTECONFIGS/{}",
     "operation": "PUT",
     "properties": [
@@ -4947,7 +4964,7 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/MONITORINGSETTINGS/DEFAULT",
     "operation": "GET",
     "properties": [
@@ -4957,7 +4974,7 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/MONITORINGSETTINGS/DEFAULT",
     "operation": "PUT",
     "properties": [
@@ -4967,27 +4984,27 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/SERVICEREGISTRIES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/SERVICEREGISTRIES/{}",
     "operation": "GET"
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/SERVICEREGISTRIES/{}",
     "operation": "PUT"
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/STORAGES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/STORAGES/{}",
     "operation": "GET",
     "properties": [
@@ -4997,7 +5014,7 @@
     ]
   },
   {
-    "api_version": "2023-03-01-preview",
+    "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/STORAGES/{}",
     "operation": "PUT",
     "properties": [
@@ -5019,6 +5036,31 @@
       "location",
       "properties/attestUri",
       "properties/trustModel",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2022-05-04",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMANAGE/CONFIGURATIONPROFILES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-05-04",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMANAGE/CONFIGURATIONPROFILES/{}",
+    "operation": "GET",
+    "properties": [
+      "location",
+      "properties/configuration",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2022-05-04",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMANAGE/CONFIGURATIONPROFILES/{}",
+    "operation": "PUT",
+    "properties": [
+      "location",
+      "properties/configuration",
       "tags"
     ]
   },
@@ -8376,6 +8418,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/SECRETS/{}",
     "operation": "GET",
     "properties": [
+      "properties/parameters{CustomerCertificate}/expirationDate",
       "properties/parameters{CustomerCertificate}/secretSource/id",
       "properties/parameters{CustomerCertificate}/secretVersion",
       "properties/parameters{CustomerCertificate}/subjectAlternativeNames",
@@ -8389,6 +8432,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/SECRETS/{}",
     "operation": "PUT",
     "properties": [
+      "properties/parameters{CustomerCertificate}/expirationDate",
       "properties/parameters{CustomerCertificate}/secretSource/id",
       "properties/parameters{CustomerCertificate}/secretVersion",
       "properties/parameters{CustomerCertificate}/subjectAlternativeNames",
@@ -9232,6 +9276,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/GALLERIES/{}/IMAGES/{}/VERSIONS/{}",
     "operation": "GET",
     "properties": [
+      "id",
       "location",
       "name",
       "properties/publishingProfile/endOfLifeDate",
@@ -9255,6 +9300,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/GALLERIES/{}/IMAGES/{}/VERSIONS/{}",
     "operation": "PUT",
     "properties": [
+      "id",
       "location",
       "name",
       "properties/publishingProfile/endOfLifeDate",
@@ -9563,6 +9609,7 @@
       "properties/hardwareProfile/vmSize",
       "properties/host/id",
       "properties/hostGroup/id",
+      "properties/instanceView/statuses/code",
       "properties/licenseType",
       "properties/networkProfile/networkInterfaces/id",
       "properties/networkProfile/networkInterfaces/properties/primary",
@@ -9759,6 +9806,7 @@
       "properties/hardwareProfile/vmSize",
       "properties/host/id",
       "properties/hostGroup/id",
+      "properties/instanceView/statuses/code",
       "properties/licenseType",
       "properties/networkProfile/networkInterfaces/id",
       "properties/networkProfile/networkInterfaces/properties/primary",
@@ -19884,6 +19932,7 @@
       "properties/displayName",
       "properties/dnsFqdn",
       "properties/domainName",
+      "properties/errorDetails",
       "properties/errorDetails/additionalInfo/info",
       "properties/errorDetails/additionalInfo/type",
       "properties/errorDetails/code",
@@ -19918,12 +19967,12 @@
     ]
   },
   {
-    "api_version": "2021-09-01",
+    "api_version": "2023-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/ACTIONGROUPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-09-01",
+    "api_version": "2023-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/ACTIONGROUPS/{}",
     "operation": "GET",
     "properties": [
@@ -19982,7 +20031,7 @@
     ]
   },
   {
-    "api_version": "2021-09-01",
+    "api_version": "2023-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/ACTIONGROUPS/{}",
     "operation": "PUT",
     "properties": [
@@ -22688,6 +22737,7 @@
       "properties{AmlCompute}/computeLocation",
       "properties{AmlCompute}/description",
       "properties{AmlCompute}/disableLocalAuth",
+      "properties{AmlCompute}/properties/enableNodePublicIp",
       "properties{AmlCompute}/properties/remoteLoginPortPublicAccess",
       "properties{AmlCompute}/properties/scaleSettings/maxNodeCount",
       "properties{AmlCompute}/properties/scaleSettings/minNodeCount",
@@ -22745,6 +22795,7 @@
       "properties{AmlCompute}/computeLocation",
       "properties{AmlCompute}/description",
       "properties{AmlCompute}/disableLocalAuth",
+      "properties{AmlCompute}/properties/enableNodePublicIp",
       "properties{AmlCompute}/properties/remoteLoginPortPublicAccess",
       "properties{AmlCompute}/properties/scaleSettings/maxNodeCount",
       "properties{AmlCompute}/properties/scaleSettings/minNodeCount",
@@ -31156,12 +31207,12 @@
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-10-01-preview",
+    "api_version": "2022-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/WATCHLISTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-10-01-preview",
+    "api_version": "2022-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/WATCHLISTS/{}",
     "operation": "GET",
     "properties": [
@@ -31174,7 +31225,7 @@
     ]
   },
   {
-    "api_version": "2022-10-01-preview",
+    "api_version": "2022-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/WATCHLISTS/{}",
     "operation": "PUT",
     "properties": [
@@ -31187,12 +31238,12 @@
     ]
   },
   {
-    "api_version": "2022-10-01-preview",
+    "api_version": "2022-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/WATCHLISTS/{}/WATCHLISTITEMS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-10-01-preview",
+    "api_version": "2022-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/WATCHLISTS/{}/WATCHLISTITEMS/{}",
     "operation": "GET",
     "properties": [
@@ -31200,7 +31251,7 @@
     ]
   },
   {
-    "api_version": "2022-10-01-preview",
+    "api_version": "2022-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/WATCHLISTS/{}/WATCHLISTITEMS/{}",
     "operation": "PUT",
     "properties": [
@@ -33099,6 +33150,11 @@
       "properties/partnerNamespace",
       "properties/provisioningState"
     ]
+  },
+  {
+    "api_version": "2021-06-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/DISASTERRECOVERYCONFIGS/{}/AUTHORIZATIONRULES/{}/LISTKEYS",
+    "operation": "POST"
   },
   {
     "api_version": "2021-06-01-preview",
@@ -38783,6 +38839,7 @@
       "identity/userAssignedIdentities",
       "kind",
       "location",
+      "properties/availabilityState",
       "properties/clientAffinityEnabled",
       "properties/clientCertEnabled",
       "properties/clientCertExclusionPaths",
@@ -38886,6 +38943,7 @@
       "properties/slotSwapStatus/sourceSlotName",
       "properties/slotSwapStatus/timestampUtc",
       "properties/state",
+      "properties/usageState",
       "properties/virtualNetworkSubnetId",
       "tags"
     ]
@@ -39085,6 +39143,7 @@
       "identity/userAssignedIdentities",
       "kind",
       "location",
+      "properties/availabilityState",
       "properties/clientAffinityEnabled",
       "properties/clientCertEnabled",
       "properties/clientCertExclusionPaths",
@@ -39188,6 +39247,7 @@
       "properties/slotSwapStatus/sourceSlotName",
       "properties/slotSwapStatus/timestampUtc",
       "properties/state",
+      "properties/usageState",
       "properties/virtualNetworkSubnetId",
       "tags"
     ]
@@ -40265,6 +40325,7 @@
       "identity/userAssignedIdentities",
       "kind",
       "location",
+      "properties/availabilityState",
       "properties/clientAffinityEnabled",
       "properties/clientCertEnabled",
       "properties/clientCertExclusionPaths",
@@ -40368,6 +40429,7 @@
       "properties/slotSwapStatus/sourceSlotName",
       "properties/slotSwapStatus/timestampUtc",
       "properties/state",
+      "properties/usageState",
       "properties/virtualNetworkSubnetId",
       "tags"
     ]
@@ -40567,6 +40629,7 @@
       "identity/userAssignedIdentities",
       "kind",
       "location",
+      "properties/availabilityState",
       "properties/clientAffinityEnabled",
       "properties/clientCertEnabled",
       "properties/clientCertExclusionPaths",
@@ -40670,6 +40733,7 @@
       "properties/slotSwapStatus/sourceSlotName",
       "properties/slotSwapStatus/timestampUtc",
       "properties/state",
+      "properties/usageState",
       "properties/virtualNetworkSubnetId",
       "tags"
     ]
