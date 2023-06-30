@@ -943,6 +943,19 @@
   },
   {
     "api_version": "7.4",
+    "api_path": "/SECURITYDOMAIN/DOWNLOAD",
+    "operation": "POST",
+    "properties": [
+      "certificates/alg",
+      "certificates/key_ops",
+      "certificates/kty",
+      "certificates/x5c",
+      "certificates/x5t#S256",
+      "required"
+    ]
+  },
+  {
+    "api_version": "7.4",
     "api_path": "/STORAGE/{}",
     "operation": "GET",
     "properties": [
@@ -1331,12 +1344,12 @@
     ]
   },
   {
-    "api_version": "2021-01-01",
+    "api_version": "2015-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.MARKETPLACEORDERING/AGREEMENTS/{}/OFFERS/{}/PLANS/{}/CANCEL",
     "operation": "POST"
   },
   {
-    "api_version": "2021-01-01",
+    "api_version": "2015-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.MARKETPLACEORDERING/OFFERTYPES/VIRTUALMACHINE/PUBLISHERS/{}/OFFERS/{}/PLANS/{}/AGREEMENTS/CURRENT",
     "operation": "GET",
     "properties": [
@@ -1346,7 +1359,7 @@
     ]
   },
   {
-    "api_version": "2021-01-01",
+    "api_version": "2015-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.MARKETPLACEORDERING/OFFERTYPES/VIRTUALMACHINE/PUBLISHERS/{}/OFFERS/{}/PLANS/{}/AGREEMENTS/CURRENT",
     "operation": "PUT",
     "properties": [
@@ -1691,6 +1704,7 @@
     "properties": [
       "id",
       "location",
+      "managedBy",
       "name",
       "tags"
     ]
@@ -1702,6 +1716,7 @@
     "properties": [
       "id",
       "location",
+      "managedBy",
       "name",
       "tags"
     ]
@@ -4754,6 +4769,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/CONFIGURATIONSERVICES/{}",
     "operation": "GET",
     "properties": [
+      "properties/generation",
       "properties/settings/gitProperty/repositories/hostKey",
       "properties/settings/gitProperty/repositories/hostKeyAlgorithm",
       "properties/settings/gitProperty/repositories/label",
@@ -4772,6 +4788,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/CONFIGURATIONSERVICES/{}",
     "operation": "PUT",
     "properties": [
+      "properties/generation",
       "properties/settings/gitProperty/repositories/hostKey",
       "properties/settings/gitProperty/repositories/hostKeyAlgorithm",
       "properties/settings/gitProperty/repositories/label",
@@ -5495,6 +5512,7 @@
       "properties/advancedSchedule/monthlyOccurrences/occurrence",
       "properties/advancedSchedule/weekDays",
       "properties/description",
+      "properties/expiryTime",
       "properties/frequency",
       "properties/interval",
       "properties/timeZone"
@@ -5511,6 +5529,7 @@
       "properties/advancedSchedule/monthlyOccurrences/occurrence",
       "properties/advancedSchedule/weekDays",
       "properties/description",
+      "properties/expiryTime",
       "properties/frequency",
       "properties/interval",
       "properties/timeZone"
@@ -5526,9 +5545,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/SOFTWAREUPDATECONFIGURATIONS/{}",
     "operation": "GET",
     "properties": [
-      "name",
-      "properties/error/code",
-      "properties/error/message",
       "properties/scheduleInfo/advancedSchedule/monthDays",
       "properties/scheduleInfo/advancedSchedule/monthlyOccurrences/day",
       "properties/scheduleInfo/advancedSchedule/monthlyOccurrences/occurrence",
@@ -5575,9 +5591,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/SOFTWAREUPDATECONFIGURATIONS/{}",
     "operation": "PUT",
     "properties": [
-      "name",
-      "properties/error/code",
-      "properties/error/message",
       "properties/scheduleInfo/advancedSchedule/monthDays",
       "properties/scheduleInfo/advancedSchedule/monthlyOccurrences/day",
       "properties/scheduleInfo/advancedSchedule/monthlyOccurrences/occurrence",
@@ -6876,12 +6889,12 @@
     ]
   },
   {
-    "api_version": "2022-06-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-06-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}",
     "operation": "GET",
     "properties": [
@@ -6926,7 +6939,7 @@
     ]
   },
   {
-    "api_version": "2022-06-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}",
     "operation": "PATCH",
     "properties": [
@@ -6963,7 +6976,7 @@
     ]
   },
   {
-    "api_version": "2022-06-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}",
     "operation": "PUT",
     "properties": [
@@ -7004,12 +7017,12 @@
     ]
   },
   {
-    "api_version": "2022-06-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}/FIREWALLRULES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-06-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}/FIREWALLRULES/{}",
     "operation": "GET",
     "properties": [
@@ -7018,7 +7031,7 @@
     ]
   },
   {
-    "api_version": "2022-06-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}/FIREWALLRULES/{}",
     "operation": "PUT",
     "properties": [
@@ -7027,12 +7040,12 @@
     ]
   },
   {
-    "api_version": "2022-06-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}/LINKEDSERVERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-06-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}/LINKEDSERVERS/{}",
     "operation": "GET",
     "properties": [
@@ -7043,7 +7056,7 @@
     ]
   },
   {
-    "api_version": "2022-06-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}/LINKEDSERVERS/{}",
     "operation": "PUT",
     "properties": [
@@ -7053,17 +7066,17 @@
     ]
   },
   {
-    "api_version": "2022-06-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}/LISTKEYS",
     "operation": "POST"
   },
   {
-    "api_version": "2022-06-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}/PATCHSCHEDULES/DEFAULT",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-06-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}/PATCHSCHEDULES/DEFAULT",
     "operation": "GET",
     "properties": [
@@ -7073,7 +7086,7 @@
     ]
   },
   {
-    "api_version": "2022-06-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}/PATCHSCHEDULES/DEFAULT",
     "operation": "PUT",
     "properties": [
@@ -10655,12 +10668,12 @@
     ]
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2023-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERINSTANCE/CONTAINERGROUPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2023-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERINSTANCE/CONTAINERGROUPS/{}",
     "operation": "GET",
     "properties": [
@@ -10759,7 +10772,7 @@
     ]
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2023-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERINSTANCE/CONTAINERGROUPS/{}",
     "operation": "PATCH",
     "properties": [
@@ -10767,7 +10780,7 @@
     ]
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2023-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERINSTANCE/CONTAINERGROUPS/{}",
     "operation": "PUT",
     "properties": [
@@ -11607,6 +11620,7 @@
       "properties/securityProfile/azureKeyVaultKms/keyId",
       "properties/securityProfile/azureKeyVaultKms/keyVaultNetworkAccess",
       "properties/securityProfile/azureKeyVaultKms/keyVaultResourceId",
+      "properties/securityProfile/customCATrustCertificates",
       "properties/securityProfile/defender/logAnalyticsWorkspaceResourceId",
       "properties/securityProfile/defender/securityMonitoring/enabled",
       "properties/securityProfile/imageCleaner/enabled",
@@ -11817,6 +11831,7 @@
       "properties/securityProfile/azureKeyVaultKms/keyId",
       "properties/securityProfile/azureKeyVaultKms/keyVaultNetworkAccess",
       "properties/securityProfile/azureKeyVaultKms/keyVaultResourceId",
+      "properties/securityProfile/customCATrustCertificates",
       "properties/securityProfile/defender/logAnalyticsWorkspaceResourceId",
       "properties/securityProfile/defender/securityMonitoring/enabled",
       "properties/securityProfile/imageCleaner/enabled",
@@ -12055,6 +12070,20 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/MAINTENANCECONFIGURATIONS/{}",
     "operation": "GET",
     "properties": [
+      "properties/maintenanceWindow/durationHours",
+      "properties/maintenanceWindow/notAllowedDates/end",
+      "properties/maintenanceWindow/notAllowedDates/start",
+      "properties/maintenanceWindow/schedule/absoluteMonthly/dayOfMonth",
+      "properties/maintenanceWindow/schedule/absoluteMonthly/intervalMonths",
+      "properties/maintenanceWindow/schedule/daily/intervalDays",
+      "properties/maintenanceWindow/schedule/relativeMonthly/dayOfWeek",
+      "properties/maintenanceWindow/schedule/relativeMonthly/intervalMonths",
+      "properties/maintenanceWindow/schedule/relativeMonthly/weekIndex",
+      "properties/maintenanceWindow/schedule/weekly/dayOfWeek",
+      "properties/maintenanceWindow/schedule/weekly/intervalWeeks",
+      "properties/maintenanceWindow/startDate",
+      "properties/maintenanceWindow/startTime",
+      "properties/maintenanceWindow/utcOffset",
       "properties/notAllowedTime/end",
       "properties/notAllowedTime/start",
       "properties/timeInWeek/day",
@@ -12066,6 +12095,20 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/MAINTENANCECONFIGURATIONS/{}",
     "operation": "PUT",
     "properties": [
+      "properties/maintenanceWindow/durationHours",
+      "properties/maintenanceWindow/notAllowedDates/end",
+      "properties/maintenanceWindow/notAllowedDates/start",
+      "properties/maintenanceWindow/schedule/absoluteMonthly/dayOfMonth",
+      "properties/maintenanceWindow/schedule/absoluteMonthly/intervalMonths",
+      "properties/maintenanceWindow/schedule/daily/intervalDays",
+      "properties/maintenanceWindow/schedule/relativeMonthly/dayOfWeek",
+      "properties/maintenanceWindow/schedule/relativeMonthly/intervalMonths",
+      "properties/maintenanceWindow/schedule/relativeMonthly/weekIndex",
+      "properties/maintenanceWindow/schedule/weekly/dayOfWeek",
+      "properties/maintenanceWindow/schedule/weekly/intervalWeeks",
+      "properties/maintenanceWindow/startDate",
+      "properties/maintenanceWindow/startTime",
+      "properties/maintenanceWindow/utcOffset",
       "properties/notAllowedTime/end",
       "properties/notAllowedTime/start",
       "properties/timeInWeek/day",
@@ -28051,12 +28094,12 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKSECURITYGROUPS/{}/SECURITYRULES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKSECURITYGROUPS/{}/SECURITYRULES/{}",
     "operation": "GET",
     "properties": [
@@ -28079,7 +28122,7 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKSECURITYGROUPS/{}/SECURITYRULES/{}",
     "operation": "PUT",
     "properties": [
@@ -38978,6 +39021,7 @@
       "properties/siteConfig/autoHealRules/triggers/statusCodes/status",
       "properties/siteConfig/autoHealRules/triggers/statusCodes/subStatus",
       "properties/siteConfig/autoHealRules/triggers/statusCodes/timeInterval",
+      "properties/siteConfig/autoHealRules/triggers/statusCodes/win32Status",
       "properties/siteConfig/autoHealRules/triggers/statusCodesRange/count",
       "properties/siteConfig/autoHealRules/triggers/statusCodesRange/path",
       "properties/siteConfig/autoHealRules/triggers/statusCodesRange/statusCodes",
@@ -39086,6 +39130,7 @@
       "properties/siteConfig/autoHealRules/triggers/statusCodes/status",
       "properties/siteConfig/autoHealRules/triggers/statusCodes/subStatus",
       "properties/siteConfig/autoHealRules/triggers/statusCodes/timeInterval",
+      "properties/siteConfig/autoHealRules/triggers/statusCodes/win32Status",
       "properties/siteConfig/autoHealRules/triggers/statusCodesRange/count",
       "properties/siteConfig/autoHealRules/triggers/statusCodesRange/path",
       "properties/siteConfig/autoHealRules/triggers/statusCodesRange/statusCodes",
@@ -39282,6 +39327,7 @@
       "properties/siteConfig/autoHealRules/triggers/statusCodes/status",
       "properties/siteConfig/autoHealRules/triggers/statusCodes/subStatus",
       "properties/siteConfig/autoHealRules/triggers/statusCodes/timeInterval",
+      "properties/siteConfig/autoHealRules/triggers/statusCodes/win32Status",
       "properties/siteConfig/autoHealRules/triggers/statusCodesRange/count",
       "properties/siteConfig/autoHealRules/triggers/statusCodesRange/path",
       "properties/siteConfig/autoHealRules/triggers/statusCodesRange/statusCodes",
@@ -39909,6 +39955,7 @@
       "properties/autoHealRules/triggers/statusCodes/status",
       "properties/autoHealRules/triggers/statusCodes/subStatus",
       "properties/autoHealRules/triggers/statusCodes/timeInterval",
+      "properties/autoHealRules/triggers/statusCodes/win32Status",
       "properties/autoHealRules/triggers/statusCodesRange/count",
       "properties/autoHealRules/triggers/statusCodesRange/path",
       "properties/autoHealRules/triggers/statusCodesRange/statusCodes",
@@ -39998,6 +40045,7 @@
       "properties/autoHealRules/triggers/statusCodes/status",
       "properties/autoHealRules/triggers/statusCodes/subStatus",
       "properties/autoHealRules/triggers/statusCodes/timeInterval",
+      "properties/autoHealRules/triggers/statusCodes/win32Status",
       "properties/autoHealRules/triggers/statusCodesRange/count",
       "properties/autoHealRules/triggers/statusCodesRange/path",
       "properties/autoHealRules/triggers/statusCodesRange/statusCodes",
@@ -40464,6 +40512,7 @@
       "properties/siteConfig/autoHealRules/triggers/statusCodes/status",
       "properties/siteConfig/autoHealRules/triggers/statusCodes/subStatus",
       "properties/siteConfig/autoHealRules/triggers/statusCodes/timeInterval",
+      "properties/siteConfig/autoHealRules/triggers/statusCodes/win32Status",
       "properties/siteConfig/autoHealRules/triggers/statusCodesRange/count",
       "properties/siteConfig/autoHealRules/triggers/statusCodesRange/path",
       "properties/siteConfig/autoHealRules/triggers/statusCodesRange/statusCodes",
@@ -40572,6 +40621,7 @@
       "properties/siteConfig/autoHealRules/triggers/statusCodes/status",
       "properties/siteConfig/autoHealRules/triggers/statusCodes/subStatus",
       "properties/siteConfig/autoHealRules/triggers/statusCodes/timeInterval",
+      "properties/siteConfig/autoHealRules/triggers/statusCodes/win32Status",
       "properties/siteConfig/autoHealRules/triggers/statusCodesRange/count",
       "properties/siteConfig/autoHealRules/triggers/statusCodesRange/path",
       "properties/siteConfig/autoHealRules/triggers/statusCodesRange/statusCodes",
@@ -40768,6 +40818,7 @@
       "properties/siteConfig/autoHealRules/triggers/statusCodes/status",
       "properties/siteConfig/autoHealRules/triggers/statusCodes/subStatus",
       "properties/siteConfig/autoHealRules/triggers/statusCodes/timeInterval",
+      "properties/siteConfig/autoHealRules/triggers/statusCodes/win32Status",
       "properties/siteConfig/autoHealRules/triggers/statusCodesRange/count",
       "properties/siteConfig/autoHealRules/triggers/statusCodesRange/path",
       "properties/siteConfig/autoHealRules/triggers/statusCodesRange/statusCodes",
@@ -41352,6 +41403,7 @@
       "properties/autoHealRules/triggers/statusCodes/status",
       "properties/autoHealRules/triggers/statusCodes/subStatus",
       "properties/autoHealRules/triggers/statusCodes/timeInterval",
+      "properties/autoHealRules/triggers/statusCodes/win32Status",
       "properties/autoHealRules/triggers/statusCodesRange/count",
       "properties/autoHealRules/triggers/statusCodesRange/path",
       "properties/autoHealRules/triggers/statusCodesRange/statusCodes",
@@ -41441,6 +41493,7 @@
       "properties/autoHealRules/triggers/statusCodes/status",
       "properties/autoHealRules/triggers/statusCodes/subStatus",
       "properties/autoHealRules/triggers/statusCodes/timeInterval",
+      "properties/autoHealRules/triggers/statusCodes/win32Status",
       "properties/autoHealRules/triggers/statusCodesRange/count",
       "properties/autoHealRules/triggers/statusCodesRange/path",
       "properties/autoHealRules/triggers/statusCodesRange/statusCodes",
