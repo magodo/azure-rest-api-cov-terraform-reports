@@ -824,7 +824,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/PROVIDERS/MICROSOFT.WEB/SOURCECONTROLS/{}",
     "operation": "GET",
     "properties": [
@@ -843,7 +843,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/PROVIDERS/MICROSOFT.WEB/SOURCECONTROLS/{}",
     "operation": "PUT",
     "properties": [
@@ -1173,7 +1173,7 @@
     "operation": "POST"
   },
   {
-    "api_version": "2022-10-01",
+    "api_version": "2023-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/LOCATIONS/{}/RESOURCEGROUPS/{}/DELETEDACCOUNTS/{}",
     "operation": "DELETE"
   },
@@ -4872,6 +4872,7 @@
       "properties/corsProperties/allowCredentials",
       "properties/corsProperties/allowedHeaders",
       "properties/corsProperties/allowedMethods",
+      "properties/corsProperties/allowedOriginPatterns",
       "properties/corsProperties/allowedOrigins",
       "properties/corsProperties/exposedHeaders",
       "properties/corsProperties/maxAge",
@@ -4907,6 +4908,7 @@
       "properties/corsProperties/allowCredentials",
       "properties/corsProperties/allowedHeaders",
       "properties/corsProperties/allowedMethods",
+      "properties/corsProperties/allowedOriginPatterns",
       "properties/corsProperties/allowedOrigins",
       "properties/corsProperties/exposedHeaders",
       "properties/corsProperties/maxAge",
@@ -8557,12 +8559,12 @@
     ]
   },
   {
-    "api_version": "2022-10-01",
+    "api_version": "2023-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/ACCOUNTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-10-01",
+    "api_version": "2023-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/ACCOUNTS/{}",
     "operation": "GET",
     "properties": [
@@ -8604,7 +8606,7 @@
     ]
   },
   {
-    "api_version": "2022-10-01",
+    "api_version": "2023-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/ACCOUNTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -8646,7 +8648,7 @@
     ]
   },
   {
-    "api_version": "2022-10-01",
+    "api_version": "2023-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/ACCOUNTS/{}",
     "operation": "PUT",
     "properties": [
@@ -8688,12 +8690,12 @@
     ]
   },
   {
-    "api_version": "2022-10-01",
+    "api_version": "2023-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/ACCOUNTS/{}/DEPLOYMENTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-10-01",
+    "api_version": "2023-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/ACCOUNTS/{}/DEPLOYMENTS/{}",
     "operation": "GET",
     "properties": [
@@ -8701,11 +8703,16 @@
       "properties/model/name",
       "properties/model/version",
       "properties/raiPolicyName",
-      "properties/scaleSettings/scaleType"
+      "properties/scaleSettings/scaleType",
+      "sku/capacity",
+      "sku/family",
+      "sku/name",
+      "sku/size",
+      "sku/tier"
     ]
   },
   {
-    "api_version": "2022-10-01",
+    "api_version": "2023-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/ACCOUNTS/{}/DEPLOYMENTS/{}",
     "operation": "PUT",
     "properties": [
@@ -8713,11 +8720,16 @@
       "properties/model/name",
       "properties/model/version",
       "properties/raiPolicyName",
-      "properties/scaleSettings/scaleType"
+      "properties/scaleSettings/scaleType",
+      "sku/capacity",
+      "sku/family",
+      "sku/name",
+      "sku/size",
+      "sku/tier"
     ]
   },
   {
-    "api_version": "2022-10-01",
+    "api_version": "2023-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/ACCOUNTS/{}/LISTKEYS",
     "operation": "POST"
   },
@@ -20072,6 +20084,33 @@
     ]
   },
   {
+    "api_version": "2022-11-10",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.HYBRIDCOMPUTE/PRIVATELINKSCOPES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-11-10",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.HYBRIDCOMPUTE/PRIVATELINKSCOPES/{}",
+    "operation": "GET",
+    "properties": [
+      "location",
+      "name",
+      "properties/publicNetworkAccess",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2022-11-10",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.HYBRIDCOMPUTE/PRIVATELINKSCOPES/{}",
+    "operation": "PUT",
+    "properties": [
+      "location",
+      "name",
+      "properties/publicNetworkAccess",
+      "tags"
+    ]
+  },
+  {
     "api_version": "2023-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/ACTIONGROUPS/{}",
     "operation": "DELETE"
@@ -21676,6 +21715,23 @@
     "api_version": "2022-12-29",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.KUSTO/CLUSTERS/{}/DATABASES/{}/DATACONNECTIONS/{}",
     "operation": "GET",
+    "variant": "CosmosDb",
+    "properties": [
+      "location",
+      "name",
+      "properties/cosmosDbAccountResourceId",
+      "properties/cosmosDbContainer",
+      "properties/cosmosDbDatabase",
+      "properties/managedIdentityResourceId",
+      "properties/mappingRuleName",
+      "properties/retrievalStartDate",
+      "properties/tableName"
+    ]
+  },
+  {
+    "api_version": "2022-12-29",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.KUSTO/CLUSTERS/{}/DATABASES/{}/DATACONNECTIONS/{}",
+    "operation": "GET",
     "variant": "EventGrid",
     "properties": [
       "location",
@@ -21725,6 +21781,23 @@
       "properties/iotHubResourceId",
       "properties/mappingRuleName",
       "properties/sharedAccessPolicyName",
+      "properties/tableName"
+    ]
+  },
+  {
+    "api_version": "2022-12-29",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.KUSTO/CLUSTERS/{}/DATABASES/{}/DATACONNECTIONS/{}",
+    "operation": "PUT",
+    "variant": "CosmosDb",
+    "properties": [
+      "location",
+      "name",
+      "properties/cosmosDbAccountResourceId",
+      "properties/cosmosDbContainer",
+      "properties/cosmosDbDatabase",
+      "properties/managedIdentityResourceId",
+      "properties/mappingRuleName",
+      "properties/retrievalStartDate",
       "properties/tableName"
     ]
   },
@@ -38703,7 +38776,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/HOSTINGENVIRONMENTS/{}",
     "operation": "GET",
     "properties": [
@@ -38788,7 +38861,7 @@
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SERVERFARMS/{}",
     "operation": "DELETE"
   },
@@ -38815,7 +38888,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SERVERFARMS/{}",
     "operation": "GET",
     "properties": [
@@ -38856,7 +38929,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SERVERFARMS/{}",
     "operation": "PUT",
     "properties": [
@@ -38880,7 +38953,7 @@
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}",
     "operation": "DELETE"
   },
@@ -38967,7 +39040,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}",
     "operation": "GET",
     "properties": [
@@ -38994,6 +39067,7 @@
       "properties/keyVaultReferenceIdentity",
       "properties/outboundIpAddresses",
       "properties/possibleOutboundIpAddresses",
+      "properties/publicNetworkAccess",
       "properties/serverFarmId",
       "properties/siteConfig",
       "properties/siteConfig/acrUseManagedIdentityCreds",
@@ -39057,6 +39131,7 @@
       "properties/siteConfig/phpVersion",
       "properties/siteConfig/powerShellVersion",
       "properties/siteConfig/preWarmedInstanceCount",
+      "properties/siteConfig/publicNetworkAccess",
       "properties/siteConfig/pythonVersion",
       "properties/siteConfig/remoteDebuggingEnabled",
       "properties/siteConfig/remoteDebuggingVersion",
@@ -39084,6 +39159,7 @@
       "properties/state",
       "properties/usageState",
       "properties/virtualNetworkSubnetId",
+      "properties/vnetRouteAllEnabled",
       "tags"
     ]
   },
@@ -39101,7 +39177,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}",
     "operation": "PATCH",
     "properties": [
@@ -39166,6 +39242,7 @@
       "properties/siteConfig/phpVersion",
       "properties/siteConfig/powerShellVersion",
       "properties/siteConfig/preWarmedInstanceCount",
+      "properties/siteConfig/publicNetworkAccess",
       "properties/siteConfig/pythonVersion",
       "properties/siteConfig/remoteDebuggingEnabled",
       "properties/siteConfig/remoteDebuggingVersion",
@@ -39273,7 +39350,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}",
     "operation": "PUT",
     "properties": [
@@ -39300,6 +39377,7 @@
       "properties/keyVaultReferenceIdentity",
       "properties/outboundIpAddresses",
       "properties/possibleOutboundIpAddresses",
+      "properties/publicNetworkAccess",
       "properties/serverFarmId",
       "properties/siteConfig",
       "properties/siteConfig/acrUseManagedIdentityCreds",
@@ -39363,6 +39441,7 @@
       "properties/siteConfig/phpVersion",
       "properties/siteConfig/powerShellVersion",
       "properties/siteConfig/preWarmedInstanceCount",
+      "properties/siteConfig/publicNetworkAccess",
       "properties/siteConfig/pythonVersion",
       "properties/siteConfig/remoteDebuggingEnabled",
       "properties/siteConfig/remoteDebuggingVersion",
@@ -39390,6 +39469,7 @@
       "properties/state",
       "properties/usageState",
       "properties/virtualNetworkSubnetId",
+      "properties/vnetRouteAllEnabled",
       "tags"
     ]
   },
@@ -39402,7 +39482,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/CONFIG/APPSETTINGS",
     "operation": "PUT",
     "properties": [
@@ -39415,7 +39495,7 @@
     "operation": "POST"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/CONFIG/APPSETTINGS/LIST",
     "operation": "POST"
   },
@@ -39451,7 +39531,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/CONFIG/AUTHSETTINGS",
     "operation": "PUT",
     "properties": [
@@ -39497,12 +39577,12 @@
     "operation": "POST"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/CONFIG/AUTHSETTINGS/LIST",
     "operation": "POST"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/CONFIG/AUTHSETTINGSV2",
     "operation": "PUT",
     "properties": [
@@ -39574,7 +39654,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/CONFIG/AUTHSETTINGSV2/LIST",
     "operation": "GET",
     "properties": [
@@ -39654,7 +39734,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/CONFIG/AZURESTORAGEACCOUNTS",
     "operation": "PUT",
     "properties": [
@@ -39667,7 +39747,7 @@
     "operation": "POST"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/CONFIG/AZURESTORAGEACCOUNTS/LIST",
     "operation": "POST"
   },
@@ -39677,7 +39757,7 @@
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/CONFIG/BACKUP",
     "operation": "DELETE"
   },
@@ -39697,7 +39777,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/CONFIG/BACKUP",
     "operation": "PUT",
     "properties": [
@@ -39718,7 +39798,7 @@
     "operation": "POST"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/CONFIG/BACKUP/LIST",
     "operation": "POST"
   },
@@ -39731,7 +39811,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/CONFIG/CONNECTIONSTRINGS",
     "operation": "PUT",
     "properties": [
@@ -39744,7 +39824,7 @@
     "operation": "POST"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/CONFIG/CONNECTIONSTRINGS/LIST",
     "operation": "POST"
   },
@@ -39769,7 +39849,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/CONFIG/LOGS",
     "operation": "GET",
     "properties": [
@@ -39808,7 +39888,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/CONFIG/LOGS",
     "operation": "PUT",
     "properties": [
@@ -39827,7 +39907,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/CONFIG/METADATA",
     "operation": "PUT",
     "properties": [
@@ -39835,7 +39915,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/CONFIG/METADATA/LIST",
     "operation": "POST"
   },
@@ -39845,12 +39925,12 @@
     "operation": "POST"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/CONFIG/PUBLISHINGCREDENTIALS/LIST",
     "operation": "POST"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/CONFIG/SLOTCONFIGNAMES",
     "operation": "GET",
     "properties": [
@@ -39859,7 +39939,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/CONFIG/SLOTCONFIGNAMES",
     "operation": "PUT",
     "properties": [
@@ -39926,7 +40006,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/CONFIG/WEB",
     "operation": "GET",
     "properties": [
@@ -39991,6 +40071,7 @@
       "properties/phpVersion",
       "properties/powerShellVersion",
       "properties/preWarmedInstanceCount",
+      "properties/publicNetworkAccess",
       "properties/pythonVersion",
       "properties/remoteDebuggingEnabled",
       "properties/remoteDebuggingVersion",
@@ -40016,7 +40097,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/CONFIG/WEB",
     "operation": "PATCH",
     "properties": [
@@ -40081,6 +40162,7 @@
       "properties/phpVersion",
       "properties/powerShellVersion",
       "properties/preWarmedInstanceCount",
+      "properties/publicNetworkAccess",
       "properties/pythonVersion",
       "properties/remoteDebuggingEnabled",
       "properties/remoteDebuggingVersion",
@@ -40164,12 +40246,12 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/FUNCTIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/FUNCTIONS/{}",
     "operation": "GET",
     "properties": [
@@ -40188,7 +40270,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/FUNCTIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -40246,7 +40328,7 @@
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/HYBRIDCONNECTIONNAMESPACES/{}/RELAYS/{}",
     "operation": "DELETE"
   },
@@ -40266,7 +40348,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/HYBRIDCONNECTIONNAMESPACES/{}/RELAYS/{}",
     "operation": "GET",
     "properties": [
@@ -40297,7 +40379,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/HYBRIDCONNECTIONNAMESPACES/{}/RELAYS/{}",
     "operation": "PUT",
     "properties": [
@@ -40318,7 +40400,7 @@
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/NETWORKCONFIG/VIRTUALNETWORK",
     "operation": "DELETE"
   },
@@ -40341,12 +40423,12 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/PUBLICCERTIFICATES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/PUBLICCERTIFICATES/{}",
     "operation": "GET",
     "properties": [
@@ -40356,7 +40438,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/PUBLICCERTIFICATES/{}",
     "operation": "PUT",
     "properties": [
@@ -40371,7 +40453,7 @@
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}",
     "operation": "DELETE"
   },
@@ -40458,7 +40540,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}",
     "operation": "GET",
     "properties": [
@@ -40485,6 +40567,7 @@
       "properties/keyVaultReferenceIdentity",
       "properties/outboundIpAddresses",
       "properties/possibleOutboundIpAddresses",
+      "properties/publicNetworkAccess",
       "properties/serverFarmId",
       "properties/siteConfig",
       "properties/siteConfig/acrUseManagedIdentityCreds",
@@ -40548,6 +40631,7 @@
       "properties/siteConfig/phpVersion",
       "properties/siteConfig/powerShellVersion",
       "properties/siteConfig/preWarmedInstanceCount",
+      "properties/siteConfig/publicNetworkAccess",
       "properties/siteConfig/pythonVersion",
       "properties/siteConfig/remoteDebuggingEnabled",
       "properties/siteConfig/remoteDebuggingVersion",
@@ -40575,6 +40659,7 @@
       "properties/state",
       "properties/usageState",
       "properties/virtualNetworkSubnetId",
+      "properties/vnetRouteAllEnabled",
       "tags"
     ]
   },
@@ -40592,7 +40677,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -40657,6 +40742,7 @@
       "properties/siteConfig/phpVersion",
       "properties/siteConfig/powerShellVersion",
       "properties/siteConfig/preWarmedInstanceCount",
+      "properties/siteConfig/publicNetworkAccess",
       "properties/siteConfig/pythonVersion",
       "properties/siteConfig/remoteDebuggingEnabled",
       "properties/siteConfig/remoteDebuggingVersion",
@@ -40764,7 +40850,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}",
     "operation": "PUT",
     "properties": [
@@ -40791,6 +40877,7 @@
       "properties/keyVaultReferenceIdentity",
       "properties/outboundIpAddresses",
       "properties/possibleOutboundIpAddresses",
+      "properties/publicNetworkAccess",
       "properties/serverFarmId",
       "properties/siteConfig",
       "properties/siteConfig/acrUseManagedIdentityCreds",
@@ -40854,6 +40941,7 @@
       "properties/siteConfig/phpVersion",
       "properties/siteConfig/powerShellVersion",
       "properties/siteConfig/preWarmedInstanceCount",
+      "properties/siteConfig/publicNetworkAccess",
       "properties/siteConfig/pythonVersion",
       "properties/siteConfig/remoteDebuggingEnabled",
       "properties/siteConfig/remoteDebuggingVersion",
@@ -40881,6 +40969,7 @@
       "properties/state",
       "properties/usageState",
       "properties/virtualNetworkSubnetId",
+      "properties/vnetRouteAllEnabled",
       "tags"
     ]
   },
@@ -40893,7 +40982,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/CONFIG/APPSETTINGS",
     "operation": "PUT",
     "properties": [
@@ -40906,7 +40995,7 @@
     "operation": "POST"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/CONFIG/APPSETTINGS/LIST",
     "operation": "POST"
   },
@@ -40942,7 +41031,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/CONFIG/AUTHSETTINGS",
     "operation": "PUT",
     "properties": [
@@ -40988,12 +41077,12 @@
     "operation": "POST"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/CONFIG/AUTHSETTINGS/LIST",
     "operation": "POST"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/CONFIG/AUTHSETTINGSV2",
     "operation": "PUT",
     "properties": [
@@ -41065,7 +41154,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/CONFIG/AUTHSETTINGSV2/LIST",
     "operation": "GET",
     "properties": [
@@ -41145,7 +41234,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/CONFIG/AZURESTORAGEACCOUNTS",
     "operation": "PUT",
     "properties": [
@@ -41158,17 +41247,17 @@
     "operation": "POST"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/CONFIG/AZURESTORAGEACCOUNTS/LIST",
     "operation": "POST"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/CONFIG/BACKUP",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/CONFIG/BACKUP",
     "operation": "PUT",
     "properties": [
@@ -41184,7 +41273,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/CONFIG/BACKUP/LIST",
     "operation": "POST"
   },
@@ -41197,7 +41286,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/CONFIG/CONNECTIONSTRINGS",
     "operation": "PUT",
     "properties": [
@@ -41210,7 +41299,7 @@
     "operation": "POST"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/CONFIG/CONNECTIONSTRINGS/LIST",
     "operation": "POST"
   },
@@ -41235,7 +41324,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/CONFIG/LOGS",
     "operation": "GET",
     "properties": [
@@ -41274,7 +41363,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/CONFIG/LOGS",
     "operation": "PUT",
     "properties": [
@@ -41293,7 +41382,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/CONFIG/METADATA",
     "operation": "PUT",
     "properties": [
@@ -41301,7 +41390,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/CONFIG/METADATA/LIST",
     "operation": "POST"
   },
@@ -41311,7 +41400,7 @@
     "operation": "POST"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/CONFIG/PUBLISHINGCREDENTIALS/LIST",
     "operation": "POST"
   },
@@ -41374,7 +41463,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/CONFIG/WEB",
     "operation": "GET",
     "properties": [
@@ -41439,6 +41528,7 @@
       "properties/phpVersion",
       "properties/powerShellVersion",
       "properties/preWarmedInstanceCount",
+      "properties/publicNetworkAccess",
       "properties/pythonVersion",
       "properties/remoteDebuggingEnabled",
       "properties/remoteDebuggingVersion",
@@ -41464,7 +41554,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/CONFIG/WEB",
     "operation": "PATCH",
     "properties": [
@@ -41529,6 +41619,7 @@
       "properties/phpVersion",
       "properties/powerShellVersion",
       "properties/preWarmedInstanceCount",
+      "properties/publicNetworkAccess",
       "properties/pythonVersion",
       "properties/remoteDebuggingEnabled",
       "properties/remoteDebuggingVersion",
@@ -41646,7 +41737,7 @@
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/NETWORKCONFIG/VIRTUALNETWORK",
     "operation": "DELETE"
   },
@@ -41669,12 +41760,12 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/SOURCECONTROLS/WEB",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/SOURCECONTROLS/WEB",
     "operation": "GET",
     "properties": [
@@ -41695,7 +41786,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/SOURCECONTROLS/WEB",
     "operation": "PATCH",
     "properties": [
@@ -41725,7 +41816,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTSSWAP",
     "operation": "POST",
     "properties": [
@@ -41734,7 +41825,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SOURCECONTROLS/WEB",
     "operation": "DELETE"
   },
@@ -41752,7 +41843,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SOURCECONTROLS/WEB",
     "operation": "GET",
     "properties": [
@@ -41773,7 +41864,7 @@
     ]
   },
   {
-    "api_version": "2021-03-01",
+    "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SOURCECONTROLS/WEB",
     "operation": "PATCH",
     "properties": [
@@ -42488,6 +42579,46 @@
     ]
   },
   {
+    "api_version": "2020-10-01",
+    "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/ROLEASSIGNMENTSCHEDULEREQUESTS/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/justification",
+      "properties/principalId",
+      "properties/principalType",
+      "properties/requestType",
+      "properties/roleDefinitionId",
+      "properties/scheduleInfo",
+      "properties/scheduleInfo/expiration/duration",
+      "properties/scheduleInfo/expiration/endDateTime",
+      "properties/scheduleInfo/expiration/type",
+      "properties/scheduleInfo/startDateTime",
+      "properties/scope",
+      "properties/ticketInfo/ticketNumber",
+      "properties/ticketInfo/ticketSystem"
+    ]
+  },
+  {
+    "api_version": "2020-10-01",
+    "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/ROLEASSIGNMENTSCHEDULEREQUESTS/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/justification",
+      "properties/principalId",
+      "properties/principalType",
+      "properties/requestType",
+      "properties/roleDefinitionId",
+      "properties/scheduleInfo",
+      "properties/scheduleInfo/expiration/duration",
+      "properties/scheduleInfo/expiration/endDateTime",
+      "properties/scheduleInfo/expiration/type",
+      "properties/scheduleInfo/startDateTime",
+      "properties/scope",
+      "properties/ticketInfo/ticketNumber",
+      "properties/ticketInfo/ticketSystem"
+    ]
+  },
+  {
     "api_version": "2018-01-01-preview",
     "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/ROLEDEFINITIONS/{}",
     "operation": "DELETE"
@@ -42522,6 +42653,46 @@
       "properties/permissions/notDataActions",
       "properties/roleName",
       "properties/type"
+    ]
+  },
+  {
+    "api_version": "2020-10-01",
+    "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/ROLEELIGIBILITYSCHEDULEREQUESTS/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/justification",
+      "properties/principalId",
+      "properties/principalType",
+      "properties/requestType",
+      "properties/roleDefinitionId",
+      "properties/scheduleInfo",
+      "properties/scheduleInfo/expiration/duration",
+      "properties/scheduleInfo/expiration/endDateTime",
+      "properties/scheduleInfo/expiration/type",
+      "properties/scheduleInfo/startDateTime",
+      "properties/scope",
+      "properties/ticketInfo/ticketNumber",
+      "properties/ticketInfo/ticketSystem"
+    ]
+  },
+  {
+    "api_version": "2020-10-01",
+    "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/ROLEELIGIBILITYSCHEDULEREQUESTS/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/justification",
+      "properties/principalId",
+      "properties/principalType",
+      "properties/requestType",
+      "properties/roleDefinitionId",
+      "properties/scheduleInfo",
+      "properties/scheduleInfo/expiration/duration",
+      "properties/scheduleInfo/expiration/endDateTime",
+      "properties/scheduleInfo/expiration/type",
+      "properties/scheduleInfo/startDateTime",
+      "properties/scope",
+      "properties/ticketInfo/ticketNumber",
+      "properties/ticketInfo/ticketSystem"
     ]
   },
   {
