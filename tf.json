@@ -9496,6 +9496,7 @@
       "properties/storageProfile/dataDisks/managedDisk/id",
       "properties/storageProfile/osDisk/blobUri",
       "properties/storageProfile/osDisk/caching",
+      "properties/storageProfile/osDisk/diskEncryptionSet/id",
       "properties/storageProfile/osDisk/diskSizeGB",
       "properties/storageProfile/osDisk/managedDisk/id",
       "properties/storageProfile/osDisk/osState",
@@ -9522,6 +9523,7 @@
       "properties/storageProfile/dataDisks/managedDisk/id",
       "properties/storageProfile/osDisk/blobUri",
       "properties/storageProfile/osDisk/caching",
+      "properties/storageProfile/osDisk/diskEncryptionSet/id",
       "properties/storageProfile/osDisk/diskSizeGB",
       "properties/storageProfile/osDisk/managedDisk/id",
       "properties/storageProfile/osDisk/osState",
@@ -9700,6 +9702,8 @@
       "properties/osProfile/customData",
       "properties/osProfile/linuxConfiguration/disablePasswordAuthentication",
       "properties/osProfile/linuxConfiguration/patchSettings/assessmentMode",
+      "properties/osProfile/linuxConfiguration/patchSettings/automaticByPlatformSettings/bypassPlatformSafetyChecksOnUserSchedule",
+      "properties/osProfile/linuxConfiguration/patchSettings/automaticByPlatformSettings/rebootSetting",
       "properties/osProfile/linuxConfiguration/patchSettings/patchMode",
       "properties/osProfile/linuxConfiguration/provisionVMAgent",
       "properties/osProfile/linuxConfiguration/ssh/publicKeys",
@@ -9714,6 +9718,8 @@
       "properties/osProfile/windowsConfiguration/additionalUnattendContent/settingName",
       "properties/osProfile/windowsConfiguration/enableAutomaticUpdates",
       "properties/osProfile/windowsConfiguration/patchSettings/assessmentMode",
+      "properties/osProfile/windowsConfiguration/patchSettings/automaticByPlatformSettings/bypassPlatformSafetyChecksOnUserSchedule",
+      "properties/osProfile/windowsConfiguration/patchSettings/automaticByPlatformSettings/rebootSetting",
       "properties/osProfile/windowsConfiguration/patchSettings/enableHotpatching",
       "properties/osProfile/windowsConfiguration/patchSettings/patchMode",
       "properties/osProfile/windowsConfiguration/provisionVMAgent",
@@ -9803,6 +9809,8 @@
       "properties/osProfile/computerName",
       "properties/osProfile/linuxConfiguration/disablePasswordAuthentication",
       "properties/osProfile/linuxConfiguration/patchSettings/assessmentMode",
+      "properties/osProfile/linuxConfiguration/patchSettings/automaticByPlatformSettings/bypassPlatformSafetyChecksOnUserSchedule",
+      "properties/osProfile/linuxConfiguration/patchSettings/automaticByPlatformSettings/rebootSetting",
       "properties/osProfile/linuxConfiguration/patchSettings/patchMode",
       "properties/osProfile/linuxConfiguration/provisionVMAgent",
       "properties/osProfile/linuxConfiguration/ssh/publicKeys/keyData",
@@ -9813,6 +9821,8 @@
       "properties/osProfile/windowsConfiguration/additionalUnattendContent/settingName",
       "properties/osProfile/windowsConfiguration/enableAutomaticUpdates",
       "properties/osProfile/windowsConfiguration/patchSettings/assessmentMode",
+      "properties/osProfile/windowsConfiguration/patchSettings/automaticByPlatformSettings/bypassPlatformSafetyChecksOnUserSchedule",
+      "properties/osProfile/windowsConfiguration/patchSettings/automaticByPlatformSettings/rebootSetting",
       "properties/osProfile/windowsConfiguration/patchSettings/enableHotpatching",
       "properties/osProfile/windowsConfiguration/patchSettings/patchMode",
       "properties/osProfile/windowsConfiguration/provisionVMAgent",
@@ -9897,6 +9907,8 @@
       "properties/osProfile/customData",
       "properties/osProfile/linuxConfiguration/disablePasswordAuthentication",
       "properties/osProfile/linuxConfiguration/patchSettings/assessmentMode",
+      "properties/osProfile/linuxConfiguration/patchSettings/automaticByPlatformSettings/bypassPlatformSafetyChecksOnUserSchedule",
+      "properties/osProfile/linuxConfiguration/patchSettings/automaticByPlatformSettings/rebootSetting",
       "properties/osProfile/linuxConfiguration/patchSettings/patchMode",
       "properties/osProfile/linuxConfiguration/provisionVMAgent",
       "properties/osProfile/linuxConfiguration/ssh/publicKeys",
@@ -9911,6 +9923,8 @@
       "properties/osProfile/windowsConfiguration/additionalUnattendContent/settingName",
       "properties/osProfile/windowsConfiguration/enableAutomaticUpdates",
       "properties/osProfile/windowsConfiguration/patchSettings/assessmentMode",
+      "properties/osProfile/windowsConfiguration/patchSettings/automaticByPlatformSettings/bypassPlatformSafetyChecksOnUserSchedule",
+      "properties/osProfile/windowsConfiguration/patchSettings/automaticByPlatformSettings/rebootSetting",
       "properties/osProfile/windowsConfiguration/patchSettings/enableHotpatching",
       "properties/osProfile/windowsConfiguration/patchSettings/patchMode",
       "properties/osProfile/windowsConfiguration/provisionVMAgent",
@@ -12184,6 +12198,29 @@
     "properties": [
       "clientId",
       "secret"
+    ]
+  },
+  {
+    "api_version": "2023-03-02-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/TRUSTEDACCESSROLEBINDINGS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-03-02-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/TRUSTEDACCESSROLEBINDINGS/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/roles",
+      "properties/sourceResourceId"
+    ]
+  },
+  {
+    "api_version": "2023-03-02-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/TRUSTEDACCESSROLEBINDINGS/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/roles",
+      "properties/sourceResourceId"
     ]
   },
   {
@@ -17538,6 +17575,11 @@
       "identity/tenantId",
       "identity/type",
       "identity/userAssignedIdentities",
+      "properties/backupPolicy{Continuous}/type",
+      "properties/backupPolicy{Periodic}/periodicModeProperties/backupIntervalInMinutes",
+      "properties/backupPolicy{Periodic}/periodicModeProperties/backupRetentionIntervalInHours",
+      "properties/backupPolicy{Periodic}/periodicModeProperties/backupStorageRedundancy",
+      "properties/backupPolicy{Periodic}/type",
       "properties/capabilities/name",
       "properties/defaultIdentity"
     ]
@@ -27934,7 +27976,7 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-02-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKINTERFACES/{}",
     "operation": "DELETE"
   },
@@ -27944,8 +27986,26 @@
     "operation": "GET",
     "properties": [
       "etag",
-      "extendedLocation/name",
-      "extendedLocation/type",
+      "id",
+      "properties/ipConfigurations/name",
+      "properties/ipConfigurations/properties/applicationGatewayBackendAddressPools/id",
+      "properties/ipConfigurations/properties/loadBalancerBackendAddressPools/id",
+      "properties/ipConfigurations/properties/loadBalancerInboundNatRules/id",
+      "properties/ipConfigurations/properties/primary",
+      "properties/ipConfigurations/properties/privateIPAddress",
+      "properties/ipConfigurations/properties/publicIPAddress/id",
+      "properties/ipConfigurations/properties/publicIPAddress/properties/ipAddress",
+      "properties/networkSecurityGroup",
+      "properties/networkSecurityGroup/id",
+      "properties/primary"
+    ]
+  },
+  {
+    "api_version": "2023-02-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKINTERFACES/{}",
+    "operation": "GET",
+    "properties": [
+      "extendedLocation",
       "id",
       "location",
       "name",
@@ -27966,12 +28026,9 @@
       "properties/ipConfigurations/properties/privateIPAddressVersion",
       "properties/ipConfigurations/properties/privateIPAllocationMethod",
       "properties/ipConfigurations/properties/publicIPAddress/id",
-      "properties/ipConfigurations/properties/publicIPAddress/properties/ipAddress",
       "properties/ipConfigurations/properties/subnet/id",
       "properties/macAddress",
-      "properties/networkSecurityGroup",
       "properties/networkSecurityGroup/id",
-      "properties/primary",
       "properties/virtualMachine/id",
       "tags"
     ]
@@ -27982,8 +28039,26 @@
     "operation": "PUT",
     "properties": [
       "etag",
-      "extendedLocation/name",
-      "extendedLocation/type",
+      "id",
+      "properties/ipConfigurations/name",
+      "properties/ipConfigurations/properties/applicationGatewayBackendAddressPools/id",
+      "properties/ipConfigurations/properties/loadBalancerBackendAddressPools/id",
+      "properties/ipConfigurations/properties/loadBalancerInboundNatRules/id",
+      "properties/ipConfigurations/properties/primary",
+      "properties/ipConfigurations/properties/privateIPAddress",
+      "properties/ipConfigurations/properties/publicIPAddress/id",
+      "properties/ipConfigurations/properties/publicIPAddress/properties/ipAddress",
+      "properties/networkSecurityGroup",
+      "properties/networkSecurityGroup/id",
+      "properties/primary"
+    ]
+  },
+  {
+    "api_version": "2023-02-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKINTERFACES/{}",
+    "operation": "PUT",
+    "properties": [
+      "extendedLocation",
       "id",
       "location",
       "name",
@@ -28004,12 +28079,9 @@
       "properties/ipConfigurations/properties/privateIPAddressVersion",
       "properties/ipConfigurations/properties/privateIPAllocationMethod",
       "properties/ipConfigurations/properties/publicIPAddress/id",
-      "properties/ipConfigurations/properties/publicIPAddress/properties/ipAddress",
       "properties/ipConfigurations/properties/subnet/id",
       "properties/macAddress",
-      "properties/networkSecurityGroup",
       "properties/networkSecurityGroup/id",
-      "properties/primary",
       "properties/virtualMachine/id",
       "tags"
     ]
@@ -30224,6 +30296,35 @@
       "properties/vpnSiteLinks/properties/ipAddress",
       "properties/vpnSiteLinks/properties/linkProperties/linkProviderName",
       "properties/vpnSiteLinks/properties/linkProperties/linkSpeedInMbps",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2022-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORKFUNCTION/AZURETRAFFICCOLLECTORS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORKFUNCTION/AZURETRAFFICCOLLECTORS/{}",
+    "operation": "GET",
+    "properties": [
+      "location",
+      "properties",
+      "properties/collectorPolicies/id",
+      "properties/virtualHub/id",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2022-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORKFUNCTION/AZURETRAFFICCOLLECTORS/{}",
+    "operation": "PUT",
+    "properties": [
+      "location",
+      "properties",
+      "properties/collectorPolicies/id",
+      "properties/virtualHub/id",
       "tags"
     ]
   },
@@ -42382,6 +42483,22 @@
     ]
   },
   {
+    "api_version": "2022-04-01",
+    "api_path": "/{}",
+    "operation": "GET",
+    "properties": [
+      "id",
+      "name",
+      "properties/condition",
+      "properties/conditionVersion",
+      "properties/delegatedManagedIdentityResourceId",
+      "properties/description",
+      "properties/principalId",
+      "properties/principalType",
+      "properties/roleDefinitionId"
+    ]
+  },
+  {
     "api_version": "2020-05-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/LOCKS/{}",
     "operation": "DELETE"
@@ -42510,6 +42627,11 @@
   },
   {
     "api_version": "2020-04-01-preview",
+    "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/ROLEASSIGNMENTS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-04-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/ROLEASSIGNMENTS/{}",
     "operation": "DELETE"
   },
@@ -42531,7 +42653,37 @@
     ]
   },
   {
+    "api_version": "2022-04-01",
+    "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/ROLEASSIGNMENTS/{}",
+    "operation": "GET",
+    "properties": [
+      "id",
+      "name",
+      "properties/condition",
+      "properties/conditionVersion",
+      "properties/delegatedManagedIdentityResourceId",
+      "properties/description",
+      "properties/principalId",
+      "properties/principalType",
+      "properties/roleDefinitionId"
+    ]
+  },
+  {
     "api_version": "2020-04-01-preview",
+    "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/ROLEASSIGNMENTS/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/condition",
+      "properties/conditionVersion",
+      "properties/delegatedManagedIdentityResourceId",
+      "properties/description",
+      "properties/principalId",
+      "properties/principalType",
+      "properties/roleDefinitionId"
+    ]
+  },
+  {
+    "api_version": "2022-04-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/ROLEASSIGNMENTS/{}",
     "operation": "PUT",
     "properties": [
@@ -42585,6 +42737,15 @@
     ]
   },
   {
+    "api_version": "2022-04-01",
+    "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/ROLEDEFINITIONS",
+    "operation": "GET",
+    "properties": [
+      "id",
+      "properties/roleName"
+    ]
+  },
+  {
     "api_version": "2018-01-01-preview",
     "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/ROLEDEFINITIONS/{}",
     "operation": "DELETE"
@@ -42603,6 +42764,15 @@
       "properties/permissions/notDataActions",
       "properties/roleName",
       "properties/type"
+    ]
+  },
+  {
+    "api_version": "2022-04-01",
+    "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/ROLEDEFINITIONS/{}",
+    "operation": "GET",
+    "properties": [
+      "id",
+      "properties/roleName"
     ]
   },
   {
