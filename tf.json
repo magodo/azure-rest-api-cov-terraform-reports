@@ -114,6 +114,14 @@
   },
   {
     "api_version": "7.4",
+    "api_path": "/CERTIFICATES/{}/PENDING",
+    "operation": "GET",
+    "properties": [
+      "status"
+    ]
+  },
+  {
+    "api_version": "7.4",
     "api_path": "/CERTIFICATES/{}/{}",
     "operation": "GET",
     "properties": [
@@ -1369,11 +1377,10 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.NETWORK/LOCATIONS/{}/SERVICETAGS",
     "operation": "GET",
     "properties": [
-      "values/id",
       "values/name",
       "values/properties/addressPrefixes",
       "values/properties/region"
@@ -1560,6 +1567,9 @@
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.SECURITY/PRICINGS/{}",
     "operation": "GET",
     "properties": [
+      "properties/extensions/additionalExtensionProperties",
+      "properties/extensions/isEnabled",
+      "properties/extensions/name",
       "properties/pricingTier",
       "properties/subPlan"
     ]
@@ -1569,6 +1579,9 @@
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.SECURITY/PRICINGS/{}",
     "operation": "PUT",
     "properties": [
+      "properties/extensions/additionalExtensionProperties",
+      "properties/extensions/isEnabled",
+      "properties/extensions/name",
       "properties/pricingTier",
       "properties/subPlan"
     ]
@@ -4782,6 +4795,7 @@
     "operation": "GET",
     "properties": [
       "properties/generation",
+      "properties/settings/gitProperty/repositories/caCertResourceId",
       "properties/settings/gitProperty/repositories/hostKey",
       "properties/settings/gitProperty/repositories/hostKeyAlgorithm",
       "properties/settings/gitProperty/repositories/label",
@@ -4801,6 +4815,7 @@
     "operation": "PUT",
     "properties": [
       "properties/generation",
+      "properties/settings/gitProperty/repositories/caCertResourceId",
       "properties/settings/gitProperty/repositories/hostKey",
       "properties/settings/gitProperty/repositories/hostKeyAlgorithm",
       "properties/settings/gitProperty/repositories/label",
@@ -7577,135 +7592,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/ENDPOINTS/{}",
     "operation": "PATCH",
     "properties": [
-      "properties/contentTypesToCompress",
-      "properties/deliveryPolicy/description",
-      "properties/deliveryPolicy/rules/actions{CacheExpiration}/name",
-      "properties/deliveryPolicy/rules/actions{CacheExpiration}/parameters/@odata.type",
-      "properties/deliveryPolicy/rules/actions{CacheExpiration}/parameters/cacheBehavior",
-      "properties/deliveryPolicy/rules/actions{CacheExpiration}/parameters/cacheDuration",
-      "properties/deliveryPolicy/rules/actions{CacheExpiration}/parameters/cacheType",
-      "properties/deliveryPolicy/rules/actions{CacheKeyQueryString}/name",
-      "properties/deliveryPolicy/rules/actions{CacheKeyQueryString}/parameters/@odata.type",
-      "properties/deliveryPolicy/rules/actions{CacheKeyQueryString}/parameters/queryParameters",
-      "properties/deliveryPolicy/rules/actions{CacheKeyQueryString}/parameters/queryStringBehavior",
-      "properties/deliveryPolicy/rules/actions{ModifyRequestHeader}/name",
-      "properties/deliveryPolicy/rules/actions{ModifyRequestHeader}/parameters/@odata.type",
-      "properties/deliveryPolicy/rules/actions{ModifyRequestHeader}/parameters/headerAction",
-      "properties/deliveryPolicy/rules/actions{ModifyRequestHeader}/parameters/headerName",
-      "properties/deliveryPolicy/rules/actions{ModifyRequestHeader}/parameters/value",
-      "properties/deliveryPolicy/rules/actions{ModifyResponseHeader}/name",
-      "properties/deliveryPolicy/rules/actions{ModifyResponseHeader}/parameters/@odata.type",
-      "properties/deliveryPolicy/rules/actions{ModifyResponseHeader}/parameters/headerAction",
-      "properties/deliveryPolicy/rules/actions{ModifyResponseHeader}/parameters/headerName",
-      "properties/deliveryPolicy/rules/actions{ModifyResponseHeader}/parameters/value",
-      "properties/deliveryPolicy/rules/actions{UrlRedirect}/name",
-      "properties/deliveryPolicy/rules/actions{UrlRedirect}/parameters/@odata.type",
-      "properties/deliveryPolicy/rules/actions{UrlRedirect}/parameters/customFragment",
-      "properties/deliveryPolicy/rules/actions{UrlRedirect}/parameters/customHostname",
-      "properties/deliveryPolicy/rules/actions{UrlRedirect}/parameters/customPath",
-      "properties/deliveryPolicy/rules/actions{UrlRedirect}/parameters/customQueryString",
-      "properties/deliveryPolicy/rules/actions{UrlRedirect}/parameters/destinationProtocol",
-      "properties/deliveryPolicy/rules/actions{UrlRedirect}/parameters/redirectType",
-      "properties/deliveryPolicy/rules/actions{UrlRewrite}/name",
-      "properties/deliveryPolicy/rules/actions{UrlRewrite}/parameters/@odata.type",
-      "properties/deliveryPolicy/rules/actions{UrlRewrite}/parameters/destination",
-      "properties/deliveryPolicy/rules/actions{UrlRewrite}/parameters/preserveUnmatchedPath",
-      "properties/deliveryPolicy/rules/actions{UrlRewrite}/parameters/sourcePattern",
-      "properties/deliveryPolicy/rules/conditions{Cookies}/name",
-      "properties/deliveryPolicy/rules/conditions{Cookies}/parameters/@odata.type",
-      "properties/deliveryPolicy/rules/conditions{Cookies}/parameters/matchValues",
-      "properties/deliveryPolicy/rules/conditions{Cookies}/parameters/negateCondition",
-      "properties/deliveryPolicy/rules/conditions{Cookies}/parameters/operator",
-      "properties/deliveryPolicy/rules/conditions{Cookies}/parameters/selector",
-      "properties/deliveryPolicy/rules/conditions{Cookies}/parameters/transforms",
-      "properties/deliveryPolicy/rules/conditions{HttpVersion}/name",
-      "properties/deliveryPolicy/rules/conditions{HttpVersion}/parameters/@odata.type",
-      "properties/deliveryPolicy/rules/conditions{HttpVersion}/parameters/matchValues",
-      "properties/deliveryPolicy/rules/conditions{HttpVersion}/parameters/negateCondition",
-      "properties/deliveryPolicy/rules/conditions{HttpVersion}/parameters/operator",
-      "properties/deliveryPolicy/rules/conditions{IsDevice}/name",
-      "properties/deliveryPolicy/rules/conditions{IsDevice}/parameters/@odata.type",
-      "properties/deliveryPolicy/rules/conditions{IsDevice}/parameters/matchValues",
-      "properties/deliveryPolicy/rules/conditions{IsDevice}/parameters/negateCondition",
-      "properties/deliveryPolicy/rules/conditions{IsDevice}/parameters/operator",
-      "properties/deliveryPolicy/rules/conditions{PostArgs}/name",
-      "properties/deliveryPolicy/rules/conditions{PostArgs}/parameters/@odata.type",
-      "properties/deliveryPolicy/rules/conditions{PostArgs}/parameters/matchValues",
-      "properties/deliveryPolicy/rules/conditions{PostArgs}/parameters/negateCondition",
-      "properties/deliveryPolicy/rules/conditions{PostArgs}/parameters/operator",
-      "properties/deliveryPolicy/rules/conditions{PostArgs}/parameters/selector",
-      "properties/deliveryPolicy/rules/conditions{PostArgs}/parameters/transforms",
-      "properties/deliveryPolicy/rules/conditions{QueryString}/name",
-      "properties/deliveryPolicy/rules/conditions{QueryString}/parameters/@odata.type",
-      "properties/deliveryPolicy/rules/conditions{QueryString}/parameters/matchValues",
-      "properties/deliveryPolicy/rules/conditions{QueryString}/parameters/negateCondition",
-      "properties/deliveryPolicy/rules/conditions{QueryString}/parameters/operator",
-      "properties/deliveryPolicy/rules/conditions{QueryString}/parameters/transforms",
-      "properties/deliveryPolicy/rules/conditions{RemoteAddress}/name",
-      "properties/deliveryPolicy/rules/conditions{RemoteAddress}/parameters/@odata.type",
-      "properties/deliveryPolicy/rules/conditions{RemoteAddress}/parameters/matchValues",
-      "properties/deliveryPolicy/rules/conditions{RemoteAddress}/parameters/negateCondition",
-      "properties/deliveryPolicy/rules/conditions{RemoteAddress}/parameters/operator",
-      "properties/deliveryPolicy/rules/conditions{RequestBody}/name",
-      "properties/deliveryPolicy/rules/conditions{RequestBody}/parameters/@odata.type",
-      "properties/deliveryPolicy/rules/conditions{RequestBody}/parameters/matchValues",
-      "properties/deliveryPolicy/rules/conditions{RequestBody}/parameters/negateCondition",
-      "properties/deliveryPolicy/rules/conditions{RequestBody}/parameters/operator",
-      "properties/deliveryPolicy/rules/conditions{RequestBody}/parameters/transforms",
-      "properties/deliveryPolicy/rules/conditions{RequestHeader}/name",
-      "properties/deliveryPolicy/rules/conditions{RequestHeader}/parameters/@odata.type",
-      "properties/deliveryPolicy/rules/conditions{RequestHeader}/parameters/matchValues",
-      "properties/deliveryPolicy/rules/conditions{RequestHeader}/parameters/negateCondition",
-      "properties/deliveryPolicy/rules/conditions{RequestHeader}/parameters/operator",
-      "properties/deliveryPolicy/rules/conditions{RequestHeader}/parameters/selector",
-      "properties/deliveryPolicy/rules/conditions{RequestHeader}/parameters/transforms",
-      "properties/deliveryPolicy/rules/conditions{RequestMethod}/name",
-      "properties/deliveryPolicy/rules/conditions{RequestMethod}/parameters/@odata.type",
-      "properties/deliveryPolicy/rules/conditions{RequestMethod}/parameters/matchValues",
-      "properties/deliveryPolicy/rules/conditions{RequestMethod}/parameters/negateCondition",
-      "properties/deliveryPolicy/rules/conditions{RequestMethod}/parameters/operator",
-      "properties/deliveryPolicy/rules/conditions{RequestScheme}/name",
-      "properties/deliveryPolicy/rules/conditions{RequestScheme}/parameters/@odata.type",
-      "properties/deliveryPolicy/rules/conditions{RequestScheme}/parameters/matchValues",
-      "properties/deliveryPolicy/rules/conditions{RequestScheme}/parameters/negateCondition",
-      "properties/deliveryPolicy/rules/conditions{RequestScheme}/parameters/operator",
-      "properties/deliveryPolicy/rules/conditions{RequestUri}/name",
-      "properties/deliveryPolicy/rules/conditions{RequestUri}/parameters/@odata.type",
-      "properties/deliveryPolicy/rules/conditions{RequestUri}/parameters/matchValues",
-      "properties/deliveryPolicy/rules/conditions{RequestUri}/parameters/negateCondition",
-      "properties/deliveryPolicy/rules/conditions{RequestUri}/parameters/operator",
-      "properties/deliveryPolicy/rules/conditions{RequestUri}/parameters/transforms",
-      "properties/deliveryPolicy/rules/conditions{UrlFileExtension}/name",
-      "properties/deliveryPolicy/rules/conditions{UrlFileExtension}/parameters/@odata.type",
-      "properties/deliveryPolicy/rules/conditions{UrlFileExtension}/parameters/matchValues",
-      "properties/deliveryPolicy/rules/conditions{UrlFileExtension}/parameters/negateCondition",
-      "properties/deliveryPolicy/rules/conditions{UrlFileExtension}/parameters/operator",
-      "properties/deliveryPolicy/rules/conditions{UrlFileExtension}/parameters/transforms",
-      "properties/deliveryPolicy/rules/conditions{UrlFileName}/name",
-      "properties/deliveryPolicy/rules/conditions{UrlFileName}/parameters/@odata.type",
-      "properties/deliveryPolicy/rules/conditions{UrlFileName}/parameters/matchValues",
-      "properties/deliveryPolicy/rules/conditions{UrlFileName}/parameters/negateCondition",
-      "properties/deliveryPolicy/rules/conditions{UrlFileName}/parameters/operator",
-      "properties/deliveryPolicy/rules/conditions{UrlFileName}/parameters/transforms",
-      "properties/deliveryPolicy/rules/conditions{UrlPath}/name",
-      "properties/deliveryPolicy/rules/conditions{UrlPath}/parameters/@odata.type",
-      "properties/deliveryPolicy/rules/conditions{UrlPath}/parameters/matchValues",
-      "properties/deliveryPolicy/rules/conditions{UrlPath}/parameters/negateCondition",
-      "properties/deliveryPolicy/rules/conditions{UrlPath}/parameters/operator",
-      "properties/deliveryPolicy/rules/conditions{UrlPath}/parameters/transforms",
-      "properties/deliveryPolicy/rules/name",
-      "properties/deliveryPolicy/rules/order",
-      "properties/geoFilters/action",
-      "properties/geoFilters/countryCodes",
-      "properties/geoFilters/relativePath",
-      "properties/isCompressionEnabled",
-      "properties/isHttpAllowed",
-      "properties/isHttpsAllowed",
-      "properties/optimizationType",
-      "properties/originHostHeader",
-      "properties/originPath",
-      "properties/probePath",
-      "properties/queryStringCachingBehavior",
+      "properties",
       "tags"
     ]
   },
@@ -11541,6 +11428,7 @@
       "properties/agentPoolProfiles/availabilityZones",
       "properties/agentPoolProfiles/capacityReservationGroupID",
       "properties/agentPoolProfiles/count",
+      "properties/agentPoolProfiles/creationData/sourceResourceId",
       "properties/agentPoolProfiles/currentOrchestratorVersion",
       "properties/agentPoolProfiles/enableAutoScaling",
       "properties/agentPoolProfiles/enableCustomCATrust",
@@ -11665,6 +11553,9 @@
       "properties/identityProfile",
       "properties/ingressProfile/webAppRouting/dnsZoneResourceId",
       "properties/ingressProfile/webAppRouting/enabled",
+      "properties/ingressProfile/webAppRouting/identity/clientId",
+      "properties/ingressProfile/webAppRouting/identity/objectId",
+      "properties/ingressProfile/webAppRouting/identity/resourceId",
       "properties/kubernetesVersion",
       "properties/linuxProfile/adminUsername",
       "properties/linuxProfile/ssh/publicKeys/keyData",
@@ -11753,6 +11644,7 @@
       "properties/agentPoolProfiles/availabilityZones",
       "properties/agentPoolProfiles/capacityReservationGroupID",
       "properties/agentPoolProfiles/count",
+      "properties/agentPoolProfiles/creationData/sourceResourceId",
       "properties/agentPoolProfiles/currentOrchestratorVersion",
       "properties/agentPoolProfiles/enableAutoScaling",
       "properties/agentPoolProfiles/enableCustomCATrust",
@@ -11877,6 +11769,9 @@
       "properties/identityProfile",
       "properties/ingressProfile/webAppRouting/dnsZoneResourceId",
       "properties/ingressProfile/webAppRouting/enabled",
+      "properties/ingressProfile/webAppRouting/identity/clientId",
+      "properties/ingressProfile/webAppRouting/identity/objectId",
+      "properties/ingressProfile/webAppRouting/identity/resourceId",
       "properties/kubernetesVersion",
       "properties/linuxProfile/adminUsername",
       "properties/linuxProfile/ssh/publicKeys/keyData",
@@ -16604,6 +16499,7 @@
       "properties/applicationGroupReferences",
       "properties/description",
       "properties/friendlyName",
+      "properties/publicNetworkAccess",
       "tags"
     ]
   },
@@ -16625,6 +16521,7 @@
       "properties/applicationGroupReferences",
       "properties/description",
       "properties/friendlyName",
+      "properties/publicNetworkAccess",
       "tags"
     ]
   },
@@ -17299,54 +17196,57 @@
     ]
   },
   {
-    "api_version": "2020-12-01",
+    "api_version": "2023-01-31",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DIGITALTWINS/DIGITALTWINSINSTANCES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-12-01",
+    "api_version": "2023-01-31",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DIGITALTWINS/DIGITALTWINSINSTANCES/{}",
     "operation": "GET",
     "properties": [
       "identity/principalId",
       "identity/tenantId",
       "identity/type",
+      "identity/userAssignedIdentities",
       "location",
       "properties/hostName",
       "tags"
     ]
   },
   {
-    "api_version": "2020-12-01",
+    "api_version": "2023-01-31",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DIGITALTWINS/DIGITALTWINSINSTANCES/{}",
     "operation": "PATCH",
     "properties": [
       "identity/principalId",
       "identity/tenantId",
       "identity/type",
+      "identity/userAssignedIdentities",
       "tags"
     ]
   },
   {
-    "api_version": "2020-12-01",
+    "api_version": "2023-01-31",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DIGITALTWINS/DIGITALTWINSINSTANCES/{}",
     "operation": "PUT",
     "properties": [
       "identity/principalId",
       "identity/tenantId",
       "identity/type",
+      "identity/userAssignedIdentities",
       "location",
       "properties/hostName",
       "tags"
     ]
   },
   {
-    "api_version": "2020-12-01",
+    "api_version": "2023-01-31",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DIGITALTWINS/DIGITALTWINSINSTANCES/{}/ENDPOINTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-12-01",
+    "api_version": "2023-01-31",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DIGITALTWINS/DIGITALTWINSINSTANCES/{}/ENDPOINTS/{}",
     "operation": "GET",
     "properties": [
@@ -17366,7 +17266,7 @@
     ]
   },
   {
-    "api_version": "2020-12-01",
+    "api_version": "2023-01-31",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DIGITALTWINS/DIGITALTWINSINSTANCES/{}/ENDPOINTS/{}",
     "operation": "PUT",
     "properties": [
@@ -17386,12 +17286,12 @@
     ]
   },
   {
-    "api_version": "2022-10-31",
+    "api_version": "2023-01-31",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DIGITALTWINS/DIGITALTWINSINSTANCES/{}/TIMESERIESDATABASECONNECTIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-10-31",
+    "api_version": "2023-01-31",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DIGITALTWINS/DIGITALTWINSINSTANCES/{}/TIMESERIESDATABASECONNECTIONS/{}",
     "operation": "GET",
     "properties": [
@@ -17406,7 +17306,7 @@
     ]
   },
   {
-    "api_version": "2022-10-31",
+    "api_version": "2023-01-31",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DIGITALTWINS/DIGITALTWINSINSTANCES/{}/TIMESERIESDATABASECONNECTIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -19373,6 +19273,14 @@
   {
     "api_version": "2023-04-13",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.GRAPHSERVICES/ACCOUNTS/{}",
+    "operation": "PATCH",
+    "properties": [
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2023-04-13",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.GRAPHSERVICES/ACCOUNTS/{}",
     "operation": "PUT",
     "properties": [
       "location",
@@ -20861,29 +20769,16 @@
       "properties/criteria{Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/skipMetricValidation",
       "properties/criteria{Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/threshold",
       "properties/criteria{Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/timeAggregation",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/alertSensitivity",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/dimensions/name",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/dimensions/operator",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/dimensions/values",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/failingPeriods/minFailingPeriodsToAlert",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/failingPeriods/numberOfEvaluationPeriods",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/ignoreDataBefore",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/metricName",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/metricNamespace",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/name",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/operator",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/skipMetricValidation",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/timeAggregation",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/dimensions/name",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/dimensions/operator",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/dimensions/values",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/metricName",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/metricNamespace",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/name",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/operator",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/skipMetricValidation",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/threshold",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/timeAggregation",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/dimensions/name",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/dimensions/operator",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/dimensions/values",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/metricName",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/metricNamespace",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/name",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/operator",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/skipMetricValidation",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/threshold",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/timeAggregation",
       "properties/criteria{Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria}/componentId",
       "properties/criteria{Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria}/failedLocationCount",
       "properties/criteria{Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria}/webTestId",
@@ -20930,29 +20825,16 @@
       "properties/criteria{Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/skipMetricValidation",
       "properties/criteria{Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/threshold",
       "properties/criteria{Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/timeAggregation",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/alertSensitivity",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/dimensions/name",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/dimensions/operator",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/dimensions/values",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/failingPeriods/minFailingPeriodsToAlert",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/failingPeriods/numberOfEvaluationPeriods",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/ignoreDataBefore",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/metricName",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/metricNamespace",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/name",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/operator",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/skipMetricValidation",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{DynamicThresholdCriterion}/timeAggregation",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/dimensions/name",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/dimensions/operator",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/dimensions/values",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/metricName",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/metricNamespace",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/name",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/operator",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/skipMetricValidation",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/threshold",
-      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf{StaticThresholdCriterion}/timeAggregation",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/dimensions/name",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/dimensions/operator",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/dimensions/values",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/metricName",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/metricNamespace",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/name",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/operator",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/skipMetricValidation",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/threshold",
+      "properties/criteria{Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria}/allOf/timeAggregation",
       "properties/criteria{Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria}/componentId",
       "properties/criteria{Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria}/failedLocationCount",
       "properties/criteria{Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria}/webTestId",
@@ -28280,12 +28162,12 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKPROFILES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKPROFILES/{}",
     "operation": "GET",
     "properties": [
@@ -28298,7 +28180,7 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKPROFILES/{}",
     "operation": "PUT",
     "properties": [
@@ -28421,27 +28303,50 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKVIRTUALAPPLIANCES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKVIRTUALAPPLIANCES/{}",
+    "operation": "GET",
+    "properties": [
+      "location",
+      "properties/delegation/serviceName",
+      "properties/virtualHub/id"
+    ]
+  },
+  {
+    "api_version": "2023-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKVIRTUALAPPLIANCES/{}",
+    "operation": "PUT",
+    "properties": [
+      "location",
+      "properties/delegation/serviceName",
+      "properties/virtualHub/id"
+    ]
+  },
+  {
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}",
     "operation": "GET",
     "properties": [
       "location",
-      "name",
       "tags"
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}",
     "operation": "PUT",
     "properties": [
       "location",
-      "name",
       "tags"
     ]
   },
@@ -28585,12 +28490,12 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}/PACKETCAPTURES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}/PACKETCAPTURES/{}",
     "operation": "GET",
     "properties": [
@@ -28611,7 +28516,7 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}/PACKETCAPTURES/{}",
     "operation": "PUT",
     "properties": [
@@ -29996,17 +29901,15 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNGATEWAYS/{}/VPNCONNECTIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNGATEWAYS/{}/VPNCONNECTIONS/{}",
     "operation": "GET",
     "properties": [
-      "id",
-      "name",
       "properties/enableInternetSecurity",
       "properties/remoteVpnSite/id",
       "properties/routingConfiguration/associatedRouteTable/id",
@@ -30042,12 +29945,10 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNGATEWAYS/{}/VPNCONNECTIONS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
-      "name",
       "properties/enableInternetSecurity",
       "properties/remoteVpnSite/id",
       "properties/routingConfiguration/associatedRouteTable/id",
@@ -30083,12 +29984,12 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNSERVERCONFIGURATIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNSERVERCONFIGURATIONS/{}",
     "operation": "GET",
     "properties": [
@@ -30123,7 +30024,7 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNSERVERCONFIGURATIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -30158,16 +30059,15 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNSERVERCONFIGURATIONS/{}/CONFIGURATIONPOLICYGROUPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNSERVERCONFIGURATIONS/{}/CONFIGURATIONPOLICYGROUPS/{}",
     "operation": "GET",
     "properties": [
-      "name",
       "properties/isDefault",
       "properties/policyMembers/attributeType",
       "properties/policyMembers/attributeValue",
@@ -30176,11 +30076,10 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNSERVERCONFIGURATIONS/{}/CONFIGURATIONPOLICYGROUPS/{}",
     "operation": "PUT",
     "properties": [
-      "name",
       "properties/isDefault",
       "properties/policyMembers/attributeType",
       "properties/policyMembers/attributeValue",
@@ -30189,18 +30088,16 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNSITES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNSITES/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "location",
-      "name",
       "properties/addressSpace/addressPrefixes",
       "properties/deviceProperties/deviceModel",
       "properties/deviceProperties/deviceVendor",
@@ -30220,13 +30117,11 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNSITES/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "location",
-      "name",
       "properties/addressSpace/addressPrefixes",
       "properties/deviceProperties/deviceModel",
       "properties/deviceProperties/deviceVendor",
@@ -36798,6 +36693,67 @@
     ]
   },
   {
+    "api_version": "2023-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGECACHE/AMLFILESYSTEMS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGECACHE/AMLFILESYSTEMS/{}",
+    "operation": "GET",
+    "properties": [
+      "identity/type",
+      "identity/userAssignedIdentities",
+      "location",
+      "properties/encryptionSettings/keyEncryptionKey/keyUrl",
+      "properties/encryptionSettings/keyEncryptionKey/sourceVault/id",
+      "properties/filesystemSubnet",
+      "properties/hsm/settings/container",
+      "properties/hsm/settings/importPrefix",
+      "properties/hsm/settings/loggingContainer",
+      "properties/maintenanceWindow/dayOfWeek",
+      "properties/maintenanceWindow/timeOfDayUTC",
+      "properties/storageCapacityTiB",
+      "sku/name",
+      "tags",
+      "zones"
+    ]
+  },
+  {
+    "api_version": "2023-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGECACHE/AMLFILESYSTEMS/{}",
+    "operation": "PATCH",
+    "properties": [
+      "properties/encryptionSettings/keyEncryptionKey/keyUrl",
+      "properties/encryptionSettings/keyEncryptionKey/sourceVault/id",
+      "properties/maintenanceWindow/dayOfWeek",
+      "properties/maintenanceWindow/timeOfDayUTC",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2023-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGECACHE/AMLFILESYSTEMS/{}",
+    "operation": "PUT",
+    "properties": [
+      "identity/type",
+      "identity/userAssignedIdentities",
+      "location",
+      "properties/encryptionSettings/keyEncryptionKey/keyUrl",
+      "properties/encryptionSettings/keyEncryptionKey/sourceVault/id",
+      "properties/filesystemSubnet",
+      "properties/hsm/settings/container",
+      "properties/hsm/settings/importPrefix",
+      "properties/hsm/settings/loggingContainer",
+      "properties/maintenanceWindow/dayOfWeek",
+      "properties/maintenanceWindow/timeOfDayUTC",
+      "properties/storageCapacityTiB",
+      "sku/name",
+      "tags",
+      "zones"
+    ]
+  },
+  {
     "api_version": "2023-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGECACHE/CACHES/{}",
     "operation": "DELETE"
@@ -42378,6 +42334,317 @@
     ]
   },
   {
+    "api_version": "2022-08-29",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/PALOALTONETWORKS.CLOUDNGFW/FIREWALLS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-08-29",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/PALOALTONETWORKS.CLOUDNGFW/FIREWALLS/{}",
+    "operation": "GET",
+    "properties": [
+      "location",
+      "properties/associatedRulestack/location",
+      "properties/associatedRulestack/resourceId",
+      "properties/associatedRulestack/rulestackId",
+      "properties/dnsSettings/dnsServers/address",
+      "properties/dnsSettings/dnsServers/resourceId",
+      "properties/dnsSettings/enableDnsProxy",
+      "properties/dnsSettings/enabledDnsType",
+      "properties/frontEndSettings/backendConfiguration/address/address",
+      "properties/frontEndSettings/backendConfiguration/address/resourceId",
+      "properties/frontEndSettings/backendConfiguration/port",
+      "properties/frontEndSettings/frontendConfiguration/address/address",
+      "properties/frontEndSettings/frontendConfiguration/address/resourceId",
+      "properties/frontEndSettings/frontendConfiguration/port",
+      "properties/frontEndSettings/name",
+      "properties/frontEndSettings/protocol",
+      "properties/isPanoramaManaged",
+      "properties/marketplaceDetails/offerId",
+      "properties/marketplaceDetails/publisherId",
+      "properties/networkProfile/egressNatIp/address",
+      "properties/networkProfile/egressNatIp/resourceId",
+      "properties/networkProfile/enableEgressNat",
+      "properties/networkProfile/networkType",
+      "properties/networkProfile/publicIps/address",
+      "properties/networkProfile/publicIps/resourceId",
+      "properties/networkProfile/vnetConfiguration/ipOfTrustSubnetForUdr/address",
+      "properties/networkProfile/vnetConfiguration/ipOfTrustSubnetForUdr/resourceId",
+      "properties/networkProfile/vnetConfiguration/trustSubnet/resourceId",
+      "properties/networkProfile/vnetConfiguration/unTrustSubnet/resourceId",
+      "properties/networkProfile/vnetConfiguration/vnet/resourceId",
+      "properties/networkProfile/vwanConfiguration/ipOfTrustSubnetForUdr/address",
+      "properties/networkProfile/vwanConfiguration/ipOfTrustSubnetForUdr/resourceId",
+      "properties/networkProfile/vwanConfiguration/networkVirtualApplianceId",
+      "properties/networkProfile/vwanConfiguration/trustSubnet/resourceId",
+      "properties/networkProfile/vwanConfiguration/unTrustSubnet/resourceId",
+      "properties/networkProfile/vwanConfiguration/vHub/resourceId",
+      "properties/panoramaConfig/cgName",
+      "properties/panoramaConfig/configString",
+      "properties/panoramaConfig/dgName",
+      "properties/panoramaConfig/hostName",
+      "properties/panoramaConfig/panoramaServer",
+      "properties/panoramaConfig/panoramaServer2",
+      "properties/panoramaConfig/tplName",
+      "properties/panoramaConfig/vmAuthKey",
+      "properties/planData/billingCycle",
+      "properties/planData/planId",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2022-08-29",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/PALOALTONETWORKS.CLOUDNGFW/FIREWALLS/{}",
+    "operation": "PUT",
+    "properties": [
+      "location",
+      "properties/associatedRulestack/location",
+      "properties/associatedRulestack/resourceId",
+      "properties/associatedRulestack/rulestackId",
+      "properties/dnsSettings/dnsServers/address",
+      "properties/dnsSettings/dnsServers/resourceId",
+      "properties/dnsSettings/enableDnsProxy",
+      "properties/dnsSettings/enabledDnsType",
+      "properties/frontEndSettings/backendConfiguration/address/address",
+      "properties/frontEndSettings/backendConfiguration/address/resourceId",
+      "properties/frontEndSettings/backendConfiguration/port",
+      "properties/frontEndSettings/frontendConfiguration/address/address",
+      "properties/frontEndSettings/frontendConfiguration/address/resourceId",
+      "properties/frontEndSettings/frontendConfiguration/port",
+      "properties/frontEndSettings/name",
+      "properties/frontEndSettings/protocol",
+      "properties/isPanoramaManaged",
+      "properties/marketplaceDetails/offerId",
+      "properties/marketplaceDetails/publisherId",
+      "properties/networkProfile/egressNatIp/address",
+      "properties/networkProfile/egressNatIp/resourceId",
+      "properties/networkProfile/enableEgressNat",
+      "properties/networkProfile/networkType",
+      "properties/networkProfile/publicIps/address",
+      "properties/networkProfile/publicIps/resourceId",
+      "properties/networkProfile/vnetConfiguration/ipOfTrustSubnetForUdr/address",
+      "properties/networkProfile/vnetConfiguration/ipOfTrustSubnetForUdr/resourceId",
+      "properties/networkProfile/vnetConfiguration/trustSubnet/resourceId",
+      "properties/networkProfile/vnetConfiguration/unTrustSubnet/resourceId",
+      "properties/networkProfile/vnetConfiguration/vnet/resourceId",
+      "properties/networkProfile/vwanConfiguration/ipOfTrustSubnetForUdr/address",
+      "properties/networkProfile/vwanConfiguration/ipOfTrustSubnetForUdr/resourceId",
+      "properties/networkProfile/vwanConfiguration/networkVirtualApplianceId",
+      "properties/networkProfile/vwanConfiguration/trustSubnet/resourceId",
+      "properties/networkProfile/vwanConfiguration/unTrustSubnet/resourceId",
+      "properties/networkProfile/vwanConfiguration/vHub/resourceId",
+      "properties/panoramaConfig/cgName",
+      "properties/panoramaConfig/configString",
+      "properties/panoramaConfig/dgName",
+      "properties/panoramaConfig/hostName",
+      "properties/panoramaConfig/panoramaServer",
+      "properties/panoramaConfig/panoramaServer2",
+      "properties/panoramaConfig/tplName",
+      "properties/panoramaConfig/vmAuthKey",
+      "properties/planData/billingCycle",
+      "properties/planData/planId",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2022-08-29",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/PALOALTONETWORKS.CLOUDNGFW/LOCALRULESTACKS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-08-29",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/PALOALTONETWORKS.CLOUDNGFW/LOCALRULESTACKS/{}",
+    "operation": "GET",
+    "properties": [
+      "location",
+      "properties/defaultMode",
+      "properties/description",
+      "properties/scope",
+      "properties/securityServices/antiSpywareProfile",
+      "properties/securityServices/antiVirusProfile",
+      "properties/securityServices/dnsSubscription",
+      "properties/securityServices/fileBlockingProfile",
+      "properties/securityServices/outboundTrustCertificate",
+      "properties/securityServices/outboundUnTrustCertificate",
+      "properties/securityServices/urlFilteringProfile",
+      "properties/securityServices/vulnerabilityProfile"
+    ]
+  },
+  {
+    "api_version": "2022-08-29",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/PALOALTONETWORKS.CLOUDNGFW/LOCALRULESTACKS/{}",
+    "operation": "PUT",
+    "properties": [
+      "location",
+      "properties/defaultMode",
+      "properties/description",
+      "properties/scope",
+      "properties/securityServices/antiSpywareProfile",
+      "properties/securityServices/antiVirusProfile",
+      "properties/securityServices/dnsSubscription",
+      "properties/securityServices/fileBlockingProfile",
+      "properties/securityServices/outboundTrustCertificate",
+      "properties/securityServices/outboundUnTrustCertificate",
+      "properties/securityServices/urlFilteringProfile",
+      "properties/securityServices/vulnerabilityProfile"
+    ]
+  },
+  {
+    "api_version": "2022-08-29",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/PALOALTONETWORKS.CLOUDNGFW/LOCALRULESTACKS/{}/CERTIFICATES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-08-29",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/PALOALTONETWORKS.CLOUDNGFW/LOCALRULESTACKS/{}/CERTIFICATES/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/auditComment",
+      "properties/certificateSelfSigned",
+      "properties/certificateSignerResourceId",
+      "properties/description"
+    ]
+  },
+  {
+    "api_version": "2022-08-29",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/PALOALTONETWORKS.CLOUDNGFW/LOCALRULESTACKS/{}/CERTIFICATES/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/auditComment",
+      "properties/certificateSelfSigned",
+      "properties/certificateSignerResourceId",
+      "properties/description"
+    ]
+  },
+  {
+    "api_version": "2022-08-29",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/PALOALTONETWORKS.CLOUDNGFW/LOCALRULESTACKS/{}/COMMIT",
+    "operation": "POST"
+  },
+  {
+    "api_version": "2022-08-29",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/PALOALTONETWORKS.CLOUDNGFW/LOCALRULESTACKS/{}/FQDNLISTS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-08-29",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/PALOALTONETWORKS.CLOUDNGFW/LOCALRULESTACKS/{}/FQDNLISTS/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/auditComment",
+      "properties/description",
+      "properties/fqdnList"
+    ]
+  },
+  {
+    "api_version": "2022-08-29",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/PALOALTONETWORKS.CLOUDNGFW/LOCALRULESTACKS/{}/FQDNLISTS/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/auditComment",
+      "properties/description",
+      "properties/fqdnList"
+    ]
+  },
+  {
+    "api_version": "2022-08-29",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/PALOALTONETWORKS.CLOUDNGFW/LOCALRULESTACKS/{}/LOCALRULES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-08-29",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/PALOALTONETWORKS.CLOUDNGFW/LOCALRULESTACKS/{}/LOCALRULES/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/actionType",
+      "properties/applications",
+      "properties/auditComment",
+      "properties/category/feeds",
+      "properties/category/urlCustom",
+      "properties/decryptionRuleType",
+      "properties/description",
+      "properties/destination/cidrs",
+      "properties/destination/countries",
+      "properties/destination/feeds",
+      "properties/destination/fqdnLists",
+      "properties/destination/prefixLists",
+      "properties/enableLogging",
+      "properties/inboundInspectionCertificate",
+      "properties/negateDestination",
+      "properties/negateSource",
+      "properties/priority",
+      "properties/protocol",
+      "properties/protocolPortList",
+      "properties/ruleName",
+      "properties/ruleState",
+      "properties/source/cidrs",
+      "properties/source/countries",
+      "properties/source/feeds",
+      "properties/source/prefixLists",
+      "properties/tags/key",
+      "properties/tags/value"
+    ]
+  },
+  {
+    "api_version": "2022-08-29",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/PALOALTONETWORKS.CLOUDNGFW/LOCALRULESTACKS/{}/LOCALRULES/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/actionType",
+      "properties/applications",
+      "properties/auditComment",
+      "properties/category/feeds",
+      "properties/category/urlCustom",
+      "properties/decryptionRuleType",
+      "properties/description",
+      "properties/destination/cidrs",
+      "properties/destination/countries",
+      "properties/destination/feeds",
+      "properties/destination/fqdnLists",
+      "properties/destination/prefixLists",
+      "properties/enableLogging",
+      "properties/inboundInspectionCertificate",
+      "properties/negateDestination",
+      "properties/negateSource",
+      "properties/priority",
+      "properties/protocol",
+      "properties/protocolPortList",
+      "properties/ruleName",
+      "properties/ruleState",
+      "properties/source/cidrs",
+      "properties/source/countries",
+      "properties/source/feeds",
+      "properties/source/prefixLists",
+      "properties/tags/key",
+      "properties/tags/value"
+    ]
+  },
+  {
+    "api_version": "2022-08-29",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/PALOALTONETWORKS.CLOUDNGFW/LOCALRULESTACKS/{}/PREFIXLISTS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-08-29",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/PALOALTONETWORKS.CLOUDNGFW/LOCALRULESTACKS/{}/PREFIXLISTS/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/auditComment",
+      "properties/description",
+      "properties/prefixList"
+    ]
+  },
+  {
+    "api_version": "2022-08-29",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/PALOALTONETWORKS.CLOUDNGFW/LOCALRULESTACKS/{}/PREFIXLISTS/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/auditComment",
+      "properties/description",
+      "properties/prefixList"
+    ]
+  },
+  {
     "api_version": "2020-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/{}/{}/{}/PROVIDERS/MICROSOFT.SECURITY/SERVERVULNERABILITYASSESSMENTS/{}",
     "operation": "DELETE"
@@ -42787,11 +43054,11 @@
     "api_path": "/{}/PROVIDERS/MICROSOFT.BLUEPRINT/BLUEPRINTASSIGNMENTS/{}",
     "operation": "GET",
     "properties": [
-      "id",
+      "identity/principalId",
+      "identity/tenantId",
       "identity/type",
       "identity/userAssignedIdentities",
       "location",
-      "name",
       "properties/blueprintId",
       "properties/description",
       "properties/displayName",
@@ -42809,11 +43076,11 @@
     "api_path": "/{}/PROVIDERS/MICROSOFT.BLUEPRINT/BLUEPRINTASSIGNMENTS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
+      "identity/principalId",
+      "identity/tenantId",
       "identity/type",
       "identity/userAssignedIdentities",
       "location",
-      "name",
       "properties/blueprintId",
       "properties/description",
       "properties/displayName",
@@ -42831,7 +43098,6 @@
     "api_path": "/{}/PROVIDERS/MICROSOFT.BLUEPRINT/BLUEPRINTS/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "properties/description",
       "properties/displayName",
       "properties/status/lastModified",
@@ -42841,12 +43107,24 @@
   },
   {
     "api_version": "2018-11-01-preview",
+    "api_path": "/{}/PROVIDERS/MICROSOFT.BLUEPRINT/BLUEPRINTS/{}/VERSIONS",
+    "operation": "GET",
+    "properties": [
+      "properties/blueprintName",
+      "properties/description",
+      "properties/displayName",
+      "properties/status/lastModified",
+      "properties/status/timeCreated",
+      "properties/targetScope",
+      "type"
+    ]
+  },
+  {
+    "api_version": "2018-11-01-preview",
     "api_path": "/{}/PROVIDERS/MICROSOFT.BLUEPRINT/BLUEPRINTS/{}/VERSIONS/{}",
     "operation": "GET",
     "properties": [
-      "id",
-      "name",
-      "properties",
+      "properties/blueprintName",
       "properties/description",
       "properties/displayName",
       "properties/status/lastModified",
