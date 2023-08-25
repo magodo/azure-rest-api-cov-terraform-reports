@@ -5381,33 +5381,35 @@
     ]
   },
   {
-    "api_version": "2021-06-22",
+    "api_version": "2022-08-08",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/HYBRIDRUNBOOKWORKERGROUPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-06-22",
+    "api_version": "2022-08-08",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/HYBRIDRUNBOOKWORKERGROUPS/{}",
     "operation": "GET",
     "properties": [
-      "credential/name",
-      "name"
+      "name",
+      "properties/credential/name"
     ]
   },
   {
-    "api_version": "2021-06-22",
+    "api_version": "2022-08-08",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/HYBRIDRUNBOOKWORKERGROUPS/{}",
     "operation": "PATCH",
     "properties": [
-      "credential/name"
+      "name",
+      "properties/credential/name"
     ]
   },
   {
-    "api_version": "2021-06-22",
+    "api_version": "2022-08-08",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/HYBRIDRUNBOOKWORKERGROUPS/{}",
     "operation": "PUT",
     "properties": [
-      "credential/name"
+      "name",
+      "properties/credential/name"
     ]
   },
   {
@@ -10746,6 +10748,7 @@
       "properties/containers/properties/resources/requests/gpu/count",
       "properties/containers/properties/resources/requests/gpu/sku",
       "properties/containers/properties/resources/requests/memoryInGB",
+      "properties/containers/properties/securityContext/privileged",
       "properties/containers/properties/volumeMounts/mountPath",
       "properties/containers/properties/volumeMounts/name",
       "properties/containers/properties/volumeMounts/readOnly",
@@ -10769,6 +10772,7 @@
       "properties/initContainers/properties/environmentVariables/secureValue",
       "properties/initContainers/properties/environmentVariables/value",
       "properties/initContainers/properties/image",
+      "properties/initContainers/properties/securityContext/privileged",
       "properties/initContainers/properties/volumeMounts/mountPath",
       "properties/initContainers/properties/volumeMounts/name",
       "properties/initContainers/properties/volumeMounts/readOnly",
@@ -10781,6 +10785,7 @@
       "properties/ipAddress/type",
       "properties/osType",
       "properties/restartPolicy",
+      "properties/sku",
       "properties/subnetIds/id",
       "properties/volumes/azureFile/readOnly",
       "properties/volumes/azureFile/shareName",
@@ -10853,6 +10858,7 @@
       "properties/containers/properties/resources/requests/gpu/count",
       "properties/containers/properties/resources/requests/gpu/sku",
       "properties/containers/properties/resources/requests/memoryInGB",
+      "properties/containers/properties/securityContext/privileged",
       "properties/containers/properties/volumeMounts/mountPath",
       "properties/containers/properties/volumeMounts/name",
       "properties/containers/properties/volumeMounts/readOnly",
@@ -10876,6 +10882,7 @@
       "properties/initContainers/properties/environmentVariables/secureValue",
       "properties/initContainers/properties/environmentVariables/value",
       "properties/initContainers/properties/image",
+      "properties/initContainers/properties/securityContext/privileged",
       "properties/initContainers/properties/volumeMounts/mountPath",
       "properties/initContainers/properties/volumeMounts/name",
       "properties/initContainers/properties/volumeMounts/readOnly",
@@ -10888,6 +10895,7 @@
       "properties/ipAddress/type",
       "properties/osType",
       "properties/restartPolicy",
+      "properties/sku",
       "properties/subnetIds/id",
       "properties/volumes/azureFile/readOnly",
       "properties/volumes/azureFile/shareName",
@@ -11644,7 +11652,6 @@
       "properties/oidcIssuerProfile/enabled",
       "properties/oidcIssuerProfile/issuerURL",
       "properties/privateFQDN",
-      "properties/publicNetworkAccess",
       "properties/securityProfile/azureKeyVaultKms/enabled",
       "properties/securityProfile/azureKeyVaultKms/keyId",
       "properties/securityProfile/azureKeyVaultKms/keyVaultNetworkAccess",
@@ -11860,7 +11867,6 @@
       "properties/oidcIssuerProfile/enabled",
       "properties/oidcIssuerProfile/issuerURL",
       "properties/privateFQDN",
-      "properties/publicNetworkAccess",
       "properties/securityProfile/azureKeyVaultKms/enabled",
       "properties/securityProfile/azureKeyVaultKms/keyId",
       "properties/securityProfile/azureKeyVaultKms/keyVaultNetworkAccess",
@@ -36713,13 +36719,13 @@
     "operation": "POST"
   },
   {
-    "api_version": "2021-09-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/MANAGEMENTPOLICIES/{}",
+    "api_version": "2022-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/MANAGEMENTPOLICIES/DEFAULT",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-09-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/MANAGEMENTPOLICIES/{}",
+    "api_version": "2022-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/MANAGEMENTPOLICIES/DEFAULT",
     "operation": "GET",
     "properties": [
       "name",
@@ -36759,8 +36765,8 @@
     ]
   },
   {
-    "api_version": "2021-09-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/MANAGEMENTPOLICIES/{}",
+    "api_version": "2022-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/MANAGEMENTPOLICIES/DEFAULT",
     "operation": "PUT",
     "properties": [
       "name",
