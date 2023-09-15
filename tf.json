@@ -117,6 +117,7 @@
     "api_path": "/CERTIFICATES/{}/PENDING",
     "operation": "GET",
     "properties": [
+      "issuer/name",
       "status"
     ]
   },
@@ -1503,12 +1504,12 @@
     ]
   },
   {
-    "api_version": "2020-01-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.SECURITY/ASSESSMENTMETADATA/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-01-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.SECURITY/ASSESSMENTMETADATA/{}",
     "operation": "GET",
     "properties": [
@@ -1524,7 +1525,7 @@
     ]
   },
   {
-    "api_version": "2020-01-01",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.SECURITY/ASSESSMENTMETADATA/{}",
     "operation": "PUT",
     "properties": [
@@ -2281,6 +2282,61 @@
       "properties/publisherName",
       "properties/restore",
       "properties/scmUrl",
+      "properties/virtualNetworkConfiguration/subnetResourceId",
+      "properties/virtualNetworkType",
+      "sku/capacity",
+      "sku/name",
+      "tags",
+      "zones"
+    ]
+  },
+  {
+    "api_version": "2021-08-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}",
+    "operation": "PATCH",
+    "properties": [
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
+      "identity/userAssignedIdentities",
+      "properties/additionalLocations/disableGateway",
+      "properties/additionalLocations/gatewayRegionalUrl",
+      "properties/additionalLocations/location",
+      "properties/additionalLocations/privateIPAddresses",
+      "properties/additionalLocations/publicIPAddresses",
+      "properties/additionalLocations/publicIpAddressId",
+      "properties/additionalLocations/sku/capacity",
+      "properties/additionalLocations/sku/name",
+      "properties/additionalLocations/virtualNetworkConfiguration/subnetResourceId",
+      "properties/additionalLocations/zones",
+      "properties/apiVersionConstraint/minApiVersion",
+      "properties/certificates/certificate/expiry",
+      "properties/certificates/certificate/subject",
+      "properties/certificates/certificate/thumbprint",
+      "properties/certificates/certificatePassword",
+      "properties/certificates/encodedCertificate",
+      "properties/certificates/storeName",
+      "properties/customProperties",
+      "properties/disableGateway",
+      "properties/enableClientCertificate",
+      "properties/hostnameConfigurations/certificate/expiry",
+      "properties/hostnameConfigurations/certificate/subject",
+      "properties/hostnameConfigurations/certificate/thumbprint",
+      "properties/hostnameConfigurations/certificatePassword",
+      "properties/hostnameConfigurations/certificateSource",
+      "properties/hostnameConfigurations/certificateStatus",
+      "properties/hostnameConfigurations/defaultSslBinding",
+      "properties/hostnameConfigurations/encodedCertificate",
+      "properties/hostnameConfigurations/hostName",
+      "properties/hostnameConfigurations/identityClientId",
+      "properties/hostnameConfigurations/keyVaultId",
+      "properties/hostnameConfigurations/negotiateClientCertificate",
+      "properties/hostnameConfigurations/type",
+      "properties/notificationSenderEmail",
+      "properties/publicIpAddressId",
+      "properties/publicNetworkAccess",
+      "properties/publisherEmail",
+      "properties/publisherName",
       "properties/virtualNetworkConfiguration/subnetResourceId",
       "properties/virtualNetworkType",
       "sku/capacity",
@@ -6835,7 +6891,9 @@
       "properties{LineChannel}/properties/lineRegistrations/channelAccessToken",
       "properties{LineChannel}/properties/lineRegistrations/channelSecret",
       "properties{MsTeamsChannel}/channelName",
+      "properties{MsTeamsChannel}/properties/acceptedTerms",
       "properties{MsTeamsChannel}/properties/callingWebhook",
+      "properties{MsTeamsChannel}/properties/deploymentEnvironment",
       "properties{MsTeamsChannel}/properties/enableCalling",
       "properties{MsTeamsChannel}/properties/isEnabled",
       "properties{SlackChannel}/channelName",
@@ -6899,7 +6957,9 @@
       "properties{LineChannel}/properties/lineRegistrations/channelAccessToken",
       "properties{LineChannel}/properties/lineRegistrations/channelSecret",
       "properties{MsTeamsChannel}/channelName",
+      "properties{MsTeamsChannel}/properties/acceptedTerms",
       "properties{MsTeamsChannel}/properties/callingWebhook",
+      "properties{MsTeamsChannel}/properties/deploymentEnvironment",
       "properties{MsTeamsChannel}/properties/enableCalling",
       "properties{MsTeamsChannel}/properties/isEnabled",
       "properties{SlackChannel}/channelName",
@@ -6963,7 +7023,9 @@
       "properties{LineChannel}/properties/lineRegistrations/channelAccessToken",
       "properties{LineChannel}/properties/lineRegistrations/channelSecret",
       "properties{MsTeamsChannel}/channelName",
+      "properties{MsTeamsChannel}/properties/acceptedTerms",
       "properties{MsTeamsChannel}/properties/callingWebhook",
+      "properties{MsTeamsChannel}/properties/deploymentEnvironment",
       "properties{MsTeamsChannel}/properties/enableCalling",
       "properties{MsTeamsChannel}/properties/isEnabled",
       "properties{SlackChannel}/channelName",
@@ -8994,17 +9056,26 @@
     ]
   },
   {
-    "api_version": "2022-03-02",
+    "api_version": "2022-07-02",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/DISKS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-04-02",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/DISKS/{}",
     "operation": "DELETE"
   },
   {
     "api_version": "2022-07-02",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/DISKS/{}",
-    "operation": "DELETE"
+    "operation": "GET",
+    "properties": [
+      "properties/diskSizeGB",
+      "sku/name"
+    ]
   },
   {
-    "api_version": "2022-03-02",
+    "api_version": "2023-04-02",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/DISKS/{}",
     "operation": "GET",
     "properties": [
@@ -9017,6 +9088,7 @@
       "properties/creationData/galleryImageReference/id",
       "properties/creationData/imageReference/id",
       "properties/creationData/logicalSectorSize",
+      "properties/creationData/performancePlus",
       "properties/creationData/sourceResourceId",
       "properties/creationData/sourceUri",
       "properties/creationData/storageAccountId",
@@ -9038,6 +9110,7 @@
       "properties/hyperVGeneration",
       "properties/maxShares",
       "properties/networkAccessPolicy",
+      "properties/optimizedForFrequentAttach",
       "properties/osType",
       "properties/publicNetworkAccess",
       "properties/securityProfile/secureVMDiskEncryptionSetId",
@@ -9049,16 +9122,7 @@
     ]
   },
   {
-    "api_version": "2022-07-02",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/DISKS/{}",
-    "operation": "GET",
-    "properties": [
-      "properties/diskSizeGB",
-      "sku/name"
-    ]
-  },
-  {
-    "api_version": "2022-03-02",
+    "api_version": "2023-04-02",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/DISKS/{}",
     "operation": "PATCH",
     "properties": [
@@ -9078,6 +9142,7 @@
       "properties/encryptionSettingsCollection/encryptionSettings/keyEncryptionKey/sourceVault/id",
       "properties/maxShares",
       "properties/networkAccessPolicy",
+      "properties/optimizedForFrequentAttach",
       "properties/osType",
       "properties/publicNetworkAccess",
       "properties/tier",
@@ -9086,7 +9151,7 @@
     ]
   },
   {
-    "api_version": "2022-03-02",
+    "api_version": "2023-04-02",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/DISKS/{}",
     "operation": "PUT",
     "properties": [
@@ -9099,6 +9164,7 @@
       "properties/creationData/galleryImageReference/id",
       "properties/creationData/imageReference/id",
       "properties/creationData/logicalSectorSize",
+      "properties/creationData/performancePlus",
       "properties/creationData/sourceResourceId",
       "properties/creationData/sourceUri",
       "properties/creationData/storageAccountId",
@@ -9120,6 +9186,7 @@
       "properties/hyperVGeneration",
       "properties/maxShares",
       "properties/networkAccessPolicy",
+      "properties/optimizedForFrequentAttach",
       "properties/osType",
       "properties/publicNetworkAccess",
       "properties/securityProfile/secureVMDiskEncryptionSetId",
@@ -9131,7 +9198,7 @@
     ]
   },
   {
-    "api_version": "2022-03-02",
+    "api_version": "2023-04-02",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/DISKS/{}/BEGINGETACCESS",
     "operation": "POST",
     "properties": [
@@ -9140,7 +9207,7 @@
     ]
   },
   {
-    "api_version": "2022-03-02",
+    "api_version": "2023-04-02",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/DISKS/{}/ENDGETACCESS",
     "operation": "POST"
   },
@@ -16669,6 +16736,7 @@
       "properties/cloudToDevice/feedback/maxDeliveryCount",
       "properties/cloudToDevice/feedback/ttlAsIso8601",
       "properties/cloudToDevice/maxDeliveryCount",
+      "properties/disableLocalAuth",
       "properties/enableFileUploadNotifications",
       "properties/eventHubEndpoints",
       "properties/hostName",
@@ -16680,6 +16748,18 @@
       "properties/networkRuleSets/ipRules/filterName",
       "properties/networkRuleSets/ipRules/ipMask",
       "properties/publicNetworkAccess",
+      "properties/routing/endpoints/cosmosDBSqlCollections/authenticationType",
+      "properties/routing/endpoints/cosmosDBSqlCollections/collectionName",
+      "properties/routing/endpoints/cosmosDBSqlCollections/databaseName",
+      "properties/routing/endpoints/cosmosDBSqlCollections/endpointUri",
+      "properties/routing/endpoints/cosmosDBSqlCollections/identity/userAssignedIdentity",
+      "properties/routing/endpoints/cosmosDBSqlCollections/name",
+      "properties/routing/endpoints/cosmosDBSqlCollections/partitionKeyName",
+      "properties/routing/endpoints/cosmosDBSqlCollections/partitionKeyTemplate",
+      "properties/routing/endpoints/cosmosDBSqlCollections/primaryKey",
+      "properties/routing/endpoints/cosmosDBSqlCollections/resourceGroup",
+      "properties/routing/endpoints/cosmosDBSqlCollections/secondaryKey",
+      "properties/routing/endpoints/cosmosDBSqlCollections/subscriptionId",
       "properties/routing/endpoints/eventHubs",
       "properties/routing/endpoints/eventHubs/authenticationType",
       "properties/routing/endpoints/eventHubs/connectionString",
@@ -16758,6 +16838,7 @@
       "properties/cloudToDevice/feedback/maxDeliveryCount",
       "properties/cloudToDevice/feedback/ttlAsIso8601",
       "properties/cloudToDevice/maxDeliveryCount",
+      "properties/disableLocalAuth",
       "properties/enableFileUploadNotifications",
       "properties/eventHubEndpoints",
       "properties/hostName",
@@ -16769,6 +16850,18 @@
       "properties/networkRuleSets/ipRules/filterName",
       "properties/networkRuleSets/ipRules/ipMask",
       "properties/publicNetworkAccess",
+      "properties/routing/endpoints/cosmosDBSqlCollections/authenticationType",
+      "properties/routing/endpoints/cosmosDBSqlCollections/collectionName",
+      "properties/routing/endpoints/cosmosDBSqlCollections/databaseName",
+      "properties/routing/endpoints/cosmosDBSqlCollections/endpointUri",
+      "properties/routing/endpoints/cosmosDBSqlCollections/identity/userAssignedIdentity",
+      "properties/routing/endpoints/cosmosDBSqlCollections/name",
+      "properties/routing/endpoints/cosmosDBSqlCollections/partitionKeyName",
+      "properties/routing/endpoints/cosmosDBSqlCollections/partitionKeyTemplate",
+      "properties/routing/endpoints/cosmosDBSqlCollections/primaryKey",
+      "properties/routing/endpoints/cosmosDBSqlCollections/resourceGroup",
+      "properties/routing/endpoints/cosmosDBSqlCollections/secondaryKey",
+      "properties/routing/endpoints/cosmosDBSqlCollections/subscriptionId",
       "properties/routing/endpoints/eventHubs",
       "properties/routing/endpoints/eventHubs/authenticationType",
       "properties/routing/endpoints/eventHubs/connectionString",
@@ -23264,6 +23357,7 @@
     "operation": "GET",
     "properties": [
       "location",
+      "properties/disableLocalAuth",
       "properties/uniqueId",
       "sku/name",
       "tags"
@@ -23275,6 +23369,7 @@
     "operation": "PUT",
     "properties": [
       "location",
+      "properties/disableLocalAuth",
       "properties/uniqueId",
       "sku/name",
       "tags"
@@ -25541,6 +25636,7 @@
       "properties/sslProfiles/id",
       "properties/sslProfiles/name",
       "properties/sslProfiles/properties/clientAuthConfiguration/verifyClientCertIssuerDN",
+      "properties/sslProfiles/properties/clientAuthConfiguration/verifyClientRevocation",
       "properties/sslProfiles/properties/sslPolicy/cipherSuites",
       "properties/sslProfiles/properties/sslPolicy/disabledSslProtocols",
       "properties/sslProfiles/properties/sslPolicy/minProtocolVersion",
@@ -25721,6 +25817,7 @@
       "properties/sslProfiles/id",
       "properties/sslProfiles/name",
       "properties/sslProfiles/properties/clientAuthConfiguration/verifyClientCertIssuerDN",
+      "properties/sslProfiles/properties/clientAuthConfiguration/verifyClientRevocation",
       "properties/sslProfiles/properties/sslPolicy/cipherSuites",
       "properties/sslProfiles/properties/sslPolicy/disabledSslProtocols",
       "properties/sslProfiles/properties/sslPolicy/minProtocolVersion",
@@ -25795,6 +25892,7 @@
       "properties/customRules/name",
       "properties/customRules/priority",
       "properties/customRules/ruleType",
+      "properties/customRules/state",
       "properties/httpListeners/id",
       "properties/managedRules/exclusions/exclusionManagedRuleSets/ruleGroups/ruleGroupName",
       "properties/managedRules/exclusions/exclusionManagedRuleSets/ruleGroups/rules/ruleId",
@@ -25839,6 +25937,7 @@
       "properties/customRules/name",
       "properties/customRules/priority",
       "properties/customRules/ruleType",
+      "properties/customRules/state",
       "properties/httpListeners/id",
       "properties/managedRules/exclusions/exclusionManagedRuleSets/ruleGroups/ruleGroupName",
       "properties/managedRules/exclusions/exclusionManagedRuleSets/ruleGroups/rules/ruleId",
@@ -29655,6 +29754,31 @@
       "properties/rules/matchCriteria/routePrefix",
       "properties/rules/name",
       "properties/rules/nextStepIfMatched"
+    ]
+  },
+  {
+    "api_version": "2023-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/ROUTINGINTENT/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/ROUTINGINTENT/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/routingPolicies/destinations",
+      "properties/routingPolicies/name",
+      "properties/routingPolicies/nextHop"
+    ]
+  },
+  {
+    "api_version": "2023-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/ROUTINGINTENT/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/routingPolicies/destinations",
+      "properties/routingPolicies/name",
+      "properties/routingPolicies/nextHop"
     ]
   },
   {
