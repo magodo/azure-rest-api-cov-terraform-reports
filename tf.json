@@ -1216,11 +1216,13 @@
       "factoryResourceId",
       "repoConfiguration{FactoryGitHubConfiguration}/accountName",
       "repoConfiguration{FactoryGitHubConfiguration}/collaborationBranch",
+      "repoConfiguration{FactoryGitHubConfiguration}/disablePublish",
       "repoConfiguration{FactoryGitHubConfiguration}/hostName",
       "repoConfiguration{FactoryGitHubConfiguration}/repositoryName",
       "repoConfiguration{FactoryGitHubConfiguration}/rootFolder",
       "repoConfiguration{FactoryVSTSConfiguration}/accountName",
       "repoConfiguration{FactoryVSTSConfiguration}/collaborationBranch",
+      "repoConfiguration{FactoryVSTSConfiguration}/disablePublish",
       "repoConfiguration{FactoryVSTSConfiguration}/projectName",
       "repoConfiguration{FactoryVSTSConfiguration}/repositoryName",
       "repoConfiguration{FactoryVSTSConfiguration}/rootFolder",
@@ -1405,6 +1407,15 @@
       "properties/connectionState",
       "properties/description",
       "properties/networkManagerId"
+    ]
+  },
+  {
+    "api_version": "2020-08-01",
+    "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES",
+    "operation": "GET",
+    "properties": [
+      "value/name",
+      "value/properties/customerId"
     ]
   },
   {
@@ -3966,6 +3977,21 @@
       "properties/template/revisionSuffix",
       "properties/template/scale/maxReplicas",
       "properties/template/scale/minReplicas",
+      "properties/template/scale/rules/azureQueue/auth/secretRef",
+      "properties/template/scale/rules/azureQueue/auth/triggerParameter",
+      "properties/template/scale/rules/azureQueue/queueLength",
+      "properties/template/scale/rules/azureQueue/queueName",
+      "properties/template/scale/rules/custom/auth/secretRef",
+      "properties/template/scale/rules/custom/auth/triggerParameter",
+      "properties/template/scale/rules/custom/metadata",
+      "properties/template/scale/rules/custom/type",
+      "properties/template/scale/rules/http/auth/secretRef",
+      "properties/template/scale/rules/http/auth/triggerParameter",
+      "properties/template/scale/rules/http/metadata",
+      "properties/template/scale/rules/name",
+      "properties/template/scale/rules/tcp/auth/secretRef",
+      "properties/template/scale/rules/tcp/auth/triggerParameter",
+      "properties/template/scale/rules/tcp/metadata",
       "properties/template/volumes/name",
       "properties/template/volumes/storageName",
       "properties/template/volumes/storageType",
@@ -4041,6 +4067,21 @@
       "properties/template/revisionSuffix",
       "properties/template/scale/maxReplicas",
       "properties/template/scale/minReplicas",
+      "properties/template/scale/rules/azureQueue/auth/secretRef",
+      "properties/template/scale/rules/azureQueue/auth/triggerParameter",
+      "properties/template/scale/rules/azureQueue/queueLength",
+      "properties/template/scale/rules/azureQueue/queueName",
+      "properties/template/scale/rules/custom/auth/secretRef",
+      "properties/template/scale/rules/custom/auth/triggerParameter",
+      "properties/template/scale/rules/custom/metadata",
+      "properties/template/scale/rules/custom/type",
+      "properties/template/scale/rules/http/auth/secretRef",
+      "properties/template/scale/rules/http/auth/triggerParameter",
+      "properties/template/scale/rules/http/metadata",
+      "properties/template/scale/rules/name",
+      "properties/template/scale/rules/tcp/auth/secretRef",
+      "properties/template/scale/rules/tcp/auth/triggerParameter",
+      "properties/template/scale/rules/tcp/metadata",
       "properties/template/volumes/name",
       "properties/template/volumes/storageName",
       "properties/template/volumes/storageType",
@@ -4076,6 +4117,7 @@
       "properties/vnetConfiguration/internal",
       "properties/vnetConfiguration/platformReservedCidr",
       "properties/vnetConfiguration/platformReservedDnsIP",
+      "properties/zoneRedundant",
       "tags"
     ]
   },
@@ -4098,6 +4140,7 @@
       "properties/vnetConfiguration/internal",
       "properties/vnetConfiguration/platformReservedCidr",
       "properties/vnetConfiguration/platformReservedDnsIP",
+      "properties/zoneRedundant",
       "tags"
     ]
   },
@@ -4284,6 +4327,35 @@
       "properties/softDeleteRetentionInDays",
       "sku/name",
       "tags"
+    ]
+  },
+  {
+    "api_version": "2023-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPCONFIGURATION/CONFIGURATIONSTORES/{}/REPLICAS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPCONFIGURATION/CONFIGURATIONSTORES/{}/REPLICAS/{}",
+    "operation": "GET",
+    "properties": [
+      "id",
+      "location",
+      "name",
+      "properties/endpoint",
+      "type"
+    ]
+  },
+  {
+    "api_version": "2023-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPCONFIGURATION/CONFIGURATIONSTORES/{}/REPLICAS/{}",
+    "operation": "PUT",
+    "properties": [
+      "id",
+      "location",
+      "name",
+      "properties/endpoint",
+      "type"
     ]
   },
   {
@@ -6861,7 +6933,10 @@
       "properties{AlexaChannel}/properties/alexaSkillId",
       "properties{AlexaChannel}/properties/isEnabled",
       "properties{DirectLineChannel}/channelName",
+      "properties{DirectLineChannel}/properties/sites/isBlockUserUploadEnabled",
       "properties{DirectLineChannel}/properties/sites/isEnabled",
+      "properties{DirectLineChannel}/properties/sites/isEndpointParametersEnabled",
+      "properties{DirectLineChannel}/properties/sites/isNoStorageEnabled",
       "properties{DirectLineChannel}/properties/sites/isSecureSiteEnabled",
       "properties{DirectLineChannel}/properties/sites/isV1Enabled",
       "properties{DirectLineChannel}/properties/sites/isV3Enabled",
@@ -6912,7 +6987,10 @@
       "properties{SmsChannel}/properties/isValidated",
       "properties{SmsChannel}/properties/phone",
       "properties{WebChatChannel}/channelName",
+      "properties{WebChatChannel}/properties/sites/isBlockUserUploadEnabled",
       "properties{WebChatChannel}/properties/sites/isEnabled",
+      "properties{WebChatChannel}/properties/sites/isEndpointParametersEnabled",
+      "properties{WebChatChannel}/properties/sites/isNoStorageEnabled",
       "properties{WebChatChannel}/properties/sites/siteName"
     ]
   },
@@ -6927,7 +7005,10 @@
       "properties{AlexaChannel}/properties/alexaSkillId",
       "properties{AlexaChannel}/properties/isEnabled",
       "properties{DirectLineChannel}/channelName",
+      "properties{DirectLineChannel}/properties/sites/isBlockUserUploadEnabled",
       "properties{DirectLineChannel}/properties/sites/isEnabled",
+      "properties{DirectLineChannel}/properties/sites/isEndpointParametersEnabled",
+      "properties{DirectLineChannel}/properties/sites/isNoStorageEnabled",
       "properties{DirectLineChannel}/properties/sites/isSecureSiteEnabled",
       "properties{DirectLineChannel}/properties/sites/isV1Enabled",
       "properties{DirectLineChannel}/properties/sites/isV3Enabled",
@@ -6978,7 +7059,10 @@
       "properties{SmsChannel}/properties/isValidated",
       "properties{SmsChannel}/properties/phone",
       "properties{WebChatChannel}/channelName",
+      "properties{WebChatChannel}/properties/sites/isBlockUserUploadEnabled",
       "properties{WebChatChannel}/properties/sites/isEnabled",
+      "properties{WebChatChannel}/properties/sites/isEndpointParametersEnabled",
+      "properties{WebChatChannel}/properties/sites/isNoStorageEnabled",
       "properties{WebChatChannel}/properties/sites/siteName"
     ]
   },
@@ -6993,7 +7077,10 @@
       "properties{AlexaChannel}/properties/alexaSkillId",
       "properties{AlexaChannel}/properties/isEnabled",
       "properties{DirectLineChannel}/channelName",
+      "properties{DirectLineChannel}/properties/sites/isBlockUserUploadEnabled",
       "properties{DirectLineChannel}/properties/sites/isEnabled",
+      "properties{DirectLineChannel}/properties/sites/isEndpointParametersEnabled",
+      "properties{DirectLineChannel}/properties/sites/isNoStorageEnabled",
       "properties{DirectLineChannel}/properties/sites/isSecureSiteEnabled",
       "properties{DirectLineChannel}/properties/sites/isV1Enabled",
       "properties{DirectLineChannel}/properties/sites/isV3Enabled",
@@ -7044,7 +7131,10 @@
       "properties{SmsChannel}/properties/isValidated",
       "properties{SmsChannel}/properties/phone",
       "properties{WebChatChannel}/channelName",
+      "properties{WebChatChannel}/properties/sites/isBlockUserUploadEnabled",
       "properties{WebChatChannel}/properties/sites/isEnabled",
+      "properties{WebChatChannel}/properties/sites/isEndpointParametersEnabled",
+      "properties{WebChatChannel}/properties/sites/isNoStorageEnabled",
       "properties{WebChatChannel}/properties/sites/siteName"
     ]
   },
@@ -9437,9 +9527,11 @@
       "properties/publishingProfile/publishedDate",
       "properties/publishingProfile/replicationMode",
       "properties/publishingProfile/targetRegions/encryption/osDiskImage/diskEncryptionSetId",
+      "properties/publishingProfile/targetRegions/excludeFromLatest",
       "properties/publishingProfile/targetRegions/name",
       "properties/publishingProfile/targetRegions/regionalReplicaCount",
       "properties/publishingProfile/targetRegions/storageAccountType",
+      "properties/safetyProfile/allowDeletionOfReplicatedLocations",
       "properties/storageProfile/osDiskImage/sizeInGB",
       "properties/storageProfile/osDiskImage/source/id",
       "properties/storageProfile/osDiskImage/source/uri",
@@ -9460,9 +9552,11 @@
       "properties/publishingProfile/publishedDate",
       "properties/publishingProfile/replicationMode",
       "properties/publishingProfile/targetRegions/encryption/osDiskImage/diskEncryptionSetId",
+      "properties/publishingProfile/targetRegions/excludeFromLatest",
       "properties/publishingProfile/targetRegions/name",
       "properties/publishingProfile/targetRegions/regionalReplicaCount",
       "properties/publishingProfile/targetRegions/storageAccountType",
+      "properties/safetyProfile/allowDeletionOfReplicatedLocations",
       "properties/storageProfile/osDiskImage/sizeInGB",
       "properties/storageProfile/osDiskImage/source/id",
       "properties/storageProfile/osDiskImage/source/uri",
@@ -10877,6 +10971,7 @@
       "properties/dnsConfig/nameServers",
       "properties/dnsConfig/options",
       "properties/dnsConfig/searchDomains",
+      "properties/encryptionProperties/identity",
       "properties/encryptionProperties/keyName",
       "properties/encryptionProperties/keyVersion",
       "properties/encryptionProperties/vaultBaseUrl",
@@ -10987,6 +11082,7 @@
       "properties/dnsConfig/nameServers",
       "properties/dnsConfig/options",
       "properties/dnsConfig/searchDomains",
+      "properties/encryptionProperties/identity",
       "properties/encryptionProperties/keyName",
       "properties/encryptionProperties/keyVersion",
       "properties/encryptionProperties/vaultBaseUrl",
@@ -12886,11 +12982,13 @@
       "properties/purviewConfiguration/purviewResourceId",
       "properties/repoConfiguration{FactoryGitHubConfiguration}/accountName",
       "properties/repoConfiguration{FactoryGitHubConfiguration}/collaborationBranch",
+      "properties/repoConfiguration{FactoryGitHubConfiguration}/disablePublish",
       "properties/repoConfiguration{FactoryGitHubConfiguration}/hostName",
       "properties/repoConfiguration{FactoryGitHubConfiguration}/repositoryName",
       "properties/repoConfiguration{FactoryGitHubConfiguration}/rootFolder",
       "properties/repoConfiguration{FactoryVSTSConfiguration}/accountName",
       "properties/repoConfiguration{FactoryVSTSConfiguration}/collaborationBranch",
+      "properties/repoConfiguration{FactoryVSTSConfiguration}/disablePublish",
       "properties/repoConfiguration{FactoryVSTSConfiguration}/projectName",
       "properties/repoConfiguration{FactoryVSTSConfiguration}/repositoryName",
       "properties/repoConfiguration{FactoryVSTSConfiguration}/rootFolder",
@@ -12917,11 +13015,13 @@
       "properties/purviewConfiguration/purviewResourceId",
       "properties/repoConfiguration{FactoryGitHubConfiguration}/accountName",
       "properties/repoConfiguration{FactoryGitHubConfiguration}/collaborationBranch",
+      "properties/repoConfiguration{FactoryGitHubConfiguration}/disablePublish",
       "properties/repoConfiguration{FactoryGitHubConfiguration}/hostName",
       "properties/repoConfiguration{FactoryGitHubConfiguration}/repositoryName",
       "properties/repoConfiguration{FactoryGitHubConfiguration}/rootFolder",
       "properties/repoConfiguration{FactoryVSTSConfiguration}/accountName",
       "properties/repoConfiguration{FactoryVSTSConfiguration}/collaborationBranch",
+      "properties/repoConfiguration{FactoryVSTSConfiguration}/disablePublish",
       "properties/repoConfiguration{FactoryVSTSConfiguration}/projectName",
       "properties/repoConfiguration{FactoryVSTSConfiguration}/repositoryName",
       "properties/repoConfiguration{FactoryVSTSConfiguration}/rootFolder",
@@ -13173,6 +13273,16 @@
       "properties{AzureBlob}/structure",
       "properties{AzureBlob}/typeProperties/fileName",
       "properties{AzureBlob}/typeProperties/folderPath",
+      "properties{AzureSqlTable}",
+      "properties{AzureSqlTable}/annotations",
+      "properties{AzureSqlTable}/description",
+      "properties{AzureSqlTable}/folder/name",
+      "properties{AzureSqlTable}/linkedServiceName/referenceName",
+      "properties{AzureSqlTable}/linkedServiceName/type",
+      "properties{AzureSqlTable}/parameters",
+      "properties{AzureSqlTable}/structure",
+      "properties{AzureSqlTable}/typeProperties/schema",
+      "properties{AzureSqlTable}/typeProperties/table",
       "properties{Binary}",
       "properties{Binary}/annotations",
       "properties{Binary}/description",
@@ -13332,6 +13442,16 @@
       "properties{AzureBlob}/structure",
       "properties{AzureBlob}/typeProperties/fileName",
       "properties{AzureBlob}/typeProperties/folderPath",
+      "properties{AzureSqlTable}",
+      "properties{AzureSqlTable}/annotations",
+      "properties{AzureSqlTable}/description",
+      "properties{AzureSqlTable}/folder/name",
+      "properties{AzureSqlTable}/linkedServiceName/referenceName",
+      "properties{AzureSqlTable}/linkedServiceName/type",
+      "properties{AzureSqlTable}/parameters",
+      "properties{AzureSqlTable}/structure",
+      "properties{AzureSqlTable}/typeProperties/schema",
+      "properties{AzureSqlTable}/typeProperties/table",
       "properties{Binary}",
       "properties{Binary}/annotations",
       "properties{Binary}/description",
@@ -15178,12 +15298,12 @@
     ]
   },
   {
-    "api_version": "2021-05-01",
+    "api_version": "2022-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORMYSQL/FLEXIBLESERVERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-05-01",
+    "api_version": "2022-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORMYSQL/FLEXIBLESERVERS/{}",
     "operation": "GET",
     "properties": [
@@ -15225,7 +15345,7 @@
     ]
   },
   {
-    "api_version": "2021-05-01",
+    "api_version": "2022-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORMYSQL/FLEXIBLESERVERS/{}",
     "operation": "PATCH",
     "properties": [
@@ -15255,7 +15375,7 @@
     ]
   },
   {
-    "api_version": "2021-05-01",
+    "api_version": "2022-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORMYSQL/FLEXIBLESERVERS/{}",
     "operation": "PUT",
     "properties": [
@@ -15326,7 +15446,7 @@
     ]
   },
   {
-    "api_version": "2021-05-01",
+    "api_version": "2022-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORMYSQL/FLEXIBLESERVERS/{}/CONFIGURATIONS/{}",
     "operation": "GET",
     "properties": [
@@ -15335,7 +15455,7 @@
     ]
   },
   {
-    "api_version": "2021-05-01",
+    "api_version": "2022-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORMYSQL/FLEXIBLESERVERS/{}/CONFIGURATIONS/{}",
     "operation": "PATCH",
     "properties": [
@@ -15344,12 +15464,12 @@
     ]
   },
   {
-    "api_version": "2021-05-01",
+    "api_version": "2022-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORMYSQL/FLEXIBLESERVERS/{}/DATABASES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-05-01",
+    "api_version": "2022-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORMYSQL/FLEXIBLESERVERS/{}/DATABASES/{}",
     "operation": "GET",
     "properties": [
@@ -15358,7 +15478,7 @@
     ]
   },
   {
-    "api_version": "2021-05-01",
+    "api_version": "2022-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORMYSQL/FLEXIBLESERVERS/{}/DATABASES/{}",
     "operation": "PUT",
     "properties": [
@@ -15367,17 +15487,17 @@
     ]
   },
   {
-    "api_version": "2021-05-01",
+    "api_version": "2022-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORMYSQL/FLEXIBLESERVERS/{}/FAILOVER",
     "operation": "POST"
   },
   {
-    "api_version": "2021-05-01",
+    "api_version": "2022-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORMYSQL/FLEXIBLESERVERS/{}/FIREWALLRULES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-05-01",
+    "api_version": "2022-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORMYSQL/FLEXIBLESERVERS/{}/FIREWALLRULES/{}",
     "operation": "GET",
     "properties": [
@@ -15386,7 +15506,7 @@
     ]
   },
   {
-    "api_version": "2021-05-01",
+    "api_version": "2022-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORMYSQL/FLEXIBLESERVERS/{}/FIREWALLRULES/{}",
     "operation": "PUT",
     "properties": [
@@ -25883,6 +26003,7 @@
     "properties": [
       "location",
       "properties/customRules/action",
+      "properties/customRules/groupByUserSession/groupByVariables/variableName",
       "properties/customRules/matchConditions/matchValues",
       "properties/customRules/matchConditions/matchVariables/selector",
       "properties/customRules/matchConditions/matchVariables/variableName",
@@ -25891,6 +26012,8 @@
       "properties/customRules/matchConditions/transforms",
       "properties/customRules/name",
       "properties/customRules/priority",
+      "properties/customRules/rateLimitDuration",
+      "properties/customRules/rateLimitThreshold",
       "properties/customRules/ruleType",
       "properties/customRules/state",
       "properties/httpListeners/id",
@@ -25917,6 +26040,7 @@
       "properties/policySettings/maxRequestBodySizeInKb",
       "properties/policySettings/mode",
       "properties/policySettings/requestBodyCheck",
+      "properties/policySettings/requestBodyInspectLimitInKB",
       "properties/policySettings/state",
       "tags"
     ]
@@ -25928,6 +26052,7 @@
     "properties": [
       "location",
       "properties/customRules/action",
+      "properties/customRules/groupByUserSession/groupByVariables/variableName",
       "properties/customRules/matchConditions/matchValues",
       "properties/customRules/matchConditions/matchVariables/selector",
       "properties/customRules/matchConditions/matchVariables/variableName",
@@ -25936,6 +26061,8 @@
       "properties/customRules/matchConditions/transforms",
       "properties/customRules/name",
       "properties/customRules/priority",
+      "properties/customRules/rateLimitDuration",
+      "properties/customRules/rateLimitThreshold",
       "properties/customRules/ruleType",
       "properties/customRules/state",
       "properties/httpListeners/id",
@@ -25962,6 +26089,7 @@
       "properties/policySettings/maxRequestBodySizeInKb",
       "properties/policySettings/mode",
       "properties/policySettings/requestBodyCheck",
+      "properties/policySettings/requestBodyInspectLimitInKB",
       "properties/policySettings/state",
       "tags"
     ]
@@ -28087,6 +28215,8 @@
       "id",
       "location",
       "name",
+      "properties/auxiliaryMode",
+      "properties/auxiliarySku",
       "properties/dnsSettings/appliedDnsServers",
       "properties/dnsSettings/dnsServers",
       "properties/dnsSettings/internalDnsNameLabel",
@@ -28140,6 +28270,8 @@
       "id",
       "location",
       "name",
+      "properties/auxiliaryMode",
+      "properties/auxiliarySku",
       "properties/dnsSettings/appliedDnsServers",
       "properties/dnsSettings/dnsServers",
       "properties/dnsSettings/internalDnsNameLabel",
@@ -30674,6 +30806,7 @@
     "operation": "GET",
     "properties": [
       "location",
+      "name",
       "properties/customerId",
       "properties/retentionInDays",
       "properties/sku/name",
@@ -31950,6 +32083,14 @@
       "plan/promotionCode",
       "plan/publisher",
       "properties/workspaceResourceId",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2015-11-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONSMANAGEMENT/SOLUTIONS/{}",
+    "operation": "PATCH",
+    "properties": [
       "tags"
     ]
   },
@@ -33260,6 +33401,41 @@
     "api_version": "2021-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RELAY/NAMESPACES/{}/HYBRIDCONNECTIONS/{}/AUTHORIZATIONRULES/{}/LISTKEYS",
     "operation": "POST"
+  },
+  {
+    "api_version": "2022-10-27",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RESOURCECONNECTOR/APPLIANCES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-10-27",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RESOURCECONNECTOR/APPLIANCES/{}",
+    "operation": "GET",
+    "properties": [
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
+      "location",
+      "properties/distro",
+      "properties/infrastructureConfig/provider",
+      "properties/publicKey",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2022-10-27",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RESOURCECONNECTOR/APPLIANCES/{}",
+    "operation": "PUT",
+    "properties": [
+      "identity/principalId",
+      "identity/tenantId",
+      "identity/type",
+      "location",
+      "properties/distro",
+      "properties/infrastructureConfig/provider",
+      "properties/publicKey",
+      "tags"
+    ]
   },
   {
     "api_version": "2020-06-01",
@@ -36545,6 +36721,7 @@
       "properties/customDomain/name",
       "properties/customDomain/useSubDomainName",
       "properties/defaultToOAuthAuthentication",
+      "properties/encryption/identity/federatedIdentityClientId",
       "properties/encryption/identity/userAssignedIdentity",
       "properties/encryption/keySource",
       "properties/encryption/keyvaultproperties/keyname",
@@ -36629,6 +36806,7 @@
       "properties/customDomain/name",
       "properties/customDomain/useSubDomainName",
       "properties/defaultToOAuthAuthentication",
+      "properties/encryption/identity/federatedIdentityClientId",
       "properties/encryption/identity/userAssignedIdentity",
       "properties/encryption/keySource",
       "properties/encryption/keyvaultproperties/keyname",
@@ -38712,6 +38890,7 @@
       "properties/restorePointInTime",
       "properties/sourceDatabaseId",
       "properties/status",
+      "properties/storageAccountType",
       "sku/name",
       "tags"
     ]
@@ -38737,6 +38916,7 @@
       "properties/restorePointInTime",
       "properties/sourceDatabaseId",
       "properties/status",
+      "properties/storageAccountType",
       "sku/name",
       "tags"
     ]
@@ -42601,6 +42781,47 @@
       "properties/userInfo/firstName",
       "properties/userInfo/lastName",
       "properties/userInfo/phoneNumber"
+    ]
+  },
+  {
+    "api_version": "2022-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/NEWRELIC.OBSERVABILITY/MONITORS/{}/TAGRULES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/NEWRELIC.OBSERVABILITY/MONITORS/{}/TAGRULES/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/logRules/filteringTags/action",
+      "properties/logRules/filteringTags/name",
+      "properties/logRules/filteringTags/value",
+      "properties/logRules/sendAadLogs",
+      "properties/logRules/sendActivityLogs",
+      "properties/logRules/sendSubscriptionLogs",
+      "properties/metricRules/filteringTags/action",
+      "properties/metricRules/filteringTags/name",
+      "properties/metricRules/filteringTags/value",
+      "properties/metricRules/sendMetrics",
+      "properties/metricRules/userEmail"
+    ]
+  },
+  {
+    "api_version": "2022-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/NEWRELIC.OBSERVABILITY/MONITORS/{}/TAGRULES/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/logRules/filteringTags/action",
+      "properties/logRules/filteringTags/name",
+      "properties/logRules/filteringTags/value",
+      "properties/logRules/sendAadLogs",
+      "properties/logRules/sendActivityLogs",
+      "properties/logRules/sendSubscriptionLogs",
+      "properties/metricRules/filteringTags/action",
+      "properties/metricRules/filteringTags/name",
+      "properties/metricRules/filteringTags/value",
+      "properties/metricRules/sendMetrics",
+      "properties/metricRules/userEmail"
     ]
   },
   {
