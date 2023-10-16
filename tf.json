@@ -4516,6 +4516,31 @@
     ]
   },
   {
+    "api_version": "2023-07-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APMS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-07-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APMS/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/properties",
+      "properties/secrets",
+      "properties/type"
+    ]
+  },
+  {
+    "api_version": "2023-07-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APMS/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/properties",
+      "properties/secrets",
+      "properties/type"
+    ]
+  },
+  {
     "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPLICATIONACCELERATORS/{}",
     "operation": "DELETE"
@@ -5044,6 +5069,22 @@
     ]
   },
   {
+    "api_version": "2023-07-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/DISABLEAPMGLOBALLY",
+    "operation": "POST",
+    "properties": [
+      "resourceId"
+    ]
+  },
+  {
+    "api_version": "2023-07-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/ENABLEAPMGLOBALLY",
+    "operation": "POST",
+    "properties": [
+      "resourceId"
+    ]
+  },
+  {
     "api_version": "2023-05-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/GATEWAYS/{}",
     "operation": "DELETE"
@@ -5189,6 +5230,11 @@
       "properties/routes/uri",
       "properties/ssoEnabled"
     ]
+  },
+  {
+    "api_version": "2023-07-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/LISTGLOBALLYENABLEDAPMS",
+    "operation": "POST"
   },
   {
     "api_version": "2023-05-01-preview",
@@ -5264,6 +5310,27 @@
       "properties/attestUri",
       "properties/trustModel",
       "tags"
+    ]
+  },
+  {
+    "api_version": "2020-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/RESOURCEMANAGEMENTPRIVATELINKS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2020-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/RESOURCEMANAGEMENTPRIVATELINKS/{}",
+    "operation": "GET",
+    "properties": [
+      "location"
+    ]
+  },
+  {
+    "api_version": "2020-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/RESOURCEMANAGEMENTPRIVATELINKS/{}",
+    "operation": "PUT",
+    "properties": [
+      "location"
     ]
   },
   {
@@ -15336,6 +15403,7 @@
       "properties/restorePointInTime",
       "properties/sourceServerResourceId",
       "properties/storage/autoGrow",
+      "properties/storage/autoIoScaling",
       "properties/storage/iops",
       "properties/storage/storageSizeGB",
       "properties/version",
@@ -15367,6 +15435,7 @@
       "properties/maintenanceWindow/startMinute",
       "properties/replicationRole",
       "properties/storage/autoGrow",
+      "properties/storage/autoIoScaling",
       "properties/storage/iops",
       "properties/storage/storageSizeGB",
       "sku/name",
@@ -15408,6 +15477,7 @@
       "properties/restorePointInTime",
       "properties/sourceServerResourceId",
       "properties/storage/autoGrow",
+      "properties/storage/autoIoScaling",
       "properties/storage/iops",
       "properties/storage/storageSizeGB",
       "properties/version",
@@ -21410,6 +21480,7 @@
       "properties/ValidationRules/ContentValidation/IgnoreCase",
       "properties/ValidationRules/ContentValidation/PassIfTextFound",
       "properties/ValidationRules/ExpectedHttpStatusCode",
+      "properties/ValidationRules/IgnoreHttpStatusCode",
       "properties/ValidationRules/SSLCertRemainingLifetimeCheck",
       "properties/ValidationRules/SSLCheck",
       "tags"
@@ -21442,6 +21513,7 @@
       "properties/ValidationRules/ContentValidation/IgnoreCase",
       "properties/ValidationRules/ContentValidation/PassIfTextFound",
       "properties/ValidationRules/ExpectedHttpStatusCode",
+      "properties/ValidationRules/IgnoreHttpStatusCode",
       "properties/ValidationRules/SSLCertRemainingLifetimeCheck",
       "properties/ValidationRules/SSLCheck",
       "tags"
@@ -26122,7 +26194,12 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/AZUREFIREWALLS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/AZUREFIREWALLS/{}",
     "operation": "GET",
     "properties": [
@@ -26190,7 +26267,7 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/AZUREFIREWALLS/{}",
     "operation": "PUT",
     "properties": [
@@ -27107,16 +27184,15 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/FIREWALLPOLICIES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/FIREWALLPOLICIES/{}",
     "operation": "GET",
     "properties": [
-      "id",
       "identity/principalId",
       "identity/tenantId",
       "identity/type",
@@ -27164,11 +27240,10 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/FIREWALLPOLICIES/{}",
     "operation": "PUT",
     "properties": [
-      "id",
       "identity/principalId",
       "identity/tenantId",
       "identity/type",
@@ -27216,170 +27291,158 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/FIREWALLPOLICIES/{}/RULECOLLECTIONGROUPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/FIREWALLPOLICIES/{}/RULECOLLECTIONGROUPS/{}",
     "operation": "GET",
     "properties": [
-      "id",
-      "name",
       "properties/priority",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/action/type",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/name",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/priority",
-      "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/ruleCollectionType",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{ApplicationRule}/description",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{ApplicationRule}/destinationAddresses",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{ApplicationRule}/fqdnTags",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{ApplicationRule}/name",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{ApplicationRule}/protocols/port",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{ApplicationRule}/protocols/protocolType",
-      "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{ApplicationRule}/ruleType",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{ApplicationRule}/sourceAddresses",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{ApplicationRule}/sourceIpGroups",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{ApplicationRule}/targetFqdns",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{ApplicationRule}/targetUrls",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{ApplicationRule}/terminateTLS",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{ApplicationRule}/webCategories",
+      "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/description",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/destinationAddresses",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/destinationPorts",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/ipProtocols",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/name",
-      "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/ruleType",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/sourceAddresses",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/sourceIpGroups",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/translatedAddress",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/translatedFqdn",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/translatedPort",
+      "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NetworkRule}/description",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NetworkRule}/destinationAddresses",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NetworkRule}/destinationFqdns",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NetworkRule}/destinationIpGroups",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NetworkRule}/destinationPorts",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NetworkRule}/ipProtocols",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NetworkRule}/name",
-      "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NetworkRule}/ruleType",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NetworkRule}/sourceAddresses",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NetworkRule}/sourceIpGroups",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/action/type",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/name",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/priority",
-      "properties/ruleCollections{FirewallPolicyNatRuleCollection}/ruleCollectionType",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{ApplicationRule}/description",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{ApplicationRule}/destinationAddresses",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{ApplicationRule}/fqdnTags",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{ApplicationRule}/name",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{ApplicationRule}/protocols/port",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{ApplicationRule}/protocols/protocolType",
-      "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{ApplicationRule}/ruleType",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{ApplicationRule}/sourceAddresses",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{ApplicationRule}/sourceIpGroups",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{ApplicationRule}/targetFqdns",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{ApplicationRule}/targetUrls",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{ApplicationRule}/terminateTLS",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{ApplicationRule}/webCategories",
+      "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/description",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/destinationAddresses",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/destinationPorts",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/ipProtocols",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/name",
-      "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/ruleType",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/sourceAddresses",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/sourceIpGroups",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/translatedAddress",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/translatedFqdn",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/translatedPort",
+      "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NetworkRule}/description",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NetworkRule}/destinationAddresses",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NetworkRule}/destinationFqdns",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NetworkRule}/destinationIpGroups",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NetworkRule}/destinationPorts",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NetworkRule}/ipProtocols",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NetworkRule}/name",
-      "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NetworkRule}/ruleType",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NetworkRule}/sourceAddresses",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NetworkRule}/sourceIpGroups"
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/FIREWALLPOLICIES/{}/RULECOLLECTIONGROUPS/{}",
     "operation": "PUT",
     "properties": [
-      "id",
-      "name",
       "properties/priority",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/action/type",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/name",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/priority",
-      "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/ruleCollectionType",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{ApplicationRule}/description",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{ApplicationRule}/destinationAddresses",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{ApplicationRule}/fqdnTags",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{ApplicationRule}/name",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{ApplicationRule}/protocols/port",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{ApplicationRule}/protocols/protocolType",
-      "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{ApplicationRule}/ruleType",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{ApplicationRule}/sourceAddresses",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{ApplicationRule}/sourceIpGroups",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{ApplicationRule}/targetFqdns",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{ApplicationRule}/targetUrls",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{ApplicationRule}/terminateTLS",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{ApplicationRule}/webCategories",
+      "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/description",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/destinationAddresses",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/destinationPorts",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/ipProtocols",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/name",
-      "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/ruleType",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/sourceAddresses",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/sourceIpGroups",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/translatedAddress",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/translatedFqdn",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NatRule}/translatedPort",
+      "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NetworkRule}/description",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NetworkRule}/destinationAddresses",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NetworkRule}/destinationFqdns",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NetworkRule}/destinationIpGroups",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NetworkRule}/destinationPorts",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NetworkRule}/ipProtocols",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NetworkRule}/name",
-      "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NetworkRule}/ruleType",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NetworkRule}/sourceAddresses",
       "properties/ruleCollections{FirewallPolicyFilterRuleCollection}/rules{NetworkRule}/sourceIpGroups",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/action/type",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/name",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/priority",
-      "properties/ruleCollections{FirewallPolicyNatRuleCollection}/ruleCollectionType",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{ApplicationRule}/description",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{ApplicationRule}/destinationAddresses",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{ApplicationRule}/fqdnTags",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{ApplicationRule}/name",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{ApplicationRule}/protocols/port",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{ApplicationRule}/protocols/protocolType",
-      "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{ApplicationRule}/ruleType",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{ApplicationRule}/sourceAddresses",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{ApplicationRule}/sourceIpGroups",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{ApplicationRule}/targetFqdns",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{ApplicationRule}/targetUrls",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{ApplicationRule}/terminateTLS",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{ApplicationRule}/webCategories",
+      "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/description",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/destinationAddresses",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/destinationPorts",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/ipProtocols",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/name",
-      "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/ruleType",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/sourceAddresses",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/sourceIpGroups",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/translatedAddress",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/translatedFqdn",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NatRule}/translatedPort",
+      "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NetworkRule}/description",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NetworkRule}/destinationAddresses",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NetworkRule}/destinationFqdns",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NetworkRule}/destinationIpGroups",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NetworkRule}/destinationPorts",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NetworkRule}/ipProtocols",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NetworkRule}/name",
-      "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NetworkRule}/ruleType",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NetworkRule}/sourceAddresses",
       "properties/ruleCollections{FirewallPolicyNatRuleCollection}/rules{NetworkRule}/sourceIpGroups"
     ]
@@ -30822,6 +30885,7 @@
       "location",
       "name",
       "properties/customerId",
+      "properties/defaultDataCollectionRuleResourceId",
       "properties/features/disableLocalAuth",
       "properties/features/enableLogAccessUsingOnlyResourcePermissions",
       "properties/forceCmkForQuery",
@@ -30842,6 +30906,7 @@
       "location",
       "name",
       "properties/customerId",
+      "properties/defaultDataCollectionRuleResourceId",
       "properties/features/disableLocalAuth",
       "properties/features/enableLogAccessUsingOnlyResourcePermissions",
       "properties/forceCmkForQuery",
@@ -34512,6 +34577,39 @@
       "properties/vmSecrets/vaultCertificates/certificateUrl",
       "properties/vmSize",
       "type"
+    ]
+  },
+  {
+    "api_version": "2023-05-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICENETWORKING/TRAFFICCONTROLLERS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-05-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICENETWORKING/TRAFFICCONTROLLERS/{}",
+    "operation": "GET",
+    "properties": [
+      "location",
+      "properties/configurationEndpoints",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2023-05-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICENETWORKING/TRAFFICCONTROLLERS/{}",
+    "operation": "PATCH",
+    "properties": [
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2023-05-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICENETWORKING/TRAFFICCONTROLLERS/{}",
+    "operation": "PUT",
+    "properties": [
+      "location",
+      "properties/configurationEndpoints",
+      "tags"
     ]
   },
   {
@@ -42709,6 +42807,14 @@
   },
   {
     "api_version": "2021-02-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/STATICSITES/{}/CONFIG/APPSETTINGS",
+    "operation": "PUT",
+    "properties": [
+      "properties"
+    ]
+  },
+  {
+    "api_version": "2021-02-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/STATICSITES/{}/CUSTOMDOMAINS/{}",
     "operation": "DELETE"
   },
@@ -42728,6 +42834,11 @@
     "properties": [
       "properties/validationMethod"
     ]
+  },
+  {
+    "api_version": "2021-02-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/STATICSITES/{}/LISTAPPSETTINGS",
+    "operation": "POST"
   },
   {
     "api_version": "2021-02-01",
@@ -44779,6 +44890,30 @@
       "properties/status/cause",
       "properties/status/code",
       "properties/status/description"
+    ]
+  },
+  {
+    "api_version": "2022-12-01-preview",
+    "api_path": "/{}/PROVIDERS/MICROSOFT.SECURITY/DEFENDERFORSTORAGESETTINGS/CURRENT",
+    "operation": "GET",
+    "properties": [
+      "properties/isEnabled",
+      "properties/malwareScanning/onUpload/capGBPerMonth",
+      "properties/malwareScanning/onUpload/isEnabled",
+      "properties/overrideSubscriptionLevelSettings",
+      "properties/sensitiveDataDiscovery/isEnabled"
+    ]
+  },
+  {
+    "api_version": "2022-12-01-preview",
+    "api_path": "/{}/PROVIDERS/MICROSOFT.SECURITY/DEFENDERFORSTORAGESETTINGS/CURRENT",
+    "operation": "PUT",
+    "properties": [
+      "properties/isEnabled",
+      "properties/malwareScanning/onUpload/capGBPerMonth",
+      "properties/malwareScanning/onUpload/isEnabled",
+      "properties/overrideSubscriptionLevelSettings",
+      "properties/sensitiveDataDiscovery/isEnabled"
     ]
   },
   {
