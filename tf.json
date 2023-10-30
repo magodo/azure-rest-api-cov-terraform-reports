@@ -609,6 +609,30 @@
     ]
   },
   {
+    "api_version": "2020-05-01",
+    "api_path": "/PROVIDERS/MICROSOFT.MANAGEMENT/MANAGEMENTGROUPS/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/PRIVATELINKASSOCIATIONS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2020-05-01",
+    "api_path": "/PROVIDERS/MICROSOFT.MANAGEMENT/MANAGEMENTGROUPS/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/PRIVATELINKASSOCIATIONS/{}",
+    "operation": "GET",
+    "properties": [
+      "properties/privateLink",
+      "properties/publicNetworkAccess",
+      "properties/tenantID"
+    ]
+  },
+  {
+    "api_version": "2020-05-01",
+    "api_path": "/PROVIDERS/MICROSOFT.MANAGEMENT/MANAGEMENTGROUPS/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/PRIVATELINKASSOCIATIONS/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/privateLink",
+      "properties/publicNetworkAccess"
+    ]
+  },
+  {
     "api_version": "2023-04-01",
     "api_path": "/PROVIDERS/MICROSOFT.MANAGEMENT/MANAGEMENTGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERCONNECTIONS/{}",
     "operation": "DELETE"
@@ -1258,10 +1282,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.FEATURES/PROVIDERS/{}/FEATURES/{}",
     "operation": "GET",
     "properties": [
-      "id",
-      "name",
-      "properties/state",
-      "type"
+      "properties/state"
     ]
   },
   {
@@ -3914,10 +3935,6 @@
     "operation": "GET",
     "properties": [
       "identity",
-      "identity/principalId",
-      "identity/tenantId",
-      "identity/type",
-      "identity/userAssignedIdentities",
       "location",
       "properties/configuration/activeRevisionsMode",
       "properties/configuration/dapr/appId",
@@ -4004,10 +4021,6 @@
     "operation": "PUT",
     "properties": [
       "identity",
-      "identity/principalId",
-      "identity/tenantId",
-      "identity/type",
-      "identity/userAssignedIdentities",
       "location",
       "properties/configuration/activeRevisionsMode",
       "properties/configuration/dapr/appId",
@@ -4700,8 +4713,7 @@
     "properties": [
       "properties/bindingParameters",
       "properties/key",
-      "properties/resourceId",
-      "properties/resourceType"
+      "properties/resourceId"
     ]
   },
   {
@@ -4711,8 +4723,7 @@
     "properties": [
       "properties/bindingParameters",
       "properties/key",
-      "properties/resourceId",
-      "properties/resourceType"
+      "properties/resourceId"
     ]
   },
   {
@@ -6264,7 +6275,6 @@
       "properties/billingConfig/effectiveStartDateUtc",
       "properties/tenantId",
       "sku/name",
-      "sku/tier",
       "tags"
     ]
   },
@@ -7731,7 +7741,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/CUSTOMDOMAINS/{}",
     "operation": "GET",
     "properties": [
-      "properties",
       "properties/azureDnsZone/id",
       "properties/hostName",
       "properties/tlsSettings/certificateType",
@@ -7757,7 +7766,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/CUSTOMDOMAINS/{}",
     "operation": "PUT",
     "properties": [
-      "properties",
       "properties/azureDnsZone/id",
       "properties/hostName",
       "properties/tlsSettings/certificateType",
@@ -9484,7 +9492,6 @@
       "properties/publishingProfile/targetRegions/name",
       "properties/publishingProfile/targetRegions/regionalReplicaCount",
       "properties/publishingProfile/targetRegions/storageAccountType",
-      "properties/safetyProfile/allowDeletionOfReplicatedLocations",
       "tags"
     ]
   },
@@ -9950,7 +9957,6 @@
       "properties/osProfile/linuxConfiguration/patchSettings/automaticByPlatformSettings/rebootSetting",
       "properties/osProfile/linuxConfiguration/patchSettings/patchMode",
       "properties/osProfile/linuxConfiguration/provisionVMAgent",
-      "properties/osProfile/linuxConfiguration/ssh/publicKeys",
       "properties/osProfile/linuxConfiguration/ssh/publicKeys/keyData",
       "properties/osProfile/linuxConfiguration/ssh/publicKeys/path",
       "properties/osProfile/secrets/sourceVault/id",
@@ -10010,7 +10016,6 @@
       "properties/storageProfile/osDisk/managedDisk/storageAccountType",
       "properties/storageProfile/osDisk/name",
       "properties/storageProfile/osDisk/osType",
-      "properties/storageProfile/osDisk/vhd",
       "properties/storageProfile/osDisk/vhd/uri",
       "properties/storageProfile/osDisk/writeAcceleratorEnabled",
       "properties/userData",
@@ -10155,7 +10160,6 @@
       "properties/osProfile/linuxConfiguration/patchSettings/automaticByPlatformSettings/rebootSetting",
       "properties/osProfile/linuxConfiguration/patchSettings/patchMode",
       "properties/osProfile/linuxConfiguration/provisionVMAgent",
-      "properties/osProfile/linuxConfiguration/ssh/publicKeys",
       "properties/osProfile/linuxConfiguration/ssh/publicKeys/keyData",
       "properties/osProfile/linuxConfiguration/ssh/publicKeys/path",
       "properties/osProfile/secrets/sourceVault/id",
@@ -10215,7 +10219,6 @@
       "properties/storageProfile/osDisk/managedDisk/storageAccountType",
       "properties/storageProfile/osDisk/name",
       "properties/storageProfile/osDisk/osType",
-      "properties/storageProfile/osDisk/vhd",
       "properties/storageProfile/osDisk/vhd/uri",
       "properties/storageProfile/osDisk/writeAcceleratorEnabled",
       "properties/userData",
@@ -10455,13 +10458,11 @@
       "properties/virtualMachineProfile/osProfile/linuxConfiguration/patchSettings/assessmentMode",
       "properties/virtualMachineProfile/osProfile/linuxConfiguration/patchSettings/patchMode",
       "properties/virtualMachineProfile/osProfile/linuxConfiguration/provisionVMAgent",
-      "properties/virtualMachineProfile/osProfile/linuxConfiguration/ssh/publicKeys",
       "properties/virtualMachineProfile/osProfile/linuxConfiguration/ssh/publicKeys/keyData",
       "properties/virtualMachineProfile/osProfile/linuxConfiguration/ssh/publicKeys/path",
       "properties/virtualMachineProfile/osProfile/secrets/sourceVault/id",
       "properties/virtualMachineProfile/osProfile/secrets/vaultCertificates/certificateStore",
       "properties/virtualMachineProfile/osProfile/secrets/vaultCertificates/certificateUrl",
-      "properties/virtualMachineProfile/osProfile/windowsConfiguration",
       "properties/virtualMachineProfile/osProfile/windowsConfiguration/additionalUnattendContent/componentName",
       "properties/virtualMachineProfile/osProfile/windowsConfiguration/additionalUnattendContent/content",
       "properties/virtualMachineProfile/osProfile/windowsConfiguration/additionalUnattendContent/passName",
@@ -10750,13 +10751,11 @@
       "properties/virtualMachineProfile/osProfile/linuxConfiguration/patchSettings/assessmentMode",
       "properties/virtualMachineProfile/osProfile/linuxConfiguration/patchSettings/patchMode",
       "properties/virtualMachineProfile/osProfile/linuxConfiguration/provisionVMAgent",
-      "properties/virtualMachineProfile/osProfile/linuxConfiguration/ssh/publicKeys",
       "properties/virtualMachineProfile/osProfile/linuxConfiguration/ssh/publicKeys/keyData",
       "properties/virtualMachineProfile/osProfile/linuxConfiguration/ssh/publicKeys/path",
       "properties/virtualMachineProfile/osProfile/secrets/sourceVault/id",
       "properties/virtualMachineProfile/osProfile/secrets/vaultCertificates/certificateStore",
       "properties/virtualMachineProfile/osProfile/secrets/vaultCertificates/certificateUrl",
-      "properties/virtualMachineProfile/osProfile/windowsConfiguration",
       "properties/virtualMachineProfile/osProfile/windowsConfiguration/additionalUnattendContent/componentName",
       "properties/virtualMachineProfile/osProfile/windowsConfiguration/additionalUnattendContent/content",
       "properties/virtualMachineProfile/osProfile/windowsConfiguration/additionalUnattendContent/passName",
@@ -15945,6 +15944,9 @@
       "properties/maintenanceWindow/dayOfWeek",
       "properties/maintenanceWindow/startHour",
       "properties/maintenanceWindow/startMinute",
+      "properties/network/delegatedSubnetResourceId",
+      "properties/network/privateDnsZoneArmResourceId",
+      "properties/network/publicNetworkAccess",
       "properties/replicationRole",
       "properties/storage/autoGrow",
       "properties/storage/storageSizeGB",
@@ -16295,7 +16297,6 @@
       "properties/byokEnforcement",
       "properties/fullyQualifiedDomainName",
       "properties/infrastructureEncryption",
-      "properties/masterServerId",
       "properties/minimalTlsVersion",
       "properties/publicNetworkAccess",
       "properties/replicationRole",
@@ -18383,9 +18384,7 @@
       "properties/privileges/resource/collection",
       "properties/privileges/resource/db",
       "properties/roleName",
-      "properties/roles/db",
-      "properties/roles/role",
-      "properties/type"
+      "properties/roles/role"
     ]
   },
   {
@@ -18414,7 +18413,6 @@
     "operation": "GET",
     "properties": [
       "properties/databaseName",
-      "properties/mechanisms",
       "properties/password",
       "properties/roles/db",
       "properties/roles/role",
@@ -19381,8 +19379,8 @@
       "location",
       "properties/clusterArmId",
       "properties/disableLocalAuth",
-      "properties/encryption",
       "properties/encryption/keySource",
+      "properties/encryption/keyVaultProperties/identity/userAssignedIdentity",
       "properties/encryption/keyVaultProperties/keyName",
       "properties/encryption/keyVaultProperties/keyVaultUri",
       "properties/encryption/keyVaultProperties/keyVersion",
@@ -19412,8 +19410,8 @@
       "location",
       "properties/clusterArmId",
       "properties/disableLocalAuth",
-      "properties/encryption",
       "properties/encryption/keySource",
+      "properties/encryption/keyVaultProperties/identity/userAssignedIdentity",
       "properties/encryption/keyVaultProperties/keyName",
       "properties/encryption/keyVaultProperties/keyVaultUri",
       "properties/encryption/keyVaultProperties/keyVersion",
@@ -19443,8 +19441,8 @@
       "location",
       "properties/clusterArmId",
       "properties/disableLocalAuth",
-      "properties/encryption",
       "properties/encryption/keySource",
+      "properties/encryption/keyVaultProperties/identity/userAssignedIdentity",
       "properties/encryption/keyVaultProperties/keyName",
       "properties/encryption/keyVaultProperties/keyVaultUri",
       "properties/encryption/keyVaultProperties/keyVersion",
@@ -19700,8 +19698,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.FLUIDRELAY/FLUIDRELAYSERVERS/{}",
     "operation": "PATCH",
     "properties": [
-      "identity/principalId",
-      "identity/tenantId",
       "identity/type",
       "identity/userAssignedIdentities",
       "tags"
@@ -22632,8 +22628,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.LOADTESTSERVICE/LOADTESTS/{}",
     "operation": "PATCH",
     "properties": [
-      "identity/principalId",
-      "identity/tenantId",
       "identity/type",
       "identity/userAssignedIdentities",
       "tags"
@@ -23428,8 +23422,6 @@
       "name",
       "properties{AzureBlob}/accountName",
       "properties{AzureBlob}/containerName",
-      "properties{AzureBlob}/credentials{ServicePrincipal}/clientId",
-      "properties{AzureBlob}/credentials{ServicePrincipal}/tenantId",
       "properties{AzureBlob}/description",
       "properties{AzureBlob}/endpoint",
       "properties{AzureBlob}/isDefault",
@@ -23444,8 +23436,6 @@
       "properties{AzureDataLakeGen2}/serviceDataAccessAuthIdentity",
       "properties{AzureDataLakeGen2}/tags",
       "properties{AzureFile}/accountName",
-      "properties{AzureFile}/credentials{ServicePrincipal}/clientId",
-      "properties{AzureFile}/credentials{ServicePrincipal}/tenantId",
       "properties{AzureFile}/description",
       "properties{AzureFile}/fileShareName",
       "properties{AzureFile}/isDefault",
@@ -23462,8 +23452,6 @@
       "name",
       "properties{AzureBlob}/accountName",
       "properties{AzureBlob}/containerName",
-      "properties{AzureBlob}/credentials{ServicePrincipal}/clientId",
-      "properties{AzureBlob}/credentials{ServicePrincipal}/tenantId",
       "properties{AzureBlob}/description",
       "properties{AzureBlob}/endpoint",
       "properties{AzureBlob}/isDefault",
@@ -23478,8 +23466,6 @@
       "properties{AzureDataLakeGen2}/serviceDataAccessAuthIdentity",
       "properties{AzureDataLakeGen2}/tags",
       "properties{AzureFile}/accountName",
-      "properties{AzureFile}/credentials{ServicePrincipal}/clientId",
-      "properties{AzureFile}/credentials{ServicePrincipal}/tenantId",
       "properties{AzureFile}/description",
       "properties{AzureFile}/fileShareName",
       "properties{AzureFile}/isDefault",
@@ -23569,9 +23555,6 @@
     "operation": "PATCH",
     "properties": [
       "properties",
-      "properties/clientId",
-      "properties/principalId",
-      "properties/tenantId",
       "tags"
     ]
   },
@@ -25056,8 +25039,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/PACKETCORECONTROLPLANES/{}",
     "operation": "GET",
     "properties": [
-      "identity/principalId",
-      "identity/tenantId",
       "identity/type",
       "identity/userAssignedIdentities",
       "location",
@@ -25087,8 +25068,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/PACKETCORECONTROLPLANES/{}",
     "operation": "PUT",
     "properties": [
-      "identity/principalId",
-      "identity/tenantId",
       "identity/type",
       "identity/userAssignedIdentities",
       "location",
@@ -25288,6 +25267,7 @@
     "operation": "GET",
     "properties": [
       "location",
+      "properties/metrics/prometheusQueryEndpoint",
       "properties/publicNetworkAccess",
       "tags"
     ]
@@ -25298,6 +25278,7 @@
     "operation": "PUT",
     "properties": [
       "location",
+      "properties/metrics/prometheusQueryEndpoint",
       "properties/publicNetworkAccess",
       "tags"
     ]
@@ -25567,9 +25548,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/VOLUMEQUOTARULES/{}",
     "operation": "PATCH",
     "properties": [
-      "properties/quotaSizeInKiBs",
-      "properties/quotaTarget",
-      "properties/quotaType"
+      "properties/quotaSizeInKiBs"
     ]
   },
   {
@@ -27196,6 +27175,7 @@
       "properties/links/properties/macSecConfig/cakSecretIdentifier",
       "properties/links/properties/macSecConfig/cipher",
       "properties/links/properties/macSecConfig/cknSecretIdentifier",
+      "properties/links/properties/macSecConfig/sciState",
       "properties/links/properties/patchPanelId",
       "properties/links/properties/rackId",
       "properties/links/properties/routerName",
@@ -27226,6 +27206,7 @@
       "properties/links/properties/macSecConfig/cakSecretIdentifier",
       "properties/links/properties/macSecConfig/cipher",
       "properties/links/properties/macSecConfig/cknSecretIdentifier",
+      "properties/links/properties/macSecConfig/sciState",
       "properties/links/properties/patchPanelId",
       "properties/links/properties/rackId",
       "properties/links/properties/routerName",
@@ -30944,7 +30925,6 @@
     "operation": "GET",
     "properties": [
       "location",
-      "name",
       "properties/customerId",
       "properties/retentionInDays",
       "properties/sku/name",
@@ -32076,8 +32056,6 @@
       "properties/frequency",
       "properties/isDefaultSettings",
       "properties/requiredDataConnectors",
-      "properties/requiredDataConnectors/connectorId",
-      "properties/requiredDataConnectors/dataTypes",
       "properties/settingsDefinitionId",
       "properties/settingsStatus",
       "properties/tactics",
@@ -33032,10 +33010,7 @@
     "properties": [
       "id",
       "location",
-      "name",
-      "properties/customDetails{Azure}/location",
-      "properties/friendlyName",
-      "type"
+      "properties/customDetails{Azure}/location"
     ]
   },
   {
@@ -33768,12 +33743,12 @@
     ]
   },
   {
-    "api_version": "2022-09-01",
+    "api_version": "2023-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-09-01",
+    "api_version": "2023-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}",
     "operation": "GET",
     "properties": [
@@ -33790,12 +33765,13 @@
       "properties/partitionCount",
       "properties/publicNetworkAccess",
       "properties/replicaCount",
+      "properties/semanticSearch",
       "sku/name",
       "tags"
     ]
   },
   {
-    "api_version": "2022-09-01",
+    "api_version": "2023-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}",
     "operation": "PUT",
     "properties": [
@@ -33812,27 +33788,28 @@
       "properties/partitionCount",
       "properties/publicNetworkAccess",
       "properties/replicaCount",
+      "properties/semanticSearch",
       "sku/name",
       "tags"
     ]
   },
   {
-    "api_version": "2022-09-01",
+    "api_version": "2023-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}/LISTADMINKEYS",
     "operation": "POST"
   },
   {
-    "api_version": "2022-09-01",
+    "api_version": "2023-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}/LISTQUERYKEYS",
     "operation": "POST"
   },
   {
-    "api_version": "2022-09-01",
+    "api_version": "2023-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}/SHAREDPRIVATELINKRESOURCES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-09-01",
+    "api_version": "2023-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}/SHAREDPRIVATELINKRESOURCES/{}",
     "operation": "GET",
     "properties": [
@@ -33843,7 +33820,7 @@
     ]
   },
   {
-    "api_version": "2022-09-01",
+    "api_version": "2023-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}/SHAREDPRIVATELINKRESOURCES/{}",
     "operation": "PUT",
     "properties": [
@@ -37850,7 +37827,6 @@
       "properties/disks/id",
       "properties/subnetId",
       "sku/name",
-      "sku/tier",
       "tags"
     ]
   },
@@ -37902,7 +37878,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGEPOOL/DISKPOOLS/{}/ISCSITARGETS/{}",
     "operation": "PATCH",
     "properties": [
-      "properties/luns/lun",
       "properties/luns/managedDiskAzureResourceId",
       "properties/luns/name"
     ]
@@ -38212,7 +38187,6 @@
     "operation": "GET",
     "properties": [
       "name",
-      "properties{Reference}",
       "properties{Reference}/datasource{Microsoft.Sql/Server/Database}/properties/database",
       "properties{Reference}/datasource{Microsoft.Sql/Server/Database}/properties/deltaSnapshotQuery",
       "properties{Reference}/datasource{Microsoft.Sql/Server/Database}/properties/fullSnapshotQuery",
@@ -38270,7 +38244,6 @@
     "operation": "PATCH",
     "properties": [
       "name",
-      "properties{Reference}",
       "properties{Reference}/datasource{Microsoft.Sql/Server/Database}/properties/database",
       "properties{Reference}/datasource{Microsoft.Sql/Server/Database}/properties/deltaSnapshotQuery",
       "properties{Reference}/datasource{Microsoft.Sql/Server/Database}/properties/fullSnapshotQuery",
@@ -38328,7 +38301,6 @@
     "operation": "PUT",
     "properties": [
       "name",
-      "properties{Reference}",
       "properties{Reference}/datasource{Microsoft.Sql/Server/Database}/properties/database",
       "properties{Reference}/datasource{Microsoft.Sql/Server/Database}/properties/deltaSnapshotQuery",
       "properties{Reference}/datasource{Microsoft.Sql/Server/Database}/properties/fullSnapshotQuery",
@@ -38707,6 +38679,7 @@
       "identity/type",
       "identity/userAssignedIdentities",
       "location",
+      "properties/azureADOnlyAuthentication",
       "properties/connectivityEndpoints",
       "properties/defaultDataLakeStorage/accountUrl",
       "properties/defaultDataLakeStorage/filesystem",
@@ -38770,6 +38743,7 @@
       "identity/type",
       "identity/userAssignedIdentities",
       "location",
+      "properties/azureADOnlyAuthentication",
       "properties/connectivityEndpoints",
       "properties/defaultDataLakeStorage/accountUrl",
       "properties/defaultDataLakeStorage/filesystem",
@@ -38823,6 +38797,14 @@
       "properties/login",
       "properties/sid",
       "properties/tenantId"
+    ]
+  },
+  {
+    "api_version": "2021-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/AZUREADONLYAUTHENTICATIONS/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/azureADOnlyAuthentication"
     ]
   },
   {
@@ -40085,7 +40067,6 @@
       "properties/siteConfig/cors/allowedOrigins",
       "properties/siteConfig/cors/supportCredentials",
       "properties/siteConfig/defaultDocuments",
-      "properties/siteConfig/detailedErrorLoggingEnabled",
       "properties/siteConfig/ftpsState",
       "properties/siteConfig/functionAppScaleLimit",
       "properties/siteConfig/functionsRuntimeScaleMonitoringEnabled",
@@ -40125,7 +40106,6 @@
       "properties/siteConfig/scmIpSecurityRestrictions/vnetSubnetResourceId",
       "properties/siteConfig/scmIpSecurityRestrictionsUseMain",
       "properties/siteConfig/scmMinTlsVersion",
-      "properties/siteConfig/scmType",
       "properties/siteConfig/use32BitWorkerProcess",
       "properties/siteConfig/virtualApplications/physicalPath",
       "properties/siteConfig/virtualApplications/preloadEnabled",
@@ -40162,90 +40142,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}",
     "operation": "PATCH",
     "properties": [
-      "properties/siteConfig/acrUseManagedIdentityCreds",
-      "properties/siteConfig/acrUserManagedIdentityID",
-      "properties/siteConfig/alwaysOn",
-      "properties/siteConfig/apiDefinition/url",
-      "properties/siteConfig/apiManagementConfig/id",
-      "properties/siteConfig/appCommandLine",
-      "properties/siteConfig/appSettings/name",
-      "properties/siteConfig/appSettings/value",
-      "properties/siteConfig/autoHealEnabled",
-      "properties/siteConfig/autoHealRules/actions/actionType",
-      "properties/siteConfig/autoHealRules/actions/customAction/exe",
-      "properties/siteConfig/autoHealRules/actions/customAction/parameters",
-      "properties/siteConfig/autoHealRules/actions/minProcessExecutionTime",
-      "properties/siteConfig/autoHealRules/triggers/privateBytesInKB",
-      "properties/siteConfig/autoHealRules/triggers/requests/count",
-      "properties/siteConfig/autoHealRules/triggers/requests/timeInterval",
-      "properties/siteConfig/autoHealRules/triggers/slowRequests/count",
-      "properties/siteConfig/autoHealRules/triggers/slowRequests/path",
-      "properties/siteConfig/autoHealRules/triggers/slowRequests/timeInterval",
-      "properties/siteConfig/autoHealRules/triggers/slowRequests/timeTaken",
-      "properties/siteConfig/autoHealRules/triggers/statusCodes/count",
-      "properties/siteConfig/autoHealRules/triggers/statusCodes/path",
-      "properties/siteConfig/autoHealRules/triggers/statusCodes/status",
-      "properties/siteConfig/autoHealRules/triggers/statusCodes/subStatus",
-      "properties/siteConfig/autoHealRules/triggers/statusCodes/timeInterval",
-      "properties/siteConfig/autoHealRules/triggers/statusCodes/win32Status",
-      "properties/siteConfig/autoHealRules/triggers/statusCodesRange/count",
-      "properties/siteConfig/autoHealRules/triggers/statusCodesRange/path",
-      "properties/siteConfig/autoHealRules/triggers/statusCodesRange/statusCodes",
-      "properties/siteConfig/autoHealRules/triggers/statusCodesRange/timeInterval",
-      "properties/siteConfig/autoSwapSlotName",
-      "properties/siteConfig/cors/allowedOrigins",
-      "properties/siteConfig/cors/supportCredentials",
-      "properties/siteConfig/defaultDocuments",
-      "properties/siteConfig/detailedErrorLoggingEnabled",
-      "properties/siteConfig/ftpsState",
-      "properties/siteConfig/functionAppScaleLimit",
-      "properties/siteConfig/functionsRuntimeScaleMonitoringEnabled",
-      "properties/siteConfig/healthCheckPath",
-      "properties/siteConfig/http20Enabled",
-      "properties/siteConfig/ipSecurityRestrictions/action",
-      "properties/siteConfig/ipSecurityRestrictions/headers",
-      "properties/siteConfig/ipSecurityRestrictions/ipAddress",
-      "properties/siteConfig/ipSecurityRestrictions/name",
-      "properties/siteConfig/ipSecurityRestrictions/priority",
-      "properties/siteConfig/ipSecurityRestrictions/tag",
-      "properties/siteConfig/ipSecurityRestrictions/vnetSubnetResourceId",
-      "properties/siteConfig/javaContainer",
-      "properties/siteConfig/javaContainerVersion",
-      "properties/siteConfig/javaVersion",
-      "properties/siteConfig/linuxFxVersion",
-      "properties/siteConfig/loadBalancing",
-      "properties/siteConfig/localMySqlEnabled",
-      "properties/siteConfig/managedPipelineMode",
-      "properties/siteConfig/minTlsVersion",
-      "properties/siteConfig/minimumElasticInstanceCount",
-      "properties/siteConfig/netFrameworkVersion",
-      "properties/siteConfig/numberOfWorkers",
-      "properties/siteConfig/phpVersion",
-      "properties/siteConfig/powerShellVersion",
-      "properties/siteConfig/preWarmedInstanceCount",
-      "properties/siteConfig/publicNetworkAccess",
-      "properties/siteConfig/pythonVersion",
-      "properties/siteConfig/remoteDebuggingEnabled",
-      "properties/siteConfig/remoteDebuggingVersion",
-      "properties/siteConfig/scmIpSecurityRestrictions/action",
-      "properties/siteConfig/scmIpSecurityRestrictions/headers",
-      "properties/siteConfig/scmIpSecurityRestrictions/ipAddress",
-      "properties/siteConfig/scmIpSecurityRestrictions/name",
-      "properties/siteConfig/scmIpSecurityRestrictions/priority",
-      "properties/siteConfig/scmIpSecurityRestrictions/tag",
-      "properties/siteConfig/scmIpSecurityRestrictions/vnetSubnetResourceId",
-      "properties/siteConfig/scmIpSecurityRestrictionsUseMain",
-      "properties/siteConfig/scmMinTlsVersion",
-      "properties/siteConfig/scmType",
-      "properties/siteConfig/use32BitWorkerProcess",
-      "properties/siteConfig/virtualApplications/physicalPath",
-      "properties/siteConfig/virtualApplications/preloadEnabled",
-      "properties/siteConfig/virtualApplications/virtualDirectories/physicalPath",
-      "properties/siteConfig/virtualApplications/virtualDirectories/virtualPath",
-      "properties/siteConfig/virtualApplications/virtualPath",
-      "properties/siteConfig/vnetRouteAllEnabled",
-      "properties/siteConfig/webSocketsEnabled",
-      "properties/siteConfig/windowsFxVersion"
+      "properties/siteConfig/scmType"
     ]
   },
   {
@@ -40395,7 +40292,6 @@
       "properties/siteConfig/cors/allowedOrigins",
       "properties/siteConfig/cors/supportCredentials",
       "properties/siteConfig/defaultDocuments",
-      "properties/siteConfig/detailedErrorLoggingEnabled",
       "properties/siteConfig/ftpsState",
       "properties/siteConfig/functionAppScaleLimit",
       "properties/siteConfig/functionsRuntimeScaleMonitoringEnabled",
@@ -40435,7 +40331,6 @@
       "properties/siteConfig/scmIpSecurityRestrictions/vnetSubnetResourceId",
       "properties/siteConfig/scmIpSecurityRestrictionsUseMain",
       "properties/siteConfig/scmMinTlsVersion",
-      "properties/siteConfig/scmType",
       "properties/siteConfig/use32BitWorkerProcess",
       "properties/siteConfig/virtualApplications/physicalPath",
       "properties/siteConfig/virtualApplications/preloadEnabled",
@@ -41585,7 +41480,6 @@
       "properties/siteConfig/cors/allowedOrigins",
       "properties/siteConfig/cors/supportCredentials",
       "properties/siteConfig/defaultDocuments",
-      "properties/siteConfig/detailedErrorLoggingEnabled",
       "properties/siteConfig/ftpsState",
       "properties/siteConfig/functionAppScaleLimit",
       "properties/siteConfig/functionsRuntimeScaleMonitoringEnabled",
@@ -41625,7 +41519,6 @@
       "properties/siteConfig/scmIpSecurityRestrictions/vnetSubnetResourceId",
       "properties/siteConfig/scmIpSecurityRestrictionsUseMain",
       "properties/siteConfig/scmMinTlsVersion",
-      "properties/siteConfig/scmType",
       "properties/siteConfig/use32BitWorkerProcess",
       "properties/siteConfig/virtualApplications/physicalPath",
       "properties/siteConfig/virtualApplications/preloadEnabled",
@@ -41662,90 +41555,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}",
     "operation": "PATCH",
     "properties": [
-      "properties/siteConfig/acrUseManagedIdentityCreds",
-      "properties/siteConfig/acrUserManagedIdentityID",
-      "properties/siteConfig/alwaysOn",
-      "properties/siteConfig/apiDefinition/url",
-      "properties/siteConfig/apiManagementConfig/id",
-      "properties/siteConfig/appCommandLine",
-      "properties/siteConfig/appSettings/name",
-      "properties/siteConfig/appSettings/value",
-      "properties/siteConfig/autoHealEnabled",
-      "properties/siteConfig/autoHealRules/actions/actionType",
-      "properties/siteConfig/autoHealRules/actions/customAction/exe",
-      "properties/siteConfig/autoHealRules/actions/customAction/parameters",
-      "properties/siteConfig/autoHealRules/actions/minProcessExecutionTime",
-      "properties/siteConfig/autoHealRules/triggers/privateBytesInKB",
-      "properties/siteConfig/autoHealRules/triggers/requests/count",
-      "properties/siteConfig/autoHealRules/triggers/requests/timeInterval",
-      "properties/siteConfig/autoHealRules/triggers/slowRequests/count",
-      "properties/siteConfig/autoHealRules/triggers/slowRequests/path",
-      "properties/siteConfig/autoHealRules/triggers/slowRequests/timeInterval",
-      "properties/siteConfig/autoHealRules/triggers/slowRequests/timeTaken",
-      "properties/siteConfig/autoHealRules/triggers/statusCodes/count",
-      "properties/siteConfig/autoHealRules/triggers/statusCodes/path",
-      "properties/siteConfig/autoHealRules/triggers/statusCodes/status",
-      "properties/siteConfig/autoHealRules/triggers/statusCodes/subStatus",
-      "properties/siteConfig/autoHealRules/triggers/statusCodes/timeInterval",
-      "properties/siteConfig/autoHealRules/triggers/statusCodes/win32Status",
-      "properties/siteConfig/autoHealRules/triggers/statusCodesRange/count",
-      "properties/siteConfig/autoHealRules/triggers/statusCodesRange/path",
-      "properties/siteConfig/autoHealRules/triggers/statusCodesRange/statusCodes",
-      "properties/siteConfig/autoHealRules/triggers/statusCodesRange/timeInterval",
-      "properties/siteConfig/autoSwapSlotName",
-      "properties/siteConfig/cors/allowedOrigins",
-      "properties/siteConfig/cors/supportCredentials",
-      "properties/siteConfig/defaultDocuments",
-      "properties/siteConfig/detailedErrorLoggingEnabled",
-      "properties/siteConfig/ftpsState",
-      "properties/siteConfig/functionAppScaleLimit",
-      "properties/siteConfig/functionsRuntimeScaleMonitoringEnabled",
-      "properties/siteConfig/healthCheckPath",
-      "properties/siteConfig/http20Enabled",
-      "properties/siteConfig/ipSecurityRestrictions/action",
-      "properties/siteConfig/ipSecurityRestrictions/headers",
-      "properties/siteConfig/ipSecurityRestrictions/ipAddress",
-      "properties/siteConfig/ipSecurityRestrictions/name",
-      "properties/siteConfig/ipSecurityRestrictions/priority",
-      "properties/siteConfig/ipSecurityRestrictions/tag",
-      "properties/siteConfig/ipSecurityRestrictions/vnetSubnetResourceId",
-      "properties/siteConfig/javaContainer",
-      "properties/siteConfig/javaContainerVersion",
-      "properties/siteConfig/javaVersion",
-      "properties/siteConfig/linuxFxVersion",
-      "properties/siteConfig/loadBalancing",
-      "properties/siteConfig/localMySqlEnabled",
-      "properties/siteConfig/managedPipelineMode",
-      "properties/siteConfig/minTlsVersion",
-      "properties/siteConfig/minimumElasticInstanceCount",
-      "properties/siteConfig/netFrameworkVersion",
-      "properties/siteConfig/numberOfWorkers",
-      "properties/siteConfig/phpVersion",
-      "properties/siteConfig/powerShellVersion",
-      "properties/siteConfig/preWarmedInstanceCount",
-      "properties/siteConfig/publicNetworkAccess",
-      "properties/siteConfig/pythonVersion",
-      "properties/siteConfig/remoteDebuggingEnabled",
-      "properties/siteConfig/remoteDebuggingVersion",
-      "properties/siteConfig/scmIpSecurityRestrictions/action",
-      "properties/siteConfig/scmIpSecurityRestrictions/headers",
-      "properties/siteConfig/scmIpSecurityRestrictions/ipAddress",
-      "properties/siteConfig/scmIpSecurityRestrictions/name",
-      "properties/siteConfig/scmIpSecurityRestrictions/priority",
-      "properties/siteConfig/scmIpSecurityRestrictions/tag",
-      "properties/siteConfig/scmIpSecurityRestrictions/vnetSubnetResourceId",
-      "properties/siteConfig/scmIpSecurityRestrictionsUseMain",
-      "properties/siteConfig/scmMinTlsVersion",
-      "properties/siteConfig/scmType",
-      "properties/siteConfig/use32BitWorkerProcess",
-      "properties/siteConfig/virtualApplications/physicalPath",
-      "properties/siteConfig/virtualApplications/preloadEnabled",
-      "properties/siteConfig/virtualApplications/virtualDirectories/physicalPath",
-      "properties/siteConfig/virtualApplications/virtualDirectories/virtualPath",
-      "properties/siteConfig/virtualApplications/virtualPath",
-      "properties/siteConfig/vnetRouteAllEnabled",
-      "properties/siteConfig/webSocketsEnabled",
-      "properties/siteConfig/windowsFxVersion"
+      "properties/siteConfig/scmType"
     ]
   },
   {
@@ -41895,7 +41705,6 @@
       "properties/siteConfig/cors/allowedOrigins",
       "properties/siteConfig/cors/supportCredentials",
       "properties/siteConfig/defaultDocuments",
-      "properties/siteConfig/detailedErrorLoggingEnabled",
       "properties/siteConfig/ftpsState",
       "properties/siteConfig/functionAppScaleLimit",
       "properties/siteConfig/functionsRuntimeScaleMonitoringEnabled",
@@ -41935,7 +41744,6 @@
       "properties/siteConfig/scmIpSecurityRestrictions/vnetSubnetResourceId",
       "properties/siteConfig/scmIpSecurityRestrictionsUseMain",
       "properties/siteConfig/scmMinTlsVersion",
-      "properties/siteConfig/scmType",
       "properties/siteConfig/use32BitWorkerProcess",
       "properties/siteConfig/virtualApplications/physicalPath",
       "properties/siteConfig/virtualApplications/preloadEnabled",
@@ -43083,8 +42891,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/NGINX.NGINXPLUS/NGINXDEPLOYMENTS/{}",
     "operation": "PATCH",
     "properties": [
-      "identity/principalId",
-      "identity/tenantId",
       "identity/type",
       "identity/userAssignedIdentities",
       "properties/enableDiagnosticsSupport",
