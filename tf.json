@@ -889,6 +889,7 @@
       "value",
       "value/id",
       "value/principalId",
+      "value/principalType",
       "value/roleDefinitionId"
     ]
   },
@@ -904,6 +905,7 @@
     "properties": [
       "id",
       "principalId",
+      "principalType",
       "roleDefinitionId"
     ]
   },
@@ -913,6 +915,7 @@
     "operation": "PUT",
     "properties": [
       "principalId",
+      "principalType",
       "roleId",
       "scope"
     ]
@@ -1689,12 +1692,12 @@
     ]
   },
   {
-    "api_version": "2020-09-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.SUBSCRIPTION/CANCEL",
     "operation": "POST"
   },
   {
-    "api_version": "2020-09-01",
+    "api_version": "2021-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.SUBSCRIPTION/ENABLE",
     "operation": "POST"
   },
@@ -4139,6 +4142,10 @@
       "properties/vnetConfiguration/internal",
       "properties/vnetConfiguration/platformReservedCidr",
       "properties/vnetConfiguration/platformReservedDnsIP",
+      "properties/workloadProfiles/maximumCount",
+      "properties/workloadProfiles/minimumCount",
+      "properties/workloadProfiles/name",
+      "properties/workloadProfiles/workloadProfileType",
       "properties/zoneRedundant",
       "tags"
     ]
@@ -4162,6 +4169,10 @@
       "properties/vnetConfiguration/internal",
       "properties/vnetConfiguration/platformReservedCidr",
       "properties/vnetConfiguration/platformReservedDnsIP",
+      "properties/workloadProfiles/maximumCount",
+      "properties/workloadProfiles/minimumCount",
+      "properties/workloadProfiles/name",
+      "properties/workloadProfiles/workloadProfileType",
       "properties/zoneRedundant",
       "tags"
     ]
@@ -7458,6 +7469,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}/LINKEDSERVERS/{}",
     "operation": "GET",
     "properties": [
+      "properties/geoReplicatedPrimaryHostName",
       "properties/linkedRedisCacheId",
       "properties/linkedRedisCacheLocation",
       "properties/provisioningState",
@@ -11990,6 +12002,7 @@
       "properties/storageProfile/diskCSIDriver/version",
       "properties/storageProfile/fileCSIDriver/enabled",
       "properties/storageProfile/snapshotController/enabled",
+      "properties/supportPlan",
       "properties/windowsProfile/adminPassword",
       "properties/windowsProfile/adminUsername",
       "properties/windowsProfile/gmsaProfile/dnsServer",
@@ -12206,6 +12219,7 @@
       "properties/storageProfile/diskCSIDriver/version",
       "properties/storageProfile/fileCSIDriver/enabled",
       "properties/storageProfile/snapshotController/enabled",
+      "properties/supportPlan",
       "properties/windowsProfile/adminPassword",
       "properties/windowsProfile/adminUsername",
       "properties/windowsProfile/gmsaProfile/dnsServer",
@@ -17913,6 +17927,7 @@
       "properties/managedDiskCustomerKeyUri",
       "properties/nodeCount",
       "properties/provisioningState",
+      "properties/seedNodes/ipAddress",
       "properties/sku"
     ]
   },
@@ -17931,6 +17946,7 @@
       "properties/managedDiskCustomerKeyUri",
       "properties/nodeCount",
       "properties/provisioningState",
+      "properties/seedNodes/ipAddress",
       "properties/sku"
     ]
   },
@@ -18881,6 +18897,59 @@
       "properties/logRules/sendAadLogs",
       "properties/logRules/sendActivityLogs",
       "properties/logRules/sendSubscriptionLogs"
+    ]
+  },
+  {
+    "api_version": "2023-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.ELASTICSAN/ELASTICSANS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.ELASTICSAN/ELASTICSANS/{}",
+    "operation": "GET",
+    "properties": [
+      "location",
+      "properties/availabilityZones",
+      "properties/baseSizeTiB",
+      "properties/extendedCapacitySizeTiB",
+      "properties/sku/name",
+      "properties/sku/tier",
+      "properties/totalIops",
+      "properties/totalMBps",
+      "properties/totalSizeTiB",
+      "properties/totalVolumeSizeGiB",
+      "properties/volumeGroupCount",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2023-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.ELASTICSAN/ELASTICSANS/{}",
+    "operation": "PATCH",
+    "properties": [
+      "properties/baseSizeTiB",
+      "properties/extendedCapacitySizeTiB",
+      "tags"
+    ]
+  },
+  {
+    "api_version": "2023-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.ELASTICSAN/ELASTICSANS/{}",
+    "operation": "PUT",
+    "properties": [
+      "location",
+      "properties/availabilityZones",
+      "properties/baseSizeTiB",
+      "properties/extendedCapacitySizeTiB",
+      "properties/sku/name",
+      "properties/sku/tier",
+      "properties/totalIops",
+      "properties/totalMBps",
+      "properties/totalSizeTiB",
+      "properties/totalVolumeSizeGiB",
+      "properties/volumeGroupCount",
+      "tags"
     ]
   },
   {
@@ -30114,6 +30183,8 @@
       "location",
       "name",
       "properties/activeActive",
+      "properties/allowRemoteVnetTraffic",
+      "properties/allowVirtualWanTraffic",
       "properties/bgpSettings/asn",
       "properties/bgpSettings/bgpPeeringAddress",
       "properties/bgpSettings/bgpPeeringAddresses/customBgpIpAddresses",
@@ -30122,7 +30193,10 @@
       "properties/bgpSettings/bgpPeeringAddresses/tunnelIpAddresses",
       "properties/bgpSettings/peerWeight",
       "properties/customRoutes/addressPrefixes",
+      "properties/disableIPSecReplayProtection",
       "properties/enableBgp",
+      "properties/enableBgpRouteTranslationForNat",
+      "properties/enableDnsForwarding",
       "properties/enablePrivateIpAddress",
       "properties/gatewayDefaultSite/id",
       "properties/gatewayType",
@@ -30135,13 +30209,33 @@
       "properties/ipConfigurations/properties/subnet/id",
       "properties/sku/name",
       "properties/sku/tier",
+      "properties/virtualNetworkGatewayPolicyGroups/name",
+      "properties/virtualNetworkGatewayPolicyGroups/properties/isDefault",
+      "properties/virtualNetworkGatewayPolicyGroups/properties/policyMembers/attributeType",
+      "properties/virtualNetworkGatewayPolicyGroups/properties/policyMembers/attributeValue",
+      "properties/virtualNetworkGatewayPolicyGroups/properties/policyMembers/name",
+      "properties/virtualNetworkGatewayPolicyGroups/properties/priority",
       "properties/vpnClientConfiguration/aadAudience",
       "properties/vpnClientConfiguration/aadIssuer",
       "properties/vpnClientConfiguration/aadTenant",
       "properties/vpnClientConfiguration/radiusServerAddress",
       "properties/vpnClientConfiguration/radiusServerSecret",
+      "properties/vpnClientConfiguration/radiusServers/radiusServerAddress",
+      "properties/vpnClientConfiguration/radiusServers/radiusServerScore",
+      "properties/vpnClientConfiguration/radiusServers/radiusServerSecret",
+      "properties/vpnClientConfiguration/vngClientConnectionConfigurations/name",
+      "properties/vpnClientConfiguration/vngClientConnectionConfigurations/properties/virtualNetworkGatewayPolicyGroups/id",
+      "properties/vpnClientConfiguration/vngClientConnectionConfigurations/properties/vpnClientAddressPool/addressPrefixes",
       "properties/vpnClientConfiguration/vpnAuthenticationTypes",
       "properties/vpnClientConfiguration/vpnClientAddressPool/addressPrefixes",
+      "properties/vpnClientConfiguration/vpnClientIpsecPolicies/dhGroup",
+      "properties/vpnClientConfiguration/vpnClientIpsecPolicies/ikeEncryption",
+      "properties/vpnClientConfiguration/vpnClientIpsecPolicies/ikeIntegrity",
+      "properties/vpnClientConfiguration/vpnClientIpsecPolicies/ipsecEncryption",
+      "properties/vpnClientConfiguration/vpnClientIpsecPolicies/ipsecIntegrity",
+      "properties/vpnClientConfiguration/vpnClientIpsecPolicies/pfsGroup",
+      "properties/vpnClientConfiguration/vpnClientIpsecPolicies/saDataSizeKilobytes",
+      "properties/vpnClientConfiguration/vpnClientIpsecPolicies/saLifeTimeSeconds",
       "properties/vpnClientConfiguration/vpnClientProtocols",
       "properties/vpnClientConfiguration/vpnClientRevokedCertificates/name",
       "properties/vpnClientConfiguration/vpnClientRevokedCertificates/properties/thumbprint",
@@ -30163,6 +30257,8 @@
       "location",
       "name",
       "properties/activeActive",
+      "properties/allowRemoteVnetTraffic",
+      "properties/allowVirtualWanTraffic",
       "properties/bgpSettings/asn",
       "properties/bgpSettings/bgpPeeringAddress",
       "properties/bgpSettings/bgpPeeringAddresses/customBgpIpAddresses",
@@ -30171,7 +30267,10 @@
       "properties/bgpSettings/bgpPeeringAddresses/tunnelIpAddresses",
       "properties/bgpSettings/peerWeight",
       "properties/customRoutes/addressPrefixes",
+      "properties/disableIPSecReplayProtection",
       "properties/enableBgp",
+      "properties/enableBgpRouteTranslationForNat",
+      "properties/enableDnsForwarding",
       "properties/enablePrivateIpAddress",
       "properties/gatewayDefaultSite/id",
       "properties/gatewayType",
@@ -30184,13 +30283,33 @@
       "properties/ipConfigurations/properties/subnet/id",
       "properties/sku/name",
       "properties/sku/tier",
+      "properties/virtualNetworkGatewayPolicyGroups/name",
+      "properties/virtualNetworkGatewayPolicyGroups/properties/isDefault",
+      "properties/virtualNetworkGatewayPolicyGroups/properties/policyMembers/attributeType",
+      "properties/virtualNetworkGatewayPolicyGroups/properties/policyMembers/attributeValue",
+      "properties/virtualNetworkGatewayPolicyGroups/properties/policyMembers/name",
+      "properties/virtualNetworkGatewayPolicyGroups/properties/priority",
       "properties/vpnClientConfiguration/aadAudience",
       "properties/vpnClientConfiguration/aadIssuer",
       "properties/vpnClientConfiguration/aadTenant",
       "properties/vpnClientConfiguration/radiusServerAddress",
       "properties/vpnClientConfiguration/radiusServerSecret",
+      "properties/vpnClientConfiguration/radiusServers/radiusServerAddress",
+      "properties/vpnClientConfiguration/radiusServers/radiusServerScore",
+      "properties/vpnClientConfiguration/radiusServers/radiusServerSecret",
+      "properties/vpnClientConfiguration/vngClientConnectionConfigurations/name",
+      "properties/vpnClientConfiguration/vngClientConnectionConfigurations/properties/virtualNetworkGatewayPolicyGroups/id",
+      "properties/vpnClientConfiguration/vngClientConnectionConfigurations/properties/vpnClientAddressPool/addressPrefixes",
       "properties/vpnClientConfiguration/vpnAuthenticationTypes",
       "properties/vpnClientConfiguration/vpnClientAddressPool/addressPrefixes",
+      "properties/vpnClientConfiguration/vpnClientIpsecPolicies/dhGroup",
+      "properties/vpnClientConfiguration/vpnClientIpsecPolicies/ikeEncryption",
+      "properties/vpnClientConfiguration/vpnClientIpsecPolicies/ikeIntegrity",
+      "properties/vpnClientConfiguration/vpnClientIpsecPolicies/ipsecEncryption",
+      "properties/vpnClientConfiguration/vpnClientIpsecPolicies/ipsecIntegrity",
+      "properties/vpnClientConfiguration/vpnClientIpsecPolicies/pfsGroup",
+      "properties/vpnClientConfiguration/vpnClientIpsecPolicies/saDataSizeKilobytes",
+      "properties/vpnClientConfiguration/vpnClientIpsecPolicies/saLifeTimeSeconds",
       "properties/vpnClientConfiguration/vpnClientProtocols",
       "properties/vpnClientConfiguration/vpnClientRevokedCertificates/name",
       "properties/vpnClientConfiguration/vpnClientRevokedCertificates/properties/thumbprint",
@@ -35964,20 +36083,11 @@
     ]
   },
   {
-    "api_version": "2021-02-01-preview",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}",
-    "operation": "GET",
-    "properties": [
-      "id",
-      "location",
-      "sku/name"
-    ]
-  },
-  {
     "api_version": "2023-02-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}",
     "operation": "GET",
     "properties": [
+      "id",
       "location",
       "properties/autoPauseDelay",
       "properties/collation",
@@ -35991,6 +36101,7 @@
       "properties/maintenanceConfigurationId",
       "properties/maxSizeBytes",
       "properties/minCapacity",
+      "properties/preferredEnclaveType",
       "properties/readScale",
       "properties/recoverableDatabaseId",
       "properties/requestedBackupStorageRedundancy",
@@ -36005,14 +36116,6 @@
     ]
   },
   {
-    "api_version": "2021-02-01-preview",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}",
-    "operation": "PATCH",
-    "properties": [
-      "sku/name"
-    ]
-  },
-  {
     "api_version": "2023-02-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}",
     "operation": "PATCH",
@@ -36024,6 +36127,7 @@
       "properties/maintenanceConfigurationId",
       "properties/maxSizeBytes",
       "properties/minCapacity",
+      "properties/preferredEnclaveType",
       "properties/readScale",
       "properties/recoverableDatabaseId",
       "properties/requestedBackupStorageRedundancy",
@@ -36065,6 +36169,7 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/DATABASES/{}",
     "operation": "PUT",
     "properties": [
+      "id",
       "location",
       "properties/autoPauseDelay",
       "properties/collation",
@@ -36078,6 +36183,7 @@
       "properties/maintenanceConfigurationId",
       "properties/maxSizeBytes",
       "properties/minCapacity",
+      "properties/preferredEnclaveType",
       "properties/readScale",
       "properties/recoverableDatabaseId",
       "properties/requestedBackupStorageRedundancy",
@@ -36348,7 +36454,7 @@
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-11-01-preview",
+    "api_version": "2023-02-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/ELASTICPOOLS/{}",
     "operation": "DELETE"
   },
@@ -36369,7 +36475,7 @@
     ]
   },
   {
-    "api_version": "2020-11-01-preview",
+    "api_version": "2023-02-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/ELASTICPOOLS/{}",
     "operation": "GET",
     "properties": [
@@ -36380,6 +36486,7 @@
       "properties/maxSizeBytes",
       "properties/perDatabaseSettings/maxCapacity",
       "properties/perDatabaseSettings/minCapacity",
+      "properties/preferredEnclaveType",
       "properties/zoneRedundant",
       "sku/capacity",
       "sku/family",
@@ -36405,7 +36512,7 @@
     ]
   },
   {
-    "api_version": "2020-11-01-preview",
+    "api_version": "2023-02-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/ELASTICPOOLS/{}",
     "operation": "PUT",
     "properties": [
@@ -36416,6 +36523,7 @@
       "properties/maxSizeBytes",
       "properties/perDatabaseSettings/maxCapacity",
       "properties/perDatabaseSettings/minCapacity",
+      "properties/preferredEnclaveType",
       "properties/zoneRedundant",
       "sku/capacity",
       "sku/family",
@@ -37136,6 +37244,16 @@
       "properties/primaryEndpoints/blob",
       "properties/primaryEndpoints/dfs",
       "properties/primaryEndpoints/file",
+      "properties/primaryEndpoints/internetEndpoints/blob",
+      "properties/primaryEndpoints/internetEndpoints/dfs",
+      "properties/primaryEndpoints/internetEndpoints/file",
+      "properties/primaryEndpoints/internetEndpoints/web",
+      "properties/primaryEndpoints/microsoftEndpoints/blob",
+      "properties/primaryEndpoints/microsoftEndpoints/dfs",
+      "properties/primaryEndpoints/microsoftEndpoints/file",
+      "properties/primaryEndpoints/microsoftEndpoints/queue",
+      "properties/primaryEndpoints/microsoftEndpoints/table",
+      "properties/primaryEndpoints/microsoftEndpoints/web",
       "properties/primaryEndpoints/queue",
       "properties/primaryEndpoints/table",
       "properties/primaryEndpoints/web",
@@ -37149,6 +37267,16 @@
       "properties/secondaryEndpoints/blob",
       "properties/secondaryEndpoints/dfs",
       "properties/secondaryEndpoints/file",
+      "properties/secondaryEndpoints/internetEndpoints/blob",
+      "properties/secondaryEndpoints/internetEndpoints/dfs",
+      "properties/secondaryEndpoints/internetEndpoints/file",
+      "properties/secondaryEndpoints/internetEndpoints/web",
+      "properties/secondaryEndpoints/microsoftEndpoints/blob",
+      "properties/secondaryEndpoints/microsoftEndpoints/dfs",
+      "properties/secondaryEndpoints/microsoftEndpoints/file",
+      "properties/secondaryEndpoints/microsoftEndpoints/queue",
+      "properties/secondaryEndpoints/microsoftEndpoints/table",
+      "properties/secondaryEndpoints/microsoftEndpoints/web",
       "properties/secondaryEndpoints/queue",
       "properties/secondaryEndpoints/table",
       "properties/secondaryEndpoints/web",
@@ -43607,7 +43735,8 @@
       "properties/permissions/notActions",
       "properties/permissions/notDataActions",
       "properties/roleName",
-      "properties/type"
+      "properties/type",
+      "type"
     ]
   },
   {
@@ -43814,6 +43943,17 @@
     ]
   },
   {
+    "api_version": "7.4",
+    "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/ROLEASSIGNMENTS/{}",
+    "operation": "GET",
+    "properties": [
+      "id",
+      "name",
+      "properties/principalId",
+      "properties/roleDefinitionId"
+    ]
+  },
+  {
     "api_version": "2020-04-01-preview",
     "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/ROLEASSIGNMENTS/{}",
     "operation": "PUT",
@@ -43838,6 +43978,15 @@
       "properties/description",
       "properties/principalId",
       "properties/principalType",
+      "properties/roleDefinitionId"
+    ]
+  },
+  {
+    "api_version": "7.4",
+    "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/ROLEASSIGNMENTS/{}",
+    "operation": "PUT",
+    "properties": [
+      "properties/principalId",
       "properties/roleDefinitionId"
     ]
   },
@@ -43908,7 +44057,8 @@
       "properties/permissions/notActions",
       "properties/permissions/notDataActions",
       "properties/roleName",
-      "properties/type"
+      "properties/type",
+      "type"
     ]
   },
   {
@@ -43921,11 +44071,44 @@
     ]
   },
   {
+    "api_version": "7.4",
+    "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/ROLEDEFINITIONS/{}",
+    "operation": "GET",
+    "properties": [
+      "id",
+      "name",
+      "properties/assignableScopes",
+      "properties/description",
+      "properties/permissions/actions",
+      "properties/permissions/dataActions",
+      "properties/permissions/notActions",
+      "properties/permissions/notDataActions",
+      "properties/roleName",
+      "properties/type"
+    ]
+  },
+  {
     "api_version": "2018-01-01-preview",
     "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/ROLEDEFINITIONS/{}",
     "operation": "PUT",
     "properties": [
       "id",
+      "properties/assignableScopes",
+      "properties/description",
+      "properties/permissions/actions",
+      "properties/permissions/dataActions",
+      "properties/permissions/notActions",
+      "properties/permissions/notDataActions",
+      "properties/roleName",
+      "properties/type",
+      "type"
+    ]
+  },
+  {
+    "api_version": "7.4",
+    "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/ROLEDEFINITIONS/{}",
+    "operation": "PUT",
+    "properties": [
       "properties/assignableScopes",
       "properties/description",
       "properties/permissions/actions",
