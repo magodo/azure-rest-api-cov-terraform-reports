@@ -1069,6 +1069,18 @@
     ]
   },
   {
+    "api_version": "2022-12-01",
+    "api_path": "/SUBSCRIPTIONS/{}/LOCATIONS",
+    "operation": "GET",
+    "properties": [
+      "value/availabilityZoneMappings/logicalZone",
+      "value/availabilityZoneMappings/physicalZone",
+      "value/displayName",
+      "value/metadata/regionType",
+      "value/name"
+    ]
+  },
+  {
     "api_version": "2022-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/LOCATIONS/{}/DELETEDSERVICES/{}",
     "operation": "DELETE"
@@ -4002,6 +4014,18 @@
       "properties/template/containers/resources/memory",
       "properties/template/containers/volumeMounts/mountPath",
       "properties/template/containers/volumeMounts/volumeName",
+      "properties/template/initContainers/args",
+      "properties/template/initContainers/command",
+      "properties/template/initContainers/env/name",
+      "properties/template/initContainers/env/secretRef",
+      "properties/template/initContainers/env/value",
+      "properties/template/initContainers/image",
+      "properties/template/initContainers/name",
+      "properties/template/initContainers/resources/cpu",
+      "properties/template/initContainers/resources/ephemeralStorage",
+      "properties/template/initContainers/resources/memory",
+      "properties/template/initContainers/volumeMounts/mountPath",
+      "properties/template/initContainers/volumeMounts/volumeName",
       "properties/template/revisionSuffix",
       "properties/template/scale/maxReplicas",
       "properties/template/scale/minReplicas",
@@ -4023,6 +4047,7 @@
       "properties/template/volumes/name",
       "properties/template/volumes/storageName",
       "properties/template/volumes/storageType",
+      "properties/workloadProfileName",
       "tags"
     ]
   },
@@ -4089,6 +4114,18 @@
       "properties/template/containers/resources/memory",
       "properties/template/containers/volumeMounts/mountPath",
       "properties/template/containers/volumeMounts/volumeName",
+      "properties/template/initContainers/args",
+      "properties/template/initContainers/command",
+      "properties/template/initContainers/env/name",
+      "properties/template/initContainers/env/secretRef",
+      "properties/template/initContainers/env/value",
+      "properties/template/initContainers/image",
+      "properties/template/initContainers/name",
+      "properties/template/initContainers/resources/cpu",
+      "properties/template/initContainers/resources/ephemeralStorage",
+      "properties/template/initContainers/resources/memory",
+      "properties/template/initContainers/volumeMounts/mountPath",
+      "properties/template/initContainers/volumeMounts/volumeName",
       "properties/template/revisionSuffix",
       "properties/template/scale/maxReplicas",
       "properties/template/scale/minReplicas",
@@ -4110,6 +4147,7 @@
       "properties/template/volumes/name",
       "properties/template/volumes/storageName",
       "properties/template/volumes/storageType",
+      "properties/workloadProfileName",
       "tags"
     ]
   },
@@ -5162,7 +5200,6 @@
       "properties/ssoProperties/clientSecret",
       "properties/ssoProperties/issuerUri",
       "properties/ssoProperties/scope",
-      "properties/url",
       "sku/capacity",
       "sku/name",
       "sku/tier"
@@ -5198,7 +5235,6 @@
       "properties/ssoProperties/clientSecret",
       "properties/ssoProperties/issuerUri",
       "properties/ssoProperties/scope",
-      "properties/url",
       "sku/capacity",
       "sku/name",
       "sku/tier"
@@ -7341,6 +7377,7 @@
       "properties/redisConfiguration/rdb-backup-frequency",
       "properties/redisConfiguration/rdb-backup-max-snapshot-count",
       "properties/redisConfiguration/rdb-storage-connection-string",
+      "properties/redisConfiguration/storage-subscription-id",
       "properties/redisVersion",
       "properties/replicasPerMaster",
       "properties/replicasPerPrimary",
@@ -7383,6 +7420,7 @@
       "properties/redisConfiguration/rdb-backup-frequency",
       "properties/redisConfiguration/rdb-backup-max-snapshot-count",
       "properties/redisConfiguration/rdb-storage-connection-string",
+      "properties/redisConfiguration/storage-subscription-id",
       "properties/redisVersion",
       "properties/replicasPerMaster",
       "properties/replicasPerPrimary",
@@ -7422,6 +7460,7 @@
       "properties/redisConfiguration/rdb-backup-frequency",
       "properties/redisConfiguration/rdb-backup-max-snapshot-count",
       "properties/redisConfiguration/rdb-storage-connection-string",
+      "properties/redisConfiguration/storage-subscription-id",
       "properties/redisVersion",
       "properties/replicasPerMaster",
       "properties/replicasPerPrimary",
@@ -9576,6 +9615,7 @@
     "operation": "GET",
     "properties": [
       "location",
+      "name",
       "properties/architecture",
       "properties/description",
       "properties/disallowed/diskTypes",
@@ -9607,6 +9647,7 @@
     "operation": "PUT",
     "properties": [
       "location",
+      "name",
       "properties/architecture",
       "properties/description",
       "properties/disallowed/diskTypes",
@@ -14767,12 +14808,12 @@
     ]
   },
   {
-    "api_version": "2022-04-01",
+    "api_version": "2023-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAPROTECTION/BACKUPVAULTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-04-01",
+    "api_version": "2023-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAPROTECTION/BACKUPVAULTS/{}",
     "operation": "GET",
     "properties": [
@@ -14786,7 +14827,7 @@
     ]
   },
   {
-    "api_version": "2022-04-01",
+    "api_version": "2023-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAPROTECTION/BACKUPVAULTS/{}",
     "operation": "PUT",
     "properties": [
@@ -14800,12 +14841,12 @@
     ]
   },
   {
-    "api_version": "2022-04-01",
+    "api_version": "2023-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAPROTECTION/BACKUPVAULTS/{}/BACKUPINSTANCES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-04-01",
+    "api_version": "2023-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAPROTECTION/BACKUPVAULTS/{}/BACKUPINSTANCES/{}",
     "operation": "GET",
     "properties": [
@@ -14833,7 +14874,7 @@
     ]
   },
   {
-    "api_version": "2022-04-01",
+    "api_version": "2023-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAPROTECTION/BACKUPVAULTS/{}/BACKUPINSTANCES/{}",
     "operation": "PUT",
     "properties": [
@@ -14861,12 +14902,12 @@
     ]
   },
   {
-    "api_version": "2022-04-01",
+    "api_version": "2023-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAPROTECTION/BACKUPVAULTS/{}/BACKUPPOLICIES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-04-01",
+    "api_version": "2023-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAPROTECTION/BACKUPVAULTS/{}/BACKUPPOLICIES/{}",
     "operation": "GET",
     "properties": [
@@ -14895,7 +14936,7 @@
     ]
   },
   {
-    "api_version": "2022-04-01",
+    "api_version": "2023-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAPROTECTION/BACKUPVAULTS/{}/BACKUPPOLICIES/{}",
     "operation": "PUT",
     "properties": [
@@ -14924,12 +14965,12 @@
     ]
   },
   {
-    "api_version": "2022-04-01",
+    "api_version": "2023-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAPROTECTION/RESOURCEGUARDS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-04-01",
+    "api_version": "2023-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAPROTECTION/RESOURCEGUARDS/{}",
     "operation": "GET",
     "properties": [
@@ -14939,7 +14980,7 @@
     ]
   },
   {
-    "api_version": "2022-04-01",
+    "api_version": "2023-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAPROTECTION/RESOURCEGUARDS/{}",
     "operation": "PUT",
     "properties": [
@@ -25386,6 +25427,8 @@
     "operation": "GET",
     "properties": [
       "location",
+      "properties/defaultIngestionSettings/dataCollectionEndpointResourceId",
+      "properties/defaultIngestionSettings/dataCollectionRuleResourceId",
       "properties/metrics/prometheusQueryEndpoint",
       "properties/publicNetworkAccess",
       "tags"
@@ -25397,6 +25440,8 @@
     "operation": "PUT",
     "properties": [
       "location",
+      "properties/defaultIngestionSettings/dataCollectionEndpointResourceId",
+      "properties/defaultIngestionSettings/dataCollectionRuleResourceId",
       "properties/metrics/prometheusQueryEndpoint",
       "properties/publicNetworkAccess",
       "tags"
@@ -31165,6 +31210,7 @@
       "properties/defaultDataCollectionRuleResourceId",
       "properties/features/disableLocalAuth",
       "properties/features/enableLogAccessUsingOnlyResourcePermissions",
+      "properties/features/immediatePurgeDataOn30Days",
       "properties/forceCmkForQuery",
       "properties/publicNetworkAccessForIngestion",
       "properties/publicNetworkAccessForQuery",
@@ -31190,6 +31236,7 @@
       "properties/defaultDataCollectionRuleResourceId",
       "properties/features/disableLocalAuth",
       "properties/features/enableLogAccessUsingOnlyResourcePermissions",
+      "properties/features/immediatePurgeDataOn30Days",
       "properties/forceCmkForQuery",
       "properties/publicNetworkAccessForIngestion",
       "properties/publicNetworkAccessForQuery",
@@ -34067,13 +34114,10 @@
     "operation": "GET",
     "properties": [
       "location",
-      "properties/actions{EventHub}/actionType",
       "properties/actions{EventHub}/connectionString",
       "properties/actions{EventHub}/eventHubResourceId",
-      "properties/actions{LogicApp}/actionType",
       "properties/actions{LogicApp}/logicAppResourceId",
       "properties/actions{LogicApp}/uri",
-      "properties/actions{Workspace}/actionType",
       "properties/actions{Workspace}/workspaceResourceId",
       "properties/description",
       "properties/isEnabled",
@@ -34093,13 +34137,10 @@
     "operation": "PUT",
     "properties": [
       "location",
-      "properties/actions{EventHub}/actionType",
       "properties/actions{EventHub}/connectionString",
       "properties/actions{EventHub}/eventHubResourceId",
-      "properties/actions{LogicApp}/actionType",
       "properties/actions{LogicApp}/logicAppResourceId",
       "properties/actions{LogicApp}/uri",
-      "properties/actions{Workspace}/actionType",
       "properties/actions{Workspace}/workspaceResourceId",
       "properties/description",
       "properties/isEnabled",
@@ -37987,6 +38028,8 @@
     "properties": [
       "properties/blobNfs/target",
       "properties/blobNfs/usageModel",
+      "properties/blobNfs/verificationTimer",
+      "properties/blobNfs/writeBackTimer",
       "properties/clfs/target",
       "properties/junctions/namespacePath",
       "properties/junctions/nfsAccessPolicy",
@@ -37994,6 +38037,8 @@
       "properties/junctions/targetPath",
       "properties/nfs3/target",
       "properties/nfs3/usageModel",
+      "properties/nfs3/verificationTimer",
+      "properties/nfs3/writeBackTimer",
       "properties/targetType"
     ]
   },
@@ -38004,6 +38049,8 @@
     "properties": [
       "properties/blobNfs/target",
       "properties/blobNfs/usageModel",
+      "properties/blobNfs/verificationTimer",
+      "properties/blobNfs/writeBackTimer",
       "properties/clfs/target",
       "properties/junctions/namespacePath",
       "properties/junctions/nfsAccessPolicy",
@@ -38011,6 +38058,8 @@
       "properties/junctions/targetPath",
       "properties/nfs3/target",
       "properties/nfs3/usageModel",
+      "properties/nfs3/verificationTimer",
+      "properties/nfs3/writeBackTimer",
       "properties/targetType"
     ]
   },
