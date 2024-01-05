@@ -4316,7 +4316,29 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2022-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.SECURITY/SETTINGS/{}",
+    "operation": "GET",
+    "variant": "AlertSyncSettings",
+    "properties": [
+      {
+        "addr": "properties/enabled"
+      }
+    ]
+  },
+  {
+    "api_version": "2022-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.SECURITY/SETTINGS/{}",
+    "operation": "GET",
+    "variant": "DataExportSettings",
+    "properties": [
+      {
+        "addr": "properties/enabled"
+      }
+    ]
+  },
+  {
+    "api_version": "2022-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.SECURITY/SETTINGS/{}",
     "operation": "PUT",
     "variant": "AlertSyncSettings",
@@ -4327,7 +4349,7 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2022-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.SECURITY/SETTINGS/{}",
     "operation": "PUT",
     "variant": "DataExportSettings",
@@ -13605,6 +13627,15 @@
         ]
       },
       {
+        "addr": "properties/managedEnvironmentId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_spring_cloud_service",
+            "addr": "/managed_environment_id"
+          }
+        ]
+      },
+      {
         "addr": "properties/marketplaceResource/plan",
         "app_property_maps": [
           {
@@ -13731,10 +13762,32 @@
         ]
       },
       {
-        "addr": "sku/tier"
+        "addr": "sku/tier",
+        "app_property_maps": [
+          {
+            "name": "azurerm_spring_cloud_service",
+            "addr": "/sku_tier"
+          }
+        ]
       },
       {
         "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-09-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "sku/capacity"
+      },
+      {
+        "addr": "sku/name"
+      },
+      {
+        "addr": "sku/tier"
       }
     ]
   },
@@ -13753,6 +13806,15 @@
         ]
       },
       {
+        "addr": "properties/managedEnvironmentId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_spring_cloud_service",
+            "addr": "/managed_environment_id"
+          }
+        ]
+      },
+      {
         "addr": "properties/marketplaceResource/plan",
         "app_property_maps": [
           {
@@ -13879,7 +13941,13 @@
         ]
       },
       {
-        "addr": "sku/tier"
+        "addr": "sku/tier",
+        "app_property_maps": [
+          {
+            "name": "azurerm_spring_cloud_service",
+            "addr": "/sku_tier"
+          }
+        ]
       },
       {
         "addr": "tags"
@@ -13901,6 +13969,15 @@
         ]
       },
       {
+        "addr": "properties/managedEnvironmentId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_spring_cloud_service",
+            "addr": "/managed_environment_id"
+          }
+        ]
+      },
+      {
         "addr": "properties/marketplaceResource/plan",
         "app_property_maps": [
           {
@@ -14027,7 +14104,13 @@
         ]
       },
       {
-        "addr": "sku/tier"
+        "addr": "sku/tier",
+        "app_property_maps": [
+          {
+            "name": "azurerm_spring_cloud_service",
+            "addr": "/sku_tier"
+          }
+        ]
       },
       {
         "addr": "tags"
@@ -14035,12 +14118,12 @@
     ]
   },
   {
-    "api_version": "2023-05-01-preview",
+    "api_version": "2023-09-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APIPORTALS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-05-01-preview",
+    "api_version": "2023-09-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APIPORTALS/{}",
     "operation": "GET",
     "properties": [
@@ -14072,15 +14155,6 @@
         "addr": "properties/ssoProperties/scope"
       },
       {
-        "addr": "properties/url",
-        "app_property_maps": [
-          {
-            "name": "azurerm_spring_cloud_api_portal",
-            "addr": "/url"
-          }
-        ]
-      },
-      {
         "addr": "sku/capacity",
         "app_property_maps": [
           {
@@ -14098,7 +14172,7 @@
     ]
   },
   {
-    "api_version": "2023-05-01-preview",
+    "api_version": "2023-09-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APIPORTALS/{}",
     "operation": "PUT",
     "properties": [
@@ -14128,15 +14202,6 @@
       },
       {
         "addr": "properties/ssoProperties/scope"
-      },
-      {
-        "addr": "properties/url",
-        "app_property_maps": [
-          {
-            "name": "azurerm_spring_cloud_api_portal",
-            "addr": "/url"
-          }
-        ]
       },
       {
         "addr": "sku/capacity",
@@ -15840,12 +15905,12 @@
     ]
   },
   {
-    "api_version": "2023-05-01-preview",
+    "api_version": "2023-09-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/GATEWAYS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-05-01-preview",
+    "api_version": "2023-09-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/GATEWAYS/{}",
     "operation": "GET",
     "properties": [
@@ -15996,7 +16061,7 @@
     ]
   },
   {
-    "api_version": "2023-05-01-preview",
+    "api_version": "2023-09-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/GATEWAYS/{}",
     "operation": "PUT",
     "properties": [
@@ -17464,6 +17529,43 @@
       },
       {
         "addr": "properties/source/value"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/POWERSHELL72MODULES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/POWERSHELL72MODULES/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/error/message"
+      },
+      {
+        "addr": "properties/isGlobal"
+      },
+      {
+        "addr": "properties/provisioningState"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/POWERSHELL72MODULES/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "properties/contentLink/contentHash/algorithm"
+      },
+      {
+        "addr": "properties/contentLink/contentHash/value"
+      },
+      {
+        "addr": "properties/contentLink/uri"
       }
     ]
   },
@@ -45818,6 +45920,9 @@
     "operation": "GET",
     "properties": [
       {
+        "addr": "identity"
+      },
+      {
         "addr": "identity/principalId"
       },
       {
@@ -45912,6 +46017,9 @@
     "operation": "PUT",
     "properties": [
       {
+        "addr": "identity"
+      },
+      {
         "addr": "identity/principalId"
       },
       {
@@ -47994,6 +48102,73 @@
       },
       {
         "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2018-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAFACTORY/FACTORIES/{}/CREDENTIALS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2018-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAFACTORY/FACTORIES/{}/CREDENTIALS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/annotations"
+      },
+      {
+        "addr": "properties/description",
+        "app_property_maps": [
+          {
+            "name": "azurerm_data_factory_credential_user_managed_identity",
+            "addr": "/description"
+          }
+        ]
+      },
+      {
+        "addr": "properties/typeProperties/resourceId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_data_factory_credential_user_managed_identity",
+            "addr": "/identity_id"
+          }
+        ]
+      },
+      {
+        "addr": "type"
+      }
+    ]
+  },
+  {
+    "api_version": "2018-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAFACTORY/FACTORIES/{}/CREDENTIALS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "properties/annotations"
+      },
+      {
+        "addr": "properties/description",
+        "app_property_maps": [
+          {
+            "name": "azurerm_data_factory_credential_user_managed_identity",
+            "addr": "/description"
+          }
+        ]
+      },
+      {
+        "addr": "properties/typeProperties/resourceId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_data_factory_credential_user_managed_identity",
+            "addr": "/identity_id"
+          }
+        ]
+      },
+      {
+        "addr": "type"
       }
     ]
   },
@@ -55366,6 +55541,9 @@
         "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/schedule/repeatingTimeIntervals"
       },
       {
+        "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/schedule/timeZone"
+      },
+      {
         "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/taggingCriteria/criteria{ScheduleBasedBackupCriteria}/absoluteCriteria"
       },
       {
@@ -55437,6 +55615,9 @@
       },
       {
         "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/schedule/repeatingTimeIntervals"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/schedule/timeZone"
       },
       {
         "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/taggingCriteria/criteria{ScheduleBasedBackupCriteria}/absoluteCriteria"
@@ -111686,6 +111867,32 @@
     ]
   },
   {
+    "api_version": "2022-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/TABLES/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/plan"
+      },
+      {
+        "addr": "properties/retentionInDays"
+      }
+    ]
+  },
+  {
+    "api_version": "2022-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/TABLES/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "properties/plan"
+      },
+      {
+        "addr": "properties/retentionInDays"
+      }
+    ]
+  },
+  {
     "api_version": "2015-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONSMANAGEMENT/SOLUTIONS/{}",
     "operation": "DELETE"
@@ -139719,6 +139926,9 @@
         "addr": "properties/siteConfig/preWarmedInstanceCount"
       },
       {
+        "addr": "properties/siteConfig/publicNetworkAccess"
+      },
+      {
         "addr": "properties/siteConfig/pythonVersion"
       },
       {
@@ -140674,6 +140884,9 @@
       },
       {
         "addr": "properties/siteConfig/preWarmedInstanceCount"
+      },
+      {
+        "addr": "properties/siteConfig/publicNetworkAccess"
       },
       {
         "addr": "properties/siteConfig/pythonVersion"
@@ -142895,6 +143108,9 @@
         ]
       },
       {
+        "addr": "properties/publicNetworkAccess"
+      },
+      {
         "addr": "properties/pythonVersion",
         "app_property_maps": [
           {
@@ -144651,6 +144867,9 @@
         ]
       },
       {
+        "addr": "properties/publicNetworkAccess"
+      },
+      {
         "addr": "properties/pythonVersion",
         "app_property_maps": [
           {
@@ -145710,6 +145929,9 @@
         "addr": "properties/siteConfig/preWarmedInstanceCount"
       },
       {
+        "addr": "properties/siteConfig/publicNetworkAccess"
+      },
+      {
         "addr": "properties/siteConfig/pythonVersion"
       },
       {
@@ -146483,6 +146705,9 @@
       },
       {
         "addr": "properties/siteConfig/preWarmedInstanceCount"
+      },
+      {
+        "addr": "properties/siteConfig/publicNetworkAccess"
       },
       {
         "addr": "properties/siteConfig/pythonVersion"
@@ -148499,6 +148724,9 @@
         ]
       },
       {
+        "addr": "properties/publicNetworkAccess"
+      },
+      {
         "addr": "properties/pythonVersion",
         "app_property_maps": [
           {
@@ -150037,6 +150265,9 @@
             "addr": "/site_config/0/pre_warmed_instance_count"
           }
         ]
+      },
+      {
+        "addr": "properties/publicNetworkAccess"
       },
       {
         "addr": "properties/pythonVersion",
@@ -153182,6 +153413,9 @@
         "addr": "id"
       },
       {
+        "addr": "name"
+      },
+      {
         "addr": "properties/assignableScopes"
       },
       {
@@ -154406,6 +154640,9 @@
         ]
       },
       {
+        "addr": "name"
+      },
+      {
         "addr": "properties/assignableScopes"
       },
       {
@@ -154515,6 +154752,9 @@
             "addr": "/role_definition_resource_id"
           }
         ]
+      },
+      {
+        "addr": "name"
       },
       {
         "addr": "properties/assignableScopes"
