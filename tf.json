@@ -4316,6 +4316,45 @@
     ]
   },
   {
+    "api_version": "2023-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.SECURITY/SERVERVULNERABILITYASSESSMENTSSETTINGS/AZURESERVERSSETTING",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.SECURITY/SERVERVULNERABILITYASSESSMENTSSETTINGS/AZURESERVERSSETTING",
+    "operation": "GET",
+    "variant": "AzureServersSetting",
+    "properties": [
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/selectedProvider"
+      },
+      {
+        "addr": "type"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.SECURITY/SERVERVULNERABILITYASSESSMENTSSETTINGS/AZURESERVERSSETTING",
+    "operation": "PUT",
+    "variant": "AzureServersSetting",
+    "properties": [
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/selectedProvider"
+      },
+      {
+        "addr": "type"
+      }
+    ]
+  },
+  {
     "api_version": "2022-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.SECURITY/SETTINGS/{}",
     "operation": "GET",
@@ -12021,6 +12060,18 @@
         ]
       },
       {
+        "addr": "properties/configuration/ingress/ipSecurityRestrictions/action"
+      },
+      {
+        "addr": "properties/configuration/ingress/ipSecurityRestrictions/description"
+      },
+      {
+        "addr": "properties/configuration/ingress/ipSecurityRestrictions/ipAddressRange"
+      },
+      {
+        "addr": "properties/configuration/ingress/ipSecurityRestrictions/name"
+      },
+      {
         "addr": "properties/configuration/ingress/targetPort",
         "app_property_maps": [
           {
@@ -12407,6 +12458,18 @@
             "addr": "/ingress/0/fqdn"
           }
         ]
+      },
+      {
+        "addr": "properties/configuration/ingress/ipSecurityRestrictions/action"
+      },
+      {
+        "addr": "properties/configuration/ingress/ipSecurityRestrictions/description"
+      },
+      {
+        "addr": "properties/configuration/ingress/ipSecurityRestrictions/ipAddressRange"
+      },
+      {
+        "addr": "properties/configuration/ingress/ipSecurityRestrictions/name"
       },
       {
         "addr": "properties/configuration/ingress/targetPort",
@@ -33065,6 +33128,9 @@
         ]
       },
       {
+        "addr": "properties/applicationProfile"
+      },
+      {
         "addr": "properties/applicationProfile/galleryApplications/configurationReference"
       },
       {
@@ -34740,6 +34806,9 @@
             "addr": "/additional_capabilities/0/ultra_ssd_enabled"
           }
         ]
+      },
+      {
+        "addr": "properties/applicationProfile"
       },
       {
         "addr": "properties/applicationProfile/galleryApplications/configurationReference"
@@ -78778,9 +78847,6 @@
         ]
       },
       {
-        "addr": "name"
-      },
-      {
         "addr": "properties/allowedFqdnList"
       },
       {
@@ -79020,9 +79086,6 @@
         ]
       },
       {
-        "addr": "name"
-      },
-      {
         "addr": "properties/allowedFqdnList"
       },
       {
@@ -79343,9 +79406,6 @@
         "addr": "location"
       },
       {
-        "addr": "name"
-      },
-      {
         "addr": "properties/hotCachePeriod"
       },
       {
@@ -79366,9 +79426,6 @@
         "addr": "location"
       },
       {
-        "addr": "name"
-      },
-      {
         "addr": "properties/hotCachePeriod"
       },
       {
@@ -83037,12 +83094,12 @@
     ]
   },
   {
-    "api_version": "2023-04-01",
+    "api_version": "2023-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MACHINELEARNINGSERVICES/WORKSPACES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-04-01",
+    "api_version": "2023-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MACHINELEARNINGSERVICES/WORKSPACES/{}",
     "operation": "GET",
     "properties": [
@@ -83202,7 +83259,7 @@
     ]
   },
   {
-    "api_version": "2023-04-01",
+    "api_version": "2023-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MACHINELEARNINGSERVICES/WORKSPACES/{}",
     "operation": "PUT",
     "properties": [
@@ -83362,12 +83419,12 @@
     ]
   },
   {
-    "api_version": "2023-04-01",
+    "api_version": "2023-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MACHINELEARNINGSERVICES/WORKSPACES/{}/COMPUTES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-04-01",
+    "api_version": "2023-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MACHINELEARNINGSERVICES/WORKSPACES/{}/COMPUTES/{}",
     "operation": "GET",
     "properties": [
@@ -83695,7 +83752,7 @@
     ]
   },
   {
-    "api_version": "2023-04-01",
+    "api_version": "2023-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MACHINELEARNINGSERVICES/WORKSPACES/{}/COMPUTES/{}",
     "operation": "PUT",
     "properties": [
@@ -84023,12 +84080,12 @@
     ]
   },
   {
-    "api_version": "2023-04-01",
+    "api_version": "2023-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MACHINELEARNINGSERVICES/WORKSPACES/{}/DATASTORES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-04-01",
+    "api_version": "2023-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MACHINELEARNINGSERVICES/WORKSPACES/{}/DATASTORES/{}",
     "operation": "GET",
     "properties": [
@@ -84154,7 +84211,7 @@
     ]
   },
   {
-    "api_version": "2023-04-01",
+    "api_version": "2023-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MACHINELEARNINGSERVICES/WORKSPACES/{}/DATASTORES/{}",
     "operation": "PUT",
     "properties": [
@@ -98908,6 +98965,9 @@
         ]
       },
       {
+        "addr": "properties/policySettings/requestBodyCheck"
+      },
+      {
         "addr": "sku/name",
         "app_property_maps": [
           {
@@ -99208,6 +99268,9 @@
             "addr": "/redirect_url"
           }
         ]
+      },
+      {
+        "addr": "properties/policySettings/requestBodyCheck"
       },
       {
         "addr": "sku/name",
@@ -100797,6 +100860,15 @@
         "addr": "properties/networkManagerScopeAccesses"
       },
       {
+        "addr": "properties/networkManagerScopes/crossTenantScopes/managementGroups"
+      },
+      {
+        "addr": "properties/networkManagerScopes/crossTenantScopes/subscriptions"
+      },
+      {
+        "addr": "properties/networkManagerScopes/crossTenantScopes/tenantId"
+      },
+      {
         "addr": "properties/networkManagerScopes/managementGroups"
       },
       {
@@ -100835,6 +100907,15 @@
       },
       {
         "addr": "properties/networkManagerScopeAccesses"
+      },
+      {
+        "addr": "properties/networkManagerScopes/crossTenantScopes/managementGroups"
+      },
+      {
+        "addr": "properties/networkManagerScopes/crossTenantScopes/subscriptions"
+      },
+      {
+        "addr": "properties/networkManagerScopes/crossTenantScopes/tenantId"
       },
       {
         "addr": "properties/networkManagerScopes/managementGroups"
@@ -123925,6 +124006,12 @@
         "addr": "id"
       },
       {
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
+      },
+      {
         "addr": "location"
       },
       {
@@ -123968,6 +124055,18 @@
             "addr": "/elastic_pool_id"
           }
         ]
+      },
+      {
+        "addr": "properties/encryptionProtector",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mssql_database",
+            "addr": "/transparent_data_encryption_key_vault_key_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/encryptionProtectorAutoRotation"
       },
       {
         "addr": "properties/highAvailabilityReplicaCount",
@@ -124061,6 +124160,12 @@
     "operation": "PATCH",
     "properties": [
       {
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
+      },
+      {
         "addr": "properties/autoPauseDelay",
         "app_property_maps": [
           {
@@ -124077,6 +124182,18 @@
             "addr": "/elastic_pool_id"
           }
         ]
+      },
+      {
+        "addr": "properties/encryptionProtector",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mssql_database",
+            "addr": "/transparent_data_encryption_key_vault_key_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/encryptionProtectorAutoRotation"
       },
       {
         "addr": "properties/highAvailabilityReplicaCount",
@@ -124297,6 +124414,12 @@
         "addr": "id"
       },
       {
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
+      },
+      {
         "addr": "location"
       },
       {
@@ -124340,6 +124463,18 @@
             "addr": "/elastic_pool_id"
           }
         ]
+      },
+      {
+        "addr": "properties/encryptionProtector",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mssql_database",
+            "addr": "/transparent_data_encryption_key_vault_key_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/encryptionProtectorAutoRotation"
       },
       {
         "addr": "properties/highAvailabilityReplicaCount",
@@ -128335,6 +128470,9 @@
       },
       {
         "addr": "properties/supportsHttpsTrafficOnly"
+      },
+      {
+        "addr": "sku"
       },
       {
         "addr": "sku/name"
@@ -152052,12 +152190,12 @@
     ]
   },
   {
-    "api_version": "2022-08-29",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/PALOALTONETWORKS.CLOUDNGFW/FIREWALLS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-08-29",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/PALOALTONETWORKS.CLOUDNGFW/FIREWALLS/{}",
     "operation": "GET",
     "properties": [
@@ -152395,7 +152533,7 @@
     ]
   },
   {
-    "api_version": "2022-08-29",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/PALOALTONETWORKS.CLOUDNGFW/FIREWALLS/{}",
     "operation": "PUT",
     "properties": [
@@ -153411,9 +153549,6 @@
     "properties": [
       {
         "addr": "id"
-      },
-      {
-        "addr": "name"
       },
       {
         "addr": "properties/assignableScopes"
@@ -154640,9 +154775,6 @@
         ]
       },
       {
-        "addr": "name"
-      },
-      {
         "addr": "properties/assignableScopes"
       },
       {
@@ -154752,9 +154884,6 @@
             "addr": "/role_definition_resource_id"
           }
         ]
-      },
-      {
-        "addr": "name"
       },
       {
         "addr": "properties/assignableScopes"
