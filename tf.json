@@ -29043,9 +29043,6 @@
         ]
       },
       {
-        "addr": "sku/tier"
-      },
-      {
         "addr": "tags"
       }
     ]
@@ -29237,9 +29234,6 @@
         ]
       },
       {
-        "addr": "sku/tier"
-      },
-      {
         "addr": "tags"
       }
     ]
@@ -29429,9 +29423,6 @@
             "addr": "/sku_name"
           }
         ]
-      },
-      {
-        "addr": "sku/tier"
       },
       {
         "addr": "tags"
@@ -35948,6 +35939,473 @@
   },
   {
     "api_version": "2023-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINES/{}/RUNCOMMANDS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINES/{}/RUNCOMMANDS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/asyncExecution"
+      },
+      {
+        "addr": "properties/errorBlobManagedIdentity/clientId"
+      },
+      {
+        "addr": "properties/errorBlobManagedIdentity/objectId"
+      },
+      {
+        "addr": "properties/errorBlobUri",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/error_blob_uri"
+          }
+        ]
+      },
+      {
+        "addr": "properties/instanceView/endTime",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/instance_view/0/end_time"
+          }
+        ]
+      },
+      {
+        "addr": "properties/instanceView/error",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/instance_view/0/error_message"
+          }
+        ]
+      },
+      {
+        "addr": "properties/instanceView/executionMessage",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/instance_view/0/execution_message"
+          }
+        ]
+      },
+      {
+        "addr": "properties/instanceView/executionState",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/instance_view/0/execution_state"
+          }
+        ]
+      },
+      {
+        "addr": "properties/instanceView/exitCode",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/instance_view/0/exit_code"
+          }
+        ]
+      },
+      {
+        "addr": "properties/instanceView/output",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/instance_view/0/output"
+          }
+        ]
+      },
+      {
+        "addr": "properties/instanceView/startTime",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/instance_view/0/start_time"
+          }
+        ]
+      },
+      {
+        "addr": "properties/outputBlobManagedIdentity/clientId"
+      },
+      {
+        "addr": "properties/outputBlobManagedIdentity/objectId"
+      },
+      {
+        "addr": "properties/outputBlobUri",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/output_blob_uri"
+          }
+        ]
+      },
+      {
+        "addr": "properties/parameters/name"
+      },
+      {
+        "addr": "properties/parameters/value"
+      },
+      {
+        "addr": "properties/protectedParameters/name"
+      },
+      {
+        "addr": "properties/protectedParameters/value"
+      },
+      {
+        "addr": "properties/runAsPassword"
+      },
+      {
+        "addr": "properties/runAsUser",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/run_as_user"
+          }
+        ]
+      },
+      {
+        "addr": "properties/source/commandId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/source/0/command_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/source/script",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/source/0/script"
+          }
+        ]
+      },
+      {
+        "addr": "properties/source/scriptUri",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/source/0/script_uri"
+          }
+        ]
+      },
+      {
+        "addr": "properties/source/scriptUriManagedIdentity/clientId"
+      },
+      {
+        "addr": "properties/source/scriptUriManagedIdentity/objectId"
+      },
+      {
+        "addr": "properties/timeoutInSeconds"
+      },
+      {
+        "addr": "properties/treatFailureAsDeploymentFailure"
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINES/{}/RUNCOMMANDS/{}",
+    "operation": "PATCH",
+    "properties": [
+      {
+        "addr": "properties/asyncExecution"
+      },
+      {
+        "addr": "properties/errorBlobManagedIdentity/clientId"
+      },
+      {
+        "addr": "properties/errorBlobManagedIdentity/objectId"
+      },
+      {
+        "addr": "properties/errorBlobUri",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/error_blob_uri"
+          }
+        ]
+      },
+      {
+        "addr": "properties/outputBlobManagedIdentity/clientId"
+      },
+      {
+        "addr": "properties/outputBlobManagedIdentity/objectId"
+      },
+      {
+        "addr": "properties/outputBlobUri",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/output_blob_uri"
+          }
+        ]
+      },
+      {
+        "addr": "properties/parameters/name"
+      },
+      {
+        "addr": "properties/parameters/value"
+      },
+      {
+        "addr": "properties/protectedParameters/name"
+      },
+      {
+        "addr": "properties/protectedParameters/value"
+      },
+      {
+        "addr": "properties/runAsPassword"
+      },
+      {
+        "addr": "properties/runAsUser",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/run_as_user"
+          }
+        ]
+      },
+      {
+        "addr": "properties/source/commandId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/source/0/command_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/source/script",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/source/0/script"
+          }
+        ]
+      },
+      {
+        "addr": "properties/source/scriptUri",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/source/0/script_uri"
+          }
+        ]
+      },
+      {
+        "addr": "properties/source/scriptUriManagedIdentity/clientId"
+      },
+      {
+        "addr": "properties/source/scriptUriManagedIdentity/objectId"
+      },
+      {
+        "addr": "properties/timeoutInSeconds"
+      },
+      {
+        "addr": "properties/treatFailureAsDeploymentFailure"
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINES/{}/RUNCOMMANDS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/asyncExecution"
+      },
+      {
+        "addr": "properties/errorBlobManagedIdentity/clientId"
+      },
+      {
+        "addr": "properties/errorBlobManagedIdentity/objectId"
+      },
+      {
+        "addr": "properties/errorBlobUri",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/error_blob_uri"
+          }
+        ]
+      },
+      {
+        "addr": "properties/instanceView/endTime",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/instance_view/0/end_time"
+          }
+        ]
+      },
+      {
+        "addr": "properties/instanceView/error",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/instance_view/0/error_message"
+          }
+        ]
+      },
+      {
+        "addr": "properties/instanceView/executionMessage",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/instance_view/0/execution_message"
+          }
+        ]
+      },
+      {
+        "addr": "properties/instanceView/executionState",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/instance_view/0/execution_state"
+          }
+        ]
+      },
+      {
+        "addr": "properties/instanceView/exitCode",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/instance_view/0/exit_code"
+          }
+        ]
+      },
+      {
+        "addr": "properties/instanceView/output",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/instance_view/0/output"
+          }
+        ]
+      },
+      {
+        "addr": "properties/instanceView/startTime",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/instance_view/0/start_time"
+          }
+        ]
+      },
+      {
+        "addr": "properties/outputBlobManagedIdentity/clientId"
+      },
+      {
+        "addr": "properties/outputBlobManagedIdentity/objectId"
+      },
+      {
+        "addr": "properties/outputBlobUri",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/output_blob_uri"
+          }
+        ]
+      },
+      {
+        "addr": "properties/parameters/name"
+      },
+      {
+        "addr": "properties/parameters/value"
+      },
+      {
+        "addr": "properties/protectedParameters/name"
+      },
+      {
+        "addr": "properties/protectedParameters/value"
+      },
+      {
+        "addr": "properties/runAsPassword"
+      },
+      {
+        "addr": "properties/runAsUser",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/run_as_user"
+          }
+        ]
+      },
+      {
+        "addr": "properties/source/commandId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/source/0/command_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/source/script",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/source/0/script"
+          }
+        ]
+      },
+      {
+        "addr": "properties/source/scriptUri",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_machine_run_command",
+            "addr": "/source/0/script_uri"
+          }
+        ]
+      },
+      {
+        "addr": "properties/source/scriptUriManagedIdentity/clientId"
+      },
+      {
+        "addr": "properties/source/scriptUriManagedIdentity/objectId"
+      },
+      {
+        "addr": "properties/timeoutInSeconds"
+      },
+      {
+        "addr": "properties/treatFailureAsDeploymentFailure"
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINES/{}/START",
     "operation": "POST"
   },
@@ -39953,6 +40411,15 @@
         ]
       },
       {
+        "addr": "properties/priority",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_group",
+            "addr": "/priority"
+          }
+        ]
+      },
+      {
         "addr": "properties/restartPolicy",
         "app_property_maps": [
           {
@@ -40338,6 +40805,15 @@
           {
             "name": "azurerm_container_group",
             "addr": "/os_type"
+          }
+        ]
+      },
+      {
+        "addr": "properties/priority",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_group",
+            "addr": "/priority"
           }
         ]
       },
@@ -122227,6 +122703,15 @@
         ]
       },
       {
+        "addr": "properties/dnsZone",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mssql_managed_instance",
+            "addr": "/dns_zone"
+          }
+        ]
+      },
+      {
         "addr": "properties/dnsZonePartner"
       },
       {
@@ -122472,6 +122957,15 @@
         ]
       },
       {
+        "addr": "properties/dnsZone",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mssql_managed_instance",
+            "addr": "/dns_zone"
+          }
+        ]
+      },
+      {
         "addr": "properties/dnsZonePartner"
       },
       {
@@ -122817,6 +123311,15 @@
     "properties": [
       {
         "addr": "location"
+      },
+      {
+        "addr": "properties/createMode"
+      },
+      {
+        "addr": "properties/restorePointInTime"
+      },
+      {
+        "addr": "properties/sourceDatabaseId"
       }
     ]
   },
@@ -122852,6 +123355,15 @@
     "properties": [
       {
         "addr": "location"
+      },
+      {
+        "addr": "properties/createMode"
+      },
+      {
+        "addr": "properties/restorePointInTime"
+      },
+      {
+        "addr": "properties/sourceDatabaseId"
       }
     ]
   },
@@ -139427,7 +139939,7 @@
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-09-01",
+    "api_version": "2023-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SERVERFARMS/{}",
     "operation": "DELETE"
   },
@@ -139532,7 +140044,7 @@
     ]
   },
   {
-    "api_version": "2022-09-01",
+    "api_version": "2023-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SERVERFARMS/{}",
     "operation": "GET",
     "properties": [
@@ -139711,7 +140223,7 @@
     ]
   },
   {
-    "api_version": "2022-09-01",
+    "api_version": "2023-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SERVERFARMS/{}",
     "operation": "PUT",
     "properties": [
@@ -140153,6 +140665,10 @@
             "addr": "/kind"
           },
           {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/kind"
+          },
+          {
             "name": "azurerm_linux_web_app",
             "addr": "/kind"
           },
@@ -140212,6 +140728,10 @@
             "addr": "/client_certificate_exclusion_paths"
           },
           {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/client_certificate_exclusion_paths"
+          },
+          {
             "name": "azurerm_linux_web_app",
             "addr": "/client_certificate_exclusion_paths"
           },
@@ -140238,6 +140758,10 @@
         "app_property_maps": [
           {
             "name": "azurerm_linux_function_app",
+            "addr": "/client_certificate_mode"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
             "addr": "/client_certificate_mode"
           },
           {
@@ -140270,6 +140794,10 @@
             "addr": "/custom_domain_verification_id"
           },
           {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/custom_domain_verification_id"
+          },
+          {
             "name": "azurerm_linux_web_app",
             "addr": "/custom_domain_verification_id"
           },
@@ -140299,6 +140827,10 @@
             "addr": "/daily_memory_time_quota"
           },
           {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/daily_memory_time_quota"
+          },
+          {
             "name": "azurerm_windows_function_app",
             "addr": "/daily_memory_time_quota"
           },
@@ -140313,6 +140845,10 @@
         "app_property_maps": [
           {
             "name": "azurerm_linux_function_app",
+            "addr": "/default_hostname"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
             "addr": "/default_hostname"
           },
           {
@@ -140347,7 +140883,13 @@
         "addr": "properties/hostNameSslStates/name"
       },
       {
-        "addr": "properties/hostingEnvironmentProfile/id"
+        "addr": "properties/hostingEnvironmentProfile/id",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/hosting_environment_id"
+          }
+        ]
       },
       {
         "addr": "properties/httpsOnly"
@@ -140360,6 +140902,10 @@
         "app_property_maps": [
           {
             "name": "azurerm_linux_function_app",
+            "addr": "/key_vault_reference_identity_id"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
             "addr": "/key_vault_reference_identity_id"
           },
           {
@@ -140394,17 +140940,7 @@
         "addr": "properties/publicNetworkAccess"
       },
       {
-        "addr": "properties/serverFarmId",
-        "app_property_maps": [
-          {
-            "name": "azurerm_windows_function_app_slot",
-            "addr": "/service_plan_id"
-          },
-          {
-            "name": "azurerm_windows_web_app_slot",
-            "addr": "/service_plan_id"
-          }
-        ]
+        "addr": "properties/serverFarmId"
       },
       {
         "addr": "properties/siteConfig"
@@ -140682,6 +141218,10 @@
         "app_property_maps": [
           {
             "name": "azurerm_linux_function_app",
+            "addr": "/virtual_network_subnet_id"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
             "addr": "/virtual_network_subnet_id"
           },
           {
@@ -141113,6 +141653,10 @@
             "addr": "/kind"
           },
           {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/kind"
+          },
+          {
             "name": "azurerm_linux_web_app",
             "addr": "/kind"
           },
@@ -141172,6 +141716,10 @@
             "addr": "/client_certificate_exclusion_paths"
           },
           {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/client_certificate_exclusion_paths"
+          },
+          {
             "name": "azurerm_linux_web_app",
             "addr": "/client_certificate_exclusion_paths"
           },
@@ -141198,6 +141746,10 @@
         "app_property_maps": [
           {
             "name": "azurerm_linux_function_app",
+            "addr": "/client_certificate_mode"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
             "addr": "/client_certificate_mode"
           },
           {
@@ -141230,6 +141782,10 @@
             "addr": "/custom_domain_verification_id"
           },
           {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/custom_domain_verification_id"
+          },
+          {
             "name": "azurerm_linux_web_app",
             "addr": "/custom_domain_verification_id"
           },
@@ -141259,6 +141815,10 @@
             "addr": "/daily_memory_time_quota"
           },
           {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/daily_memory_time_quota"
+          },
+          {
             "name": "azurerm_windows_function_app",
             "addr": "/daily_memory_time_quota"
           },
@@ -141273,6 +141833,10 @@
         "app_property_maps": [
           {
             "name": "azurerm_linux_function_app",
+            "addr": "/default_hostname"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
             "addr": "/default_hostname"
           },
           {
@@ -141307,7 +141871,13 @@
         "addr": "properties/hostNameSslStates/name"
       },
       {
-        "addr": "properties/hostingEnvironmentProfile/id"
+        "addr": "properties/hostingEnvironmentProfile/id",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/hosting_environment_id"
+          }
+        ]
       },
       {
         "addr": "properties/httpsOnly"
@@ -141320,6 +141890,10 @@
         "app_property_maps": [
           {
             "name": "azurerm_linux_function_app",
+            "addr": "/key_vault_reference_identity_id"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
             "addr": "/key_vault_reference_identity_id"
           },
           {
@@ -141354,17 +141928,7 @@
         "addr": "properties/publicNetworkAccess"
       },
       {
-        "addr": "properties/serverFarmId",
-        "app_property_maps": [
-          {
-            "name": "azurerm_windows_function_app_slot",
-            "addr": "/service_plan_id"
-          },
-          {
-            "name": "azurerm_windows_web_app_slot",
-            "addr": "/service_plan_id"
-          }
-        ]
+        "addr": "properties/serverFarmId"
       },
       {
         "addr": "properties/siteConfig"
@@ -141642,6 +142206,10 @@
         "app_property_maps": [
           {
             "name": "azurerm_linux_function_app",
+            "addr": "/virtual_network_subnet_id"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
             "addr": "/virtual_network_subnet_id"
           },
           {
@@ -146152,10 +146720,6 @@
         "addr": "kind",
         "app_property_maps": [
           {
-            "name": "azurerm_linux_function_app_slot",
-            "addr": "/kind"
-          },
-          {
             "name": "azurerm_linux_web_app_slot",
             "addr": "/kind"
           }
@@ -146177,10 +146741,6 @@
         "addr": "properties/clientCertExclusionPaths",
         "app_property_maps": [
           {
-            "name": "azurerm_linux_function_app_slot",
-            "addr": "/client_certificate_exclusion_paths"
-          },
-          {
             "name": "azurerm_linux_web_app_slot",
             "addr": "/client_certificate_exclusion_paths"
           }
@@ -146189,10 +146749,6 @@
       {
         "addr": "properties/clientCertMode",
         "app_property_maps": [
-          {
-            "name": "azurerm_linux_function_app_slot",
-            "addr": "/client_certificate_mode"
-          },
           {
             "name": "azurerm_linux_web_app_slot",
             "addr": "/client_certificate_mode"
@@ -146203,31 +146759,17 @@
         "addr": "properties/customDomainVerificationId",
         "app_property_maps": [
           {
-            "name": "azurerm_linux_function_app_slot",
-            "addr": "/custom_domain_verification_id"
-          },
-          {
             "name": "azurerm_linux_web_app_slot",
             "addr": "/custom_domain_verification_id"
           }
         ]
       },
       {
-        "addr": "properties/dailyMemoryTimeQuota",
-        "app_property_maps": [
-          {
-            "name": "azurerm_linux_function_app_slot",
-            "addr": "/daily_memory_time_quota"
-          }
-        ]
+        "addr": "properties/dailyMemoryTimeQuota"
       },
       {
         "addr": "properties/defaultHostName",
         "app_property_maps": [
-          {
-            "name": "azurerm_linux_function_app_slot",
-            "addr": "/default_hostname"
-          },
           {
             "name": "azurerm_linux_web_app_slot",
             "addr": "/default_hostname"
@@ -146247,10 +146789,6 @@
         "addr": "properties/hostingEnvironmentProfile/id",
         "app_property_maps": [
           {
-            "name": "azurerm_linux_function_app_slot",
-            "addr": "/hosting_environment_id"
-          },
-          {
             "name": "azurerm_linux_web_app_slot",
             "addr": "/hosting_environment_id"
           }
@@ -146265,10 +146803,6 @@
       {
         "addr": "properties/keyVaultReferenceIdentity",
         "app_property_maps": [
-          {
-            "name": "azurerm_linux_function_app_slot",
-            "addr": "/key_vault_reference_identity_id"
-          },
           {
             "name": "azurerm_linux_web_app_slot",
             "addr": "/key_vault_reference_identity_id"
@@ -146285,17 +146819,7 @@
         "addr": "properties/publicNetworkAccess"
       },
       {
-        "addr": "properties/serverFarmId",
-        "app_property_maps": [
-          {
-            "name": "azurerm_linux_function_app_slot",
-            "addr": "/service_plan_id"
-          },
-          {
-            "name": "azurerm_linux_web_app_slot",
-            "addr": "/service_plan_id"
-          }
-        ]
+        "addr": "properties/serverFarmId"
       },
       {
         "addr": "properties/siteConfig"
@@ -146561,10 +147085,6 @@
       {
         "addr": "properties/virtualNetworkSubnetId",
         "app_property_maps": [
-          {
-            "name": "azurerm_linux_function_app_slot",
-            "addr": "/virtual_network_subnet_id"
-          },
           {
             "name": "azurerm_linux_web_app_slot",
             "addr": "/virtual_network_subnet_id"
@@ -146930,10 +147450,6 @@
         "addr": "kind",
         "app_property_maps": [
           {
-            "name": "azurerm_linux_function_app_slot",
-            "addr": "/kind"
-          },
-          {
             "name": "azurerm_linux_web_app_slot",
             "addr": "/kind"
           }
@@ -146955,10 +147471,6 @@
         "addr": "properties/clientCertExclusionPaths",
         "app_property_maps": [
           {
-            "name": "azurerm_linux_function_app_slot",
-            "addr": "/client_certificate_exclusion_paths"
-          },
-          {
             "name": "azurerm_linux_web_app_slot",
             "addr": "/client_certificate_exclusion_paths"
           }
@@ -146967,10 +147479,6 @@
       {
         "addr": "properties/clientCertMode",
         "app_property_maps": [
-          {
-            "name": "azurerm_linux_function_app_slot",
-            "addr": "/client_certificate_mode"
-          },
           {
             "name": "azurerm_linux_web_app_slot",
             "addr": "/client_certificate_mode"
@@ -146981,31 +147489,17 @@
         "addr": "properties/customDomainVerificationId",
         "app_property_maps": [
           {
-            "name": "azurerm_linux_function_app_slot",
-            "addr": "/custom_domain_verification_id"
-          },
-          {
             "name": "azurerm_linux_web_app_slot",
             "addr": "/custom_domain_verification_id"
           }
         ]
       },
       {
-        "addr": "properties/dailyMemoryTimeQuota",
-        "app_property_maps": [
-          {
-            "name": "azurerm_linux_function_app_slot",
-            "addr": "/daily_memory_time_quota"
-          }
-        ]
+        "addr": "properties/dailyMemoryTimeQuota"
       },
       {
         "addr": "properties/defaultHostName",
         "app_property_maps": [
-          {
-            "name": "azurerm_linux_function_app_slot",
-            "addr": "/default_hostname"
-          },
           {
             "name": "azurerm_linux_web_app_slot",
             "addr": "/default_hostname"
@@ -147025,10 +147519,6 @@
         "addr": "properties/hostingEnvironmentProfile/id",
         "app_property_maps": [
           {
-            "name": "azurerm_linux_function_app_slot",
-            "addr": "/hosting_environment_id"
-          },
-          {
             "name": "azurerm_linux_web_app_slot",
             "addr": "/hosting_environment_id"
           }
@@ -147043,10 +147533,6 @@
       {
         "addr": "properties/keyVaultReferenceIdentity",
         "app_property_maps": [
-          {
-            "name": "azurerm_linux_function_app_slot",
-            "addr": "/key_vault_reference_identity_id"
-          },
           {
             "name": "azurerm_linux_web_app_slot",
             "addr": "/key_vault_reference_identity_id"
@@ -147063,17 +147549,7 @@
         "addr": "properties/publicNetworkAccess"
       },
       {
-        "addr": "properties/serverFarmId",
-        "app_property_maps": [
-          {
-            "name": "azurerm_linux_function_app_slot",
-            "addr": "/service_plan_id"
-          },
-          {
-            "name": "azurerm_linux_web_app_slot",
-            "addr": "/service_plan_id"
-          }
-        ]
+        "addr": "properties/serverFarmId"
       },
       {
         "addr": "properties/siteConfig"
@@ -147339,10 +147815,6 @@
       {
         "addr": "properties/virtualNetworkSubnetId",
         "app_property_maps": [
-          {
-            "name": "azurerm_linux_function_app_slot",
-            "addr": "/virtual_network_subnet_id"
-          },
           {
             "name": "azurerm_linux_web_app_slot",
             "addr": "/virtual_network_subnet_id"
