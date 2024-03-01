@@ -2286,10 +2286,16 @@
     "operation": "GET",
     "properties": [
       {
+        "addr": "id"
+      },
+      {
         "addr": "name"
       },
       {
         "addr": "properties/subscriptionId"
+      },
+      {
+        "addr": "type"
       }
     ]
   },
@@ -11033,16 +11039,6 @@
   },
   {
     "api_version": "2022-08-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/NOTIFICATIONS/{}/RECIPIENTEMAILS",
-    "operation": "GET",
-    "properties": [
-      {
-        "addr": "value/properties/email"
-      }
-    ]
-  },
-  {
-    "api_version": "2022-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/NOTIFICATIONS/{}/RECIPIENTEMAILS/{}",
     "operation": "DELETE"
   },
@@ -11050,16 +11046,6 @@
     "api_version": "2022-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/NOTIFICATIONS/{}/RECIPIENTEMAILS/{}",
     "operation": "PUT"
-  },
-  {
-    "api_version": "2022-08-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/NOTIFICATIONS/{}/RECIPIENTUSERS",
-    "operation": "GET",
-    "properties": [
-      {
-        "addr": "value/name"
-      }
-    ]
   },
   {
     "api_version": "2022-08-01",
@@ -13947,7 +13933,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2024-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}",
     "operation": "GET",
     "properties": [
@@ -14289,12 +14275,12 @@
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2024-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APIPORTALS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2024-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APIPORTALS/{}",
     "operation": "GET",
     "properties": [
@@ -14346,7 +14332,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2024-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APIPORTALS/{}",
     "operation": "PUT",
     "properties": [
@@ -14435,12 +14421,12 @@
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2024-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APMS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2024-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APMS/{}",
     "operation": "GET",
     "properties": [
@@ -14456,7 +14442,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2024-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APMS/{}",
     "operation": "PUT",
     "properties": [
@@ -14487,12 +14473,12 @@
     "operation": "PUT"
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2024-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPLICATIONACCELERATORS/{}/CUSTOMIZEDACCELERATORS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2024-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPLICATIONACCELERATORS/{}/CUSTOMIZEDACCELERATORS/{}",
     "operation": "GET",
     "properties": [
@@ -14619,7 +14605,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2024-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/APPLICATIONACCELERATORS/{}/CUSTOMIZEDACCELERATORS/{}",
     "operation": "PUT",
     "properties": [
@@ -15832,12 +15818,12 @@
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2024-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/CONFIGURATIONSERVICES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2024-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/CONFIGURATIONSERVICES/{}",
     "operation": "GET",
     "properties": [
@@ -15885,11 +15871,20 @@
       },
       {
         "addr": "properties/settings/gitProperty/repositories/username"
+      },
+      {
+        "addr": "properties/settings/refreshIntervalInSeconds",
+        "app_property_maps": [
+          {
+            "name": "azurerm_spring_cloud_configuration_service",
+            "addr": "/refresh_interval_in_seconds"
+          }
+        ]
       }
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2024-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/CONFIGURATIONSERVICES/{}",
     "operation": "PUT",
     "properties": [
@@ -15937,6 +15932,15 @@
       },
       {
         "addr": "properties/settings/gitProperty/repositories/username"
+      },
+      {
+        "addr": "properties/settings/refreshIntervalInSeconds",
+        "app_property_maps": [
+          {
+            "name": "azurerm_spring_cloud_configuration_service",
+            "addr": "/refresh_interval_in_seconds"
+          }
+        ]
       }
     ]
   },
@@ -16062,7 +16066,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2024-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/DISABLEAPMGLOBALLY",
     "operation": "POST",
     "properties": [
@@ -16072,7 +16076,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2024-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/ENABLEAPMGLOBALLY",
     "operation": "POST",
     "properties": [
@@ -16082,12 +16086,12 @@
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2024-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/GATEWAYS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2024-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/GATEWAYS/{}",
     "operation": "GET",
     "properties": [
@@ -16138,6 +16142,9 @@
       },
       {
         "addr": "properties/apmTypes"
+      },
+      {
+        "addr": "properties/apms/resourceId"
       },
       {
         "addr": "properties/clientAuth/certificateVerification"
@@ -16262,7 +16269,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2024-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/GATEWAYS/{}",
     "operation": "PUT",
     "properties": [
@@ -16313,6 +16320,9 @@
       },
       {
         "addr": "properties/apmTypes"
+      },
+      {
+        "addr": "properties/apms/resourceId"
       },
       {
         "addr": "properties/clientAuth/certificateVerification"
@@ -16619,7 +16629,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2024-01-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APPPLATFORM/SPRING/{}/LISTGLOBALLYENABLEDAPMS",
     "operation": "POST"
   },
@@ -33530,6 +33540,9 @@
         "addr": "properties/applicationProfile/galleryApplications/configurationReference"
       },
       {
+        "addr": "properties/applicationProfile/galleryApplications/enableAutomaticUpgrade"
+      },
+      {
         "addr": "properties/applicationProfile/galleryApplications/order"
       },
       {
@@ -33537,6 +33550,9 @@
       },
       {
         "addr": "properties/applicationProfile/galleryApplications/tags"
+      },
+      {
+        "addr": "properties/applicationProfile/galleryApplications/treatFailureAsDeploymentFailure"
       },
       {
         "addr": "properties/availabilitySet/id",
@@ -33757,6 +33773,9 @@
         ]
       },
       {
+        "addr": "properties/osProfile/linuxConfiguration/enableVMAgentPlatformUpdates"
+      },
+      {
         "addr": "properties/osProfile/linuxConfiguration/patchSettings/assessmentMode",
         "app_property_maps": [
           {
@@ -33830,6 +33849,9 @@
       },
       {
         "addr": "properties/osProfile/windowsConfiguration/enableAutomaticUpdates"
+      },
+      {
+        "addr": "properties/osProfile/windowsConfiguration/enableVMAgentPlatformUpdates"
       },
       {
         "addr": "properties/osProfile/windowsConfiguration/patchSettings/assessmentMode",
@@ -33933,6 +33955,22 @@
         ]
       },
       {
+        "addr": "properties/scheduledEventsProfile/osImageNotificationProfile/enable"
+      },
+      {
+        "addr": "properties/scheduledEventsProfile/osImageNotificationProfile/notBeforeTimeout",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_virtual_machine",
+            "addr": "/os_image_notification/0/timeout"
+          },
+          {
+            "name": "azurerm_windows_virtual_machine",
+            "addr": "/os_image_notification/0/timeout"
+          }
+        ]
+      },
+      {
         "addr": "properties/scheduledEventsProfile/terminateNotificationProfile/enable",
         "app_property_maps": [
           {
@@ -34013,6 +34051,19 @@
       },
       {
         "addr": "properties/storageProfile/dataDisks/writeAcceleratorEnabled"
+      },
+      {
+        "addr": "properties/storageProfile/diskControllerType",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_virtual_machine",
+            "addr": "/disk_controller_type"
+          },
+          {
+            "name": "azurerm_windows_virtual_machine",
+            "addr": "/disk_controller_type"
+          }
+        ]
       },
       {
         "addr": "properties/storageProfile/imageReference/communityGalleryImageId"
@@ -34366,6 +34417,9 @@
         "addr": "properties/applicationProfile/galleryApplications/configurationReference"
       },
       {
+        "addr": "properties/applicationProfile/galleryApplications/enableAutomaticUpgrade"
+      },
+      {
         "addr": "properties/applicationProfile/galleryApplications/order"
       },
       {
@@ -34373,6 +34427,9 @@
       },
       {
         "addr": "properties/applicationProfile/galleryApplications/tags"
+      },
+      {
+        "addr": "properties/applicationProfile/galleryApplications/treatFailureAsDeploymentFailure"
       },
       {
         "addr": "properties/availabilitySet/id",
@@ -34578,6 +34635,9 @@
         ]
       },
       {
+        "addr": "properties/osProfile/linuxConfiguration/enableVMAgentPlatformUpdates"
+      },
+      {
         "addr": "properties/osProfile/linuxConfiguration/patchSettings/assessmentMode",
         "app_property_maps": [
           {
@@ -34642,6 +34702,9 @@
       },
       {
         "addr": "properties/osProfile/windowsConfiguration/enableAutomaticUpdates"
+      },
+      {
+        "addr": "properties/osProfile/windowsConfiguration/enableVMAgentPlatformUpdates"
       },
       {
         "addr": "properties/osProfile/windowsConfiguration/patchSettings/assessmentMode",
@@ -34742,6 +34805,22 @@
         ]
       },
       {
+        "addr": "properties/scheduledEventsProfile/osImageNotificationProfile/enable"
+      },
+      {
+        "addr": "properties/scheduledEventsProfile/osImageNotificationProfile/notBeforeTimeout",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_virtual_machine",
+            "addr": "/os_image_notification/0/timeout"
+          },
+          {
+            "name": "azurerm_windows_virtual_machine",
+            "addr": "/os_image_notification/0/timeout"
+          }
+        ]
+      },
+      {
         "addr": "properties/scheduledEventsProfile/terminateNotificationProfile/enable",
         "app_property_maps": [
           {
@@ -34787,6 +34866,19 @@
           {
             "name": "azurerm_linux_virtual_machine",
             "addr": "/vtpm_enabled"
+          }
+        ]
+      },
+      {
+        "addr": "properties/storageProfile/diskControllerType",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_virtual_machine",
+            "addr": "/disk_controller_type"
+          },
+          {
+            "name": "azurerm_windows_virtual_machine",
+            "addr": "/disk_controller_type"
           }
         ]
       },
@@ -35210,6 +35302,9 @@
         "addr": "properties/applicationProfile/galleryApplications/configurationReference"
       },
       {
+        "addr": "properties/applicationProfile/galleryApplications/enableAutomaticUpgrade"
+      },
+      {
         "addr": "properties/applicationProfile/galleryApplications/order"
       },
       {
@@ -35217,6 +35312,9 @@
       },
       {
         "addr": "properties/applicationProfile/galleryApplications/tags"
+      },
+      {
+        "addr": "properties/applicationProfile/galleryApplications/treatFailureAsDeploymentFailure"
       },
       {
         "addr": "properties/availabilitySet/id",
@@ -35437,6 +35535,9 @@
         ]
       },
       {
+        "addr": "properties/osProfile/linuxConfiguration/enableVMAgentPlatformUpdates"
+      },
+      {
         "addr": "properties/osProfile/linuxConfiguration/patchSettings/assessmentMode",
         "app_property_maps": [
           {
@@ -35510,6 +35611,9 @@
       },
       {
         "addr": "properties/osProfile/windowsConfiguration/enableAutomaticUpdates"
+      },
+      {
+        "addr": "properties/osProfile/windowsConfiguration/enableVMAgentPlatformUpdates"
       },
       {
         "addr": "properties/osProfile/windowsConfiguration/patchSettings/assessmentMode",
@@ -35613,6 +35717,22 @@
         ]
       },
       {
+        "addr": "properties/scheduledEventsProfile/osImageNotificationProfile/enable"
+      },
+      {
+        "addr": "properties/scheduledEventsProfile/osImageNotificationProfile/notBeforeTimeout",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_virtual_machine",
+            "addr": "/os_image_notification/0/timeout"
+          },
+          {
+            "name": "azurerm_windows_virtual_machine",
+            "addr": "/os_image_notification/0/timeout"
+          }
+        ]
+      },
+      {
         "addr": "properties/scheduledEventsProfile/terminateNotificationProfile/enable",
         "app_property_maps": [
           {
@@ -35693,6 +35813,19 @@
       },
       {
         "addr": "properties/storageProfile/dataDisks/writeAcceleratorEnabled"
+      },
+      {
+        "addr": "properties/storageProfile/diskControllerType",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_virtual_machine",
+            "addr": "/disk_controller_type"
+          },
+          {
+            "name": "azurerm_windows_virtual_machine",
+            "addr": "/disk_controller_type"
+          }
+        ]
       },
       {
         "addr": "properties/storageProfile/imageReference/communityGalleryImageId"
@@ -43071,6 +43204,115 @@
   },
   {
     "api_version": "2023-10-15",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/FLEETS/{}/UPDATERUNS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-10-15",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/FLEETS/{}/UPDATERUNS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/managedClusterUpdate/nodeImageSelection/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_fleet_update_run",
+            "addr": "/managed_cluster_update/0/node_image_selection/0/type"
+          }
+        ]
+      },
+      {
+        "addr": "properties/managedClusterUpdate/upgrade/kubernetesVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_fleet_update_run",
+            "addr": "/managed_cluster_update/0/upgrade/0/kubernetes_version"
+          }
+        ]
+      },
+      {
+        "addr": "properties/managedClusterUpdate/upgrade/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_fleet_update_run",
+            "addr": "/managed_cluster_update/0/upgrade/0/type"
+          }
+        ]
+      },
+      {
+        "addr": "properties/strategy/stages/afterStageWaitInSeconds"
+      },
+      {
+        "addr": "properties/strategy/stages/groups/name"
+      },
+      {
+        "addr": "properties/strategy/stages/name"
+      },
+      {
+        "addr": "properties/updateStrategyId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_fleet_update_run",
+            "addr": "/fleet_update_strategy_id"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2023-10-15",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/FLEETS/{}/UPDATERUNS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "properties/managedClusterUpdate/nodeImageSelection/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_fleet_update_run",
+            "addr": "/managed_cluster_update/0/node_image_selection/0/type"
+          }
+        ]
+      },
+      {
+        "addr": "properties/managedClusterUpdate/upgrade/kubernetesVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_fleet_update_run",
+            "addr": "/managed_cluster_update/0/upgrade/0/kubernetes_version"
+          }
+        ]
+      },
+      {
+        "addr": "properties/managedClusterUpdate/upgrade/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_fleet_update_run",
+            "addr": "/managed_cluster_update/0/upgrade/0/type"
+          }
+        ]
+      },
+      {
+        "addr": "properties/strategy/stages/afterStageWaitInSeconds"
+      },
+      {
+        "addr": "properties/strategy/stages/groups/name"
+      },
+      {
+        "addr": "properties/strategy/stages/name"
+      },
+      {
+        "addr": "properties/updateStrategyId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_fleet_update_run",
+            "addr": "/fleet_update_strategy_id"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2023-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/FLEETS/{}/UPDATESTRATEGIES/{}",
     "operation": "DELETE"
   },
@@ -43657,7 +43899,13 @@
         ]
       },
       {
-        "addr": "properties/currentKubernetesVersion"
+        "addr": "properties/currentKubernetesVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster",
+            "addr": "/current_kubernetes_version"
+          }
+        ]
       },
       {
         "addr": "properties/disableLocalAccounts"
@@ -44714,7 +44962,13 @@
         ]
       },
       {
-        "addr": "properties/currentKubernetesVersion"
+        "addr": "properties/currentKubernetesVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster",
+            "addr": "/current_kubernetes_version"
+          }
+        ]
       },
       {
         "addr": "properties/disableLocalAccounts"
@@ -67241,6 +67495,15 @@
         "addr": "properties/locations/provisioningState"
       },
       {
+        "addr": "properties/minimalTlsVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cosmosdb_account",
+            "addr": "/minimal_tls_version"
+          }
+        ]
+      },
+      {
         "addr": "properties/networkAclBypass"
       },
       {
@@ -67586,6 +67849,15 @@
       },
       {
         "addr": "properties/locations/provisioningState"
+      },
+      {
+        "addr": "properties/minimalTlsVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cosmosdb_account",
+            "addr": "/minimal_tls_version"
+          }
+        ]
       },
       {
         "addr": "properties/networkAclBypass"
@@ -92609,6 +92881,15 @@
         ]
       },
       {
+        "addr": "properties/encryptionType",
+        "app_property_maps": [
+          {
+            "name": "azurerm_netapp_pool",
+            "addr": "/encryption_type"
+          }
+        ]
+      },
+      {
         "addr": "properties/qosType",
         "app_property_maps": [
           {
@@ -92667,6 +92948,15 @@
           {
             "name": "azurerm_netapp_pool",
             "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/encryptionType",
+        "app_property_maps": [
+          {
+            "name": "azurerm_netapp_pool",
+            "addr": "/encryption_type"
           }
         ]
       },
@@ -92837,6 +93127,12 @@
         ]
       },
       {
+        "addr": "properties/smbAccessBasedEnumeration"
+      },
+      {
+        "addr": "properties/smbNonBrowsable"
+      },
+      {
         "addr": "properties/snapshotDirectoryVisible"
       },
       {
@@ -92933,6 +93229,12 @@
       },
       {
         "addr": "properties/exportPolicy/rules/unixReadWrite"
+      },
+      {
+        "addr": "properties/smbAccessBasedEnumeration"
+      },
+      {
+        "addr": "properties/smbNonBrowsable"
       },
       {
         "addr": "properties/throughputMibps",
@@ -93085,6 +93387,12 @@
             "addr": "/service_level"
           }
         ]
+      },
+      {
+        "addr": "properties/smbAccessBasedEnumeration"
+      },
+      {
+        "addr": "properties/smbNonBrowsable"
       },
       {
         "addr": "properties/snapshotDirectoryVisible"
@@ -125174,6 +125482,9 @@
         ]
       },
       {
+        "addr": "properties/zoneRedundant"
+      },
+      {
         "addr": "sku/family"
       },
       {
@@ -125426,6 +125737,9 @@
             "addr": "/vcores"
           }
         ]
+      },
+      {
+        "addr": "properties/zoneRedundant"
       },
       {
         "addr": "sku/family"
@@ -126932,6 +127246,9 @@
         ]
       },
       {
+        "addr": "properties/longTermRetentionBackupResourceId"
+      },
+      {
         "addr": "properties/maintenanceConfigurationId"
       },
       {
@@ -126960,6 +127277,9 @@
       },
       {
         "addr": "properties/recoverableDatabaseId"
+      },
+      {
+        "addr": "properties/recoveryServicesRecoveryPointId"
       },
       {
         "addr": "properties/requestedBackupStorageRedundancy",
@@ -127056,6 +127376,9 @@
         ]
       },
       {
+        "addr": "properties/longTermRetentionBackupResourceId"
+      },
+      {
         "addr": "properties/maintenanceConfigurationId"
       },
       {
@@ -127084,6 +127407,9 @@
       },
       {
         "addr": "properties/recoverableDatabaseId"
+      },
+      {
+        "addr": "properties/recoveryServicesRecoveryPointId"
       },
       {
         "addr": "properties/requestedBackupStorageRedundancy",
@@ -127340,6 +127666,9 @@
         ]
       },
       {
+        "addr": "properties/longTermRetentionBackupResourceId"
+      },
+      {
         "addr": "properties/maintenanceConfigurationId"
       },
       {
@@ -127368,6 +127697,9 @@
       },
       {
         "addr": "properties/recoverableDatabaseId"
+      },
+      {
+        "addr": "properties/recoveryServicesRecoveryPointId"
       },
       {
         "addr": "properties/requestedBackupStorageRedundancy",
@@ -138523,6 +138855,18 @@
         "addr": "properties/defaultDataLakeStorage/filesystem"
       },
       {
+        "addr": "properties/encryption/cmk/kekIdentity/useSystemAssignedIdentity"
+      },
+      {
+        "addr": "properties/encryption/cmk/kekIdentity/userAssignedIdentity",
+        "app_property_maps": [
+          {
+            "name": "azurerm_synapse_workspace",
+            "addr": "/customer_managed_key/0/user_assigned_identity_id"
+          }
+        ]
+      },
+      {
         "addr": "properties/encryption/cmk/key/keyVaultUrl",
         "app_property_maps": [
           {
@@ -138635,6 +138979,18 @@
     "operation": "PATCH",
     "properties": [
       {
+        "addr": "properties/encryption/cmk/kekIdentity/useSystemAssignedIdentity"
+      },
+      {
+        "addr": "properties/encryption/cmk/kekIdentity/userAssignedIdentity",
+        "app_property_maps": [
+          {
+            "name": "azurerm_synapse_workspace",
+            "addr": "/customer_managed_key/0/user_assigned_identity_id"
+          }
+        ]
+      },
+      {
         "addr": "properties/encryption/cmk/key/keyVaultUrl",
         "app_property_maps": [
           {
@@ -138745,6 +139101,18 @@
       },
       {
         "addr": "properties/defaultDataLakeStorage/filesystem"
+      },
+      {
+        "addr": "properties/encryption/cmk/kekIdentity/useSystemAssignedIdentity"
+      },
+      {
+        "addr": "properties/encryption/cmk/kekIdentity/userAssignedIdentity",
+        "app_property_maps": [
+          {
+            "name": "azurerm_synapse_workspace",
+            "addr": "/customer_managed_key/0/user_assigned_identity_id"
+          }
+        ]
       },
       {
         "addr": "properties/encryption/cmk/key/keyVaultUrl",
@@ -144785,6 +145153,9 @@
         "addr": "properties/clientSecretSettingName"
       },
       {
+        "addr": "properties/configVersion"
+      },
+      {
         "addr": "properties/defaultProvider"
       },
       {
@@ -145365,6 +145736,9 @@
       },
       {
         "addr": "properties/backupSchedule/keepAtLeastOneBackup"
+      },
+      {
+        "addr": "properties/backupSchedule/lastExecutionTime"
       },
       {
         "addr": "properties/backupSchedule/retentionPeriodInDays"
@@ -150108,6 +150482,9 @@
         "addr": "properties/clientSecretSettingName"
       },
       {
+        "addr": "properties/configVersion"
+      },
+      {
         "addr": "properties/defaultProvider"
       },
       {
@@ -150652,6 +151029,9 @@
       },
       {
         "addr": "properties/backupSchedule/keepAtLeastOneBackup"
+      },
+      {
+        "addr": "properties/backupSchedule/lastExecutionTime"
       },
       {
         "addr": "properties/backupSchedule/retentionPeriodInDays"
@@ -154270,6 +154650,15 @@
         "addr": "name"
       },
       {
+        "addr": "properties/autoUpgradeProfile/upgradeChannel",
+        "app_property_maps": [
+          {
+            "name": "azurerm_nginx_deployment",
+            "addr": "/automatic_upgrade_channel"
+          }
+        ]
+      },
+      {
         "addr": "properties/enableDiagnosticsSupport",
         "app_property_maps": [
           {
@@ -154388,6 +154777,15 @@
         "addr": "identity/userAssignedIdentities"
       },
       {
+        "addr": "properties/autoUpgradeProfile/upgradeChannel",
+        "app_property_maps": [
+          {
+            "name": "azurerm_nginx_deployment",
+            "addr": "/automatic_upgrade_channel"
+          }
+        ]
+      },
+      {
         "addr": "properties/enableDiagnosticsSupport",
         "app_property_maps": [
           {
@@ -154474,6 +154872,15 @@
       },
       {
         "addr": "name"
+      },
+      {
+        "addr": "properties/autoUpgradeProfile/upgradeChannel",
+        "app_property_maps": [
+          {
+            "name": "azurerm_nginx_deployment",
+            "addr": "/automatic_upgrade_channel"
+          }
+        ]
       },
       {
         "addr": "properties/enableDiagnosticsSupport",
@@ -157287,7 +157694,12 @@
     ]
   },
   {
-    "api_version": "2018-01-01-preview",
+    "api_version": "2020-10-01",
+    "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/ROLEASSIGNMENTSCHEDULEREQUESTS/{}/CANCEL",
+    "operation": "POST"
+  },
+  {
+    "api_version": "2022-05-01-preview",
     "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/ROLEDEFINITIONS",
     "operation": "GET",
     "properties": [
@@ -157305,6 +157717,9 @@
       },
       {
         "addr": "properties/assignableScopes"
+      },
+      {
+        "addr": "properties/createdOn"
       },
       {
         "addr": "properties/description",
@@ -157331,6 +157746,10 @@
         "addr": "properties/roleName",
         "app_property_maps": [
           {
+            "name": "azurerm_marketplace_role_assignment",
+            "addr": "/role_definition_name"
+          },
+          {
             "name": "azurerm_role_assignment",
             "addr": "/role_definition_name"
           },
@@ -157342,35 +157761,19 @@
       },
       {
         "addr": "properties/type"
-      }
-    ]
-  },
-  {
-    "api_version": "2022-04-01",
-    "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/ROLEDEFINITIONS",
-    "operation": "GET",
-    "properties": [
-      {
-        "addr": "id"
       },
       {
-        "addr": "properties/roleName",
-        "app_property_maps": [
-          {
-            "name": "azurerm_marketplace_role_assignment",
-            "addr": "/role_definition_name"
-          }
-        ]
+        "addr": "properties/updatedOn"
       }
     ]
   },
   {
-    "api_version": "2018-01-01-preview",
+    "api_version": "2022-05-01-preview",
     "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/ROLEDEFINITIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2018-01-01-preview",
+    "api_version": "2022-05-01-preview",
     "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/ROLEDEFINITIONS/{}",
     "operation": "GET",
     "properties": [
@@ -157388,6 +157791,9 @@
       },
       {
         "addr": "properties/assignableScopes"
+      },
+      {
+        "addr": "properties/createdOn"
       },
       {
         "addr": "properties/description",
@@ -157409,32 +157815,6 @@
       },
       {
         "addr": "properties/permissions/notDataActions"
-      },
-      {
-        "addr": "properties/roleName",
-        "app_property_maps": [
-          {
-            "name": "azurerm_role_assignment",
-            "addr": "/role_definition_name"
-          },
-          {
-            "name": "azurerm_role_definition",
-            "addr": "/name"
-          }
-        ]
-      },
-      {
-        "addr": "properties/type"
-      }
-    ]
-  },
-  {
-    "api_version": "2022-04-01",
-    "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/ROLEDEFINITIONS/{}",
-    "operation": "GET",
-    "properties": [
-      {
-        "addr": "id"
       },
       {
         "addr": "properties/roleName",
@@ -157442,8 +157822,22 @@
           {
             "name": "azurerm_marketplace_role_assignment",
             "addr": "/role_definition_name"
+          },
+          {
+            "name": "azurerm_role_assignment",
+            "addr": "/role_definition_name"
+          },
+          {
+            "name": "azurerm_role_definition",
+            "addr": "/name"
           }
         ]
+      },
+      {
+        "addr": "properties/type"
+      },
+      {
+        "addr": "properties/updatedOn"
       }
     ]
   },
@@ -157485,7 +157879,7 @@
     ]
   },
   {
-    "api_version": "2018-01-01-preview",
+    "api_version": "2022-05-01-preview",
     "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/ROLEDEFINITIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -157503,6 +157897,9 @@
       },
       {
         "addr": "properties/assignableScopes"
+      },
+      {
+        "addr": "properties/createdOn"
       },
       {
         "addr": "properties/description",
@@ -157529,6 +157926,10 @@
         "addr": "properties/roleName",
         "app_property_maps": [
           {
+            "name": "azurerm_marketplace_role_assignment",
+            "addr": "/role_definition_name"
+          },
+          {
             "name": "azurerm_role_assignment",
             "addr": "/role_definition_name"
           },
@@ -157540,6 +157941,9 @@
       },
       {
         "addr": "properties/type"
+      },
+      {
+        "addr": "properties/updatedOn"
       }
     ]
   },
@@ -157665,6 +158069,11 @@
         "addr": "properties/ticketInfo/ticketSystem"
       }
     ]
+  },
+  {
+    "api_version": "2020-10-01",
+    "api_path": "/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/ROLEELIGIBILITYSCHEDULEREQUESTS/{}/CANCEL",
+    "operation": "POST"
   },
   {
     "api_version": "2018-11-01-preview",
@@ -163173,9 +163582,6 @@
         ]
       },
       {
-        "addr": "name"
-      },
-      {
         "addr": "properties"
       }
     ]
@@ -163193,9 +163599,6 @@
             "addr": "/location"
           }
         ]
-      },
-      {
-        "addr": "name"
       },
       {
         "addr": "properties"
