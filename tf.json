@@ -1517,12 +1517,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/PROVIDERS/MICROSOFT.MANAGEMENT/MANAGEMENTGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERCONNECTIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/PROVIDERS/MICROSOFT.MANAGEMENT/MANAGEMENTGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERCONNECTIONS/{}",
     "operation": "GET",
     "properties": [
@@ -1568,7 +1568,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/PROVIDERS/MICROSOFT.MANAGEMENT/MANAGEMENTGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERCONNECTIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -2335,7 +2335,7 @@
     ]
   },
   {
-    "api_version": "2022-09-01",
+    "api_version": "2023-01-01",
     "api_path": "/PROVIDERS/MICROSOFT.WEB/SOURCECONTROLS/{}",
     "operation": "GET",
     "properties": [
@@ -2376,7 +2376,7 @@
     ]
   },
   {
-    "api_version": "2022-09-01",
+    "api_version": "2023-01-01",
     "api_path": "/PROVIDERS/MICROSOFT.WEB/SOURCECONTROLS/{}",
     "operation": "PUT",
     "properties": [
@@ -3494,7 +3494,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.NETWORK/LOCATIONS/{}/SERVICETAGS",
     "operation": "GET",
     "properties": [
@@ -3510,12 +3510,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERCONNECTIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERCONNECTIONS/{}",
     "operation": "GET",
     "properties": [
@@ -3561,7 +3561,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERCONNECTIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -43035,12 +43035,12 @@
     "operation": "POST"
   },
   {
-    "api_version": "2022-09-02-preview",
+    "api_version": "2023-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/FLEETS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-09-02-preview",
+    "api_version": "2023-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/FLEETS/{}",
     "operation": "GET",
     "properties": [
@@ -43054,31 +43054,7 @@
         ]
       },
       {
-        "addr": "properties/hubProfile/dnsPrefix",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_fleet_manager",
-            "addr": "/hub_profile/0/dns_prefix"
-          }
-        ]
-      },
-      {
-        "addr": "properties/hubProfile/fqdn",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_fleet_manager",
-            "addr": "/hub_profile/0/fqdn"
-          }
-        ]
-      },
-      {
-        "addr": "properties/hubProfile/kubernetesVersion",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_fleet_manager",
-            "addr": "/hub_profile/0/kubernetes_version"
-          }
-        ]
+        "addr": "properties"
       },
       {
         "addr": "tags"
@@ -43086,7 +43062,7 @@
     ]
   },
   {
-    "api_version": "2022-09-02-preview",
+    "api_version": "2023-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/FLEETS/{}",
     "operation": "PUT",
     "properties": [
@@ -43100,31 +43076,7 @@
         ]
       },
       {
-        "addr": "properties/hubProfile/dnsPrefix",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_fleet_manager",
-            "addr": "/hub_profile/0/dns_prefix"
-          }
-        ]
-      },
-      {
-        "addr": "properties/hubProfile/fqdn",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_fleet_manager",
-            "addr": "/hub_profile/0/fqdn"
-          }
-        ]
-      },
-      {
-        "addr": "properties/hubProfile/kubernetesVersion",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_fleet_manager",
-            "addr": "/hub_profile/0/kubernetes_version"
-          }
-        ]
+        "addr": "properties"
       },
       {
         "addr": "tags"
@@ -51987,6 +51939,10 @@
           {
             "name": "azurerm_data_factory_integration_runtime_azure_ssis",
             "addr": "/credential_name"
+          },
+          {
+            "name": "azurerm_data_factory_integration_runtime_managed",
+            "addr": "/credential_name"
           }
         ]
       },
@@ -52404,6 +52360,10 @@
         "app_property_maps": [
           {
             "name": "azurerm_data_factory_integration_runtime_azure_ssis",
+            "addr": "/credential_name"
+          },
+          {
+            "name": "azurerm_data_factory_integration_runtime_managed",
             "addr": "/credential_name"
           }
         ]
@@ -56746,6 +56706,10 @@
             "addr": "/disk_id"
           },
           {
+            "name": "azurerm_data_protection_backup_instance_kubernetes_cluster",
+            "addr": "/kubernetes_cluster_id"
+          },
+          {
             "name": "azurerm_data_protection_backup_instance_postgresql",
             "addr": "/database_id"
           }
@@ -56760,6 +56724,10 @@
           },
           {
             "name": "azurerm_data_protection_backup_instance_disk",
+            "addr": "/location"
+          },
+          {
+            "name": "azurerm_data_protection_backup_instance_kubernetes_cluster",
             "addr": "/location"
           },
           {
@@ -56814,6 +56782,9 @@
         "addr": "properties/friendlyName"
       },
       {
+        "addr": "properties/objectType"
+      },
+      {
         "addr": "properties/policyInfo/policyId",
         "app_property_maps": [
           {
@@ -56825,10 +56796,35 @@
             "addr": "/backup_policy_id"
           },
           {
+            "name": "azurerm_data_protection_backup_instance_kubernetes_cluster",
+            "addr": "/backup_policy_id"
+          },
+          {
             "name": "azurerm_data_protection_backup_instance_postgresql",
             "addr": "/backup_policy_id"
           }
         ]
+      },
+      {
+        "addr": "properties/policyInfo/policyParameters/backupDatasourceParametersList{KubernetesClusterBackupDatasourceParameters}/excludedNamespaces"
+      },
+      {
+        "addr": "properties/policyInfo/policyParameters/backupDatasourceParametersList{KubernetesClusterBackupDatasourceParameters}/excludedResourceTypes"
+      },
+      {
+        "addr": "properties/policyInfo/policyParameters/backupDatasourceParametersList{KubernetesClusterBackupDatasourceParameters}/includeClusterScopeResources"
+      },
+      {
+        "addr": "properties/policyInfo/policyParameters/backupDatasourceParametersList{KubernetesClusterBackupDatasourceParameters}/includedNamespaces"
+      },
+      {
+        "addr": "properties/policyInfo/policyParameters/backupDatasourceParametersList{KubernetesClusterBackupDatasourceParameters}/includedResourceTypes"
+      },
+      {
+        "addr": "properties/policyInfo/policyParameters/backupDatasourceParametersList{KubernetesClusterBackupDatasourceParameters}/labelSelectors"
+      },
+      {
+        "addr": "properties/policyInfo/policyParameters/backupDatasourceParametersList{KubernetesClusterBackupDatasourceParameters}/snapshotVolumes"
       },
       {
         "addr": "properties/policyInfo/policyParameters/dataStoreParametersList{AzureOperationalStoreParameters}/dataStoreType"
@@ -56864,6 +56860,10 @@
             "addr": "/disk_id"
           },
           {
+            "name": "azurerm_data_protection_backup_instance_kubernetes_cluster",
+            "addr": "/kubernetes_cluster_id"
+          },
+          {
             "name": "azurerm_data_protection_backup_instance_postgresql",
             "addr": "/database_id"
           }
@@ -56878,6 +56878,10 @@
           },
           {
             "name": "azurerm_data_protection_backup_instance_disk",
+            "addr": "/location"
+          },
+          {
+            "name": "azurerm_data_protection_backup_instance_kubernetes_cluster",
             "addr": "/location"
           },
           {
@@ -56932,6 +56936,9 @@
         "addr": "properties/friendlyName"
       },
       {
+        "addr": "properties/objectType"
+      },
+      {
         "addr": "properties/policyInfo/policyId",
         "app_property_maps": [
           {
@@ -56943,10 +56950,35 @@
             "addr": "/backup_policy_id"
           },
           {
+            "name": "azurerm_data_protection_backup_instance_kubernetes_cluster",
+            "addr": "/backup_policy_id"
+          },
+          {
             "name": "azurerm_data_protection_backup_instance_postgresql",
             "addr": "/backup_policy_id"
           }
         ]
+      },
+      {
+        "addr": "properties/policyInfo/policyParameters/backupDatasourceParametersList{KubernetesClusterBackupDatasourceParameters}/excludedNamespaces"
+      },
+      {
+        "addr": "properties/policyInfo/policyParameters/backupDatasourceParametersList{KubernetesClusterBackupDatasourceParameters}/excludedResourceTypes"
+      },
+      {
+        "addr": "properties/policyInfo/policyParameters/backupDatasourceParametersList{KubernetesClusterBackupDatasourceParameters}/includeClusterScopeResources"
+      },
+      {
+        "addr": "properties/policyInfo/policyParameters/backupDatasourceParametersList{KubernetesClusterBackupDatasourceParameters}/includedNamespaces"
+      },
+      {
+        "addr": "properties/policyInfo/policyParameters/backupDatasourceParametersList{KubernetesClusterBackupDatasourceParameters}/includedResourceTypes"
+      },
+      {
+        "addr": "properties/policyInfo/policyParameters/backupDatasourceParametersList{KubernetesClusterBackupDatasourceParameters}/labelSelectors"
+      },
+      {
+        "addr": "properties/policyInfo/policyParameters/backupDatasourceParametersList{KubernetesClusterBackupDatasourceParameters}/snapshotVolumes"
       },
       {
         "addr": "properties/policyInfo/policyParameters/dataStoreParametersList{AzureOperationalStoreParameters}/dataStoreType"
@@ -95603,12 +95635,12 @@
     "operation": "POST"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/APPLICATIONGATEWAYWEBAPPLICATIONFIREWALLPOLICIES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/APPLICATIONGATEWAYWEBAPPLICATIONFIREWALLPOLICIES/{}",
     "operation": "GET",
     "properties": [
@@ -95771,7 +95803,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/APPLICATIONGATEWAYWEBAPPLICATIONFIREWALLPOLICIES/{}",
     "operation": "PUT",
     "properties": [
@@ -95934,12 +95966,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/APPLICATIONSECURITYGROUPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/APPLICATIONSECURITYGROUPS/{}",
     "operation": "GET",
     "properties": [
@@ -95964,7 +95996,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/APPLICATIONSECURITYGROUPS/{}",
     "operation": "PUT",
     "properties": [
@@ -95989,12 +96021,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/AZUREFIREWALLS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/AZUREFIREWALLS/{}",
     "operation": "GET",
     "properties": [
@@ -96256,7 +96288,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/AZUREFIREWALLS/{}",
     "operation": "PUT",
     "properties": [
@@ -96518,12 +96550,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/BASTIONHOSTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/BASTIONHOSTS/{}",
     "operation": "GET",
     "properties": [
@@ -96593,7 +96625,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/BASTIONHOSTS/{}",
     "operation": "PUT",
     "properties": [
@@ -97124,12 +97156,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/DDOSPROTECTIONPLANS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/DDOSPROTECTIONPLANS/{}",
     "operation": "GET",
     "properties": [
@@ -97151,7 +97183,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/DDOSPROTECTIONPLANS/{}",
     "operation": "PUT",
     "properties": [
@@ -99231,12 +99263,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/FIREWALLPOLICIES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/FIREWALLPOLICIES/{}",
     "operation": "GET",
     "properties": [
@@ -99453,7 +99485,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/FIREWALLPOLICIES/{}",
     "operation": "PUT",
     "properties": [
@@ -99670,12 +99702,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/FIREWALLPOLICIES/{}/RULECOLLECTIONGROUPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/FIREWALLPOLICIES/{}/RULECOLLECTIONGROUPS/{}",
     "operation": "GET",
     "properties": [
@@ -99907,7 +99939,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/FIREWALLPOLICIES/{}/RULECOLLECTIONGROUPS/{}",
     "operation": "PUT",
     "properties": [
@@ -101471,12 +101503,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/LOADBALANCERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/LOADBALANCERS/{}",
     "operation": "GET",
     "properties": [
@@ -101753,7 +101785,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/LOADBALANCERS/{}",
     "operation": "PUT",
     "properties": [
@@ -102030,12 +102062,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/LOADBALANCERS/{}/BACKENDADDRESSPOOLS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/LOADBALANCERS/{}/BACKENDADDRESSPOOLS/{}",
     "operation": "GET",
     "properties": [
@@ -102099,7 +102131,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/LOADBALANCERS/{}/BACKENDADDRESSPOOLS/{}",
     "operation": "PUT",
     "properties": [
@@ -102163,7 +102195,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/LOADBALANCERS/{}/LOADBALANCINGRULES/{}",
     "operation": "GET",
     "properties": [
@@ -102511,7 +102543,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKINTERFACES/{}",
     "operation": "DELETE"
   },
@@ -102574,7 +102606,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKINTERFACES/{}",
     "operation": "GET",
     "properties": [
@@ -102765,7 +102797,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKINTERFACES/{}",
     "operation": "PUT",
     "properties": [
@@ -102898,12 +102930,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}",
     "operation": "GET",
     "properties": [
@@ -102952,7 +102984,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}",
     "operation": "PUT",
     "properties": [
@@ -103001,7 +103033,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/COMMIT",
     "operation": "POST",
     "properties": [
@@ -103017,12 +103049,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/CONNECTIVITYCONFIGURATIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/CONNECTIVITYCONFIGURATIONS/{}",
     "operation": "GET",
     "properties": [
@@ -103071,7 +103103,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/CONNECTIVITYCONFIGURATIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -103120,7 +103152,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/LISTDEPLOYMENTSTATUS",
     "operation": "POST",
     "properties": [
@@ -103133,12 +103165,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/NETWORKGROUPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/NETWORKGROUPS/{}",
     "operation": "GET",
     "properties": [
@@ -103154,7 +103186,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/NETWORKGROUPS/{}",
     "operation": "PUT",
     "properties": [
@@ -103170,12 +103202,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/NETWORKGROUPS/{}/STATICMEMBERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/NETWORKGROUPS/{}/STATICMEMBERS/{}",
     "operation": "GET",
     "properties": [
@@ -103200,7 +103232,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/NETWORKGROUPS/{}/STATICMEMBERS/{}",
     "operation": "PUT",
     "properties": [
@@ -103225,12 +103257,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/SCOPECONNECTIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/SCOPECONNECTIONS/{}",
     "operation": "GET",
     "properties": [
@@ -103273,7 +103305,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/SCOPECONNECTIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -103316,12 +103348,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/SECURITYADMINCONFIGURATIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/SECURITYADMINCONFIGURATIONS/{}",
     "operation": "GET",
     "properties": [
@@ -103340,7 +103372,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/SECURITYADMINCONFIGURATIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -103359,12 +103391,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/SECURITYADMINCONFIGURATIONS/{}/RULECOLLECTIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/SECURITYADMINCONFIGURATIONS/{}/RULECOLLECTIONS/{}",
     "operation": "GET",
     "properties": [
@@ -103383,7 +103415,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/SECURITYADMINCONFIGURATIONS/{}/RULECOLLECTIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -103402,12 +103434,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/SECURITYADMINCONFIGURATIONS/{}/RULECOLLECTIONS/{}/RULES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/SECURITYADMINCONFIGURATIONS/{}/RULECOLLECTIONS/{}/RULES/{}",
     "operation": "GET",
     "variant": "Custom",
@@ -103448,7 +103480,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/SECURITYADMINCONFIGURATIONS/{}/RULECOLLECTIONS/{}/RULES/{}",
     "operation": "PUT",
     "variant": "Custom",
@@ -103489,12 +103521,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKPROFILES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKPROFILES/{}",
     "operation": "GET",
     "properties": [
@@ -103525,7 +103557,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKPROFILES/{}",
     "operation": "PUT",
     "properties": [
@@ -103719,12 +103751,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKSECURITYGROUPS/{}/SECURITYRULES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKSECURITYGROUPS/{}/SECURITYRULES/{}",
     "operation": "GET",
     "properties": [
@@ -103827,7 +103859,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKSECURITYGROUPS/{}/SECURITYRULES/{}",
     "operation": "PUT",
     "properties": [
@@ -103930,12 +103962,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKVIRTUALAPPLIANCES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKVIRTUALAPPLIANCES/{}",
     "operation": "GET",
     "properties": [
@@ -103957,7 +103989,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKVIRTUALAPPLIANCES/{}",
     "operation": "PUT",
     "properties": [
@@ -103979,12 +104011,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}",
     "operation": "GET",
     "properties": [
@@ -104003,7 +104035,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}",
     "operation": "PUT",
     "properties": [
@@ -104022,12 +104054,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}/CONNECTIONMONITORS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}/CONNECTIONMONITORS/{}",
     "operation": "GET",
     "properties": [
@@ -104160,7 +104192,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}/CONNECTIONMONITORS/{}",
     "operation": "PUT",
     "properties": [
@@ -104290,12 +104322,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}/FLOWLOGS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}/FLOWLOGS/{}",
     "operation": "GET",
     "properties": [
@@ -104395,7 +104427,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}/FLOWLOGS/{}",
     "operation": "PUT",
     "properties": [
@@ -104495,12 +104527,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}/PACKETCAPTURES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}/PACKETCAPTURES/{}",
     "operation": "GET",
     "properties": [
@@ -104647,7 +104679,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKWATCHERS/{}/PACKETCAPTURES/{}",
     "operation": "PUT",
     "properties": [
@@ -105299,12 +105331,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PRIVATEENDPOINTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PRIVATEENDPOINTS/{}",
     "operation": "GET",
     "properties": [
@@ -105404,7 +105436,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PRIVATEENDPOINTS/{}",
     "operation": "PUT",
     "properties": [
@@ -106192,12 +106224,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/ROUTEFILTERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/ROUTEFILTERS/{}",
     "operation": "GET",
     "properties": [
@@ -106231,7 +106263,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/ROUTEFILTERS/{}",
     "operation": "PUT",
     "properties": [
@@ -106265,12 +106297,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/ROUTETABLES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/ROUTETABLES/{}",
     "operation": "GET",
     "properties": [
@@ -106310,7 +106342,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/ROUTETABLES/{}",
     "operation": "PUT",
     "properties": [
@@ -106350,12 +106382,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/ROUTETABLES/{}/ROUTES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/ROUTETABLES/{}/ROUTES/{}",
     "operation": "GET",
     "properties": [
@@ -106392,7 +106424,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/ROUTETABLES/{}/ROUTES/{}",
     "operation": "PUT",
     "properties": [
@@ -107864,12 +107896,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/ROUTINGINTENT/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/ROUTINGINTENT/{}",
     "operation": "GET",
     "properties": [
@@ -107885,7 +107917,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/ROUTINGINTENT/{}",
     "operation": "PUT",
     "properties": [
@@ -109165,12 +109197,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNGATEWAYS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNGATEWAYS/{}",
     "operation": "GET",
     "properties": [
@@ -109252,7 +109284,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNGATEWAYS/{}",
     "operation": "PUT",
     "properties": [
@@ -109437,12 +109469,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNGATEWAYS/{}/VPNCONNECTIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNGATEWAYS/{}/VPNCONNECTIONS/{}",
     "operation": "GET",
     "properties": [
@@ -109569,7 +109601,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNGATEWAYS/{}/VPNCONNECTIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -109696,12 +109728,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNSERVERCONFIGURATIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNSERVERCONFIGURATIONS/{}",
     "operation": "GET",
     "properties": [
@@ -109816,7 +109848,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNSERVERCONFIGURATIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -109931,12 +109963,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNSERVERCONFIGURATIONS/{}/CONFIGURATIONPOLICYGROUPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNSERVERCONFIGURATIONS/{}/CONFIGURATIONPOLICYGROUPS/{}",
     "operation": "GET",
     "properties": [
@@ -109970,7 +110002,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNSERVERCONFIGURATIONS/{}/CONFIGURATIONPOLICYGROUPS/{}",
     "operation": "PUT",
     "properties": [
@@ -110004,12 +110036,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNSITES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNSITES/{}",
     "operation": "GET",
     "properties": [
@@ -110085,7 +110117,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VPNSITES/{}",
     "operation": "PUT",
     "properties": [
@@ -119668,6 +119700,107 @@
     "properties": [
       {
         "addr": "properties/mainTemplate"
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-10-07",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SCVMM/AVAILABILITYSETS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-10-07",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SCVMM/AVAILABILITYSETS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "extendedLocation/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_system_center_virtual_machine_manager_availability_set",
+            "addr": "/custom_location_id"
+          }
+        ]
+      },
+      {
+        "addr": "extendedLocation/type"
+      },
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_system_center_virtual_machine_manager_availability_set",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/availabilitySetName"
+      },
+      {
+        "addr": "properties/vmmServerId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_system_center_virtual_machine_manager_availability_set",
+            "addr": "/system_center_virtual_machine_manager_server_id"
+          }
+        ]
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-10-07",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SCVMM/AVAILABILITYSETS/{}",
+    "operation": "PATCH",
+    "properties": [
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-10-07",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SCVMM/AVAILABILITYSETS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "extendedLocation/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_system_center_virtual_machine_manager_availability_set",
+            "addr": "/custom_location_id"
+          }
+        ]
+      },
+      {
+        "addr": "extendedLocation/type"
+      },
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_system_center_virtual_machine_manager_availability_set",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/availabilitySetName"
+      },
+      {
+        "addr": "properties/vmmServerId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_system_center_virtual_machine_manager_availability_set",
+            "addr": "/system_center_virtual_machine_manager_server_id"
+          }
+        ]
       },
       {
         "addr": "tags"
@@ -137386,6 +137519,15 @@
         ]
       },
       {
+        "addr": "properties/datasource{Microsoft.Storage/Blob}/properties/blobWriteMode",
+        "app_property_maps": [
+          {
+            "name": "azurerm_stream_analytics_output_blob",
+            "addr": "/blob_write_mode"
+          }
+        ]
+      },
+      {
         "addr": "properties/datasource{Microsoft.Storage/Blob}/properties/container",
         "app_property_maps": [
           {
@@ -137930,6 +138072,15 @@
         ]
       },
       {
+        "addr": "properties/datasource{Microsoft.Storage/Blob}/properties/blobWriteMode",
+        "app_property_maps": [
+          {
+            "name": "azurerm_stream_analytics_output_blob",
+            "addr": "/blob_write_mode"
+          }
+        ]
+      },
+      {
         "addr": "properties/datasource{Microsoft.Storage/Blob}/properties/container",
         "app_property_maps": [
           {
@@ -138470,6 +138621,15 @@
           {
             "name": "azurerm_stream_analytics_output_blob",
             "addr": "/authentication_mode"
+          }
+        ]
+      },
+      {
+        "addr": "properties/datasource{Microsoft.Storage/Blob}/properties/blobWriteMode",
+        "app_property_maps": [
+          {
+            "name": "azurerm_stream_analytics_output_blob",
+            "addr": "/blob_write_mode"
           }
         ]
       },
@@ -143731,6 +143891,9 @@
         "addr": "properties/siteConfig/ipSecurityRestrictions/action"
       },
       {
+        "addr": "properties/siteConfig/ipSecurityRestrictions/description"
+      },
+      {
         "addr": "properties/siteConfig/ipSecurityRestrictions/headers"
       },
       {
@@ -143747,6 +143910,9 @@
       },
       {
         "addr": "properties/siteConfig/ipSecurityRestrictions/vnetSubnetResourceId"
+      },
+      {
+        "addr": "properties/siteConfig/ipSecurityRestrictionsDefaultAction"
       },
       {
         "addr": "properties/siteConfig/javaContainer"
@@ -143806,6 +143972,9 @@
         "addr": "properties/siteConfig/scmIpSecurityRestrictions/action"
       },
       {
+        "addr": "properties/siteConfig/scmIpSecurityRestrictions/description"
+      },
+      {
         "addr": "properties/siteConfig/scmIpSecurityRestrictions/headers"
       },
       {
@@ -143822,6 +143991,9 @@
       },
       {
         "addr": "properties/siteConfig/scmIpSecurityRestrictions/vnetSubnetResourceId"
+      },
+      {
+        "addr": "properties/siteConfig/scmIpSecurityRestrictionsDefaultAction"
       },
       {
         "addr": "properties/siteConfig/scmIpSecurityRestrictionsUseMain"
@@ -144788,6 +144960,9 @@
         "addr": "properties/siteConfig/ipSecurityRestrictions/action"
       },
       {
+        "addr": "properties/siteConfig/ipSecurityRestrictions/description"
+      },
+      {
         "addr": "properties/siteConfig/ipSecurityRestrictions/headers"
       },
       {
@@ -144804,6 +144979,9 @@
       },
       {
         "addr": "properties/siteConfig/ipSecurityRestrictions/vnetSubnetResourceId"
+      },
+      {
+        "addr": "properties/siteConfig/ipSecurityRestrictionsDefaultAction"
       },
       {
         "addr": "properties/siteConfig/javaContainer"
@@ -144863,6 +145041,9 @@
         "addr": "properties/siteConfig/scmIpSecurityRestrictions/action"
       },
       {
+        "addr": "properties/siteConfig/scmIpSecurityRestrictions/description"
+      },
+      {
         "addr": "properties/siteConfig/scmIpSecurityRestrictions/headers"
       },
       {
@@ -144879,6 +145060,9 @@
       },
       {
         "addr": "properties/siteConfig/scmIpSecurityRestrictions/vnetSubnetResourceId"
+      },
+      {
+        "addr": "properties/siteConfig/scmIpSecurityRestrictionsDefaultAction"
       },
       {
         "addr": "properties/siteConfig/scmIpSecurityRestrictionsUseMain"
@@ -146999,6 +147183,9 @@
         "addr": "properties/ipSecurityRestrictions/action"
       },
       {
+        "addr": "properties/ipSecurityRestrictions/description"
+      },
+      {
         "addr": "properties/ipSecurityRestrictions/headers"
       },
       {
@@ -147015,6 +147202,31 @@
       },
       {
         "addr": "properties/ipSecurityRestrictions/vnetSubnetResourceId"
+      },
+      {
+        "addr": "properties/ipSecurityRestrictionsDefaultAction",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_function_app",
+            "addr": "/site_config/0/ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/site_config/0/ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_linux_web_app",
+            "addr": "/site_config/0/ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_windows_function_app",
+            "addr": "/site_config/0/ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_windows_web_app",
+            "addr": "/site_config/0/ip_restriction_default_action"
+          }
+        ]
       },
       {
         "addr": "properties/javaContainer"
@@ -147238,6 +147450,9 @@
         "addr": "properties/scmIpSecurityRestrictions/action"
       },
       {
+        "addr": "properties/scmIpSecurityRestrictions/description"
+      },
+      {
         "addr": "properties/scmIpSecurityRestrictions/headers"
       },
       {
@@ -147254,6 +147469,31 @@
       },
       {
         "addr": "properties/scmIpSecurityRestrictions/vnetSubnetResourceId"
+      },
+      {
+        "addr": "properties/scmIpSecurityRestrictionsDefaultAction",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_function_app",
+            "addr": "/site_config/0/scm_ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/site_config/0/scm_ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_linux_web_app",
+            "addr": "/site_config/0/scm_ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_windows_function_app",
+            "addr": "/site_config/0/scm_ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_windows_web_app",
+            "addr": "/site_config/0/scm_ip_restriction_default_action"
+          }
+        ]
       },
       {
         "addr": "properties/scmIpSecurityRestrictionsUseMain"
@@ -147718,6 +147958,9 @@
         "addr": "properties/ipSecurityRestrictions/action"
       },
       {
+        "addr": "properties/ipSecurityRestrictions/description"
+      },
+      {
         "addr": "properties/ipSecurityRestrictions/headers"
       },
       {
@@ -147734,6 +147977,31 @@
       },
       {
         "addr": "properties/ipSecurityRestrictions/vnetSubnetResourceId"
+      },
+      {
+        "addr": "properties/ipSecurityRestrictionsDefaultAction",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_function_app",
+            "addr": "/site_config/0/ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/site_config/0/ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_linux_web_app",
+            "addr": "/site_config/0/ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_windows_function_app",
+            "addr": "/site_config/0/ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_windows_web_app",
+            "addr": "/site_config/0/ip_restriction_default_action"
+          }
+        ]
       },
       {
         "addr": "properties/javaContainer"
@@ -147957,6 +148225,9 @@
         "addr": "properties/scmIpSecurityRestrictions/action"
       },
       {
+        "addr": "properties/scmIpSecurityRestrictions/description"
+      },
+      {
         "addr": "properties/scmIpSecurityRestrictions/headers"
       },
       {
@@ -147973,6 +148244,31 @@
       },
       {
         "addr": "properties/scmIpSecurityRestrictions/vnetSubnetResourceId"
+      },
+      {
+        "addr": "properties/scmIpSecurityRestrictionsDefaultAction",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_function_app",
+            "addr": "/site_config/0/scm_ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/site_config/0/scm_ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_linux_web_app",
+            "addr": "/site_config/0/scm_ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_windows_function_app",
+            "addr": "/site_config/0/scm_ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_windows_web_app",
+            "addr": "/site_config/0/scm_ip_restriction_default_action"
+          }
+        ]
       },
       {
         "addr": "properties/scmIpSecurityRestrictionsUseMain"
@@ -149067,13 +149363,31 @@
     "operation": "GET",
     "properties": [
       {
-        "addr": "properties/blob"
+        "addr": "properties/blob",
+        "app_property_maps": [
+          {
+            "name": "azurerm_app_service_public_certificate",
+            "addr": "/blob"
+          }
+        ]
       },
       {
-        "addr": "properties/publicCertificateLocation"
+        "addr": "properties/publicCertificateLocation",
+        "app_property_maps": [
+          {
+            "name": "azurerm_app_service_public_certificate",
+            "addr": "/certificate_location"
+          }
+        ]
       },
       {
-        "addr": "properties/thumbprint"
+        "addr": "properties/thumbprint",
+        "app_property_maps": [
+          {
+            "name": "azurerm_app_service_public_certificate",
+            "addr": "/thumbprint"
+          }
+        ]
       }
     ]
   },
@@ -149083,13 +149397,31 @@
     "operation": "PUT",
     "properties": [
       {
-        "addr": "properties/blob"
+        "addr": "properties/blob",
+        "app_property_maps": [
+          {
+            "name": "azurerm_app_service_public_certificate",
+            "addr": "/blob"
+          }
+        ]
       },
       {
-        "addr": "properties/publicCertificateLocation"
+        "addr": "properties/publicCertificateLocation",
+        "app_property_maps": [
+          {
+            "name": "azurerm_app_service_public_certificate",
+            "addr": "/certificate_location"
+          }
+        ]
       },
       {
-        "addr": "properties/thumbprint"
+        "addr": "properties/thumbprint",
+        "app_property_maps": [
+          {
+            "name": "azurerm_app_service_public_certificate",
+            "addr": "/thumbprint"
+          }
+        ]
       }
     ]
   },
@@ -149542,6 +149874,9 @@
         "addr": "properties/siteConfig/ipSecurityRestrictions/action"
       },
       {
+        "addr": "properties/siteConfig/ipSecurityRestrictions/description"
+      },
+      {
         "addr": "properties/siteConfig/ipSecurityRestrictions/headers"
       },
       {
@@ -149558,6 +149893,9 @@
       },
       {
         "addr": "properties/siteConfig/ipSecurityRestrictions/vnetSubnetResourceId"
+      },
+      {
+        "addr": "properties/siteConfig/ipSecurityRestrictionsDefaultAction"
       },
       {
         "addr": "properties/siteConfig/javaContainer"
@@ -149617,6 +149955,9 @@
         "addr": "properties/siteConfig/scmIpSecurityRestrictions/action"
       },
       {
+        "addr": "properties/siteConfig/scmIpSecurityRestrictions/description"
+      },
+      {
         "addr": "properties/siteConfig/scmIpSecurityRestrictions/headers"
       },
       {
@@ -149633,6 +149974,9 @@
       },
       {
         "addr": "properties/siteConfig/scmIpSecurityRestrictions/vnetSubnetResourceId"
+      },
+      {
+        "addr": "properties/siteConfig/scmIpSecurityRestrictionsDefaultAction"
       },
       {
         "addr": "properties/siteConfig/scmIpSecurityRestrictionsUseMain"
@@ -150161,6 +150505,9 @@
         "addr": "properties/siteConfig/ipSecurityRestrictions/action"
       },
       {
+        "addr": "properties/siteConfig/ipSecurityRestrictions/description"
+      },
+      {
         "addr": "properties/siteConfig/ipSecurityRestrictions/headers"
       },
       {
@@ -150177,6 +150524,9 @@
       },
       {
         "addr": "properties/siteConfig/ipSecurityRestrictions/vnetSubnetResourceId"
+      },
+      {
+        "addr": "properties/siteConfig/ipSecurityRestrictionsDefaultAction"
       },
       {
         "addr": "properties/siteConfig/javaContainer"
@@ -150236,6 +150586,9 @@
         "addr": "properties/siteConfig/scmIpSecurityRestrictions/action"
       },
       {
+        "addr": "properties/siteConfig/scmIpSecurityRestrictions/description"
+      },
+      {
         "addr": "properties/siteConfig/scmIpSecurityRestrictions/headers"
       },
       {
@@ -150252,6 +150605,9 @@
       },
       {
         "addr": "properties/siteConfig/scmIpSecurityRestrictions/vnetSubnetResourceId"
+      },
+      {
+        "addr": "properties/siteConfig/scmIpSecurityRestrictionsDefaultAction"
       },
       {
         "addr": "properties/siteConfig/scmIpSecurityRestrictionsUseMain"
@@ -152221,6 +152577,9 @@
         "addr": "properties/ipSecurityRestrictions/action"
       },
       {
+        "addr": "properties/ipSecurityRestrictions/description"
+      },
+      {
         "addr": "properties/ipSecurityRestrictions/headers"
       },
       {
@@ -152237,6 +152596,23 @@
       },
       {
         "addr": "properties/ipSecurityRestrictions/vnetSubnetResourceId"
+      },
+      {
+        "addr": "properties/ipSecurityRestrictionsDefaultAction",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_web_app_slot",
+            "addr": "/site_config/0/ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_windows_function_app_slot",
+            "addr": "/site_config/0/ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_windows_web_app_slot",
+            "addr": "/site_config/0/ip_restriction_default_action"
+          }
+        ]
       },
       {
         "addr": "properties/javaContainer"
@@ -152408,6 +152784,9 @@
         "addr": "properties/scmIpSecurityRestrictions/action"
       },
       {
+        "addr": "properties/scmIpSecurityRestrictions/description"
+      },
+      {
         "addr": "properties/scmIpSecurityRestrictions/headers"
       },
       {
@@ -152424,6 +152803,23 @@
       },
       {
         "addr": "properties/scmIpSecurityRestrictions/vnetSubnetResourceId"
+      },
+      {
+        "addr": "properties/scmIpSecurityRestrictionsDefaultAction",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_web_app_slot",
+            "addr": "/site_config/0/scm_ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_windows_function_app_slot",
+            "addr": "/site_config/0/scm_ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_windows_web_app_slot",
+            "addr": "/site_config/0/scm_ip_restriction_default_action"
+          }
+        ]
       },
       {
         "addr": "properties/scmIpSecurityRestrictionsUseMain"
@@ -152832,6 +153228,9 @@
         "addr": "properties/ipSecurityRestrictions/action"
       },
       {
+        "addr": "properties/ipSecurityRestrictions/description"
+      },
+      {
         "addr": "properties/ipSecurityRestrictions/headers"
       },
       {
@@ -152848,6 +153247,23 @@
       },
       {
         "addr": "properties/ipSecurityRestrictions/vnetSubnetResourceId"
+      },
+      {
+        "addr": "properties/ipSecurityRestrictionsDefaultAction",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_web_app_slot",
+            "addr": "/site_config/0/ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_windows_function_app_slot",
+            "addr": "/site_config/0/ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_windows_web_app_slot",
+            "addr": "/site_config/0/ip_restriction_default_action"
+          }
+        ]
       },
       {
         "addr": "properties/javaContainer"
@@ -153019,6 +153435,9 @@
         "addr": "properties/scmIpSecurityRestrictions/action"
       },
       {
+        "addr": "properties/scmIpSecurityRestrictions/description"
+      },
+      {
         "addr": "properties/scmIpSecurityRestrictions/headers"
       },
       {
@@ -153035,6 +153454,23 @@
       },
       {
         "addr": "properties/scmIpSecurityRestrictions/vnetSubnetResourceId"
+      },
+      {
+        "addr": "properties/scmIpSecurityRestrictionsDefaultAction",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_web_app_slot",
+            "addr": "/site_config/0/scm_ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_windows_function_app_slot",
+            "addr": "/site_config/0/scm_ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_windows_web_app_slot",
+            "addr": "/site_config/0/scm_ip_restriction_default_action"
+          }
+        ]
       },
       {
         "addr": "properties/scmIpSecurityRestrictionsUseMain"
@@ -154090,6 +154526,11 @@
     "operation": "DELETE"
   },
   {
+    "api_version": "2023-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/STATICSITES/{}",
+    "operation": "DELETE"
+  },
+  {
     "api_version": "2021-02-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/STATICSITES/{}",
     "operation": "GET",
@@ -154148,6 +154589,70 @@
     ]
   },
   {
+    "api_version": "2023-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/STATICSITES/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "identity/principalId"
+      },
+      {
+        "addr": "identity/tenantId"
+      },
+      {
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
+      },
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_static_web_app",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/allowConfigFileUpdates"
+      },
+      {
+        "addr": "properties/defaultHostname",
+        "app_property_maps": [
+          {
+            "name": "azurerm_static_web_app",
+            "addr": "/default_host_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/stagingEnvironmentPolicy"
+      },
+      {
+        "addr": "sku/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_static_web_app",
+            "addr": "/sku_size"
+          }
+        ]
+      },
+      {
+        "addr": "sku/tier",
+        "app_property_maps": [
+          {
+            "name": "azurerm_static_web_app",
+            "addr": "/sku_tier"
+          }
+        ]
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
     "api_version": "2021-02-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/STATICSITES/{}",
     "operation": "PUT",
@@ -154196,6 +154701,70 @@
         "app_property_maps": [
           {
             "name": "azurerm_static_site",
+            "addr": "/sku_tier"
+          }
+        ]
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/STATICSITES/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "identity/principalId"
+      },
+      {
+        "addr": "identity/tenantId"
+      },
+      {
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
+      },
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_static_web_app",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/allowConfigFileUpdates"
+      },
+      {
+        "addr": "properties/defaultHostname",
+        "app_property_maps": [
+          {
+            "name": "azurerm_static_web_app",
+            "addr": "/default_host_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/stagingEnvironmentPolicy"
+      },
+      {
+        "addr": "sku/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_static_web_app",
+            "addr": "/sku_size"
+          }
+        ]
+      },
+      {
+        "addr": "sku/tier",
+        "app_property_maps": [
+          {
+            "name": "azurerm_static_web_app",
             "addr": "/sku_tier"
           }
         ]
@@ -154216,7 +154785,22 @@
     ]
   },
   {
+    "api_version": "2023-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/STATICSITES/{}/CONFIG/APPSETTINGS",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "properties"
+      }
+    ]
+  },
+  {
     "api_version": "2021-02-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/STATICSITES/{}/CUSTOMDOMAINS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/STATICSITES/{}/CUSTOMDOMAINS/{}",
     "operation": "DELETE"
   },
@@ -154234,7 +154818,36 @@
     ]
   },
   {
+    "api_version": "2023-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/STATICSITES/{}/CUSTOMDOMAINS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/status"
+      },
+      {
+        "addr": "properties/validationToken",
+        "app_property_maps": [
+          {
+            "name": "azurerm_static_web_app_custom_domain",
+            "addr": "/validation_token"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "api_version": "2021-02-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/STATICSITES/{}/CUSTOMDOMAINS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "properties/validationMethod"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/STATICSITES/{}/CUSTOMDOMAINS/{}",
     "operation": "PUT",
     "properties": [
@@ -154249,9 +154862,710 @@
     "operation": "POST"
   },
   {
+    "api_version": "2023-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/STATICSITES/{}/LISTAPPSETTINGS",
+    "operation": "POST"
+  },
+  {
     "api_version": "2021-02-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/STATICSITES/{}/LISTSECRETS",
     "operation": "POST"
+  },
+  {
+    "api_version": "2023-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/STATICSITES/{}/LISTSECRETS",
+    "operation": "POST"
+  },
+  {
+    "api_version": "2023-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WORKLOADS/SAPVIRTUALINSTANCES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WORKLOADS/SAPVIRTUALINSTANCES/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
+      },
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_workloads_sap_single_node_virtual_instance",
+            "addr": "/location"
+          },
+          {
+            "name": "azurerm_workloads_sap_three_tier_virtual_instance",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/appLocation"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/appResourceGroup"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/customResourceNames{FullResourceName}/virtualMachine/dataDiskNames"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/customResourceNames{FullResourceName}/virtualMachine/hostName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/customResourceNames{FullResourceName}/virtualMachine/networkInterfaces/networkInterfaceName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/customResourceNames{FullResourceName}/virtualMachine/osDiskName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/customResourceNames{FullResourceName}/virtualMachine/vmName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/databaseType"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/dbDiskConfiguration/diskVolumeConfigurations"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/networkConfiguration/isSecondaryIpEnabled"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/subnetId"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/virtualMachineConfiguration/imageReference/offer"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/virtualMachineConfiguration/imageReference/publisher"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/virtualMachineConfiguration/imageReference/sku"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/virtualMachineConfiguration/imageReference/version"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/virtualMachineConfiguration/osProfile/adminUsername"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/virtualMachineConfiguration/osProfile/osConfiguration{Linux}/disablePasswordAuthentication"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/virtualMachineConfiguration/osProfile/osConfiguration{Linux}/sshKeyPair/privateKey"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/virtualMachineConfiguration/osProfile/osConfiguration{Linux}/sshKeyPair/publicKey"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/virtualMachineConfiguration/vmSize"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/appResourceGroup"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/applicationServer/instanceCount"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/applicationServer/subnetId"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/applicationServer/virtualMachineConfiguration/imageReference/offer"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/applicationServer/virtualMachineConfiguration/imageReference/publisher"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/applicationServer/virtualMachineConfiguration/imageReference/sku"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/applicationServer/virtualMachineConfiguration/imageReference/version"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/applicationServer/virtualMachineConfiguration/osProfile/adminUsername"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/applicationServer/virtualMachineConfiguration/osProfile/osConfiguration{Linux}/disablePasswordAuthentication"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/applicationServer/virtualMachineConfiguration/osProfile/osConfiguration{Linux}/sshKeyPair/privateKey"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/applicationServer/virtualMachineConfiguration/osProfile/osConfiguration{Linux}/sshKeyPair/publicKey"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/applicationServer/virtualMachineConfiguration/vmSize"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/centralServer/instanceCount"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/centralServer/subnetId"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/centralServer/virtualMachineConfiguration/imageReference/offer"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/centralServer/virtualMachineConfiguration/imageReference/publisher"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/centralServer/virtualMachineConfiguration/imageReference/sku"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/centralServer/virtualMachineConfiguration/imageReference/version"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/centralServer/virtualMachineConfiguration/osProfile/adminUsername"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/centralServer/virtualMachineConfiguration/osProfile/osConfiguration{Linux}/disablePasswordAuthentication"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/centralServer/virtualMachineConfiguration/osProfile/osConfiguration{Linux}/sshKeyPair/privateKey"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/centralServer/virtualMachineConfiguration/osProfile/osConfiguration{Linux}/sshKeyPair/publicKey"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/centralServer/virtualMachineConfiguration/vmSize"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/applicationServer/availabilitySetName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/applicationServer/virtualMachines/dataDiskNames"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/applicationServer/virtualMachines/hostName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/applicationServer/virtualMachines/networkInterfaces/networkInterfaceName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/applicationServer/virtualMachines/osDiskName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/applicationServer/virtualMachines/vmName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/centralServer/availabilitySetName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/centralServer/loadBalancer/backendPoolNames"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/centralServer/loadBalancer/frontendIpConfigurationNames"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/centralServer/loadBalancer/healthProbeNames"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/centralServer/loadBalancer/loadBalancerName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/centralServer/virtualMachines/dataDiskNames"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/centralServer/virtualMachines/hostName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/centralServer/virtualMachines/networkInterfaces/networkInterfaceName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/centralServer/virtualMachines/osDiskName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/centralServer/virtualMachines/vmName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/databaseServer/availabilitySetName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/databaseServer/loadBalancer/backendPoolNames"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/databaseServer/loadBalancer/frontendIpConfigurationNames"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/databaseServer/loadBalancer/healthProbeNames"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/databaseServer/loadBalancer/loadBalancerName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/databaseServer/virtualMachines/dataDiskNames"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/databaseServer/virtualMachines/hostName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/databaseServer/virtualMachines/networkInterfaces/networkInterfaceName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/databaseServer/virtualMachines/osDiskName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/databaseServer/virtualMachines/vmName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/sharedStorage/sharedStorageAccountName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/sharedStorage/sharedStorageAccountPrivateEndPointName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/databaseServer/databaseType"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/databaseServer/diskConfiguration/diskVolumeConfigurations"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/databaseServer/instanceCount"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/databaseServer/subnetId"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/databaseServer/virtualMachineConfiguration/imageReference/offer"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/databaseServer/virtualMachineConfiguration/imageReference/publisher"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/databaseServer/virtualMachineConfiguration/imageReference/sku"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/databaseServer/virtualMachineConfiguration/imageReference/version"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/databaseServer/virtualMachineConfiguration/osProfile/adminUsername"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/databaseServer/virtualMachineConfiguration/osProfile/osConfiguration{Linux}/disablePasswordAuthentication"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/databaseServer/virtualMachineConfiguration/osProfile/osConfiguration{Linux}/sshKeyPair/privateKey"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/databaseServer/virtualMachineConfiguration/osProfile/osConfiguration{Linux}/sshKeyPair/publicKey"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/databaseServer/virtualMachineConfiguration/vmSize"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/highAvailabilityConfig/highAvailabilityType"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/networkConfiguration/isSecondaryIpEnabled"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/storageConfiguration/transportFileShareConfiguration{CreateAndMount}/resourceGroup"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/storageConfiguration/transportFileShareConfiguration{CreateAndMount}/storageAccountName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/osSapConfiguration/sapFqdn"
+      },
+      {
+        "addr": "properties/environment",
+        "app_property_maps": [
+          {
+            "name": "azurerm_workloads_sap_single_node_virtual_instance",
+            "addr": "/environment"
+          },
+          {
+            "name": "azurerm_workloads_sap_three_tier_virtual_instance",
+            "addr": "/environment"
+          }
+        ]
+      },
+      {
+        "addr": "properties/managedResourceGroupConfiguration/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_workloads_sap_single_node_virtual_instance",
+            "addr": "/managed_resource_group_name"
+          },
+          {
+            "name": "azurerm_workloads_sap_three_tier_virtual_instance",
+            "addr": "/managed_resource_group_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/sapProduct",
+        "app_property_maps": [
+          {
+            "name": "azurerm_workloads_sap_single_node_virtual_instance",
+            "addr": "/sap_product"
+          },
+          {
+            "name": "azurerm_workloads_sap_three_tier_virtual_instance",
+            "addr": "/sap_product"
+          }
+        ]
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WORKLOADS/SAPVIRTUALINSTANCES/{}",
+    "operation": "PATCH",
+    "properties": [
+      {
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WORKLOADS/SAPVIRTUALINSTANCES/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
+      },
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_workloads_sap_single_node_virtual_instance",
+            "addr": "/location"
+          },
+          {
+            "name": "azurerm_workloads_sap_three_tier_virtual_instance",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/appLocation"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/appResourceGroup"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/customResourceNames{FullResourceName}/virtualMachine/dataDiskNames"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/customResourceNames{FullResourceName}/virtualMachine/hostName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/customResourceNames{FullResourceName}/virtualMachine/networkInterfaces/networkInterfaceName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/customResourceNames{FullResourceName}/virtualMachine/osDiskName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/customResourceNames{FullResourceName}/virtualMachine/vmName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/databaseType"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/dbDiskConfiguration/diskVolumeConfigurations"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/networkConfiguration/isSecondaryIpEnabled"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/subnetId"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/virtualMachineConfiguration/imageReference/offer"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/virtualMachineConfiguration/imageReference/publisher"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/virtualMachineConfiguration/imageReference/sku"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/virtualMachineConfiguration/imageReference/version"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/virtualMachineConfiguration/osProfile/adminUsername"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/virtualMachineConfiguration/osProfile/osConfiguration{Linux}/disablePasswordAuthentication"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/virtualMachineConfiguration/osProfile/osConfiguration{Linux}/sshKeyPair/privateKey"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/virtualMachineConfiguration/osProfile/osConfiguration{Linux}/sshKeyPair/publicKey"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{SingleServer}/virtualMachineConfiguration/vmSize"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/appResourceGroup"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/applicationServer/instanceCount"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/applicationServer/subnetId"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/applicationServer/virtualMachineConfiguration/imageReference/offer"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/applicationServer/virtualMachineConfiguration/imageReference/publisher"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/applicationServer/virtualMachineConfiguration/imageReference/sku"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/applicationServer/virtualMachineConfiguration/imageReference/version"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/applicationServer/virtualMachineConfiguration/osProfile/adminUsername"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/applicationServer/virtualMachineConfiguration/osProfile/osConfiguration{Linux}/disablePasswordAuthentication"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/applicationServer/virtualMachineConfiguration/osProfile/osConfiguration{Linux}/sshKeyPair/privateKey"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/applicationServer/virtualMachineConfiguration/osProfile/osConfiguration{Linux}/sshKeyPair/publicKey"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/applicationServer/virtualMachineConfiguration/vmSize"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/centralServer/instanceCount"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/centralServer/subnetId"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/centralServer/virtualMachineConfiguration/imageReference/offer"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/centralServer/virtualMachineConfiguration/imageReference/publisher"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/centralServer/virtualMachineConfiguration/imageReference/sku"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/centralServer/virtualMachineConfiguration/imageReference/version"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/centralServer/virtualMachineConfiguration/osProfile/adminUsername"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/centralServer/virtualMachineConfiguration/osProfile/osConfiguration{Linux}/disablePasswordAuthentication"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/centralServer/virtualMachineConfiguration/osProfile/osConfiguration{Linux}/sshKeyPair/privateKey"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/centralServer/virtualMachineConfiguration/osProfile/osConfiguration{Linux}/sshKeyPair/publicKey"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/centralServer/virtualMachineConfiguration/vmSize"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/applicationServer/availabilitySetName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/applicationServer/virtualMachines/dataDiskNames"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/applicationServer/virtualMachines/hostName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/applicationServer/virtualMachines/networkInterfaces/networkInterfaceName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/applicationServer/virtualMachines/osDiskName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/applicationServer/virtualMachines/vmName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/centralServer/availabilitySetName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/centralServer/loadBalancer/backendPoolNames"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/centralServer/loadBalancer/frontendIpConfigurationNames"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/centralServer/loadBalancer/healthProbeNames"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/centralServer/loadBalancer/loadBalancerName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/centralServer/virtualMachines/dataDiskNames"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/centralServer/virtualMachines/hostName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/centralServer/virtualMachines/networkInterfaces/networkInterfaceName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/centralServer/virtualMachines/osDiskName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/centralServer/virtualMachines/vmName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/databaseServer/availabilitySetName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/databaseServer/loadBalancer/backendPoolNames"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/databaseServer/loadBalancer/frontendIpConfigurationNames"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/databaseServer/loadBalancer/healthProbeNames"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/databaseServer/loadBalancer/loadBalancerName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/databaseServer/virtualMachines/dataDiskNames"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/databaseServer/virtualMachines/hostName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/databaseServer/virtualMachines/networkInterfaces/networkInterfaceName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/databaseServer/virtualMachines/osDiskName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/databaseServer/virtualMachines/vmName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/sharedStorage/sharedStorageAccountName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/customResourceNames{FullResourceName}/sharedStorage/sharedStorageAccountPrivateEndPointName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/databaseServer/databaseType"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/databaseServer/diskConfiguration/diskVolumeConfigurations"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/databaseServer/instanceCount"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/databaseServer/subnetId"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/databaseServer/virtualMachineConfiguration/imageReference/offer"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/databaseServer/virtualMachineConfiguration/imageReference/publisher"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/databaseServer/virtualMachineConfiguration/imageReference/sku"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/databaseServer/virtualMachineConfiguration/imageReference/version"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/databaseServer/virtualMachineConfiguration/osProfile/adminUsername"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/databaseServer/virtualMachineConfiguration/osProfile/osConfiguration{Linux}/disablePasswordAuthentication"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/databaseServer/virtualMachineConfiguration/osProfile/osConfiguration{Linux}/sshKeyPair/privateKey"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/databaseServer/virtualMachineConfiguration/osProfile/osConfiguration{Linux}/sshKeyPair/publicKey"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/databaseServer/virtualMachineConfiguration/vmSize"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/highAvailabilityConfig/highAvailabilityType"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/networkConfiguration/isSecondaryIpEnabled"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/storageConfiguration/transportFileShareConfiguration{CreateAndMount}/resourceGroup"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/infrastructureConfiguration{ThreeTier}/storageConfiguration/transportFileShareConfiguration{CreateAndMount}/storageAccountName"
+      },
+      {
+        "addr": "properties/configuration{DeploymentWithOSConfig}/osSapConfiguration/sapFqdn"
+      },
+      {
+        "addr": "properties/environment",
+        "app_property_maps": [
+          {
+            "name": "azurerm_workloads_sap_single_node_virtual_instance",
+            "addr": "/environment"
+          },
+          {
+            "name": "azurerm_workloads_sap_three_tier_virtual_instance",
+            "addr": "/environment"
+          }
+        ]
+      },
+      {
+        "addr": "properties/managedResourceGroupConfiguration/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_workloads_sap_single_node_virtual_instance",
+            "addr": "/managed_resource_group_name"
+          },
+          {
+            "name": "azurerm_workloads_sap_three_tier_virtual_instance",
+            "addr": "/managed_resource_group_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/sapProduct",
+        "app_property_maps": [
+          {
+            "name": "azurerm_workloads_sap_single_node_virtual_instance",
+            "addr": "/sap_product"
+          },
+          {
+            "name": "azurerm_workloads_sap_three_tier_virtual_instance",
+            "addr": "/sap_product"
+          }
+        ]
+      },
+      {
+        "addr": "tags"
+      }
+    ]
   },
   {
     "api_version": "2022-07-01",
@@ -157734,6 +159048,12 @@
         "addr": "properties/permissions/actions"
       },
       {
+        "addr": "properties/permissions/condition"
+      },
+      {
+        "addr": "properties/permissions/conditionVersion"
+      },
+      {
         "addr": "properties/permissions/dataActions"
       },
       {
@@ -157806,6 +159126,12 @@
       },
       {
         "addr": "properties/permissions/actions"
+      },
+      {
+        "addr": "properties/permissions/condition"
+      },
+      {
+        "addr": "properties/permissions/conditionVersion"
       },
       {
         "addr": "properties/permissions/dataActions"
@@ -157912,6 +159238,12 @@
       },
       {
         "addr": "properties/permissions/actions"
+      },
+      {
+        "addr": "properties/permissions/condition"
+      },
+      {
+        "addr": "properties/permissions/conditionVersion"
       },
       {
         "addr": "properties/permissions/dataActions"
