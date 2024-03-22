@@ -12196,6 +12196,9 @@
         "addr": "properties/configuration/registries/username"
       },
       {
+        "addr": "properties/configuration/secrets"
+      },
+      {
         "addr": "properties/configuration/secrets/name"
       },
       {
@@ -12594,6 +12597,9 @@
       },
       {
         "addr": "properties/configuration/registries/username"
+      },
+      {
+        "addr": "properties/configuration/secrets"
       },
       {
         "addr": "properties/configuration/secrets/name"
@@ -19891,12 +19897,12 @@
     ]
   },
   {
-    "api_version": "2023-08-01",
+    "api_version": "2024-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AZURESTACKHCI/CLUSTERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-08-01",
+    "api_version": "2024-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AZURESTACKHCI/CLUSTERS/{}",
     "operation": "GET",
     "properties": [
@@ -19987,7 +19993,7 @@
     ]
   },
   {
-    "api_version": "2023-08-01",
+    "api_version": "2024-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AZURESTACKHCI/CLUSTERS/{}",
     "operation": "PATCH",
     "properties": [
@@ -20024,7 +20030,7 @@
     ]
   },
   {
-    "api_version": "2023-08-01",
+    "api_version": "2024-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AZURESTACKHCI/CLUSTERS/{}",
     "operation": "PUT",
     "properties": [
@@ -49546,10 +49552,10 @@
     "operation": "GET",
     "properties": [
       {
-        "addr": "properties/annotations"
+        "addr": "properties{ManagedIdentity}/annotations"
       },
       {
-        "addr": "properties/description",
+        "addr": "properties{ManagedIdentity}/description",
         "app_property_maps": [
           {
             "name": "azurerm_data_factory_credential_user_managed_identity",
@@ -49558,16 +49564,7 @@
         ]
       },
       {
-        "addr": "properties/typeProperties/resourceId",
-        "app_property_maps": [
-          {
-            "name": "azurerm_data_factory_credential_user_managed_identity",
-            "addr": "/identity_id"
-          }
-        ]
-      },
-      {
-        "addr": "type"
+        "addr": "properties{ManagedIdentity}/typeProperties/resourceId"
       }
     ]
   },
@@ -49577,10 +49574,10 @@
     "operation": "PUT",
     "properties": [
       {
-        "addr": "properties/annotations"
+        "addr": "properties{ManagedIdentity}/annotations"
       },
       {
-        "addr": "properties/description",
+        "addr": "properties{ManagedIdentity}/description",
         "app_property_maps": [
           {
             "name": "azurerm_data_factory_credential_user_managed_identity",
@@ -49589,16 +49586,7 @@
         ]
       },
       {
-        "addr": "properties/typeProperties/resourceId",
-        "app_property_maps": [
-          {
-            "name": "azurerm_data_factory_credential_user_managed_identity",
-            "addr": "/identity_id"
-          }
-        ]
-      },
-      {
-        "addr": "type"
+        "addr": "properties{ManagedIdentity}/typeProperties/resourceId"
       }
     ]
   },
@@ -51776,6 +51764,24 @@
         "addr": "properties{Managed}/type"
       },
       {
+        "addr": "properties{Managed}/typeProperties/computeProperties/copyComputeScaleProperties/dataIntegrationUnit",
+        "app_property_maps": [
+          {
+            "name": "azurerm_data_factory_integration_runtime_azure_ssis",
+            "addr": "/copy_compute_scale/0/data_integration_unit"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Managed}/typeProperties/computeProperties/copyComputeScaleProperties/timeToLive",
+        "app_property_maps": [
+          {
+            "name": "azurerm_data_factory_integration_runtime_azure_ssis",
+            "addr": "/copy_compute_scale/0/time_to_live"
+          }
+        ]
+      },
+      {
         "addr": "properties{Managed}/typeProperties/computeProperties/dataFlowProperties/cleanup"
       },
       {
@@ -51858,6 +51864,21 @@
           {
             "name": "azurerm_data_factory_integration_runtime_managed",
             "addr": "/number_of_nodes"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Managed}/typeProperties/computeProperties/pipelineExternalComputeScaleProperties/numberOfExternalNodes"
+      },
+      {
+        "addr": "properties{Managed}/typeProperties/computeProperties/pipelineExternalComputeScaleProperties/numberOfPipelineNodes"
+      },
+      {
+        "addr": "properties{Managed}/typeProperties/computeProperties/pipelineExternalComputeScaleProperties/timeToLive",
+        "app_property_maps": [
+          {
+            "name": "azurerm_data_factory_integration_runtime_azure_ssis",
+            "addr": "/pipeline_external_compute_scale/0/time_to_live"
           }
         ]
       },
@@ -52160,6 +52181,15 @@
       },
       {
         "addr": "properties{SelfHosted}/typeProperties/linkedInfo{RBAC}/resourceId"
+      },
+      {
+        "addr": "properties{SelfHosted}/typeProperties/selfContainedInteractiveAuthoringEnabled",
+        "app_property_maps": [
+          {
+            "name": "azurerm_data_factory_integration_runtime_self_hosted",
+            "addr": "/self_contained_interactive_authoring_enabled"
+          }
+        ]
       }
     ]
   },
@@ -52198,6 +52228,24 @@
         "addr": "properties{Managed}/type"
       },
       {
+        "addr": "properties{Managed}/typeProperties/computeProperties/copyComputeScaleProperties/dataIntegrationUnit",
+        "app_property_maps": [
+          {
+            "name": "azurerm_data_factory_integration_runtime_azure_ssis",
+            "addr": "/copy_compute_scale/0/data_integration_unit"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Managed}/typeProperties/computeProperties/copyComputeScaleProperties/timeToLive",
+        "app_property_maps": [
+          {
+            "name": "azurerm_data_factory_integration_runtime_azure_ssis",
+            "addr": "/copy_compute_scale/0/time_to_live"
+          }
+        ]
+      },
+      {
         "addr": "properties{Managed}/typeProperties/computeProperties/dataFlowProperties/cleanup"
       },
       {
@@ -52280,6 +52328,21 @@
           {
             "name": "azurerm_data_factory_integration_runtime_managed",
             "addr": "/number_of_nodes"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Managed}/typeProperties/computeProperties/pipelineExternalComputeScaleProperties/numberOfExternalNodes"
+      },
+      {
+        "addr": "properties{Managed}/typeProperties/computeProperties/pipelineExternalComputeScaleProperties/numberOfPipelineNodes"
+      },
+      {
+        "addr": "properties{Managed}/typeProperties/computeProperties/pipelineExternalComputeScaleProperties/timeToLive",
+        "app_property_maps": [
+          {
+            "name": "azurerm_data_factory_integration_runtime_azure_ssis",
+            "addr": "/pipeline_external_compute_scale/0/time_to_live"
           }
         ]
       },
@@ -52582,6 +52645,15 @@
       },
       {
         "addr": "properties{SelfHosted}/typeProperties/linkedInfo{RBAC}/resourceId"
+      },
+      {
+        "addr": "properties{SelfHosted}/typeProperties/selfContainedInteractiveAuthoringEnabled",
+        "app_property_maps": [
+          {
+            "name": "azurerm_data_factory_integration_runtime_self_hosted",
+            "addr": "/self_contained_interactive_authoring_enabled"
+          }
+        ]
       }
     ]
   },
@@ -61052,6 +61124,12 @@
         ]
       },
       {
+        "addr": "properties/serverNames/fullyQualifiedDomainName"
+      },
+      {
+        "addr": "properties/serverNames/name"
+      },
+      {
         "addr": "properties/sourceLocation"
       },
       {
@@ -61367,6 +61445,12 @@
             "addr": "/preferred_primary_zone"
           }
         ]
+      },
+      {
+        "addr": "properties/serverNames/fullyQualifiedDomainName"
+      },
+      {
+        "addr": "properties/serverNames/name"
       },
       {
         "addr": "properties/sourceLocation"
@@ -70564,6 +70648,167 @@
     ]
   },
   {
+    "api_version": "2023-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.ELASTICSAN/ELASTICSANS/{}/VOLUMEGROUPS/{}/VOLUMES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.ELASTICSAN/ELASTICSANS/{}/VOLUMEGROUPS/{}/VOLUMES/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/creationData/createSource",
+        "app_property_maps": [
+          {
+            "name": "azurerm_elastic_san_volume",
+            "addr": "/create_source/0/source_type"
+          }
+        ]
+      },
+      {
+        "addr": "properties/creationData/sourceId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_elastic_san_volume",
+            "addr": "/create_source/0/source_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/sizeGiB",
+        "app_property_maps": [
+          {
+            "name": "azurerm_elastic_san_volume",
+            "addr": "/size_in_gib"
+          }
+        ]
+      },
+      {
+        "addr": "properties/storageTarget/targetIqn",
+        "app_property_maps": [
+          {
+            "name": "azurerm_elastic_san_volume",
+            "addr": "/target_iqn"
+          }
+        ]
+      },
+      {
+        "addr": "properties/storageTarget/targetPortalHostname",
+        "app_property_maps": [
+          {
+            "name": "azurerm_elastic_san_volume",
+            "addr": "/target_portal_hostname"
+          }
+        ]
+      },
+      {
+        "addr": "properties/storageTarget/targetPortalPort",
+        "app_property_maps": [
+          {
+            "name": "azurerm_elastic_san_volume",
+            "addr": "/target_portal_port"
+          }
+        ]
+      },
+      {
+        "addr": "properties/volumeId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_elastic_san_volume",
+            "addr": "/volume_id"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2023-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.ELASTICSAN/ELASTICSANS/{}/VOLUMEGROUPS/{}/VOLUMES/{}",
+    "operation": "PATCH",
+    "properties": [
+      {
+        "addr": "properties/sizeGiB",
+        "app_property_maps": [
+          {
+            "name": "azurerm_elastic_san_volume",
+            "addr": "/size_in_gib"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2023-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.ELASTICSAN/ELASTICSANS/{}/VOLUMEGROUPS/{}/VOLUMES/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "properties/creationData/createSource",
+        "app_property_maps": [
+          {
+            "name": "azurerm_elastic_san_volume",
+            "addr": "/create_source/0/source_type"
+          }
+        ]
+      },
+      {
+        "addr": "properties/creationData/sourceId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_elastic_san_volume",
+            "addr": "/create_source/0/source_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/sizeGiB",
+        "app_property_maps": [
+          {
+            "name": "azurerm_elastic_san_volume",
+            "addr": "/size_in_gib"
+          }
+        ]
+      },
+      {
+        "addr": "properties/storageTarget/targetIqn",
+        "app_property_maps": [
+          {
+            "name": "azurerm_elastic_san_volume",
+            "addr": "/target_iqn"
+          }
+        ]
+      },
+      {
+        "addr": "properties/storageTarget/targetPortalHostname",
+        "app_property_maps": [
+          {
+            "name": "azurerm_elastic_san_volume",
+            "addr": "/target_portal_hostname"
+          }
+        ]
+      },
+      {
+        "addr": "properties/storageTarget/targetPortalPort",
+        "app_property_maps": [
+          {
+            "name": "azurerm_elastic_san_volume",
+            "addr": "/target_portal_port"
+          }
+        ]
+      },
+      {
+        "addr": "properties/volumeId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_elastic_san_volume",
+            "addr": "/volume_id"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "api_version": "2022-06-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTGRID/DOMAINS/{}",
     "operation": "DELETE"
@@ -74922,6 +75167,33 @@
     "operation": "GET",
     "properties": [
       {
+        "addr": "identity/principalId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_healthcare_service",
+            "addr": "/identity/0/principal_id"
+          }
+        ]
+      },
+      {
+        "addr": "identity/tenantId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_healthcare_service",
+            "addr": "/identity/0/tenant_id"
+          }
+        ]
+      },
+      {
+        "addr": "identity/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_healthcare_service",
+            "addr": "/identity/0/type"
+          }
+        ]
+      },
+      {
         "addr": "kind",
         "app_property_maps": [
           {
@@ -74999,6 +75271,15 @@
           {
             "name": "azurerm_healthcare_service",
             "addr": "/cosmosdb_throughput"
+          }
+        ]
+      },
+      {
+        "addr": "properties/exportConfiguration/storageAccountName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_healthcare_service",
+            "addr": "/configuration_export_storage_account_name"
           }
         ]
       },
@@ -75016,6 +75297,33 @@
     "operation": "PUT",
     "properties": [
       {
+        "addr": "identity/principalId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_healthcare_service",
+            "addr": "/identity/0/principal_id"
+          }
+        ]
+      },
+      {
+        "addr": "identity/tenantId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_healthcare_service",
+            "addr": "/identity/0/tenant_id"
+          }
+        ]
+      },
+      {
+        "addr": "identity/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_healthcare_service",
+            "addr": "/identity/0/type"
+          }
+        ]
+      },
+      {
         "addr": "kind",
         "app_property_maps": [
           {
@@ -75093,6 +75401,15 @@
           {
             "name": "azurerm_healthcare_service",
             "addr": "/cosmosdb_throughput"
+          }
+        ]
+      },
+      {
+        "addr": "properties/exportConfiguration/storageAccountName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_healthcare_service",
+            "addr": "/configuration_export_storage_account_name"
           }
         ]
       },
@@ -78464,7 +78781,7 @@
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-08-01",
+    "api_version": "2023-03-15-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/SCHEDULEDQUERYRULES/{}",
     "operation": "DELETE"
   },
@@ -78668,7 +78985,7 @@
     ]
   },
   {
-    "api_version": "2021-08-01",
+    "api_version": "2023-03-15-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/SCHEDULEDQUERYRULES/{}",
     "operation": "GET",
     "properties": [
@@ -79024,7 +79341,7 @@
     ]
   },
   {
-    "api_version": "2021-08-01",
+    "api_version": "2023-03-15-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/SCHEDULEDQUERYRULES/{}",
     "operation": "PUT",
     "properties": [
@@ -92781,16 +93098,40 @@
         ]
       },
       {
+        "addr": "properties/activeDirectories/adName"
+      },
+      {
+        "addr": "properties/activeDirectories/aesEncryption"
+      },
+      {
+        "addr": "properties/activeDirectories/allowLocalNfsUsersWithLdap"
+      },
+      {
         "addr": "properties/activeDirectories/dns"
       },
       {
         "addr": "properties/activeDirectories/domain"
       },
       {
+        "addr": "properties/activeDirectories/kdcIP"
+      },
+      {
+        "addr": "properties/activeDirectories/ldapOverTLS"
+      },
+      {
+        "addr": "properties/activeDirectories/ldapSigning"
+      },
+      {
         "addr": "properties/activeDirectories/organizationalUnit"
       },
       {
         "addr": "properties/activeDirectories/password"
+      },
+      {
+        "addr": "properties/activeDirectories/serverRootCACertificate"
+      },
+      {
+        "addr": "properties/activeDirectories/site"
       },
       {
         "addr": "properties/activeDirectories/smbServerName"
@@ -92836,16 +93177,40 @@
         "addr": "identity/userAssignedIdentities"
       },
       {
+        "addr": "properties/activeDirectories/adName"
+      },
+      {
+        "addr": "properties/activeDirectories/aesEncryption"
+      },
+      {
+        "addr": "properties/activeDirectories/allowLocalNfsUsersWithLdap"
+      },
+      {
         "addr": "properties/activeDirectories/dns"
       },
       {
         "addr": "properties/activeDirectories/domain"
       },
       {
+        "addr": "properties/activeDirectories/kdcIP"
+      },
+      {
+        "addr": "properties/activeDirectories/ldapOverTLS"
+      },
+      {
+        "addr": "properties/activeDirectories/ldapSigning"
+      },
+      {
         "addr": "properties/activeDirectories/organizationalUnit"
       },
       {
         "addr": "properties/activeDirectories/password"
+      },
+      {
+        "addr": "properties/activeDirectories/serverRootCACertificate"
+      },
+      {
+        "addr": "properties/activeDirectories/site"
       },
       {
         "addr": "properties/activeDirectories/smbServerName"
@@ -92903,16 +93268,40 @@
         ]
       },
       {
+        "addr": "properties/activeDirectories/adName"
+      },
+      {
+        "addr": "properties/activeDirectories/aesEncryption"
+      },
+      {
+        "addr": "properties/activeDirectories/allowLocalNfsUsersWithLdap"
+      },
+      {
         "addr": "properties/activeDirectories/dns"
       },
       {
         "addr": "properties/activeDirectories/domain"
       },
       {
+        "addr": "properties/activeDirectories/kdcIP"
+      },
+      {
+        "addr": "properties/activeDirectories/ldapOverTLS"
+      },
+      {
+        "addr": "properties/activeDirectories/ldapSigning"
+      },
+      {
         "addr": "properties/activeDirectories/organizationalUnit"
       },
       {
         "addr": "properties/activeDirectories/password"
+      },
+      {
+        "addr": "properties/activeDirectories/serverRootCACertificate"
+      },
+      {
+        "addr": "properties/activeDirectories/site"
       },
       {
         "addr": "properties/activeDirectories/smbServerName"
@@ -131329,7 +131718,13 @@
         "addr": "properties/defaultToOAuthAuthentication"
       },
       {
-        "addr": "properties/dnsEndpointType"
+        "addr": "properties/dnsEndpointType",
+        "app_property_maps": [
+          {
+            "name": "azurerm_storage_account",
+            "addr": "/dns_endpoint_type"
+          }
+        ]
       },
       {
         "addr": "properties/encryption/identity/federatedIdentityClientId"
@@ -132151,7 +132546,13 @@
         "addr": "properties/defaultToOAuthAuthentication"
       },
       {
-        "addr": "properties/dnsEndpointType"
+        "addr": "properties/dnsEndpointType",
+        "app_property_maps": [
+          {
+            "name": "azurerm_storage_account",
+            "addr": "/dns_endpoint_type"
+          }
+        ]
       },
       {
         "addr": "properties/encryption/identity/userAssignedIdentity",
@@ -132735,13 +133136,13 @@
     ]
   },
   {
-    "api_version": "2021-09-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/INVENTORYPOLICIES/{}",
+    "api_version": "2023-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/INVENTORYPOLICIES/DEFAULT",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-09-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/INVENTORYPOLICIES/{}",
+    "api_version": "2023-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/INVENTORYPOLICIES/DEFAULT",
     "operation": "GET",
     "properties": [
       {
@@ -132792,8 +133193,8 @@
     ]
   },
   {
-    "api_version": "2021-09-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/INVENTORYPOLICIES/{}",
+    "api_version": "2023-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/INVENTORYPOLICIES/DEFAULT",
     "operation": "PUT",
     "properties": [
       {
@@ -156089,6 +156490,15 @@
         ]
       },
       {
+        "addr": "properties/scalingProperties/autoScaleSettings/profiles/capacity/max"
+      },
+      {
+        "addr": "properties/scalingProperties/autoScaleSettings/profiles/capacity/min"
+      },
+      {
+        "addr": "properties/scalingProperties/autoScaleSettings/profiles/name"
+      },
+      {
         "addr": "properties/scalingProperties/capacity",
         "app_property_maps": [
           {
@@ -156166,6 +156576,15 @@
             "addr": "/logging_storage_account/0/container_name"
           }
         ]
+      },
+      {
+        "addr": "properties/scalingProperties/autoScaleSettings/profiles/capacity/max"
+      },
+      {
+        "addr": "properties/scalingProperties/autoScaleSettings/profiles/capacity/min"
+      },
+      {
+        "addr": "properties/scalingProperties/autoScaleSettings/profiles/name"
       },
       {
         "addr": "properties/scalingProperties/capacity",
@@ -156311,6 +156730,15 @@
             "addr": "/nginx_version"
           }
         ]
+      },
+      {
+        "addr": "properties/scalingProperties/autoScaleSettings/profiles/capacity/max"
+      },
+      {
+        "addr": "properties/scalingProperties/autoScaleSettings/profiles/capacity/min"
+      },
+      {
+        "addr": "properties/scalingProperties/autoScaleSettings/profiles/name"
       },
       {
         "addr": "properties/scalingProperties/capacity",
