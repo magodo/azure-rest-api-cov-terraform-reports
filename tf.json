@@ -3402,7 +3402,7 @@
     "operation": "POST"
   },
   {
-    "api_version": "2022-07-01-preview",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.MAINTENANCE/PUBLICMAINTENANCECONFIGURATIONS",
     "operation": "GET",
     "properties": [
@@ -5089,19 +5089,6 @@
         "addr": "location"
       },
       {
-        "addr": "name",
-        "app_property_maps": [
-          {
-            "name": "azurerm_monitor_action_rule_action_group",
-            "addr": "/name"
-          },
-          {
-            "name": "azurerm_monitor_action_rule_suppression",
-            "addr": "/name"
-          }
-        ]
-      },
-      {
         "addr": "properties{ActionGroup}/actionGroupId",
         "app_property_maps": [
           {
@@ -5217,9 +5204,6 @@
       },
       {
         "addr": "properties{ActionGroup}/status"
-      },
-      {
-        "addr": "properties{ActionGroup}/type"
       },
       {
         "addr": "properties{Suppression}/conditions/alertContext/operator",
@@ -5352,9 +5336,6 @@
       },
       {
         "addr": "properties{Suppression}/suppressionConfig/schedule/startTime"
-      },
-      {
-        "addr": "properties{Suppression}/type"
       },
       {
         "addr": "tags"
@@ -5487,19 +5468,6 @@
         "addr": "location"
       },
       {
-        "addr": "name",
-        "app_property_maps": [
-          {
-            "name": "azurerm_monitor_action_rule_action_group",
-            "addr": "/name"
-          },
-          {
-            "name": "azurerm_monitor_action_rule_suppression",
-            "addr": "/name"
-          }
-        ]
-      },
-      {
         "addr": "properties{ActionGroup}/actionGroupId",
         "app_property_maps": [
           {
@@ -5615,9 +5583,6 @@
       },
       {
         "addr": "properties{ActionGroup}/status"
-      },
-      {
-        "addr": "properties{ActionGroup}/type"
       },
       {
         "addr": "properties{Suppression}/conditions/alertContext/operator",
@@ -5750,9 +5715,6 @@
       },
       {
         "addr": "properties{Suppression}/suppressionConfig/schedule/startTime"
-      },
-      {
-        "addr": "properties{Suppression}/type"
       },
       {
         "addr": "tags"
@@ -6071,15 +6033,6 @@
         "addr": "location"
       },
       {
-        "addr": "name",
-        "app_property_maps": [
-          {
-            "name": "azurerm_monitor_smart_detector_alert_rule",
-            "addr": "/name"
-          }
-        ]
-      },
-      {
         "addr": "properties/actionGroups/customEmailSubject",
         "app_property_maps": [
           {
@@ -6163,15 +6116,6 @@
     "properties": [
       {
         "addr": "location"
-      },
-      {
-        "addr": "name",
-        "app_property_maps": [
-          {
-            "name": "azurerm_monitor_smart_detector_alert_rule",
-            "addr": "/name"
-          }
-        ]
       },
       {
         "addr": "properties/actionGroups/customEmailSubject",
@@ -12199,6 +12143,12 @@
         "addr": "properties/configuration/secrets"
       },
       {
+        "addr": "properties/configuration/secrets/identity"
+      },
+      {
+        "addr": "properties/configuration/secrets/keyVaultUrl"
+      },
+      {
         "addr": "properties/configuration/secrets/name"
       },
       {
@@ -12600,6 +12550,12 @@
       },
       {
         "addr": "properties/configuration/secrets"
+      },
+      {
+        "addr": "properties/configuration/secrets/identity"
+      },
+      {
+        "addr": "properties/configuration/secrets/keyVaultUrl"
       },
       {
         "addr": "properties/configuration/secrets/name"
@@ -13145,7 +13101,13 @@
         "addr": "properties/password"
       },
       {
-        "addr": "properties/subjectName"
+        "addr": "properties/subjectName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_app_environment_certificate",
+            "addr": "/subject_name"
+          }
+        ]
       },
       {
         "addr": "properties/thumbprint",
@@ -13216,7 +13178,13 @@
         "addr": "properties/password"
       },
       {
-        "addr": "properties/subjectName"
+        "addr": "properties/subjectName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_app_environment_certificate",
+            "addr": "/subject_name"
+          }
+        ]
       },
       {
         "addr": "properties/thumbprint",
@@ -22464,6 +22432,10 @@
           {
             "name": "azurerm_bot_channels_registration",
             "addr": "/cmk_key_vault_url"
+          },
+          {
+            "name": "azurerm_bot_service_azure_bot",
+            "addr": "/cmk_key_vault_key_url"
           }
         ]
       },
@@ -22681,6 +22653,10 @@
           {
             "name": "azurerm_bot_channels_registration",
             "addr": "/cmk_key_vault_url"
+          },
+          {
+            "name": "azurerm_bot_service_azure_bot",
+            "addr": "/cmk_key_vault_key_url"
           }
         ]
       },
@@ -22898,6 +22874,10 @@
           {
             "name": "azurerm_bot_channels_registration",
             "addr": "/cmk_key_vault_url"
+          },
+          {
+            "name": "azurerm_bot_service_azure_bot",
+            "addr": "/cmk_key_vault_key_url"
           }
         ]
       },
@@ -24942,6 +24922,158 @@
       },
       {
         "addr": "zones"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-08-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}/ACCESSPOLICIES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-08-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}/ACCESSPOLICIES/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_redis_cache_access_policy",
+            "addr": "/name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/permissions",
+        "app_property_maps": [
+          {
+            "name": "azurerm_redis_cache_access_policy",
+            "addr": "/permissions"
+          }
+        ]
+      },
+      {
+        "addr": "properties/type"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-08-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}/ACCESSPOLICIES/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_redis_cache_access_policy",
+            "addr": "/name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/permissions",
+        "app_property_maps": [
+          {
+            "name": "azurerm_redis_cache_access_policy",
+            "addr": "/permissions"
+          }
+        ]
+      },
+      {
+        "addr": "properties/type"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-08-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}/ACCESSPOLICYASSIGNMENTS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-08-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}/ACCESSPOLICYASSIGNMENTS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_redis_cache_access_policy_assignment",
+            "addr": "/name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/accessPolicyName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_redis_cache_access_policy_assignment",
+            "addr": "/access_policy_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/objectId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_redis_cache_access_policy_assignment",
+            "addr": "/object_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/objectIdAlias",
+        "app_property_maps": [
+          {
+            "name": "azurerm_redis_cache_access_policy_assignment",
+            "addr": "/object_id_alias"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2023-08-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDIS/{}/ACCESSPOLICYASSIGNMENTS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_redis_cache_access_policy_assignment",
+            "addr": "/name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/accessPolicyName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_redis_cache_access_policy_assignment",
+            "addr": "/access_policy_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/objectId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_redis_cache_access_policy_assignment",
+            "addr": "/object_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/objectIdAlias",
+        "app_property_maps": [
+          {
+            "name": "azurerm_redis_cache_access_policy_assignment",
+            "addr": "/object_id_alias"
+          }
+        ]
       }
     ]
   },
@@ -30299,12 +30431,12 @@
     ]
   },
   {
-    "api_version": "2021-11-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/AVAILABILITYSETS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-11-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/AVAILABILITYSETS/{}",
     "operation": "GET",
     "properties": [
@@ -30353,7 +30485,7 @@
     ]
   },
   {
-    "api_version": "2021-11-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/AVAILABILITYSETS/{}",
     "operation": "PUT",
     "properties": [
@@ -32191,6 +32323,9 @@
     "operation": "GET",
     "properties": [
       {
+        "addr": "id"
+      },
+      {
         "addr": "location",
         "app_property_maps": [
           {
@@ -32378,6 +32513,9 @@
       },
       {
         "addr": "tags"
+      },
+      {
+        "addr": "type"
       }
     ]
   },
@@ -32387,6 +32525,9 @@
     "operation": "PUT",
     "properties": [
       {
+        "addr": "id"
+      },
+      {
         "addr": "location",
         "app_property_maps": [
           {
@@ -32574,6 +32715,9 @@
       },
       {
         "addr": "tags"
+      },
+      {
+        "addr": "type"
       }
     ]
   },
@@ -32600,13 +32744,7 @@
         ]
       },
       {
-        "addr": "name",
-        "app_property_maps": [
-          {
-            "name": "azurerm_shared_image_version",
-            "addr": "/name"
-          }
-        ]
+        "addr": "name"
       },
       {
         "addr": "properties/publishingProfile/endOfLifeDate",
@@ -32682,6 +32820,9 @@
       },
       {
         "addr": "tags"
+      },
+      {
+        "addr": "type"
       }
     ]
   },
@@ -32703,13 +32844,7 @@
         ]
       },
       {
-        "addr": "name",
-        "app_property_maps": [
-          {
-            "name": "azurerm_shared_image_version",
-            "addr": "/name"
-          }
-        ]
+        "addr": "name"
       },
       {
         "addr": "properties/publishingProfile/endOfLifeDate",
@@ -32785,6 +32920,9 @@
       },
       {
         "addr": "tags"
+      },
+      {
+        "addr": "type"
       }
     ]
   },
@@ -32799,12 +32937,12 @@
     ]
   },
   {
-    "api_version": "2021-11-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/HOSTGROUPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-11-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/HOSTGROUPS/{}",
     "operation": "GET",
     "properties": [
@@ -32827,13 +32965,7 @@
         ]
       },
       {
-        "addr": "properties/supportAutomaticPlacement",
-        "app_property_maps": [
-          {
-            "name": "azurerm_dedicated_host_group",
-            "addr": "/automatic_placement_enabled"
-          }
-        ]
+        "addr": "properties/supportAutomaticPlacement"
       },
       {
         "addr": "tags"
@@ -32844,7 +32976,7 @@
     ]
   },
   {
-    "api_version": "2021-11-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/HOSTGROUPS/{}",
     "operation": "PATCH",
     "properties": [
@@ -32854,7 +32986,7 @@
     ]
   },
   {
-    "api_version": "2021-11-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/HOSTGROUPS/{}",
     "operation": "PUT",
     "properties": [
@@ -32877,13 +33009,7 @@
         ]
       },
       {
-        "addr": "properties/supportAutomaticPlacement",
-        "app_property_maps": [
-          {
-            "name": "azurerm_dedicated_host_group",
-            "addr": "/automatic_placement_enabled"
-          }
-        ]
+        "addr": "properties/supportAutomaticPlacement"
       },
       {
         "addr": "tags"
@@ -32894,12 +33020,12 @@
     ]
   },
   {
-    "api_version": "2021-11-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/HOSTGROUPS/{}/HOSTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-11-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/HOSTGROUPS/{}/HOSTS/{}",
     "operation": "GET",
     "properties": [
@@ -32954,7 +33080,7 @@
     ]
   },
   {
-    "api_version": "2021-11-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/HOSTGROUPS/{}/HOSTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -32991,7 +33117,7 @@
     ]
   },
   {
-    "api_version": "2021-11-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/HOSTGROUPS/{}/HOSTS/{}",
     "operation": "PUT",
     "properties": [
@@ -33346,7 +33472,19 @@
         "addr": "properties/incremental"
       },
       {
+        "addr": "properties/networkAccessPolicy",
+        "app_property_maps": [
+          {
+            "name": "azurerm_snapshot",
+            "addr": "/network_access_policy"
+          }
+        ]
+      },
+      {
         "addr": "properties/osType"
+      },
+      {
+        "addr": "properties/publicNetworkAccess"
       },
       {
         "addr": "properties/securityProfile/securityType"
@@ -33425,7 +33563,19 @@
         "addr": "properties/incremental"
       },
       {
+        "addr": "properties/networkAccessPolicy",
+        "app_property_maps": [
+          {
+            "name": "azurerm_snapshot",
+            "addr": "/network_access_policy"
+          }
+        ]
+      },
+      {
         "addr": "properties/osType"
+      },
+      {
+        "addr": "properties/publicNetworkAccess"
       },
       {
         "addr": "properties/securityProfile/securityType"
@@ -33439,12 +33589,12 @@
     ]
   },
   {
-    "api_version": "2021-11-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/SSHPUBLICKEYS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-11-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/SSHPUBLICKEYS/{}",
     "operation": "GET",
     "properties": [
@@ -33472,7 +33622,7 @@
     ]
   },
   {
-    "api_version": "2021-11-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/SSHPUBLICKEYS/{}",
     "operation": "PATCH",
     "properties": [
@@ -33491,7 +33641,7 @@
     ]
   },
   {
-    "api_version": "2021-11-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/SSHPUBLICKEYS/{}",
     "operation": "PUT",
     "properties": [
@@ -33522,16 +33672,6 @@
     "api_version": "2023-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINES/{}",
     "operation": "DELETE"
-  },
-  {
-    "api_version": "2021-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINES/{}",
-    "operation": "GET",
-    "properties": [
-      {
-        "addr": "properties/hardwareProfile/vmSize"
-      }
-    ]
   },
   {
     "api_version": "2023-03-01",
@@ -34499,6 +34639,19 @@
       },
       {
         "addr": "zones"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINES/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "location"
+      },
+      {
+        "addr": "properties/hardwareProfile/vmSize"
       }
     ]
   },
@@ -77388,9 +77541,6 @@
     "operation": "GET",
     "properties": [
       {
-        "addr": "value"
-      },
-      {
         "addr": "value/apiKey"
       },
       {
@@ -77562,34 +77712,31 @@
     "operation": "GET",
     "properties": [
       {
-        "addr": "value"
+        "addr": "Content"
       },
       {
-        "addr": "value/Content"
+        "addr": "Id"
       },
       {
-        "addr": "value/Id"
+        "addr": "Name"
       },
       {
-        "addr": "value/Name"
+        "addr": "Properties/functionAlias"
       },
       {
-        "addr": "value/Properties/functionAlias"
+        "addr": "Scope"
       },
       {
-        "addr": "value/Scope"
+        "addr": "TimeCreated"
       },
       {
-        "addr": "value/TimeCreated"
+        "addr": "TimeModified"
       },
       {
-        "addr": "value/TimeModified"
+        "addr": "Type"
       },
       {
-        "addr": "value/Type"
-      },
-      {
-        "addr": "value/Version"
+        "addr": "Version"
       }
     ]
   },
@@ -78990,6 +79137,18 @@
     "operation": "GET",
     "properties": [
       {
+        "addr": "identity/principalId"
+      },
+      {
+        "addr": "identity/tenantId"
+      },
+      {
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
+      },
+      {
         "addr": "kind"
       },
       {
@@ -79346,6 +79505,18 @@
     "operation": "PUT",
     "properties": [
       {
+        "addr": "identity/principalId"
+      },
+      {
+        "addr": "identity/tenantId"
+      },
+      {
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
+      },
+      {
         "addr": "kind"
       },
       {
@@ -79508,7 +79679,13 @@
     "operation": "GET",
     "properties": [
       {
-        "addr": "kind"
+        "addr": "kind",
+        "app_property_maps": [
+          {
+            "name": "azurerm_application_insights_web_test",
+            "addr": "/kind"
+          }
+        ]
       },
       {
         "addr": "location",
@@ -79516,6 +79693,22 @@
           {
             "name": "azurerm_application_insights_standard_web_test",
             "addr": "/location"
+          },
+          {
+            "name": "azurerm_application_insights_web_test",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/Configuration/WebTest",
+        "app_property_maps": [
+          {
+            "name": "azurerm_application_insights_web_test",
+            "addr": "/configuration"
           }
         ]
       },
@@ -79524,6 +79717,10 @@
         "app_property_maps": [
           {
             "name": "azurerm_application_insights_standard_web_test",
+            "addr": "/description"
+          },
+          {
+            "name": "azurerm_application_insights_web_test",
             "addr": "/description"
           }
         ]
@@ -79536,6 +79733,10 @@
         "app_property_maps": [
           {
             "name": "azurerm_application_insights_standard_web_test",
+            "addr": "/frequency"
+          },
+          {
+            "name": "azurerm_application_insights_web_test",
             "addr": "/frequency"
           }
         ]
@@ -79591,6 +79792,10 @@
           {
             "name": "azurerm_application_insights_standard_web_test",
             "addr": "/synthetic_monitor_id"
+          },
+          {
+            "name": "azurerm_application_insights_web_test",
+            "addr": "/synthetic_monitor_id"
           }
         ]
       },
@@ -79599,6 +79804,10 @@
         "app_property_maps": [
           {
             "name": "azurerm_application_insights_standard_web_test",
+            "addr": "/timeout"
+          },
+          {
+            "name": "azurerm_application_insights_web_test",
             "addr": "/timeout"
           }
         ]
@@ -79653,7 +79862,13 @@
     "operation": "PUT",
     "properties": [
       {
-        "addr": "kind"
+        "addr": "kind",
+        "app_property_maps": [
+          {
+            "name": "azurerm_application_insights_web_test",
+            "addr": "/kind"
+          }
+        ]
       },
       {
         "addr": "location",
@@ -79661,6 +79876,22 @@
           {
             "name": "azurerm_application_insights_standard_web_test",
             "addr": "/location"
+          },
+          {
+            "name": "azurerm_application_insights_web_test",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/Configuration/WebTest",
+        "app_property_maps": [
+          {
+            "name": "azurerm_application_insights_web_test",
+            "addr": "/configuration"
           }
         ]
       },
@@ -79669,6 +79900,10 @@
         "app_property_maps": [
           {
             "name": "azurerm_application_insights_standard_web_test",
+            "addr": "/description"
+          },
+          {
+            "name": "azurerm_application_insights_web_test",
             "addr": "/description"
           }
         ]
@@ -79681,6 +79916,10 @@
         "app_property_maps": [
           {
             "name": "azurerm_application_insights_standard_web_test",
+            "addr": "/frequency"
+          },
+          {
+            "name": "azurerm_application_insights_web_test",
             "addr": "/frequency"
           }
         ]
@@ -79736,6 +79975,10 @@
           {
             "name": "azurerm_application_insights_standard_web_test",
             "addr": "/synthetic_monitor_id"
+          },
+          {
+            "name": "azurerm_application_insights_web_test",
+            "addr": "/synthetic_monitor_id"
           }
         ]
       },
@@ -79744,6 +79987,10 @@
         "app_property_maps": [
           {
             "name": "azurerm_application_insights_standard_web_test",
+            "addr": "/timeout"
+          },
+          {
+            "name": "azurerm_application_insights_web_test",
             "addr": "/timeout"
           }
         ]
@@ -86676,12 +86923,12 @@
     ]
   },
   {
-    "api_version": "2022-07-01-preview",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MAINTENANCE/MAINTENANCECONFIGURATIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-07-01-preview",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MAINTENANCE/MAINTENANCECONFIGURATIONS/{}",
     "operation": "GET",
     "properties": [
@@ -86799,7 +87046,7 @@
     ]
   },
   {
-    "api_version": "2022-07-01-preview",
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MAINTENANCE/MAINTENANCECONFIGURATIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -93538,6 +93785,24 @@
         "addr": "properties/exportPolicy/rules/hasRootAccess"
       },
       {
+        "addr": "properties/exportPolicy/rules/kerberos5ReadOnly"
+      },
+      {
+        "addr": "properties/exportPolicy/rules/kerberos5ReadWrite"
+      },
+      {
+        "addr": "properties/exportPolicy/rules/kerberos5iReadOnly"
+      },
+      {
+        "addr": "properties/exportPolicy/rules/kerberos5iReadWrite"
+      },
+      {
+        "addr": "properties/exportPolicy/rules/kerberos5pReadOnly"
+      },
+      {
+        "addr": "properties/exportPolicy/rules/kerberos5pReadWrite"
+      },
+      {
         "addr": "properties/exportPolicy/rules/nfsv3"
       },
       {
@@ -93551,6 +93816,9 @@
       },
       {
         "addr": "properties/exportPolicy/rules/unixReadWrite"
+      },
+      {
+        "addr": "properties/kerberosEnabled"
       },
       {
         "addr": "properties/keyVaultPrivateEndpointResourceId",
@@ -93596,6 +93864,9 @@
       },
       {
         "addr": "properties/smbAccessBasedEnumeration"
+      },
+      {
+        "addr": "properties/smbContinuouslyAvailable"
       },
       {
         "addr": "properties/smbNonBrowsable"
@@ -93800,6 +94071,24 @@
         "addr": "properties/exportPolicy/rules/hasRootAccess"
       },
       {
+        "addr": "properties/exportPolicy/rules/kerberos5ReadOnly"
+      },
+      {
+        "addr": "properties/exportPolicy/rules/kerberos5ReadWrite"
+      },
+      {
+        "addr": "properties/exportPolicy/rules/kerberos5iReadOnly"
+      },
+      {
+        "addr": "properties/exportPolicy/rules/kerberos5iReadWrite"
+      },
+      {
+        "addr": "properties/exportPolicy/rules/kerberos5pReadOnly"
+      },
+      {
+        "addr": "properties/exportPolicy/rules/kerberos5pReadWrite"
+      },
+      {
         "addr": "properties/exportPolicy/rules/nfsv3"
       },
       {
@@ -93813,6 +94102,9 @@
       },
       {
         "addr": "properties/exportPolicy/rules/unixReadWrite"
+      },
+      {
+        "addr": "properties/kerberosEnabled"
       },
       {
         "addr": "properties/keyVaultPrivateEndpointResourceId",
@@ -93858,6 +94150,9 @@
       },
       {
         "addr": "properties/smbAccessBasedEnumeration"
+      },
+      {
+        "addr": "properties/smbContinuouslyAvailable"
       },
       {
         "addr": "properties/smbNonBrowsable"
@@ -115857,12 +116152,12 @@
     "operation": "POST"
   },
   {
-    "api_version": "2022-10-01",
+    "api_version": "2024-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-10-01",
+    "api_version": "2024-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}",
     "operation": "GET",
     "properties": [
@@ -115921,6 +116216,18 @@
         "addr": "properties/publicNetworkAccess"
       },
       {
+        "addr": "properties/redundancySettings/crossRegionRestore"
+      },
+      {
+        "addr": "properties/redundancySettings/standardTierStorageRedundancy",
+        "app_property_maps": [
+          {
+            "name": "azurerm_recovery_services_vault",
+            "addr": "/storage_mode_type"
+          }
+        ]
+      },
+      {
         "addr": "properties/securitySettings/immutabilitySettings/state",
         "app_property_maps": [
           {
@@ -115947,7 +116254,7 @@
     ]
   },
   {
-    "api_version": "2022-10-01",
+    "api_version": "2024-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -115997,6 +116304,18 @@
         "addr": "properties/publicNetworkAccess"
       },
       {
+        "addr": "properties/redundancySettings/crossRegionRestore"
+      },
+      {
+        "addr": "properties/redundancySettings/standardTierStorageRedundancy",
+        "app_property_maps": [
+          {
+            "name": "azurerm_recovery_services_vault",
+            "addr": "/storage_mode_type"
+          }
+        ]
+      },
+      {
         "addr": "properties/securitySettings/immutabilitySettings/state",
         "app_property_maps": [
           {
@@ -116011,7 +116330,7 @@
     ]
   },
   {
-    "api_version": "2022-10-01",
+    "api_version": "2024-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}",
     "operation": "PUT",
     "properties": [
@@ -116068,6 +116387,18 @@
       },
       {
         "addr": "properties/publicNetworkAccess"
+      },
+      {
+        "addr": "properties/redundancySettings/crossRegionRestore"
+      },
+      {
+        "addr": "properties/redundancySettings/standardTierStorageRedundancy",
+        "app_property_maps": [
+          {
+            "name": "azurerm_recovery_services_vault",
+            "addr": "/storage_mode_type"
+          }
+        ]
       },
       {
         "addr": "properties/securitySettings/immutabilitySettings/state",
@@ -117165,6 +117496,15 @@
     "operation": "GET",
     "properties": [
       {
+        "addr": "eTag"
+      },
+      {
+        "addr": "id"
+      },
+      {
+        "addr": "location"
+      },
+      {
         "addr": "name"
       },
       {
@@ -117172,6 +117512,9 @@
       },
       {
         "addr": "properties{AzureFileShareProtectedItem}/sourceResourceId"
+      },
+      {
+        "addr": "type"
       }
     ]
   },
@@ -117231,50 +117574,6 @@
     "properties": [
       {
         "addr": "resourceGuardOperationRequests"
-      }
-    ]
-  },
-  {
-    "api_version": "2023-02-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/BACKUPSTORAGECONFIG/VAULTSTORAGECONFIG",
-    "operation": "GET",
-    "properties": [
-      {
-        "addr": "properties/crossRegionRestoreFlag"
-      },
-      {
-        "addr": "properties/storageModelType",
-        "app_property_maps": [
-          {
-            "name": "azurerm_recovery_services_vault",
-            "addr": "/storage_mode_type"
-          }
-        ]
-      },
-      {
-        "addr": "properties/storageType"
-      }
-    ]
-  },
-  {
-    "api_version": "2023-02-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.RECOVERYSERVICES/VAULTS/{}/BACKUPSTORAGECONFIG/VAULTSTORAGECONFIG",
-    "operation": "PUT",
-    "properties": [
-      {
-        "addr": "properties/crossRegionRestoreFlag"
-      },
-      {
-        "addr": "properties/storageModelType",
-        "app_property_maps": [
-          {
-            "name": "azurerm_recovery_services_vault",
-            "addr": "/storage_mode_type"
-          }
-        ]
-      },
-      {
-        "addr": "properties/storageType"
       }
     ]
   },
@@ -120377,6 +120676,40 @@
       },
       {
         "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-10-07",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SCVMM/VMMSERVERS/{}/INVENTORYITEMS",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "id"
+      },
+      {
+        "addr": "properties{Cloud}/inventoryItemName"
+      },
+      {
+        "addr": "properties{Cloud}/uuid"
+      },
+      {
+        "addr": "properties{VirtualMachineTemplate}/inventoryItemName"
+      },
+      {
+        "addr": "properties{VirtualMachineTemplate}/uuid"
+      },
+      {
+        "addr": "properties{VirtualMachine}/inventoryItemName"
+      },
+      {
+        "addr": "properties{VirtualMachine}/uuid"
+      },
+      {
+        "addr": "properties{VirtualNetwork}/inventoryItemName"
+      },
+      {
+        "addr": "properties{VirtualNetwork}/uuid"
       }
     ]
   },
@@ -127863,6 +128196,15 @@
         "addr": "properties/sampleName"
       },
       {
+        "addr": "properties/secondaryType",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mssql_database",
+            "addr": "/secondary_type"
+          }
+        ]
+      },
+      {
         "addr": "properties/sourceDatabaseId"
       },
       {
@@ -128281,6 +128623,15 @@
       },
       {
         "addr": "properties/sampleName"
+      },
+      {
+        "addr": "properties/secondaryType",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mssql_database",
+            "addr": "/secondary_type"
+          }
+        ]
       },
       {
         "addr": "properties/sourceDatabaseId"
@@ -129431,10 +129782,22 @@
         "addr": "id"
       },
       {
+        "addr": "properties/auditActionsAndGroups"
+      },
+      {
         "addr": "properties/isAzureMonitorTargetEnabled"
       },
       {
         "addr": "properties/isStorageSecondaryKeyInUse"
+      },
+      {
+        "addr": "properties/predicateExpression",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mssql_server_extended_auditing_policy",
+            "addr": "/predicate_expression"
+          }
+        ]
       },
       {
         "addr": "properties/retentionDays",
@@ -129480,10 +129843,22 @@
         "addr": "id"
       },
       {
+        "addr": "properties/auditActionsAndGroups"
+      },
+      {
         "addr": "properties/isAzureMonitorTargetEnabled"
       },
       {
         "addr": "properties/isStorageSecondaryKeyInUse"
+      },
+      {
+        "addr": "properties/predicateExpression",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mssql_server_extended_auditing_policy",
+            "addr": "/predicate_expression"
+          }
+        ]
       },
       {
         "addr": "properties/retentionDays",
@@ -131574,9 +131949,6 @@
         "addr": "extendedLocation/type"
       },
       {
-        "addr": "id"
-      },
-      {
         "addr": "identity/principalId"
       },
       {
@@ -131608,9 +131980,6 @@
       },
       {
         "addr": "name"
-      },
-      {
-        "addr": "properties"
       },
       {
         "addr": "properties/accessTier",
@@ -131727,9 +132096,6 @@
         ]
       },
       {
-        "addr": "properties/encryption/identity/federatedIdentityClientId"
-      },
-      {
         "addr": "properties/encryption/identity/userAssignedIdentity",
         "app_property_maps": [
           {
@@ -131832,7 +132198,13 @@
         "addr": "properties/largeFileSharesState"
       },
       {
-        "addr": "properties/minimumTlsVersion"
+        "addr": "properties/minimumTlsVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_storage_account",
+            "addr": "/min_tls_version"
+          }
+        ]
       },
       {
         "addr": "properties/networkAcls/bypass",
@@ -132230,9 +132602,6 @@
         "addr": "properties/supportsHttpsTrafficOnly"
       },
       {
-        "addr": "sku"
-      },
-      {
         "addr": "sku/name"
       },
       {
@@ -132246,6 +132615,76 @@
       },
       {
         "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "id"
+      },
+      {
+        "addr": "kind"
+      },
+      {
+        "addr": "location"
+      },
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/encryption/identity/federatedIdentityClientId"
+      },
+      {
+        "addr": "properties/encryption/identity/userAssignedIdentity"
+      },
+      {
+        "addr": "properties/encryption/keySource"
+      },
+      {
+        "addr": "properties/encryption/keyvaultproperties/keyname"
+      },
+      {
+        "addr": "properties/encryption/keyvaultproperties/keyvaulturi"
+      },
+      {
+        "addr": "properties/encryption/keyvaultproperties/keyversion"
+      },
+      {
+        "addr": "properties/encryption/services/blob/enabled"
+      },
+      {
+        "addr": "properties/encryption/services/file/enabled"
+      },
+      {
+        "addr": "properties/immutableStorageWithVersioning/enabled"
+      },
+      {
+        "addr": "properties/immutableStorageWithVersioning/immutabilityPolicy"
+      },
+      {
+        "addr": "properties/isHnsEnabled"
+      },
+      {
+        "addr": "properties/primaryEndpoints/blob"
+      },
+      {
+        "addr": "properties/primaryEndpoints/dfs"
+      },
+      {
+        "addr": "properties/primaryEndpoints/file"
+      },
+      {
+        "addr": "properties/primaryEndpoints/queue"
+      },
+      {
+        "addr": "properties/primaryEndpoints/table"
+      },
+      {
+        "addr": "type"
       }
     ]
   },
@@ -132318,36 +132757,6 @@
         ]
       },
       {
-        "addr": "properties/encryption/identity/federatedIdentityClientId"
-      },
-      {
-        "addr": "properties/encryption/identity/userAssignedIdentity",
-        "app_property_maps": [
-          {
-            "name": "azurerm_storage_account",
-            "addr": "/customer_managed_key/0/user_assigned_identity_id"
-          }
-        ]
-      },
-      {
-        "addr": "properties/encryption/keySource"
-      },
-      {
-        "addr": "properties/encryption/keyvaultproperties/keyname"
-      },
-      {
-        "addr": "properties/encryption/keyvaultproperties/keyvaulturi"
-      },
-      {
-        "addr": "properties/encryption/keyvaultproperties/keyversion"
-      },
-      {
-        "addr": "properties/encryption/services/blob/enabled"
-      },
-      {
-        "addr": "properties/encryption/services/file/enabled"
-      },
-      {
         "addr": "properties/networkAcls/bypass",
         "app_property_maps": [
           {
@@ -132396,6 +132805,37 @@
       },
       {
         "addr": "properties/networkAcls/virtualNetworkRules/id"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}",
+    "operation": "PATCH",
+    "properties": [
+      {
+        "addr": "properties/encryption/identity/federatedIdentityClientId"
+      },
+      {
+        "addr": "properties/encryption/identity/userAssignedIdentity"
+      },
+      {
+        "addr": "properties/encryption/keySource"
+      },
+      {
+        "addr": "properties/encryption/keyvaultproperties/keyname"
+      },
+      {
+        "addr": "properties/encryption/keyvaultproperties/keyvaulturi"
+      },
+      {
+        "addr": "properties/encryption/keyvaultproperties/keyversion"
+      },
+      {
+        "addr": "properties/encryption/services/blob/enabled"
+      },
+      {
+        "addr": "properties/encryption/services/file/enabled"
       }
     ]
   },
@@ -132657,7 +133097,13 @@
         "addr": "properties/largeFileSharesState"
       },
       {
-        "addr": "properties/minimumTlsVersion"
+        "addr": "properties/minimumTlsVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_storage_account",
+            "addr": "/min_tls_version"
+          }
+        ]
       },
       {
         "addr": "properties/networkAcls/bypass",
@@ -132930,20 +133376,11 @@
     ]
   },
   {
-    "api_version": "2021-09-01",
+    "api_version": "2023-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/ENCRYPTIONSCOPES/{}",
     "operation": "GET",
     "properties": [
       {
-        "addr": "name",
-        "app_property_maps": [
-          {
-            "name": "azurerm_storage_encryption_scope",
-            "addr": "/name"
-          }
-        ]
-      },
-      {
         "addr": "properties/keyVaultProperties/keyUri",
         "app_property_maps": [
           {
@@ -132962,7 +133399,13 @@
         ]
       },
       {
-        "addr": "properties/source"
+        "addr": "properties/source",
+        "app_property_maps": [
+          {
+            "name": "azurerm_storage_encryption_scope",
+            "addr": "/source"
+          }
+        ]
       },
       {
         "addr": "properties/state"
@@ -132970,20 +133413,11 @@
     ]
   },
   {
-    "api_version": "2021-09-01",
+    "api_version": "2023-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/ENCRYPTIONSCOPES/{}",
     "operation": "PATCH",
     "properties": [
       {
-        "addr": "name",
-        "app_property_maps": [
-          {
-            "name": "azurerm_storage_encryption_scope",
-            "addr": "/name"
-          }
-        ]
-      },
-      {
         "addr": "properties/keyVaultProperties/keyUri",
         "app_property_maps": [
           {
@@ -133002,7 +133436,13 @@
         ]
       },
       {
-        "addr": "properties/source"
+        "addr": "properties/source",
+        "app_property_maps": [
+          {
+            "name": "azurerm_storage_encryption_scope",
+            "addr": "/source"
+          }
+        ]
       },
       {
         "addr": "properties/state"
@@ -133010,19 +133450,10 @@
     ]
   },
   {
-    "api_version": "2021-09-01",
+    "api_version": "2023-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/ENCRYPTIONSCOPES/{}",
     "operation": "PUT",
     "properties": [
-      {
-        "addr": "name",
-        "app_property_maps": [
-          {
-            "name": "azurerm_storage_encryption_scope",
-            "addr": "/name"
-          }
-        ]
-      },
       {
         "addr": "properties/keyVaultProperties/keyUri",
         "app_property_maps": [
@@ -133042,7 +133473,13 @@
         ]
       },
       {
-        "addr": "properties/source"
+        "addr": "properties/source",
+        "app_property_maps": [
+          {
+            "name": "azurerm_storage_encryption_scope",
+            "addr": "/source"
+          }
+        ]
       },
       {
         "addr": "properties/state"
@@ -155319,6 +155756,49 @@
     "operation": "POST"
   },
   {
+    "api_version": "2023-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/STATICSITES/{}/USERPROVIDEDFUNCTIONAPPS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/STATICSITES/{}/USERPROVIDEDFUNCTIONAPPS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/functionAppRegion"
+      },
+      {
+        "addr": "properties/functionAppResourceId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_static_web_app_function_app_registration",
+            "addr": "/function_app_id"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2023-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/STATICSITES/{}/USERPROVIDEDFUNCTIONAPPS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "properties/functionAppRegion"
+      },
+      {
+        "addr": "properties/functionAppResourceId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_static_web_app_function_app_registration",
+            "addr": "/function_app_id"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WORKLOADS/SAPVIRTUALINSTANCES/{}",
     "operation": "DELETE"
@@ -155337,6 +155817,10 @@
       {
         "addr": "location",
         "app_property_maps": [
+          {
+            "name": "azurerm_workloads_sap_discovery_virtual_instance",
+            "addr": "/location"
+          },
           {
             "name": "azurerm_workloads_sap_single_node_virtual_instance",
             "addr": "/location"
@@ -155615,8 +156099,18 @@
         "addr": "properties/configuration{DeploymentWithOSConfig}/osSapConfiguration/sapFqdn"
       },
       {
+        "addr": "properties/configuration{Discovery}/centralServerVmId"
+      },
+      {
+        "addr": "properties/configuration{Discovery}/managedRgStorageAccountName"
+      },
+      {
         "addr": "properties/environment",
         "app_property_maps": [
+          {
+            "name": "azurerm_workloads_sap_discovery_virtual_instance",
+            "addr": "/environment"
+          },
           {
             "name": "azurerm_workloads_sap_single_node_virtual_instance",
             "addr": "/environment"
@@ -155631,6 +156125,10 @@
         "addr": "properties/managedResourceGroupConfiguration/name",
         "app_property_maps": [
           {
+            "name": "azurerm_workloads_sap_discovery_virtual_instance",
+            "addr": "/managed_resource_group_name"
+          },
+          {
             "name": "azurerm_workloads_sap_single_node_virtual_instance",
             "addr": "/managed_resource_group_name"
           },
@@ -155643,6 +156141,10 @@
       {
         "addr": "properties/sapProduct",
         "app_property_maps": [
+          {
+            "name": "azurerm_workloads_sap_discovery_virtual_instance",
+            "addr": "/sap_product"
+          },
           {
             "name": "azurerm_workloads_sap_single_node_virtual_instance",
             "addr": "/sap_product"
@@ -155689,6 +156191,10 @@
         "addr": "location",
         "app_property_maps": [
           {
+            "name": "azurerm_workloads_sap_discovery_virtual_instance",
+            "addr": "/location"
+          },
+          {
             "name": "azurerm_workloads_sap_single_node_virtual_instance",
             "addr": "/location"
           },
@@ -155966,8 +156472,18 @@
         "addr": "properties/configuration{DeploymentWithOSConfig}/osSapConfiguration/sapFqdn"
       },
       {
+        "addr": "properties/configuration{Discovery}/centralServerVmId"
+      },
+      {
+        "addr": "properties/configuration{Discovery}/managedRgStorageAccountName"
+      },
+      {
         "addr": "properties/environment",
         "app_property_maps": [
+          {
+            "name": "azurerm_workloads_sap_discovery_virtual_instance",
+            "addr": "/environment"
+          },
           {
             "name": "azurerm_workloads_sap_single_node_virtual_instance",
             "addr": "/environment"
@@ -155982,6 +156498,10 @@
         "addr": "properties/managedResourceGroupConfiguration/name",
         "app_property_maps": [
           {
+            "name": "azurerm_workloads_sap_discovery_virtual_instance",
+            "addr": "/managed_resource_group_name"
+          },
+          {
             "name": "azurerm_workloads_sap_single_node_virtual_instance",
             "addr": "/managed_resource_group_name"
           },
@@ -155994,6 +156514,10 @@
       {
         "addr": "properties/sapProduct",
         "app_property_maps": [
+          {
+            "name": "azurerm_workloads_sap_discovery_virtual_instance",
+            "addr": "/sap_product"
+          },
           {
             "name": "azurerm_workloads_sap_single_node_virtual_instance",
             "addr": "/sap_product"
@@ -156886,8 +157410,8 @@
         "addr": "properties/package/data",
         "app_property_maps": [
           {
-            "name": "azurerm_nginx_configuration",
-            "addr": "/package_data"
+            "name": "azurerm_nginx_deployment",
+            "addr": "/configuration/0/package_data"
           }
         ]
       },
@@ -156901,8 +157425,8 @@
         "addr": "properties/rootFile",
         "app_property_maps": [
           {
-            "name": "azurerm_nginx_configuration",
-            "addr": "/root_file"
+            "name": "azurerm_nginx_deployment",
+            "addr": "/configuration/0/root_file"
           }
         ]
       }
@@ -156926,8 +157450,8 @@
         "addr": "properties/package/data",
         "app_property_maps": [
           {
-            "name": "azurerm_nginx_configuration",
-            "addr": "/package_data"
+            "name": "azurerm_nginx_deployment",
+            "addr": "/configuration/0/package_data"
           }
         ]
       },
@@ -156941,8 +157465,8 @@
         "addr": "properties/rootFile",
         "app_property_maps": [
           {
-            "name": "azurerm_nginx_configuration",
-            "addr": "/root_file"
+            "name": "azurerm_nginx_deployment",
+            "addr": "/configuration/0/root_file"
           }
         ]
       }
@@ -163702,12 +164226,12 @@
     ]
   },
   {
-    "api_version": "2022-07-01-preview",
+    "api_version": "2023-04-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.MAINTENANCE/CONFIGURATIONASSIGNMENTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-07-01-preview",
+    "api_version": "2023-04-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.MAINTENANCE/CONFIGURATIONASSIGNMENTS/{}",
     "operation": "GET",
     "properties": [
@@ -163754,7 +164278,7 @@
     ]
   },
   {
-    "api_version": "2022-07-01-preview",
+    "api_version": "2023-04-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.MAINTENANCE/CONFIGURATIONASSIGNMENTS/{}",
     "operation": "PUT",
     "properties": [
@@ -163801,12 +164325,12 @@
     ]
   },
   {
-    "api_version": "2019-06-01",
+    "api_version": "2022-10-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.MANAGEDSERVICES/REGISTRATIONASSIGNMENTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2019-06-01",
+    "api_version": "2022-10-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.MANAGEDSERVICES/REGISTRATIONASSIGNMENTS/{}",
     "operation": "GET",
     "properties": [
@@ -163822,7 +164346,7 @@
     ]
   },
   {
-    "api_version": "2019-06-01",
+    "api_version": "2022-10-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.MANAGEDSERVICES/REGISTRATIONASSIGNMENTS/{}",
     "operation": "PUT",
     "properties": [
