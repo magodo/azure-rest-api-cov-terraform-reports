@@ -24292,7 +24292,13 @@
         ]
       },
       {
-        "addr": "properties/redisConfiguration/notify-keyspace-events"
+        "addr": "properties/redisConfiguration/notify-keyspace-events",
+        "app_property_maps": [
+          {
+            "name": "azurerm_redis_cache",
+            "addr": "/redis_configuration/0/notify_keyspace_events"
+          }
+        ]
       },
       {
         "addr": "properties/redisConfiguration/preferred-data-persistence-auth-method",
@@ -24548,7 +24554,13 @@
         ]
       },
       {
-        "addr": "properties/redisConfiguration/notify-keyspace-events"
+        "addr": "properties/redisConfiguration/notify-keyspace-events",
+        "app_property_maps": [
+          {
+            "name": "azurerm_redis_cache",
+            "addr": "/redis_configuration/0/notify_keyspace_events"
+          }
+        ]
       },
       {
         "addr": "properties/redisConfiguration/preferred-data-persistence-auth-method",
@@ -24783,7 +24795,13 @@
         ]
       },
       {
-        "addr": "properties/redisConfiguration/notify-keyspace-events"
+        "addr": "properties/redisConfiguration/notify-keyspace-events",
+        "app_property_maps": [
+          {
+            "name": "azurerm_redis_cache",
+            "addr": "/redis_configuration/0/notify_keyspace_events"
+          }
+        ]
       },
       {
         "addr": "properties/redisConfiguration/preferred-data-persistence-auth-method",
@@ -33684,16 +33702,7 @@
     "operation": "GET",
     "properties": [
       {
-        "addr": "id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_virtual_machine_extension",
-            "addr": "/virtual_machine_id"
-          }
-        ]
-      },
-      {
-        "addr": "identity"
+        "addr": "id"
       },
       {
         "addr": "identity/principalId",
@@ -33757,9 +33766,6 @@
       },
       {
         "addr": "properties/additionalCapabilities/ultraSSDEnabled"
-      },
-      {
-        "addr": "properties/applicationProfile"
       },
       {
         "addr": "properties/availabilitySet/id",
@@ -34035,9 +34041,6 @@
         "addr": "properties/storageProfile/osDisk/writeAcceleratorEnabled"
       },
       {
-        "addr": "resources"
-      },
-      {
         "addr": "tags"
       },
       {
@@ -34149,6 +34152,9 @@
             "addr": "/additional_capabilities/0/ultra_ssd_enabled"
           }
         ]
+      },
+      {
+        "addr": "properties/applicationProfile"
       },
       {
         "addr": "properties/applicationProfile/galleryApplications/configurationReference"
@@ -34609,10 +34615,25 @@
         "addr": "properties/storageProfile/dataDisks/caching"
       },
       {
+        "addr": "properties/storageProfile/dataDisks/createOption"
+      },
+      {
         "addr": "properties/storageProfile/dataDisks/diskSizeGB"
       },
       {
+        "addr": "properties/storageProfile/dataDisks/lun"
+      },
+      {
+        "addr": "properties/storageProfile/dataDisks/managedDisk/id"
+      },
+      {
+        "addr": "properties/storageProfile/dataDisks/managedDisk/storageAccountType"
+      },
+      {
         "addr": "properties/storageProfile/dataDisks/name"
+      },
+      {
+        "addr": "properties/storageProfile/dataDisks/writeAcceleratorEnabled"
       },
       {
         "addr": "properties/storageProfile/diskControllerType",
@@ -35572,16 +35593,7 @@
     "operation": "PUT",
     "properties": [
       {
-        "addr": "id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_virtual_machine_extension",
-            "addr": "/virtual_machine_id"
-          }
-        ]
-      },
-      {
-        "addr": "identity"
+        "addr": "id"
       },
       {
         "addr": "identity/principalId",
@@ -35645,9 +35657,6 @@
       },
       {
         "addr": "properties/additionalCapabilities/ultraSSDEnabled"
-      },
-      {
-        "addr": "properties/applicationProfile"
       },
       {
         "addr": "properties/availabilitySet/id",
@@ -35923,9 +35932,6 @@
         "addr": "properties/storageProfile/osDisk/writeAcceleratorEnabled"
       },
       {
-        "addr": "resources"
-      },
-      {
         "addr": "tags"
       },
       {
@@ -36037,6 +36043,9 @@
             "addr": "/additional_capabilities/0/ultra_ssd_enabled"
           }
         ]
+      },
+      {
+        "addr": "properties/applicationProfile"
       },
       {
         "addr": "properties/applicationProfile/galleryApplications/configurationReference"
@@ -36497,10 +36506,25 @@
         "addr": "properties/storageProfile/dataDisks/caching"
       },
       {
+        "addr": "properties/storageProfile/dataDisks/createOption"
+      },
+      {
         "addr": "properties/storageProfile/dataDisks/diskSizeGB"
       },
       {
+        "addr": "properties/storageProfile/dataDisks/lun"
+      },
+      {
+        "addr": "properties/storageProfile/dataDisks/managedDisk/id"
+      },
+      {
+        "addr": "properties/storageProfile/dataDisks/managedDisk/storageAccountType"
+      },
+      {
         "addr": "properties/storageProfile/dataDisks/name"
+      },
+      {
+        "addr": "properties/storageProfile/dataDisks/writeAcceleratorEnabled"
       },
       {
         "addr": "properties/storageProfile/diskControllerType",
@@ -36751,26 +36775,17 @@
     "operation": "POST"
   },
   {
-    "api_version": "2023-03-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINES/{}/EXTENSIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-03-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINES/{}/EXTENSIONS/{}",
     "operation": "GET",
     "properties": [
       {
         "addr": "location"
-      },
-      {
-        "addr": "name",
-        "app_property_maps": [
-          {
-            "name": "azurerm_virtual_machine_extension",
-            "addr": "/name"
-          }
-        ]
       },
       {
         "addr": "properties/autoUpgradeMinorVersion"
@@ -36841,21 +36856,12 @@
     ]
   },
   {
-    "api_version": "2023-03-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINES/{}/EXTENSIONS/{}",
     "operation": "PUT",
     "properties": [
       {
         "addr": "location"
-      },
-      {
-        "addr": "name",
-        "app_property_maps": [
-          {
-            "name": "azurerm_virtual_machine_extension",
-            "addr": "/name"
-          }
-        ]
       },
       {
         "addr": "properties/autoUpgradeMinorVersion"
@@ -37489,15 +37495,6 @@
     "operation": "GET",
     "properties": [
       {
-        "addr": "id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_virtual_machine_scale_set_extension",
-            "addr": "/virtual_machine_scale_set_id"
-          }
-        ]
-      },
-      {
         "addr": "identity/principalId",
         "app_property_maps": [
           {
@@ -39694,15 +39691,6 @@
     "operation": "PUT",
     "properties": [
       {
-        "addr": "id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_virtual_machine_scale_set_extension",
-            "addr": "/virtual_machine_scale_set_id"
-          }
-        ]
-      },
-      {
         "addr": "identity/principalId",
         "app_property_maps": [
           {
@@ -41174,18 +41162,15 @@
     ]
   },
   {
-    "api_version": "2023-03-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}/EXTENSIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-03-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}/EXTENSIONS/{}",
     "operation": "GET",
     "properties": [
-      {
-        "addr": "id"
-      },
       {
         "addr": "name"
       },
@@ -41264,13 +41249,10 @@
     ]
   },
   {
-    "api_version": "2023-03-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}/EXTENSIONS/{}",
     "operation": "PUT",
     "properties": [
-      {
-        "addr": "id"
-      },
       {
         "addr": "name"
       },
@@ -63882,6 +63864,15 @@
         ]
       },
       {
+        "addr": "properties/publicNetworkAccess",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_desktop_host_pool",
+            "addr": "/public_network_access"
+          }
+        ]
+      },
+      {
         "addr": "properties/startVMOnConnect"
       },
       {
@@ -63978,6 +63969,15 @@
           {
             "name": "azurerm_virtual_desktop_host_pool",
             "addr": "/preferred_app_group_type"
+          }
+        ]
+      },
+      {
+        "addr": "properties/publicNetworkAccess",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_desktop_host_pool",
+            "addr": "/public_network_access"
           }
         ]
       },
@@ -64111,6 +64111,15 @@
           {
             "name": "azurerm_virtual_desktop_host_pool",
             "addr": "/preferred_app_group_type"
+          }
+        ]
+      },
+      {
+        "addr": "properties/publicNetworkAccess",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_desktop_host_pool",
+            "addr": "/public_network_access"
           }
         ]
       },
@@ -109671,6 +109680,9 @@
         "addr": "properties/ipConfigurations/properties/subnet/id"
       },
       {
+        "addr": "properties/natRules"
+      },
+      {
         "addr": "properties/sku/name",
         "app_property_maps": [
           {
@@ -109955,6 +109967,9 @@
       },
       {
         "addr": "properties/ipConfigurations/properties/subnet/id"
+      },
+      {
+        "addr": "properties/natRules"
       },
       {
         "addr": "properties/sku/name",
