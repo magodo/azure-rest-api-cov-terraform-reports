@@ -13571,12 +13571,12 @@
     "operation": "POST"
   },
   {
-    "api_version": "2023-05-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APP/MANAGEDENVIRONMENTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-05-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APP/MANAGEDENVIRONMENTS/{}",
     "operation": "GET",
     "properties": [
@@ -13650,6 +13650,12 @@
         ]
       },
       {
+        "addr": "properties/peerAuthentication/mtls/enabled"
+      },
+      {
+        "addr": "properties/peerTrafficConfiguration/encryption/enabled"
+      },
+      {
         "addr": "properties/staticIp",
         "app_property_maps": [
           {
@@ -13718,7 +13724,7 @@
     ]
   },
   {
-    "api_version": "2023-05-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APP/MANAGEDENVIRONMENTS/{}",
     "operation": "PUT",
     "properties": [
@@ -13790,6 +13796,12 @@
             "addr": "/infrastructure_resource_group_name"
           }
         ]
+      },
+      {
+        "addr": "properties/peerAuthentication/mtls/enabled"
+      },
+      {
+        "addr": "properties/peerTrafficConfiguration/encryption/enabled"
       },
       {
         "addr": "properties/staticIp",
@@ -18481,6 +18493,9 @@
       },
       {
         "addr": "properties/provisioningState"
+      },
+      {
+        "addr": "tags"
       }
     ]
   },
@@ -18497,6 +18512,9 @@
       },
       {
         "addr": "properties/contentLink/uri"
+      },
+      {
+        "addr": "tags"
       }
     ]
   },
@@ -18564,6 +18582,9 @@
       },
       {
         "addr": "properties/provisioningState"
+      },
+      {
+        "addr": "tags"
       }
     ]
   },
@@ -18580,6 +18601,9 @@
       },
       {
         "addr": "properties/contentLink/uri"
+      },
+      {
+        "addr": "tags"
       }
     ]
   },
@@ -35173,6 +35197,9 @@
         "addr": "properties/storageProfile/dataDisks/name"
       },
       {
+        "addr": "properties/storageProfile/dataDisks/sourceResource/id"
+      },
+      {
         "addr": "properties/storageProfile/dataDisks/vhd/uri"
       },
       {
@@ -36914,6 +36941,9 @@
       },
       {
         "addr": "properties/storageProfile/dataDisks/name"
+      },
+      {
+        "addr": "properties/storageProfile/dataDisks/sourceResource/id"
       },
       {
         "addr": "properties/storageProfile/dataDisks/vhd/uri"
@@ -42869,6 +42899,101 @@
     ]
   },
   {
+    "api_version": "2023-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/CACHERULES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/CACHERULES/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/credentialSetResourceId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_registry_cache_rule",
+            "addr": "/credential_set_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/sourceRepository",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_registry_cache_rule",
+            "addr": "/source_repo"
+          }
+        ]
+      },
+      {
+        "addr": "properties/targetRepository",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_registry_cache_rule",
+            "addr": "/target_repo"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2023-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/CACHERULES/{}",
+    "operation": "PATCH",
+    "properties": [
+      {
+        "addr": "properties/credentialSetResourceId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_registry_cache_rule",
+            "addr": "/credential_set_id"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2023-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/CACHERULES/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/credentialSetResourceId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_registry_cache_rule",
+            "addr": "/credential_set_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/sourceRepository",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_registry_cache_rule",
+            "addr": "/source_repo"
+          }
+        ]
+      },
+      {
+        "addr": "properties/targetRepository",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_registry_cache_rule",
+            "addr": "/target_repo"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "api_version": "2021-08-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/CONNECTEDREGISTRIES/{}",
     "operation": "DELETE"
@@ -44551,7 +44676,13 @@
         "addr": "properties/agentPoolProfiles/type"
       },
       {
+        "addr": "properties/agentPoolProfiles/upgradeSettings/drainTimeoutInMinutes"
+      },
+      {
         "addr": "properties/agentPoolProfiles/upgradeSettings/maxSurge"
+      },
+      {
+        "addr": "properties/agentPoolProfiles/upgradeSettings/nodeSoakDurationInMinutes"
       },
       {
         "addr": "properties/agentPoolProfiles/vmSize"
@@ -44912,6 +45043,9 @@
       },
       {
         "addr": "properties/linuxProfile/ssh/publicKeys/keyData"
+      },
+      {
+        "addr": "properties/metricsProfile/costAnalysis/enabled"
       },
       {
         "addr": "properties/networkProfile/dnsServiceIP",
@@ -45590,7 +45724,13 @@
         "addr": "properties/agentPoolProfiles/type"
       },
       {
+        "addr": "properties/agentPoolProfiles/upgradeSettings/drainTimeoutInMinutes"
+      },
+      {
         "addr": "properties/agentPoolProfiles/upgradeSettings/maxSurge"
+      },
+      {
+        "addr": "properties/agentPoolProfiles/upgradeSettings/nodeSoakDurationInMinutes"
       },
       {
         "addr": "properties/agentPoolProfiles/vmSize"
@@ -45951,6 +46091,9 @@
       },
       {
         "addr": "properties/linuxProfile/ssh/publicKeys/keyData"
+      },
+      {
+        "addr": "properties/metricsProfile/costAnalysis/enabled"
       },
       {
         "addr": "properties/networkProfile/dnsServiceIP",
@@ -46925,11 +47068,29 @@
         "addr": "properties/type"
       },
       {
+        "addr": "properties/upgradeSettings/drainTimeoutInMinutes",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster_node_pool",
+            "addr": "/upgrade_settings/0/drain_timeout_in_minutes"
+          }
+        ]
+      },
+      {
         "addr": "properties/upgradeSettings/maxSurge",
         "app_property_maps": [
           {
             "name": "azurerm_kubernetes_cluster_node_pool",
             "addr": "/upgrade_settings/0/max_surge"
+          }
+        ]
+      },
+      {
+        "addr": "properties/upgradeSettings/nodeSoakDurationInMinutes",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster_node_pool",
+            "addr": "/upgrade_settings/0/node_soak_duration_in_minutes"
           }
         ]
       },
@@ -47580,11 +47741,29 @@
         "addr": "properties/type"
       },
       {
+        "addr": "properties/upgradeSettings/drainTimeoutInMinutes",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster_node_pool",
+            "addr": "/upgrade_settings/0/drain_timeout_in_minutes"
+          }
+        ]
+      },
+      {
         "addr": "properties/upgradeSettings/maxSurge",
         "app_property_maps": [
           {
             "name": "azurerm_kubernetes_cluster_node_pool",
             "addr": "/upgrade_settings/0/max_surge"
+          }
+        ]
+      },
+      {
+        "addr": "properties/upgradeSettings/nodeSoakDurationInMinutes",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster_node_pool",
+            "addr": "/upgrade_settings/0/node_soak_duration_in_minutes"
           }
         ]
       },
@@ -81748,13 +81927,7 @@
     "operation": "GET",
     "properties": [
       {
-        "addr": "id"
-      },
-      {
         "addr": "location"
-      },
-      {
-        "addr": "name"
       },
       {
         "addr": "properties/accessPolicies/applicationId"
@@ -81830,9 +82003,6 @@
       },
       {
         "addr": "tags"
-      },
-      {
-        "addr": "type"
       }
     ]
   },
@@ -86793,6 +86963,18 @@
         "addr": "properties/publicNetworkAccess"
       },
       {
+        "addr": "properties/serverlessComputeSettings/serverlessComputeCustomSubnet",
+        "app_property_maps": [
+          {
+            "name": "azurerm_machine_learning_workspace",
+            "addr": "/serverless_compute/0/subnet_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/serverlessComputeSettings/serverlessComputeNoPublicIP"
+      },
+      {
         "addr": "properties/storageAccount",
         "app_property_maps": [
           {
@@ -86999,6 +87181,18 @@
       },
       {
         "addr": "properties/publicNetworkAccess"
+      },
+      {
+        "addr": "properties/serverlessComputeSettings/serverlessComputeCustomSubnet",
+        "app_property_maps": [
+          {
+            "name": "azurerm_machine_learning_workspace",
+            "addr": "/serverless_compute/0/subnet_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/serverlessComputeSettings/serverlessComputeNoPublicIP"
       },
       {
         "addr": "properties/storageAccount",
@@ -98389,6 +98583,15 @@
         ]
       },
       {
+        "addr": "properties/virtualNetwork/id",
+        "app_property_maps": [
+          {
+            "name": "azurerm_bastion_host",
+            "addr": "/virtual_network_id"
+          }
+        ]
+      },
+      {
         "addr": "sku/name",
         "app_property_maps": [
           {
@@ -98458,6 +98661,15 @@
           {
             "name": "azurerm_bastion_host",
             "addr": "/scale_units"
+          }
+        ]
+      },
+      {
+        "addr": "properties/virtualNetwork/id",
+        "app_property_maps": [
+          {
+            "name": "azurerm_bastion_host",
+            "addr": "/virtual_network_id"
           }
         ]
       },
@@ -99694,12 +99906,22 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTECIRCUITS/{}",
     "operation": "DELETE"
   },
   {
     "api_version": "2022-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTECIRCUITS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/expressRoutePort"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTECIRCUITS/{}",
     "operation": "GET",
     "properties": [
@@ -99729,6 +99951,9 @@
             "addr": "/bandwidth_in_gbps"
           }
         ]
+      },
+      {
+        "addr": "properties/expressRoutePort"
       },
       {
         "addr": "properties/expressRoutePort/id",
@@ -99832,7 +100057,7 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTECIRCUITS/{}",
     "operation": "PUT",
     "properties": [
@@ -99862,6 +100087,9 @@
             "addr": "/bandwidth_in_gbps"
           }
         ]
+      },
+      {
+        "addr": "properties/expressRoutePort"
       },
       {
         "addr": "properties/expressRoutePort/id",
@@ -99965,12 +100193,12 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTECIRCUITS/{}/AUTHORIZATIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTECIRCUITS/{}/AUTHORIZATIONS/{}",
     "operation": "GET",
     "properties": [
@@ -99995,7 +100223,7 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTECIRCUITS/{}/AUTHORIZATIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -100020,12 +100248,12 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTECIRCUITS/{}/PEERINGS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTECIRCUITS/{}/PEERINGS/{}",
     "operation": "GET",
     "properties": [
@@ -100039,7 +100267,40 @@
         ]
       },
       {
-        "addr": "properties/connections"
+        "addr": "properties/connections/etag"
+      },
+      {
+        "addr": "properties/connections/id"
+      },
+      {
+        "addr": "properties/connections/name"
+      },
+      {
+        "addr": "properties/connections/properties/addressPrefix"
+      },
+      {
+        "addr": "properties/connections/properties/authorizationKey"
+      },
+      {
+        "addr": "properties/connections/properties/circuitConnectionStatus"
+      },
+      {
+        "addr": "properties/connections/properties/expressRouteCircuitPeering/id"
+      },
+      {
+        "addr": "properties/connections/properties/ipv6CircuitConnectionConfig/addressPrefix"
+      },
+      {
+        "addr": "properties/connections/properties/ipv6CircuitConnectionConfig/circuitConnectionStatus"
+      },
+      {
+        "addr": "properties/connections/properties/peerExpressRouteCircuitPeering/id"
+      },
+      {
+        "addr": "properties/connections/properties/provisioningState"
+      },
+      {
+        "addr": "properties/connections/type"
       },
       {
         "addr": "properties/gatewayManagerEtag",
@@ -100203,7 +100464,7 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTECIRCUITS/{}/PEERINGS/{}",
     "operation": "PUT",
     "properties": [
@@ -100217,7 +100478,40 @@
         ]
       },
       {
-        "addr": "properties/connections"
+        "addr": "properties/connections/etag"
+      },
+      {
+        "addr": "properties/connections/id"
+      },
+      {
+        "addr": "properties/connections/name"
+      },
+      {
+        "addr": "properties/connections/properties/addressPrefix"
+      },
+      {
+        "addr": "properties/connections/properties/authorizationKey"
+      },
+      {
+        "addr": "properties/connections/properties/circuitConnectionStatus"
+      },
+      {
+        "addr": "properties/connections/properties/expressRouteCircuitPeering/id"
+      },
+      {
+        "addr": "properties/connections/properties/ipv6CircuitConnectionConfig/addressPrefix"
+      },
+      {
+        "addr": "properties/connections/properties/ipv6CircuitConnectionConfig/circuitConnectionStatus"
+      },
+      {
+        "addr": "properties/connections/properties/peerExpressRouteCircuitPeering/id"
+      },
+      {
+        "addr": "properties/connections/properties/provisioningState"
+      },
+      {
+        "addr": "properties/connections/type"
       },
       {
         "addr": "properties/gatewayManagerEtag",
@@ -100381,16 +100675,83 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTECIRCUITS/{}/PEERINGS/{}/CONNECTIONS",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "etag"
+      },
+      {
+        "addr": "id"
+      },
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/addressPrefix",
+        "app_property_maps": [
+          {
+            "name": "azurerm_express_route_circuit_connection",
+            "addr": "/address_prefix_ipv4"
+          }
+        ]
+      },
+      {
+        "addr": "properties/authorizationKey",
+        "app_property_maps": [
+          {
+            "name": "azurerm_express_route_circuit_connection",
+            "addr": "/authorization_key"
+          }
+        ]
+      },
+      {
+        "addr": "properties/circuitConnectionStatus"
+      },
+      {
+        "addr": "properties/expressRouteCircuitPeering/id"
+      },
+      {
+        "addr": "properties/ipv6CircuitConnectionConfig/addressPrefix",
+        "app_property_maps": [
+          {
+            "name": "azurerm_express_route_circuit_connection",
+            "addr": "/address_prefix_ipv6"
+          }
+        ]
+      },
+      {
+        "addr": "properties/ipv6CircuitConnectionConfig/circuitConnectionStatus"
+      },
+      {
+        "addr": "properties/peerExpressRouteCircuitPeering/id"
+      },
+      {
+        "addr": "properties/provisioningState"
+      },
+      {
+        "addr": "type"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTECIRCUITS/{}/PEERINGS/{}/CONNECTIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTECIRCUITS/{}/PEERINGS/{}/CONNECTIONS/{}",
     "operation": "GET",
     "properties": [
       {
+        "addr": "etag"
+      },
+      {
+        "addr": "id"
+      },
+      {
         "addr": "name"
       },
       {
@@ -100412,6 +100773,9 @@
         ]
       },
       {
+        "addr": "properties/circuitConnectionStatus"
+      },
+      {
         "addr": "properties/expressRouteCircuitPeering/id"
       },
       {
@@ -100424,16 +100788,31 @@
         ]
       },
       {
+        "addr": "properties/ipv6CircuitConnectionConfig/circuitConnectionStatus"
+      },
+      {
         "addr": "properties/peerExpressRouteCircuitPeering/id"
+      },
+      {
+        "addr": "properties/provisioningState"
+      },
+      {
+        "addr": "type"
       }
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTECIRCUITS/{}/PEERINGS/{}/CONNECTIONS/{}",
     "operation": "PUT",
     "properties": [
       {
+        "addr": "etag"
+      },
+      {
+        "addr": "id"
+      },
+      {
         "addr": "name"
       },
       {
@@ -100455,6 +100834,9 @@
         ]
       },
       {
+        "addr": "properties/circuitConnectionStatus"
+      },
+      {
         "addr": "properties/expressRouteCircuitPeering/id"
       },
       {
@@ -100467,17 +100849,26 @@
         ]
       },
       {
+        "addr": "properties/ipv6CircuitConnectionConfig/circuitConnectionStatus"
+      },
+      {
         "addr": "properties/peerExpressRouteCircuitPeering/id"
+      },
+      {
+        "addr": "properties/provisioningState"
+      },
+      {
+        "addr": "type"
       }
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTEGATEWAYS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTEGATEWAYS/{}",
     "operation": "GET",
     "properties": [
@@ -100506,7 +100897,64 @@
         ]
       },
       {
-        "addr": "properties/expressRouteConnections"
+        "addr": "properties/expressRouteConnections/id"
+      },
+      {
+        "addr": "properties/expressRouteConnections/name"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/authorizationKey"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/enableInternetSecurity"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/enablePrivateLinkFastPath"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/expressRouteCircuitPeering/id"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/expressRouteGatewayBypass"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/provisioningState"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/routingConfiguration/associatedRouteTable/id"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/routingConfiguration/inboundRouteMap/id"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/routingConfiguration/outboundRouteMap/id"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/routingConfiguration/propagatedRouteTables/ids/id"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/routingConfiguration/propagatedRouteTables/labels"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/routingConfiguration/vnetRoutes/bgpConnections/id"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/routingConfiguration/vnetRoutes/staticRoutes/addressPrefixes"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/routingConfiguration/vnetRoutes/staticRoutes/name"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/routingConfiguration/vnetRoutes/staticRoutes/nextHopIpAddress"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/routingConfiguration/vnetRoutes/staticRoutesConfig/propagateStaticRoutes"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/routingConfiguration/vnetRoutes/staticRoutesConfig/vnetLocalRouteOverrideCriteria"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/routingWeight"
       },
       {
         "addr": "properties/virtualHub/id",
@@ -100523,7 +100971,7 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTEGATEWAYS/{}",
     "operation": "PUT",
     "properties": [
@@ -100552,7 +101000,64 @@
         ]
       },
       {
-        "addr": "properties/expressRouteConnections"
+        "addr": "properties/expressRouteConnections/id"
+      },
+      {
+        "addr": "properties/expressRouteConnections/name"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/authorizationKey"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/enableInternetSecurity"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/enablePrivateLinkFastPath"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/expressRouteCircuitPeering/id"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/expressRouteGatewayBypass"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/provisioningState"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/routingConfiguration/associatedRouteTable/id"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/routingConfiguration/inboundRouteMap/id"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/routingConfiguration/outboundRouteMap/id"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/routingConfiguration/propagatedRouteTables/ids/id"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/routingConfiguration/propagatedRouteTables/labels"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/routingConfiguration/vnetRoutes/bgpConnections/id"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/routingConfiguration/vnetRoutes/staticRoutes/addressPrefixes"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/routingConfiguration/vnetRoutes/staticRoutes/name"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/routingConfiguration/vnetRoutes/staticRoutes/nextHopIpAddress"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/routingConfiguration/vnetRoutes/staticRoutesConfig/propagateStaticRoutes"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/routingConfiguration/vnetRoutes/staticRoutesConfig/vnetLocalRouteOverrideCriteria"
+      },
+      {
+        "addr": "properties/expressRouteConnections/properties/routingWeight"
       },
       {
         "addr": "properties/virtualHub/id",
@@ -100569,25 +101074,85 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTEGATEWAYS/{}/EXPRESSROUTECONNECTIONS",
     "operation": "GET",
     "properties": [
       {
-        "addr": "value"
+        "addr": "value/id"
+      },
+      {
+        "addr": "value/name"
+      },
+      {
+        "addr": "value/properties/authorizationKey"
+      },
+      {
+        "addr": "value/properties/enableInternetSecurity"
+      },
+      {
+        "addr": "value/properties/enablePrivateLinkFastPath"
+      },
+      {
+        "addr": "value/properties/expressRouteCircuitPeering/id"
+      },
+      {
+        "addr": "value/properties/expressRouteGatewayBypass"
+      },
+      {
+        "addr": "value/properties/provisioningState"
+      },
+      {
+        "addr": "value/properties/routingConfiguration/associatedRouteTable/id"
+      },
+      {
+        "addr": "value/properties/routingConfiguration/inboundRouteMap/id"
+      },
+      {
+        "addr": "value/properties/routingConfiguration/outboundRouteMap/id"
+      },
+      {
+        "addr": "value/properties/routingConfiguration/propagatedRouteTables/ids/id"
+      },
+      {
+        "addr": "value/properties/routingConfiguration/propagatedRouteTables/labels"
+      },
+      {
+        "addr": "value/properties/routingConfiguration/vnetRoutes/bgpConnections/id"
+      },
+      {
+        "addr": "value/properties/routingConfiguration/vnetRoutes/staticRoutes/addressPrefixes"
+      },
+      {
+        "addr": "value/properties/routingConfiguration/vnetRoutes/staticRoutes/name"
+      },
+      {
+        "addr": "value/properties/routingConfiguration/vnetRoutes/staticRoutes/nextHopIpAddress"
+      },
+      {
+        "addr": "value/properties/routingConfiguration/vnetRoutes/staticRoutesConfig/propagateStaticRoutes"
+      },
+      {
+        "addr": "value/properties/routingConfiguration/vnetRoutes/staticRoutesConfig/vnetLocalRouteOverrideCriteria"
+      },
+      {
+        "addr": "value/properties/routingWeight"
       }
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTEGATEWAYS/{}/EXPRESSROUTECONNECTIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTEGATEWAYS/{}/EXPRESSROUTECONNECTIONS/{}",
     "operation": "GET",
     "properties": [
+      {
+        "addr": "id"
+      },
       {
         "addr": "name"
       },
@@ -100617,6 +101182,9 @@
       },
       {
         "addr": "properties/expressRouteGatewayBypass"
+      },
+      {
+        "addr": "properties/provisioningState"
       },
       {
         "addr": "properties/routingConfiguration/associatedRouteTable/id",
@@ -100652,6 +101220,24 @@
         "addr": "properties/routingConfiguration/propagatedRouteTables/labels"
       },
       {
+        "addr": "properties/routingConfiguration/vnetRoutes/bgpConnections/id"
+      },
+      {
+        "addr": "properties/routingConfiguration/vnetRoutes/staticRoutes/addressPrefixes"
+      },
+      {
+        "addr": "properties/routingConfiguration/vnetRoutes/staticRoutes/name"
+      },
+      {
+        "addr": "properties/routingConfiguration/vnetRoutes/staticRoutes/nextHopIpAddress"
+      },
+      {
+        "addr": "properties/routingConfiguration/vnetRoutes/staticRoutesConfig/propagateStaticRoutes"
+      },
+      {
+        "addr": "properties/routingConfiguration/vnetRoutes/staticRoutesConfig/vnetLocalRouteOverrideCriteria"
+      },
+      {
         "addr": "properties/routingWeight",
         "app_property_maps": [
           {
@@ -100663,11 +101249,14 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTEGATEWAYS/{}/EXPRESSROUTECONNECTIONS/{}",
     "operation": "PUT",
     "properties": [
       {
+        "addr": "id"
+      },
+      {
         "addr": "name"
       },
       {
@@ -100696,6 +101285,9 @@
       },
       {
         "addr": "properties/expressRouteGatewayBypass"
+      },
+      {
+        "addr": "properties/provisioningState"
       },
       {
         "addr": "properties/routingConfiguration/associatedRouteTable/id",
@@ -100731,6 +101323,24 @@
         "addr": "properties/routingConfiguration/propagatedRouteTables/labels"
       },
       {
+        "addr": "properties/routingConfiguration/vnetRoutes/bgpConnections/id"
+      },
+      {
+        "addr": "properties/routingConfiguration/vnetRoutes/staticRoutes/addressPrefixes"
+      },
+      {
+        "addr": "properties/routingConfiguration/vnetRoutes/staticRoutes/name"
+      },
+      {
+        "addr": "properties/routingConfiguration/vnetRoutes/staticRoutes/nextHopIpAddress"
+      },
+      {
+        "addr": "properties/routingConfiguration/vnetRoutes/staticRoutesConfig/propagateStaticRoutes"
+      },
+      {
+        "addr": "properties/routingConfiguration/vnetRoutes/staticRoutesConfig/vnetLocalRouteOverrideCriteria"
+      },
+      {
         "addr": "properties/routingWeight",
         "app_property_maps": [
           {
@@ -100742,15 +101352,21 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTEPORTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTEPORTS/{}",
     "operation": "GET",
     "properties": [
+      {
+        "addr": "identity/principalId"
+      },
+      {
+        "addr": "identity/tenantId"
+      },
       {
         "addr": "identity/type"
       },
@@ -100874,10 +101490,16 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTEPORTS/{}",
     "operation": "PUT",
     "properties": [
+      {
+        "addr": "identity/principalId"
+      },
+      {
+        "addr": "identity/tenantId"
+      },
       {
         "addr": "identity/type"
       },
@@ -101001,12 +101623,12 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTEPORTS/{}/AUTHORIZATIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTEPORTS/{}/AUTHORIZATIONS/{}",
     "operation": "GET",
     "properties": [
@@ -101031,7 +101653,7 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/EXPRESSROUTEPORTS/{}/AUTHORIZATIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -104338,18 +104960,6 @@
     "operation": "GET",
     "properties": [
       {
-        "addr": "etag"
-      },
-      {
-        "addr": "id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_network_interface_security_group_association",
-            "addr": "/network_interface_id"
-          }
-        ]
-      },
-      {
         "addr": "properties/ipConfigurations/properties/primary"
       },
       {
@@ -104360,18 +104970,6 @@
       },
       {
         "addr": "properties/ipConfigurations/properties/publicIPAddress/properties/ipAddress"
-      },
-      {
-        "addr": "properties/networkSecurityGroup"
-      },
-      {
-        "addr": "properties/networkSecurityGroup/id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_network_interface_security_group_association",
-            "addr": "/network_security_group_id"
-          }
-        ]
       },
       {
         "addr": "properties/primary"
@@ -104492,6 +105090,9 @@
         ]
       },
       {
+        "addr": "properties/networkSecurityGroup"
+      },
+      {
         "addr": "properties/networkSecurityGroup/id"
       },
       {
@@ -104505,52 +105106,6 @@
       },
       {
         "addr": "tags"
-      }
-    ]
-  },
-  {
-    "api_version": "2022-07-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKINTERFACES/{}",
-    "operation": "PUT",
-    "properties": [
-      {
-        "addr": "etag"
-      },
-      {
-        "addr": "id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_network_interface_security_group_association",
-            "addr": "/network_interface_id"
-          }
-        ]
-      },
-      {
-        "addr": "properties/ipConfigurations/properties/primary"
-      },
-      {
-        "addr": "properties/ipConfigurations/properties/privateIPAddress"
-      },
-      {
-        "addr": "properties/ipConfigurations/properties/publicIPAddress/id"
-      },
-      {
-        "addr": "properties/ipConfigurations/properties/publicIPAddress/properties/ipAddress"
-      },
-      {
-        "addr": "properties/networkSecurityGroup"
-      },
-      {
-        "addr": "properties/networkSecurityGroup/id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_network_interface_security_group_association",
-            "addr": "/network_security_group_id"
-          }
-        ]
-      },
-      {
-        "addr": "properties/primary"
       }
     ]
   },
@@ -104666,6 +105221,9 @@
             "addr": "/mac_address"
           }
         ]
+      },
+      {
+        "addr": "properties/networkSecurityGroup"
       },
       {
         "addr": "properties/networkSecurityGroup/id"
@@ -108063,6 +108621,16 @@
   {
     "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PUBLICIPPREFIXES/{}",
+    "operation": "PATCH",
+    "properties": [
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-09-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PUBLICIPPREFIXES/{}",
     "operation": "PUT",
     "properties": [
       {
@@ -108356,12 +108924,12 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/SECURITYPARTNERPROVIDERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/SECURITYPARTNERPROVIDERS/{}",
     "operation": "GET",
     "properties": [
@@ -108398,7 +108966,7 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/SECURITYPARTNERPROVIDERS/{}",
     "operation": "PATCH",
     "properties": [
@@ -108408,7 +108976,7 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/SECURITYPARTNERPROVIDERS/{}",
     "operation": "PUT",
     "properties": [
@@ -109066,35 +109634,21 @@
     "operation": "DELETE"
   },
   {
+    "api_version": "2023-09-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}",
+    "operation": "DELETE"
+  },
+  {
     "api_version": "2022-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}",
     "operation": "GET",
     "properties": [
-      {
-        "addr": "id"
-      },
       {
         "addr": "location",
         "app_property_maps": [
           {
             "name": "azurerm_route_server",
             "addr": "/location"
-          },
-          {
-            "name": "azurerm_virtual_hub",
-            "addr": "/location"
-          }
-        ]
-      },
-      {
-        "addr": "name"
-      },
-      {
-        "addr": "properties/addressPrefix",
-        "app_property_maps": [
-          {
-            "name": "azurerm_virtual_hub",
-            "addr": "/address_prefix"
           }
         ]
       },
@@ -109102,22 +109656,7 @@
         "addr": "properties/allowBranchToBranchTraffic"
       },
       {
-        "addr": "properties/hubRoutingPreference",
-        "app_property_maps": [
-          {
-            "name": "azurerm_virtual_hub",
-            "addr": "/hub_routing_preference"
-          }
-        ]
-      },
-      {
         "addr": "properties/provisioningState"
-      },
-      {
-        "addr": "properties/routeTable/routes/addressPrefixes"
-      },
-      {
-        "addr": "properties/routeTable/routes/nextHopIpAddress"
       },
       {
         "addr": "properties/routingState",
@@ -109134,10 +109673,6 @@
           {
             "name": "azurerm_route_server",
             "addr": "/sku"
-          },
-          {
-            "name": "azurerm_virtual_hub",
-            "addr": "/sku"
           }
         ]
       },
@@ -109147,7 +109682,70 @@
           {
             "name": "azurerm_route_server",
             "addr": "/virtual_router_asn"
-          },
+          }
+        ]
+      },
+      {
+        "addr": "properties/virtualRouterIps"
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-09-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_hub",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/addressPrefix",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_hub",
+            "addr": "/address_prefix"
+          }
+        ]
+      },
+      {
+        "addr": "properties/hubRoutingPreference",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_hub",
+            "addr": "/hub_routing_preference"
+          }
+        ]
+      },
+      {
+        "addr": "properties/routeTable/routes/addressPrefixes"
+      },
+      {
+        "addr": "properties/routeTable/routes/nextHopIpAddress"
+      },
+      {
+        "addr": "properties/routingState"
+      },
+      {
+        "addr": "properties/sku",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_hub",
+            "addr": "/sku"
+          }
+        ]
+      },
+      {
+        "addr": "properties/virtualRouterAsn",
+        "app_property_maps": [
           {
             "name": "azurerm_virtual_hub",
             "addr": "/virtual_router_asn"
@@ -109186,30 +109784,11 @@
     "operation": "PUT",
     "properties": [
       {
-        "addr": "id"
-      },
-      {
         "addr": "location",
         "app_property_maps": [
           {
             "name": "azurerm_route_server",
             "addr": "/location"
-          },
-          {
-            "name": "azurerm_virtual_hub",
-            "addr": "/location"
-          }
-        ]
-      },
-      {
-        "addr": "name"
-      },
-      {
-        "addr": "properties/addressPrefix",
-        "app_property_maps": [
-          {
-            "name": "azurerm_virtual_hub",
-            "addr": "/address_prefix"
           }
         ]
       },
@@ -109217,22 +109796,7 @@
         "addr": "properties/allowBranchToBranchTraffic"
       },
       {
-        "addr": "properties/hubRoutingPreference",
-        "app_property_maps": [
-          {
-            "name": "azurerm_virtual_hub",
-            "addr": "/hub_routing_preference"
-          }
-        ]
-      },
-      {
         "addr": "properties/provisioningState"
-      },
-      {
-        "addr": "properties/routeTable/routes/addressPrefixes"
-      },
-      {
-        "addr": "properties/routeTable/routes/nextHopIpAddress"
       },
       {
         "addr": "properties/routingState",
@@ -109249,10 +109813,6 @@
           {
             "name": "azurerm_route_server",
             "addr": "/sku"
-          },
-          {
-            "name": "azurerm_virtual_hub",
-            "addr": "/sku"
           }
         ]
       },
@@ -109262,7 +109822,70 @@
           {
             "name": "azurerm_route_server",
             "addr": "/virtual_router_asn"
-          },
+          }
+        ]
+      },
+      {
+        "addr": "properties/virtualRouterIps"
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-09-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_hub",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/addressPrefix",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_hub",
+            "addr": "/address_prefix"
+          }
+        ]
+      },
+      {
+        "addr": "properties/hubRoutingPreference",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_hub",
+            "addr": "/hub_routing_preference"
+          }
+        ]
+      },
+      {
+        "addr": "properties/routeTable/routes/addressPrefixes"
+      },
+      {
+        "addr": "properties/routeTable/routes/nextHopIpAddress"
+      },
+      {
+        "addr": "properties/routingState"
+      },
+      {
+        "addr": "properties/sku",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_hub",
+            "addr": "/sku"
+          }
+        ]
+      },
+      {
+        "addr": "properties/virtualRouterAsn",
+        "app_property_maps": [
           {
             "name": "azurerm_virtual_hub",
             "addr": "/virtual_router_asn"
@@ -109301,102 +109924,147 @@
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/BGPCONNECTIONS/{}",
-    "operation": "GET",
-    "properties": [
-      {
-        "addr": "name"
-      },
-      {
-        "addr": "properties/hubVirtualNetworkConnection/id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_virtual_hub_bgp_connection",
-            "addr": "/virtual_network_connection_id"
-          }
-        ]
-      },
-      {
-        "addr": "properties/peerAsn",
-        "app_property_maps": [
-          {
-            "name": "azurerm_route_server_bgp_connection",
-            "addr": "/peer_asn"
-          },
-          {
-            "name": "azurerm_virtual_hub_bgp_connection",
-            "addr": "/peer_asn"
-          }
-        ]
-      },
-      {
-        "addr": "properties/peerIp",
-        "app_property_maps": [
-          {
-            "name": "azurerm_route_server_bgp_connection",
-            "addr": "/peer_ip"
-          },
-          {
-            "name": "azurerm_virtual_hub_bgp_connection",
-            "addr": "/peer_ip"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "api_version": "2022-07-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/BGPCONNECTIONS/{}",
-    "operation": "PUT",
-    "properties": [
-      {
-        "addr": "name"
-      },
-      {
-        "addr": "properties/hubVirtualNetworkConnection/id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_virtual_hub_bgp_connection",
-            "addr": "/virtual_network_connection_id"
-          }
-        ]
-      },
-      {
-        "addr": "properties/peerAsn",
-        "app_property_maps": [
-          {
-            "name": "azurerm_route_server_bgp_connection",
-            "addr": "/peer_asn"
-          },
-          {
-            "name": "azurerm_virtual_hub_bgp_connection",
-            "addr": "/peer_asn"
-          }
-        ]
-      },
-      {
-        "addr": "properties/peerIp",
-        "app_property_maps": [
-          {
-            "name": "azurerm_route_server_bgp_connection",
-            "addr": "/peer_ip"
-          },
-          {
-            "name": "azurerm_virtual_hub_bgp_connection",
-            "addr": "/peer_ip"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "api_version": "2022-07-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/HUBROUTETABLES/{}",
     "operation": "DELETE"
   },
   {
     "api_version": "2022-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/BGPCONNECTIONS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/peerAsn",
+        "app_property_maps": [
+          {
+            "name": "azurerm_route_server_bgp_connection",
+            "addr": "/peer_asn"
+          }
+        ]
+      },
+      {
+        "addr": "properties/peerIp",
+        "app_property_maps": [
+          {
+            "name": "azurerm_route_server_bgp_connection",
+            "addr": "/peer_ip"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2023-09-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/BGPCONNECTIONS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/hubVirtualNetworkConnection/id",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_hub_bgp_connection",
+            "addr": "/virtual_network_connection_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/peerAsn",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_hub_bgp_connection",
+            "addr": "/peer_asn"
+          }
+        ]
+      },
+      {
+        "addr": "properties/peerIp",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_hub_bgp_connection",
+            "addr": "/peer_ip"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2022-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/BGPCONNECTIONS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/peerAsn",
+        "app_property_maps": [
+          {
+            "name": "azurerm_route_server_bgp_connection",
+            "addr": "/peer_asn"
+          }
+        ]
+      },
+      {
+        "addr": "properties/peerIp",
+        "app_property_maps": [
+          {
+            "name": "azurerm_route_server_bgp_connection",
+            "addr": "/peer_ip"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2023-09-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/BGPCONNECTIONS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/hubVirtualNetworkConnection/id",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_hub_bgp_connection",
+            "addr": "/virtual_network_connection_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/peerAsn",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_hub_bgp_connection",
+            "addr": "/peer_asn"
+          }
+        ]
+      },
+      {
+        "addr": "properties/peerIp",
+        "app_property_maps": [
+          {
+            "name": "azurerm_virtual_hub_bgp_connection",
+            "addr": "/peer_ip"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2023-09-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/HUBROUTETABLES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/HUBROUTETABLES/{}",
     "operation": "GET",
     "properties": [
@@ -109424,7 +110092,7 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/HUBROUTETABLES/{}",
     "operation": "PUT",
     "properties": [
@@ -109452,12 +110120,12 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/HUBVIRTUALNETWORKCONNECTIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/HUBVIRTUALNETWORKCONNECTIONS/{}",
     "operation": "GET",
     "properties": [
@@ -109533,7 +110201,7 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/HUBVIRTUALNETWORKCONNECTIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -109614,7 +110282,28 @@
     "operation": "DELETE"
   },
   {
+    "api_version": "2023-09-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/IPCONFIGURATIONS/{}",
+    "operation": "DELETE"
+  },
+  {
     "api_version": "2022-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/IPCONFIGURATIONS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/publicIPAddress/id"
+      },
+      {
+        "addr": "properties/subnet/id"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/IPCONFIGURATIONS/{}",
     "operation": "GET",
     "properties": [
@@ -109661,6 +110350,22 @@
   },
   {
     "api_version": "2022-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/IPCONFIGURATIONS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/publicIPAddress/id"
+      },
+      {
+        "addr": "properties/subnet/id"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALHUBS/{}/IPCONFIGURATIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -110744,10 +111449,6 @@
         "addr": "id",
         "app_property_maps": [
           {
-            "name": "azurerm_subnet_nat_gateway_association",
-            "addr": "/subnet_id"
-          },
-          {
             "name": "azurerm_subnet_network_security_group_association",
             "addr": "/subnet_id"
           },
@@ -110834,10 +111535,6 @@
         "addr": "id",
         "app_property_maps": [
           {
-            "name": "azurerm_subnet_nat_gateway_association",
-            "addr": "/subnet_id"
-          },
-          {
             "name": "azurerm_subnet_network_security_group_association",
             "addr": "/subnet_id"
           },
@@ -110916,18 +111613,15 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALNETWORKS/{}/VIRTUALNETWORKPEERINGS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALNETWORKS/{}/VIRTUALNETWORKPEERINGS/{}",
     "operation": "GET",
     "properties": [
-      {
-        "addr": "name"
-      },
       {
         "addr": "properties/allowForwardedTraffic"
       },
@@ -110945,9 +111639,6 @@
             "addr": "/remote_virtual_network_id"
           }
         ]
-      },
-      {
-        "addr": "properties/remoteVirtualNetworkAddressSpace/addressPrefixes"
       },
       {
         "addr": "properties/useRemoteGateways"
@@ -110955,13 +111646,10 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/VIRTUALNETWORKS/{}/VIRTUALNETWORKPEERINGS/{}",
     "operation": "PUT",
     "properties": [
-      {
-        "addr": "name"
-      },
       {
         "addr": "properties/allowForwardedTraffic"
       },
@@ -110979,9 +111667,6 @@
             "addr": "/remote_virtual_network_id"
           }
         ]
-      },
-      {
-        "addr": "properties/remoteVirtualNetworkAddressSpace/addressPrefixes"
       },
       {
         "addr": "properties/useRemoteGateways"
@@ -125151,12 +125836,12 @@
     ]
   },
   {
-    "api_version": "2023-05-01-preview",
+    "api_version": "2023-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICENETWORKING/TRAFFICCONTROLLERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-05-01-preview",
+    "api_version": "2023-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICENETWORKING/TRAFFICCONTROLLERS/{}",
     "operation": "GET",
     "properties": [
@@ -125178,7 +125863,7 @@
     ]
   },
   {
-    "api_version": "2023-05-01-preview",
+    "api_version": "2023-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICENETWORKING/TRAFFICCONTROLLERS/{}",
     "operation": "PATCH",
     "properties": [
@@ -125188,7 +125873,7 @@
     ]
   },
   {
-    "api_version": "2023-05-01-preview",
+    "api_version": "2023-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICENETWORKING/TRAFFICCONTROLLERS/{}",
     "operation": "PUT",
     "properties": [
@@ -125210,12 +125895,12 @@
     ]
   },
   {
-    "api_version": "2023-05-01-preview",
+    "api_version": "2023-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICENETWORKING/TRAFFICCONTROLLERS/{}/ASSOCIATIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-05-01-preview",
+    "api_version": "2023-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICENETWORKING/TRAFFICCONTROLLERS/{}/ASSOCIATIONS/{}",
     "operation": "GET",
     "properties": [
@@ -125240,7 +125925,7 @@
     ]
   },
   {
-    "api_version": "2023-05-01-preview",
+    "api_version": "2023-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICENETWORKING/TRAFFICCONTROLLERS/{}/ASSOCIATIONS/{}",
     "operation": "PATCH",
     "properties": [
@@ -125250,7 +125935,7 @@
     ]
   },
   {
-    "api_version": "2023-05-01-preview",
+    "api_version": "2023-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICENETWORKING/TRAFFICCONTROLLERS/{}/ASSOCIATIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -125275,12 +125960,12 @@
     ]
   },
   {
-    "api_version": "2023-05-01-preview",
+    "api_version": "2023-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICENETWORKING/TRAFFICCONTROLLERS/{}/FRONTENDS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-05-01-preview",
+    "api_version": "2023-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICENETWORKING/TRAFFICCONTROLLERS/{}/FRONTENDS/{}",
     "operation": "GET",
     "properties": [
@@ -125305,7 +125990,7 @@
     ]
   },
   {
-    "api_version": "2023-05-01-preview",
+    "api_version": "2023-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICENETWORKING/TRAFFICCONTROLLERS/{}/FRONTENDS/{}",
     "operation": "PATCH",
     "properties": [
@@ -125315,7 +126000,7 @@
     ]
   },
   {
-    "api_version": "2023-05-01-preview",
+    "api_version": "2023-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICENETWORKING/TRAFFICCONTROLLERS/{}/FRONTENDS/{}",
     "operation": "PUT",
     "properties": [
@@ -158116,6 +158801,33 @@
     "operation": "GET",
     "properties": [
       {
+        "addr": "identity/principalId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_new_relic_monitor",
+            "addr": "/identity/0/principal_id"
+          }
+        ]
+      },
+      {
+        "addr": "identity/tenantId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_new_relic_monitor",
+            "addr": "/identity/0/tenant_id"
+          }
+        ]
+      },
+      {
+        "addr": "identity/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_new_relic_monitor",
+            "addr": "/identity/0/type"
+          }
+        ]
+      },
+      {
         "addr": "location",
         "app_property_maps": [
           {
@@ -158251,6 +158963,33 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/NEWRELIC.OBSERVABILITY/MONITORS/{}",
     "operation": "PUT",
     "properties": [
+      {
+        "addr": "identity/principalId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_new_relic_monitor",
+            "addr": "/identity/0/principal_id"
+          }
+        ]
+      },
+      {
+        "addr": "identity/tenantId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_new_relic_monitor",
+            "addr": "/identity/0/tenant_id"
+          }
+        ]
+      },
+      {
+        "addr": "identity/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_new_relic_monitor",
+            "addr": "/identity/0/type"
+          }
+        ]
+      },
       {
         "addr": "location",
         "app_property_maps": [
