@@ -18398,6 +18398,63 @@
   },
   {
     "api_version": "2023-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/JOBSCHEDULES",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "id"
+      },
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/jobScheduleId"
+      },
+      {
+        "addr": "properties/parameters"
+      },
+      {
+        "addr": "properties/runOn",
+        "app_property_maps": [
+          {
+            "name": "azurerm_automation_job_schedule",
+            "addr": "/run_on"
+          },
+          {
+            "name": "azurerm_automation_runbook",
+            "addr": "/job_schedule/0/run_on"
+          }
+        ]
+      },
+      {
+        "addr": "properties/runbook/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_automation_job_schedule",
+            "addr": "/runbook_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/schedule/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_automation_job_schedule",
+            "addr": "/schedule_name"
+          },
+          {
+            "name": "azurerm_automation_runbook",
+            "addr": "/job_schedule/0/schedule_name"
+          }
+        ]
+      },
+      {
+        "addr": "type"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/JOBSCHEDULES/{}",
     "operation": "DELETE"
   },
@@ -18424,6 +18481,10 @@
           {
             "name": "azurerm_automation_job_schedule",
             "addr": "/run_on"
+          },
+          {
+            "name": "azurerm_automation_runbook",
+            "addr": "/job_schedule/0/run_on"
           }
         ]
       },
@@ -18442,6 +18503,10 @@
           {
             "name": "azurerm_automation_job_schedule",
             "addr": "/schedule_name"
+          },
+          {
+            "name": "azurerm_automation_runbook",
+            "addr": "/job_schedule/0/schedule_name"
           }
         ]
       },
@@ -18464,6 +18529,10 @@
           {
             "name": "azurerm_automation_job_schedule",
             "addr": "/run_on"
+          },
+          {
+            "name": "azurerm_automation_runbook",
+            "addr": "/job_schedule/0/run_on"
           }
         ]
       },
@@ -18482,6 +18551,10 @@
           {
             "name": "azurerm_automation_job_schedule",
             "addr": "/schedule_name"
+          },
+          {
+            "name": "azurerm_automation_runbook",
+            "addr": "/job_schedule/0/schedule_name"
           }
         ]
       }
@@ -18867,6 +18940,11 @@
         "addr": "tags"
       }
     ]
+  },
+  {
+    "api_version": "2023-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/RUNBOOKS/{}/CONTENT",
+    "operation": "GET"
   },
   {
     "api_version": "2023-11-01",
@@ -31289,6 +31367,457 @@
           {
             "name": "azurerm_email_communication_service",
             "addr": "/data_location"
+          }
+        ]
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-03-31",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMMUNICATION/EMAILSERVICES/{}/DOMAINS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-03-31",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMMUNICATION/EMAILSERVICES/{}/DOMAINS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "location"
+      },
+      {
+        "addr": "properties/domainManagement",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/domain_management"
+          }
+        ]
+      },
+      {
+        "addr": "properties/fromSenderDomain",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/from_sender_domain"
+          }
+        ]
+      },
+      {
+        "addr": "properties/mailFromSenderDomain",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/mail_from_sender_domain"
+          }
+        ]
+      },
+      {
+        "addr": "properties/userEngagementTracking"
+      },
+      {
+        "addr": "properties/verificationRecords/DKIM/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/dkim/0/name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/DKIM/ttl",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/dkim/0/ttl"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/DKIM/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/dkim/0/type"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/DKIM/value",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/dkim/0/value"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/DKIM2/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/dkim2/0/name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/DKIM2/ttl",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/dkim2/0/ttl"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/DKIM2/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/dkim2/0/type"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/DKIM2/value",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/dkim2/0/value"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/DMARC/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/dmarc/0/name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/DMARC/ttl",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/dmarc/0/ttl"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/DMARC/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/dmarc/0/type"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/DMARC/value",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/dmarc/0/value"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/Domain/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/domain/0/name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/Domain/ttl",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/domain/0/ttl"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/Domain/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/domain/0/type"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/Domain/value",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/domain/0/value"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/SPF/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/spf/0/name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/SPF/ttl",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/spf/0/ttl"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/SPF/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/spf/0/type"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/SPF/value",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/spf/0/value"
+          }
+        ]
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-03-31",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMMUNICATION/EMAILSERVICES/{}/DOMAINS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "location"
+      },
+      {
+        "addr": "properties/domainManagement",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/domain_management"
+          }
+        ]
+      },
+      {
+        "addr": "properties/fromSenderDomain",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/from_sender_domain"
+          }
+        ]
+      },
+      {
+        "addr": "properties/mailFromSenderDomain",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/mail_from_sender_domain"
+          }
+        ]
+      },
+      {
+        "addr": "properties/userEngagementTracking"
+      },
+      {
+        "addr": "properties/verificationRecords/DKIM/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/dkim/0/name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/DKIM/ttl",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/dkim/0/ttl"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/DKIM/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/dkim/0/type"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/DKIM/value",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/dkim/0/value"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/DKIM2/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/dkim2/0/name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/DKIM2/ttl",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/dkim2/0/ttl"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/DKIM2/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/dkim2/0/type"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/DKIM2/value",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/dkim2/0/value"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/DMARC/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/dmarc/0/name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/DMARC/ttl",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/dmarc/0/ttl"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/DMARC/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/dmarc/0/type"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/DMARC/value",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/dmarc/0/value"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/Domain/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/domain/0/name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/Domain/ttl",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/domain/0/ttl"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/Domain/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/domain/0/type"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/Domain/value",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/domain/0/value"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/SPF/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/spf/0/name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/SPF/ttl",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/spf/0/ttl"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/SPF/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/spf/0/type"
+          }
+        ]
+      },
+      {
+        "addr": "properties/verificationRecords/SPF/value",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain",
+            "addr": "/verification_records/0/spf/0/value"
           }
         ]
       },
@@ -57931,6 +58460,9 @@
     "operation": "GET",
     "properties": [
       {
+        "addr": "properties/currentProtectionState"
+      },
+      {
         "addr": "properties/dataSourceInfo/datasourceType"
       },
       {
@@ -57954,6 +58486,10 @@
           {
             "name": "azurerm_data_protection_backup_instance_postgresql",
             "addr": "/database_id"
+          },
+          {
+            "name": "azurerm_data_protection_backup_instance_postgresql_flexible_server",
+            "addr": "/server_id"
           }
         ]
       },
@@ -57974,6 +58510,10 @@
           },
           {
             "name": "azurerm_data_protection_backup_instance_postgresql",
+            "addr": "/location"
+          },
+          {
+            "name": "azurerm_data_protection_backup_instance_postgresql_flexible_server",
             "addr": "/location"
           }
         ]
@@ -58044,8 +58584,15 @@
           {
             "name": "azurerm_data_protection_backup_instance_postgresql",
             "addr": "/backup_policy_id"
+          },
+          {
+            "name": "azurerm_data_protection_backup_instance_postgresql_flexible_server",
+            "addr": "/backup_policy_id"
           }
         ]
+      },
+      {
+        "addr": "properties/policyInfo/policyParameters/backupDatasourceParametersList{BlobBackupDatasourceParameters}/containersList"
       },
       {
         "addr": "properties/policyInfo/policyParameters/backupDatasourceParametersList{KubernetesClusterBackupDatasourceParameters}/excludedNamespaces"
@@ -58085,6 +58632,9 @@
     "operation": "PUT",
     "properties": [
       {
+        "addr": "properties/currentProtectionState"
+      },
+      {
         "addr": "properties/dataSourceInfo/datasourceType"
       },
       {
@@ -58108,6 +58658,10 @@
           {
             "name": "azurerm_data_protection_backup_instance_postgresql",
             "addr": "/database_id"
+          },
+          {
+            "name": "azurerm_data_protection_backup_instance_postgresql_flexible_server",
+            "addr": "/server_id"
           }
         ]
       },
@@ -58128,6 +58682,10 @@
           },
           {
             "name": "azurerm_data_protection_backup_instance_postgresql",
+            "addr": "/location"
+          },
+          {
+            "name": "azurerm_data_protection_backup_instance_postgresql_flexible_server",
             "addr": "/location"
           }
         ]
@@ -58198,8 +58756,15 @@
           {
             "name": "azurerm_data_protection_backup_instance_postgresql",
             "addr": "/backup_policy_id"
+          },
+          {
+            "name": "azurerm_data_protection_backup_instance_postgresql_flexible_server",
+            "addr": "/backup_policy_id"
           }
         ]
+      },
+      {
+        "addr": "properties/policyInfo/policyParameters/backupDatasourceParametersList{BlobBackupDatasourceParameters}/containersList"
       },
       {
         "addr": "properties/policyInfo/policyParameters/backupDatasourceParametersList{KubernetesClusterBackupDatasourceParameters}/excludedNamespaces"
@@ -70458,7 +71023,13 @@
         "addr": "properties/resource/indexingPolicy/spatialIndexes/types"
       },
       {
-        "addr": "properties/resource/partitionKey/kind"
+        "addr": "properties/resource/partitionKey/kind",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cosmosdb_sql_container",
+            "addr": "/partition_key_kind"
+          }
+        ]
       },
       {
         "addr": "properties/resource/partitionKey/paths"
@@ -70567,7 +71138,13 @@
         "addr": "properties/resource/indexingPolicy/spatialIndexes/types"
       },
       {
-        "addr": "properties/resource/partitionKey/kind"
+        "addr": "properties/resource/partitionKey/kind",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cosmosdb_sql_container",
+            "addr": "/partition_key_kind"
+          }
+        ]
       },
       {
         "addr": "properties/resource/partitionKey/paths"
@@ -75035,6 +75612,9 @@
       },
       {
         "addr": "properties/clusterDefinition/kind"
+      },
+      {
+        "addr": "properties/clusterId"
       },
       {
         "addr": "properties/clusterVersion",
@@ -80016,12 +80596,12 @@
     ]
   },
   {
-    "api_version": "2019-10-17-preview",
+    "api_version": "2021-07-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/PRIVATELINKSCOPES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2019-10-17-preview",
+    "api_version": "2021-07-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/PRIVATELINKSCOPES/{}",
     "operation": "GET",
     "properties": [
@@ -80029,17 +80609,59 @@
         "addr": "location"
       },
       {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/accessModeSettings/ingestionAccessMode",
+        "app_property_maps": [
+          {
+            "name": "azurerm_monitor_private_link_scope",
+            "addr": "/ingestion_access_mode"
+          }
+        ]
+      },
+      {
+        "addr": "properties/accessModeSettings/queryAccessMode",
+        "app_property_maps": [
+          {
+            "name": "azurerm_monitor_private_link_scope",
+            "addr": "/query_access_mode"
+          }
+        ]
+      },
+      {
         "addr": "tags"
       }
     ]
   },
   {
-    "api_version": "2019-10-17-preview",
+    "api_version": "2021-07-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/PRIVATELINKSCOPES/{}",
     "operation": "PUT",
     "properties": [
       {
         "addr": "location"
+      },
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/accessModeSettings/ingestionAccessMode",
+        "app_property_maps": [
+          {
+            "name": "azurerm_monitor_private_link_scope",
+            "addr": "/ingestion_access_mode"
+          }
+        ]
+      },
+      {
+        "addr": "properties/accessModeSettings/queryAccessMode",
+        "app_property_maps": [
+          {
+            "name": "azurerm_monitor_private_link_scope",
+            "addr": "/query_access_mode"
+          }
+        ]
       },
       {
         "addr": "tags"
@@ -88576,20 +89198,47 @@
     ]
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2023-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MAPS/ACCOUNTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2023-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MAPS/ACCOUNTS/{}",
     "operation": "GET",
     "properties": [
       {
-        "addr": "location"
+        "addr": "identity/principalId"
+      },
+      {
+        "addr": "identity/tenantId"
+      },
+      {
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
+      },
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_maps_account",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/cors/corsRules/allowedOrigins"
       },
       {
         "addr": "properties/disableLocalAuth"
+      },
+      {
+        "addr": "properties/linkedResources/id"
+      },
+      {
+        "addr": "properties/linkedResources/uniqueName"
       },
       {
         "addr": "properties/uniqueId",
@@ -88615,15 +89264,42 @@
     ]
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2023-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MAPS/ACCOUNTS/{}",
     "operation": "PUT",
     "properties": [
       {
-        "addr": "location"
+        "addr": "identity/principalId"
+      },
+      {
+        "addr": "identity/tenantId"
+      },
+      {
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
+      },
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_maps_account",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/cors/corsRules/allowedOrigins"
       },
       {
         "addr": "properties/disableLocalAuth"
+      },
+      {
+        "addr": "properties/linkedResources/id"
+      },
+      {
+        "addr": "properties/linkedResources/uniqueName"
       },
       {
         "addr": "properties/uniqueId",
@@ -88649,12 +89325,12 @@
     ]
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2023-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MAPS/ACCOUNTS/{}/CREATORS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2023-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MAPS/ACCOUNTS/{}/CREATORS/{}",
     "operation": "GET",
     "properties": [
@@ -88682,7 +89358,7 @@
     ]
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2023-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MAPS/ACCOUNTS/{}/CREATORS/{}",
     "operation": "PATCH",
     "properties": [
@@ -88701,7 +89377,7 @@
     ]
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2023-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MAPS/ACCOUNTS/{}/CREATORS/{}",
     "operation": "PUT",
     "properties": [
@@ -88729,7 +89405,7 @@
     ]
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2023-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MAPS/ACCOUNTS/{}/LISTKEYS",
     "operation": "POST"
   },
@@ -111483,6 +112159,18 @@
         "addr": "properties/allowVirtualNetworkAccess"
       },
       {
+        "addr": "properties/enableOnlyIPv6Peering"
+      },
+      {
+        "addr": "properties/localSubnetNames"
+      },
+      {
+        "addr": "properties/peerCompleteVnets"
+      },
+      {
+        "addr": "properties/remoteSubnetNames"
+      },
+      {
         "addr": "properties/remoteVirtualNetwork/id",
         "app_property_maps": [
           {
@@ -111509,6 +112197,18 @@
       },
       {
         "addr": "properties/allowVirtualNetworkAccess"
+      },
+      {
+        "addr": "properties/enableOnlyIPv6Peering"
+      },
+      {
+        "addr": "properties/localSubnetNames"
+      },
+      {
+        "addr": "properties/peerCompleteVnets"
+      },
+      {
+        "addr": "properties/remoteSubnetNames"
       },
       {
         "addr": "properties/remoteVirtualNetwork/id",
@@ -122242,6 +122942,327 @@
   },
   {
     "api_version": "2023-10-07",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SCVMM/CLOUDS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-10-07",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SCVMM/CLOUDS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "extendedLocation/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_system_center_virtual_machine_manager_cloud",
+            "addr": "/custom_location_id"
+          }
+        ]
+      },
+      {
+        "addr": "extendedLocation/type"
+      },
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_system_center_virtual_machine_manager_cloud",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/inventoryItemId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_system_center_virtual_machine_manager_cloud",
+            "addr": "/system_center_virtual_machine_manager_server_inventory_item_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/uuid"
+      },
+      {
+        "addr": "properties/vmmServerId"
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-10-07",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SCVMM/CLOUDS/{}",
+    "operation": "PATCH",
+    "properties": [
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-10-07",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SCVMM/CLOUDS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "extendedLocation/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_system_center_virtual_machine_manager_cloud",
+            "addr": "/custom_location_id"
+          }
+        ]
+      },
+      {
+        "addr": "extendedLocation/type"
+      },
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_system_center_virtual_machine_manager_cloud",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/inventoryItemId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_system_center_virtual_machine_manager_cloud",
+            "addr": "/system_center_virtual_machine_manager_server_inventory_item_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/uuid"
+      },
+      {
+        "addr": "properties/vmmServerId"
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-10-07",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SCVMM/VIRTUALMACHINETEMPLATES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-10-07",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SCVMM/VIRTUALMACHINETEMPLATES/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "extendedLocation/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_system_center_virtual_machine_manager_virtual_machine_template",
+            "addr": "/custom_location_id"
+          }
+        ]
+      },
+      {
+        "addr": "extendedLocation/type"
+      },
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_system_center_virtual_machine_manager_virtual_machine_template",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/inventoryItemId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_system_center_virtual_machine_manager_virtual_machine_template",
+            "addr": "/system_center_virtual_machine_manager_server_inventory_item_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/uuid"
+      },
+      {
+        "addr": "properties/vmmServerId"
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-10-07",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SCVMM/VIRTUALMACHINETEMPLATES/{}",
+    "operation": "PATCH",
+    "properties": [
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-10-07",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SCVMM/VIRTUALMACHINETEMPLATES/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "extendedLocation/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_system_center_virtual_machine_manager_virtual_machine_template",
+            "addr": "/custom_location_id"
+          }
+        ]
+      },
+      {
+        "addr": "extendedLocation/type"
+      },
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_system_center_virtual_machine_manager_virtual_machine_template",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/inventoryItemId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_system_center_virtual_machine_manager_virtual_machine_template",
+            "addr": "/system_center_virtual_machine_manager_server_inventory_item_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/uuid"
+      },
+      {
+        "addr": "properties/vmmServerId"
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-10-07",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SCVMM/VIRTUALNETWORKS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-10-07",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SCVMM/VIRTUALNETWORKS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "extendedLocation/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_system_center_virtual_machine_manager_virtual_network",
+            "addr": "/custom_location_id"
+          }
+        ]
+      },
+      {
+        "addr": "extendedLocation/type"
+      },
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_system_center_virtual_machine_manager_virtual_network",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/inventoryItemId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_system_center_virtual_machine_manager_virtual_network",
+            "addr": "/system_center_virtual_machine_manager_server_inventory_item_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/uuid"
+      },
+      {
+        "addr": "properties/vmmServerId"
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-10-07",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SCVMM/VIRTUALNETWORKS/{}",
+    "operation": "PATCH",
+    "properties": [
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-10-07",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SCVMM/VIRTUALNETWORKS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "extendedLocation/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_system_center_virtual_machine_manager_virtual_network",
+            "addr": "/custom_location_id"
+          }
+        ]
+      },
+      {
+        "addr": "extendedLocation/type"
+      },
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_system_center_virtual_machine_manager_virtual_network",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/inventoryItemId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_system_center_virtual_machine_manager_virtual_network",
+            "addr": "/system_center_virtual_machine_manager_server_inventory_item_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/uuid"
+      },
+      {
+        "addr": "properties/vmmServerId"
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-10-07",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SCVMM/VMMSERVERS/{}",
     "operation": "DELETE"
   },
@@ -122374,6 +123395,49 @@
       },
       {
         "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-10-07",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SCVMM/VMMSERVERS/{}/INVENTORYITEMS",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "id"
+      },
+      {
+        "addr": "kind"
+      },
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties{Cloud}/inventoryItemName"
+      },
+      {
+        "addr": "properties{Cloud}/uuid"
+      },
+      {
+        "addr": "properties{VirtualMachineTemplate}/inventoryItemName"
+      },
+      {
+        "addr": "properties{VirtualMachineTemplate}/uuid"
+      },
+      {
+        "addr": "properties{VirtualMachine}/inventoryItemName"
+      },
+      {
+        "addr": "properties{VirtualMachine}/uuid"
+      },
+      {
+        "addr": "properties{VirtualNetwork}/inventoryItemName"
+      },
+      {
+        "addr": "properties{VirtualNetwork}/uuid"
+      },
+      {
+        "addr": "type"
       }
     ]
   },
