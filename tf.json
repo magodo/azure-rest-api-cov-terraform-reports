@@ -10729,6 +10729,19 @@
         ]
       },
       {
+        "addr": "properties/clientLibrary",
+        "app_property_maps": [
+          {
+            "name": "azurerm_api_management_identity_provider_aad",
+            "addr": "/client_library"
+          },
+          {
+            "name": "azurerm_api_management_identity_provider_aadb2c",
+            "addr": "/client_library"
+          }
+        ]
+      },
+      {
         "addr": "properties/passwordResetPolicyName",
         "app_property_maps": [
           {
@@ -10822,6 +10835,19 @@
           {
             "name": "azurerm_api_management_identity_provider_twitter",
             "addr": "/api_key"
+          }
+        ]
+      },
+      {
+        "addr": "properties/clientLibrary",
+        "app_property_maps": [
+          {
+            "name": "azurerm_api_management_identity_provider_aad",
+            "addr": "/client_library"
+          },
+          {
+            "name": "azurerm_api_management_identity_provider_aadb2c",
+            "addr": "/client_library"
           }
         ]
       },
@@ -19081,6 +19107,15 @@
     "operation": "GET",
     "properties": [
       {
+        "addr": "properties/error/message",
+        "app_property_maps": [
+          {
+            "name": "azurerm_automation_software_update_configuration",
+            "addr": "/error_meesage"
+          }
+        ]
+      },
+      {
         "addr": "properties/scheduleInfo/advancedSchedule/monthDays"
       },
       {
@@ -19312,6 +19347,15 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/SOFTWAREUPDATECONFIGURATIONS/{}",
     "operation": "PUT",
     "properties": [
+      {
+        "addr": "properties/error/message",
+        "app_property_maps": [
+          {
+            "name": "azurerm_automation_software_update_configuration",
+            "addr": "/error_meesage"
+          }
+        ]
+      },
       {
         "addr": "properties/scheduleInfo/advancedSchedule/monthDays"
       },
@@ -34806,7 +34850,7 @@
         "addr": "properties/source/id",
         "app_property_maps": [
           {
-            "name": "azurerm_restore_point_collection",
+            "name": "azurerm_virtual_machine_restore_point_collection",
             "addr": "/source_virtual_machine_id"
           }
         ]
@@ -34815,7 +34859,7 @@
         "addr": "properties/source/location",
         "app_property_maps": [
           {
-            "name": "azurerm_restore_point_collection",
+            "name": "azurerm_virtual_machine_restore_point_collection",
             "addr": "/location"
           }
         ]
@@ -34837,7 +34881,7 @@
         "addr": "properties/source/id",
         "app_property_maps": [
           {
-            "name": "azurerm_restore_point_collection",
+            "name": "azurerm_virtual_machine_restore_point_collection",
             "addr": "/source_virtual_machine_id"
           }
         ]
@@ -34846,13 +34890,44 @@
         "addr": "properties/source/location",
         "app_property_maps": [
           {
-            "name": "azurerm_restore_point_collection",
+            "name": "azurerm_virtual_machine_restore_point_collection",
             "addr": "/location"
           }
         ]
       },
       {
         "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/RESTOREPOINTCOLLECTIONS/{}/RESTOREPOINTS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2024-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/RESTOREPOINTCOLLECTIONS/{}/RESTOREPOINTS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/consistencyMode"
+      },
+      {
+        "addr": "properties/excludeDisks/id"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/RESTOREPOINTCOLLECTIONS/{}/RESTOREPOINTS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "properties/consistencyMode"
+      },
+      {
+        "addr": "properties/excludeDisks/id"
       }
     ]
   },
@@ -44669,12 +44744,12 @@
     "operation": "POST"
   },
   {
-    "api_version": "2023-10-15",
+    "api_version": "2024-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/FLEETS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-10-15",
+    "api_version": "2024-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/FLEETS/{}",
     "operation": "GET",
     "properties": [
@@ -44696,7 +44771,7 @@
     ]
   },
   {
-    "api_version": "2023-10-15",
+    "api_version": "2024-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/FLEETS/{}",
     "operation": "PUT",
     "properties": [
@@ -44718,12 +44793,12 @@
     ]
   },
   {
-    "api_version": "2023-10-15",
+    "api_version": "2024-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/FLEETS/{}/MEMBERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-10-15",
+    "api_version": "2024-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/FLEETS/{}/MEMBERS/{}",
     "operation": "GET",
     "properties": [
@@ -44748,7 +44823,7 @@
     ]
   },
   {
-    "api_version": "2023-10-15",
+    "api_version": "2024-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/FLEETS/{}/MEMBERS/{}",
     "operation": "PATCH",
     "properties": [
@@ -44764,7 +44839,7 @@
     ]
   },
   {
-    "api_version": "2023-10-15",
+    "api_version": "2024-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/FLEETS/{}/MEMBERS/{}",
     "operation": "PUT",
     "properties": [
@@ -44789,12 +44864,12 @@
     ]
   },
   {
-    "api_version": "2023-10-15",
+    "api_version": "2024-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/FLEETS/{}/UPDATERUNS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-10-15",
+    "api_version": "2024-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/FLEETS/{}/UPDATERUNS/{}",
     "operation": "GET",
     "properties": [
@@ -44846,7 +44921,7 @@
     ]
   },
   {
-    "api_version": "2023-10-15",
+    "api_version": "2024-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/FLEETS/{}/UPDATERUNS/{}",
     "operation": "PUT",
     "properties": [
@@ -44898,12 +44973,12 @@
     ]
   },
   {
-    "api_version": "2023-10-15",
+    "api_version": "2024-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/FLEETS/{}/UPDATESTRATEGIES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-10-15",
+    "api_version": "2024-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/FLEETS/{}/UPDATESTRATEGIES/{}",
     "operation": "GET",
     "properties": [
@@ -44919,7 +44994,7 @@
     ]
   },
   {
-    "api_version": "2023-10-15",
+    "api_version": "2024-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/FLEETS/{}/UPDATESTRATEGIES/{}",
     "operation": "PUT",
     "properties": [
@@ -45870,6 +45945,21 @@
       },
       {
         "addr": "properties/securityProfile/workloadIdentity/enabled"
+      },
+      {
+        "addr": "properties/serviceMeshProfile/istio/certificateAuthority/plugin/certChainObjectName"
+      },
+      {
+        "addr": "properties/serviceMeshProfile/istio/certificateAuthority/plugin/certObjectName"
+      },
+      {
+        "addr": "properties/serviceMeshProfile/istio/certificateAuthority/plugin/keyObjectName"
+      },
+      {
+        "addr": "properties/serviceMeshProfile/istio/certificateAuthority/plugin/keyVaultId"
+      },
+      {
+        "addr": "properties/serviceMeshProfile/istio/certificateAuthority/plugin/rootCertObjectName"
       },
       {
         "addr": "properties/serviceMeshProfile/istio/components/ingressGateways/enabled"
@@ -46912,6 +47002,21 @@
       },
       {
         "addr": "properties/securityProfile/workloadIdentity/enabled"
+      },
+      {
+        "addr": "properties/serviceMeshProfile/istio/certificateAuthority/plugin/certChainObjectName"
+      },
+      {
+        "addr": "properties/serviceMeshProfile/istio/certificateAuthority/plugin/certObjectName"
+      },
+      {
+        "addr": "properties/serviceMeshProfile/istio/certificateAuthority/plugin/keyObjectName"
+      },
+      {
+        "addr": "properties/serviceMeshProfile/istio/certificateAuthority/plugin/keyVaultId"
+      },
+      {
+        "addr": "properties/serviceMeshProfile/istio/certificateAuthority/plugin/rootCertObjectName"
       },
       {
         "addr": "properties/serviceMeshProfile/istio/components/ingressGateways/enabled"
@@ -65761,6 +65866,148 @@
   },
   {
     "api_version": "2023-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/DEVCENTERS/{}/DEVBOXDEFINITIONS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/DEVCENTERS/{}/DEVBOXDEFINITIONS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_dev_center_dev_box_definition",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/imageReference/id",
+        "app_property_maps": [
+          {
+            "name": "azurerm_dev_center_dev_box_definition",
+            "addr": "/image_reference_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/sku/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_dev_center_dev_box_definition",
+            "addr": "/sku_name"
+          }
+        ]
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/DEVCENTERS/{}/DEVBOXDEFINITIONS/{}",
+    "operation": "PATCH",
+    "properties": [
+      {
+        "addr": "properties/imageReference/id",
+        "app_property_maps": [
+          {
+            "name": "azurerm_dev_center_dev_box_definition",
+            "addr": "/image_reference_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/sku/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_dev_center_dev_box_definition",
+            "addr": "/sku_name"
+          }
+        ]
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/DEVCENTERS/{}/DEVBOXDEFINITIONS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_dev_center_dev_box_definition",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/imageReference/id",
+        "app_property_maps": [
+          {
+            "name": "azurerm_dev_center_dev_box_definition",
+            "addr": "/image_reference_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/sku/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_dev_center_dev_box_definition",
+            "addr": "/sku_name"
+          }
+        ]
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/DEVCENTERS/{}/ENVIRONMENTTYPES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/DEVCENTERS/{}/ENVIRONMENTTYPES/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/DEVCENTERS/{}/ENVIRONMENTTYPES/{}",
+    "operation": "PATCH",
+    "properties": [
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/DEVCENTERS/{}/ENVIRONMENTTYPES/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/DEVCENTERS/{}/GALLERIES/{}",
     "operation": "DELETE"
   },
@@ -68216,6 +68463,12 @@
         "addr": "properties/subnetOverrides/resourceId"
       },
       {
+        "addr": "properties/subnetOverrides/sharedPublicIpAddressConfiguration/allowedPorts/backendPort"
+      },
+      {
+        "addr": "properties/subnetOverrides/sharedPublicIpAddressConfiguration/allowedPorts/transportProtocol"
+      },
+      {
         "addr": "properties/subnetOverrides/useInVmCreationPermission"
       },
       {
@@ -68269,6 +68522,12 @@
       },
       {
         "addr": "properties/subnetOverrides/resourceId"
+      },
+      {
+        "addr": "properties/subnetOverrides/sharedPublicIpAddressConfiguration/allowedPorts/backendPort"
+      },
+      {
+        "addr": "properties/subnetOverrides/sharedPublicIpAddressConfiguration/allowedPorts/transportProtocol"
       },
       {
         "addr": "properties/subnetOverrides/useInVmCreationPermission"
@@ -72507,6 +72766,22 @@
             "addr": "/protocol_type"
           }
         ]
+      }
+    ]
+  },
+  {
+    "api_version": "2023-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.ELASTICSAN/ELASTICSANS/{}/VOLUMEGROUPS/{}/SNAPSHOTS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/creationData/sourceId"
+      },
+      {
+        "addr": "properties/sourceVolumeSizeGiB"
+      },
+      {
+        "addr": "properties/volumeName"
       }
     ]
   },
@@ -111952,7 +112227,34 @@
         "addr": "properties/subnets/properties/addressPrefix"
       },
       {
+        "addr": "properties/subnets/properties/defaultOutboundAccess"
+      },
+      {
+        "addr": "properties/subnets/properties/delegations/name"
+      },
+      {
+        "addr": "properties/subnets/properties/delegations/properties/actions"
+      },
+      {
+        "addr": "properties/subnets/properties/delegations/properties/serviceName"
+      },
+      {
         "addr": "properties/subnets/properties/networkSecurityGroup/id"
+      },
+      {
+        "addr": "properties/subnets/properties/privateEndpointNetworkPolicies"
+      },
+      {
+        "addr": "properties/subnets/properties/privateLinkServiceNetworkPolicies"
+      },
+      {
+        "addr": "properties/subnets/properties/routeTable/id"
+      },
+      {
+        "addr": "properties/subnets/properties/serviceEndpointPolicies/id"
+      },
+      {
+        "addr": "properties/subnets/properties/serviceEndpoints/service"
       },
       {
         "addr": "properties/virtualNetworkPeerings/name"
@@ -112058,7 +112360,34 @@
         "addr": "properties/subnets/properties/addressPrefix"
       },
       {
+        "addr": "properties/subnets/properties/defaultOutboundAccess"
+      },
+      {
+        "addr": "properties/subnets/properties/delegations/name"
+      },
+      {
+        "addr": "properties/subnets/properties/delegations/properties/actions"
+      },
+      {
+        "addr": "properties/subnets/properties/delegations/properties/serviceName"
+      },
+      {
         "addr": "properties/subnets/properties/networkSecurityGroup/id"
+      },
+      {
+        "addr": "properties/subnets/properties/privateEndpointNetworkPolicies"
+      },
+      {
+        "addr": "properties/subnets/properties/privateLinkServiceNetworkPolicies"
+      },
+      {
+        "addr": "properties/subnets/properties/routeTable/id"
+      },
+      {
+        "addr": "properties/subnets/properties/serviceEndpointPolicies/id"
+      },
+      {
+        "addr": "properties/subnets/properties/serviceEndpoints/service"
       },
       {
         "addr": "properties/virtualNetworkPeerings/name"
