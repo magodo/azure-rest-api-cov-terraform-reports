@@ -34790,6 +34790,73 @@
     ]
   },
   {
+    "api_version": "2024-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/RESTOREPOINTCOLLECTIONS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2024-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/RESTOREPOINTCOLLECTIONS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "location"
+      },
+      {
+        "addr": "properties/source/id",
+        "app_property_maps": [
+          {
+            "name": "azurerm_restore_point_collection",
+            "addr": "/source_virtual_machine_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/source/location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_restore_point_collection",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/RESTOREPOINTCOLLECTIONS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "location"
+      },
+      {
+        "addr": "properties/source/id",
+        "app_property_maps": [
+          {
+            "name": "azurerm_restore_point_collection",
+            "addr": "/source_virtual_machine_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/source/location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_restore_point_collection",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
     "api_version": "2022-03-02",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/SNAPSHOTS/{}",
     "operation": "DELETE"
@@ -51153,13 +51220,31 @@
         ]
       },
       {
-        "addr": "properties{ServicePrincipal}/typeProperties/servicePrincipalId"
+        "addr": "properties{ServicePrincipal}/typeProperties/servicePrincipalId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_data_factory_credential_service_principal",
+            "addr": "/service_principal_id"
+          }
+        ]
       },
       {
-        "addr": "properties{ServicePrincipal}/typeProperties/servicePrincipalKey/secretName"
+        "addr": "properties{ServicePrincipal}/typeProperties/servicePrincipalKey/secretName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_data_factory_credential_service_principal",
+            "addr": "/service_principal_key/0/secret_name"
+          }
+        ]
       },
       {
-        "addr": "properties{ServicePrincipal}/typeProperties/servicePrincipalKey/secretVersion"
+        "addr": "properties{ServicePrincipal}/typeProperties/servicePrincipalKey/secretVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_data_factory_credential_service_principal",
+            "addr": "/service_principal_key/0/secret_version"
+          }
+        ]
       },
       {
         "addr": "properties{ServicePrincipal}/typeProperties/servicePrincipalKey/store/referenceName",
@@ -51174,7 +51259,13 @@
         "addr": "properties{ServicePrincipal}/typeProperties/servicePrincipalKey/store/type"
       },
       {
-        "addr": "properties{ServicePrincipal}/typeProperties/tenant"
+        "addr": "properties{ServicePrincipal}/typeProperties/tenant",
+        "app_property_maps": [
+          {
+            "name": "azurerm_data_factory_credential_service_principal",
+            "addr": "/tenant_id"
+          }
+        ]
       }
     ]
   },
@@ -51217,13 +51308,31 @@
         ]
       },
       {
-        "addr": "properties{ServicePrincipal}/typeProperties/servicePrincipalId"
+        "addr": "properties{ServicePrincipal}/typeProperties/servicePrincipalId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_data_factory_credential_service_principal",
+            "addr": "/service_principal_id"
+          }
+        ]
       },
       {
-        "addr": "properties{ServicePrincipal}/typeProperties/servicePrincipalKey/secretName"
+        "addr": "properties{ServicePrincipal}/typeProperties/servicePrincipalKey/secretName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_data_factory_credential_service_principal",
+            "addr": "/service_principal_key/0/secret_name"
+          }
+        ]
       },
       {
-        "addr": "properties{ServicePrincipal}/typeProperties/servicePrincipalKey/secretVersion"
+        "addr": "properties{ServicePrincipal}/typeProperties/servicePrincipalKey/secretVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_data_factory_credential_service_principal",
+            "addr": "/service_principal_key/0/secret_version"
+          }
+        ]
       },
       {
         "addr": "properties{ServicePrincipal}/typeProperties/servicePrincipalKey/store/referenceName",
@@ -51238,7 +51347,13 @@
         "addr": "properties{ServicePrincipal}/typeProperties/servicePrincipalKey/store/type"
       },
       {
-        "addr": "properties{ServicePrincipal}/typeProperties/tenant"
+        "addr": "properties{ServicePrincipal}/typeProperties/tenant",
+        "app_property_maps": [
+          {
+            "name": "azurerm_data_factory_credential_service_principal",
+            "addr": "/tenant_id"
+          }
+        ]
       }
     ]
   },
@@ -111199,9 +111314,6 @@
         "addr": "properties/ipConfigurations/properties/subnet/id"
       },
       {
-        "addr": "properties/natRules"
-      },
-      {
         "addr": "properties/sku/name",
         "app_property_maps": [
           {
@@ -111480,9 +111592,6 @@
       },
       {
         "addr": "properties/ipConfigurations/properties/subnet/id"
-      },
-      {
-        "addr": "properties/natRules"
       },
       {
         "addr": "properties/sku/name",
@@ -115818,6 +115927,50 @@
   {
     "api_version": "2022-10-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/DATACONNECTORS/{}",
+    "operation": "GET",
+    "variant": "ThreatIntelligenceTaxii",
+    "properties": [
+      {
+        "addr": "kind"
+      },
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/collectionId"
+      },
+      {
+        "addr": "properties/dataTypes/taxiiClient/state"
+      },
+      {
+        "addr": "properties/friendlyName"
+      },
+      {
+        "addr": "properties/password"
+      },
+      {
+        "addr": "properties/pollingFrequency"
+      },
+      {
+        "addr": "properties/taxiiLookbackPeriod"
+      },
+      {
+        "addr": "properties/taxiiServer"
+      },
+      {
+        "addr": "properties/tenantId"
+      },
+      {
+        "addr": "properties/userName"
+      },
+      {
+        "addr": "properties/workspaceId"
+      }
+    ]
+  },
+  {
+    "api_version": "2022-10-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/DATACONNECTORS/{}",
     "operation": "PUT",
     "variant": "AmazonWebServicesCloudTrail",
     "properties": [
@@ -116179,6 +116332,50 @@
       },
       {
         "addr": "properties/tipLookbackPeriod"
+      }
+    ]
+  },
+  {
+    "api_version": "2022-10-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/PROVIDERS/MICROSOFT.SECURITYINSIGHTS/DATACONNECTORS/{}",
+    "operation": "PUT",
+    "variant": "ThreatIntelligenceTaxii",
+    "properties": [
+      {
+        "addr": "kind"
+      },
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/collectionId"
+      },
+      {
+        "addr": "properties/dataTypes/taxiiClient/state"
+      },
+      {
+        "addr": "properties/friendlyName"
+      },
+      {
+        "addr": "properties/password"
+      },
+      {
+        "addr": "properties/pollingFrequency"
+      },
+      {
+        "addr": "properties/taxiiLookbackPeriod"
+      },
+      {
+        "addr": "properties/taxiiServer"
+      },
+      {
+        "addr": "properties/tenantId"
+      },
+      {
+        "addr": "properties/userName"
+      },
+      {
+        "addr": "properties/workspaceId"
       }
     ]
   },
