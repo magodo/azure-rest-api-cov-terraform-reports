@@ -135214,20 +135214,20 @@
     ]
   },
   {
-    "api_version": "2021-09-01",
+    "api_version": "2023-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-09-01",
+    "api_version": "2023-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}",
     "operation": "GET",
     "properties": [
       {
-        "addr": "extendedLocation/name"
+        "addr": "extendedLocation"
       },
       {
-        "addr": "extendedLocation/type"
+        "addr": "id"
       },
       {
         "addr": "identity/principalId"
@@ -135377,6 +135377,9 @@
         ]
       },
       {
+        "addr": "properties/encryption/identity/federatedIdentityClientId"
+      },
+      {
         "addr": "properties/encryption/identity/userAssignedIdentity"
       },
       {
@@ -135508,9 +135511,6 @@
         ]
       },
       {
-        "addr": "properties/networkAcls/ipRules"
-      },
-      {
         "addr": "properties/networkAcls/ipRules/action"
       },
       {
@@ -135521,9 +135521,6 @@
       },
       {
         "addr": "properties/networkAcls/resourceAccessRules/tenantId"
-      },
-      {
-        "addr": "properties/networkAcls/virtualNetworkRules"
       },
       {
         "addr": "properties/networkAcls/virtualNetworkRules/action"
@@ -135890,73 +135887,6 @@
       },
       {
         "addr": "tags"
-      }
-    ]
-  },
-  {
-    "api_version": "2023-01-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}",
-    "operation": "GET",
-    "properties": [
-      {
-        "addr": "id"
-      },
-      {
-        "addr": "kind"
-      },
-      {
-        "addr": "location"
-      },
-      {
-        "addr": "name"
-      },
-      {
-        "addr": "properties/encryption/identity/federatedIdentityClientId"
-      },
-      {
-        "addr": "properties/encryption/identity/userAssignedIdentity"
-      },
-      {
-        "addr": "properties/encryption/keySource"
-      },
-      {
-        "addr": "properties/encryption/keyvaultproperties/keyname"
-      },
-      {
-        "addr": "properties/encryption/keyvaultproperties/keyvaulturi"
-      },
-      {
-        "addr": "properties/encryption/keyvaultproperties/keyversion"
-      },
-      {
-        "addr": "properties/encryption/services/blob/enabled"
-      },
-      {
-        "addr": "properties/encryption/services/file/enabled"
-      },
-      {
-        "addr": "properties/immutableStorageWithVersioning/enabled"
-      },
-      {
-        "addr": "properties/immutableStorageWithVersioning/immutabilityPolicy"
-      },
-      {
-        "addr": "properties/isHnsEnabled"
-      },
-      {
-        "addr": "properties/primaryEndpoints/blob"
-      },
-      {
-        "addr": "properties/primaryEndpoints/dfs"
-      },
-      {
-        "addr": "properties/primaryEndpoints/file"
-      },
-      {
-        "addr": "properties/primaryEndpoints/queue"
-      },
-      {
-        "addr": "properties/primaryEndpoints/table"
       },
       {
         "addr": "type"
@@ -135964,7 +135894,7 @@
     ]
   },
   {
-    "api_version": "2021-09-01",
+    "api_version": "2023-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -136032,6 +135962,30 @@
         ]
       },
       {
+        "addr": "properties/encryption/identity/federatedIdentityClientId"
+      },
+      {
+        "addr": "properties/encryption/identity/userAssignedIdentity"
+      },
+      {
+        "addr": "properties/encryption/keySource"
+      },
+      {
+        "addr": "properties/encryption/keyvaultproperties/keyname"
+      },
+      {
+        "addr": "properties/encryption/keyvaultproperties/keyvaulturi"
+      },
+      {
+        "addr": "properties/encryption/keyvaultproperties/keyversion"
+      },
+      {
+        "addr": "properties/encryption/services/blob/enabled"
+      },
+      {
+        "addr": "properties/encryption/services/file/enabled"
+      },
+      {
         "addr": "properties/networkAcls/bypass",
         "app_property_maps": [
           {
@@ -136067,6 +136021,9 @@
         "addr": "properties/networkAcls/ipRules/value"
       },
       {
+        "addr": "properties/networkAcls/resourceAccessRules"
+      },
+      {
         "addr": "properties/networkAcls/resourceAccessRules/resourceId"
       },
       {
@@ -136086,44 +136043,10 @@
   {
     "api_version": "2023-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}",
-    "operation": "PATCH",
-    "properties": [
-      {
-        "addr": "properties/encryption/identity/federatedIdentityClientId"
-      },
-      {
-        "addr": "properties/encryption/identity/userAssignedIdentity"
-      },
-      {
-        "addr": "properties/encryption/keySource"
-      },
-      {
-        "addr": "properties/encryption/keyvaultproperties/keyname"
-      },
-      {
-        "addr": "properties/encryption/keyvaultproperties/keyvaulturi"
-      },
-      {
-        "addr": "properties/encryption/keyvaultproperties/keyversion"
-      },
-      {
-        "addr": "properties/encryption/services/blob/enabled"
-      },
-      {
-        "addr": "properties/encryption/services/file/enabled"
-      }
-    ]
-  },
-  {
-    "api_version": "2021-09-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}",
     "operation": "PUT",
     "properties": [
       {
-        "addr": "extendedLocation/name"
-      },
-      {
-        "addr": "extendedLocation/type"
+        "addr": "extendedLocation"
       },
       {
         "addr": "identity/principalId"
@@ -136541,188 +136464,6 @@
     "operation": "POST"
   },
   {
-    "api_version": "2021-09-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/BLOBSERVICES/{}",
-    "operation": "GET",
-    "properties": [
-      {
-        "addr": "properties/changeFeed/enabled"
-      },
-      {
-        "addr": "properties/changeFeed/retentionInDays",
-        "app_property_maps": [
-          {
-            "name": "azurerm_storage_account",
-            "addr": "/blob_properties/0/change_feed_retention_in_days"
-          }
-        ]
-      },
-      {
-        "addr": "properties/containerDeleteRetentionPolicy/allowPermanentDelete"
-      },
-      {
-        "addr": "properties/containerDeleteRetentionPolicy/days",
-        "app_property_maps": [
-          {
-            "name": "azurerm_storage_account",
-            "addr": "/blob_properties/0/container_delete_retention_policy/0/days"
-          }
-        ]
-      },
-      {
-        "addr": "properties/containerDeleteRetentionPolicy/enabled"
-      },
-      {
-        "addr": "properties/cors/corsRules/allowedHeaders"
-      },
-      {
-        "addr": "properties/cors/corsRules/allowedMethods"
-      },
-      {
-        "addr": "properties/cors/corsRules/allowedOrigins"
-      },
-      {
-        "addr": "properties/cors/corsRules/exposedHeaders"
-      },
-      {
-        "addr": "properties/cors/corsRules/maxAgeInSeconds"
-      },
-      {
-        "addr": "properties/defaultServiceVersion",
-        "app_property_maps": [
-          {
-            "name": "azurerm_storage_account",
-            "addr": "/blob_properties/0/default_service_version"
-          }
-        ]
-      },
-      {
-        "addr": "properties/deleteRetentionPolicy/allowPermanentDelete"
-      },
-      {
-        "addr": "properties/deleteRetentionPolicy/days",
-        "app_property_maps": [
-          {
-            "name": "azurerm_storage_account",
-            "addr": "/blob_properties/0/delete_retention_policy/0/days"
-          }
-        ]
-      },
-      {
-        "addr": "properties/deleteRetentionPolicy/enabled"
-      },
-      {
-        "addr": "properties/isVersioningEnabled"
-      },
-      {
-        "addr": "properties/lastAccessTimeTrackingPolicy/enable"
-      },
-      {
-        "addr": "properties/restorePolicy/days",
-        "app_property_maps": [
-          {
-            "name": "azurerm_storage_account",
-            "addr": "/blob_properties/0/restore_policy/0/days"
-          }
-        ]
-      },
-      {
-        "addr": "properties/restorePolicy/enabled"
-      }
-    ]
-  },
-  {
-    "api_version": "2021-09-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/BLOBSERVICES/{}",
-    "operation": "PUT",
-    "properties": [
-      {
-        "addr": "properties/changeFeed/enabled"
-      },
-      {
-        "addr": "properties/changeFeed/retentionInDays",
-        "app_property_maps": [
-          {
-            "name": "azurerm_storage_account",
-            "addr": "/blob_properties/0/change_feed_retention_in_days"
-          }
-        ]
-      },
-      {
-        "addr": "properties/containerDeleteRetentionPolicy/allowPermanentDelete"
-      },
-      {
-        "addr": "properties/containerDeleteRetentionPolicy/days",
-        "app_property_maps": [
-          {
-            "name": "azurerm_storage_account",
-            "addr": "/blob_properties/0/container_delete_retention_policy/0/days"
-          }
-        ]
-      },
-      {
-        "addr": "properties/containerDeleteRetentionPolicy/enabled"
-      },
-      {
-        "addr": "properties/cors/corsRules/allowedHeaders"
-      },
-      {
-        "addr": "properties/cors/corsRules/allowedMethods"
-      },
-      {
-        "addr": "properties/cors/corsRules/allowedOrigins"
-      },
-      {
-        "addr": "properties/cors/corsRules/exposedHeaders"
-      },
-      {
-        "addr": "properties/cors/corsRules/maxAgeInSeconds"
-      },
-      {
-        "addr": "properties/defaultServiceVersion",
-        "app_property_maps": [
-          {
-            "name": "azurerm_storage_account",
-            "addr": "/blob_properties/0/default_service_version"
-          }
-        ]
-      },
-      {
-        "addr": "properties/deleteRetentionPolicy/allowPermanentDelete"
-      },
-      {
-        "addr": "properties/deleteRetentionPolicy/days",
-        "app_property_maps": [
-          {
-            "name": "azurerm_storage_account",
-            "addr": "/blob_properties/0/delete_retention_policy/0/days"
-          }
-        ]
-      },
-      {
-        "addr": "properties/deleteRetentionPolicy/enabled"
-      },
-      {
-        "addr": "properties/isVersioningEnabled"
-      },
-      {
-        "addr": "properties/lastAccessTimeTrackingPolicy/enable"
-      },
-      {
-        "addr": "properties/restorePolicy/days",
-        "app_property_maps": [
-          {
-            "name": "azurerm_storage_account",
-            "addr": "/blob_properties/0/restore_policy/0/days"
-          }
-        ]
-      },
-      {
-        "addr": "properties/restorePolicy/enabled"
-      }
-    ]
-  },
-  {
     "api_version": "2023-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/ENCRYPTIONSCOPES/{}",
     "operation": "GET",
@@ -136830,98 +136571,6 @@
       },
       {
         "addr": "properties/state"
-      }
-    ]
-  },
-  {
-    "api_version": "2021-09-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/FILESERVICES/{}",
-    "operation": "GET",
-    "properties": [
-      {
-        "addr": "properties/cors/corsRules/allowedHeaders"
-      },
-      {
-        "addr": "properties/cors/corsRules/allowedMethods"
-      },
-      {
-        "addr": "properties/cors/corsRules/allowedOrigins"
-      },
-      {
-        "addr": "properties/cors/corsRules/exposedHeaders"
-      },
-      {
-        "addr": "properties/cors/corsRules/maxAgeInSeconds"
-      },
-      {
-        "addr": "properties/protocolSettings/smb/authenticationMethods"
-      },
-      {
-        "addr": "properties/protocolSettings/smb/channelEncryption"
-      },
-      {
-        "addr": "properties/protocolSettings/smb/kerberosTicketEncryption"
-      },
-      {
-        "addr": "properties/protocolSettings/smb/multichannel/enabled"
-      },
-      {
-        "addr": "properties/protocolSettings/smb/versions"
-      },
-      {
-        "addr": "properties/shareDeleteRetentionPolicy/allowPermanentDelete"
-      },
-      {
-        "addr": "properties/shareDeleteRetentionPolicy/days"
-      },
-      {
-        "addr": "properties/shareDeleteRetentionPolicy/enabled"
-      }
-    ]
-  },
-  {
-    "api_version": "2021-09-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/FILESERVICES/{}",
-    "operation": "PUT",
-    "properties": [
-      {
-        "addr": "properties/cors/corsRules/allowedHeaders"
-      },
-      {
-        "addr": "properties/cors/corsRules/allowedMethods"
-      },
-      {
-        "addr": "properties/cors/corsRules/allowedOrigins"
-      },
-      {
-        "addr": "properties/cors/corsRules/exposedHeaders"
-      },
-      {
-        "addr": "properties/cors/corsRules/maxAgeInSeconds"
-      },
-      {
-        "addr": "properties/protocolSettings/smb/authenticationMethods"
-      },
-      {
-        "addr": "properties/protocolSettings/smb/channelEncryption"
-      },
-      {
-        "addr": "properties/protocolSettings/smb/kerberosTicketEncryption"
-      },
-      {
-        "addr": "properties/protocolSettings/smb/multichannel/enabled"
-      },
-      {
-        "addr": "properties/protocolSettings/smb/versions"
-      },
-      {
-        "addr": "properties/shareDeleteRetentionPolicy/allowPermanentDelete"
-      },
-      {
-        "addr": "properties/shareDeleteRetentionPolicy/days"
-      },
-      {
-        "addr": "properties/shareDeleteRetentionPolicy/enabled"
       }
     ]
   },
@@ -137035,7 +136684,7 @@
     ]
   },
   {
-    "api_version": "2021-09-01",
+    "api_version": "2023-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/LISTKEYS",
     "operation": "POST"
   },
