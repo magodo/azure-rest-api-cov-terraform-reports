@@ -662,67 +662,6 @@
     ]
   },
   {
-    "api_version": "1.0",
-    "api_path": "/KV/{}",
-    "operation": "DELETE"
-  },
-  {
-    "api_version": "1.0",
-    "api_path": "/KV/{}",
-    "operation": "GET",
-    "properties": [
-      {
-        "addr": "content_type"
-      },
-      {
-        "addr": "etag"
-      },
-      {
-        "addr": "key"
-      },
-      {
-        "addr": "label"
-      },
-      {
-        "addr": "locked"
-      },
-      {
-        "addr": "tags"
-      },
-      {
-        "addr": "value"
-      }
-    ]
-  },
-  {
-    "api_version": "1.0",
-    "api_path": "/KV/{}",
-    "operation": "PUT",
-    "properties": [
-      {
-        "addr": "content_type"
-      },
-      {
-        "addr": "etag"
-      },
-      {
-        "addr": "key"
-      },
-      {
-        "addr": "label"
-      },
-      {
-        "addr": "locked"
-      },
-      {
-        "addr": "tags"
-      },
-      {
-        "addr": "value"
-      }
-    ]
-  },
-  {
     "api_version": "2021-06-01-preview",
     "api_path": "/LINKEDSERVICES/{}",
     "operation": "DELETE"
@@ -735,16 +674,6 @@
   {
     "api_version": "2021-06-01-preview",
     "api_path": "/LINKEDSERVICES/{}",
-    "operation": "PUT"
-  },
-  {
-    "api_version": "1.0",
-    "api_path": "/LOCKS/{}",
-    "operation": "DELETE"
-  },
-  {
-    "api_version": "1.0",
-    "api_path": "/LOCKS/{}",
     "operation": "PUT"
   },
   {
@@ -11733,6 +11662,15 @@
         ]
       },
       {
+        "addr": "properties/configuration/maxInactiveRevisions",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_app",
+            "addr": "/max_inactive_revisions"
+          }
+        ]
+      },
+      {
         "addr": "properties/configuration/registries/identity"
       },
       {
@@ -12138,6 +12076,15 @@
           {
             "name": "azurerm_container_app",
             "addr": "/ingress/0/transport"
+          }
+        ]
+      },
+      {
+        "addr": "properties/configuration/maxInactiveRevisions",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_app",
+            "addr": "/max_inactive_revisions"
           }
         ]
       },
@@ -26440,12 +26387,12 @@
     ]
   },
   {
-    "api_version": "2023-10-01-preview",
+    "api_version": "2024-06-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-10-01-preview",
+    "api_version": "2024-06-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}",
     "operation": "GET",
     "properties": [
@@ -26494,7 +26441,7 @@
     ]
   },
   {
-    "api_version": "2023-10-01-preview",
+    "api_version": "2024-06-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}",
     "operation": "PATCH",
     "properties": [
@@ -26504,7 +26451,7 @@
     ]
   },
   {
-    "api_version": "2023-10-01-preview",
+    "api_version": "2024-06-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}",
     "operation": "PUT",
     "properties": [
@@ -26553,12 +26500,12 @@
     ]
   },
   {
-    "api_version": "2023-07-01",
+    "api_version": "2024-06-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-07-01",
+    "api_version": "2024-06-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}",
     "operation": "GET",
     "properties": [
@@ -26622,7 +26569,7 @@
     ]
   },
   {
-    "api_version": "2023-07-01",
+    "api_version": "2024-06-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}",
     "operation": "PUT",
     "properties": [
@@ -26686,7 +26633,7 @@
     ]
   },
   {
-    "api_version": "2023-07-01",
+    "api_version": "2024-06-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}/FORCEUNLINK",
     "operation": "POST",
     "properties": [
@@ -26696,7 +26643,7 @@
     ]
   },
   {
-    "api_version": "2023-07-01",
+    "api_version": "2024-06-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}/LISTKEYS",
     "operation": "POST"
   },
@@ -64493,6 +64440,43 @@
   },
   {
     "api_version": "2023-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/DEVCENTERS/{}/ATTACHEDNETWORKS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/DEVCENTERS/{}/ATTACHEDNETWORKS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/networkConnectionId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_dev_center_attached_network",
+            "addr": "/network_connection_id"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2023-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/DEVCENTERS/{}/ATTACHEDNETWORKS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "properties/networkConnectionId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_dev_center_attached_network",
+            "addr": "/network_connection_id"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2023-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/DEVCENTERS/{}/CATALOGS/{}",
     "operation": "DELETE"
   },
@@ -74764,6 +74748,27 @@
         ]
       },
       {
+        "addr": "properties/encryption/customerManagedKeyEncryption/keyEncryptionKeyIdentity/identityType"
+      },
+      {
+        "addr": "properties/encryption/customerManagedKeyEncryption/keyEncryptionKeyIdentity/userAssignedIdentityResourceId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_fluid_relay_server",
+            "addr": "/customer_managed_key/0/user_assigned_identity_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/encryption/customerManagedKeyEncryption/keyEncryptionKeyUrl",
+        "app_property_maps": [
+          {
+            "name": "azurerm_fluid_relay_server",
+            "addr": "/customer_managed_key/0/key_vault_key_id"
+          }
+        ]
+      },
+      {
         "addr": "properties/fluidRelayEndpoints/ordererEndpoints"
       },
       {
@@ -74801,6 +74806,27 @@
         "addr": "identity/userAssignedIdentities"
       },
       {
+        "addr": "properties/encryption/customerManagedKeyEncryption/keyEncryptionKeyIdentity/identityType"
+      },
+      {
+        "addr": "properties/encryption/customerManagedKeyEncryption/keyEncryptionKeyIdentity/userAssignedIdentityResourceId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_fluid_relay_server",
+            "addr": "/customer_managed_key/0/user_assigned_identity_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/encryption/customerManagedKeyEncryption/keyEncryptionKeyUrl",
+        "app_property_maps": [
+          {
+            "name": "azurerm_fluid_relay_server",
+            "addr": "/customer_managed_key/0/key_vault_key_id"
+          }
+        ]
+      },
+      {
         "addr": "tags"
       }
     ]
@@ -74828,6 +74854,27 @@
           {
             "name": "azurerm_fluid_relay_server",
             "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/encryption/customerManagedKeyEncryption/keyEncryptionKeyIdentity/identityType"
+      },
+      {
+        "addr": "properties/encryption/customerManagedKeyEncryption/keyEncryptionKeyIdentity/userAssignedIdentityResourceId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_fluid_relay_server",
+            "addr": "/customer_managed_key/0/user_assigned_identity_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/encryption/customerManagedKeyEncryption/keyEncryptionKeyUrl",
+        "app_property_maps": [
+          {
+            "name": "azurerm_fluid_relay_server",
+            "addr": "/customer_managed_key/0/key_vault_key_id"
           }
         ]
       },
@@ -108025,9 +108072,6 @@
         ]
       },
       {
-        "addr": "properties"
-      },
-      {
         "addr": "properties/clusterId",
         "app_property_maps": [
           {
@@ -108048,6 +108092,28 @@
       {
         "addr": "properties/provisioningState"
       },
+      {
+        "addr": "sku/capacity",
+        "app_property_maps": [
+          {
+            "name": "azurerm_log_analytics_cluster",
+            "addr": "/size_gb"
+          }
+        ]
+      },
+      {
+        "addr": "sku/name"
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2022-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/CLUSTERS/{}",
+    "operation": "PATCH",
+    "properties": [
       {
         "addr": "sku/capacity",
         "app_property_maps": [
@@ -108090,9 +108156,6 @@
             "addr": "/location"
           }
         ]
-      },
-      {
-        "addr": "properties"
       },
       {
         "addr": "properties/clusterId",
@@ -152419,6 +152482,965 @@
             "addr": "/root_file"
           }
         ]
+      }
+    ]
+  },
+  {
+    "api_version": "2024-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/CLOUDEXADATAINFRASTRUCTURES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2024-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/CLOUDEXADATAINFRASTRUCTURES/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exadata_infrastructure",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exadata_infrastructure",
+            "addr": "/name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/activatedStorageCount"
+      },
+      {
+        "addr": "properties/additionalStorageCount"
+      },
+      {
+        "addr": "properties/availableStorageSizeInGbs"
+      },
+      {
+        "addr": "properties/computeCount",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exadata_infrastructure",
+            "addr": "/compute_count"
+          }
+        ]
+      },
+      {
+        "addr": "properties/cpuCount"
+      },
+      {
+        "addr": "properties/customerContacts/email"
+      },
+      {
+        "addr": "properties/dataStorageSizeInTbs"
+      },
+      {
+        "addr": "properties/dbNodeStorageSizeInGbs"
+      },
+      {
+        "addr": "properties/dbServerVersion"
+      },
+      {
+        "addr": "properties/displayName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exadata_infrastructure",
+            "addr": "/display_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/estimatedPatchingTime/estimatedDbServerPatchingTime"
+      },
+      {
+        "addr": "properties/estimatedPatchingTime/estimatedNetworkSwitchesPatchingTime"
+      },
+      {
+        "addr": "properties/estimatedPatchingTime/estimatedStorageServerPatchingTime"
+      },
+      {
+        "addr": "properties/estimatedPatchingTime/totalEstimatedPatchingTime"
+      },
+      {
+        "addr": "properties/lastMaintenanceRunId"
+      },
+      {
+        "addr": "properties/lifecycleDetails"
+      },
+      {
+        "addr": "properties/lifecycleState"
+      },
+      {
+        "addr": "properties/maintenanceWindow/daysOfWeek/name"
+      },
+      {
+        "addr": "properties/maintenanceWindow/hoursOfDay"
+      },
+      {
+        "addr": "properties/maintenanceWindow/leadTimeInWeeks",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exadata_infrastructure",
+            "addr": "/maintenance_window/0/lead_time_in_weeks"
+          }
+        ]
+      },
+      {
+        "addr": "properties/maintenanceWindow/months/name"
+      },
+      {
+        "addr": "properties/maintenanceWindow/patchingMode",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exadata_infrastructure",
+            "addr": "/maintenance_window/0/patching_mode"
+          }
+        ]
+      },
+      {
+        "addr": "properties/maintenanceWindow/preference",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exadata_infrastructure",
+            "addr": "/maintenance_window/0/preference"
+          }
+        ]
+      },
+      {
+        "addr": "properties/maintenanceWindow/weeksOfMonth"
+      },
+      {
+        "addr": "properties/maxCpuCount"
+      },
+      {
+        "addr": "properties/maxDataStorageInTbs"
+      },
+      {
+        "addr": "properties/maxDbNodeStorageSizeInGbs"
+      },
+      {
+        "addr": "properties/maxMemoryInGbs"
+      },
+      {
+        "addr": "properties/memorySizeInGbs"
+      },
+      {
+        "addr": "properties/monthlyDbServerVersion"
+      },
+      {
+        "addr": "properties/monthlyStorageServerVersion"
+      },
+      {
+        "addr": "properties/nextMaintenanceRunId"
+      },
+      {
+        "addr": "properties/ociUrl"
+      },
+      {
+        "addr": "properties/ocid"
+      },
+      {
+        "addr": "properties/shape",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exadata_infrastructure",
+            "addr": "/shape"
+          }
+        ]
+      },
+      {
+        "addr": "properties/storageCount",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exadata_infrastructure",
+            "addr": "/storage_count"
+          }
+        ]
+      },
+      {
+        "addr": "properties/storageServerVersion"
+      },
+      {
+        "addr": "properties/timeCreated"
+      },
+      {
+        "addr": "properties/totalStorageSizeInGbs"
+      },
+      {
+        "addr": "tags"
+      },
+      {
+        "addr": "zones"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/CLOUDEXADATAINFRASTRUCTURES/{}",
+    "operation": "PATCH",
+    "properties": [
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/CLOUDEXADATAINFRASTRUCTURES/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exadata_infrastructure",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exadata_infrastructure",
+            "addr": "/name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/activatedStorageCount"
+      },
+      {
+        "addr": "properties/additionalStorageCount"
+      },
+      {
+        "addr": "properties/availableStorageSizeInGbs"
+      },
+      {
+        "addr": "properties/computeCount",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exadata_infrastructure",
+            "addr": "/compute_count"
+          }
+        ]
+      },
+      {
+        "addr": "properties/cpuCount"
+      },
+      {
+        "addr": "properties/customerContacts/email"
+      },
+      {
+        "addr": "properties/dataStorageSizeInTbs"
+      },
+      {
+        "addr": "properties/dbNodeStorageSizeInGbs"
+      },
+      {
+        "addr": "properties/dbServerVersion"
+      },
+      {
+        "addr": "properties/displayName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exadata_infrastructure",
+            "addr": "/display_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/estimatedPatchingTime/estimatedDbServerPatchingTime"
+      },
+      {
+        "addr": "properties/estimatedPatchingTime/estimatedNetworkSwitchesPatchingTime"
+      },
+      {
+        "addr": "properties/estimatedPatchingTime/estimatedStorageServerPatchingTime"
+      },
+      {
+        "addr": "properties/estimatedPatchingTime/totalEstimatedPatchingTime"
+      },
+      {
+        "addr": "properties/lastMaintenanceRunId"
+      },
+      {
+        "addr": "properties/lifecycleDetails"
+      },
+      {
+        "addr": "properties/lifecycleState"
+      },
+      {
+        "addr": "properties/maintenanceWindow/daysOfWeek/name"
+      },
+      {
+        "addr": "properties/maintenanceWindow/hoursOfDay"
+      },
+      {
+        "addr": "properties/maintenanceWindow/leadTimeInWeeks",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exadata_infrastructure",
+            "addr": "/maintenance_window/0/lead_time_in_weeks"
+          }
+        ]
+      },
+      {
+        "addr": "properties/maintenanceWindow/months/name"
+      },
+      {
+        "addr": "properties/maintenanceWindow/patchingMode",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exadata_infrastructure",
+            "addr": "/maintenance_window/0/patching_mode"
+          }
+        ]
+      },
+      {
+        "addr": "properties/maintenanceWindow/preference",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exadata_infrastructure",
+            "addr": "/maintenance_window/0/preference"
+          }
+        ]
+      },
+      {
+        "addr": "properties/maintenanceWindow/weeksOfMonth"
+      },
+      {
+        "addr": "properties/maxCpuCount"
+      },
+      {
+        "addr": "properties/maxDataStorageInTbs"
+      },
+      {
+        "addr": "properties/maxDbNodeStorageSizeInGbs"
+      },
+      {
+        "addr": "properties/maxMemoryInGbs"
+      },
+      {
+        "addr": "properties/memorySizeInGbs"
+      },
+      {
+        "addr": "properties/monthlyDbServerVersion"
+      },
+      {
+        "addr": "properties/monthlyStorageServerVersion"
+      },
+      {
+        "addr": "properties/nextMaintenanceRunId"
+      },
+      {
+        "addr": "properties/ociUrl"
+      },
+      {
+        "addr": "properties/ocid"
+      },
+      {
+        "addr": "properties/shape",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exadata_infrastructure",
+            "addr": "/shape"
+          }
+        ]
+      },
+      {
+        "addr": "properties/storageCount",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exadata_infrastructure",
+            "addr": "/storage_count"
+          }
+        ]
+      },
+      {
+        "addr": "properties/storageServerVersion"
+      },
+      {
+        "addr": "properties/timeCreated"
+      },
+      {
+        "addr": "properties/totalStorageSizeInGbs"
+      },
+      {
+        "addr": "tags"
+      },
+      {
+        "addr": "zones"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/CLOUDEXADATAINFRASTRUCTURES/{}/DBSERVERS",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/autonomousVirtualMachineIds"
+      },
+      {
+        "addr": "properties/autonomousVmClusterIds"
+      },
+      {
+        "addr": "properties/compartmentId"
+      },
+      {
+        "addr": "properties/cpuCoreCount"
+      },
+      {
+        "addr": "properties/dbNodeIds"
+      },
+      {
+        "addr": "properties/dbNodeStorageSizeInGbs"
+      },
+      {
+        "addr": "properties/displayName"
+      },
+      {
+        "addr": "properties/exadataInfrastructureId"
+      },
+      {
+        "addr": "properties/lifecycleDetails"
+      },
+      {
+        "addr": "properties/lifecycleState"
+      },
+      {
+        "addr": "properties/maxCpuCount"
+      },
+      {
+        "addr": "properties/maxDbNodeStorageInGbs"
+      },
+      {
+        "addr": "properties/maxMemoryInGbs"
+      },
+      {
+        "addr": "properties/memorySizeInGbs"
+      },
+      {
+        "addr": "properties/ocid"
+      },
+      {
+        "addr": "properties/shape"
+      },
+      {
+        "addr": "properties/timeCreated"
+      },
+      {
+        "addr": "properties/vmClusterIds"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/CLOUDVMCLUSTERS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2024-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/CLOUDVMCLUSTERS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/backupSubnetCidr",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/backup_subnet_cidr"
+          }
+        ]
+      },
+      {
+        "addr": "properties/cloudExadataInfrastructureId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/cloud_exadata_infrastructure_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/clusterName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/cluster_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/compartmentId"
+      },
+      {
+        "addr": "properties/computeNodes"
+      },
+      {
+        "addr": "properties/cpuCoreCount",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/cpu_core_count"
+          }
+        ]
+      },
+      {
+        "addr": "properties/dataCollectionOptions/isDiagnosticsEventsEnabled"
+      },
+      {
+        "addr": "properties/dataCollectionOptions/isHealthMonitoringEnabled"
+      },
+      {
+        "addr": "properties/dataCollectionOptions/isIncidentLogsEnabled"
+      },
+      {
+        "addr": "properties/dataStoragePercentage",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/data_storage_percentage"
+          }
+        ]
+      },
+      {
+        "addr": "properties/dataStorageSizeInTbs",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/data_storage_size_in_tbs"
+          }
+        ]
+      },
+      {
+        "addr": "properties/dbNodeStorageSizeInGbs",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/db_node_storage_size_in_gbs"
+          }
+        ]
+      },
+      {
+        "addr": "properties/dbServers"
+      },
+      {
+        "addr": "properties/diskRedundancy"
+      },
+      {
+        "addr": "properties/displayName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/display_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/domain"
+      },
+      {
+        "addr": "properties/giVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/gi_version"
+          }
+        ]
+      },
+      {
+        "addr": "properties/hostname"
+      },
+      {
+        "addr": "properties/iormConfigCache/dbPlans/dbName"
+      },
+      {
+        "addr": "properties/iormConfigCache/dbPlans/flashCacheLimit"
+      },
+      {
+        "addr": "properties/iormConfigCache/dbPlans/share"
+      },
+      {
+        "addr": "properties/iormConfigCache/lifecycleDetails"
+      },
+      {
+        "addr": "properties/iormConfigCache/lifecycleState"
+      },
+      {
+        "addr": "properties/iormConfigCache/objective"
+      },
+      {
+        "addr": "properties/isLocalBackupEnabled"
+      },
+      {
+        "addr": "properties/isSparseDiskgroupEnabled"
+      },
+      {
+        "addr": "properties/lastUpdateHistoryEntryId"
+      },
+      {
+        "addr": "properties/licenseModel",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/license_model"
+          }
+        ]
+      },
+      {
+        "addr": "properties/lifecycleDetails"
+      },
+      {
+        "addr": "properties/lifecycleState"
+      },
+      {
+        "addr": "properties/listenerPort"
+      },
+      {
+        "addr": "properties/memorySizeInGbs",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/memory_size_in_gbs"
+          }
+        ]
+      },
+      {
+        "addr": "properties/nodeCount"
+      },
+      {
+        "addr": "properties/nsgUrl"
+      },
+      {
+        "addr": "properties/ociUrl"
+      },
+      {
+        "addr": "properties/ocid"
+      },
+      {
+        "addr": "properties/shape"
+      },
+      {
+        "addr": "properties/sshPublicKeys"
+      },
+      {
+        "addr": "properties/storageSizeInGbs"
+      },
+      {
+        "addr": "properties/subnetId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/subnet_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/subnetOcid"
+      },
+      {
+        "addr": "properties/systemVersion"
+      },
+      {
+        "addr": "properties/timeCreated"
+      },
+      {
+        "addr": "properties/timeZone",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/time_zone"
+          }
+        ]
+      },
+      {
+        "addr": "properties/vnetId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/virtual_network_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/zoneId"
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/CLOUDVMCLUSTERS/{}",
+    "operation": "PATCH",
+    "properties": [
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/CLOUDVMCLUSTERS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/backupSubnetCidr",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/backup_subnet_cidr"
+          }
+        ]
+      },
+      {
+        "addr": "properties/cloudExadataInfrastructureId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/cloud_exadata_infrastructure_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/clusterName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/cluster_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/compartmentId"
+      },
+      {
+        "addr": "properties/computeNodes"
+      },
+      {
+        "addr": "properties/cpuCoreCount",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/cpu_core_count"
+          }
+        ]
+      },
+      {
+        "addr": "properties/dataCollectionOptions/isDiagnosticsEventsEnabled"
+      },
+      {
+        "addr": "properties/dataCollectionOptions/isHealthMonitoringEnabled"
+      },
+      {
+        "addr": "properties/dataCollectionOptions/isIncidentLogsEnabled"
+      },
+      {
+        "addr": "properties/dataStoragePercentage",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/data_storage_percentage"
+          }
+        ]
+      },
+      {
+        "addr": "properties/dataStorageSizeInTbs",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/data_storage_size_in_tbs"
+          }
+        ]
+      },
+      {
+        "addr": "properties/dbNodeStorageSizeInGbs",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/db_node_storage_size_in_gbs"
+          }
+        ]
+      },
+      {
+        "addr": "properties/dbServers"
+      },
+      {
+        "addr": "properties/diskRedundancy"
+      },
+      {
+        "addr": "properties/displayName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/display_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/domain"
+      },
+      {
+        "addr": "properties/giVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/gi_version"
+          }
+        ]
+      },
+      {
+        "addr": "properties/hostname"
+      },
+      {
+        "addr": "properties/iormConfigCache/dbPlans/dbName"
+      },
+      {
+        "addr": "properties/iormConfigCache/dbPlans/flashCacheLimit"
+      },
+      {
+        "addr": "properties/iormConfigCache/dbPlans/share"
+      },
+      {
+        "addr": "properties/iormConfigCache/lifecycleDetails"
+      },
+      {
+        "addr": "properties/iormConfigCache/lifecycleState"
+      },
+      {
+        "addr": "properties/iormConfigCache/objective"
+      },
+      {
+        "addr": "properties/isLocalBackupEnabled"
+      },
+      {
+        "addr": "properties/isSparseDiskgroupEnabled"
+      },
+      {
+        "addr": "properties/lastUpdateHistoryEntryId"
+      },
+      {
+        "addr": "properties/licenseModel",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/license_model"
+          }
+        ]
+      },
+      {
+        "addr": "properties/lifecycleDetails"
+      },
+      {
+        "addr": "properties/lifecycleState"
+      },
+      {
+        "addr": "properties/listenerPort"
+      },
+      {
+        "addr": "properties/memorySizeInGbs",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/memory_size_in_gbs"
+          }
+        ]
+      },
+      {
+        "addr": "properties/nodeCount"
+      },
+      {
+        "addr": "properties/nsgUrl"
+      },
+      {
+        "addr": "properties/ociUrl"
+      },
+      {
+        "addr": "properties/ocid"
+      },
+      {
+        "addr": "properties/shape"
+      },
+      {
+        "addr": "properties/sshPublicKeys"
+      },
+      {
+        "addr": "properties/storageSizeInGbs"
+      },
+      {
+        "addr": "properties/subnetId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/subnet_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/subnetOcid"
+      },
+      {
+        "addr": "properties/systemVersion"
+      },
+      {
+        "addr": "properties/timeCreated"
+      },
+      {
+        "addr": "properties/timeZone",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/time_zone"
+          }
+        ]
+      },
+      {
+        "addr": "properties/vnetId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/virtual_network_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/zoneId"
+      },
+      {
+        "addr": "tags"
       }
     ]
   },
