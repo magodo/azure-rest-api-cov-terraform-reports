@@ -4583,6 +4583,103 @@
     ]
   },
   {
+    "api_version": "2024-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/ORACLE.DATABASE/LOCATIONS/{}/AUTONOMOUSDATABASECHARACTERSETS",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/characterSet"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/ORACLE.DATABASE/LOCATIONS/{}/AUTONOMOUSDATABASENATIONALCHARACTERSETS",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/characterSet"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/ORACLE.DATABASE/LOCATIONS/{}/DBSYSTEMSHAPES",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/availableCoreCount"
+      },
+      {
+        "addr": "properties/availableCoreCountPerNode"
+      },
+      {
+        "addr": "properties/availableDataStorageInTbs"
+      },
+      {
+        "addr": "properties/availableDataStoragePerServerInTbs"
+      },
+      {
+        "addr": "properties/availableDbNodePerNodeInGbs"
+      },
+      {
+        "addr": "properties/availableDbNodeStorageInGbs"
+      },
+      {
+        "addr": "properties/availableMemoryInGbs"
+      },
+      {
+        "addr": "properties/availableMemoryPerNodeInGbs"
+      },
+      {
+        "addr": "properties/coreCountIncrement"
+      },
+      {
+        "addr": "properties/maxStorageCount"
+      },
+      {
+        "addr": "properties/maximumNodeCount"
+      },
+      {
+        "addr": "properties/minCoreCountPerNode"
+      },
+      {
+        "addr": "properties/minDataStorageInTbs"
+      },
+      {
+        "addr": "properties/minDbNodeStoragePerNodeInGbs"
+      },
+      {
+        "addr": "properties/minMemoryPerNodeInGbs"
+      },
+      {
+        "addr": "properties/minStorageCount"
+      },
+      {
+        "addr": "properties/minimumCoreCount"
+      },
+      {
+        "addr": "properties/minimumNodeCount"
+      },
+      {
+        "addr": "properties/runtimeMinimumCoreCount"
+      },
+      {
+        "addr": "properties/shapeFamily"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/ORACLE.DATABASE/LOCATIONS/{}/GIVERSIONS",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/version"
+      }
+    ]
+  },
+  {
     "api_version": "2022-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/{}",
     "operation": "GET",
@@ -60733,6 +60830,9 @@
     "operation": "GET",
     "properties": [
       {
+        "addr": "id"
+      },
+      {
         "addr": "identity/type"
       },
       {
@@ -60746,6 +60846,9 @@
             "addr": "/location"
           }
         ]
+      },
+      {
+        "addr": "name"
       },
       {
         "addr": "properties/administratorLogin",
@@ -60929,6 +61032,9 @@
       },
       {
         "addr": "tags"
+      },
+      {
+        "addr": "type"
       }
     ]
   },
@@ -61104,6 +61210,9 @@
     "operation": "PUT",
     "properties": [
       {
+        "addr": "id"
+      },
+      {
         "addr": "identity/type"
       },
       {
@@ -61117,6 +61226,9 @@
             "addr": "/location"
           }
         ]
+      },
+      {
+        "addr": "name"
       },
       {
         "addr": "properties/administratorLogin",
@@ -61300,6 +61412,9 @@
       },
       {
         "addr": "tags"
+      },
+      {
+        "addr": "type"
       }
     ]
   },
@@ -65243,6 +65358,164 @@
     ]
   },
   {
+    "api_version": "2023-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/PROJECTS/{}/POOLS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/PROJECTS/{}/POOLS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_dev_center_project_pool",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/devBoxDefinitionName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_dev_center_project_pool",
+            "addr": "/dev_box_definition_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/licenseType"
+      },
+      {
+        "addr": "properties/localAdministrator"
+      },
+      {
+        "addr": "properties/networkConnectionName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_dev_center_project_pool",
+            "addr": "/dev_center_attached_network_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/stopOnDisconnect/gracePeriodMinutes",
+        "app_property_maps": [
+          {
+            "name": "azurerm_dev_center_project_pool",
+            "addr": "/stop_on_disconnect_grace_period_minutes"
+          }
+        ]
+      },
+      {
+        "addr": "properties/stopOnDisconnect/status"
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/PROJECTS/{}/POOLS/{}",
+    "operation": "PATCH",
+    "properties": [
+      {
+        "addr": "properties/devBoxDefinitionName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_dev_center_project_pool",
+            "addr": "/dev_box_definition_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/localAdministrator"
+      },
+      {
+        "addr": "properties/networkConnectionName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_dev_center_project_pool",
+            "addr": "/dev_center_attached_network_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/stopOnDisconnect/gracePeriodMinutes",
+        "app_property_maps": [
+          {
+            "name": "azurerm_dev_center_project_pool",
+            "addr": "/stop_on_disconnect_grace_period_minutes"
+          }
+        ]
+      },
+      {
+        "addr": "properties/stopOnDisconnect/status"
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVCENTER/PROJECTS/{}/POOLS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_dev_center_project_pool",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/devBoxDefinitionName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_dev_center_project_pool",
+            "addr": "/dev_box_definition_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/licenseType"
+      },
+      {
+        "addr": "properties/localAdministrator"
+      },
+      {
+        "addr": "properties/networkConnectionName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_dev_center_project_pool",
+            "addr": "/dev_center_attached_network_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/stopOnDisconnect/gracePeriodMinutes",
+        "app_property_maps": [
+          {
+            "name": "azurerm_dev_center_project_pool",
+            "addr": "/stop_on_disconnect_grace_period_minutes"
+          }
+        ]
+      },
+      {
+        "addr": "properties/stopOnDisconnect/status"
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
     "api_version": "2022-04-30-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVICES/IOTHUBS/{}",
     "operation": "DELETE"
@@ -68558,7 +68831,7 @@
     ]
   },
   {
-    "api_version": "2024-05-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}",
     "operation": "DELETE"
   },
@@ -68576,7 +68849,7 @@
     ]
   },
   {
-    "api_version": "2024-05-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}",
     "operation": "GET",
     "properties": [
@@ -68907,7 +69180,7 @@
     ]
   },
   {
-    "api_version": "2024-05-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -68956,7 +69229,7 @@
     ]
   },
   {
-    "api_version": "2024-05-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}",
     "operation": "PUT",
     "properties": [
@@ -69491,12 +69764,12 @@
     ]
   },
   {
-    "api_version": "2024-05-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/GREMLINDATABASES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-05-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/GREMLINDATABASES/{}",
     "operation": "GET",
     "properties": [
@@ -69512,7 +69785,7 @@
     ]
   },
   {
-    "api_version": "2024-05-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/GREMLINDATABASES/{}",
     "operation": "PUT",
     "properties": [
@@ -69537,12 +69810,12 @@
     ]
   },
   {
-    "api_version": "2024-05-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/GREMLINDATABASES/{}/GRAPHS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-05-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/GREMLINDATABASES/{}/GRAPHS/{}",
     "operation": "GET",
     "properties": [
@@ -69642,7 +69915,7 @@
     ]
   },
   {
-    "api_version": "2024-05-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/GREMLINDATABASES/{}/GRAPHS/{}",
     "operation": "PUT",
     "properties": [
@@ -69754,7 +70027,7 @@
     ]
   },
   {
-    "api_version": "2024-05-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/GREMLINDATABASES/{}/GRAPHS/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "GET",
     "properties": [
@@ -69779,7 +70052,7 @@
     ]
   },
   {
-    "api_version": "2024-05-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/GREMLINDATABASES/{}/GRAPHS/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "PUT",
     "properties": [
@@ -69804,7 +70077,7 @@
     ]
   },
   {
-    "api_version": "2024-05-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/GREMLINDATABASES/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "GET",
     "properties": [
@@ -69829,7 +70102,7 @@
     ]
   },
   {
-    "api_version": "2024-05-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/GREMLINDATABASES/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "PUT",
     "properties": [
@@ -69854,12 +70127,12 @@
     ]
   },
   {
-    "api_version": "2024-05-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/LISTCONNECTIONSTRINGS",
     "operation": "POST"
   },
   {
-    "api_version": "2024-05-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/LISTKEYS",
     "operation": "POST"
   },
@@ -70259,7 +70532,7 @@
     ]
   },
   {
-    "api_version": "2024-05-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/READONLYKEYS",
     "operation": "POST"
   },
@@ -70359,12 +70632,12 @@
     ]
   },
   {
-    "api_version": "2024-05-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/CONTAINERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-05-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/CONTAINERS/{}",
     "operation": "GET",
     "properties": [
@@ -70467,7 +70740,7 @@
     ]
   },
   {
-    "api_version": "2024-05-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/CONTAINERS/{}",
     "operation": "PUT",
     "properties": [
@@ -70628,7 +70901,7 @@
     ]
   },
   {
-    "api_version": "2024-05-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/CONTAINERS/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "GET",
     "properties": [
@@ -70653,7 +70926,7 @@
     ]
   },
   {
-    "api_version": "2024-05-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/CONTAINERS/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "PUT",
     "properties": [
@@ -137380,6 +137653,134 @@
     ]
   },
   {
+    "api_version": "2024-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.VIDEOINDEXER/ACCOUNTS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2024-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.VIDEOINDEXER/ACCOUNTS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "identity/principalId"
+      },
+      {
+        "addr": "identity/tenantId"
+      },
+      {
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
+      },
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_video_indexer_account",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/storageServices/resourceId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_video_indexer_account",
+            "addr": "/storage/0/storage_account_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/storageServices/userAssignedIdentity",
+        "app_property_maps": [
+          {
+            "name": "azurerm_video_indexer_account",
+            "addr": "/storage/0/user_assigned_identity_id"
+          }
+        ]
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.VIDEOINDEXER/ACCOUNTS/{}",
+    "operation": "PATCH",
+    "properties": [
+      {
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
+      },
+      {
+        "addr": "properties/storageServices/userAssignedIdentity",
+        "app_property_maps": [
+          {
+            "name": "azurerm_video_indexer_account",
+            "addr": "/storage/0/user_assigned_identity_id"
+          }
+        ]
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.VIDEOINDEXER/ACCOUNTS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "identity/principalId"
+      },
+      {
+        "addr": "identity/tenantId"
+      },
+      {
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
+      },
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_video_indexer_account",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/storageServices/resourceId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_video_indexer_account",
+            "addr": "/storage/0/storage_account_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/storageServices/userAssignedIdentity",
+        "app_property_maps": [
+          {
+            "name": "azurerm_video_indexer_account",
+            "addr": "/storage/0/user_assigned_identity_id"
+          }
+        ]
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
     "api_version": "2023-04-03",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.VOICESERVICES/COMMUNICATIONSGATEWAYS/{}",
     "operation": "DELETE"
@@ -151463,12 +151864,12 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/NEWRELIC.OBSERVABILITY/MONITORS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/NEWRELIC.OBSERVABILITY/MONITORS/{}",
     "operation": "GET",
     "properties": [
@@ -151631,7 +152032,7 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/NEWRELIC.OBSERVABILITY/MONITORS/{}",
     "operation": "PUT",
     "properties": [
@@ -151794,12 +152195,12 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/NEWRELIC.OBSERVABILITY/MONITORS/{}/TAGRULES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/NEWRELIC.OBSERVABILITY/MONITORS/{}/TAGRULES/{}",
     "operation": "GET",
     "properties": [
@@ -151839,7 +152240,7 @@
     ]
   },
   {
-    "api_version": "2022-07-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/NEWRELIC.OBSERVABILITY/MONITORS/{}/TAGRULES/{}",
     "operation": "PUT",
     "properties": [
@@ -152482,6 +152883,1139 @@
             "addr": "/root_file"
           }
         ]
+      }
+    ]
+  },
+  {
+    "api_version": "2024-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/AUTONOMOUSDATABASES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2024-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/AUTONOMOUSDATABASES/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/name"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Clone}/actualUsedDataStorageSizeInTbs"
+      },
+      {
+        "addr": "properties{Clone}/adminPassword"
+      },
+      {
+        "addr": "properties{Clone}/allocatedStorageSizeInTbs"
+      },
+      {
+        "addr": "properties{Clone}/apexDetails"
+      },
+      {
+        "addr": "properties{Clone}/autonomousDatabaseId"
+      },
+      {
+        "addr": "properties{Clone}/autonomousMaintenanceScheduleType"
+      },
+      {
+        "addr": "properties{Clone}/availableUpgradeVersions"
+      },
+      {
+        "addr": "properties{Clone}/backupRetentionPeriodInDays"
+      },
+      {
+        "addr": "properties{Clone}/characterSet"
+      },
+      {
+        "addr": "properties{Clone}/computeCount"
+      },
+      {
+        "addr": "properties{Clone}/computeModel"
+      },
+      {
+        "addr": "properties{Clone}/connectionStrings"
+      },
+      {
+        "addr": "properties{Clone}/connectionUrls"
+      },
+      {
+        "addr": "properties{Clone}/cpuCoreCount"
+      },
+      {
+        "addr": "properties{Clone}/customerContacts"
+      },
+      {
+        "addr": "properties{Clone}/dataBaseType"
+      },
+      {
+        "addr": "properties{Clone}/dataSafeStatus"
+      },
+      {
+        "addr": "properties{Clone}/dataStorageSizeInGbs"
+      },
+      {
+        "addr": "properties{Clone}/dataStorageSizeInTbs"
+      },
+      {
+        "addr": "properties{Clone}/databaseEdition"
+      },
+      {
+        "addr": "properties{Clone}/dbVersion"
+      },
+      {
+        "addr": "properties{Clone}/dbWorkload"
+      },
+      {
+        "addr": "properties{Clone}/displayName"
+      },
+      {
+        "addr": "properties{Clone}/failedDataRecoveryInSeconds"
+      },
+      {
+        "addr": "properties{Clone}/inMemoryAreaInGbs"
+      },
+      {
+        "addr": "properties{Clone}/isAutoScalingEnabled"
+      },
+      {
+        "addr": "properties{Clone}/isAutoScalingForStorageEnabled"
+      },
+      {
+        "addr": "properties{Clone}/isLocalDataGuardEnabled"
+      },
+      {
+        "addr": "properties{Clone}/isMtlsConnectionRequired"
+      },
+      {
+        "addr": "properties{Clone}/isPreview"
+      },
+      {
+        "addr": "properties{Clone}/isPreviewVersionWithServiceTermsAccepted"
+      },
+      {
+        "addr": "properties{Clone}/isRemoteDataGuardEnabled"
+      },
+      {
+        "addr": "properties{Clone}/licenseModel"
+      },
+      {
+        "addr": "properties{Clone}/lifecycleDetails"
+      },
+      {
+        "addr": "properties{Clone}/lifecycleState"
+      },
+      {
+        "addr": "properties{Clone}/localAdgAutoFailoverMaxDataLossLimit"
+      },
+      {
+        "addr": "properties{Clone}/localDisasterRecoveryType"
+      },
+      {
+        "addr": "properties{Clone}/localStandbyDb"
+      },
+      {
+        "addr": "properties{Clone}/longTermBackupSchedule"
+      },
+      {
+        "addr": "properties{Clone}/memoryPerOracleComputeUnitInGbs"
+      },
+      {
+        "addr": "properties{Clone}/ncharacterSet"
+      },
+      {
+        "addr": "properties{Clone}/nextLongTermBackupTimeStamp"
+      },
+      {
+        "addr": "properties{Clone}/ociUrl"
+      },
+      {
+        "addr": "properties{Clone}/ocid"
+      },
+      {
+        "addr": "properties{Clone}/openMode"
+      },
+      {
+        "addr": "properties{Clone}/operationsInsightsStatus"
+      },
+      {
+        "addr": "properties{Clone}/peerDbId"
+      },
+      {
+        "addr": "properties{Clone}/peerDbIds"
+      },
+      {
+        "addr": "properties{Clone}/permissionLevel"
+      },
+      {
+        "addr": "properties{Clone}/privateEndpoint"
+      },
+      {
+        "addr": "properties{Clone}/privateEndpointIp"
+      },
+      {
+        "addr": "properties{Clone}/privateEndpointLabel"
+      },
+      {
+        "addr": "properties{Clone}/provisionableCpus"
+      },
+      {
+        "addr": "properties{Clone}/provisioningState"
+      },
+      {
+        "addr": "properties{Clone}/role"
+      },
+      {
+        "addr": "properties{Clone}/scheduledOperations"
+      },
+      {
+        "addr": "properties{Clone}/serviceConsoleUrl"
+      },
+      {
+        "addr": "properties{Clone}/sqlWebDeveloperUrl"
+      },
+      {
+        "addr": "properties{Clone}/subnetId"
+      },
+      {
+        "addr": "properties{Clone}/supportedRegionsToCloneTo"
+      },
+      {
+        "addr": "properties{Clone}/timeCreated"
+      },
+      {
+        "addr": "properties{Clone}/timeDataGuardRoleChanged"
+      },
+      {
+        "addr": "properties{Clone}/timeDeletionOfFreeAutonomousDatabase"
+      },
+      {
+        "addr": "properties{Clone}/timeLocalDataGuardEnabled"
+      },
+      {
+        "addr": "properties{Clone}/timeMaintenanceBegin"
+      },
+      {
+        "addr": "properties{Clone}/timeMaintenanceEnd"
+      },
+      {
+        "addr": "properties{Clone}/timeOfLastFailover"
+      },
+      {
+        "addr": "properties{Clone}/timeOfLastRefresh"
+      },
+      {
+        "addr": "properties{Clone}/timeOfLastRefreshPoint"
+      },
+      {
+        "addr": "properties{Clone}/timeOfLastSwitchover"
+      },
+      {
+        "addr": "properties{Clone}/timeReclamationOfFreeAutonomousDatabase"
+      },
+      {
+        "addr": "properties{Clone}/usedDataStorageSizeInGbs"
+      },
+      {
+        "addr": "properties{Clone}/usedDataStorageSizeInTbs"
+      },
+      {
+        "addr": "properties{Clone}/vnetId"
+      },
+      {
+        "addr": "properties{Clone}/whitelistedIps"
+      },
+      {
+        "addr": "properties{Regular}/actualUsedDataStorageSizeInTbs"
+      },
+      {
+        "addr": "properties{Regular}/adminPassword"
+      },
+      {
+        "addr": "properties{Regular}/allocatedStorageSizeInTbs"
+      },
+      {
+        "addr": "properties{Regular}/apexDetails"
+      },
+      {
+        "addr": "properties{Regular}/autonomousDatabaseId"
+      },
+      {
+        "addr": "properties{Regular}/autonomousMaintenanceScheduleType"
+      },
+      {
+        "addr": "properties{Regular}/availableUpgradeVersions"
+      },
+      {
+        "addr": "properties{Regular}/backupRetentionPeriodInDays",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/backup_retention_period_in_days"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Regular}/characterSet",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/character_set"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Regular}/computeCount",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/compute_count"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Regular}/computeModel",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/compute_model"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Regular}/connectionStrings"
+      },
+      {
+        "addr": "properties{Regular}/connectionUrls"
+      },
+      {
+        "addr": "properties{Regular}/cpuCoreCount"
+      },
+      {
+        "addr": "properties{Regular}/customerContacts"
+      },
+      {
+        "addr": "properties{Regular}/customerContacts/email"
+      },
+      {
+        "addr": "properties{Regular}/dataBaseType"
+      },
+      {
+        "addr": "properties{Regular}/dataSafeStatus"
+      },
+      {
+        "addr": "properties{Regular}/dataStorageSizeInGbs"
+      },
+      {
+        "addr": "properties{Regular}/dataStorageSizeInTbs",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/data_storage_size_in_tbs"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Regular}/databaseEdition"
+      },
+      {
+        "addr": "properties{Regular}/dbVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/db_version"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Regular}/dbWorkload",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/db_workload"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Regular}/displayName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/display_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Regular}/failedDataRecoveryInSeconds"
+      },
+      {
+        "addr": "properties{Regular}/inMemoryAreaInGbs"
+      },
+      {
+        "addr": "properties{Regular}/isAutoScalingEnabled"
+      },
+      {
+        "addr": "properties{Regular}/isAutoScalingForStorageEnabled"
+      },
+      {
+        "addr": "properties{Regular}/isLocalDataGuardEnabled"
+      },
+      {
+        "addr": "properties{Regular}/isMtlsConnectionRequired"
+      },
+      {
+        "addr": "properties{Regular}/isPreview"
+      },
+      {
+        "addr": "properties{Regular}/isPreviewVersionWithServiceTermsAccepted"
+      },
+      {
+        "addr": "properties{Regular}/isRemoteDataGuardEnabled"
+      },
+      {
+        "addr": "properties{Regular}/licenseModel",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/license_model"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Regular}/lifecycleDetails"
+      },
+      {
+        "addr": "properties{Regular}/lifecycleState"
+      },
+      {
+        "addr": "properties{Regular}/localAdgAutoFailoverMaxDataLossLimit"
+      },
+      {
+        "addr": "properties{Regular}/localDisasterRecoveryType"
+      },
+      {
+        "addr": "properties{Regular}/localStandbyDb"
+      },
+      {
+        "addr": "properties{Regular}/longTermBackupSchedule"
+      },
+      {
+        "addr": "properties{Regular}/memoryPerOracleComputeUnitInGbs"
+      },
+      {
+        "addr": "properties{Regular}/ncharacterSet",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/national_character_set"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Regular}/nextLongTermBackupTimeStamp"
+      },
+      {
+        "addr": "properties{Regular}/ociUrl"
+      },
+      {
+        "addr": "properties{Regular}/ocid"
+      },
+      {
+        "addr": "properties{Regular}/openMode"
+      },
+      {
+        "addr": "properties{Regular}/operationsInsightsStatus"
+      },
+      {
+        "addr": "properties{Regular}/peerDbId"
+      },
+      {
+        "addr": "properties{Regular}/peerDbIds"
+      },
+      {
+        "addr": "properties{Regular}/permissionLevel"
+      },
+      {
+        "addr": "properties{Regular}/privateEndpoint"
+      },
+      {
+        "addr": "properties{Regular}/privateEndpointIp"
+      },
+      {
+        "addr": "properties{Regular}/privateEndpointLabel"
+      },
+      {
+        "addr": "properties{Regular}/provisionableCpus"
+      },
+      {
+        "addr": "properties{Regular}/provisioningState"
+      },
+      {
+        "addr": "properties{Regular}/role"
+      },
+      {
+        "addr": "properties{Regular}/scheduledOperations"
+      },
+      {
+        "addr": "properties{Regular}/serviceConsoleUrl"
+      },
+      {
+        "addr": "properties{Regular}/sqlWebDeveloperUrl"
+      },
+      {
+        "addr": "properties{Regular}/subnetId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/subnet_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Regular}/supportedRegionsToCloneTo"
+      },
+      {
+        "addr": "properties{Regular}/timeCreated"
+      },
+      {
+        "addr": "properties{Regular}/timeDataGuardRoleChanged"
+      },
+      {
+        "addr": "properties{Regular}/timeDeletionOfFreeAutonomousDatabase"
+      },
+      {
+        "addr": "properties{Regular}/timeLocalDataGuardEnabled"
+      },
+      {
+        "addr": "properties{Regular}/timeMaintenanceBegin"
+      },
+      {
+        "addr": "properties{Regular}/timeMaintenanceEnd"
+      },
+      {
+        "addr": "properties{Regular}/timeOfLastFailover"
+      },
+      {
+        "addr": "properties{Regular}/timeOfLastRefresh"
+      },
+      {
+        "addr": "properties{Regular}/timeOfLastRefreshPoint"
+      },
+      {
+        "addr": "properties{Regular}/timeOfLastSwitchover"
+      },
+      {
+        "addr": "properties{Regular}/timeReclamationOfFreeAutonomousDatabase"
+      },
+      {
+        "addr": "properties{Regular}/usedDataStorageSizeInGbs"
+      },
+      {
+        "addr": "properties{Regular}/usedDataStorageSizeInTbs"
+      },
+      {
+        "addr": "properties{Regular}/vnetId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/virtual_network_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Regular}/whitelistedIps"
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/AUTONOMOUSDATABASES/{}",
+    "operation": "PATCH",
+    "properties": [
+      {
+        "addr": "properties/computeCount"
+      },
+      {
+        "addr": "properties/dataStorageSizeInTbs"
+      },
+      {
+        "addr": "properties/isAutoScalingEnabled"
+      },
+      {
+        "addr": "properties/isAutoScalingForStorageEnabled"
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/AUTONOMOUSDATABASES/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/name"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Clone}/actualUsedDataStorageSizeInTbs"
+      },
+      {
+        "addr": "properties{Clone}/adminPassword"
+      },
+      {
+        "addr": "properties{Clone}/allocatedStorageSizeInTbs"
+      },
+      {
+        "addr": "properties{Clone}/apexDetails"
+      },
+      {
+        "addr": "properties{Clone}/autonomousDatabaseId"
+      },
+      {
+        "addr": "properties{Clone}/autonomousMaintenanceScheduleType"
+      },
+      {
+        "addr": "properties{Clone}/availableUpgradeVersions"
+      },
+      {
+        "addr": "properties{Clone}/backupRetentionPeriodInDays"
+      },
+      {
+        "addr": "properties{Clone}/characterSet"
+      },
+      {
+        "addr": "properties{Clone}/computeCount"
+      },
+      {
+        "addr": "properties{Clone}/computeModel"
+      },
+      {
+        "addr": "properties{Clone}/connectionStrings"
+      },
+      {
+        "addr": "properties{Clone}/connectionUrls"
+      },
+      {
+        "addr": "properties{Clone}/cpuCoreCount"
+      },
+      {
+        "addr": "properties{Clone}/customerContacts"
+      },
+      {
+        "addr": "properties{Clone}/dataBaseType"
+      },
+      {
+        "addr": "properties{Clone}/dataSafeStatus"
+      },
+      {
+        "addr": "properties{Clone}/dataStorageSizeInGbs"
+      },
+      {
+        "addr": "properties{Clone}/dataStorageSizeInTbs"
+      },
+      {
+        "addr": "properties{Clone}/databaseEdition"
+      },
+      {
+        "addr": "properties{Clone}/dbVersion"
+      },
+      {
+        "addr": "properties{Clone}/dbWorkload"
+      },
+      {
+        "addr": "properties{Clone}/displayName"
+      },
+      {
+        "addr": "properties{Clone}/failedDataRecoveryInSeconds"
+      },
+      {
+        "addr": "properties{Clone}/inMemoryAreaInGbs"
+      },
+      {
+        "addr": "properties{Clone}/isAutoScalingEnabled"
+      },
+      {
+        "addr": "properties{Clone}/isAutoScalingForStorageEnabled"
+      },
+      {
+        "addr": "properties{Clone}/isLocalDataGuardEnabled"
+      },
+      {
+        "addr": "properties{Clone}/isMtlsConnectionRequired"
+      },
+      {
+        "addr": "properties{Clone}/isPreview"
+      },
+      {
+        "addr": "properties{Clone}/isPreviewVersionWithServiceTermsAccepted"
+      },
+      {
+        "addr": "properties{Clone}/isRemoteDataGuardEnabled"
+      },
+      {
+        "addr": "properties{Clone}/licenseModel"
+      },
+      {
+        "addr": "properties{Clone}/lifecycleDetails"
+      },
+      {
+        "addr": "properties{Clone}/lifecycleState"
+      },
+      {
+        "addr": "properties{Clone}/localAdgAutoFailoverMaxDataLossLimit"
+      },
+      {
+        "addr": "properties{Clone}/localDisasterRecoveryType"
+      },
+      {
+        "addr": "properties{Clone}/localStandbyDb"
+      },
+      {
+        "addr": "properties{Clone}/longTermBackupSchedule"
+      },
+      {
+        "addr": "properties{Clone}/memoryPerOracleComputeUnitInGbs"
+      },
+      {
+        "addr": "properties{Clone}/ncharacterSet"
+      },
+      {
+        "addr": "properties{Clone}/nextLongTermBackupTimeStamp"
+      },
+      {
+        "addr": "properties{Clone}/ociUrl"
+      },
+      {
+        "addr": "properties{Clone}/ocid"
+      },
+      {
+        "addr": "properties{Clone}/openMode"
+      },
+      {
+        "addr": "properties{Clone}/operationsInsightsStatus"
+      },
+      {
+        "addr": "properties{Clone}/peerDbId"
+      },
+      {
+        "addr": "properties{Clone}/peerDbIds"
+      },
+      {
+        "addr": "properties{Clone}/permissionLevel"
+      },
+      {
+        "addr": "properties{Clone}/privateEndpoint"
+      },
+      {
+        "addr": "properties{Clone}/privateEndpointIp"
+      },
+      {
+        "addr": "properties{Clone}/privateEndpointLabel"
+      },
+      {
+        "addr": "properties{Clone}/provisionableCpus"
+      },
+      {
+        "addr": "properties{Clone}/provisioningState"
+      },
+      {
+        "addr": "properties{Clone}/role"
+      },
+      {
+        "addr": "properties{Clone}/scheduledOperations"
+      },
+      {
+        "addr": "properties{Clone}/serviceConsoleUrl"
+      },
+      {
+        "addr": "properties{Clone}/sqlWebDeveloperUrl"
+      },
+      {
+        "addr": "properties{Clone}/subnetId"
+      },
+      {
+        "addr": "properties{Clone}/supportedRegionsToCloneTo"
+      },
+      {
+        "addr": "properties{Clone}/timeCreated"
+      },
+      {
+        "addr": "properties{Clone}/timeDataGuardRoleChanged"
+      },
+      {
+        "addr": "properties{Clone}/timeDeletionOfFreeAutonomousDatabase"
+      },
+      {
+        "addr": "properties{Clone}/timeLocalDataGuardEnabled"
+      },
+      {
+        "addr": "properties{Clone}/timeMaintenanceBegin"
+      },
+      {
+        "addr": "properties{Clone}/timeMaintenanceEnd"
+      },
+      {
+        "addr": "properties{Clone}/timeOfLastFailover"
+      },
+      {
+        "addr": "properties{Clone}/timeOfLastRefresh"
+      },
+      {
+        "addr": "properties{Clone}/timeOfLastRefreshPoint"
+      },
+      {
+        "addr": "properties{Clone}/timeOfLastSwitchover"
+      },
+      {
+        "addr": "properties{Clone}/timeReclamationOfFreeAutonomousDatabase"
+      },
+      {
+        "addr": "properties{Clone}/usedDataStorageSizeInGbs"
+      },
+      {
+        "addr": "properties{Clone}/usedDataStorageSizeInTbs"
+      },
+      {
+        "addr": "properties{Clone}/vnetId"
+      },
+      {
+        "addr": "properties{Clone}/whitelistedIps"
+      },
+      {
+        "addr": "properties{Regular}/actualUsedDataStorageSizeInTbs"
+      },
+      {
+        "addr": "properties{Regular}/adminPassword"
+      },
+      {
+        "addr": "properties{Regular}/allocatedStorageSizeInTbs"
+      },
+      {
+        "addr": "properties{Regular}/apexDetails"
+      },
+      {
+        "addr": "properties{Regular}/autonomousDatabaseId"
+      },
+      {
+        "addr": "properties{Regular}/autonomousMaintenanceScheduleType"
+      },
+      {
+        "addr": "properties{Regular}/availableUpgradeVersions"
+      },
+      {
+        "addr": "properties{Regular}/backupRetentionPeriodInDays",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/backup_retention_period_in_days"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Regular}/characterSet",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/character_set"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Regular}/computeCount",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/compute_count"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Regular}/computeModel",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/compute_model"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Regular}/connectionStrings"
+      },
+      {
+        "addr": "properties{Regular}/connectionUrls"
+      },
+      {
+        "addr": "properties{Regular}/cpuCoreCount"
+      },
+      {
+        "addr": "properties{Regular}/customerContacts"
+      },
+      {
+        "addr": "properties{Regular}/customerContacts/email"
+      },
+      {
+        "addr": "properties{Regular}/dataBaseType"
+      },
+      {
+        "addr": "properties{Regular}/dataSafeStatus"
+      },
+      {
+        "addr": "properties{Regular}/dataStorageSizeInGbs"
+      },
+      {
+        "addr": "properties{Regular}/dataStorageSizeInTbs",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/data_storage_size_in_tbs"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Regular}/databaseEdition"
+      },
+      {
+        "addr": "properties{Regular}/dbVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/db_version"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Regular}/dbWorkload",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/db_workload"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Regular}/displayName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/display_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Regular}/failedDataRecoveryInSeconds"
+      },
+      {
+        "addr": "properties{Regular}/inMemoryAreaInGbs"
+      },
+      {
+        "addr": "properties{Regular}/isAutoScalingEnabled"
+      },
+      {
+        "addr": "properties{Regular}/isAutoScalingForStorageEnabled"
+      },
+      {
+        "addr": "properties{Regular}/isLocalDataGuardEnabled"
+      },
+      {
+        "addr": "properties{Regular}/isMtlsConnectionRequired"
+      },
+      {
+        "addr": "properties{Regular}/isPreview"
+      },
+      {
+        "addr": "properties{Regular}/isPreviewVersionWithServiceTermsAccepted"
+      },
+      {
+        "addr": "properties{Regular}/isRemoteDataGuardEnabled"
+      },
+      {
+        "addr": "properties{Regular}/licenseModel",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/license_model"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Regular}/lifecycleDetails"
+      },
+      {
+        "addr": "properties{Regular}/lifecycleState"
+      },
+      {
+        "addr": "properties{Regular}/localAdgAutoFailoverMaxDataLossLimit"
+      },
+      {
+        "addr": "properties{Regular}/localDisasterRecoveryType"
+      },
+      {
+        "addr": "properties{Regular}/localStandbyDb"
+      },
+      {
+        "addr": "properties{Regular}/longTermBackupSchedule"
+      },
+      {
+        "addr": "properties{Regular}/memoryPerOracleComputeUnitInGbs"
+      },
+      {
+        "addr": "properties{Regular}/ncharacterSet",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/national_character_set"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Regular}/nextLongTermBackupTimeStamp"
+      },
+      {
+        "addr": "properties{Regular}/ociUrl"
+      },
+      {
+        "addr": "properties{Regular}/ocid"
+      },
+      {
+        "addr": "properties{Regular}/openMode"
+      },
+      {
+        "addr": "properties{Regular}/operationsInsightsStatus"
+      },
+      {
+        "addr": "properties{Regular}/peerDbId"
+      },
+      {
+        "addr": "properties{Regular}/peerDbIds"
+      },
+      {
+        "addr": "properties{Regular}/permissionLevel"
+      },
+      {
+        "addr": "properties{Regular}/privateEndpoint"
+      },
+      {
+        "addr": "properties{Regular}/privateEndpointIp"
+      },
+      {
+        "addr": "properties{Regular}/privateEndpointLabel"
+      },
+      {
+        "addr": "properties{Regular}/provisionableCpus"
+      },
+      {
+        "addr": "properties{Regular}/provisioningState"
+      },
+      {
+        "addr": "properties{Regular}/role"
+      },
+      {
+        "addr": "properties{Regular}/scheduledOperations"
+      },
+      {
+        "addr": "properties{Regular}/serviceConsoleUrl"
+      },
+      {
+        "addr": "properties{Regular}/sqlWebDeveloperUrl"
+      },
+      {
+        "addr": "properties{Regular}/subnetId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/subnet_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Regular}/supportedRegionsToCloneTo"
+      },
+      {
+        "addr": "properties{Regular}/timeCreated"
+      },
+      {
+        "addr": "properties{Regular}/timeDataGuardRoleChanged"
+      },
+      {
+        "addr": "properties{Regular}/timeDeletionOfFreeAutonomousDatabase"
+      },
+      {
+        "addr": "properties{Regular}/timeLocalDataGuardEnabled"
+      },
+      {
+        "addr": "properties{Regular}/timeMaintenanceBegin"
+      },
+      {
+        "addr": "properties{Regular}/timeMaintenanceEnd"
+      },
+      {
+        "addr": "properties{Regular}/timeOfLastFailover"
+      },
+      {
+        "addr": "properties{Regular}/timeOfLastRefresh"
+      },
+      {
+        "addr": "properties{Regular}/timeOfLastRefreshPoint"
+      },
+      {
+        "addr": "properties{Regular}/timeOfLastSwitchover"
+      },
+      {
+        "addr": "properties{Regular}/timeReclamationOfFreeAutonomousDatabase"
+      },
+      {
+        "addr": "properties{Regular}/usedDataStorageSizeInGbs"
+      },
+      {
+        "addr": "properties{Regular}/usedDataStorageSizeInTbs"
+      },
+      {
+        "addr": "properties{Regular}/vnetId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/virtual_network_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Regular}/whitelistedIps"
+      },
+      {
+        "addr": "tags"
       }
     ]
   },
@@ -153441,6 +154975,79 @@
       },
       {
         "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/CLOUDVMCLUSTERS/{}/DBNODES",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/additionalDetails"
+      },
+      {
+        "addr": "properties/backupIpId"
+      },
+      {
+        "addr": "properties/backupVnic2Id"
+      },
+      {
+        "addr": "properties/backupVnicId"
+      },
+      {
+        "addr": "properties/cpuCoreCount"
+      },
+      {
+        "addr": "properties/dbNodeStorageSizeInGbs"
+      },
+      {
+        "addr": "properties/dbServerId"
+      },
+      {
+        "addr": "properties/dbSystemId"
+      },
+      {
+        "addr": "properties/faultDomain"
+      },
+      {
+        "addr": "properties/hostIpId"
+      },
+      {
+        "addr": "properties/hostname"
+      },
+      {
+        "addr": "properties/lifecycleDetails"
+      },
+      {
+        "addr": "properties/lifecycleState"
+      },
+      {
+        "addr": "properties/maintenanceType"
+      },
+      {
+        "addr": "properties/memorySizeInGbs"
+      },
+      {
+        "addr": "properties/ocid"
+      },
+      {
+        "addr": "properties/softwareStorageSizeInGb"
+      },
+      {
+        "addr": "properties/timeCreated"
+      },
+      {
+        "addr": "properties/timeMaintenanceWindowEnd"
+      },
+      {
+        "addr": "properties/timeMaintenanceWindowStart"
+      },
+      {
+        "addr": "properties/vnic2Id"
+      },
+      {
+        "addr": "properties/vnicId"
       }
     ]
   },
@@ -156867,24 +158474,6 @@
         "addr": "properties/filter/dimensions/values"
       },
       {
-        "addr": "properties/filter/not/dimensions/name"
-      },
-      {
-        "addr": "properties/filter/not/dimensions/operator"
-      },
-      {
-        "addr": "properties/filter/not/dimensions/values"
-      },
-      {
-        "addr": "properties/filter/not/tags/name"
-      },
-      {
-        "addr": "properties/filter/not/tags/operator"
-      },
-      {
-        "addr": "properties/filter/not/tags/values"
-      },
-      {
         "addr": "properties/filter/tags/name"
       },
       {
@@ -157020,24 +158609,6 @@
       },
       {
         "addr": "properties/filter/dimensions/values"
-      },
-      {
-        "addr": "properties/filter/not/dimensions/name"
-      },
-      {
-        "addr": "properties/filter/not/dimensions/operator"
-      },
-      {
-        "addr": "properties/filter/not/dimensions/values"
-      },
-      {
-        "addr": "properties/filter/not/tags/name"
-      },
-      {
-        "addr": "properties/filter/not/tags/operator"
-      },
-      {
-        "addr": "properties/filter/not/tags/values"
       },
       {
         "addr": "properties/filter/tags/name"
