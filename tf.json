@@ -11825,12 +11825,12 @@
     ]
   },
   {
-    "api_version": "2023-05-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APP/CONTAINERAPPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-05-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APP/CONTAINERAPPS/{}",
     "operation": "GET",
     "properties": [
@@ -12248,7 +12248,7 @@
     ]
   },
   {
-    "api_version": "2023-05-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APP/CONTAINERAPPS/{}",
     "operation": "PUT",
     "properties": [
@@ -12666,7 +12666,7 @@
     ]
   },
   {
-    "api_version": "2023-05-01",
+    "api_version": "2024-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APP/CONTAINERAPPS/{}/LISTSECRETS",
     "operation": "POST"
   },
@@ -50923,6 +50923,18 @@
         "addr": "properties/encryption/entities/managedServices/keyVaultProperties/keyVersion"
       },
       {
+        "addr": "properties/enhancedSecurityCompliance/automaticClusterUpdate/value"
+      },
+      {
+        "addr": "properties/enhancedSecurityCompliance/complianceSecurityProfile/complianceStandards"
+      },
+      {
+        "addr": "properties/enhancedSecurityCompliance/complianceSecurityProfile/value"
+      },
+      {
+        "addr": "properties/enhancedSecurityCompliance/enhancedSecurityMonitoring/value"
+      },
+      {
         "addr": "properties/managedDiskIdentity/principalId",
         "app_property_maps": [
           {
@@ -51229,6 +51241,18 @@
       },
       {
         "addr": "properties/encryption/entities/managedServices/keyVaultProperties/keyVersion"
+      },
+      {
+        "addr": "properties/enhancedSecurityCompliance/automaticClusterUpdate/value"
+      },
+      {
+        "addr": "properties/enhancedSecurityCompliance/complianceSecurityProfile/complianceStandards"
+      },
+      {
+        "addr": "properties/enhancedSecurityCompliance/complianceSecurityProfile/value"
+      },
+      {
+        "addr": "properties/enhancedSecurityCompliance/enhancedSecurityMonitoring/value"
       },
       {
         "addr": "properties/managedDiskIdentity/principalId",
@@ -120037,41 +120061,26 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-06-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-06-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}",
     "operation": "GET",
     "properties": [
       {
-        "addr": "identity/principalId",
-        "app_property_maps": [
-          {
-            "name": "azurerm_search_service",
-            "addr": "/identity/0/principal_id"
-          }
-        ]
+        "addr": "identity/principalId"
       },
       {
-        "addr": "identity/tenantId",
-        "app_property_maps": [
-          {
-            "name": "azurerm_search_service",
-            "addr": "/identity/0/tenant_id"
-          }
-        ]
+        "addr": "identity/tenantId"
       },
       {
-        "addr": "identity/type",
-        "app_property_maps": [
-          {
-            "name": "azurerm_search_service",
-            "addr": "/identity/0/type"
-          }
-        ]
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
       },
       {
         "addr": "location",
@@ -120096,6 +120105,15 @@
       },
       {
         "addr": "properties/disableLocalAuth"
+      },
+      {
+        "addr": "properties/encryptionWithCmk/encryptionComplianceStatus",
+        "app_property_maps": [
+          {
+            "name": "azurerm_search_service",
+            "addr": "/customer_managed_key_encryption_compliance_status"
+          }
+        ]
       },
       {
         "addr": "properties/encryptionWithCmk/enforcement"
@@ -120172,36 +120190,21 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-06-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}",
     "operation": "PUT",
     "properties": [
       {
-        "addr": "identity/principalId",
-        "app_property_maps": [
-          {
-            "name": "azurerm_search_service",
-            "addr": "/identity/0/principal_id"
-          }
-        ]
+        "addr": "identity/principalId"
       },
       {
-        "addr": "identity/tenantId",
-        "app_property_maps": [
-          {
-            "name": "azurerm_search_service",
-            "addr": "/identity/0/tenant_id"
-          }
-        ]
+        "addr": "identity/tenantId"
       },
       {
-        "addr": "identity/type",
-        "app_property_maps": [
-          {
-            "name": "azurerm_search_service",
-            "addr": "/identity/0/type"
-          }
-        ]
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
       },
       {
         "addr": "location",
@@ -120226,6 +120229,15 @@
       },
       {
         "addr": "properties/disableLocalAuth"
+      },
+      {
+        "addr": "properties/encryptionWithCmk/encryptionComplianceStatus",
+        "app_property_maps": [
+          {
+            "name": "azurerm_search_service",
+            "addr": "/customer_managed_key_encryption_compliance_status"
+          }
+        ]
       },
       {
         "addr": "properties/encryptionWithCmk/enforcement"
@@ -120302,22 +120314,22 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-06-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}/LISTADMINKEYS",
     "operation": "POST"
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-06-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}/LISTQUERYKEYS",
     "operation": "POST"
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-06-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}/SHAREDPRIVATELINKRESOURCES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-06-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}/SHAREDPRIVATELINKRESOURCES/{}",
     "operation": "GET",
     "properties": [
@@ -120360,7 +120372,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-06-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SEARCH/SEARCHSERVICES/{}/SHAREDPRIVATELINKRESOURCES/{}",
     "operation": "PUT",
     "properties": [
@@ -141402,9 +141414,6 @@
         "addr": "properties/siteConfig/preWarmedInstanceCount"
       },
       {
-        "addr": "properties/siteConfig/publicNetworkAccess"
-      },
-      {
         "addr": "properties/siteConfig/pythonVersion"
       },
       {
@@ -141438,9 +141447,6 @@
         "addr": "properties/siteConfig/scmIpSecurityRestrictionsUseMain"
       },
       {
-        "addr": "properties/siteConfig/scmMinTlsVersion"
-      },
-      {
         "addr": "properties/siteConfig/scmType"
       },
       {
@@ -141457,9 +141463,6 @@
       },
       {
         "addr": "properties/slotSwapStatus/sourceSlotName"
-      },
-      {
-        "addr": "properties/virtualNetworkSubnetId"
       },
       {
         "addr": "tags"
@@ -142052,6 +142055,9 @@
         "addr": "properties/siteConfig/scmMinTlsVersion"
       },
       {
+        "addr": "properties/siteConfig/scmType"
+      },
+      {
         "addr": "properties/siteConfig/use32BitWorkerProcess"
       },
       {
@@ -142487,9 +142493,6 @@
         "addr": "properties/siteConfig/preWarmedInstanceCount"
       },
       {
-        "addr": "properties/siteConfig/publicNetworkAccess"
-      },
-      {
         "addr": "properties/siteConfig/pythonVersion"
       },
       {
@@ -142523,9 +142526,6 @@
         "addr": "properties/siteConfig/scmIpSecurityRestrictionsUseMain"
       },
       {
-        "addr": "properties/siteConfig/scmMinTlsVersion"
-      },
-      {
         "addr": "properties/siteConfig/scmType"
       },
       {
@@ -142542,9 +142542,6 @@
       },
       {
         "addr": "properties/slotSwapStatus/sourceSlotName"
-      },
-      {
-        "addr": "properties/virtualNetworkSubnetId"
       },
       {
         "addr": "tags"
@@ -143135,6 +143132,9 @@
       },
       {
         "addr": "properties/siteConfig/scmMinTlsVersion"
+      },
+      {
+        "addr": "properties/siteConfig/scmType"
       },
       {
         "addr": "properties/siteConfig/use32BitWorkerProcess"
@@ -144794,9 +144794,6 @@
         ]
       },
       {
-        "addr": "properties/publicNetworkAccess"
-      },
-      {
         "addr": "properties/pythonVersion",
         "app_property_maps": [
           {
@@ -144840,9 +144837,6 @@
       },
       {
         "addr": "properties/scmIpSecurityRestrictionsUseMain"
-      },
-      {
-        "addr": "properties/scmMinTlsVersion"
       },
       {
         "addr": "properties/scmType",
@@ -146675,9 +146669,6 @@
         ]
       },
       {
-        "addr": "properties/publicNetworkAccess"
-      },
-      {
         "addr": "properties/pythonVersion",
         "app_property_maps": [
           {
@@ -146723,9 +146714,6 @@
         "addr": "properties/scmIpSecurityRestrictionsUseMain"
       },
       {
-        "addr": "properties/scmMinTlsVersion"
-      },
-      {
         "addr": "properties/scmType",
         "app_property_maps": [
           {
@@ -146752,6 +146740,786 @@
         "app_property_maps": [
           {
             "name": "azurerm_app_service",
+            "addr": "/site_config/0/windows_fx_version"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2023-12-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/CONFIG/WEB",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "properties/acrUseManagedIdentityCreds"
+      },
+      {
+        "addr": "properties/acrUserManagedIdentityID",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_function_app",
+            "addr": "/site_config/0/container_registry_managed_identity_client_id"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/site_config/0/container_registry_managed_identity_client_id"
+          },
+          {
+            "name": "azurerm_linux_web_app",
+            "addr": "/site_config/0/container_registry_managed_identity_client_id"
+          },
+          {
+            "name": "azurerm_windows_web_app",
+            "addr": "/site_config/0/container_registry_managed_identity_client_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/alwaysOn"
+      },
+      {
+        "addr": "properties/apiDefinition/url",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_function_app",
+            "addr": "/site_config/0/api_definition_url"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/site_config/0/api_definition_url"
+          },
+          {
+            "name": "azurerm_linux_web_app",
+            "addr": "/site_config/0/api_definition_url"
+          },
+          {
+            "name": "azurerm_windows_function_app",
+            "addr": "/site_config/0/api_definition_url"
+          },
+          {
+            "name": "azurerm_windows_web_app",
+            "addr": "/site_config/0/api_definition_url"
+          }
+        ]
+      },
+      {
+        "addr": "properties/apiManagementConfig/id",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_function_app",
+            "addr": "/site_config/0/api_management_api_id"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/site_config/0/api_management_api_id"
+          },
+          {
+            "name": "azurerm_linux_web_app",
+            "addr": "/site_config/0/api_management_api_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/appCommandLine",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_function_app",
+            "addr": "/site_config/0/app_command_line"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/site_config/0/app_command_line"
+          },
+          {
+            "name": "azurerm_linux_web_app",
+            "addr": "/site_config/0/app_command_line"
+          },
+          {
+            "name": "azurerm_windows_function_app",
+            "addr": "/site_config/0/app_command_line"
+          },
+          {
+            "name": "azurerm_windows_web_app",
+            "addr": "/site_config/0/app_command_line"
+          }
+        ]
+      },
+      {
+        "addr": "properties/appSettings/name"
+      },
+      {
+        "addr": "properties/appSettings/value"
+      },
+      {
+        "addr": "properties/autoHealEnabled"
+      },
+      {
+        "addr": "properties/autoHealRules/actions/actionType",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_web_app",
+            "addr": "/site_config/0/auto_heal_setting/0/action/0/action_type"
+          },
+          {
+            "name": "azurerm_windows_web_app",
+            "addr": "/site_config/0/auto_heal_setting/0/action/0/action_type"
+          }
+        ]
+      },
+      {
+        "addr": "properties/autoHealRules/actions/customAction/exe",
+        "app_property_maps": [
+          {
+            "name": "azurerm_windows_web_app",
+            "addr": "/site_config/0/auto_heal_setting/0/action/0/custom_action/0/executable"
+          }
+        ]
+      },
+      {
+        "addr": "properties/autoHealRules/actions/customAction/parameters",
+        "app_property_maps": [
+          {
+            "name": "azurerm_windows_web_app",
+            "addr": "/site_config/0/auto_heal_setting/0/action/0/custom_action/0/parameters"
+          }
+        ]
+      },
+      {
+        "addr": "properties/autoHealRules/actions/minProcessExecutionTime",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_web_app",
+            "addr": "/site_config/0/auto_heal_setting/0/action/0/minimum_process_execution_time"
+          },
+          {
+            "name": "azurerm_windows_web_app",
+            "addr": "/site_config/0/auto_heal_setting/0/action/0/minimum_process_execution_time"
+          }
+        ]
+      },
+      {
+        "addr": "properties/autoHealRules/triggers/privateBytesInKB",
+        "app_property_maps": [
+          {
+            "name": "azurerm_windows_web_app",
+            "addr": "/site_config/0/auto_heal_setting/0/trigger/0/private_memory_kb"
+          }
+        ]
+      },
+      {
+        "addr": "properties/autoHealRules/triggers/requests/count",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_web_app",
+            "addr": "/site_config/0/auto_heal_setting/0/trigger/0/requests/0/count"
+          },
+          {
+            "name": "azurerm_windows_web_app",
+            "addr": "/site_config/0/auto_heal_setting/0/trigger/0/requests/0/count"
+          }
+        ]
+      },
+      {
+        "addr": "properties/autoHealRules/triggers/requests/timeInterval",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_web_app",
+            "addr": "/site_config/0/auto_heal_setting/0/trigger/0/requests/0/interval"
+          },
+          {
+            "name": "azurerm_windows_web_app",
+            "addr": "/site_config/0/auto_heal_setting/0/trigger/0/requests/0/interval"
+          }
+        ]
+      },
+      {
+        "addr": "properties/autoHealRules/triggers/slowRequests/count",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_web_app",
+            "addr": "/site_config/0/auto_heal_setting/0/trigger/0/slow_request/0/count"
+          },
+          {
+            "name": "azurerm_windows_web_app",
+            "addr": "/site_config/0/auto_heal_setting/0/trigger/0/slow_request/0/count"
+          }
+        ]
+      },
+      {
+        "addr": "properties/autoHealRules/triggers/slowRequests/path"
+      },
+      {
+        "addr": "properties/autoHealRules/triggers/slowRequests/timeInterval",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_web_app",
+            "addr": "/site_config/0/auto_heal_setting/0/trigger/0/slow_request/0/interval"
+          },
+          {
+            "name": "azurerm_windows_web_app",
+            "addr": "/site_config/0/auto_heal_setting/0/trigger/0/slow_request/0/interval"
+          }
+        ]
+      },
+      {
+        "addr": "properties/autoHealRules/triggers/slowRequests/timeTaken",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_web_app",
+            "addr": "/site_config/0/auto_heal_setting/0/trigger/0/slow_request/0/time_taken"
+          },
+          {
+            "name": "azurerm_windows_web_app",
+            "addr": "/site_config/0/auto_heal_setting/0/trigger/0/slow_request/0/time_taken"
+          }
+        ]
+      },
+      {
+        "addr": "properties/autoHealRules/triggers/slowRequestsWithPath/count"
+      },
+      {
+        "addr": "properties/autoHealRules/triggers/slowRequestsWithPath/path"
+      },
+      {
+        "addr": "properties/autoHealRules/triggers/slowRequestsWithPath/timeInterval"
+      },
+      {
+        "addr": "properties/autoHealRules/triggers/slowRequestsWithPath/timeTaken"
+      },
+      {
+        "addr": "properties/autoHealRules/triggers/statusCodes/count"
+      },
+      {
+        "addr": "properties/autoHealRules/triggers/statusCodes/path"
+      },
+      {
+        "addr": "properties/autoHealRules/triggers/statusCodes/status"
+      },
+      {
+        "addr": "properties/autoHealRules/triggers/statusCodes/subStatus"
+      },
+      {
+        "addr": "properties/autoHealRules/triggers/statusCodes/timeInterval"
+      },
+      {
+        "addr": "properties/autoHealRules/triggers/statusCodes/win32Status"
+      },
+      {
+        "addr": "properties/autoHealRules/triggers/statusCodesRange/count"
+      },
+      {
+        "addr": "properties/autoHealRules/triggers/statusCodesRange/path"
+      },
+      {
+        "addr": "properties/autoHealRules/triggers/statusCodesRange/statusCodes"
+      },
+      {
+        "addr": "properties/autoHealRules/triggers/statusCodesRange/timeInterval"
+      },
+      {
+        "addr": "properties/autoSwapSlotName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/site_config/0/auto_swap_slot_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/cors/allowedOrigins"
+      },
+      {
+        "addr": "properties/cors/supportCredentials"
+      },
+      {
+        "addr": "properties/defaultDocuments"
+      },
+      {
+        "addr": "properties/detailedErrorLoggingEnabled"
+      },
+      {
+        "addr": "properties/ftpsState",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_function_app",
+            "addr": "/site_config/0/ftps_state"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/site_config/0/ftps_state"
+          },
+          {
+            "name": "azurerm_linux_web_app",
+            "addr": "/site_config/0/ftps_state"
+          },
+          {
+            "name": "azurerm_windows_function_app",
+            "addr": "/site_config/0/ftps_state"
+          },
+          {
+            "name": "azurerm_windows_web_app",
+            "addr": "/site_config/0/ftps_state"
+          }
+        ]
+      },
+      {
+        "addr": "properties/functionAppScaleLimit",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_function_app",
+            "addr": "/site_config/0/app_scale_limit"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/site_config/0/app_scale_limit"
+          },
+          {
+            "name": "azurerm_windows_function_app",
+            "addr": "/site_config/0/app_scale_limit"
+          }
+        ]
+      },
+      {
+        "addr": "properties/functionsRuntimeScaleMonitoringEnabled"
+      },
+      {
+        "addr": "properties/handlerMappings/arguments"
+      },
+      {
+        "addr": "properties/handlerMappings/extension"
+      },
+      {
+        "addr": "properties/handlerMappings/scriptProcessor"
+      },
+      {
+        "addr": "properties/healthCheckPath",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_function_app",
+            "addr": "/site_config/0/health_check_path"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/site_config/0/health_check_path"
+          },
+          {
+            "name": "azurerm_linux_web_app",
+            "addr": "/site_config/0/health_check_path"
+          },
+          {
+            "name": "azurerm_windows_function_app",
+            "addr": "/site_config/0/health_check_path"
+          },
+          {
+            "name": "azurerm_windows_web_app",
+            "addr": "/site_config/0/health_check_path"
+          }
+        ]
+      },
+      {
+        "addr": "properties/http20Enabled"
+      },
+      {
+        "addr": "properties/ipSecurityRestrictions/action"
+      },
+      {
+        "addr": "properties/ipSecurityRestrictions/description"
+      },
+      {
+        "addr": "properties/ipSecurityRestrictions/headers"
+      },
+      {
+        "addr": "properties/ipSecurityRestrictions/ipAddress"
+      },
+      {
+        "addr": "properties/ipSecurityRestrictions/name"
+      },
+      {
+        "addr": "properties/ipSecurityRestrictions/priority"
+      },
+      {
+        "addr": "properties/ipSecurityRestrictions/tag"
+      },
+      {
+        "addr": "properties/ipSecurityRestrictions/vnetSubnetResourceId"
+      },
+      {
+        "addr": "properties/ipSecurityRestrictionsDefaultAction",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_function_app",
+            "addr": "/site_config/0/ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/site_config/0/ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_linux_web_app",
+            "addr": "/site_config/0/ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_windows_function_app",
+            "addr": "/site_config/0/ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_windows_web_app",
+            "addr": "/site_config/0/ip_restriction_default_action"
+          }
+        ]
+      },
+      {
+        "addr": "properties/javaContainer"
+      },
+      {
+        "addr": "properties/javaContainerVersion"
+      },
+      {
+        "addr": "properties/javaVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_windows_function_app",
+            "addr": "/site_config/0/application_stack/0/java_version"
+          }
+        ]
+      },
+      {
+        "addr": "properties/linuxFxVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_function_app",
+            "addr": "/site_config/0/linux_fx_version"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/site_config/0/linux_fx_version"
+          },
+          {
+            "name": "azurerm_linux_web_app",
+            "addr": "/site_config/0/linux_fx_version"
+          }
+        ]
+      },
+      {
+        "addr": "properties/loadBalancing",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_function_app",
+            "addr": "/site_config/0/load_balancing_mode"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/site_config/0/load_balancing_mode"
+          },
+          {
+            "name": "azurerm_linux_web_app",
+            "addr": "/site_config/0/load_balancing_mode"
+          },
+          {
+            "name": "azurerm_windows_function_app",
+            "addr": "/site_config/0/load_balancing_mode"
+          },
+          {
+            "name": "azurerm_windows_web_app",
+            "addr": "/site_config/0/load_balancing_mode"
+          }
+        ]
+      },
+      {
+        "addr": "properties/localMySqlEnabled"
+      },
+      {
+        "addr": "properties/managedPipelineMode",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_function_app",
+            "addr": "/site_config/0/managed_pipeline_mode"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/site_config/0/managed_pipeline_mode"
+          },
+          {
+            "name": "azurerm_linux_web_app",
+            "addr": "/site_config/0/managed_pipeline_mode"
+          },
+          {
+            "name": "azurerm_windows_function_app",
+            "addr": "/site_config/0/managed_pipeline_mode"
+          },
+          {
+            "name": "azurerm_windows_web_app",
+            "addr": "/site_config/0/managed_pipeline_mode"
+          }
+        ]
+      },
+      {
+        "addr": "properties/minTlsVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_function_app",
+            "addr": "/site_config/0/minimum_tls_version"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/site_config/0/minimum_tls_version"
+          },
+          {
+            "name": "azurerm_linux_web_app",
+            "addr": "/site_config/0/minimum_tls_version"
+          },
+          {
+            "name": "azurerm_windows_function_app",
+            "addr": "/site_config/0/minimum_tls_version"
+          },
+          {
+            "name": "azurerm_windows_web_app",
+            "addr": "/site_config/0/minimum_tls_version"
+          }
+        ]
+      },
+      {
+        "addr": "properties/minimumElasticInstanceCount",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_function_app",
+            "addr": "/site_config/0/elastic_instance_minimum"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/site_config/0/elastic_instance_minimum"
+          },
+          {
+            "name": "azurerm_windows_function_app",
+            "addr": "/site_config/0/elastic_instance_minimum"
+          }
+        ]
+      },
+      {
+        "addr": "properties/netFrameworkVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_windows_function_app",
+            "addr": "/site_config/0/application_stack/0/dotnet_version"
+          },
+          {
+            "name": "azurerm_windows_web_app",
+            "addr": "/site_config/0/application_stack/0/dotnet_version"
+          }
+        ]
+      },
+      {
+        "addr": "properties/numberOfWorkers",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_function_app",
+            "addr": "/site_config/0/worker_count"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/site_config/0/worker_count"
+          },
+          {
+            "name": "azurerm_linux_web_app",
+            "addr": "/site_config/0/worker_count"
+          },
+          {
+            "name": "azurerm_windows_function_app",
+            "addr": "/site_config/0/worker_count"
+          },
+          {
+            "name": "azurerm_windows_web_app",
+            "addr": "/site_config/0/worker_count"
+          }
+        ]
+      },
+      {
+        "addr": "properties/phpVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_windows_web_app",
+            "addr": "/site_config/0/application_stack/0/php_version"
+          }
+        ]
+      },
+      {
+        "addr": "properties/powerShellVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_windows_function_app",
+            "addr": "/site_config/0/application_stack/0/powershell_core_version"
+          }
+        ]
+      },
+      {
+        "addr": "properties/preWarmedInstanceCount",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_function_app",
+            "addr": "/site_config/0/pre_warmed_instance_count"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/site_config/0/pre_warmed_instance_count"
+          },
+          {
+            "name": "azurerm_windows_function_app",
+            "addr": "/site_config/0/pre_warmed_instance_count"
+          }
+        ]
+      },
+      {
+        "addr": "properties/publicNetworkAccess"
+      },
+      {
+        "addr": "properties/pythonVersion"
+      },
+      {
+        "addr": "properties/remoteDebuggingEnabled"
+      },
+      {
+        "addr": "properties/remoteDebuggingVersion"
+      },
+      {
+        "addr": "properties/scmIpSecurityRestrictions/action"
+      },
+      {
+        "addr": "properties/scmIpSecurityRestrictions/description"
+      },
+      {
+        "addr": "properties/scmIpSecurityRestrictions/headers"
+      },
+      {
+        "addr": "properties/scmIpSecurityRestrictions/ipAddress"
+      },
+      {
+        "addr": "properties/scmIpSecurityRestrictions/name"
+      },
+      {
+        "addr": "properties/scmIpSecurityRestrictions/priority"
+      },
+      {
+        "addr": "properties/scmIpSecurityRestrictions/tag"
+      },
+      {
+        "addr": "properties/scmIpSecurityRestrictions/vnetSubnetResourceId"
+      },
+      {
+        "addr": "properties/scmIpSecurityRestrictionsDefaultAction",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_function_app",
+            "addr": "/site_config/0/scm_ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/site_config/0/scm_ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_linux_web_app",
+            "addr": "/site_config/0/scm_ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_windows_function_app",
+            "addr": "/site_config/0/scm_ip_restriction_default_action"
+          },
+          {
+            "name": "azurerm_windows_web_app",
+            "addr": "/site_config/0/scm_ip_restriction_default_action"
+          }
+        ]
+      },
+      {
+        "addr": "properties/scmIpSecurityRestrictionsUseMain"
+      },
+      {
+        "addr": "properties/scmMinTlsVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_function_app",
+            "addr": "/site_config/0/scm_minimum_tls_version"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/site_config/0/scm_minimum_tls_version"
+          },
+          {
+            "name": "azurerm_linux_web_app",
+            "addr": "/site_config/0/scm_minimum_tls_version"
+          },
+          {
+            "name": "azurerm_windows_function_app",
+            "addr": "/site_config/0/scm_minimum_tls_version"
+          },
+          {
+            "name": "azurerm_windows_web_app",
+            "addr": "/site_config/0/scm_minimum_tls_version"
+          }
+        ]
+      },
+      {
+        "addr": "properties/scmType",
+        "app_property_maps": [
+          {
+            "name": "azurerm_app_service_source_control",
+            "addr": "/scm_type"
+          },
+          {
+            "name": "azurerm_linux_function_app",
+            "addr": "/site_config/0/scm_type"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/site_config/0/scm_type"
+          },
+          {
+            "name": "azurerm_linux_web_app",
+            "addr": "/site_config/0/scm_type"
+          },
+          {
+            "name": "azurerm_windows_function_app",
+            "addr": "/site_config/0/scm_type"
+          },
+          {
+            "name": "azurerm_windows_web_app",
+            "addr": "/site_config/0/scm_type"
+          }
+        ]
+      },
+      {
+        "addr": "properties/use32BitWorkerProcess"
+      },
+      {
+        "addr": "properties/virtualApplications/physicalPath"
+      },
+      {
+        "addr": "properties/virtualApplications/preloadEnabled"
+      },
+      {
+        "addr": "properties/virtualApplications/virtualDirectories/physicalPath"
+      },
+      {
+        "addr": "properties/virtualApplications/virtualDirectories/virtualPath"
+      },
+      {
+        "addr": "properties/virtualApplications/virtualPath"
+      },
+      {
+        "addr": "properties/vnetRouteAllEnabled"
+      },
+      {
+        "addr": "properties/webSocketsEnabled"
+      },
+      {
+        "addr": "properties/windowsFxVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_windows_function_app",
+            "addr": "/site_config/0/windows_fx_version"
+          },
+          {
+            "name": "azurerm_windows_web_app",
             "addr": "/site_config/0/windows_fx_version"
           }
         ]
@@ -147677,9 +148445,6 @@
         "addr": "properties/siteConfig/preWarmedInstanceCount"
       },
       {
-        "addr": "properties/siteConfig/publicNetworkAccess"
-      },
-      {
         "addr": "properties/siteConfig/pythonVersion"
       },
       {
@@ -147713,9 +148478,6 @@
         "addr": "properties/siteConfig/scmIpSecurityRestrictionsUseMain"
       },
       {
-        "addr": "properties/siteConfig/scmMinTlsVersion"
-      },
-      {
         "addr": "properties/siteConfig/scmType"
       },
       {
@@ -147732,9 +148494,6 @@
       },
       {
         "addr": "properties/slotSwapStatus/sourceSlotName"
-      },
-      {
-        "addr": "properties/virtualNetworkSubnetId"
       },
       {
         "addr": "tags"
@@ -148077,6 +148836,9 @@
         "addr": "properties/siteConfig/scmMinTlsVersion"
       },
       {
+        "addr": "properties/siteConfig/scmType"
+      },
+      {
         "addr": "properties/siteConfig/use32BitWorkerProcess"
       },
       {
@@ -148332,9 +149094,6 @@
         "addr": "properties/siteConfig/preWarmedInstanceCount"
       },
       {
-        "addr": "properties/siteConfig/publicNetworkAccess"
-      },
-      {
         "addr": "properties/siteConfig/pythonVersion"
       },
       {
@@ -148368,9 +149127,6 @@
         "addr": "properties/siteConfig/scmIpSecurityRestrictionsUseMain"
       },
       {
-        "addr": "properties/siteConfig/scmMinTlsVersion"
-      },
-      {
         "addr": "properties/siteConfig/scmType"
       },
       {
@@ -148387,9 +149143,6 @@
       },
       {
         "addr": "properties/slotSwapStatus/sourceSlotName"
-      },
-      {
-        "addr": "properties/virtualNetworkSubnetId"
       },
       {
         "addr": "tags"
@@ -148730,6 +149483,9 @@
       },
       {
         "addr": "properties/siteConfig/scmMinTlsVersion"
+      },
+      {
+        "addr": "properties/siteConfig/scmType"
       },
       {
         "addr": "properties/siteConfig/use32BitWorkerProcess"
@@ -150286,9 +151042,6 @@
         ]
       },
       {
-        "addr": "properties/publicNetworkAccess"
-      },
-      {
         "addr": "properties/pythonVersion",
         "app_property_maps": [
           {
@@ -150332,9 +151085,6 @@
       },
       {
         "addr": "properties/scmIpSecurityRestrictionsUseMain"
-      },
-      {
-        "addr": "properties/scmMinTlsVersion"
       },
       {
         "addr": "properties/scmType",
@@ -151919,9 +152669,6 @@
         ]
       },
       {
-        "addr": "properties/publicNetworkAccess"
-      },
-      {
         "addr": "properties/pythonVersion",
         "app_property_maps": [
           {
@@ -151965,9 +152712,6 @@
       },
       {
         "addr": "properties/scmIpSecurityRestrictionsUseMain"
-      },
-      {
-        "addr": "properties/scmMinTlsVersion"
       },
       {
         "addr": "properties/scmType",
