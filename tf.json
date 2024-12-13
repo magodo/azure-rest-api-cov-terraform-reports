@@ -32416,6 +32416,43 @@
     "operation": "POST"
   },
   {
+    "api_version": "2024-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/ACCOUNTS/{}/RAIBLOCKLISTS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2024-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/ACCOUNTS/{}/RAIBLOCKLISTS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/description",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cognitive_account_rai_blocklist",
+            "addr": "/description"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2024-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/ACCOUNTS/{}/RAIBLOCKLISTS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "properties/description",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cognitive_account_rai_blocklist",
+            "addr": "/description"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "api_version": "2023-03-31",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMMUNICATION/COMMUNICATIONSERVICES/{}",
     "operation": "DELETE"
@@ -76286,6 +76323,91 @@
     ]
   },
   {
+    "api_version": "2023-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.FABRIC/CAPACITIES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.FABRIC/CAPACITIES/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_fabric_capacity",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/administration/members"
+      },
+      {
+        "addr": "sku/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_fabric_capacity",
+            "addr": "/sku/0/name"
+          }
+        ]
+      },
+      {
+        "addr": "sku/tier",
+        "app_property_maps": [
+          {
+            "name": "azurerm_fabric_capacity",
+            "addr": "/sku/0/tier"
+          }
+        ]
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-11-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.FABRIC/CAPACITIES/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_fabric_capacity",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/administration/members"
+      },
+      {
+        "addr": "sku/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_fabric_capacity",
+            "addr": "/sku/0/name"
+          }
+        ]
+      },
+      {
+        "addr": "sku/tier",
+        "app_property_maps": [
+          {
+            "name": "azurerm_fabric_capacity",
+            "addr": "/sku/0/tier"
+          }
+        ]
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
     "api_version": "2022-05-26",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.FLUIDRELAY/FLUIDRELAYSERVERS/{}",
     "operation": "DELETE"
@@ -120146,6 +120268,15 @@
         ]
       },
       {
+        "addr": "properties/networkRuleSet/bypass",
+        "app_property_maps": [
+          {
+            "name": "azurerm_search_service",
+            "addr": "/network_rule_bypass_option"
+          }
+        ]
+      },
+      {
         "addr": "properties/networkRuleSet/ipRules/value"
       },
       {
@@ -120266,6 +120397,15 @@
           {
             "name": "azurerm_search_service",
             "addr": "/hosting_mode"
+          }
+        ]
+      },
+      {
+        "addr": "properties/networkRuleSet/bypass",
+        "app_property_maps": [
+          {
+            "name": "azurerm_search_service",
+            "addr": "/network_rule_bypass_option"
           }
         ]
       },
@@ -154968,12 +155108,12 @@
     ]
   },
   {
-    "api_version": "2024-06-01-preview",
+    "api_version": "2024-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/NGINX.NGINXPLUS/NGINXDEPLOYMENTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-06-01-preview",
+    "api_version": "2024-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/NGINX.NGINXPLUS/NGINXDEPLOYMENTS/{}",
     "operation": "GET",
     "properties": [
@@ -155043,15 +155183,6 @@
           {
             "name": "azurerm_nginx_deployment",
             "addr": "/logging_storage_account/0/container_name"
-          }
-        ]
-      },
-      {
-        "addr": "properties/managedResourceGroup",
-        "app_property_maps": [
-          {
-            "name": "azurerm_nginx_deployment",
-            "addr": "/managed_resource_group"
           }
         ]
       },
@@ -155127,7 +155258,7 @@
     ]
   },
   {
-    "api_version": "2024-06-01-preview",
+    "api_version": "2024-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/NGINX.NGINXPLUS/NGINXDEPLOYMENTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -155215,7 +155346,7 @@
     ]
   },
   {
-    "api_version": "2024-06-01-preview",
+    "api_version": "2024-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/NGINX.NGINXPLUS/NGINXDEPLOYMENTS/{}",
     "operation": "PUT",
     "properties": [
@@ -155285,15 +155416,6 @@
           {
             "name": "azurerm_nginx_deployment",
             "addr": "/logging_storage_account/0/container_name"
-          }
-        ]
-      },
-      {
-        "addr": "properties/managedResourceGroup",
-        "app_property_maps": [
-          {
-            "name": "azurerm_nginx_deployment",
-            "addr": "/managed_resource_group"
           }
         ]
       },
@@ -155369,12 +155491,12 @@
     ]
   },
   {
-    "api_version": "2024-06-01-preview",
+    "api_version": "2024-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/NGINX.NGINXPLUS/NGINXDEPLOYMENTS/{}/CERTIFICATES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-06-01-preview",
+    "api_version": "2024-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/NGINX.NGINXPLUS/NGINXDEPLOYMENTS/{}/CERTIFICATES/{}",
     "operation": "GET",
     "properties": [
@@ -155432,7 +155554,7 @@
     ]
   },
   {
-    "api_version": "2024-06-01-preview",
+    "api_version": "2024-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/NGINX.NGINXPLUS/NGINXDEPLOYMENTS/{}/CERTIFICATES/{}",
     "operation": "PUT",
     "properties": [
@@ -155490,18 +155612,15 @@
     ]
   },
   {
-    "api_version": "2024-06-01-preview",
+    "api_version": "2024-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/NGINX.NGINXPLUS/NGINXDEPLOYMENTS/{}/CONFIGURATIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-06-01-preview",
+    "api_version": "2024-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/NGINX.NGINXPLUS/NGINXDEPLOYMENTS/{}/CONFIGURATIONS/{}",
     "operation": "GET",
     "properties": [
-      {
-        "addr": "name"
-      },
       {
         "addr": "properties/files/content"
       },
@@ -155518,9 +155637,6 @@
         ]
       },
       {
-        "addr": "properties/protectedFiles/content"
-      },
-      {
         "addr": "properties/protectedFiles/virtualPath"
       },
       {
@@ -155535,7 +155651,7 @@
     ]
   },
   {
-    "api_version": "2024-06-01-preview",
+    "api_version": "2024-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/NGINX.NGINXPLUS/NGINXDEPLOYMENTS/{}/CONFIGURATIONS/{}",
     "operation": "PUT",
     "properties": [
