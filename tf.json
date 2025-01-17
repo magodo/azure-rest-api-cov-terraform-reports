@@ -12304,6 +12304,15 @@
         "addr": "properties/template/scale/rules/tcp/metadata"
       },
       {
+        "addr": "properties/template/terminationGracePeriodSeconds",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_app",
+            "addr": "/template/0/termination_grace_period_seconds"
+          }
+        ]
+      },
+      {
         "addr": "properties/template/volumes/name"
       },
       {
@@ -12720,6 +12729,15 @@
       },
       {
         "addr": "properties/template/scale/rules/tcp/metadata"
+      },
+      {
+        "addr": "properties/template/terminationGracePeriodSeconds",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_app",
+            "addr": "/template/0/termination_grace_period_seconds"
+          }
+        ]
       },
       {
         "addr": "properties/template/volumes/name"
@@ -27299,12 +27317,12 @@
     ]
   },
   {
-    "api_version": "2024-10-01",
+    "api_version": "2024-06-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-10-01",
+    "api_version": "2024-06-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}",
     "operation": "GET",
     "properties": [
@@ -27353,7 +27371,7 @@
     ]
   },
   {
-    "api_version": "2024-10-01",
+    "api_version": "2024-06-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}",
     "operation": "PATCH",
     "properties": [
@@ -27363,7 +27381,7 @@
     ]
   },
   {
-    "api_version": "2024-10-01",
+    "api_version": "2024-06-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}",
     "operation": "PUT",
     "properties": [
@@ -27412,12 +27430,12 @@
     ]
   },
   {
-    "api_version": "2024-10-01",
+    "api_version": "2024-06-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-10-01",
+    "api_version": "2024-06-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}",
     "operation": "GET",
     "properties": [
@@ -27481,7 +27499,7 @@
     ]
   },
   {
-    "api_version": "2024-10-01",
+    "api_version": "2024-06-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}",
     "operation": "PUT",
     "properties": [
@@ -27545,7 +27563,7 @@
     ]
   },
   {
-    "api_version": "2024-10-01",
+    "api_version": "2024-06-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}/FORCEUNLINK",
     "operation": "POST",
     "properties": [
@@ -27555,7 +27573,7 @@
     ]
   },
   {
-    "api_version": "2024-10-01",
+    "api_version": "2024-06-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}/LISTKEYS",
     "operation": "POST"
   },
@@ -45259,6 +45277,146 @@
     ]
   },
   {
+    "api_version": "2023-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/CREDENTIALSETS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/CREDENTIALSETS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "identity/principalId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_registry_credential_set",
+            "addr": "/identity/0/principal_id"
+          }
+        ]
+      },
+      {
+        "addr": "identity/tenantId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_registry_credential_set",
+            "addr": "/identity/0/tenant_id"
+          }
+        ]
+      },
+      {
+        "addr": "identity/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_registry_credential_set",
+            "addr": "/identity/0/type"
+          }
+        ]
+      },
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/authCredentials/name"
+      },
+      {
+        "addr": "properties/authCredentials/passwordSecretIdentifier"
+      },
+      {
+        "addr": "properties/authCredentials/usernameSecretIdentifier"
+      },
+      {
+        "addr": "properties/loginServer",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_registry_credential_set",
+            "addr": "/login_server"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2023-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/CREDENTIALSETS/{}",
+    "operation": "PATCH",
+    "properties": [
+      {
+        "addr": "identity/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_registry_credential_set",
+            "addr": "/identity/0/type"
+          }
+        ]
+      },
+      {
+        "addr": "properties/authCredentials/name"
+      },
+      {
+        "addr": "properties/authCredentials/passwordSecretIdentifier"
+      },
+      {
+        "addr": "properties/authCredentials/usernameSecretIdentifier"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/CREDENTIALSETS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "identity/principalId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_registry_credential_set",
+            "addr": "/identity/0/principal_id"
+          }
+        ]
+      },
+      {
+        "addr": "identity/tenantId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_registry_credential_set",
+            "addr": "/identity/0/tenant_id"
+          }
+        ]
+      },
+      {
+        "addr": "identity/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_registry_credential_set",
+            "addr": "/identity/0/type"
+          }
+        ]
+      },
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/authCredentials/name"
+      },
+      {
+        "addr": "properties/authCredentials/passwordSecretIdentifier"
+      },
+      {
+        "addr": "properties/authCredentials/usernameSecretIdentifier"
+      },
+      {
+        "addr": "properties/loginServer",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_registry_credential_set",
+            "addr": "/login_server"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "api_version": "2023-11-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/LISTCREDENTIALS",
     "operation": "POST"
@@ -59641,6 +59799,15 @@
         "addr": "properties/featureSettings/crossRegionRestoreSettings/state"
       },
       {
+        "addr": "properties/securitySettings/immutabilitySettings/state",
+        "app_property_maps": [
+          {
+            "name": "azurerm_data_protection_backup_vault",
+            "addr": "/immutability"
+          }
+        ]
+      },
+      {
         "addr": "properties/securitySettings/softDeleteSettings/retentionDurationInDays",
         "app_property_maps": [
           {
@@ -59712,6 +59879,15 @@
       },
       {
         "addr": "properties/featureSettings/crossRegionRestoreSettings/state"
+      },
+      {
+        "addr": "properties/securitySettings/immutabilitySettings/state",
+        "app_property_maps": [
+          {
+            "name": "azurerm_data_protection_backup_vault",
+            "addr": "/immutability"
+          }
+        ]
       },
       {
         "addr": "properties/securitySettings/softDeleteSettings/retentionDurationInDays",
@@ -62423,12 +62599,12 @@
     ]
   },
   {
-    "api_version": "2022-12-01",
+    "api_version": "2024-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/ADMINISTRATORS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-12-01",
+    "api_version": "2024-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/ADMINISTRATORS/{}",
     "operation": "GET",
     "properties": [
@@ -62471,7 +62647,7 @@
     ]
   },
   {
-    "api_version": "2022-12-01",
+    "api_version": "2024-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/ADMINISTRATORS/{}",
     "operation": "PUT",
     "properties": [
@@ -62561,12 +62737,12 @@
     ]
   },
   {
-    "api_version": "2022-12-01",
+    "api_version": "2024-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/DATABASES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-12-01",
+    "api_version": "2024-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/DATABASES/{}",
     "operation": "GET",
     "properties": [
@@ -62591,7 +62767,7 @@
     ]
   },
   {
-    "api_version": "2022-12-01",
+    "api_version": "2024-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/DATABASES/{}",
     "operation": "PUT",
     "properties": [
@@ -62616,12 +62792,12 @@
     ]
   },
   {
-    "api_version": "2022-12-01",
+    "api_version": "2024-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/FIREWALLRULES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-12-01",
+    "api_version": "2024-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/FIREWALLRULES/{}",
     "operation": "GET",
     "properties": [
@@ -62646,7 +62822,7 @@
     ]
   },
   {
-    "api_version": "2022-12-01",
+    "api_version": "2024-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/FIREWALLRULES/{}",
     "operation": "PUT",
     "properties": [
@@ -62684,12 +62860,12 @@
     ]
   },
   {
-    "api_version": "2023-06-01-preview",
+    "api_version": "2024-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/VIRTUALENDPOINTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01-preview",
+    "api_version": "2024-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/VIRTUALENDPOINTS/{}",
     "operation": "GET",
     "properties": [
@@ -62705,7 +62881,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01-preview",
+    "api_version": "2024-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/VIRTUALENDPOINTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -62718,7 +62894,7 @@
     ]
   },
   {
-    "api_version": "2023-06-01-preview",
+    "api_version": "2024-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/VIRTUALENDPOINTS/{}",
     "operation": "PUT",
     "properties": [
@@ -129049,6 +129225,145 @@
   },
   {
     "api_version": "2023-08-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/JOBAGENTS/{}/JOBS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-08-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/JOBAGENTS/{}/JOBS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/description",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mssql_job",
+            "addr": "/description"
+          }
+        ]
+      },
+      {
+        "addr": "properties/schedule"
+      },
+      {
+        "addr": "properties/schedule/enabled",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mssql_job_schedule",
+            "addr": "/enabled"
+          }
+        ]
+      },
+      {
+        "addr": "properties/schedule/endTime",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mssql_job_schedule",
+            "addr": "/end_time"
+          }
+        ]
+      },
+      {
+        "addr": "properties/schedule/interval",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mssql_job_schedule",
+            "addr": "/interval"
+          }
+        ]
+      },
+      {
+        "addr": "properties/schedule/startTime",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mssql_job_schedule",
+            "addr": "/start_time"
+          }
+        ]
+      },
+      {
+        "addr": "properties/schedule/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mssql_job_schedule",
+            "addr": "/type"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2023-08-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/JOBAGENTS/{}/JOBS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/description",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mssql_job",
+            "addr": "/description"
+          }
+        ]
+      },
+      {
+        "addr": "properties/schedule"
+      },
+      {
+        "addr": "properties/schedule/enabled",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mssql_job_schedule",
+            "addr": "/enabled"
+          }
+        ]
+      },
+      {
+        "addr": "properties/schedule/endTime",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mssql_job_schedule",
+            "addr": "/end_time"
+          }
+        ]
+      },
+      {
+        "addr": "properties/schedule/interval",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mssql_job_schedule",
+            "addr": "/interval"
+          }
+        ]
+      },
+      {
+        "addr": "properties/schedule/startTime",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mssql_job_schedule",
+            "addr": "/start_time"
+          }
+        ]
+      },
+      {
+        "addr": "properties/schedule/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mssql_job_schedule",
+            "addr": "/type"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2023-08-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/KEYS/{}",
     "operation": "PUT",
     "properties": [
@@ -162371,12 +162686,12 @@
     ]
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2023-08-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.COSTMANAGEMENT/EXPORTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2023-08-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.COSTMANAGEMENT/EXPORTS/{}",
     "operation": "GET",
     "properties": [
@@ -162514,7 +162829,7 @@
     ]
   },
   {
-    "api_version": "2021-10-01",
+    "api_version": "2023-08-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.COSTMANAGEMENT/EXPORTS/{}",
     "operation": "PUT",
     "properties": [
@@ -162652,17 +162967,12 @@
     ]
   },
   {
-    "api_version": "2022-06-01-preview",
+    "api_version": "2023-08-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.COSTMANAGEMENT/SCHEDULEDACTIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-10-01",
-    "api_path": "/{}/PROVIDERS/MICROSOFT.COSTMANAGEMENT/SCHEDULEDACTIONS/{}",
-    "operation": "DELETE"
-  },
-  {
-    "api_version": "2022-06-01-preview",
+    "api_version": "2023-08-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.COSTMANAGEMENT/SCHEDULEDACTIONS/{}",
     "operation": "GET",
     "properties": [
@@ -162674,52 +162984,6 @@
       },
       {
         "addr": "name"
-      },
-      {
-        "addr": "properties/displayName"
-      },
-      {
-        "addr": "properties/fileDestination/fileFormats"
-      },
-      {
-        "addr": "properties/notification/message"
-      },
-      {
-        "addr": "properties/notification/subject"
-      },
-      {
-        "addr": "properties/notification/to"
-      },
-      {
-        "addr": "properties/schedule/endDate"
-      },
-      {
-        "addr": "properties/schedule/frequency"
-      },
-      {
-        "addr": "properties/schedule/startDate"
-      },
-      {
-        "addr": "properties/scope"
-      },
-      {
-        "addr": "properties/status"
-      },
-      {
-        "addr": "properties/viewId"
-      }
-    ]
-  },
-  {
-    "api_version": "2022-10-01",
-    "api_path": "/{}/PROVIDERS/MICROSOFT.COSTMANAGEMENT/SCHEDULEDACTIONS/{}",
-    "operation": "GET",
-    "properties": [
-      {
-        "addr": "eTag"
-      },
-      {
-        "addr": "kind"
       },
       {
         "addr": "properties/displayName"
@@ -162761,52 +163025,6 @@
         "addr": "properties/schedule/weeksOfMonth"
       },
       {
-        "addr": "properties/status"
-      },
-      {
-        "addr": "properties/viewId"
-      }
-    ]
-  },
-  {
-    "api_version": "2022-06-01-preview",
-    "api_path": "/{}/PROVIDERS/MICROSOFT.COSTMANAGEMENT/SCHEDULEDACTIONS/{}",
-    "operation": "PUT",
-    "properties": [
-      {
-        "addr": "eTag"
-      },
-      {
-        "addr": "kind"
-      },
-      {
-        "addr": "name"
-      },
-      {
-        "addr": "properties/displayName"
-      },
-      {
-        "addr": "properties/fileDestination/fileFormats"
-      },
-      {
-        "addr": "properties/notification/message"
-      },
-      {
-        "addr": "properties/notification/subject"
-      },
-      {
-        "addr": "properties/notification/to"
-      },
-      {
-        "addr": "properties/schedule/endDate"
-      },
-      {
-        "addr": "properties/schedule/frequency"
-      },
-      {
-        "addr": "properties/schedule/startDate"
-      },
-      {
         "addr": "properties/scope"
       },
       {
@@ -162818,7 +163036,7 @@
     ]
   },
   {
-    "api_version": "2022-10-01",
+    "api_version": "2023-08-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.COSTMANAGEMENT/SCHEDULEDACTIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -162827,6 +163045,9 @@
       },
       {
         "addr": "kind"
+      },
+      {
+        "addr": "name"
       },
       {
         "addr": "properties/displayName"
@@ -162868,6 +163089,9 @@
         "addr": "properties/schedule/weeksOfMonth"
       },
       {
+        "addr": "properties/scope"
+      },
+      {
         "addr": "properties/status"
       },
       {
@@ -162876,12 +163100,12 @@
     ]
   },
   {
-    "api_version": "2022-10-01",
+    "api_version": "2023-08-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.COSTMANAGEMENT/VIEWS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-10-01",
+    "api_version": "2023-08-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.COSTMANAGEMENT/VIEWS/{}",
     "operation": "GET",
     "properties": [
@@ -162936,7 +163160,7 @@
     ]
   },
   {
-    "api_version": "2022-10-01",
+    "api_version": "2023-08-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.COSTMANAGEMENT/VIEWS/{}",
     "operation": "PUT",
     "properties": [
