@@ -4872,6 +4872,9 @@
         "addr": "name"
       },
       {
+        "addr": "properties/dynatraceEnvironmentProperties/environmentInfo/environmentId"
+      },
+      {
         "addr": "properties/marketplaceSubscriptionStatus"
       },
       {
@@ -4938,6 +4941,9 @@
       },
       {
         "addr": "name"
+      },
+      {
+        "addr": "properties/dynatraceEnvironmentProperties/environmentInfo/environmentId"
       },
       {
         "addr": "properties/marketplaceSubscriptionStatus"
@@ -59095,6 +59101,62 @@
   },
   {
     "api_version": "2018-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAFACTORY/FACTORIES/{}/PIPELINES/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/annotations"
+      },
+      {
+        "addr": "properties/concurrency"
+      },
+      {
+        "addr": "properties/description"
+      },
+      {
+        "addr": "properties/folder/name"
+      },
+      {
+        "addr": "properties/parameters"
+      },
+      {
+        "addr": "properties/policy/elapsedTimeMetric/duration"
+      },
+      {
+        "addr": "properties/variables"
+      }
+    ]
+  },
+  {
+    "api_version": "2018-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAFACTORY/FACTORIES/{}/PIPELINES/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "properties/annotations"
+      },
+      {
+        "addr": "properties/concurrency"
+      },
+      {
+        "addr": "properties/description"
+      },
+      {
+        "addr": "properties/folder/name"
+      },
+      {
+        "addr": "properties/parameters"
+      },
+      {
+        "addr": "properties/policy/elapsedTimeMetric/duration"
+      },
+      {
+        "addr": "properties/variables"
+      }
+    ]
+  },
+  {
+    "api_version": "2018-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAFACTORY/FACTORIES/{}/TRIGGERS/{}",
     "operation": "DELETE"
   },
@@ -60072,6 +60134,21 @@
         "addr": "properties/featureSettings/crossRegionRestoreSettings/state"
       },
       {
+        "addr": "properties/securitySettings/encryptionSettings/kekIdentity/identityType"
+      },
+      {
+        "addr": "properties/securitySettings/encryptionSettings/keyVaultProperties/keyUri",
+        "app_property_maps": [
+          {
+            "name": "azurerm_data_protection_backup_vault_customer_managed_key",
+            "addr": "/key_vault_key_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/securitySettings/encryptionSettings/state"
+      },
+      {
         "addr": "properties/securitySettings/immutabilitySettings/state",
         "app_property_maps": [
           {
@@ -60152,6 +60229,21 @@
       },
       {
         "addr": "properties/featureSettings/crossRegionRestoreSettings/state"
+      },
+      {
+        "addr": "properties/securitySettings/encryptionSettings/kekIdentity/identityType"
+      },
+      {
+        "addr": "properties/securitySettings/encryptionSettings/keyVaultProperties/keyUri",
+        "app_property_maps": [
+          {
+            "name": "azurerm_data_protection_backup_vault_customer_managed_key",
+            "addr": "/key_vault_key_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/securitySettings/encryptionSettings/state"
       },
       {
         "addr": "properties/securitySettings/immutabilitySettings/state",
@@ -85910,13 +86002,7 @@
         "addr": "properties/attachedDatabaseNames"
       },
       {
-        "addr": "properties/clusterResourceId",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kusto_attached_database_configuration",
-            "addr": "/cluster_resource_id"
-          }
-        ]
+        "addr": "properties/clusterResourceId"
       },
       {
         "addr": "properties/databaseName",
@@ -85974,13 +86060,7 @@
         "addr": "properties/attachedDatabaseNames"
       },
       {
-        "addr": "properties/clusterResourceId",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kusto_attached_database_configuration",
-            "addr": "/cluster_resource_id"
-          }
-        ]
+        "addr": "properties/clusterResourceId"
       },
       {
         "addr": "properties/databaseName",
@@ -163099,6 +163179,12 @@
         "addr": "name"
       },
       {
+        "addr": "properties/condition"
+      },
+      {
+        "addr": "properties/conditionVersion"
+      },
+      {
         "addr": "properties/justification"
       },
       {
@@ -163152,6 +163238,12 @@
       },
       {
         "addr": "name"
+      },
+      {
+        "addr": "properties/condition"
+      },
+      {
+        "addr": "properties/conditionVersion"
       },
       {
         "addr": "properties/justification"
