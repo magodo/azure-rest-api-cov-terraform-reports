@@ -32072,6 +32072,10 @@
         "addr": "properties/networkAcls/bypass",
         "app_property_maps": [
           {
+            "name": "azurerm_ai_services",
+            "addr": "/network_acls/0/bypass"
+          },
+          {
             "name": "azurerm_cognitive_account",
             "addr": "/network_acls/0/bypass"
           }
@@ -32302,6 +32306,10 @@
         "addr": "properties/networkAcls/bypass",
         "app_property_maps": [
           {
+            "name": "azurerm_ai_services",
+            "addr": "/network_acls/0/bypass"
+          },
+          {
             "name": "azurerm_cognitive_account",
             "addr": "/network_acls/0/bypass"
           }
@@ -32531,6 +32539,10 @@
       {
         "addr": "properties/networkAcls/bypass",
         "app_property_maps": [
+          {
+            "name": "azurerm_ai_services",
+            "addr": "/network_acls/0/bypass"
+          },
           {
             "name": "azurerm_cognitive_account",
             "addr": "/network_acls/0/bypass"
@@ -62407,17 +62419,23 @@
     ]
   },
   {
-    "api_version": "2023-06-01-preview",
+    "api_version": "2024-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-06-01-preview",
+    "api_version": "2024-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}",
     "operation": "GET",
     "properties": [
       {
         "addr": "id"
+      },
+      {
+        "addr": "identity/principalId"
+      },
+      {
+        "addr": "identity/tenantId"
       },
       {
         "addr": "identity/type"
@@ -62626,10 +62644,16 @@
     ]
   },
   {
-    "api_version": "2023-06-01-preview",
+    "api_version": "2024-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}",
     "operation": "PATCH",
     "properties": [
+      {
+        "addr": "identity/principalId"
+      },
+      {
+        "addr": "identity/tenantId"
+      },
       {
         "addr": "identity/type"
       },
@@ -62792,12 +62816,18 @@
     ]
   },
   {
-    "api_version": "2023-06-01-preview",
+    "api_version": "2024-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}",
     "operation": "PUT",
     "properties": [
       {
         "addr": "id"
+      },
+      {
+        "addr": "identity/principalId"
+      },
+      {
+        "addr": "identity/tenantId"
       },
       {
         "addr": "identity/type"
@@ -63088,7 +63118,7 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2024-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/CONFIGURATIONS/{}",
     "operation": "GET",
     "properties": [
@@ -63116,7 +63146,7 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2024-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/CONFIGURATIONS/{}",
     "operation": "PATCH",
     "properties": [
@@ -63254,7 +63284,7 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2024-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/RESTART",
     "operation": "POST",
     "properties": [
@@ -81874,12 +81904,12 @@
     ]
   },
   {
-    "api_version": "2022-06-01",
+    "api_version": "2023-03-11",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/DATACOLLECTIONENDPOINTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-06-01",
+    "api_version": "2023-03-11",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/DATACOLLECTIONENDPOINTS/{}",
     "operation": "GET",
     "properties": [
@@ -81949,7 +81979,7 @@
     ]
   },
   {
-    "api_version": "2022-06-01",
+    "api_version": "2023-03-11",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/DATACOLLECTIONENDPOINTS/{}",
     "operation": "PUT",
     "properties": [
@@ -82019,12 +82049,12 @@
     ]
   },
   {
-    "api_version": "2022-06-01",
+    "api_version": "2023-03-11",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/DATACOLLECTIONRULES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-06-01",
+    "api_version": "2023-03-11",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/DATACOLLECTIONRULES/{}",
     "operation": "GET",
     "properties": [
@@ -82292,7 +82322,7 @@
     ]
   },
   {
-    "api_version": "2022-06-01",
+    "api_version": "2023-03-11",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.INSIGHTS/DATACOLLECTIONRULES/{}",
     "operation": "PUT",
     "properties": [
@@ -126310,10 +126340,17 @@
         "addr": "identity/userAssignedIdentities"
       },
       {
+        "addr": "kind"
+      },
+      {
         "addr": "location",
         "app_property_maps": [
           {
             "name": "azurerm_web_pubsub",
+            "addr": "/location"
+          },
+          {
+            "name": "azurerm_web_pubsub_socketio",
             "addr": "/location"
           }
         ]
@@ -126330,6 +126367,10 @@
           {
             "name": "azurerm_web_pubsub",
             "addr": "/external_ip"
+          },
+          {
+            "name": "azurerm_web_pubsub_socketio",
+            "addr": "/external_ip"
           }
         ]
       },
@@ -126338,6 +126379,10 @@
         "app_property_maps": [
           {
             "name": "azurerm_web_pubsub",
+            "addr": "/hostname"
+          },
+          {
+            "name": "azurerm_web_pubsub_socketio",
             "addr": "/hostname"
           }
         ]
@@ -126385,13 +126430,23 @@
         "addr": "properties/provisioningState"
       },
       {
-        "addr": "properties/publicNetworkAccess"
+        "addr": "properties/publicNetworkAccess",
+        "app_property_maps": [
+          {
+            "name": "azurerm_web_pubsub_socketio",
+            "addr": "/public_network_access"
+          }
+        ]
       },
       {
         "addr": "properties/publicPort",
         "app_property_maps": [
           {
             "name": "azurerm_web_pubsub",
+            "addr": "/public_port"
+          },
+          {
+            "name": "azurerm_web_pubsub_socketio",
             "addr": "/public_port"
           }
         ]
@@ -126402,6 +126457,19 @@
           {
             "name": "azurerm_web_pubsub",
             "addr": "/server_port"
+          },
+          {
+            "name": "azurerm_web_pubsub_socketio",
+            "addr": "/server_port"
+          }
+        ]
+      },
+      {
+        "addr": "properties/socketIO/serviceMode",
+        "app_property_maps": [
+          {
+            "name": "azurerm_web_pubsub_socketio",
+            "addr": "/service_mode"
           }
         ]
       },
@@ -126423,6 +126491,10 @@
           {
             "name": "azurerm_web_pubsub",
             "addr": "/capacity"
+          },
+          {
+            "name": "azurerm_web_pubsub_socketio",
+            "addr": "/sku/0/capacity"
           }
         ]
       },
@@ -126432,6 +126504,10 @@
           {
             "name": "azurerm_web_pubsub",
             "addr": "/sku"
+          },
+          {
+            "name": "azurerm_web_pubsub_socketio",
+            "addr": "/sku/0/name"
           }
         ]
       },
@@ -126458,10 +126534,17 @@
         "addr": "identity/userAssignedIdentities"
       },
       {
+        "addr": "kind"
+      },
+      {
         "addr": "location",
         "app_property_maps": [
           {
             "name": "azurerm_web_pubsub",
+            "addr": "/location"
+          },
+          {
+            "name": "azurerm_web_pubsub_socketio",
             "addr": "/location"
           }
         ]
@@ -126478,6 +126561,10 @@
           {
             "name": "azurerm_web_pubsub",
             "addr": "/external_ip"
+          },
+          {
+            "name": "azurerm_web_pubsub_socketio",
+            "addr": "/external_ip"
           }
         ]
       },
@@ -126486,6 +126573,10 @@
         "app_property_maps": [
           {
             "name": "azurerm_web_pubsub",
+            "addr": "/hostname"
+          },
+          {
+            "name": "azurerm_web_pubsub_socketio",
             "addr": "/hostname"
           }
         ]
@@ -126533,13 +126624,23 @@
         "addr": "properties/provisioningState"
       },
       {
-        "addr": "properties/publicNetworkAccess"
+        "addr": "properties/publicNetworkAccess",
+        "app_property_maps": [
+          {
+            "name": "azurerm_web_pubsub_socketio",
+            "addr": "/public_network_access"
+          }
+        ]
       },
       {
         "addr": "properties/publicPort",
         "app_property_maps": [
           {
             "name": "azurerm_web_pubsub",
+            "addr": "/public_port"
+          },
+          {
+            "name": "azurerm_web_pubsub_socketio",
             "addr": "/public_port"
           }
         ]
@@ -126550,6 +126651,19 @@
           {
             "name": "azurerm_web_pubsub",
             "addr": "/server_port"
+          },
+          {
+            "name": "azurerm_web_pubsub_socketio",
+            "addr": "/server_port"
+          }
+        ]
+      },
+      {
+        "addr": "properties/socketIO/serviceMode",
+        "app_property_maps": [
+          {
+            "name": "azurerm_web_pubsub_socketio",
+            "addr": "/service_mode"
           }
         ]
       },
@@ -126571,6 +126685,10 @@
           {
             "name": "azurerm_web_pubsub",
             "addr": "/capacity"
+          },
+          {
+            "name": "azurerm_web_pubsub_socketio",
+            "addr": "/sku/0/capacity"
           }
         ]
       },
@@ -126580,6 +126698,10 @@
           {
             "name": "azurerm_web_pubsub",
             "addr": "/sku"
+          },
+          {
+            "name": "azurerm_web_pubsub_socketio",
+            "addr": "/sku/0/name"
           }
         ]
       },
@@ -126606,10 +126728,17 @@
         "addr": "identity/userAssignedIdentities"
       },
       {
+        "addr": "kind"
+      },
+      {
         "addr": "location",
         "app_property_maps": [
           {
             "name": "azurerm_web_pubsub",
+            "addr": "/location"
+          },
+          {
+            "name": "azurerm_web_pubsub_socketio",
             "addr": "/location"
           }
         ]
@@ -126626,6 +126755,10 @@
           {
             "name": "azurerm_web_pubsub",
             "addr": "/external_ip"
+          },
+          {
+            "name": "azurerm_web_pubsub_socketio",
+            "addr": "/external_ip"
           }
         ]
       },
@@ -126634,6 +126767,10 @@
         "app_property_maps": [
           {
             "name": "azurerm_web_pubsub",
+            "addr": "/hostname"
+          },
+          {
+            "name": "azurerm_web_pubsub_socketio",
             "addr": "/hostname"
           }
         ]
@@ -126681,13 +126818,23 @@
         "addr": "properties/provisioningState"
       },
       {
-        "addr": "properties/publicNetworkAccess"
+        "addr": "properties/publicNetworkAccess",
+        "app_property_maps": [
+          {
+            "name": "azurerm_web_pubsub_socketio",
+            "addr": "/public_network_access"
+          }
+        ]
       },
       {
         "addr": "properties/publicPort",
         "app_property_maps": [
           {
             "name": "azurerm_web_pubsub",
+            "addr": "/public_port"
+          },
+          {
+            "name": "azurerm_web_pubsub_socketio",
             "addr": "/public_port"
           }
         ]
@@ -126698,6 +126845,19 @@
           {
             "name": "azurerm_web_pubsub",
             "addr": "/server_port"
+          },
+          {
+            "name": "azurerm_web_pubsub_socketio",
+            "addr": "/server_port"
+          }
+        ]
+      },
+      {
+        "addr": "properties/socketIO/serviceMode",
+        "app_property_maps": [
+          {
+            "name": "azurerm_web_pubsub_socketio",
+            "addr": "/service_mode"
           }
         ]
       },
@@ -126719,6 +126879,10 @@
           {
             "name": "azurerm_web_pubsub",
             "addr": "/capacity"
+          },
+          {
+            "name": "azurerm_web_pubsub_socketio",
+            "addr": "/sku/0/capacity"
           }
         ]
       },
@@ -126728,6 +126892,10 @@
           {
             "name": "azurerm_web_pubsub",
             "addr": "/sku"
+          },
+          {
+            "name": "azurerm_web_pubsub_socketio",
+            "addr": "/sku/0/name"
           }
         ]
       },
@@ -136570,6 +136738,9 @@
         "addr": "properties/jobState"
       },
       {
+        "addr": "properties/jobStorageAccount"
+      },
+      {
         "addr": "properties/jobStorageAccount/accountKey"
       },
       {
@@ -136578,6 +136749,10 @@
           {
             "name": "azurerm_stream_analytics_job",
             "addr": "/job_storage_account/0/account_name"
+          },
+          {
+            "name": "azurerm_stream_analytics_job_storage_account",
+            "addr": "/storage_account_name"
           }
         ]
       },
@@ -136587,6 +136762,10 @@
           {
             "name": "azurerm_stream_analytics_job",
             "addr": "/job_storage_account/0/authentication_mode"
+          },
+          {
+            "name": "azurerm_stream_analytics_job_storage_account",
+            "addr": "/authentication_mode"
           }
         ]
       },
@@ -136775,6 +136954,9 @@
         "addr": "properties/jobState"
       },
       {
+        "addr": "properties/jobStorageAccount"
+      },
+      {
         "addr": "properties/jobStorageAccount/accountKey"
       },
       {
@@ -136783,6 +136965,10 @@
           {
             "name": "azurerm_stream_analytics_job",
             "addr": "/job_storage_account/0/account_name"
+          },
+          {
+            "name": "azurerm_stream_analytics_job_storage_account",
+            "addr": "/storage_account_name"
           }
         ]
       },
@@ -136792,6 +136978,10 @@
           {
             "name": "azurerm_stream_analytics_job",
             "addr": "/job_storage_account/0/authentication_mode"
+          },
+          {
+            "name": "azurerm_stream_analytics_job_storage_account",
+            "addr": "/authentication_mode"
           }
         ]
       },
@@ -136980,6 +137170,9 @@
         "addr": "properties/jobState"
       },
       {
+        "addr": "properties/jobStorageAccount"
+      },
+      {
         "addr": "properties/jobStorageAccount/accountKey"
       },
       {
@@ -136988,6 +137181,10 @@
           {
             "name": "azurerm_stream_analytics_job",
             "addr": "/job_storage_account/0/account_name"
+          },
+          {
+            "name": "azurerm_stream_analytics_job_storage_account",
+            "addr": "/storage_account_name"
           }
         ]
       },
@@ -136997,6 +137194,10 @@
           {
             "name": "azurerm_stream_analytics_job",
             "addr": "/job_storage_account/0/authentication_mode"
+          },
+          {
+            "name": "azurerm_stream_analytics_job_storage_account",
+            "addr": "/authentication_mode"
           }
         ]
       },
@@ -144853,6 +145054,9 @@
         ]
       },
       {
+        "addr": "properties/vnetBackupRestoreEnabled"
+      },
+      {
         "addr": "properties/vnetContentShareEnabled"
       },
       {
@@ -145960,6 +146164,9 @@
             "addr": "/virtual_network_subnet_id"
           }
         ]
+      },
+      {
+        "addr": "properties/vnetBackupRestoreEnabled"
       },
       {
         "addr": "properties/vnetContentShareEnabled"
@@ -151658,6 +151865,9 @@
         "addr": "properties/virtualNetworkSubnetId"
       },
       {
+        "addr": "properties/vnetBackupRestoreEnabled"
+      },
+      {
         "addr": "properties/vnetContentShareEnabled"
       },
       {
@@ -152335,6 +152545,9 @@
       },
       {
         "addr": "properties/virtualNetworkSubnetId"
+      },
+      {
+        "addr": "properties/vnetBackupRestoreEnabled"
       },
       {
         "addr": "properties/vnetContentShareEnabled"
@@ -166323,12 +166536,12 @@
     "operation": "POST"
   },
   {
-    "api_version": "2022-06-01",
+    "api_version": "2023-03-11",
     "api_path": "/{}/PROVIDERS/MICROSOFT.INSIGHTS/DATACOLLECTIONRULEASSOCIATIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-06-01",
+    "api_version": "2023-03-11",
     "api_path": "/{}/PROVIDERS/MICROSOFT.INSIGHTS/DATACOLLECTIONRULEASSOCIATIONS/{}",
     "operation": "GET",
     "properties": [
@@ -166365,7 +166578,7 @@
     ]
   },
   {
-    "api_version": "2022-06-01",
+    "api_version": "2023-03-11",
     "api_path": "/{}/PROVIDERS/MICROSOFT.INSIGHTS/DATACOLLECTIONRULEASSOCIATIONS/{}",
     "operation": "PUT",
     "properties": [
