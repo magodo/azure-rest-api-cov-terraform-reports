@@ -3655,6 +3655,19 @@
     ]
   },
   {
+    "api_version": "2022-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/DELETEDWORKSPACES",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "value/name"
+      },
+      {
+        "addr": "value/properties/sku/name"
+      }
+    ]
+  },
+  {
     "api_version": "2020-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES",
     "operation": "GET",
@@ -27432,12 +27445,12 @@
     ]
   },
   {
-    "api_version": "2024-06-01-preview",
+    "api_version": "2024-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-06-01-preview",
+    "api_version": "2024-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}",
     "operation": "GET",
     "properties": [
@@ -27486,7 +27499,7 @@
     ]
   },
   {
-    "api_version": "2024-06-01-preview",
+    "api_version": "2024-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}",
     "operation": "PATCH",
     "properties": [
@@ -27496,7 +27509,7 @@
     ]
   },
   {
-    "api_version": "2024-06-01-preview",
+    "api_version": "2024-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}",
     "operation": "PUT",
     "properties": [
@@ -27545,12 +27558,12 @@
     ]
   },
   {
-    "api_version": "2024-06-01-preview",
+    "api_version": "2024-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-06-01-preview",
+    "api_version": "2024-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}",
     "operation": "GET",
     "properties": [
@@ -27614,7 +27627,7 @@
     ]
   },
   {
-    "api_version": "2024-06-01-preview",
+    "api_version": "2024-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}",
     "operation": "PUT",
     "properties": [
@@ -27678,7 +27691,7 @@
     ]
   },
   {
-    "api_version": "2024-06-01-preview",
+    "api_version": "2024-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}/FORCEUNLINK",
     "operation": "POST",
     "properties": [
@@ -27688,7 +27701,7 @@
     ]
   },
   {
-    "api_version": "2024-06-01-preview",
+    "api_version": "2024-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}/LISTKEYS",
     "operation": "POST"
   },
@@ -56158,10 +56171,6 @@
             "addr": "/name"
           },
           {
-            "name": "azurerm_data_factory_linked_service_sftp",
-            "addr": "/name"
-          },
-          {
             "name": "azurerm_data_factory_linked_service_web",
             "addr": "/name"
           }
@@ -57622,10 +57631,6 @@
           },
           {
             "name": "azurerm_data_factory_linked_service_postgresql",
-            "addr": "/name"
-          },
-          {
-            "name": "azurerm_data_factory_linked_service_sftp",
             "addr": "/name"
           },
           {
@@ -78099,6 +78104,9 @@
       },
       {
         "addr": "tags"
+      },
+      {
+        "addr": "zones"
       }
     ]
   },
@@ -78590,6 +78598,9 @@
       },
       {
         "addr": "tags"
+      },
+      {
+        "addr": "zones"
       }
     ]
   },
@@ -108901,6 +108912,9 @@
         "addr": "properties/routingConfiguration/vnetRoutes/staticRoutes/nextHopIpAddress"
       },
       {
+        "addr": "properties/routingConfiguration/vnetRoutes/staticRoutesConfig/propagateStaticRoutes"
+      },
+      {
         "addr": "properties/routingConfiguration/vnetRoutes/staticRoutesConfig/vnetLocalRouteOverrideCriteria",
         "app_property_maps": [
           {
@@ -108975,6 +108989,9 @@
       },
       {
         "addr": "properties/routingConfiguration/vnetRoutes/staticRoutes/nextHopIpAddress"
+      },
+      {
+        "addr": "properties/routingConfiguration/vnetRoutes/staticRoutesConfig/propagateStaticRoutes"
       },
       {
         "addr": "properties/routingConfiguration/vnetRoutes/staticRoutesConfig/vnetLocalRouteOverrideCriteria",
@@ -112474,7 +112491,13 @@
         ]
       },
       {
-        "addr": "properties/sku/name"
+        "addr": "properties/sku/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_log_analytics_workspace",
+            "addr": "/sku"
+          }
+        ]
       },
       {
         "addr": "properties/workspaceCapping/dailyQuotaGb",
@@ -112577,7 +112600,13 @@
         ]
       },
       {
-        "addr": "properties/sku/name"
+        "addr": "properties/sku/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_log_analytics_workspace",
+            "addr": "/sku"
+          }
+        ]
       },
       {
         "addr": "properties/workspaceCapping/dailyQuotaGb",
@@ -124918,12 +124947,12 @@
     ]
   },
   {
-    "api_version": "2021-05-01",
+    "api_version": "2024-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEFABRIC/MANAGEDCLUSTERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-05-01",
+    "api_version": "2024-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEFABRIC/MANAGEDCLUSTERS/{}",
     "operation": "GET",
     "properties": [
@@ -125098,7 +125127,7 @@
     ]
   },
   {
-    "api_version": "2021-05-01",
+    "api_version": "2024-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEFABRIC/MANAGEDCLUSTERS/{}",
     "operation": "PUT",
     "properties": [
@@ -125273,12 +125302,12 @@
     ]
   },
   {
-    "api_version": "2021-05-01",
+    "api_version": "2024-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEFABRIC/MANAGEDCLUSTERS/{}/NODETYPES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-05-01",
+    "api_version": "2024-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEFABRIC/MANAGEDCLUSTERS/{}/NODETYPES/{}",
     "operation": "PUT",
     "properties": [
@@ -130508,6 +130537,12 @@
     "operation": "GET",
     "properties": [
       {
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
+      },
+      {
         "addr": "location",
         "app_property_maps": [
           {
@@ -130525,6 +130560,15 @@
           {
             "name": "azurerm_mssql_job_agent",
             "addr": "/database_id"
+          }
+        ]
+      },
+      {
+        "addr": "sku/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mssql_job_agent",
+            "addr": "/sku"
           }
         ]
       },
@@ -130539,6 +130583,12 @@
     "operation": "PUT",
     "properties": [
       {
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
+      },
+      {
         "addr": "location",
         "app_property_maps": [
           {
@@ -130556,6 +130606,15 @@
           {
             "name": "azurerm_mssql_job_agent",
             "addr": "/database_id"
+          }
+        ]
+      },
+      {
+        "addr": "sku/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mssql_job_agent",
+            "addr": "/sku"
           }
         ]
       },
@@ -144934,9 +144993,6 @@
         "addr": "properties/siteConfig/publicNetworkAccess"
       },
       {
-        "addr": "properties/siteConfig/pythonVersion"
-      },
-      {
         "addr": "properties/siteConfig/remoteDebuggingEnabled"
       },
       {
@@ -146044,9 +146100,6 @@
       },
       {
         "addr": "properties/siteConfig/publicNetworkAccess"
-      },
-      {
-        "addr": "properties/siteConfig/pythonVersion"
       },
       {
         "addr": "properties/siteConfig/remoteDebuggingEnabled"
@@ -148458,9 +148511,6 @@
         "addr": "properties/publicNetworkAccess"
       },
       {
-        "addr": "properties/pythonVersion"
-      },
-      {
         "addr": "properties/remoteDebuggingEnabled"
       },
       {
@@ -149236,9 +149286,6 @@
       },
       {
         "addr": "properties/publicNetworkAccess"
-      },
-      {
-        "addr": "properties/pythonVersion"
       },
       {
         "addr": "properties/remoteDebuggingEnabled"
@@ -150331,9 +150378,6 @@
       },
       {
         "addr": "properties/publicNetworkAccess"
-      },
-      {
-        "addr": "properties/pythonVersion"
       },
       {
         "addr": "properties/remoteDebuggingEnabled"
@@ -151781,9 +151825,6 @@
         "addr": "properties/siteConfig/publicNetworkAccess"
       },
       {
-        "addr": "properties/siteConfig/pythonVersion"
-      },
-      {
         "addr": "properties/siteConfig/remoteDebuggingEnabled"
       },
       {
@@ -152461,9 +152502,6 @@
       },
       {
         "addr": "properties/siteConfig/publicNetworkAccess"
-      },
-      {
-        "addr": "properties/siteConfig/pythonVersion"
       },
       {
         "addr": "properties/siteConfig/remoteDebuggingEnabled"
@@ -154672,9 +154710,6 @@
         "addr": "properties/publicNetworkAccess"
       },
       {
-        "addr": "properties/pythonVersion"
-      },
-      {
         "addr": "properties/remoteDebuggingEnabled"
       },
       {
@@ -155326,9 +155361,6 @@
       },
       {
         "addr": "properties/publicNetworkAccess"
-      },
-      {
-        "addr": "properties/pythonVersion"
       },
       {
         "addr": "properties/remoteDebuggingEnabled"
@@ -158139,10 +158171,22 @@
         ]
       },
       {
-        "addr": "properties/logging/storageAccount/accountName"
+        "addr": "properties/logging/storageAccount/accountName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_nginx_deployment",
+            "addr": "/logging_storage_account/0/name"
+          }
+        ]
       },
       {
-        "addr": "properties/logging/storageAccount/containerName"
+        "addr": "properties/logging/storageAccount/containerName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_nginx_deployment",
+            "addr": "/logging_storage_account/0/container_name"
+          }
+        ]
       },
       {
         "addr": "properties/networkProfile/frontEndIPConfiguration/privateIPAddresses/privateIPAddress"
@@ -158245,10 +158289,22 @@
         ]
       },
       {
-        "addr": "properties/logging/storageAccount/accountName"
+        "addr": "properties/logging/storageAccount/accountName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_nginx_deployment",
+            "addr": "/logging_storage_account/0/name"
+          }
+        ]
       },
       {
-        "addr": "properties/logging/storageAccount/containerName"
+        "addr": "properties/logging/storageAccount/containerName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_nginx_deployment",
+            "addr": "/logging_storage_account/0/container_name"
+          }
+        ]
       },
       {
         "addr": "properties/scalingProperties/autoScaleSettings/profiles/capacity/max"
@@ -158357,10 +158413,22 @@
         ]
       },
       {
-        "addr": "properties/logging/storageAccount/accountName"
+        "addr": "properties/logging/storageAccount/accountName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_nginx_deployment",
+            "addr": "/logging_storage_account/0/name"
+          }
+        ]
       },
       {
-        "addr": "properties/logging/storageAccount/containerName"
+        "addr": "properties/logging/storageAccount/containerName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_nginx_deployment",
+            "addr": "/logging_storage_account/0/container_name"
+          }
+        ]
       },
       {
         "addr": "properties/networkProfile/frontEndIPConfiguration/privateIPAddresses/privateIPAddress"
@@ -160473,7 +160541,13 @@
         "addr": "properties/subnetOcid"
       },
       {
-        "addr": "properties/systemVersion"
+        "addr": "properties/systemVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/system_version"
+          }
+        ]
       },
       {
         "addr": "properties/timeCreated"
@@ -160763,7 +160837,13 @@
         "addr": "properties/subnetOcid"
       },
       {
-        "addr": "properties/systemVersion"
+        "addr": "properties/systemVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_cloud_vm_cluster",
+            "addr": "/system_version"
+          }
+        ]
       },
       {
         "addr": "properties/timeCreated"
