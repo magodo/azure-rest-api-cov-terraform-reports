@@ -14014,6 +14014,15 @@
             "addr": "/share_name"
           }
         ]
+      },
+      {
+        "addr": "properties/nfsAzureFile/accessMode"
+      },
+      {
+        "addr": "properties/nfsAzureFile/server"
+      },
+      {
+        "addr": "properties/nfsAzureFile/shareName"
       }
     ]
   },
@@ -14051,6 +14060,15 @@
             "addr": "/share_name"
           }
         ]
+      },
+      {
+        "addr": "properties/nfsAzureFile/accessMode"
+      },
+      {
+        "addr": "properties/nfsAzureFile/server"
+      },
+      {
+        "addr": "properties/nfsAzureFile/shareName"
       }
     ]
   },
@@ -93343,6 +93361,15 @@
         "addr": "name"
       },
       {
+        "addr": "properties/coolAccess",
+        "app_property_maps": [
+          {
+            "name": "azurerm_netapp_pool",
+            "addr": "/cool_access_enabled"
+          }
+        ]
+      },
+      {
         "addr": "properties/encryptionType",
         "app_property_maps": [
           {
@@ -93400,6 +93427,15 @@
         "addr": "name"
       },
       {
+        "addr": "properties/coolAccess",
+        "app_property_maps": [
+          {
+            "name": "azurerm_netapp_pool",
+            "addr": "/cool_access_enabled"
+          }
+        ]
+      },
+      {
         "addr": "properties/encryptionType",
         "app_property_maps": [
           {
@@ -93440,6 +93476,15 @@
     "operation": "PATCH",
     "properties": [
       {
+        "addr": "properties/coolAccess",
+        "app_property_maps": [
+          {
+            "name": "azurerm_netapp_pool",
+            "addr": "/cool_access_enabled"
+          }
+        ]
+      },
+      {
         "addr": "properties/qosType",
         "app_property_maps": [
           {
@@ -93472,6 +93517,15 @@
       },
       {
         "addr": "name"
+      },
+      {
+        "addr": "properties/coolAccess",
+        "app_property_maps": [
+          {
+            "name": "azurerm_netapp_pool",
+            "addr": "/cool_access_enabled"
+          }
+        ]
       },
       {
         "addr": "properties/encryptionType",
@@ -167644,34 +167698,94 @@
     "operation": "GET",
     "properties": [
       {
-        "addr": "identity/principalId"
+        "addr": "identity/principalId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_cluster_extension",
+            "addr": "/identity/0/principal_id"
+          }
+        ]
       },
       {
-        "addr": "identity/tenantId"
+        "addr": "identity/tenantId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_cluster_extension",
+            "addr": "/identity/0/tenant_id"
+          }
+        ]
       },
       {
-        "addr": "identity/type"
+        "addr": "identity/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_cluster_extension",
+            "addr": "/identity/0/type"
+          }
+        ]
       },
       {
-        "addr": "plan/name"
+        "addr": "plan/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster_extension",
+            "addr": "/plan/0/name"
+          }
+        ]
       },
       {
-        "addr": "plan/product"
+        "addr": "plan/product",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster_extension",
+            "addr": "/plan/0/product"
+          }
+        ]
       },
       {
-        "addr": "plan/promotionCode"
+        "addr": "plan/promotionCode",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster_extension",
+            "addr": "/plan/0/promotion_code"
+          }
+        ]
       },
       {
-        "addr": "plan/publisher"
+        "addr": "plan/publisher",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster_extension",
+            "addr": "/plan/0/publisher"
+          }
+        ]
       },
       {
-        "addr": "plan/version"
+        "addr": "plan/version",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster_extension",
+            "addr": "/plan/0/version"
+          }
+        ]
       },
       {
-        "addr": "properties/aksAssignedIdentity/principalId"
+        "addr": "properties/aksAssignedIdentity/principalId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster_extension",
+            "addr": "/aks_assigned_identity/0/principal_id"
+          }
+        ]
       },
       {
-        "addr": "properties/aksAssignedIdentity/tenantId"
+        "addr": "properties/aksAssignedIdentity/tenantId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster_extension",
+            "addr": "/aks_assigned_identity/0/tenant_id"
+          }
+        ]
       },
       {
         "addr": "properties/aksAssignedIdentity/type"
@@ -167686,22 +167800,82 @@
         "addr": "properties/configurationSettings"
       },
       {
-        "addr": "properties/currentVersion"
+        "addr": "properties/currentVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_cluster_extension",
+            "addr": "/current_version"
+          },
+          {
+            "name": "azurerm_kubernetes_cluster_extension",
+            "addr": "/current_version"
+          }
+        ]
       },
       {
-        "addr": "properties/extensionType"
+        "addr": "properties/extensionType",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_cluster_extension",
+            "addr": "/extension_type"
+          },
+          {
+            "name": "azurerm_kubernetes_cluster_extension",
+            "addr": "/extension_type"
+          }
+        ]
       },
       {
-        "addr": "properties/releaseTrain"
+        "addr": "properties/releaseTrain",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_cluster_extension",
+            "addr": "/release_train"
+          },
+          {
+            "name": "azurerm_kubernetes_cluster_extension",
+            "addr": "/release_train"
+          }
+        ]
       },
       {
-        "addr": "properties/scope/cluster/releaseNamespace"
+        "addr": "properties/scope/cluster/releaseNamespace",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_cluster_extension",
+            "addr": "/release_namespace"
+          },
+          {
+            "name": "azurerm_kubernetes_cluster_extension",
+            "addr": "/release_namespace"
+          }
+        ]
       },
       {
-        "addr": "properties/scope/namespace/targetNamespace"
+        "addr": "properties/scope/namespace/targetNamespace",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_cluster_extension",
+            "addr": "/target_namespace"
+          },
+          {
+            "name": "azurerm_kubernetes_cluster_extension",
+            "addr": "/target_namespace"
+          }
+        ]
       },
       {
-        "addr": "properties/version"
+        "addr": "properties/version",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_cluster_extension",
+            "addr": "/version"
+          },
+          {
+            "name": "azurerm_kubernetes_cluster_extension",
+            "addr": "/version"
+          }
+        ]
       }
     ]
   },
@@ -167724,34 +167898,94 @@
     "operation": "PUT",
     "properties": [
       {
-        "addr": "identity/principalId"
+        "addr": "identity/principalId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_cluster_extension",
+            "addr": "/identity/0/principal_id"
+          }
+        ]
       },
       {
-        "addr": "identity/tenantId"
+        "addr": "identity/tenantId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_cluster_extension",
+            "addr": "/identity/0/tenant_id"
+          }
+        ]
       },
       {
-        "addr": "identity/type"
+        "addr": "identity/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_cluster_extension",
+            "addr": "/identity/0/type"
+          }
+        ]
       },
       {
-        "addr": "plan/name"
+        "addr": "plan/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster_extension",
+            "addr": "/plan/0/name"
+          }
+        ]
       },
       {
-        "addr": "plan/product"
+        "addr": "plan/product",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster_extension",
+            "addr": "/plan/0/product"
+          }
+        ]
       },
       {
-        "addr": "plan/promotionCode"
+        "addr": "plan/promotionCode",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster_extension",
+            "addr": "/plan/0/promotion_code"
+          }
+        ]
       },
       {
-        "addr": "plan/publisher"
+        "addr": "plan/publisher",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster_extension",
+            "addr": "/plan/0/publisher"
+          }
+        ]
       },
       {
-        "addr": "plan/version"
+        "addr": "plan/version",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster_extension",
+            "addr": "/plan/0/version"
+          }
+        ]
       },
       {
-        "addr": "properties/aksAssignedIdentity/principalId"
+        "addr": "properties/aksAssignedIdentity/principalId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster_extension",
+            "addr": "/aks_assigned_identity/0/principal_id"
+          }
+        ]
       },
       {
-        "addr": "properties/aksAssignedIdentity/tenantId"
+        "addr": "properties/aksAssignedIdentity/tenantId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster_extension",
+            "addr": "/aks_assigned_identity/0/tenant_id"
+          }
+        ]
       },
       {
         "addr": "properties/aksAssignedIdentity/type"
@@ -167766,22 +168000,82 @@
         "addr": "properties/configurationSettings"
       },
       {
-        "addr": "properties/currentVersion"
+        "addr": "properties/currentVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_cluster_extension",
+            "addr": "/current_version"
+          },
+          {
+            "name": "azurerm_kubernetes_cluster_extension",
+            "addr": "/current_version"
+          }
+        ]
       },
       {
-        "addr": "properties/extensionType"
+        "addr": "properties/extensionType",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_cluster_extension",
+            "addr": "/extension_type"
+          },
+          {
+            "name": "azurerm_kubernetes_cluster_extension",
+            "addr": "/extension_type"
+          }
+        ]
       },
       {
-        "addr": "properties/releaseTrain"
+        "addr": "properties/releaseTrain",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_cluster_extension",
+            "addr": "/release_train"
+          },
+          {
+            "name": "azurerm_kubernetes_cluster_extension",
+            "addr": "/release_train"
+          }
+        ]
       },
       {
-        "addr": "properties/scope/cluster/releaseNamespace"
+        "addr": "properties/scope/cluster/releaseNamespace",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_cluster_extension",
+            "addr": "/release_namespace"
+          },
+          {
+            "name": "azurerm_kubernetes_cluster_extension",
+            "addr": "/release_namespace"
+          }
+        ]
       },
       {
-        "addr": "properties/scope/namespace/targetNamespace"
+        "addr": "properties/scope/namespace/targetNamespace",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_cluster_extension",
+            "addr": "/target_namespace"
+          },
+          {
+            "name": "azurerm_kubernetes_cluster_extension",
+            "addr": "/target_namespace"
+          }
+        ]
       },
       {
-        "addr": "properties/version"
+        "addr": "properties/version",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_cluster_extension",
+            "addr": "/version"
+          },
+          {
+            "name": "azurerm_kubernetes_cluster_extension",
+            "addr": "/version"
+          }
+        ]
       }
     ]
   },
@@ -167802,10 +168096,26 @@
         "addr": "properties/azureBlob/containerName"
       },
       {
-        "addr": "properties/azureBlob/localAuthRef"
+        "addr": "properties/azureBlob/localAuthRef",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/blob_storage/0/local_auth_reference"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/blob_storage/0/local_auth_reference"
+          }
+        ]
       },
       {
-        "addr": "properties/azureBlob/managedIdentity/clientId"
+        "addr": "properties/azureBlob/managedIdentity/clientId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/blob_storage/0/managed_identity/0/client_id"
+          }
+        ]
       },
       {
         "addr": "properties/azureBlob/sasToken"
@@ -167820,58 +168130,198 @@
         "addr": "properties/azureBlob/servicePrincipal/clientCertificateSendChain"
       },
       {
-        "addr": "properties/azureBlob/servicePrincipal/clientId"
+        "addr": "properties/azureBlob/servicePrincipal/clientId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/blob_storage/0/service_principal/0/client_id"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/blob_storage/0/service_principal/0/client_id"
+          }
+        ]
       },
       {
         "addr": "properties/azureBlob/servicePrincipal/clientSecret"
       },
       {
-        "addr": "properties/azureBlob/servicePrincipal/tenantId"
+        "addr": "properties/azureBlob/servicePrincipal/tenantId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/blob_storage/0/service_principal/0/tenant_id"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/blob_storage/0/service_principal/0/tenant_id"
+          }
+        ]
       },
       {
-        "addr": "properties/azureBlob/syncIntervalInSeconds"
+        "addr": "properties/azureBlob/syncIntervalInSeconds",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/blob_storage/0/sync_interval_in_seconds"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/blob_storage/0/sync_interval_in_seconds"
+          }
+        ]
       },
       {
-        "addr": "properties/azureBlob/timeoutInSeconds"
+        "addr": "properties/azureBlob/timeoutInSeconds",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/blob_storage/0/timeout_in_seconds"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/blob_storage/0/timeout_in_seconds"
+          }
+        ]
       },
       {
         "addr": "properties/azureBlob/url"
       },
       {
-        "addr": "properties/bucket/accessKey"
+        "addr": "properties/bucket/accessKey",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/bucket/0/access_key"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/bucket/0/access_key"
+          }
+        ]
       },
       {
-        "addr": "properties/bucket/bucketName"
+        "addr": "properties/bucket/bucketName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/bucket/0/bucket_name"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/bucket/0/bucket_name"
+          }
+        ]
       },
       {
         "addr": "properties/bucket/insecure"
       },
       {
-        "addr": "properties/bucket/localAuthRef"
+        "addr": "properties/bucket/localAuthRef",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/bucket/0/local_auth_reference"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/bucket/0/local_auth_reference"
+          }
+        ]
       },
       {
-        "addr": "properties/bucket/syncIntervalInSeconds"
+        "addr": "properties/bucket/syncIntervalInSeconds",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/bucket/0/sync_interval_in_seconds"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/bucket/0/sync_interval_in_seconds"
+          }
+        ]
       },
       {
-        "addr": "properties/bucket/timeoutInSeconds"
+        "addr": "properties/bucket/timeoutInSeconds",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/bucket/0/timeout_in_seconds"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/bucket/0/timeout_in_seconds"
+          }
+        ]
       },
       {
-        "addr": "properties/bucket/url"
+        "addr": "properties/bucket/url",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/bucket/0/url"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/bucket/0/url"
+          }
+        ]
       },
       {
         "addr": "properties/configurationProtectedSettings"
       },
       {
-        "addr": "properties/gitRepository/httpsCACert"
+        "addr": "properties/gitRepository/httpsCACert",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/https_ca_cert_base64"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/https_ca_cert_base64"
+          }
+        ]
       },
       {
-        "addr": "properties/gitRepository/httpsUser"
+        "addr": "properties/gitRepository/httpsUser",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/https_user"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/https_user"
+          }
+        ]
       },
       {
-        "addr": "properties/gitRepository/localAuthRef"
+        "addr": "properties/gitRepository/localAuthRef",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/local_auth_reference"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/local_auth_reference"
+          }
+        ]
       },
       {
-        "addr": "properties/gitRepository/repositoryRef/branch"
+        "addr": "properties/gitRepository/repositoryRef/branch",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/reference_value"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/reference_value"
+          }
+        ]
       },
       {
         "addr": "properties/gitRepository/repositoryRef/commit"
@@ -167883,25 +168333,85 @@
         "addr": "properties/gitRepository/repositoryRef/tag"
       },
       {
-        "addr": "properties/gitRepository/sshKnownHosts"
+        "addr": "properties/gitRepository/sshKnownHosts",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/ssh_known_hosts_base64"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/ssh_known_hosts_base64"
+          }
+        ]
       },
       {
-        "addr": "properties/gitRepository/syncIntervalInSeconds"
+        "addr": "properties/gitRepository/syncIntervalInSeconds",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/sync_interval_in_seconds"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/sync_interval_in_seconds"
+          }
+        ]
       },
       {
-        "addr": "properties/gitRepository/timeoutInSeconds"
+        "addr": "properties/gitRepository/timeoutInSeconds",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/timeout_in_seconds"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/timeout_in_seconds"
+          }
+        ]
       },
       {
-        "addr": "properties/gitRepository/url"
+        "addr": "properties/gitRepository/url",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/url"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/url"
+          }
+        ]
       },
       {
         "addr": "properties/kustomizations"
       },
       {
-        "addr": "properties/namespace"
+        "addr": "properties/namespace",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/namespace"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/namespace"
+          }
+        ]
       },
       {
-        "addr": "properties/scope"
+        "addr": "properties/scope",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/scope"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/scope"
+          }
+        ]
       },
       {
         "addr": "properties/sourceKind"
@@ -167923,10 +168433,26 @@
         "addr": "properties/azureBlob/containerName"
       },
       {
-        "addr": "properties/azureBlob/localAuthRef"
+        "addr": "properties/azureBlob/localAuthRef",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/blob_storage/0/local_auth_reference"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/blob_storage/0/local_auth_reference"
+          }
+        ]
       },
       {
-        "addr": "properties/azureBlob/managedIdentity/clientId"
+        "addr": "properties/azureBlob/managedIdentity/clientId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/blob_storage/0/managed_identity/0/client_id"
+          }
+        ]
       },
       {
         "addr": "properties/azureBlob/sasToken"
@@ -167941,58 +168467,198 @@
         "addr": "properties/azureBlob/servicePrincipal/clientCertificateSendChain"
       },
       {
-        "addr": "properties/azureBlob/servicePrincipal/clientId"
+        "addr": "properties/azureBlob/servicePrincipal/clientId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/blob_storage/0/service_principal/0/client_id"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/blob_storage/0/service_principal/0/client_id"
+          }
+        ]
       },
       {
         "addr": "properties/azureBlob/servicePrincipal/clientSecret"
       },
       {
-        "addr": "properties/azureBlob/servicePrincipal/tenantId"
+        "addr": "properties/azureBlob/servicePrincipal/tenantId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/blob_storage/0/service_principal/0/tenant_id"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/blob_storage/0/service_principal/0/tenant_id"
+          }
+        ]
       },
       {
-        "addr": "properties/azureBlob/syncIntervalInSeconds"
+        "addr": "properties/azureBlob/syncIntervalInSeconds",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/blob_storage/0/sync_interval_in_seconds"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/blob_storage/0/sync_interval_in_seconds"
+          }
+        ]
       },
       {
-        "addr": "properties/azureBlob/timeoutInSeconds"
+        "addr": "properties/azureBlob/timeoutInSeconds",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/blob_storage/0/timeout_in_seconds"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/blob_storage/0/timeout_in_seconds"
+          }
+        ]
       },
       {
         "addr": "properties/azureBlob/url"
       },
       {
-        "addr": "properties/bucket/accessKey"
+        "addr": "properties/bucket/accessKey",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/bucket/0/access_key"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/bucket/0/access_key"
+          }
+        ]
       },
       {
-        "addr": "properties/bucket/bucketName"
+        "addr": "properties/bucket/bucketName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/bucket/0/bucket_name"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/bucket/0/bucket_name"
+          }
+        ]
       },
       {
         "addr": "properties/bucket/insecure"
       },
       {
-        "addr": "properties/bucket/localAuthRef"
+        "addr": "properties/bucket/localAuthRef",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/bucket/0/local_auth_reference"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/bucket/0/local_auth_reference"
+          }
+        ]
       },
       {
-        "addr": "properties/bucket/syncIntervalInSeconds"
+        "addr": "properties/bucket/syncIntervalInSeconds",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/bucket/0/sync_interval_in_seconds"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/bucket/0/sync_interval_in_seconds"
+          }
+        ]
       },
       {
-        "addr": "properties/bucket/timeoutInSeconds"
+        "addr": "properties/bucket/timeoutInSeconds",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/bucket/0/timeout_in_seconds"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/bucket/0/timeout_in_seconds"
+          }
+        ]
       },
       {
-        "addr": "properties/bucket/url"
+        "addr": "properties/bucket/url",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/bucket/0/url"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/bucket/0/url"
+          }
+        ]
       },
       {
         "addr": "properties/configurationProtectedSettings"
       },
       {
-        "addr": "properties/gitRepository/httpsCACert"
+        "addr": "properties/gitRepository/httpsCACert",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/https_ca_cert_base64"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/https_ca_cert_base64"
+          }
+        ]
       },
       {
-        "addr": "properties/gitRepository/httpsUser"
+        "addr": "properties/gitRepository/httpsUser",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/https_user"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/https_user"
+          }
+        ]
       },
       {
-        "addr": "properties/gitRepository/localAuthRef"
+        "addr": "properties/gitRepository/localAuthRef",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/local_auth_reference"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/local_auth_reference"
+          }
+        ]
       },
       {
-        "addr": "properties/gitRepository/repositoryRef/branch"
+        "addr": "properties/gitRepository/repositoryRef/branch",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/reference_value"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/reference_value"
+          }
+        ]
       },
       {
         "addr": "properties/gitRepository/repositoryRef/commit"
@@ -168004,25 +168670,85 @@
         "addr": "properties/gitRepository/repositoryRef/tag"
       },
       {
-        "addr": "properties/gitRepository/sshKnownHosts"
+        "addr": "properties/gitRepository/sshKnownHosts",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/ssh_known_hosts_base64"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/ssh_known_hosts_base64"
+          }
+        ]
       },
       {
-        "addr": "properties/gitRepository/syncIntervalInSeconds"
+        "addr": "properties/gitRepository/syncIntervalInSeconds",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/sync_interval_in_seconds"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/sync_interval_in_seconds"
+          }
+        ]
       },
       {
-        "addr": "properties/gitRepository/timeoutInSeconds"
+        "addr": "properties/gitRepository/timeoutInSeconds",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/timeout_in_seconds"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/timeout_in_seconds"
+          }
+        ]
       },
       {
-        "addr": "properties/gitRepository/url"
+        "addr": "properties/gitRepository/url",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/url"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/url"
+          }
+        ]
       },
       {
         "addr": "properties/kustomizations"
       },
       {
-        "addr": "properties/namespace"
+        "addr": "properties/namespace",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/namespace"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/namespace"
+          }
+        ]
       },
       {
-        "addr": "properties/scope"
+        "addr": "properties/scope",
+        "app_property_maps": [
+          {
+            "name": "azurerm_arc_kubernetes_flux_configuration",
+            "addr": "/scope"
+          },
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/scope"
+          }
+        ]
       },
       {
         "addr": "properties/sourceKind"
@@ -169159,6 +169885,67 @@
       },
       {
         "addr": "properties/storageProfile/disks/vhdType"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-10-07",
+    "api_path": "/{}/PROVIDERS/MICROSOFT.SCVMM/VIRTUALMACHINEINSTANCES/DEFAULT/GUESTAGENTS/DEFAULT",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-10-07",
+    "api_path": "/{}/PROVIDERS/MICROSOFT.SCVMM/VIRTUALMACHINEINSTANCES/DEFAULT/GUESTAGENTS/DEFAULT",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/credentials/password"
+      },
+      {
+        "addr": "properties/credentials/username",
+        "app_property_maps": [
+          {
+            "name": "azurerm_system_center_virtual_machine_manager_virtual_machine_instance_guest_agent",
+            "addr": "/username"
+          }
+        ]
+      },
+      {
+        "addr": "properties/provisioningAction",
+        "app_property_maps": [
+          {
+            "name": "azurerm_system_center_virtual_machine_manager_virtual_machine_instance_guest_agent",
+            "addr": "/provisioning_action"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2023-10-07",
+    "api_path": "/{}/PROVIDERS/MICROSOFT.SCVMM/VIRTUALMACHINEINSTANCES/DEFAULT/GUESTAGENTS/DEFAULT",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "properties/credentials/password"
+      },
+      {
+        "addr": "properties/credentials/username",
+        "app_property_maps": [
+          {
+            "name": "azurerm_system_center_virtual_machine_manager_virtual_machine_instance_guest_agent",
+            "addr": "/username"
+          }
+        ]
+      },
+      {
+        "addr": "properties/provisioningAction",
+        "app_property_maps": [
+          {
+            "name": "azurerm_system_center_virtual_machine_manager_virtual_machine_instance_guest_agent",
+            "addr": "/provisioning_action"
+          }
+        ]
       }
     ]
   },
