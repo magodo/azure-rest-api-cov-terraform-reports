@@ -5035,6 +5035,9 @@
       },
       {
         "addr": "properties/metricRules/filteringTags/value"
+      },
+      {
+        "addr": "properties/metricRules/sendingMetrics"
       }
     ]
   },
@@ -5072,6 +5075,9 @@
       },
       {
         "addr": "properties/metricRules/filteringTags/value"
+      },
+      {
+        "addr": "properties/metricRules/sendingMetrics"
       }
     ]
   },
@@ -40466,12 +40472,12 @@
     ]
   },
   {
-    "api_version": "2024-07-01",
+    "api_version": "2024-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-07-01",
+    "api_version": "2024-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
     "operation": "GET",
     "properties": [
@@ -41689,7 +41695,7 @@
     ]
   },
   {
-    "api_version": "2024-07-01",
+    "api_version": "2024-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
     "operation": "PATCH",
     "properties": [
@@ -42576,7 +42582,7 @@
     ]
   },
   {
-    "api_version": "2024-07-01",
+    "api_version": "2024-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
     "operation": "PUT",
     "properties": [
@@ -43963,7 +43969,7 @@
     ]
   },
   {
-    "api_version": "2024-07-01",
+    "api_version": "2024-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}/MANUALUPGRADE",
     "operation": "POST",
     "properties": [
@@ -43978,7 +43984,7 @@
     "operation": "POST"
   },
   {
-    "api_version": "2024-07-01",
+    "api_version": "2024-11-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}/REIMAGE",
     "operation": "POST",
     "properties": [
@@ -51275,6 +51281,15 @@
         ]
       },
       {
+        "addr": "properties/privateLinkServiceUrl",
+        "app_property_maps": [
+          {
+            "name": "azurerm_dashboard_grafana_managed_private_endpoint",
+            "addr": "/private_link_service_url"
+          }
+        ]
+      },
+      {
         "addr": "properties/requestMessage",
         "app_property_maps": [
           {
@@ -51323,6 +51338,15 @@
           {
             "name": "azurerm_dashboard_grafana_managed_private_endpoint",
             "addr": "/private_link_resource_region"
+          }
+        ]
+      },
+      {
+        "addr": "properties/privateLinkServiceUrl",
+        "app_property_maps": [
+          {
+            "name": "azurerm_dashboard_grafana_managed_private_endpoint",
+            "addr": "/private_link_service_url"
           }
         ]
       },
@@ -62899,6 +62923,9 @@
         "addr": "properties/sourceServerResourceId"
       },
       {
+        "addr": "properties/state"
+      },
+      {
         "addr": "properties/storage/autoGrow"
       },
       {
@@ -63289,6 +63316,9 @@
       },
       {
         "addr": "properties/sourceServerResourceId"
+      },
+      {
+        "addr": "properties/state"
       },
       {
         "addr": "properties/storage/autoGrow"
@@ -104198,6 +104228,9 @@
         "addr": "properties/networkSecurityGroup/id"
       },
       {
+        "addr": "properties/privateEndpoint/id"
+      },
+      {
         "addr": "properties/virtualMachine/id",
         "app_property_maps": [
           {
@@ -104206,6 +104239,16 @@
           }
         ]
       },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKINTERFACES/{}",
+    "operation": "PATCH",
+    "properties": [
       {
         "addr": "tags"
       }
@@ -104329,6 +104372,9 @@
       },
       {
         "addr": "properties/networkSecurityGroup/id"
+      },
+      {
+        "addr": "properties/privateEndpoint/id"
       },
       {
         "addr": "properties/virtualMachine/id",
@@ -104803,6 +104849,49 @@
           {
             "name": "azurerm_network_manager_static_member",
             "addr": "/target_virtual_network_id"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2024-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/ROUTINGCONFIGURATIONS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2024-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/ROUTINGCONFIGURATIONS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/description",
+        "app_property_maps": [
+          {
+            "name": "azurerm_network_manager_routing_configuration",
+            "addr": "/description"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2024-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/ROUTINGCONFIGURATIONS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/description",
+        "app_property_maps": [
+          {
+            "name": "azurerm_network_manager_routing_configuration",
+            "addr": "/description"
           }
         ]
       }
@@ -125653,6 +125742,15 @@
         "addr": "properties/networkSecurityRules/sourcePortRanges"
       },
       {
+        "addr": "properties/subnetId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_service_fabric_managed_cluster",
+            "addr": "/subnet_id"
+          }
+        ]
+      },
+      {
         "addr": "sku/name",
         "app_property_maps": [
           {
@@ -125826,6 +125924,15 @@
       },
       {
         "addr": "properties/networkSecurityRules/sourcePortRanges"
+      },
+      {
+        "addr": "properties/subnetId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_service_fabric_managed_cluster",
+            "addr": "/subnet_id"
+          }
+        ]
       },
       {
         "addr": "sku/name",
@@ -131695,6 +131802,15 @@
     "operation": "GET",
     "properties": [
       {
+        "addr": "id",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mssql_server_vulnerability_assessment",
+            "addr": "/server_security_alert_policy_id"
+          }
+        ]
+      },
+      {
         "addr": "name"
       },
       {
@@ -131750,6 +131866,15 @@
     "operation": "PUT",
     "properties": [
       {
+        "addr": "id",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mssql_server_vulnerability_assessment",
+            "addr": "/server_security_alert_policy_id"
+          }
+        ]
+      },
+      {
         "addr": "name"
       },
       {
@@ -131800,25 +131925,6 @@
     ]
   },
   {
-    "api_version": "2020-11-01-preview",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/SECURITYALERTPOLICIES/{}",
-    "operation": "GET",
-    "properties": [
-      {
-        "addr": "id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mssql_server_vulnerability_assessment",
-            "addr": "/server_security_alert_policy_id"
-          }
-        ]
-      },
-      {
-        "addr": "properties/state"
-      }
-    ]
-  },
-  {
     "api_version": "2023-08-01-preview",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/SQLVULNERABILITYASSESSMENTS/DEFAULT",
     "operation": "GET",
@@ -133062,12 +133168,12 @@
     ]
   },
   {
-    "api_version": "2024-03-01",
+    "api_version": "2025-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STANDBYPOOL/STANDBYVIRTUALMACHINEPOOLS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-03-01",
+    "api_version": "2025-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STANDBYPOOL/STANDBYVIRTUALMACHINEPOOLS/{}",
     "operation": "GET",
     "properties": [
@@ -133122,7 +133228,7 @@
     ]
   },
   {
-    "api_version": "2024-03-01",
+    "api_version": "2025-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STANDBYPOOL/STANDBYVIRTUALMACHINEPOOLS/{}",
     "operation": "PUT",
     "properties": [
@@ -135339,12 +135445,12 @@
     ]
   },
   {
-    "api_version": "2023-05-01",
+    "api_version": "2024-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGECACHE/AMLFILESYSTEMS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-05-01",
+    "api_version": "2024-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGECACHE/AMLFILESYSTEMS/{}",
     "operation": "GET",
     "properties": [
@@ -135465,7 +135571,7 @@
     ]
   },
   {
-    "api_version": "2023-05-01",
+    "api_version": "2024-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGECACHE/AMLFILESYSTEMS/{}",
     "operation": "PATCH",
     "properties": [
@@ -135511,7 +135617,7 @@
     ]
   },
   {
-    "api_version": "2023-05-01",
+    "api_version": "2024-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGECACHE/AMLFILESYSTEMS/{}",
     "operation": "PUT",
     "properties": [
@@ -143265,12 +143371,12 @@
     ]
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.VIDEOINDEXER/ACCOUNTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.VIDEOINDEXER/ACCOUNTS/{}",
     "operation": "GET",
     "properties": [
@@ -143319,7 +143425,7 @@
     ]
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.VIDEOINDEXER/ACCOUNTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -143344,7 +143450,7 @@
     ]
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.VIDEOINDEXER/ACCOUNTS/{}",
     "operation": "PUT",
     "properties": [
