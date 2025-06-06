@@ -93733,6 +93733,9 @@
         "addr": "properties/exportPolicy/rules/unixReadWrite"
       },
       {
+        "addr": "properties/isLargeVolume"
+      },
+      {
         "addr": "properties/kerberosEnabled"
       },
       {
@@ -93971,6 +93974,9 @@
       },
       {
         "addr": "properties/exportPolicy/rules/unixReadWrite"
+      },
+      {
+        "addr": "properties/isLargeVolume"
       },
       {
         "addr": "properties/kerberosEnabled"
@@ -94317,6 +94323,9 @@
       },
       {
         "addr": "properties/exportPolicy/rules/unixReadWrite"
+      },
+      {
+        "addr": "properties/isLargeVolume"
       },
       {
         "addr": "properties/kerberosEnabled"
@@ -110506,6 +110515,15 @@
         "addr": "properties/addressSpace/addressPrefixes"
       },
       {
+        "addr": "properties/addressSpace/ipamPoolPrefixAllocations/allocatedAddressPrefixes"
+      },
+      {
+        "addr": "properties/addressSpace/ipamPoolPrefixAllocations/numberOfIpAddresses"
+      },
+      {
+        "addr": "properties/addressSpace/ipamPoolPrefixAllocations/pool/id"
+      },
+      {
         "addr": "properties/bgpCommunities/virtualNetworkCommunity",
         "app_property_maps": [
           {
@@ -110651,6 +110669,15 @@
         "addr": "properties/addressSpace/addressPrefixes"
       },
       {
+        "addr": "properties/addressSpace/ipamPoolPrefixAllocations/allocatedAddressPrefixes"
+      },
+      {
+        "addr": "properties/addressSpace/ipamPoolPrefixAllocations/numberOfIpAddresses"
+      },
+      {
+        "addr": "properties/addressSpace/ipamPoolPrefixAllocations/pool/id"
+      },
+      {
         "addr": "properties/bgpCommunities/virtualNetworkCommunity",
         "app_property_maps": [
           {
@@ -111205,6 +111232,15 @@
         "addr": "properties/enableBgpRouteTranslationForNat"
       },
       {
+        "addr": "properties/ipConfigurations/id"
+      },
+      {
+        "addr": "properties/ipConfigurations/privateIpAddress"
+      },
+      {
+        "addr": "properties/ipConfigurations/publicIpAddress"
+      },
+      {
         "addr": "properties/isRoutingPreferenceInternet"
       },
       {
@@ -111285,6 +111321,15 @@
       },
       {
         "addr": "properties/enableBgpRouteTranslationForNat"
+      },
+      {
+        "addr": "properties/ipConfigurations/id"
+      },
+      {
+        "addr": "properties/ipConfigurations/privateIpAddress"
+      },
+      {
+        "addr": "properties/ipConfigurations/publicIpAddress"
       },
       {
         "addr": "properties/isRoutingPreferenceInternet"
@@ -163275,6 +163320,179 @@
       },
       {
         "addr": "properties/prefixList"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-06-19",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/QUMULO.STORAGE/FILESYSTEMS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2024-06-19",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/QUMULO.STORAGE/FILESYSTEMS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_qumulo_file_system",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/adminPassword"
+      },
+      {
+        "addr": "properties/availabilityZone",
+        "app_property_maps": [
+          {
+            "name": "azurerm_qumulo_file_system",
+            "addr": "/zone"
+          }
+        ]
+      },
+      {
+        "addr": "properties/delegatedSubnetId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_qumulo_file_system",
+            "addr": "/subnet_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/marketplaceDetails/offerId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_qumulo_file_system",
+            "addr": "/offer_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/marketplaceDetails/planId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_qumulo_file_system",
+            "addr": "/plan_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/marketplaceDetails/publisherId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_qumulo_file_system",
+            "addr": "/publisher_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/storageSku",
+        "app_property_maps": [
+          {
+            "name": "azurerm_qumulo_file_system",
+            "addr": "/storage_sku"
+          }
+        ]
+      },
+      {
+        "addr": "properties/userDetails/email"
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-06-19",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/QUMULO.STORAGE/FILESYSTEMS/{}",
+    "operation": "PATCH",
+    "properties": [
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-06-19",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/QUMULO.STORAGE/FILESYSTEMS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_qumulo_file_system",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/adminPassword"
+      },
+      {
+        "addr": "properties/availabilityZone",
+        "app_property_maps": [
+          {
+            "name": "azurerm_qumulo_file_system",
+            "addr": "/zone"
+          }
+        ]
+      },
+      {
+        "addr": "properties/delegatedSubnetId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_qumulo_file_system",
+            "addr": "/subnet_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/marketplaceDetails/offerId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_qumulo_file_system",
+            "addr": "/offer_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/marketplaceDetails/planId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_qumulo_file_system",
+            "addr": "/plan_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/marketplaceDetails/publisherId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_qumulo_file_system",
+            "addr": "/publisher_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/storageSku",
+        "app_property_maps": [
+          {
+            "name": "azurerm_qumulo_file_system",
+            "addr": "/storage_sku"
+          }
+        ]
+      },
+      {
+        "addr": "properties/userDetails/email"
+      },
+      {
+        "addr": "tags"
       }
     ]
   },
