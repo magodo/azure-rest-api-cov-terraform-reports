@@ -1026,31 +1026,13 @@
         "addr": "id"
       },
       {
-        "addr": "name",
-        "app_property_maps": [
-          {
-            "name": "azurerm_policy_set_definition",
-            "addr": "/name"
-          }
-        ]
+        "addr": "name"
       },
       {
-        "addr": "properties/description",
-        "app_property_maps": [
-          {
-            "name": "azurerm_policy_set_definition",
-            "addr": "/description"
-          }
-        ]
+        "addr": "properties/description"
       },
       {
-        "addr": "properties/displayName",
-        "app_property_maps": [
-          {
-            "name": "azurerm_policy_set_definition",
-            "addr": "/display_name"
-          }
-        ]
+        "addr": "properties/displayName"
       },
       {
         "addr": "properties/metadata"
@@ -1086,8 +1068,93 @@
         "addr": "properties/policyDefinitions/policyDefinitionReferenceId"
       },
       {
+        "addr": "properties/policyType"
+      }
+    ]
+  },
+  {
+    "api_version": "2025-01-01",
+    "api_path": "/PROVIDERS/MICROSOFT.AUTHORIZATION/POLICYSETDEFINITIONS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_policy_set_definition",
+            "addr": "/name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/description",
+        "app_property_maps": [
+          {
+            "name": "azurerm_management_group_policy_set_definition",
+            "addr": "/description"
+          },
+          {
+            "name": "azurerm_policy_set_definition",
+            "addr": "/description"
+          }
+        ]
+      },
+      {
+        "addr": "properties/displayName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_management_group_policy_set_definition",
+            "addr": "/display_name"
+          },
+          {
+            "name": "azurerm_policy_set_definition",
+            "addr": "/display_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/metadata"
+      },
+      {
+        "addr": "properties/parameters"
+      },
+      {
+        "addr": "properties/policyDefinitionGroups/additionalMetadataId"
+      },
+      {
+        "addr": "properties/policyDefinitionGroups/category"
+      },
+      {
+        "addr": "properties/policyDefinitionGroups/description"
+      },
+      {
+        "addr": "properties/policyDefinitionGroups/displayName"
+      },
+      {
+        "addr": "properties/policyDefinitionGroups/name"
+      },
+      {
+        "addr": "properties/policyDefinitions/definitionVersion"
+      },
+      {
+        "addr": "properties/policyDefinitions/groupNames"
+      },
+      {
+        "addr": "properties/policyDefinitions/parameters"
+      },
+      {
+        "addr": "properties/policyDefinitions/policyDefinitionId"
+      },
+      {
+        "addr": "properties/policyDefinitions/policyDefinitionReferenceId"
+      },
+      {
         "addr": "properties/policyType",
         "app_property_maps": [
+          {
+            "name": "azurerm_management_group_policy_set_definition",
+            "addr": "/policy_type"
+          },
           {
             "name": "azurerm_policy_set_definition",
             "addr": "/policy_type"
@@ -1314,7 +1381,7 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2025-01-01",
     "api_path": "/PROVIDERS/MICROSOFT.MANAGEMENT/MANAGEMENTGROUPS/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/POLICYSETDEFINITIONS/{}",
     "operation": "DELETE"
   },
@@ -1327,31 +1394,13 @@
         "addr": "id"
       },
       {
-        "addr": "name",
-        "app_property_maps": [
-          {
-            "name": "azurerm_policy_set_definition",
-            "addr": "/name"
-          }
-        ]
+        "addr": "name"
       },
       {
-        "addr": "properties/description",
-        "app_property_maps": [
-          {
-            "name": "azurerm_policy_set_definition",
-            "addr": "/description"
-          }
-        ]
+        "addr": "properties/description"
       },
       {
-        "addr": "properties/displayName",
-        "app_property_maps": [
-          {
-            "name": "azurerm_policy_set_definition",
-            "addr": "/display_name"
-          }
-        ]
+        "addr": "properties/displayName"
       },
       {
         "addr": "properties/metadata"
@@ -1387,8 +1436,93 @@
         "addr": "properties/policyDefinitions/policyDefinitionReferenceId"
       },
       {
+        "addr": "properties/policyType"
+      }
+    ]
+  },
+  {
+    "api_version": "2025-01-01",
+    "api_path": "/PROVIDERS/MICROSOFT.MANAGEMENT/MANAGEMENTGROUPS/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/POLICYSETDEFINITIONS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_policy_set_definition",
+            "addr": "/name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/description",
+        "app_property_maps": [
+          {
+            "name": "azurerm_management_group_policy_set_definition",
+            "addr": "/description"
+          },
+          {
+            "name": "azurerm_policy_set_definition",
+            "addr": "/description"
+          }
+        ]
+      },
+      {
+        "addr": "properties/displayName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_management_group_policy_set_definition",
+            "addr": "/display_name"
+          },
+          {
+            "name": "azurerm_policy_set_definition",
+            "addr": "/display_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/metadata"
+      },
+      {
+        "addr": "properties/parameters"
+      },
+      {
+        "addr": "properties/policyDefinitionGroups/additionalMetadataId"
+      },
+      {
+        "addr": "properties/policyDefinitionGroups/category"
+      },
+      {
+        "addr": "properties/policyDefinitionGroups/description"
+      },
+      {
+        "addr": "properties/policyDefinitionGroups/displayName"
+      },
+      {
+        "addr": "properties/policyDefinitionGroups/name"
+      },
+      {
+        "addr": "properties/policyDefinitions/definitionVersion"
+      },
+      {
+        "addr": "properties/policyDefinitions/groupNames"
+      },
+      {
+        "addr": "properties/policyDefinitions/parameters"
+      },
+      {
+        "addr": "properties/policyDefinitions/policyDefinitionId"
+      },
+      {
+        "addr": "properties/policyDefinitions/policyDefinitionReferenceId"
+      },
+      {
         "addr": "properties/policyType",
         "app_property_maps": [
+          {
+            "name": "azurerm_management_group_policy_set_definition",
+            "addr": "/policy_type"
+          },
           {
             "name": "azurerm_policy_set_definition",
             "addr": "/policy_type"
@@ -1398,13 +1532,10 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2025-01-01",
     "api_path": "/PROVIDERS/MICROSOFT.MANAGEMENT/MANAGEMENTGROUPS/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/POLICYSETDEFINITIONS/{}",
     "operation": "PUT",
     "properties": [
-      {
-        "addr": "id"
-      },
       {
         "addr": "name",
         "app_property_maps": [
@@ -1418,6 +1549,10 @@
         "addr": "properties/description",
         "app_property_maps": [
           {
+            "name": "azurerm_management_group_policy_set_definition",
+            "addr": "/description"
+          },
+          {
             "name": "azurerm_policy_set_definition",
             "addr": "/description"
           }
@@ -1426,6 +1561,10 @@
       {
         "addr": "properties/displayName",
         "app_property_maps": [
+          {
+            "name": "azurerm_management_group_policy_set_definition",
+            "addr": "/display_name"
+          },
           {
             "name": "azurerm_policy_set_definition",
             "addr": "/display_name"
@@ -1454,6 +1593,9 @@
         "addr": "properties/policyDefinitionGroups/name"
       },
       {
+        "addr": "properties/policyDefinitions/definitionVersion"
+      },
+      {
         "addr": "properties/policyDefinitions/groupNames"
       },
       {
@@ -1468,6 +1610,10 @@
       {
         "addr": "properties/policyType",
         "app_property_maps": [
+          {
+            "name": "azurerm_management_group_policy_set_definition",
+            "addr": "/policy_type"
+          },
           {
             "name": "azurerm_policy_set_definition",
             "addr": "/policy_type"
@@ -2920,7 +3066,7 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2025-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/POLICYSETDEFINITIONS/{}",
     "operation": "DELETE"
   },
@@ -2933,31 +3079,13 @@
         "addr": "id"
       },
       {
-        "addr": "name",
-        "app_property_maps": [
-          {
-            "name": "azurerm_policy_set_definition",
-            "addr": "/name"
-          }
-        ]
+        "addr": "name"
       },
       {
-        "addr": "properties/description",
-        "app_property_maps": [
-          {
-            "name": "azurerm_policy_set_definition",
-            "addr": "/description"
-          }
-        ]
+        "addr": "properties/description"
       },
       {
-        "addr": "properties/displayName",
-        "app_property_maps": [
-          {
-            "name": "azurerm_policy_set_definition",
-            "addr": "/display_name"
-          }
-        ]
+        "addr": "properties/displayName"
       },
       {
         "addr": "properties/metadata"
@@ -2993,8 +3121,93 @@
         "addr": "properties/policyDefinitions/policyDefinitionReferenceId"
       },
       {
+        "addr": "properties/policyType"
+      }
+    ]
+  },
+  {
+    "api_version": "2025-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/POLICYSETDEFINITIONS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_policy_set_definition",
+            "addr": "/name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/description",
+        "app_property_maps": [
+          {
+            "name": "azurerm_management_group_policy_set_definition",
+            "addr": "/description"
+          },
+          {
+            "name": "azurerm_policy_set_definition",
+            "addr": "/description"
+          }
+        ]
+      },
+      {
+        "addr": "properties/displayName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_management_group_policy_set_definition",
+            "addr": "/display_name"
+          },
+          {
+            "name": "azurerm_policy_set_definition",
+            "addr": "/display_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/metadata"
+      },
+      {
+        "addr": "properties/parameters"
+      },
+      {
+        "addr": "properties/policyDefinitionGroups/additionalMetadataId"
+      },
+      {
+        "addr": "properties/policyDefinitionGroups/category"
+      },
+      {
+        "addr": "properties/policyDefinitionGroups/description"
+      },
+      {
+        "addr": "properties/policyDefinitionGroups/displayName"
+      },
+      {
+        "addr": "properties/policyDefinitionGroups/name"
+      },
+      {
+        "addr": "properties/policyDefinitions/definitionVersion"
+      },
+      {
+        "addr": "properties/policyDefinitions/groupNames"
+      },
+      {
+        "addr": "properties/policyDefinitions/parameters"
+      },
+      {
+        "addr": "properties/policyDefinitions/policyDefinitionId"
+      },
+      {
+        "addr": "properties/policyDefinitions/policyDefinitionReferenceId"
+      },
+      {
         "addr": "properties/policyType",
         "app_property_maps": [
+          {
+            "name": "azurerm_management_group_policy_set_definition",
+            "addr": "/policy_type"
+          },
           {
             "name": "azurerm_policy_set_definition",
             "addr": "/policy_type"
@@ -3004,13 +3217,10 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2025-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/POLICYSETDEFINITIONS/{}",
     "operation": "PUT",
     "properties": [
-      {
-        "addr": "id"
-      },
       {
         "addr": "name",
         "app_property_maps": [
@@ -3024,6 +3234,10 @@
         "addr": "properties/description",
         "app_property_maps": [
           {
+            "name": "azurerm_management_group_policy_set_definition",
+            "addr": "/description"
+          },
+          {
             "name": "azurerm_policy_set_definition",
             "addr": "/description"
           }
@@ -3032,6 +3246,10 @@
       {
         "addr": "properties/displayName",
         "app_property_maps": [
+          {
+            "name": "azurerm_management_group_policy_set_definition",
+            "addr": "/display_name"
+          },
           {
             "name": "azurerm_policy_set_definition",
             "addr": "/display_name"
@@ -3060,6 +3278,9 @@
         "addr": "properties/policyDefinitionGroups/name"
       },
       {
+        "addr": "properties/policyDefinitions/definitionVersion"
+      },
+      {
         "addr": "properties/policyDefinitions/groupNames"
       },
       {
@@ -3074,6 +3295,10 @@
       {
         "addr": "properties/policyType",
         "app_property_maps": [
+          {
+            "name": "azurerm_management_group_policy_set_definition",
+            "addr": "/policy_type"
+          },
           {
             "name": "azurerm_policy_set_definition",
             "addr": "/policy_type"
@@ -12021,6 +12246,30 @@
         ]
       },
       {
+        "addr": "properties/configuration/ingress/corsPolicy/allowCredentials"
+      },
+      {
+        "addr": "properties/configuration/ingress/corsPolicy/allowedHeaders"
+      },
+      {
+        "addr": "properties/configuration/ingress/corsPolicy/allowedMethods"
+      },
+      {
+        "addr": "properties/configuration/ingress/corsPolicy/allowedOrigins"
+      },
+      {
+        "addr": "properties/configuration/ingress/corsPolicy/exposeHeaders"
+      },
+      {
+        "addr": "properties/configuration/ingress/corsPolicy/maxAge",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_app",
+            "addr": "/ingress/0/cors/0/max_age_in_seconds"
+          }
+        ]
+      },
+      {
         "addr": "properties/configuration/ingress/customDomains/bindingType"
       },
       {
@@ -12462,6 +12711,30 @@
           {
             "name": "azurerm_container_app",
             "addr": "/ingress/0/client_certificate_mode"
+          }
+        ]
+      },
+      {
+        "addr": "properties/configuration/ingress/corsPolicy/allowCredentials"
+      },
+      {
+        "addr": "properties/configuration/ingress/corsPolicy/allowedHeaders"
+      },
+      {
+        "addr": "properties/configuration/ingress/corsPolicy/allowedMethods"
+      },
+      {
+        "addr": "properties/configuration/ingress/corsPolicy/allowedOrigins"
+      },
+      {
+        "addr": "properties/configuration/ingress/corsPolicy/exposeHeaders"
+      },
+      {
+        "addr": "properties/configuration/ingress/corsPolicy/maxAge",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_app",
+            "addr": "/ingress/0/cors/0/max_age_in_seconds"
           }
         ]
       },
@@ -13053,6 +13326,9 @@
         "addr": "properties/template/containers/volumeMounts/mountPath"
       },
       {
+        "addr": "properties/template/containers/volumeMounts/subPath"
+      },
+      {
         "addr": "properties/template/containers/volumeMounts/volumeName"
       },
       {
@@ -13087,6 +13363,9 @@
       },
       {
         "addr": "properties/template/initContainers/volumeMounts/mountPath"
+      },
+      {
+        "addr": "properties/template/initContainers/volumeMounts/subPath"
       },
       {
         "addr": "properties/template/initContainers/volumeMounts/volumeName"
@@ -13318,6 +13597,9 @@
         "addr": "properties/template/containers/volumeMounts/mountPath"
       },
       {
+        "addr": "properties/template/containers/volumeMounts/subPath"
+      },
+      {
         "addr": "properties/template/containers/volumeMounts/volumeName"
       },
       {
@@ -13352,6 +13634,9 @@
       },
       {
         "addr": "properties/template/initContainers/volumeMounts/mountPath"
+      },
+      {
+        "addr": "properties/template/initContainers/volumeMounts/subPath"
       },
       {
         "addr": "properties/template/initContainers/volumeMounts/volumeName"
@@ -33023,6 +33308,9 @@
         ]
       },
       {
+        "addr": "properties/immutableResourceId"
+      },
+      {
         "addr": "properties/linkedDomains"
       },
       {
@@ -33065,6 +33353,9 @@
             "addr": "/hostname"
           }
         ]
+      },
+      {
+        "addr": "properties/immutableResourceId"
       },
       {
         "addr": "properties/linkedDomains"
@@ -33576,6 +33867,49 @@
       },
       {
         "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-03-31",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMMUNICATION/EMAILSERVICES/{}/DOMAINS/{}/SENDERUSERNAMES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-03-31",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMMUNICATION/EMAILSERVICES/{}/DOMAINS/{}/SENDERUSERNAMES/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/displayName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain_sender_username",
+            "addr": "/display_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/username"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-03-31",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMMUNICATION/EMAILSERVICES/{}/DOMAINS/{}/SENDERUSERNAMES/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "properties/displayName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_email_communication_service_domain_sender_username",
+            "addr": "/display_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/username"
       }
     ]
   },
@@ -107305,6 +107639,15 @@
         "addr": "properties/autoApproval/subscriptions"
       },
       {
+        "addr": "properties/destinationIPAddress",
+        "app_property_maps": [
+          {
+            "name": "azurerm_private_link_service",
+            "addr": "/destination_ip_address"
+          }
+        ]
+      },
+      {
         "addr": "properties/enableProxyProtocol"
       },
       {
@@ -107385,6 +107728,15 @@
       },
       {
         "addr": "properties/autoApproval/subscriptions"
+      },
+      {
+        "addr": "properties/destinationIPAddress",
+        "app_property_maps": [
+          {
+            "name": "azurerm_private_link_service",
+            "addr": "/destination_ip_address"
+          }
+        ]
       },
       {
         "addr": "properties/enableProxyProtocol"
@@ -117626,12 +117978,12 @@
     ]
   },
   {
-    "api_version": "2021-07-01",
+    "api_version": "2021-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.PURVIEW/ACCOUNTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-07-01",
+    "api_version": "2021-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.PURVIEW/ACCOUNTS/{}",
     "operation": "GET",
     "properties": [
@@ -117657,6 +118009,15 @@
         ]
       },
       {
+        "addr": "properties/cloudConnectors/awsExternalId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_purview_account",
+            "addr": "/aws_external_id"
+          }
+        ]
+      },
+      {
         "addr": "properties/endpoints/catalog",
         "app_property_maps": [
           {
@@ -117682,6 +118043,9 @@
             "addr": "/scan_endpoint"
           }
         ]
+      },
+      {
+        "addr": "properties/managedEventHubState"
       },
       {
         "addr": "properties/managedResourceGroupName",
@@ -117728,7 +118092,7 @@
     ]
   },
   {
-    "api_version": "2021-07-01",
+    "api_version": "2021-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.PURVIEW/ACCOUNTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -117745,6 +118109,15 @@
         "addr": "identity/userAssignedIdentities"
       },
       {
+        "addr": "properties/cloudConnectors/awsExternalId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_purview_account",
+            "addr": "/aws_external_id"
+          }
+        ]
+      },
+      {
         "addr": "properties/endpoints/catalog",
         "app_property_maps": [
           {
@@ -117770,6 +118143,9 @@
             "addr": "/scan_endpoint"
           }
         ]
+      },
+      {
+        "addr": "properties/managedEventHubState"
       },
       {
         "addr": "properties/managedResourceGroupName",
@@ -117816,7 +118192,7 @@
     ]
   },
   {
-    "api_version": "2021-07-01",
+    "api_version": "2021-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.PURVIEW/ACCOUNTS/{}",
     "operation": "PUT",
     "properties": [
@@ -117842,6 +118218,15 @@
         ]
       },
       {
+        "addr": "properties/cloudConnectors/awsExternalId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_purview_account",
+            "addr": "/aws_external_id"
+          }
+        ]
+      },
+      {
         "addr": "properties/endpoints/catalog",
         "app_property_maps": [
           {
@@ -117867,6 +118252,9 @@
             "addr": "/scan_endpoint"
           }
         ]
+      },
+      {
+        "addr": "properties/managedEventHubState"
       },
       {
         "addr": "properties/managedResourceGroupName",
@@ -117913,7 +118301,7 @@
     ]
   },
   {
-    "api_version": "2021-07-01",
+    "api_version": "2021-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.PURVIEW/ACCOUNTS/{}/LISTKEYS",
     "operation": "POST"
   },
@@ -159821,7 +160209,16 @@
         "addr": "properties{Clone}/localStandbyDb"
       },
       {
-        "addr": "properties{Clone}/longTermBackupSchedule"
+        "addr": "properties{Clone}/longTermBackupSchedule/isDisabled"
+      },
+      {
+        "addr": "properties{Clone}/longTermBackupSchedule/repeatCadence"
+      },
+      {
+        "addr": "properties{Clone}/longTermBackupSchedule/retentionPeriodInDays"
+      },
+      {
+        "addr": "properties{Clone}/longTermBackupSchedule/timeOfBackup"
       },
       {
         "addr": "properties{Clone}/memoryPerOracleComputeUnitInGbs"
@@ -160103,7 +160500,34 @@
         "addr": "properties{Regular}/localStandbyDb"
       },
       {
-        "addr": "properties{Regular}/longTermBackupSchedule"
+        "addr": "properties{Regular}/longTermBackupSchedule/isDisabled"
+      },
+      {
+        "addr": "properties{Regular}/longTermBackupSchedule/repeatCadence",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/long_term_backup_schedule/0/repeat_cadence"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Regular}/longTermBackupSchedule/retentionPeriodInDays",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/long_term_backup_schedule/0/retention_period_in_days"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Regular}/longTermBackupSchedule/timeOfBackup",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/long_term_backup_schedule/0/time_of_backup"
+          }
+        ]
       },
       {
         "addr": "properties{Regular}/memoryPerOracleComputeUnitInGbs"
@@ -160242,6 +160666,9 @@
     "operation": "PATCH",
     "properties": [
       {
+        "addr": "properties/backupRetentionPeriodInDays"
+      },
+      {
         "addr": "properties/computeCount"
       },
       {
@@ -160252,6 +160679,18 @@
       },
       {
         "addr": "properties/isAutoScalingForStorageEnabled"
+      },
+      {
+        "addr": "properties/longTermBackupSchedule/isDisabled"
+      },
+      {
+        "addr": "properties/longTermBackupSchedule/repeatCadence"
+      },
+      {
+        "addr": "properties/longTermBackupSchedule/retentionPeriodInDays"
+      },
+      {
+        "addr": "properties/longTermBackupSchedule/timeOfBackup"
       },
       {
         "addr": "tags"
@@ -160396,7 +160835,16 @@
         "addr": "properties{Clone}/localStandbyDb"
       },
       {
-        "addr": "properties{Clone}/longTermBackupSchedule"
+        "addr": "properties{Clone}/longTermBackupSchedule/isDisabled"
+      },
+      {
+        "addr": "properties{Clone}/longTermBackupSchedule/repeatCadence"
+      },
+      {
+        "addr": "properties{Clone}/longTermBackupSchedule/retentionPeriodInDays"
+      },
+      {
+        "addr": "properties{Clone}/longTermBackupSchedule/timeOfBackup"
       },
       {
         "addr": "properties{Clone}/memoryPerOracleComputeUnitInGbs"
@@ -160678,7 +161126,34 @@
         "addr": "properties{Regular}/localStandbyDb"
       },
       {
-        "addr": "properties{Regular}/longTermBackupSchedule"
+        "addr": "properties{Regular}/longTermBackupSchedule/isDisabled"
+      },
+      {
+        "addr": "properties{Regular}/longTermBackupSchedule/repeatCadence",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/long_term_backup_schedule/0/repeat_cadence"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Regular}/longTermBackupSchedule/retentionPeriodInDays",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/long_term_backup_schedule/0/retention_period_in_days"
+          }
+        ]
+      },
+      {
+        "addr": "properties{Regular}/longTermBackupSchedule/timeOfBackup",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/long_term_backup_schedule/0/time_of_backup"
+          }
+        ]
       },
       {
         "addr": "properties{Regular}/memoryPerOracleComputeUnitInGbs"
