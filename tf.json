@@ -13747,6 +13747,18 @@
     "operation": "GET",
     "properties": [
       {
+        "addr": "identity/principalId"
+      },
+      {
+        "addr": "identity/tenantId"
+      },
+      {
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
+      },
+      {
         "addr": "location",
         "app_property_maps": [
           {
@@ -13900,6 +13912,18 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APP/MANAGEDENVIRONMENTS/{}",
     "operation": "PUT",
     "properties": [
+      {
+        "addr": "identity/principalId"
+      },
+      {
+        "addr": "identity/tenantId"
+      },
+      {
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
+      },
       {
         "addr": "location",
         "app_property_maps": [
@@ -41455,7 +41479,13 @@
         ]
       },
       {
-        "addr": "properties/virtualMachineProfile/networkProfile/networkApiVersion"
+        "addr": "properties/virtualMachineProfile/networkProfile/networkApiVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_orchestrated_virtual_machine_scale_set",
+            "addr": "/network_api_version"
+          }
+        ]
       },
       {
         "addr": "properties/virtualMachineProfile/networkProfile/networkInterfaceConfigurations/name"
@@ -42515,7 +42545,13 @@
         ]
       },
       {
-        "addr": "properties/virtualMachineProfile/networkProfile/networkApiVersion"
+        "addr": "properties/virtualMachineProfile/networkProfile/networkApiVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_orchestrated_virtual_machine_scale_set",
+            "addr": "/network_api_version"
+          }
+        ]
       },
       {
         "addr": "properties/virtualMachineProfile/networkProfile/networkInterfaceConfigurations/name"
@@ -43572,7 +43608,13 @@
         ]
       },
       {
-        "addr": "properties/virtualMachineProfile/networkProfile/networkApiVersion"
+        "addr": "properties/virtualMachineProfile/networkProfile/networkApiVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_orchestrated_virtual_machine_scale_set",
+            "addr": "/network_api_version"
+          }
+        ]
       },
       {
         "addr": "properties/virtualMachineProfile/networkProfile/networkInterfaceConfigurations/name"
@@ -77596,13 +77638,7 @@
         "addr": "properties/captureDescription/skipEmptyArchives"
       },
       {
-        "addr": "properties/messageRetentionInDays",
-        "app_property_maps": [
-          {
-            "name": "azurerm_eventhub",
-            "addr": "/message_retention"
-          }
-        ]
+        "addr": "properties/messageRetentionInDays"
       },
       {
         "addr": "properties/partitionCount",
@@ -77615,6 +77651,21 @@
       },
       {
         "addr": "properties/partitionIds"
+      },
+      {
+        "addr": "properties/retentionDescription/cleanupPolicy",
+        "app_property_maps": [
+          {
+            "name": "azurerm_eventhub",
+            "addr": "/retention_description/0/cleanup_policy"
+          }
+        ]
+      },
+      {
+        "addr": "properties/retentionDescription/retentionTimeInHours"
+      },
+      {
+        "addr": "properties/retentionDescription/tombstoneRetentionTimeInHours"
       },
       {
         "addr": "properties/status",
@@ -77702,13 +77753,7 @@
         "addr": "properties/captureDescription/skipEmptyArchives"
       },
       {
-        "addr": "properties/messageRetentionInDays",
-        "app_property_maps": [
-          {
-            "name": "azurerm_eventhub",
-            "addr": "/message_retention"
-          }
-        ]
+        "addr": "properties/messageRetentionInDays"
       },
       {
         "addr": "properties/partitionCount",
@@ -77721,6 +77766,21 @@
       },
       {
         "addr": "properties/partitionIds"
+      },
+      {
+        "addr": "properties/retentionDescription/cleanupPolicy",
+        "app_property_maps": [
+          {
+            "name": "azurerm_eventhub",
+            "addr": "/retention_description/0/cleanup_policy"
+          }
+        ]
+      },
+      {
+        "addr": "properties/retentionDescription/retentionTimeInHours"
+      },
+      {
+        "addr": "properties/retentionDescription/tombstoneRetentionTimeInHours"
       },
       {
         "addr": "properties/status",
@@ -112275,6 +112335,9 @@
         "addr": "properties/vpnLinkConnections/properties/connectionBandwidth"
       },
       {
+        "addr": "properties/vpnLinkConnections/properties/dpdTimeoutSeconds"
+      },
+      {
         "addr": "properties/vpnLinkConnections/properties/egressNatRules/id"
       },
       {
@@ -112400,6 +112463,9 @@
       },
       {
         "addr": "properties/vpnLinkConnections/properties/connectionBandwidth"
+      },
+      {
+        "addr": "properties/vpnLinkConnections/properties/dpdTimeoutSeconds"
       },
       {
         "addr": "properties/vpnLinkConnections/properties/egressNatRules/id"
@@ -170562,6 +170628,15 @@
         ]
       },
       {
+        "addr": "properties/gitRepository/provider",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/provider"
+          }
+        ]
+      },
+      {
         "addr": "properties/gitRepository/repositoryRef/branch",
         "app_property_maps": [
           {
@@ -170895,6 +170970,15 @@
           {
             "name": "azurerm_kubernetes_flux_configuration",
             "addr": "/git_repository/0/local_auth_reference"
+          }
+        ]
+      },
+      {
+        "addr": "properties/gitRepository/provider",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_flux_configuration",
+            "addr": "/git_repository/0/provider"
           }
         ]
       },
