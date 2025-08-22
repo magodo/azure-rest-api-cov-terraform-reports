@@ -28288,6 +28288,21 @@
         ]
       },
       {
+        "addr": "properties/logScrubbing/scrubbingRules/matchVariable"
+      },
+      {
+        "addr": "properties/logScrubbing/scrubbingRules/selector"
+      },
+      {
+        "addr": "properties/logScrubbing/scrubbingRules/selectorMatchOperator"
+      },
+      {
+        "addr": "properties/logScrubbing/scrubbingRules/state"
+      },
+      {
+        "addr": "properties/logScrubbing/state"
+      },
+      {
         "addr": "properties/originResponseTimeoutSeconds",
         "app_property_maps": [
           {
@@ -28336,6 +28351,21 @@
       },
       {
         "addr": "identity/userAssignedIdentities"
+      },
+      {
+        "addr": "properties/logScrubbing/scrubbingRules/matchVariable"
+      },
+      {
+        "addr": "properties/logScrubbing/scrubbingRules/selector"
+      },
+      {
+        "addr": "properties/logScrubbing/scrubbingRules/selectorMatchOperator"
+      },
+      {
+        "addr": "properties/logScrubbing/scrubbingRules/state"
+      },
+      {
+        "addr": "properties/logScrubbing/state"
       },
       {
         "addr": "properties/originResponseTimeoutSeconds",
@@ -28410,6 +28440,21 @@
             "addr": "/resource_guid"
           }
         ]
+      },
+      {
+        "addr": "properties/logScrubbing/scrubbingRules/matchVariable"
+      },
+      {
+        "addr": "properties/logScrubbing/scrubbingRules/selector"
+      },
+      {
+        "addr": "properties/logScrubbing/scrubbingRules/selectorMatchOperator"
+      },
+      {
+        "addr": "properties/logScrubbing/scrubbingRules/state"
+      },
+      {
+        "addr": "properties/logScrubbing/state"
       },
       {
         "addr": "properties/originResponseTimeoutSeconds",
@@ -63552,7 +63597,13 @@
         "addr": "properties/pointInTimeUTC"
       },
       {
-        "addr": "properties/sourceServerResourceId"
+        "addr": "properties/sourceServerResourceId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_postgresql_flexible_server",
+            "addr": "/source_server_id"
+          }
+        ]
       },
       {
         "addr": "properties/state"
@@ -63947,7 +63998,13 @@
         "addr": "properties/pointInTimeUTC"
       },
       {
-        "addr": "properties/sourceServerResourceId"
+        "addr": "properties/sourceServerResourceId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_postgresql_flexible_server",
+            "addr": "/source_server_id"
+          }
+        ]
       },
       {
         "addr": "properties/state"
@@ -93733,12 +93790,12 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}",
     "operation": "GET",
     "properties": [
@@ -93806,6 +93863,15 @@
         "addr": "properties/activeDirectories/username"
       },
       {
+        "addr": "properties/encryption/identity/federatedClientId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_netapp_account_encryption",
+            "addr": "/federated_client_id"
+          }
+        ]
+      },
+      {
         "addr": "properties/encryption/identity/userAssignedIdentity"
       },
       {
@@ -93815,7 +93881,13 @@
         "addr": "properties/encryption/keyVaultProperties/keyName"
       },
       {
-        "addr": "properties/encryption/keyVaultProperties/keyVaultResourceId"
+        "addr": "properties/encryption/keyVaultProperties/keyVaultResourceId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_netapp_account_encryption",
+            "addr": "/cross_tenant_key_vault_resource_id"
+          }
+        ]
       },
       {
         "addr": "properties/encryption/keyVaultProperties/keyVaultUri"
@@ -93826,7 +93898,7 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -93888,6 +93960,15 @@
         "addr": "properties/encryption"
       },
       {
+        "addr": "properties/encryption/identity/federatedClientId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_netapp_account_encryption",
+            "addr": "/federated_client_id"
+          }
+        ]
+      },
+      {
         "addr": "properties/encryption/identity/userAssignedIdentity"
       },
       {
@@ -93897,7 +93978,13 @@
         "addr": "properties/encryption/keyVaultProperties/keyName"
       },
       {
-        "addr": "properties/encryption/keyVaultProperties/keyVaultResourceId"
+        "addr": "properties/encryption/keyVaultProperties/keyVaultResourceId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_netapp_account_encryption",
+            "addr": "/cross_tenant_key_vault_resource_id"
+          }
+        ]
       },
       {
         "addr": "properties/encryption/keyVaultProperties/keyVaultUri"
@@ -93908,7 +93995,7 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}",
     "operation": "PUT",
     "properties": [
@@ -93976,6 +94063,15 @@
         "addr": "properties/activeDirectories/username"
       },
       {
+        "addr": "properties/encryption/identity/federatedClientId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_netapp_account_encryption",
+            "addr": "/federated_client_id"
+          }
+        ]
+      },
+      {
         "addr": "properties/encryption/identity/userAssignedIdentity"
       },
       {
@@ -93985,7 +94081,13 @@
         "addr": "properties/encryption/keyVaultProperties/keyName"
       },
       {
-        "addr": "properties/encryption/keyVaultProperties/keyVaultResourceId"
+        "addr": "properties/encryption/keyVaultProperties/keyVaultResourceId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_netapp_account_encryption",
+            "addr": "/cross_tenant_key_vault_resource_id"
+          }
+        ]
       },
       {
         "addr": "properties/encryption/keyVaultProperties/keyVaultUri"
@@ -93996,12 +94098,12 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPPOLICIES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPPOLICIES/{}",
     "operation": "GET",
     "properties": [
@@ -94050,7 +94152,7 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPPOLICIES/{}",
     "operation": "PATCH",
     "properties": [
@@ -94090,7 +94192,7 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPPOLICIES/{}",
     "operation": "PUT",
     "properties": [
@@ -94139,12 +94241,12 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPVAULTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPVAULTS/{}",
     "operation": "GET",
     "properties": [
@@ -94163,7 +94265,7 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPVAULTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -94173,7 +94275,7 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPVAULTS/{}",
     "operation": "PUT",
     "properties": [
@@ -94192,7 +94294,7 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPVAULTS/{}/BACKUPS",
     "operation": "GET",
     "properties": [
@@ -94205,12 +94307,12 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPVAULTS/{}/BACKUPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPVAULTS/{}/BACKUPS/{}",
     "operation": "GET",
     "properties": [
@@ -94223,7 +94325,7 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS",
     "operation": "GET",
     "properties": [
@@ -94249,6 +94351,9 @@
         ]
       },
       {
+        "addr": "properties/customThroughputMibps"
+      },
+      {
         "addr": "properties/encryptionType",
         "app_property_maps": [
           {
@@ -94276,7 +94381,13 @@
         ]
       },
       {
-        "addr": "properties/size"
+        "addr": "properties/size",
+        "app_property_maps": [
+          {
+            "name": "azurerm_netapp_pool",
+            "addr": "/custom_throughput_mibps"
+          }
+        ]
       },
       {
         "addr": "tags"
@@ -94284,12 +94395,12 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}",
     "operation": "GET",
     "properties": [
@@ -94315,6 +94426,9 @@
         ]
       },
       {
+        "addr": "properties/customThroughputMibps"
+      },
+      {
         "addr": "properties/encryptionType",
         "app_property_maps": [
           {
@@ -94342,7 +94456,13 @@
         ]
       },
       {
-        "addr": "properties/size"
+        "addr": "properties/size",
+        "app_property_maps": [
+          {
+            "name": "azurerm_netapp_pool",
+            "addr": "/custom_throughput_mibps"
+          }
+        ]
       },
       {
         "addr": "tags"
@@ -94350,7 +94470,7 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}",
     "operation": "PATCH",
     "properties": [
@@ -94364,6 +94484,9 @@
         ]
       },
       {
+        "addr": "properties/customThroughputMibps"
+      },
+      {
         "addr": "properties/qosType",
         "app_property_maps": [
           {
@@ -94373,7 +94496,13 @@
         ]
       },
       {
-        "addr": "properties/size"
+        "addr": "properties/size",
+        "app_property_maps": [
+          {
+            "name": "azurerm_netapp_pool",
+            "addr": "/custom_throughput_mibps"
+          }
+        ]
       },
       {
         "addr": "tags"
@@ -94381,7 +94510,7 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}",
     "operation": "PUT",
     "properties": [
@@ -94407,6 +94536,9 @@
         ]
       },
       {
+        "addr": "properties/customThroughputMibps"
+      },
+      {
         "addr": "properties/encryptionType",
         "app_property_maps": [
           {
@@ -94434,7 +94566,13 @@
         ]
       },
       {
-        "addr": "properties/size"
+        "addr": "properties/size",
+        "app_property_maps": [
+          {
+            "name": "azurerm_netapp_pool",
+            "addr": "/custom_throughput_mibps"
+          }
+        ]
       },
       {
         "addr": "tags"
@@ -94442,7 +94580,7 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES",
     "operation": "GET",
     "properties": [
@@ -94710,12 +94848,12 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}",
     "operation": "GET",
     "properties": [
@@ -94983,7 +95121,7 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}",
     "operation": "PATCH",
     "properties": [
@@ -95124,7 +95262,7 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}",
     "operation": "PUT",
     "properties": [
@@ -95392,7 +95530,7 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/AUTHORIZEREPLICATION",
     "operation": "POST",
     "properties": [
@@ -95402,7 +95540,7 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/BREAKREPLICATION",
     "operation": "POST",
     "properties": [
@@ -95412,12 +95550,12 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/DELETEREPLICATION",
     "operation": "POST"
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/LATESTBACKUPSTATUS/CURRENT",
     "operation": "GET",
     "properties": [
@@ -95427,7 +95565,7 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/POOLCHANGE",
     "operation": "POST",
     "properties": [
@@ -95437,7 +95575,7 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/REPLICATIONSTATUS",
     "operation": "GET",
     "properties": [
@@ -95447,12 +95585,12 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/SNAPSHOTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/SNAPSHOTS/{}",
     "operation": "GET",
     "properties": [
@@ -95471,7 +95609,7 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/SNAPSHOTS/{}",
     "operation": "PUT",
     "properties": [
@@ -95490,12 +95628,12 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/VOLUMEQUOTARULES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/VOLUMEQUOTARULES/{}",
     "operation": "GET",
     "properties": [
@@ -95538,7 +95676,7 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/VOLUMEQUOTARULES/{}",
     "operation": "PATCH",
     "properties": [
@@ -95554,7 +95692,7 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/VOLUMEQUOTARULES/{}",
     "operation": "PUT",
     "properties": [
@@ -95597,12 +95735,12 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/SNAPSHOTPOLICIES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/SNAPSHOTPOLICIES/{}",
     "operation": "GET",
     "properties": [
@@ -95744,7 +95882,7 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/SNAPSHOTPOLICIES/{}",
     "operation": "PATCH",
     "properties": [
@@ -95886,7 +96024,7 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/SNAPSHOTPOLICIES/{}",
     "operation": "PUT",
     "properties": [
@@ -96028,12 +96166,12 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/VOLUMEGROUPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/VOLUMEGROUPS/{}",
     "operation": "GET",
     "properties": [
@@ -96202,7 +96340,7 @@
     ]
   },
   {
-    "api_version": "2025-01-01",
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/VOLUMEGROUPS/{}",
     "operation": "PUT",
     "properties": [
@@ -105729,6 +105867,55 @@
   },
   {
     "api_version": "2024-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/IPAMPOOLS/{}/STATICCIDRS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2024-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/IPAMPOOLS/{}/STATICCIDRS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/addressPrefixes"
+      },
+      {
+        "addr": "properties/numberOfIPAddressesToAllocate",
+        "app_property_maps": [
+          {
+            "name": "azurerm_network_manager_ipam_pool_static_cidr",
+            "addr": "/number_of_ip_addresses_to_allocate"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2024-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/IPAMPOOLS/{}/STATICCIDRS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/addressPrefixes"
+      },
+      {
+        "addr": "properties/numberOfIPAddressesToAllocate",
+        "app_property_maps": [
+          {
+            "name": "azurerm_network_manager_ipam_pool_static_cidr",
+            "addr": "/number_of_ip_addresses_to_allocate"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2024-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/LISTDEPLOYMENTSTATUS",
     "operation": "POST",
     "properties": [
@@ -105872,6 +106059,61 @@
             "addr": "/description"
           }
         ]
+      }
+    ]
+  },
+  {
+    "api_version": "2024-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/ROUTINGCONFIGURATIONS/{}/RULECOLLECTIONS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2024-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/ROUTINGCONFIGURATIONS/{}/RULECOLLECTIONS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/appliesTo/networkGroupId"
+      },
+      {
+        "addr": "properties/description",
+        "app_property_maps": [
+          {
+            "name": "azurerm_network_manager_routing_rule_collection",
+            "addr": "/description"
+          }
+        ]
+      },
+      {
+        "addr": "properties/disableBgpRoutePropagation"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKMANAGERS/{}/ROUTINGCONFIGURATIONS/{}/RULECOLLECTIONS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/appliesTo/networkGroupId"
+      },
+      {
+        "addr": "properties/description",
+        "app_property_maps": [
+          {
+            "name": "azurerm_network_manager_routing_rule_collection",
+            "addr": "/description"
+          }
+        ]
+      },
+      {
+        "addr": "properties/disableBgpRoutePropagation"
       }
     ]
   },
