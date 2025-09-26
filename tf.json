@@ -48293,11 +48293,23 @@
         "addr": "properties/apiServerAccessProfile/enablePrivateClusterPublicFQDN"
       },
       {
+        "addr": "properties/apiServerAccessProfile/enableVnetIntegration"
+      },
+      {
         "addr": "properties/apiServerAccessProfile/privateDNSZone",
         "app_property_maps": [
           {
             "name": "azurerm_kubernetes_cluster",
             "addr": "/private_dns_zone_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/apiServerAccessProfile/subnetId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster",
+            "addr": "/api_server_access_profile/0/subnet_id"
           }
         ]
       },
@@ -49389,11 +49401,23 @@
         "addr": "properties/apiServerAccessProfile/enablePrivateClusterPublicFQDN"
       },
       {
+        "addr": "properties/apiServerAccessProfile/enableVnetIntegration"
+      },
+      {
         "addr": "properties/apiServerAccessProfile/privateDNSZone",
         "app_property_maps": [
           {
             "name": "azurerm_kubernetes_cluster",
             "addr": "/private_dns_zone_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/apiServerAccessProfile/subnetId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster",
+            "addr": "/api_server_access_profile/0/subnet_id"
           }
         ]
       },
@@ -90001,6 +90025,9 @@
         ]
       },
       {
+        "addr": "properties/enableServiceSideCMKEncryption"
+      },
+      {
         "addr": "properties/encryption"
       },
       {
@@ -90275,6 +90302,9 @@
             "addr": "/discovery_url"
           }
         ]
+      },
+      {
+        "addr": "properties/enableServiceSideCMKEncryption"
       },
       {
         "addr": "properties/encryption"
@@ -95624,6 +95654,9 @@
       },
       {
         "addr": "properties/exportPolicy/rules/unixReadWrite"
+      },
+      {
+        "addr": "properties/protocolTypes"
       },
       {
         "addr": "properties/smbAccessBasedEnumeration"
@@ -103781,7 +103814,7 @@
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-02-01",
+    "api_version": "2025-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/FRONTDOORWEBAPPLICATIONFIREWALLPOLICIES/{}",
     "operation": "DELETE"
   },
@@ -103937,7 +103970,7 @@
     ]
   },
   {
-    "api_version": "2024-02-01",
+    "api_version": "2025-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/FRONTDOORWEBAPPLICATIONFIREWALLPOLICIES/{}",
     "operation": "GET",
     "properties": [
@@ -104033,6 +104066,15 @@
       },
       {
         "addr": "properties/managedRules/managedRuleSets/ruleSetVersion"
+      },
+      {
+        "addr": "properties/policySettings/captchaExpirationInMinutes",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cdn_frontdoor_firewall_policy",
+            "addr": "/captcha_cookie_expiration_in_minutes"
+          }
+        ]
       },
       {
         "addr": "properties/policySettings/customBlockResponseBody",
@@ -104266,7 +104308,7 @@
     ]
   },
   {
-    "api_version": "2024-02-01",
+    "api_version": "2025-03-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/FRONTDOORWEBAPPLICATIONFIREWALLPOLICIES/{}",
     "operation": "PUT",
     "properties": [
@@ -104362,6 +104404,15 @@
       },
       {
         "addr": "properties/managedRules/managedRuleSets/ruleSetVersion"
+      },
+      {
+        "addr": "properties/policySettings/captchaExpirationInMinutes",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cdn_frontdoor_firewall_policy",
+            "addr": "/captcha_cookie_expiration_in_minutes"
+          }
+        ]
       },
       {
         "addr": "properties/policySettings/customBlockResponseBody",
@@ -135424,6 +135475,9 @@
         "addr": "extendedLocation"
       },
       {
+        "addr": "id"
+      },
+      {
         "addr": "identity/principalId"
       },
       {
@@ -135452,6 +135506,9 @@
             "addr": "/location"
           }
         ]
+      },
+      {
+        "addr": "name"
       },
       {
         "addr": "properties/accessTier",
@@ -136081,6 +136138,9 @@
       },
       {
         "addr": "tags"
+      },
+      {
+        "addr": "type"
       }
     ]
   },
@@ -137569,6 +137629,31 @@
       },
       {
         "addr": "properties/sourceAccount"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/QUEUESERVICES/DEFAULT/QUEUES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2023-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/QUEUESERVICES/DEFAULT/QUEUES/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/metadata"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/QUEUESERVICES/DEFAULT/QUEUES/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "properties/metadata"
       }
     ]
   },
@@ -147642,6 +147727,9 @@
         "addr": "properties/functionAppConfig/scaleAndConcurrency/maximumInstanceCount"
       },
       {
+        "addr": "properties/functionAppConfig/scaleAndConcurrency/triggers/http/perInstanceConcurrency"
+      },
+      {
         "addr": "properties/hostNameSslStates/hostType"
       },
       {
@@ -148755,6 +148843,9 @@
       },
       {
         "addr": "properties/functionAppConfig/scaleAndConcurrency/maximumInstanceCount"
+      },
+      {
+        "addr": "properties/functionAppConfig/scaleAndConcurrency/triggers/http/perInstanceConcurrency"
       },
       {
         "addr": "properties/hostNameSslStates/hostType"
@@ -153753,6 +153844,9 @@
         "addr": "properties/functionAppConfig/scaleAndConcurrency/maximumInstanceCount"
       },
       {
+        "addr": "properties/functionAppConfig/scaleAndConcurrency/triggers/http/perInstanceConcurrency"
+      },
+      {
         "addr": "properties/hostNameSslStates/hostType"
       },
       {
@@ -154436,6 +154530,9 @@
       },
       {
         "addr": "properties/functionAppConfig/scaleAndConcurrency/maximumInstanceCount"
+      },
+      {
+        "addr": "properties/functionAppConfig/scaleAndConcurrency/triggers/http/perInstanceConcurrency"
       },
       {
         "addr": "properties/hostNameSslStates/hostType"
