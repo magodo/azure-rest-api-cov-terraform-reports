@@ -12395,6 +12395,79 @@
     ]
   },
   {
+    "api_version": "2024-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/WORKSPACES/{}/POLICYFRAGMENTS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2024-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/WORKSPACES/{}/POLICYFRAGMENTS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/description",
+        "app_property_maps": [
+          {
+            "name": "azurerm_api_management_workspace_policy_fragment",
+            "addr": "/description"
+          }
+        ]
+      },
+      {
+        "addr": "properties/format",
+        "app_property_maps": [
+          {
+            "name": "azurerm_api_management_workspace_policy_fragment",
+            "addr": "/xml_format"
+          }
+        ]
+      },
+      {
+        "addr": "properties/value",
+        "app_property_maps": [
+          {
+            "name": "azurerm_api_management_workspace_policy_fragment",
+            "addr": "/xml_content"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2024-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/WORKSPACES/{}/POLICYFRAGMENTS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "properties/description",
+        "app_property_maps": [
+          {
+            "name": "azurerm_api_management_workspace_policy_fragment",
+            "addr": "/description"
+          }
+        ]
+      },
+      {
+        "addr": "properties/format",
+        "app_property_maps": [
+          {
+            "name": "azurerm_api_management_workspace_policy_fragment",
+            "addr": "/xml_format"
+          }
+        ]
+      },
+      {
+        "addr": "properties/value",
+        "app_property_maps": [
+          {
+            "name": "azurerm_api_management_workspace_policy_fragment",
+            "addr": "/xml_content"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "api_version": "2025-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APP/CONTAINERAPPS/{}",
     "operation": "DELETE"
@@ -61567,31 +61640,16 @@
     "operation": "GET",
     "properties": [
       {
-        "addr": "identity/principalId",
-        "app_property_maps": [
-          {
-            "name": "azurerm_data_protection_backup_vault",
-            "addr": "/identity/0/principal_id"
-          }
-        ]
+        "addr": "identity/principalId"
       },
       {
-        "addr": "identity/tenantId",
-        "app_property_maps": [
-          {
-            "name": "azurerm_data_protection_backup_vault",
-            "addr": "/identity/0/tenant_id"
-          }
-        ]
+        "addr": "identity/tenantId"
       },
       {
-        "addr": "identity/type",
-        "app_property_maps": [
-          {
-            "name": "azurerm_data_protection_backup_vault",
-            "addr": "/identity/0/type"
-          }
-        ]
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
       },
       {
         "addr": "location",
@@ -61664,31 +61722,16 @@
     "operation": "PUT",
     "properties": [
       {
-        "addr": "identity/principalId",
-        "app_property_maps": [
-          {
-            "name": "azurerm_data_protection_backup_vault",
-            "addr": "/identity/0/principal_id"
-          }
-        ]
+        "addr": "identity/principalId"
       },
       {
-        "addr": "identity/tenantId",
-        "app_property_maps": [
-          {
-            "name": "azurerm_data_protection_backup_vault",
-            "addr": "/identity/0/tenant_id"
-          }
-        ]
+        "addr": "identity/tenantId"
       },
       {
-        "addr": "identity/type",
-        "app_property_maps": [
-          {
-            "name": "azurerm_data_protection_backup_vault",
-            "addr": "/identity/0/type"
-          }
-        ]
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
       },
       {
         "addr": "location",
@@ -94847,7 +94890,13 @@
         ]
       },
       {
-        "addr": "properties/customThroughputMibps"
+        "addr": "properties/customThroughputMibps",
+        "app_property_maps": [
+          {
+            "name": "azurerm_netapp_pool",
+            "addr": "/custom_throughput_mibps"
+          }
+        ]
       },
       {
         "addr": "properties/encryptionType",
@@ -94877,13 +94926,7 @@
         ]
       },
       {
-        "addr": "properties/size",
-        "app_property_maps": [
-          {
-            "name": "azurerm_netapp_pool",
-            "addr": "/custom_throughput_mibps"
-          }
-        ]
+        "addr": "properties/size"
       },
       {
         "addr": "tags"
@@ -94922,7 +94965,13 @@
         ]
       },
       {
-        "addr": "properties/customThroughputMibps"
+        "addr": "properties/customThroughputMibps",
+        "app_property_maps": [
+          {
+            "name": "azurerm_netapp_pool",
+            "addr": "/custom_throughput_mibps"
+          }
+        ]
       },
       {
         "addr": "properties/encryptionType",
@@ -94952,13 +95001,7 @@
         ]
       },
       {
-        "addr": "properties/size",
-        "app_property_maps": [
-          {
-            "name": "azurerm_netapp_pool",
-            "addr": "/custom_throughput_mibps"
-          }
-        ]
+        "addr": "properties/size"
       },
       {
         "addr": "tags"
@@ -94980,7 +95023,13 @@
         ]
       },
       {
-        "addr": "properties/customThroughputMibps"
+        "addr": "properties/customThroughputMibps",
+        "app_property_maps": [
+          {
+            "name": "azurerm_netapp_pool",
+            "addr": "/custom_throughput_mibps"
+          }
+        ]
       },
       {
         "addr": "properties/qosType",
@@ -94992,13 +95041,7 @@
         ]
       },
       {
-        "addr": "properties/size",
-        "app_property_maps": [
-          {
-            "name": "azurerm_netapp_pool",
-            "addr": "/custom_throughput_mibps"
-          }
-        ]
+        "addr": "properties/size"
       },
       {
         "addr": "tags"
@@ -95032,7 +95075,13 @@
         ]
       },
       {
-        "addr": "properties/customThroughputMibps"
+        "addr": "properties/customThroughputMibps",
+        "app_property_maps": [
+          {
+            "name": "azurerm_netapp_pool",
+            "addr": "/custom_throughput_mibps"
+          }
+        ]
       },
       {
         "addr": "properties/encryptionType",
@@ -95062,13 +95111,7 @@
         ]
       },
       {
-        "addr": "properties/size",
-        "app_property_maps": [
-          {
-            "name": "azurerm_netapp_pool",
-            "addr": "/custom_throughput_mibps"
-          }
-        ]
+        "addr": "properties/size"
       },
       {
         "addr": "tags"
@@ -139852,7 +139895,13 @@
         "addr": "name"
       },
       {
-        "addr": "properties/cluster/id"
+        "addr": "properties/cluster/id",
+        "app_property_maps": [
+          {
+            "name": "azurerm_stream_analytics_job",
+            "addr": "/stream_analytics_cluster_id"
+          }
+        ]
       },
       {
         "addr": "properties/compatibilityLevel",
@@ -140062,7 +140111,13 @@
         "addr": "name"
       },
       {
-        "addr": "properties/cluster/id"
+        "addr": "properties/cluster/id",
+        "app_property_maps": [
+          {
+            "name": "azurerm_stream_analytics_job",
+            "addr": "/stream_analytics_cluster_id"
+          }
+        ]
       },
       {
         "addr": "properties/compatibilityLevel",
@@ -140272,7 +140327,13 @@
         "addr": "name"
       },
       {
-        "addr": "properties/cluster/id"
+        "addr": "properties/cluster/id",
+        "app_property_maps": [
+          {
+            "name": "azurerm_stream_analytics_job",
+            "addr": "/stream_analytics_cluster_id"
+          }
+        ]
       },
       {
         "addr": "properties/compatibilityLevel",
@@ -165377,6 +165438,215 @@
       },
       {
         "addr": "properties/vnicId"
+      }
+    ]
+  },
+  {
+    "api_version": "2025-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/EXASCALEDBSTORAGEVAULTS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2025-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/EXASCALEDBSTORAGEVAULTS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exascale_database_storage_vault",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/additionalFlashCacheInPercent",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exascale_database_storage_vault",
+            "addr": "/additional_flash_cache_percentage"
+          }
+        ]
+      },
+      {
+        "addr": "properties/description",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exascale_database_storage_vault",
+            "addr": "/description"
+          }
+        ]
+      },
+      {
+        "addr": "properties/displayName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exascale_database_storage_vault",
+            "addr": "/display_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/highCapacityDatabaseStorage/availableSizeInGbs",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exascale_database_storage_vault",
+            "addr": "/high_capacity_database_storage/0/available_size_in_gb"
+          }
+        ]
+      },
+      {
+        "addr": "properties/highCapacityDatabaseStorage/totalSizeInGbs",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exascale_database_storage_vault",
+            "addr": "/high_capacity_database_storage/0/total_size_in_gb"
+          }
+        ]
+      },
+      {
+        "addr": "properties/highCapacityDatabaseStorageInput/totalSizeInGbs"
+      },
+      {
+        "addr": "properties/lifecycleDetails"
+      },
+      {
+        "addr": "properties/lifecycleState"
+      },
+      {
+        "addr": "properties/ociUrl"
+      },
+      {
+        "addr": "properties/ocid"
+      },
+      {
+        "addr": "properties/timeZone",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exascale_database_storage_vault",
+            "addr": "/time_zone"
+          }
+        ]
+      },
+      {
+        "addr": "properties/vmClusterCount"
+      },
+      {
+        "addr": "tags"
+      },
+      {
+        "addr": "zones"
+      }
+    ]
+  },
+  {
+    "api_version": "2025-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/EXASCALEDBSTORAGEVAULTS/{}",
+    "operation": "PATCH",
+    "properties": [
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2025-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/EXASCALEDBSTORAGEVAULTS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exascale_database_storage_vault",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/additionalFlashCacheInPercent",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exascale_database_storage_vault",
+            "addr": "/additional_flash_cache_percentage"
+          }
+        ]
+      },
+      {
+        "addr": "properties/description",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exascale_database_storage_vault",
+            "addr": "/description"
+          }
+        ]
+      },
+      {
+        "addr": "properties/displayName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exascale_database_storage_vault",
+            "addr": "/display_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/highCapacityDatabaseStorage/availableSizeInGbs",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exascale_database_storage_vault",
+            "addr": "/high_capacity_database_storage/0/available_size_in_gb"
+          }
+        ]
+      },
+      {
+        "addr": "properties/highCapacityDatabaseStorage/totalSizeInGbs",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exascale_database_storage_vault",
+            "addr": "/high_capacity_database_storage/0/total_size_in_gb"
+          }
+        ]
+      },
+      {
+        "addr": "properties/highCapacityDatabaseStorageInput/totalSizeInGbs"
+      },
+      {
+        "addr": "properties/lifecycleDetails"
+      },
+      {
+        "addr": "properties/lifecycleState"
+      },
+      {
+        "addr": "properties/ociUrl"
+      },
+      {
+        "addr": "properties/ocid"
+      },
+      {
+        "addr": "properties/timeZone",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_exascale_database_storage_vault",
+            "addr": "/time_zone"
+          }
+        ]
+      },
+      {
+        "addr": "properties/vmClusterCount"
+      },
+      {
+        "addr": "tags"
+      },
+      {
+        "addr": "zones"
       }
     ]
   },
