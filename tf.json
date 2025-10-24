@@ -4905,7 +4905,7 @@
     ]
   },
   {
-    "api_version": "2025-03-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/ORACLE.DATABASE/LOCATIONS/{}/AUTONOMOUSDATABASECHARACTERSETS",
     "operation": "GET",
     "properties": [
@@ -4915,7 +4915,7 @@
     ]
   },
   {
-    "api_version": "2025-03-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/ORACLE.DATABASE/LOCATIONS/{}/AUTONOMOUSDATABASENATIONALCHARACTERSETS",
     "operation": "GET",
     "properties": [
@@ -4925,7 +4925,7 @@
     ]
   },
   {
-    "api_version": "2025-03-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/ORACLE.DATABASE/LOCATIONS/{}/DBSYSTEMSHAPES",
     "operation": "GET",
     "properties": [
@@ -5001,7 +5001,7 @@
     ]
   },
   {
-    "api_version": "2025-03-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/ORACLE.DATABASE/LOCATIONS/{}/GIVERSIONS",
     "operation": "GET",
     "properties": [
@@ -14071,6 +14071,15 @@
         "addr": "properties/peerTrafficConfiguration/encryption/enabled"
       },
       {
+        "addr": "properties/publicNetworkAccess",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_app_environment",
+            "addr": "/public_network_access"
+          }
+        ]
+      },
+      {
         "addr": "properties/staticIp",
         "app_property_maps": [
           {
@@ -14235,6 +14244,15 @@
       },
       {
         "addr": "properties/peerTrafficConfiguration/encryption/enabled"
+      },
+      {
+        "addr": "properties/publicNetworkAccess",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_app_environment",
+            "addr": "/public_network_access"
+          }
+        ]
       },
       {
         "addr": "properties/staticIp",
@@ -28078,6 +28096,11 @@
     "operation": "DELETE"
   },
   {
+    "api_version": "2025-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}",
+    "operation": "DELETE"
+  },
+  {
     "api_version": "2024-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}",
     "operation": "GET",
@@ -28123,6 +28146,82 @@
       },
       {
         "addr": "zones"
+      }
+    ]
+  },
+  {
+    "api_version": "2025-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "identity/principalId"
+      },
+      {
+        "addr": "identity/tenantId"
+      },
+      {
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
+      },
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_redis",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/encryption/customerManagedKeyEncryption/keyEncryptionKeyIdentity/identityType"
+      },
+      {
+        "addr": "properties/encryption/customerManagedKeyEncryption/keyEncryptionKeyIdentity/userAssignedIdentityResourceId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_redis",
+            "addr": "/customer_managed_key/0/user_assigned_identity_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/encryption/customerManagedKeyEncryption/keyEncryptionKeyUrl",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_redis",
+            "addr": "/customer_managed_key/0/key_vault_key_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/highAvailability"
+      },
+      {
+        "addr": "properties/hostName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_redis",
+            "addr": "/hostname"
+          }
+        ]
+      },
+      {
+        "addr": "properties/minimumTlsVersion"
+      },
+      {
+        "addr": "sku/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_redis",
+            "addr": "/sku_name"
+          }
+        ]
+      },
+      {
+        "addr": "tags"
       }
     ]
   },
@@ -28186,7 +28285,88 @@
     ]
   },
   {
+    "api_version": "2025-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "identity/principalId"
+      },
+      {
+        "addr": "identity/tenantId"
+      },
+      {
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
+      },
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_redis",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/encryption/customerManagedKeyEncryption/keyEncryptionKeyIdentity/identityType"
+      },
+      {
+        "addr": "properties/encryption/customerManagedKeyEncryption/keyEncryptionKeyIdentity/userAssignedIdentityResourceId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_redis",
+            "addr": "/customer_managed_key/0/user_assigned_identity_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/encryption/customerManagedKeyEncryption/keyEncryptionKeyUrl",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_redis",
+            "addr": "/customer_managed_key/0/key_vault_key_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/highAvailability"
+      },
+      {
+        "addr": "properties/hostName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_redis",
+            "addr": "/hostname"
+          }
+        ]
+      },
+      {
+        "addr": "properties/minimumTlsVersion"
+      },
+      {
+        "addr": "sku/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_redis",
+            "addr": "/sku_name"
+          }
+        ]
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
     "api_version": "2024-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}",
     "operation": "DELETE"
   },
@@ -28255,6 +28435,73 @@
     ]
   },
   {
+    "api_version": "2025-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/accessKeysAuthentication"
+      },
+      {
+        "addr": "properties/clientProtocol",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_redis",
+            "addr": "/default_database/0/client_protocol"
+          }
+        ]
+      },
+      {
+        "addr": "properties/clusteringPolicy",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_redis",
+            "addr": "/default_database/0/clustering_policy"
+          }
+        ]
+      },
+      {
+        "addr": "properties/evictionPolicy",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_redis",
+            "addr": "/default_database/0/eviction_policy"
+          }
+        ]
+      },
+      {
+        "addr": "properties/geoReplication/groupNickname",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_redis",
+            "addr": "/default_database/0/geo_replication_group_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/geoReplication/linkedDatabases/id"
+      },
+      {
+        "addr": "properties/modules/args"
+      },
+      {
+        "addr": "properties/modules/name"
+      },
+      {
+        "addr": "properties/modules/version"
+      },
+      {
+        "addr": "properties/port",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_redis",
+            "addr": "/default_database/0/port"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "api_version": "2024-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}",
     "operation": "PUT",
@@ -28319,6 +28566,86 @@
     ]
   },
   {
+    "api_version": "2025-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "properties/accessKeysAuthentication"
+      },
+      {
+        "addr": "properties/clientProtocol",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_redis",
+            "addr": "/default_database/0/client_protocol"
+          }
+        ]
+      },
+      {
+        "addr": "properties/clusteringPolicy",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_redis",
+            "addr": "/default_database/0/clustering_policy"
+          }
+        ]
+      },
+      {
+        "addr": "properties/evictionPolicy",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_redis",
+            "addr": "/default_database/0/eviction_policy"
+          }
+        ]
+      },
+      {
+        "addr": "properties/geoReplication/groupNickname",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_redis",
+            "addr": "/default_database/0/geo_replication_group_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/geoReplication/linkedDatabases/id"
+      },
+      {
+        "addr": "properties/modules/args"
+      },
+      {
+        "addr": "properties/modules/name"
+      },
+      {
+        "addr": "properties/modules/version"
+      },
+      {
+        "addr": "properties/port",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_redis",
+            "addr": "/default_database/0/port"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2025-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}/FORCELINKTOREPLICATIONGROUP",
+    "operation": "POST",
+    "properties": [
+      {
+        "addr": "geoReplication/groupNickname"
+      },
+      {
+        "addr": "geoReplication/linkedDatabases/id"
+      }
+    ]
+  },
+  {
     "api_version": "2024-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}/FORCEUNLINK",
     "operation": "POST",
@@ -28329,7 +28656,22 @@
     ]
   },
   {
+    "api_version": "2025-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}/FORCEUNLINK",
+    "operation": "POST",
+    "properties": [
+      {
+        "addr": "ids"
+      }
+    ]
+  },
+  {
     "api_version": "2024-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}/LISTKEYS",
+    "operation": "POST"
+  },
+  {
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}/LISTKEYS",
     "operation": "POST"
   },
@@ -161393,12 +161735,12 @@
     ]
   },
   {
-    "api_version": "2025-03-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/AUTONOMOUSDATABASES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-03-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/AUTONOMOUSDATABASES/{}",
     "operation": "GET",
     "properties": [
@@ -161690,7 +162032,7 @@
         "addr": "properties{CloneFromBackupTimestamp}/role"
       },
       {
-        "addr": "properties{CloneFromBackupTimestamp}/scheduledOperations"
+        "addr": "properties{CloneFromBackupTimestamp}/scheduledOperationsList"
       },
       {
         "addr": "properties{CloneFromBackupTimestamp}/serviceConsoleUrl"
@@ -162056,7 +162398,7 @@
         "addr": "properties{Clone}/role"
       },
       {
-        "addr": "properties{Clone}/scheduledOperations"
+        "addr": "properties{Clone}/scheduledOperationsList"
       },
       {
         "addr": "properties{Clone}/serviceConsoleUrl"
@@ -162326,7 +162668,7 @@
         "addr": "properties{CrossRegionDisasterRecovery}/role"
       },
       {
-        "addr": "properties{CrossRegionDisasterRecovery}/scheduledOperations"
+        "addr": "properties{CrossRegionDisasterRecovery}/scheduledOperationsList"
       },
       {
         "addr": "properties{CrossRegionDisasterRecovery}/serviceConsoleUrl"
@@ -162650,7 +162992,7 @@
         "addr": "properties{Regular}/role"
       },
       {
-        "addr": "properties{Regular}/scheduledOperations"
+        "addr": "properties{Regular}/scheduledOperationsList"
       },
       {
         "addr": "properties{Regular}/serviceConsoleUrl"
@@ -162730,7 +163072,7 @@
     ]
   },
   {
-    "api_version": "2025-03-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/AUTONOMOUSDATABASES/{}",
     "operation": "PATCH",
     "properties": [
@@ -162770,7 +163112,7 @@
     ]
   },
   {
-    "api_version": "2025-03-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/AUTONOMOUSDATABASES/{}",
     "operation": "PUT",
     "properties": [
@@ -163062,7 +163404,7 @@
         "addr": "properties{CloneFromBackupTimestamp}/role"
       },
       {
-        "addr": "properties{CloneFromBackupTimestamp}/scheduledOperations"
+        "addr": "properties{CloneFromBackupTimestamp}/scheduledOperationsList"
       },
       {
         "addr": "properties{CloneFromBackupTimestamp}/serviceConsoleUrl"
@@ -163428,7 +163770,7 @@
         "addr": "properties{Clone}/role"
       },
       {
-        "addr": "properties{Clone}/scheduledOperations"
+        "addr": "properties{Clone}/scheduledOperationsList"
       },
       {
         "addr": "properties{Clone}/serviceConsoleUrl"
@@ -163698,7 +164040,7 @@
         "addr": "properties{CrossRegionDisasterRecovery}/role"
       },
       {
-        "addr": "properties{CrossRegionDisasterRecovery}/scheduledOperations"
+        "addr": "properties{CrossRegionDisasterRecovery}/scheduledOperationsList"
       },
       {
         "addr": "properties{CrossRegionDisasterRecovery}/serviceConsoleUrl"
@@ -164022,7 +164364,7 @@
         "addr": "properties{Regular}/role"
       },
       {
-        "addr": "properties{Regular}/scheduledOperations"
+        "addr": "properties{Regular}/scheduledOperationsList"
       },
       {
         "addr": "properties{Regular}/serviceConsoleUrl"
@@ -164102,7 +164444,7 @@
     ]
   },
   {
-    "api_version": "2025-03-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/AUTONOMOUSDATABASES/{}/AUTONOMOUSDATABASEBACKUPS",
     "operation": "GET",
     "properties": [
@@ -164160,12 +164502,12 @@
     ]
   },
   {
-    "api_version": "2025-03-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/AUTONOMOUSDATABASES/{}/AUTONOMOUSDATABASEBACKUPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-03-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/AUTONOMOUSDATABASES/{}/AUTONOMOUSDATABASEBACKUPS/{}",
     "operation": "PATCH",
     "properties": [
@@ -164175,7 +164517,7 @@
     ]
   },
   {
-    "api_version": "2025-03-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/AUTONOMOUSDATABASES/{}/AUTONOMOUSDATABASEBACKUPS/{}",
     "operation": "PUT",
     "properties": [
@@ -164233,12 +164575,12 @@
     ]
   },
   {
-    "api_version": "2025-03-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/CLOUDEXADATAINFRASTRUCTURES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-03-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/CLOUDEXADATAINFRASTRUCTURES/{}",
     "operation": "GET",
     "properties": [
@@ -164461,7 +164803,7 @@
     ]
   },
   {
-    "api_version": "2025-03-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/CLOUDEXADATAINFRASTRUCTURES/{}",
     "operation": "PATCH",
     "properties": [
@@ -164471,7 +164813,7 @@
     ]
   },
   {
-    "api_version": "2025-03-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/CLOUDEXADATAINFRASTRUCTURES/{}",
     "operation": "PUT",
     "properties": [
@@ -164694,7 +165036,7 @@
     ]
   },
   {
-    "api_version": "2025-03-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/CLOUDEXADATAINFRASTRUCTURES/{}/DBSERVERS",
     "operation": "GET",
     "properties": [
@@ -164758,12 +165100,12 @@
     ]
   },
   {
-    "api_version": "2025-03-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/CLOUDVMCLUSTERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-03-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/CLOUDVMCLUSTERS/{}",
     "operation": "GET",
     "properties": [
@@ -165058,7 +165400,7 @@
     ]
   },
   {
-    "api_version": "2025-03-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/CLOUDVMCLUSTERS/{}",
     "operation": "PATCH",
     "properties": [
@@ -165074,7 +165416,7 @@
     ]
   },
   {
-    "api_version": "2025-03-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/CLOUDVMCLUSTERS/{}",
     "operation": "PUT",
     "properties": [
@@ -165369,7 +165711,7 @@
     ]
   },
   {
-    "api_version": "2025-03-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/CLOUDVMCLUSTERS/{}/DBNODES",
     "operation": "GET",
     "properties": [
@@ -165442,12 +165784,12 @@
     ]
   },
   {
-    "api_version": "2025-03-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/EXASCALEDBSTORAGEVAULTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-03-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/EXASCALEDBSTORAGEVAULTS/{}",
     "operation": "GET",
     "properties": [
@@ -165544,7 +165886,7 @@
     ]
   },
   {
-    "api_version": "2025-03-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/EXASCALEDBSTORAGEVAULTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -165554,7 +165896,7 @@
     ]
   },
   {
-    "api_version": "2025-03-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/ORACLE.DATABASE/EXASCALEDBSTORAGEVAULTS/{}",
     "operation": "PUT",
     "properties": [
