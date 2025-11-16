@@ -9531,6 +9531,33 @@
         ]
       },
       {
+        "addr": "properties/circuitBreaker/rules/acceptRetryAfter"
+      },
+      {
+        "addr": "properties/circuitBreaker/rules/failureCondition/count"
+      },
+      {
+        "addr": "properties/circuitBreaker/rules/failureCondition/errorReasons"
+      },
+      {
+        "addr": "properties/circuitBreaker/rules/failureCondition/interval"
+      },
+      {
+        "addr": "properties/circuitBreaker/rules/failureCondition/percentage"
+      },
+      {
+        "addr": "properties/circuitBreaker/rules/failureCondition/statusCodeRanges/max"
+      },
+      {
+        "addr": "properties/circuitBreaker/rules/failureCondition/statusCodeRanges/min"
+      },
+      {
+        "addr": "properties/circuitBreaker/rules/name"
+      },
+      {
+        "addr": "properties/circuitBreaker/rules/tripDuration"
+      },
+      {
         "addr": "properties/credentials/authorization/parameter",
         "app_property_maps": [
           {
@@ -9689,6 +9716,33 @@
             "addr": "/name"
           }
         ]
+      },
+      {
+        "addr": "properties/circuitBreaker/rules/acceptRetryAfter"
+      },
+      {
+        "addr": "properties/circuitBreaker/rules/failureCondition/count"
+      },
+      {
+        "addr": "properties/circuitBreaker/rules/failureCondition/errorReasons"
+      },
+      {
+        "addr": "properties/circuitBreaker/rules/failureCondition/interval"
+      },
+      {
+        "addr": "properties/circuitBreaker/rules/failureCondition/percentage"
+      },
+      {
+        "addr": "properties/circuitBreaker/rules/failureCondition/statusCodeRanges/max"
+      },
+      {
+        "addr": "properties/circuitBreaker/rules/failureCondition/statusCodeRanges/min"
+      },
+      {
+        "addr": "properties/circuitBreaker/rules/name"
+      },
+      {
+        "addr": "properties/circuitBreaker/rules/tripDuration"
       },
       {
         "addr": "properties/credentials/authorization/parameter",
@@ -12457,6 +12511,94 @@
             "addr": "/versioning_scheme"
           }
         ]
+      }
+    ]
+  },
+  {
+    "api_version": "2024-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/WORKSPACES/{}/CERTIFICATES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2024-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/WORKSPACES/{}/CERTIFICATES/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/expirationDate",
+        "app_property_maps": [
+          {
+            "name": "azurerm_api_management_workspace_certificate",
+            "addr": "/expiration"
+          }
+        ]
+      },
+      {
+        "addr": "properties/keyVault/identityClientId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_api_management_workspace_certificate",
+            "addr": "/user_assigned_identity_client_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/keyVault/secretIdentifier",
+        "app_property_maps": [
+          {
+            "name": "azurerm_api_management_workspace_certificate",
+            "addr": "/key_vault_secret_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/subject",
+        "app_property_maps": [
+          {
+            "name": "azurerm_api_management_workspace_certificate",
+            "addr": "/subject"
+          }
+        ]
+      },
+      {
+        "addr": "properties/thumbprint",
+        "app_property_maps": [
+          {
+            "name": "azurerm_api_management_workspace_certificate",
+            "addr": "/thumbprint"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2024-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/WORKSPACES/{}/CERTIFICATES/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "properties/data"
+      },
+      {
+        "addr": "properties/keyVault/identityClientId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_api_management_workspace_certificate",
+            "addr": "/user_assigned_identity_client_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/keyVault/secretIdentifier",
+        "app_property_maps": [
+          {
+            "name": "azurerm_api_management_workspace_certificate",
+            "addr": "/key_vault_secret_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/password"
       }
     ]
   },
@@ -18269,12 +18411,12 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}",
     "operation": "GET",
     "properties": [
@@ -18350,7 +18492,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -18411,7 +18553,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}",
     "operation": "PUT",
     "properties": [
@@ -18488,12 +18630,12 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/CERTIFICATES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/CERTIFICATES/{}",
     "operation": "GET",
     "properties": [
@@ -18527,7 +18669,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/CERTIFICATES/{}",
     "operation": "PUT",
     "properties": [
@@ -18558,12 +18700,12 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/CONFIGURATIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/CONFIGURATIONS/{}",
     "operation": "GET",
     "properties": [
@@ -18603,7 +18745,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/CONFIGURATIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -18640,17 +18782,17 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/CONFIGURATIONS/{}/CONTENT",
     "operation": "GET"
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/CONNECTIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/CONNECTIONS/{}",
     "operation": "GET",
     "properties": [
@@ -18690,7 +18832,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/CONNECTIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -18733,12 +18875,12 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/CONNECTIONTYPES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/CONNECTIONTYPES/{}",
     "operation": "GET",
     "properties": [
@@ -18751,7 +18893,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/CONNECTIONTYPES/{}",
     "operation": "PUT",
     "properties": [
@@ -18767,12 +18909,12 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/CREDENTIALS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/CREDENTIALS/{}",
     "operation": "GET",
     "properties": [
@@ -18797,7 +18939,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/CREDENTIALS/{}",
     "operation": "PUT",
     "properties": [
@@ -18828,12 +18970,12 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/HYBRIDRUNBOOKWORKERGROUPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/HYBRIDRUNBOOKWORKERGROUPS/{}",
     "operation": "GET",
     "properties": [
@@ -18858,7 +19000,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/HYBRIDRUNBOOKWORKERGROUPS/{}",
     "operation": "PATCH",
     "properties": [
@@ -18883,7 +19025,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/HYBRIDRUNBOOKWORKERGROUPS/{}",
     "operation": "PUT",
     "properties": [
@@ -18908,12 +19050,12 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/HYBRIDRUNBOOKWORKERGROUPS/{}/HYBRIDRUNBOOKWORKERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/HYBRIDRUNBOOKWORKERGROUPS/{}/HYBRIDRUNBOOKWORKERS/{}",
     "operation": "GET",
     "properties": [
@@ -18983,7 +19125,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/HYBRIDRUNBOOKWORKERGROUPS/{}/HYBRIDRUNBOOKWORKERS/{}",
     "operation": "PUT",
     "properties": [
@@ -18999,7 +19141,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/JOBSCHEDULES",
     "operation": "GET",
     "properties": [
@@ -19056,12 +19198,12 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/JOBSCHEDULES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/JOBSCHEDULES/{}",
     "operation": "GET",
     "properties": [
@@ -19118,7 +19260,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/JOBSCHEDULES/{}",
     "operation": "PUT",
     "properties": [
@@ -19163,12 +19305,12 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/MODULES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/MODULES/{}",
     "operation": "GET",
     "properties": [
@@ -19180,14 +19322,11 @@
       },
       {
         "addr": "properties/provisioningState"
-      },
-      {
-        "addr": "tags"
       }
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/MODULES/{}",
     "operation": "PUT",
     "properties": [
@@ -19199,19 +19338,16 @@
       },
       {
         "addr": "properties/contentLink/uri"
-      },
-      {
-        "addr": "tags"
       }
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/NODECONFIGURATIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/NODECONFIGURATIONS/{}",
     "operation": "GET",
     "properties": [
@@ -19227,7 +19363,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/NODECONFIGURATIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -19295,12 +19431,12 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/PYTHON3PACKAGES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/PYTHON3PACKAGES/{}",
     "operation": "GET",
     "properties": [
@@ -19346,7 +19482,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/PYTHON3PACKAGES/{}",
     "operation": "PATCH",
     "properties": [
@@ -19356,7 +19492,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/PYTHON3PACKAGES/{}",
     "operation": "PUT",
     "properties": [
@@ -19402,12 +19538,12 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/RUNBOOKS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/RUNBOOKS/{}",
     "operation": "GET",
     "properties": [
@@ -19459,7 +19595,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/RUNBOOKS/{}",
     "operation": "PUT",
     "properties": [
@@ -19544,17 +19680,17 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/RUNBOOKS/{}/CONTENT",
     "operation": "GET"
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/SCHEDULES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/SCHEDULES/{}",
     "operation": "GET",
     "properties": [
@@ -19621,7 +19757,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/SCHEDULES/{}",
     "operation": "PUT",
     "properties": [
@@ -20202,12 +20338,12 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/SOURCECONTROLS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/SOURCECONTROLS/{}",
     "operation": "GET",
     "properties": [
@@ -20265,7 +20401,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/SOURCECONTROLS/{}",
     "operation": "PATCH",
     "properties": [
@@ -20314,7 +20450,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/SOURCECONTROLS/{}",
     "operation": "PUT",
     "properties": [
@@ -20381,12 +20517,12 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/VARIABLES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/VARIABLES/{}",
     "operation": "GET",
     "properties": [
@@ -20446,7 +20582,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01",
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/VARIABLES/{}",
     "operation": "PUT",
     "properties": [
@@ -28205,7 +28341,7 @@
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-04-01",
+    "api_version": "2025-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}",
     "operation": "DELETE"
   },
@@ -28259,7 +28395,7 @@
     ]
   },
   {
-    "api_version": "2025-04-01",
+    "api_version": "2025-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}",
     "operation": "GET",
     "properties": [
@@ -28319,6 +28455,15 @@
       },
       {
         "addr": "properties/minimumTlsVersion"
+      },
+      {
+        "addr": "properties/publicNetworkAccess",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_redis",
+            "addr": "/public_network_access"
+          }
+        ]
       },
       {
         "addr": "sku/name",
@@ -28394,7 +28539,7 @@
     ]
   },
   {
-    "api_version": "2025-04-01",
+    "api_version": "2025-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}",
     "operation": "PUT",
     "properties": [
@@ -28456,6 +28601,15 @@
         "addr": "properties/minimumTlsVersion"
       },
       {
+        "addr": "properties/publicNetworkAccess",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_redis",
+            "addr": "/public_network_access"
+          }
+        ]
+      },
+      {
         "addr": "sku/name",
         "app_property_maps": [
           {
@@ -28475,7 +28629,7 @@
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-04-01",
+    "api_version": "2025-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}",
     "operation": "DELETE"
   },
@@ -28544,7 +28698,7 @@
     ]
   },
   {
-    "api_version": "2025-04-01",
+    "api_version": "2025-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}",
     "operation": "GET",
     "properties": [
@@ -28675,7 +28829,7 @@
     ]
   },
   {
-    "api_version": "2025-04-01",
+    "api_version": "2025-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}",
     "operation": "PUT",
     "properties": [
@@ -28742,7 +28896,7 @@
     ]
   },
   {
-    "api_version": "2025-04-01",
+    "api_version": "2025-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}/FORCELINKTOREPLICATIONGROUP",
     "operation": "POST",
     "properties": [
@@ -28765,7 +28919,7 @@
     ]
   },
   {
-    "api_version": "2025-04-01",
+    "api_version": "2025-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}/FORCEUNLINK",
     "operation": "POST",
     "properties": [
@@ -28780,7 +28934,7 @@
     "operation": "POST"
   },
   {
-    "api_version": "2025-04-01",
+    "api_version": "2025-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}/LISTKEYS",
     "operation": "POST"
   },
@@ -48881,7 +49035,13 @@
         "addr": "properties/agentPoolProfiles/upgradeSettings/maxSurge"
       },
       {
+        "addr": "properties/agentPoolProfiles/upgradeSettings/maxUnavailable"
+      },
+      {
         "addr": "properties/agentPoolProfiles/upgradeSettings/nodeSoakDurationInMinutes"
+      },
+      {
+        "addr": "properties/agentPoolProfiles/upgradeSettings/undrainableNodeBehavior"
       },
       {
         "addr": "properties/agentPoolProfiles/vmSize"
@@ -49992,7 +50152,13 @@
         "addr": "properties/agentPoolProfiles/upgradeSettings/maxSurge"
       },
       {
+        "addr": "properties/agentPoolProfiles/upgradeSettings/maxUnavailable"
+      },
+      {
         "addr": "properties/agentPoolProfiles/upgradeSettings/nodeSoakDurationInMinutes"
+      },
+      {
+        "addr": "properties/agentPoolProfiles/upgradeSettings/undrainableNodeBehavior"
       },
       {
         "addr": "properties/agentPoolProfiles/vmSize"
@@ -51435,11 +51601,29 @@
         ]
       },
       {
+        "addr": "properties/upgradeSettings/maxUnavailable",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster_node_pool",
+            "addr": "/upgrade_settings/0/max_unavailable"
+          }
+        ]
+      },
+      {
         "addr": "properties/upgradeSettings/nodeSoakDurationInMinutes",
         "app_property_maps": [
           {
             "name": "azurerm_kubernetes_cluster_node_pool",
             "addr": "/upgrade_settings/0/node_soak_duration_in_minutes"
+          }
+        ]
+      },
+      {
+        "addr": "properties/upgradeSettings/undrainableNodeBehavior",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster_node_pool",
+            "addr": "/upgrade_settings/0/undrainable_node_behavior"
           }
         ]
       },
@@ -52108,11 +52292,29 @@
         ]
       },
       {
+        "addr": "properties/upgradeSettings/maxUnavailable",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster_node_pool",
+            "addr": "/upgrade_settings/0/max_unavailable"
+          }
+        ]
+      },
+      {
         "addr": "properties/upgradeSettings/nodeSoakDurationInMinutes",
         "app_property_maps": [
           {
             "name": "azurerm_kubernetes_cluster_node_pool",
             "addr": "/upgrade_settings/0/node_soak_duration_in_minutes"
+          }
+        ]
+      },
+      {
+        "addr": "properties/upgradeSettings/undrainableNodeBehavior",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster_node_pool",
+            "addr": "/upgrade_settings/0/undrainable_node_behavior"
           }
         ]
       },
@@ -75061,16 +75263,19 @@
     ]
   },
   {
-    "api_version": "2024-07-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/MONGOCLUSTERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-07-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/MONGOCLUSTERS/{}",
     "operation": "GET",
     "properties": [
       {
+        "addr": "identity"
+      },
+      {
         "addr": "location",
         "app_property_maps": [
           {
@@ -75169,11 +75374,14 @@
     ]
   },
   {
-    "api_version": "2024-07-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/MONGOCLUSTERS/{}",
     "operation": "PUT",
     "properties": [
       {
+        "addr": "identity"
+      },
+      {
         "addr": "location",
         "app_property_maps": [
           {
@@ -75272,7 +75480,62 @@
     ]
   },
   {
-    "api_version": "2024-07-01",
+    "api_version": "2025-09-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/MONGOCLUSTERS/{}/FIREWALLRULES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2025-09-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/MONGOCLUSTERS/{}/FIREWALLRULES/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/endIpAddress",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mongo_cluster_firewall_rule",
+            "addr": "/end_ip_address"
+          }
+        ]
+      },
+      {
+        "addr": "properties/startIpAddress",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mongo_cluster_firewall_rule",
+            "addr": "/start_ip_address"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2025-09-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/MONGOCLUSTERS/{}/FIREWALLRULES/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "properties/endIpAddress",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mongo_cluster_firewall_rule",
+            "addr": "/end_ip_address"
+          }
+        ]
+      },
+      {
+        "addr": "properties/startIpAddress",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mongo_cluster_firewall_rule",
+            "addr": "/start_ip_address"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/MONGOCLUSTERS/{}/LISTCONNECTIONSTRINGS",
     "operation": "POST"
   },
