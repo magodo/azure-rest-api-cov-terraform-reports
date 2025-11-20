@@ -5035,18 +5035,15 @@
     "operation": "POST"
   },
   {
-    "api_version": "2020-06-01",
+    "api_version": "2023-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-06-01",
+    "api_version": "2023-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}",
     "operation": "GET",
     "properties": [
-      {
-        "addr": "id"
-      },
       {
         "addr": "location"
       },
@@ -5064,21 +5061,21 @@
   {
     "api_version": "2023-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}",
-    "operation": "GET",
+    "operation": "PATCH",
     "properties": [
       {
-        "addr": "name"
+        "addr": "managedBy"
+      },
+      {
+        "addr": "tags"
       }
     ]
   },
   {
-    "api_version": "2020-06-01",
+    "api_version": "2023-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}",
     "operation": "PUT",
     "properties": [
-      {
-        "addr": "id"
-      },
       {
         "addr": "location"
       },
@@ -13095,6 +13092,15 @@
         ]
       },
       {
+        "addr": "properties/template/scale/cooldownPeriod",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_app",
+            "addr": "/template/0/cooldown_period_in_seconds"
+          }
+        ]
+      },
+      {
         "addr": "properties/template/scale/maxReplicas",
         "app_property_maps": [
           {
@@ -13109,6 +13115,15 @@
           {
             "name": "azurerm_container_app",
             "addr": "/template/0/min_replicas"
+          }
+        ]
+      },
+      {
+        "addr": "properties/template/scale/pollingInterval",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_app",
+            "addr": "/template/0/polling_interval_in_seconds"
           }
         ]
       },
@@ -13564,6 +13579,15 @@
         ]
       },
       {
+        "addr": "properties/template/scale/cooldownPeriod",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_app",
+            "addr": "/template/0/cooldown_period_in_seconds"
+          }
+        ]
+      },
+      {
         "addr": "properties/template/scale/maxReplicas",
         "app_property_maps": [
           {
@@ -13578,6 +13602,15 @@
           {
             "name": "azurerm_container_app",
             "addr": "/template/0/min_replicas"
+          }
+        ]
+      },
+      {
+        "addr": "properties/template/scale/pollingInterval",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_app",
+            "addr": "/template/0/polling_interval_in_seconds"
           }
         ]
       },
@@ -28703,6 +28736,15 @@
     "operation": "GET",
     "properties": [
       {
+        "addr": "id",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_redis",
+            "addr": "/default_database/0/id"
+          }
+        ]
+      },
+      {
         "addr": "properties/accessKeysAuthentication"
       },
       {
@@ -28752,6 +28794,30 @@
       },
       {
         "addr": "properties/modules/version"
+      },
+      {
+        "addr": "properties/persistence/aofEnabled"
+      },
+      {
+        "addr": "properties/persistence/aofFrequency",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_redis",
+            "addr": "/default_database/0/persistence_append_only_file_backup_frequency"
+          }
+        ]
+      },
+      {
+        "addr": "properties/persistence/rdbEnabled"
+      },
+      {
+        "addr": "properties/persistence/rdbFrequency",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_redis",
+            "addr": "/default_database/0/persistence_redis_database_backup_frequency"
+          }
+        ]
       },
       {
         "addr": "properties/port",
@@ -28834,6 +28900,15 @@
     "operation": "PUT",
     "properties": [
       {
+        "addr": "id",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_redis",
+            "addr": "/default_database/0/id"
+          }
+        ]
+      },
+      {
         "addr": "properties/accessKeysAuthentication"
       },
       {
@@ -28883,6 +28958,30 @@
       },
       {
         "addr": "properties/modules/version"
+      },
+      {
+        "addr": "properties/persistence/aofEnabled"
+      },
+      {
+        "addr": "properties/persistence/aofFrequency",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_redis",
+            "addr": "/default_database/0/persistence_append_only_file_backup_frequency"
+          }
+        ]
+      },
+      {
+        "addr": "properties/persistence/rdbEnabled"
+      },
+      {
+        "addr": "properties/persistence/rdbFrequency",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_redis",
+            "addr": "/default_database/0/persistence_redis_database_backup_frequency"
+          }
+        ]
       },
       {
         "addr": "properties/port",
@@ -62462,7 +62561,33 @@
     "operation": "GET",
     "properties": [
       {
-        "addr": "properties/currentProtectionState"
+        "addr": "properties/currentProtectionState",
+        "app_property_maps": [
+          {
+            "name": "azurerm_data_protection_backup_instance_blob_storage",
+            "addr": "/protection_state"
+          },
+          {
+            "name": "azurerm_data_protection_backup_instance_disk",
+            "addr": "/protection_state"
+          },
+          {
+            "name": "azurerm_data_protection_backup_instance_kubernetes_cluster",
+            "addr": "/protection_state"
+          },
+          {
+            "name": "azurerm_data_protection_backup_instance_mysql_flexible_server",
+            "addr": "/protection_state"
+          },
+          {
+            "name": "azurerm_data_protection_backup_instance_postgresql",
+            "addr": "/protection_state"
+          },
+          {
+            "name": "azurerm_data_protection_backup_instance_postgresql_flexible_server",
+            "addr": "/protection_state"
+          }
+        ]
       },
       {
         "addr": "properties/dataSourceInfo/datasourceType"
@@ -62646,7 +62771,33 @@
     "operation": "PUT",
     "properties": [
       {
-        "addr": "properties/currentProtectionState"
+        "addr": "properties/currentProtectionState",
+        "app_property_maps": [
+          {
+            "name": "azurerm_data_protection_backup_instance_blob_storage",
+            "addr": "/protection_state"
+          },
+          {
+            "name": "azurerm_data_protection_backup_instance_disk",
+            "addr": "/protection_state"
+          },
+          {
+            "name": "azurerm_data_protection_backup_instance_kubernetes_cluster",
+            "addr": "/protection_state"
+          },
+          {
+            "name": "azurerm_data_protection_backup_instance_mysql_flexible_server",
+            "addr": "/protection_state"
+          },
+          {
+            "name": "azurerm_data_protection_backup_instance_postgresql",
+            "addr": "/protection_state"
+          },
+          {
+            "name": "azurerm_data_protection_backup_instance_postgresql_flexible_server",
+            "addr": "/protection_state"
+          }
+        ]
       },
       {
         "addr": "properties/dataSourceInfo/datasourceType"
@@ -62823,6 +62974,16 @@
         "addr": "properties/protectionStatus/status"
       }
     ]
+  },
+  {
+    "api_version": "2024-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAPROTECTION/BACKUPVAULTS/{}/BACKUPINSTANCES/{}/RESUMEBACKUPS",
+    "operation": "POST"
+  },
+  {
+    "api_version": "2024-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAPROTECTION/BACKUPVAULTS/{}/BACKUPINSTANCES/{}/RESUMEPROTECTION",
+    "operation": "POST"
   },
   {
     "api_version": "2024-04-01",
@@ -113312,10 +113473,16 @@
         "addr": "properties/subnets/properties/delegations/properties/serviceName"
       },
       {
+        "addr": "properties/subnets/properties/ipConfigurations"
+      },
+      {
         "addr": "properties/subnets/properties/networkSecurityGroup/id"
       },
       {
         "addr": "properties/subnets/properties/privateEndpointNetworkPolicies"
+      },
+      {
+        "addr": "properties/subnets/properties/privateEndpoints"
       },
       {
         "addr": "properties/subnets/properties/privateLinkServiceNetworkPolicies"
@@ -113466,10 +113633,16 @@
         "addr": "properties/subnets/properties/delegations/properties/serviceName"
       },
       {
+        "addr": "properties/subnets/properties/ipConfigurations"
+      },
+      {
         "addr": "properties/subnets/properties/networkSecurityGroup/id"
       },
       {
         "addr": "properties/subnets/properties/privateEndpointNetworkPolicies"
+      },
+      {
+        "addr": "properties/subnets/properties/privateEndpoints"
       },
       {
         "addr": "properties/subnets/properties/privateLinkServiceNetworkPolicies"
@@ -134546,6 +134719,11 @@
         ]
       }
     ]
+  },
+  {
+    "api_version": "2023-08-01-preview",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/SERVERS/{}/JOBAGENTS/{}/JOBS/{}/START",
+    "operation": "POST"
   },
   {
     "api_version": "2023-08-01-preview",
