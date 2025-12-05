@@ -3347,7 +3347,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/CHECKNAMEAVAILABILITY",
     "operation": "POST",
     "properties": [
@@ -14623,6 +14623,24 @@
         "addr": "name"
       },
       {
+        "addr": "properties/certificateKeyVaultProperties/identity",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_app_environment_certificate",
+            "addr": "/certificate_key_vault/0/identity"
+          }
+        ]
+      },
+      {
+        "addr": "properties/certificateKeyVaultProperties/keyVaultUrl",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_app_environment_certificate",
+            "addr": "/certificate_key_vault/0/key_vault_secret_id"
+          }
+        ]
+      },
+      {
         "addr": "properties/expirationDate",
         "app_property_maps": [
           {
@@ -14698,6 +14716,24 @@
       },
       {
         "addr": "name"
+      },
+      {
+        "addr": "properties/certificateKeyVaultProperties/identity",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_app_environment_certificate",
+            "addr": "/certificate_key_vault/0/identity"
+          }
+        ]
+      },
+      {
+        "addr": "properties/certificateKeyVaultProperties/keyVaultUrl",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_app_environment_certificate",
+            "addr": "/certificate_key_vault/0/key_vault_secret_id"
+          }
+        ]
       },
       {
         "addr": "properties/expirationDate",
@@ -34239,6 +34275,133 @@
   },
   {
     "api_version": "2025-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/ACCOUNTS/{}/PROJECTS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2025-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/ACCOUNTS/{}/PROJECTS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "identity/principalId"
+      },
+      {
+        "addr": "identity/tenantId"
+      },
+      {
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
+      },
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cognitive_account_project",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/description",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cognitive_account_project",
+            "addr": "/description"
+          }
+        ]
+      },
+      {
+        "addr": "properties/displayName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cognitive_account_project",
+            "addr": "/display_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/endpoints"
+      },
+      {
+        "addr": "properties/isDefault",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cognitive_account_project",
+            "addr": "/default"
+          }
+        ]
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2025-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/ACCOUNTS/{}/PROJECTS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "identity/principalId"
+      },
+      {
+        "addr": "identity/tenantId"
+      },
+      {
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
+      },
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cognitive_account_project",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/description",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cognitive_account_project",
+            "addr": "/description"
+          }
+        ]
+      },
+      {
+        "addr": "properties/displayName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cognitive_account_project",
+            "addr": "/display_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/endpoints"
+      },
+      {
+        "addr": "properties/isDefault",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cognitive_account_project",
+            "addr": "/default"
+          }
+        ]
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2025-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/ACCOUNTS/{}/RAIBLOCKLISTS/{}",
     "operation": "DELETE"
   },
@@ -46745,12 +46908,12 @@
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}",
     "operation": "GET",
     "properties": [
@@ -46880,7 +47043,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}",
     "operation": "PATCH",
     "properties": [
@@ -46986,7 +47149,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}",
     "operation": "PUT",
     "properties": [
@@ -47330,12 +47493,12 @@
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/CONNECTEDREGISTRIES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/CONNECTEDREGISTRIES/{}",
     "operation": "GET",
     "properties": [
@@ -47408,7 +47571,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/CONNECTEDREGISTRIES/{}",
     "operation": "PUT",
     "properties": [
@@ -47621,12 +47784,12 @@
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/LISTCREDENTIALS",
     "operation": "POST"
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/REPLICATIONS",
     "operation": "GET",
     "properties": [
@@ -47648,12 +47811,12 @@
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/REPLICATIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/REPLICATIONS/{}",
     "operation": "GET",
     "properties": [
@@ -47675,7 +47838,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/REPLICATIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -47718,12 +47881,12 @@
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/SCOPEMAPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/SCOPEMAPS/{}",
     "operation": "GET",
     "properties": [
@@ -47742,7 +47905,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/SCOPEMAPS/{}",
     "operation": "PATCH",
     "properties": [
@@ -47761,7 +47924,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/SCOPEMAPS/{}",
     "operation": "PUT",
     "properties": [
@@ -48333,12 +48496,12 @@
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/TOKENS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/TOKENS/{}",
     "operation": "GET",
     "properties": [
@@ -48366,7 +48529,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/TOKENS/{}",
     "operation": "PATCH",
     "properties": [
@@ -48397,7 +48560,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/TOKENS/{}",
     "operation": "PUT",
     "properties": [
@@ -48425,12 +48588,12 @@
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/WEBHOOKS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/WEBHOOKS/{}",
     "operation": "GET",
     "properties": [
@@ -48470,7 +48633,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/WEBHOOKS/{}",
     "operation": "PATCH",
     "properties": [
@@ -48507,7 +48670,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/WEBHOOKS/{}",
     "operation": "PUT",
     "properties": [
@@ -48553,7 +48716,7 @@
     ]
   },
   {
-    "api_version": "2023-11-01-preview",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/REGISTRIES/{}/WEBHOOKS/{}/GETCALLBACKCONFIG",
     "operation": "POST"
   },
@@ -48715,6 +48878,9 @@
         ]
       },
       {
+        "addr": "properties/status"
+      },
+      {
         "addr": "properties/strategy/stages/afterStageWaitInSeconds"
       },
       {
@@ -48765,6 +48931,9 @@
             "addr": "/managed_cluster_update/0/upgrade/0/type"
           }
         ]
+      },
+      {
+        "addr": "properties/status"
       },
       {
         "addr": "properties/strategy/stages/afterStageWaitInSeconds"
@@ -64751,12 +64920,12 @@
     ]
   },
   {
-    "api_version": "2024-08-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-08-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}",
     "operation": "GET",
     "properties": [
@@ -64985,7 +65154,7 @@
     ]
   },
   {
-    "api_version": "2024-08-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}",
     "operation": "PATCH",
     "properties": [
@@ -65157,7 +65326,7 @@
     ]
   },
   {
-    "api_version": "2024-08-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}",
     "operation": "PUT",
     "properties": [
@@ -65386,12 +65555,12 @@
     ]
   },
   {
-    "api_version": "2024-08-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/ADMINISTRATORS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-08-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/ADMINISTRATORS/{}",
     "operation": "GET",
     "properties": [
@@ -65434,7 +65603,7 @@
     ]
   },
   {
-    "api_version": "2024-08-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/ADMINISTRATORS/{}",
     "operation": "PUT",
     "properties": [
@@ -65468,12 +65637,12 @@
     ]
   },
   {
-    "api_version": "2024-08-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/BACKUPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-08-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/BACKUPS/{}",
     "operation": "GET",
     "properties": [
@@ -65489,12 +65658,12 @@
     ]
   },
   {
-    "api_version": "2024-08-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/BACKUPS/{}",
     "operation": "PUT"
   },
   {
-    "api_version": "2024-08-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/CONFIGURATIONS/{}",
     "operation": "GET",
     "properties": [
@@ -65522,7 +65691,7 @@
     ]
   },
   {
-    "api_version": "2024-08-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/CONFIGURATIONS/{}",
     "operation": "PATCH",
     "properties": [
@@ -65550,12 +65719,12 @@
     ]
   },
   {
-    "api_version": "2024-08-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/DATABASES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-08-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/DATABASES/{}",
     "operation": "GET",
     "properties": [
@@ -65580,7 +65749,7 @@
     ]
   },
   {
-    "api_version": "2024-08-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/DATABASES/{}",
     "operation": "PUT",
     "properties": [
@@ -65605,12 +65774,12 @@
     ]
   },
   {
-    "api_version": "2024-08-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/FIREWALLRULES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-08-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/FIREWALLRULES/{}",
     "operation": "GET",
     "properties": [
@@ -65635,7 +65804,7 @@
     ]
   },
   {
-    "api_version": "2024-08-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/FIREWALLRULES/{}",
     "operation": "PUT",
     "properties": [
@@ -65660,7 +65829,7 @@
     ]
   },
   {
-    "api_version": "2024-08-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/RESTART",
     "operation": "POST",
     "properties": [
@@ -65673,12 +65842,12 @@
     ]
   },
   {
-    "api_version": "2024-08-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/VIRTUALENDPOINTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-08-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/VIRTUALENDPOINTS/{}",
     "operation": "GET",
     "properties": [
@@ -65700,7 +65869,7 @@
     ]
   },
   {
-    "api_version": "2024-08-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/VIRTUALENDPOINTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -65719,7 +65888,7 @@
     ]
   },
   {
-    "api_version": "2024-08-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DBFORPOSTGRESQL/FLEXIBLESERVERS/{}/VIRTUALENDPOINTS/{}",
     "operation": "PUT",
     "properties": [
@@ -75434,7 +75603,10 @@
     "operation": "GET",
     "properties": [
       {
-        "addr": "identity"
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
       },
       {
         "addr": "location",
@@ -75458,6 +75630,9 @@
         ]
       },
       {
+        "addr": "properties/authConfig/allowedModes"
+      },
+      {
         "addr": "properties/compute/tier",
         "app_property_maps": [
           {
@@ -75468,6 +75643,30 @@
       },
       {
         "addr": "properties/createMode"
+      },
+      {
+        "addr": "properties/dataApi/mode"
+      },
+      {
+        "addr": "properties/encryption/customerManagedKeyEncryption/keyEncryptionKeyIdentity/identityType"
+      },
+      {
+        "addr": "properties/encryption/customerManagedKeyEncryption/keyEncryptionKeyIdentity/userAssignedIdentityResourceId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mongo_cluster",
+            "addr": "/customer_managed_key/0/user_assigned_identity_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/encryption/customerManagedKeyEncryption/keyEncryptionKeyUrl",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mongo_cluster",
+            "addr": "/customer_managed_key/0/key_vault_key_id"
+          }
+        ]
       },
       {
         "addr": "properties/highAvailability/targetMode",
@@ -75500,6 +75699,24 @@
         "addr": "properties/replicaParameters/sourceResourceId"
       },
       {
+        "addr": "properties/restoreParameters/pointInTimeUTC",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mongo_cluster",
+            "addr": "/restore/0/point_in_time_utc"
+          }
+        ]
+      },
+      {
+        "addr": "properties/restoreParameters/sourceResourceId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mongo_cluster",
+            "addr": "/restore/0/source_id"
+          }
+        ]
+      },
+      {
         "addr": "properties/serverVersion",
         "app_property_maps": [
           {
@@ -75523,6 +75740,15 @@
           {
             "name": "azurerm_mongo_cluster",
             "addr": "/storage_size_in_gb"
+          }
+        ]
+      },
+      {
+        "addr": "properties/storage/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mongo_cluster",
+            "addr": "/storage_type"
           }
         ]
       },
@@ -75537,10 +75763,23 @@
   {
     "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/MONGOCLUSTERS/{}",
+    "operation": "PATCH",
+    "properties": [
+      {
+        "addr": "properties/dataApi/mode"
+      }
+    ]
+  },
+  {
+    "api_version": "2025-09-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/MONGOCLUSTERS/{}",
     "operation": "PUT",
     "properties": [
       {
-        "addr": "identity"
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
       },
       {
         "addr": "location",
@@ -75564,6 +75803,9 @@
         ]
       },
       {
+        "addr": "properties/authConfig/allowedModes"
+      },
+      {
         "addr": "properties/compute/tier",
         "app_property_maps": [
           {
@@ -75574,6 +75816,30 @@
       },
       {
         "addr": "properties/createMode"
+      },
+      {
+        "addr": "properties/dataApi/mode"
+      },
+      {
+        "addr": "properties/encryption/customerManagedKeyEncryption/keyEncryptionKeyIdentity/identityType"
+      },
+      {
+        "addr": "properties/encryption/customerManagedKeyEncryption/keyEncryptionKeyIdentity/userAssignedIdentityResourceId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mongo_cluster",
+            "addr": "/customer_managed_key/0/user_assigned_identity_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/encryption/customerManagedKeyEncryption/keyEncryptionKeyUrl",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mongo_cluster",
+            "addr": "/customer_managed_key/0/key_vault_key_id"
+          }
+        ]
       },
       {
         "addr": "properties/highAvailability/targetMode",
@@ -75606,6 +75872,24 @@
         "addr": "properties/replicaParameters/sourceResourceId"
       },
       {
+        "addr": "properties/restoreParameters/pointInTimeUTC",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mongo_cluster",
+            "addr": "/restore/0/point_in_time_utc"
+          }
+        ]
+      },
+      {
+        "addr": "properties/restoreParameters/sourceResourceId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mongo_cluster",
+            "addr": "/restore/0/source_id"
+          }
+        ]
+      },
+      {
         "addr": "properties/serverVersion",
         "app_property_maps": [
           {
@@ -75629,6 +75913,15 @@
           {
             "name": "azurerm_mongo_cluster",
             "addr": "/storage_size_in_gb"
+          }
+        ]
+      },
+      {
+        "addr": "properties/storage/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mongo_cluster",
+            "addr": "/storage_type"
           }
         ]
       },
@@ -75699,6 +75992,73 @@
     "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/MONGOCLUSTERS/{}/LISTCONNECTIONSTRINGS",
     "operation": "POST"
+  },
+  {
+    "api_version": "2025-09-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/MONGOCLUSTERS/{}/USERS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2025-09-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/MONGOCLUSTERS/{}/USERS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/identityProvider{MicrosoftEntraID}/properties/principalType",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mongo_cluster_user",
+            "addr": "/principal_type"
+          }
+        ]
+      },
+      {
+        "addr": "properties/identityProvider{MicrosoftEntraID}/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mongo_cluster_user",
+            "addr": "/identity_provider_type"
+          }
+        ]
+      },
+      {
+        "addr": "properties/roles/db"
+      },
+      {
+        "addr": "properties/roles/role"
+      }
+    ]
+  },
+  {
+    "api_version": "2025-09-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/MONGOCLUSTERS/{}/USERS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "properties/identityProvider{MicrosoftEntraID}/properties/principalType",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mongo_cluster_user",
+            "addr": "/principal_type"
+          }
+        ]
+      },
+      {
+        "addr": "properties/identityProvider{MicrosoftEntraID}/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mongo_cluster_user",
+            "addr": "/identity_provider_type"
+          }
+        ]
+      },
+      {
+        "addr": "properties/roles/db"
+      },
+      {
+        "addr": "properties/roles/role"
+      }
+    ]
   },
   {
     "api_version": "2023-06-01",
@@ -92815,12 +93175,12 @@
     ]
   },
   {
-    "api_version": "2023-01-31",
+    "api_version": "2024-11-30",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MANAGEDIDENTITY/USERASSIGNEDIDENTITIES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-01-31",
+    "api_version": "2024-11-30",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MANAGEDIDENTITY/USERASSIGNEDIDENTITIES/{}",
     "operation": "GET",
     "properties": [
@@ -92869,7 +93229,7 @@
     ]
   },
   {
-    "api_version": "2023-01-31",
+    "api_version": "2024-11-30",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MANAGEDIDENTITY/USERASSIGNEDIDENTITIES/{}",
     "operation": "PATCH",
     "properties": [
@@ -92882,7 +93242,7 @@
     ]
   },
   {
-    "api_version": "2023-01-31",
+    "api_version": "2024-11-30",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MANAGEDIDENTITY/USERASSIGNEDIDENTITIES/{}",
     "operation": "PUT",
     "properties": [
@@ -92931,12 +93291,12 @@
     ]
   },
   {
-    "api_version": "2023-01-31",
+    "api_version": "2024-11-30",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MANAGEDIDENTITY/USERASSIGNEDIDENTITIES/{}/FEDERATEDIDENTITYCREDENTIALS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-01-31",
+    "api_version": "2024-11-30",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MANAGEDIDENTITY/USERASSIGNEDIDENTITIES/{}/FEDERATEDIDENTITYCREDENTIALS/{}",
     "operation": "GET",
     "properties": [
@@ -92964,7 +93324,7 @@
     ]
   },
   {
-    "api_version": "2023-01-31",
+    "api_version": "2024-11-30",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MANAGEDIDENTITY/USERASSIGNEDIDENTITIES/{}/FEDERATEDIDENTITYCREDENTIALS/{}",
     "operation": "PUT",
     "properties": [
@@ -93214,40 +93574,16 @@
     "operation": "GET",
     "properties": [
       {
-        "addr": "location",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network",
-            "addr": "/location"
-          }
-        ]
+        "addr": "location"
       },
       {
-        "addr": "properties/publicLandMobileNetworkIdentifier/mcc",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network",
-            "addr": "/mobile_country_code"
-          }
-        ]
+        "addr": "properties/publicLandMobileNetworkIdentifier/mcc"
       },
       {
-        "addr": "properties/publicLandMobileNetworkIdentifier/mnc",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network",
-            "addr": "/mobile_network_code"
-          }
-        ]
+        "addr": "properties/publicLandMobileNetworkIdentifier/mnc"
       },
       {
-        "addr": "properties/serviceKey",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network",
-            "addr": "/service_key"
-          }
-        ]
+        "addr": "properties/serviceKey"
       },
       {
         "addr": "tags"
@@ -93260,40 +93596,16 @@
     "operation": "PUT",
     "properties": [
       {
-        "addr": "location",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network",
-            "addr": "/location"
-          }
-        ]
+        "addr": "location"
       },
       {
-        "addr": "properties/publicLandMobileNetworkIdentifier/mcc",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network",
-            "addr": "/mobile_country_code"
-          }
-        ]
+        "addr": "properties/publicLandMobileNetworkIdentifier/mcc"
       },
       {
-        "addr": "properties/publicLandMobileNetworkIdentifier/mnc",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network",
-            "addr": "/mobile_network_code"
-          }
-        ]
+        "addr": "properties/publicLandMobileNetworkIdentifier/mnc"
       },
       {
-        "addr": "properties/serviceKey",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network",
-            "addr": "/service_key"
-          }
-        ]
+        "addr": "properties/serviceKey"
       },
       {
         "addr": "tags"
@@ -93311,22 +93623,10 @@
     "operation": "GET",
     "properties": [
       {
-        "addr": "location",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_data_network",
-            "addr": "/location"
-          }
-        ]
+        "addr": "location"
       },
       {
-        "addr": "properties/description",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_data_network",
-            "addr": "/description"
-          }
-        ]
+        "addr": "properties/description"
       },
       {
         "addr": "tags"
@@ -93339,22 +93639,10 @@
     "operation": "PUT",
     "properties": [
       {
-        "addr": "location",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_data_network",
-            "addr": "/location"
-          }
-        ]
+        "addr": "location"
       },
       {
-        "addr": "properties/description",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_data_network",
-            "addr": "/description"
-          }
-        ]
+        "addr": "properties/description"
       },
       {
         "addr": "tags"
@@ -93372,13 +93660,7 @@
     "operation": "GET",
     "properties": [
       {
-        "addr": "location",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_service",
-            "addr": "/location"
-          }
-        ]
+        "addr": "location"
       },
       {
         "addr": "properties/pccRules/ruleName"
@@ -93429,67 +93711,25 @@
         "addr": "properties/pccRules/trafficControl"
       },
       {
-        "addr": "properties/servicePrecedence",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_service",
-            "addr": "/service_precedence"
-          }
-        ]
+        "addr": "properties/servicePrecedence"
       },
       {
-        "addr": "properties/serviceQosPolicy/5qi",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_service",
-            "addr": "/service_qos_policy/0/qos_indicator"
-          }
-        ]
+        "addr": "properties/serviceQosPolicy/5qi"
       },
       {
-        "addr": "properties/serviceQosPolicy/allocationAndRetentionPriorityLevel",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_service",
-            "addr": "/service_qos_policy/0/allocation_and_retention_priority_level"
-          }
-        ]
+        "addr": "properties/serviceQosPolicy/allocationAndRetentionPriorityLevel"
       },
       {
-        "addr": "properties/serviceQosPolicy/maximumBitRate/downlink",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_service",
-            "addr": "/service_qos_policy/0/maximum_bit_rate/0/downlink"
-          }
-        ]
+        "addr": "properties/serviceQosPolicy/maximumBitRate/downlink"
       },
       {
-        "addr": "properties/serviceQosPolicy/maximumBitRate/uplink",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_service",
-            "addr": "/service_qos_policy/0/maximum_bit_rate/0/uplink"
-          }
-        ]
+        "addr": "properties/serviceQosPolicy/maximumBitRate/uplink"
       },
       {
-        "addr": "properties/serviceQosPolicy/preemptionCapability",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_service",
-            "addr": "/service_qos_policy/0/preemption_capability"
-          }
-        ]
+        "addr": "properties/serviceQosPolicy/preemptionCapability"
       },
       {
-        "addr": "properties/serviceQosPolicy/preemptionVulnerability",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_service",
-            "addr": "/service_qos_policy/0/preemption_vulnerability"
-          }
-        ]
+        "addr": "properties/serviceQosPolicy/preemptionVulnerability"
       },
       {
         "addr": "tags"
@@ -93502,13 +93742,7 @@
     "operation": "PUT",
     "properties": [
       {
-        "addr": "location",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_service",
-            "addr": "/location"
-          }
-        ]
+        "addr": "location"
       },
       {
         "addr": "properties/pccRules/ruleName"
@@ -93559,67 +93793,25 @@
         "addr": "properties/pccRules/trafficControl"
       },
       {
-        "addr": "properties/servicePrecedence",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_service",
-            "addr": "/service_precedence"
-          }
-        ]
+        "addr": "properties/servicePrecedence"
       },
       {
-        "addr": "properties/serviceQosPolicy/5qi",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_service",
-            "addr": "/service_qos_policy/0/qos_indicator"
-          }
-        ]
+        "addr": "properties/serviceQosPolicy/5qi"
       },
       {
-        "addr": "properties/serviceQosPolicy/allocationAndRetentionPriorityLevel",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_service",
-            "addr": "/service_qos_policy/0/allocation_and_retention_priority_level"
-          }
-        ]
+        "addr": "properties/serviceQosPolicy/allocationAndRetentionPriorityLevel"
       },
       {
-        "addr": "properties/serviceQosPolicy/maximumBitRate/downlink",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_service",
-            "addr": "/service_qos_policy/0/maximum_bit_rate/0/downlink"
-          }
-        ]
+        "addr": "properties/serviceQosPolicy/maximumBitRate/downlink"
       },
       {
-        "addr": "properties/serviceQosPolicy/maximumBitRate/uplink",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_service",
-            "addr": "/service_qos_policy/0/maximum_bit_rate/0/uplink"
-          }
-        ]
+        "addr": "properties/serviceQosPolicy/maximumBitRate/uplink"
       },
       {
-        "addr": "properties/serviceQosPolicy/preemptionCapability",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_service",
-            "addr": "/service_qos_policy/0/preemption_capability"
-          }
-        ]
+        "addr": "properties/serviceQosPolicy/preemptionCapability"
       },
       {
-        "addr": "properties/serviceQosPolicy/preemptionVulnerability",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_service",
-            "addr": "/service_qos_policy/0/preemption_vulnerability"
-          }
-        ]
+        "addr": "properties/serviceQosPolicy/preemptionVulnerability"
       },
       {
         "addr": "tags"
@@ -93637,40 +93829,16 @@
     "operation": "GET",
     "properties": [
       {
-        "addr": "location",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim_policy",
-            "addr": "/location"
-          }
-        ]
+        "addr": "location"
       },
       {
-        "addr": "properties/defaultSlice/id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim_policy",
-            "addr": "/default_slice_id"
-          }
-        ]
+        "addr": "properties/defaultSlice/id"
       },
       {
-        "addr": "properties/registrationTimer",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim_policy",
-            "addr": "/registration_timer_in_seconds"
-          }
-        ]
+        "addr": "properties/registrationTimer"
       },
       {
-        "addr": "properties/rfspIndex",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim_policy",
-            "addr": "/rat_frequency_selection_priority_index"
-          }
-        ]
+        "addr": "properties/rfspIndex"
       },
       {
         "addr": "properties/sliceConfigurations/dataNetworkConfigurations/5qi"
@@ -93712,22 +93880,10 @@
         "addr": "properties/sliceConfigurations/slice/id"
       },
       {
-        "addr": "properties/ueAmbr/downlink",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim_policy",
-            "addr": "/user_equipment_aggregate_maximum_bit_rate/0/downlink"
-          }
-        ]
+        "addr": "properties/ueAmbr/downlink"
       },
       {
-        "addr": "properties/ueAmbr/uplink",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim_policy",
-            "addr": "/user_equipment_aggregate_maximum_bit_rate/0/uplink"
-          }
-        ]
+        "addr": "properties/ueAmbr/uplink"
       },
       {
         "addr": "tags"
@@ -93740,40 +93896,16 @@
     "operation": "PUT",
     "properties": [
       {
-        "addr": "location",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim_policy",
-            "addr": "/location"
-          }
-        ]
+        "addr": "location"
       },
       {
-        "addr": "properties/defaultSlice/id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim_policy",
-            "addr": "/default_slice_id"
-          }
-        ]
+        "addr": "properties/defaultSlice/id"
       },
       {
-        "addr": "properties/registrationTimer",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim_policy",
-            "addr": "/registration_timer_in_seconds"
-          }
-        ]
+        "addr": "properties/registrationTimer"
       },
       {
-        "addr": "properties/rfspIndex",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim_policy",
-            "addr": "/rat_frequency_selection_priority_index"
-          }
-        ]
+        "addr": "properties/rfspIndex"
       },
       {
         "addr": "properties/sliceConfigurations/dataNetworkConfigurations/5qi"
@@ -93815,22 +93947,10 @@
         "addr": "properties/sliceConfigurations/slice/id"
       },
       {
-        "addr": "properties/ueAmbr/downlink",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim_policy",
-            "addr": "/user_equipment_aggregate_maximum_bit_rate/0/downlink"
-          }
-        ]
+        "addr": "properties/ueAmbr/downlink"
       },
       {
-        "addr": "properties/ueAmbr/uplink",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim_policy",
-            "addr": "/user_equipment_aggregate_maximum_bit_rate/0/uplink"
-          }
-        ]
+        "addr": "properties/ueAmbr/uplink"
       },
       {
         "addr": "tags"
@@ -93848,13 +93968,7 @@
     "operation": "GET",
     "properties": [
       {
-        "addr": "location",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_site",
-            "addr": "/location"
-          }
-        ]
+        "addr": "location"
       },
       {
         "addr": "properties"
@@ -93873,13 +93987,7 @@
     "operation": "PUT",
     "properties": [
       {
-        "addr": "location",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_site",
-            "addr": "/location"
-          }
-        ]
+        "addr": "location"
       },
       {
         "addr": "properties"
@@ -93903,22 +94011,10 @@
     "operation": "GET",
     "properties": [
       {
-        "addr": "location",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_slice",
-            "addr": "/location"
-          }
-        ]
+        "addr": "location"
       },
       {
-        "addr": "properties/description",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_slice",
-            "addr": "/description"
-          }
-        ]
+        "addr": "properties/description"
       },
       {
         "addr": "properties/snssai/sd"
@@ -93937,22 +94033,10 @@
     "operation": "PUT",
     "properties": [
       {
-        "addr": "location",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_slice",
-            "addr": "/location"
-          }
-        ]
+        "addr": "location"
       },
       {
-        "addr": "properties/description",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_slice",
-            "addr": "/description"
-          }
-        ]
+        "addr": "properties/description"
       },
       {
         "addr": "properties/snssai/sd"
@@ -93982,157 +94066,61 @@
         "addr": "identity/userAssignedIdentities"
       },
       {
-        "addr": "location",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/location"
-          }
-        ]
+        "addr": "location"
       },
       {
         "addr": "name"
       },
       {
-        "addr": "properties/controlPlaneAccessInterface/ipv4Address",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/control_plane_access_ipv4_address"
-          }
-        ]
+        "addr": "properties/controlPlaneAccessInterface/ipv4Address"
       },
       {
-        "addr": "properties/controlPlaneAccessInterface/ipv4Gateway",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/control_plane_access_ipv4_gateway"
-          }
-        ]
+        "addr": "properties/controlPlaneAccessInterface/ipv4Gateway"
       },
       {
-        "addr": "properties/controlPlaneAccessInterface/ipv4Subnet",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/control_plane_access_ipv4_subnet"
-          }
-        ]
+        "addr": "properties/controlPlaneAccessInterface/ipv4Subnet"
       },
       {
-        "addr": "properties/controlPlaneAccessInterface/name",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/control_plane_access_name"
-          }
-        ]
+        "addr": "properties/controlPlaneAccessInterface/name"
       },
       {
-        "addr": "properties/coreNetworkTechnology",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/core_network_technology"
-          }
-        ]
+        "addr": "properties/coreNetworkTechnology"
       },
       {
         "addr": "properties/interopSettings"
       },
       {
-        "addr": "properties/localDiagnosticsAccess/authenticationType",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/local_diagnostics_access/0/authentication_type"
-          }
-        ]
+        "addr": "properties/localDiagnosticsAccess/authenticationType"
       },
       {
-        "addr": "properties/localDiagnosticsAccess/httpsServerCertificate/certificateUrl",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/local_diagnostics_access/0/https_server_certificate_url"
-          }
-        ]
+        "addr": "properties/localDiagnosticsAccess/httpsServerCertificate/certificateUrl"
       },
       {
-        "addr": "properties/platform/azureStackEdgeDevice/id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/platform/0/edge_device_id"
-          }
-        ]
+        "addr": "properties/platform/azureStackEdgeDevice/id"
       },
       {
-        "addr": "properties/platform/azureStackHciCluster/id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/platform/0/stack_hci_cluster_id"
-          }
-        ]
+        "addr": "properties/platform/azureStackHciCluster/id"
       },
       {
-        "addr": "properties/platform/connectedCluster/id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/platform/0/arc_kubernetes_cluster_id"
-          }
-        ]
+        "addr": "properties/platform/connectedCluster/id"
       },
       {
-        "addr": "properties/platform/customLocation/id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/platform/0/custom_location_id"
-          }
-        ]
+        "addr": "properties/platform/customLocation/id"
       },
       {
-        "addr": "properties/platform/type",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/platform/0/type"
-          }
-        ]
+        "addr": "properties/platform/type"
       },
       {
         "addr": "properties/sites/id"
       },
       {
-        "addr": "properties/sku",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/sku"
-          }
-        ]
+        "addr": "properties/sku"
       },
       {
-        "addr": "properties/ueMtu",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/user_equipment_mtu_in_bytes"
-          }
-        ]
+        "addr": "properties/ueMtu"
       },
       {
-        "addr": "properties/version",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/software_version"
-          }
-        ]
+        "addr": "properties/version"
       },
       {
         "addr": "tags"
@@ -94151,157 +94139,61 @@
         "addr": "identity/userAssignedIdentities"
       },
       {
-        "addr": "location",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/location"
-          }
-        ]
+        "addr": "location"
       },
       {
         "addr": "name"
       },
       {
-        "addr": "properties/controlPlaneAccessInterface/ipv4Address",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/control_plane_access_ipv4_address"
-          }
-        ]
+        "addr": "properties/controlPlaneAccessInterface/ipv4Address"
       },
       {
-        "addr": "properties/controlPlaneAccessInterface/ipv4Gateway",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/control_plane_access_ipv4_gateway"
-          }
-        ]
+        "addr": "properties/controlPlaneAccessInterface/ipv4Gateway"
       },
       {
-        "addr": "properties/controlPlaneAccessInterface/ipv4Subnet",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/control_plane_access_ipv4_subnet"
-          }
-        ]
+        "addr": "properties/controlPlaneAccessInterface/ipv4Subnet"
       },
       {
-        "addr": "properties/controlPlaneAccessInterface/name",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/control_plane_access_name"
-          }
-        ]
+        "addr": "properties/controlPlaneAccessInterface/name"
       },
       {
-        "addr": "properties/coreNetworkTechnology",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/core_network_technology"
-          }
-        ]
+        "addr": "properties/coreNetworkTechnology"
       },
       {
         "addr": "properties/interopSettings"
       },
       {
-        "addr": "properties/localDiagnosticsAccess/authenticationType",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/local_diagnostics_access/0/authentication_type"
-          }
-        ]
+        "addr": "properties/localDiagnosticsAccess/authenticationType"
       },
       {
-        "addr": "properties/localDiagnosticsAccess/httpsServerCertificate/certificateUrl",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/local_diagnostics_access/0/https_server_certificate_url"
-          }
-        ]
+        "addr": "properties/localDiagnosticsAccess/httpsServerCertificate/certificateUrl"
       },
       {
-        "addr": "properties/platform/azureStackEdgeDevice/id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/platform/0/edge_device_id"
-          }
-        ]
+        "addr": "properties/platform/azureStackEdgeDevice/id"
       },
       {
-        "addr": "properties/platform/azureStackHciCluster/id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/platform/0/stack_hci_cluster_id"
-          }
-        ]
+        "addr": "properties/platform/azureStackHciCluster/id"
       },
       {
-        "addr": "properties/platform/connectedCluster/id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/platform/0/arc_kubernetes_cluster_id"
-          }
-        ]
+        "addr": "properties/platform/connectedCluster/id"
       },
       {
-        "addr": "properties/platform/customLocation/id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/platform/0/custom_location_id"
-          }
-        ]
+        "addr": "properties/platform/customLocation/id"
       },
       {
-        "addr": "properties/platform/type",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/platform/0/type"
-          }
-        ]
+        "addr": "properties/platform/type"
       },
       {
         "addr": "properties/sites/id"
       },
       {
-        "addr": "properties/sku",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/sku"
-          }
-        ]
+        "addr": "properties/sku"
       },
       {
-        "addr": "properties/ueMtu",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/user_equipment_mtu_in_bytes"
-          }
-        ]
+        "addr": "properties/ueMtu"
       },
       {
-        "addr": "properties/version",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_control_plane",
-            "addr": "/software_version"
-          }
-        ]
+        "addr": "properties/version"
       },
       {
         "addr": "tags"
@@ -94319,49 +94211,19 @@
     "operation": "GET",
     "properties": [
       {
-        "addr": "location",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_data_plane",
-            "addr": "/location"
-          }
-        ]
+        "addr": "location"
       },
       {
-        "addr": "properties/userPlaneAccessInterface/ipv4Address",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_data_plane",
-            "addr": "/user_plane_access_ipv4_address"
-          }
-        ]
+        "addr": "properties/userPlaneAccessInterface/ipv4Address"
       },
       {
-        "addr": "properties/userPlaneAccessInterface/ipv4Gateway",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_data_plane",
-            "addr": "/user_plane_access_ipv4_gateway"
-          }
-        ]
+        "addr": "properties/userPlaneAccessInterface/ipv4Gateway"
       },
       {
-        "addr": "properties/userPlaneAccessInterface/ipv4Subnet",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_data_plane",
-            "addr": "/user_plane_access_ipv4_subnet"
-          }
-        ]
+        "addr": "properties/userPlaneAccessInterface/ipv4Subnet"
       },
       {
-        "addr": "properties/userPlaneAccessInterface/name",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_data_plane",
-            "addr": "/user_plane_access_name"
-          }
-        ]
+        "addr": "properties/userPlaneAccessInterface/name"
       },
       {
         "addr": "tags"
@@ -94374,49 +94236,19 @@
     "operation": "PUT",
     "properties": [
       {
-        "addr": "location",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_data_plane",
-            "addr": "/location"
-          }
-        ]
+        "addr": "location"
       },
       {
-        "addr": "properties/userPlaneAccessInterface/ipv4Address",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_data_plane",
-            "addr": "/user_plane_access_ipv4_address"
-          }
-        ]
+        "addr": "properties/userPlaneAccessInterface/ipv4Address"
       },
       {
-        "addr": "properties/userPlaneAccessInterface/ipv4Gateway",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_data_plane",
-            "addr": "/user_plane_access_ipv4_gateway"
-          }
-        ]
+        "addr": "properties/userPlaneAccessInterface/ipv4Gateway"
       },
       {
-        "addr": "properties/userPlaneAccessInterface/ipv4Subnet",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_data_plane",
-            "addr": "/user_plane_access_ipv4_subnet"
-          }
-        ]
+        "addr": "properties/userPlaneAccessInterface/ipv4Subnet"
       },
       {
-        "addr": "properties/userPlaneAccessInterface/name",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_packet_core_data_plane",
-            "addr": "/user_plane_access_name"
-          }
-        ]
+        "addr": "properties/userPlaneAccessInterface/name"
       },
       {
         "addr": "tags"
@@ -94434,13 +94266,7 @@
     "operation": "GET",
     "properties": [
       {
-        "addr": "location",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_attached_data_network",
-            "addr": "/location"
-          }
-        ]
+        "addr": "location"
       },
       {
         "addr": "properties/dnsAddresses"
@@ -94449,76 +94275,28 @@
         "addr": "properties/naptConfiguration/enabled"
       },
       {
-        "addr": "properties/naptConfiguration/pinholeLimits",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_attached_data_network",
-            "addr": "/network_address_port_translation/0/pinhole_maximum_number"
-          }
-        ]
+        "addr": "properties/naptConfiguration/pinholeLimits"
       },
       {
-        "addr": "properties/naptConfiguration/pinholeTimeouts/icmp",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_attached_data_network",
-            "addr": "/network_address_port_translation/0/icmp_pinhole_timeout_in_seconds"
-          }
-        ]
+        "addr": "properties/naptConfiguration/pinholeTimeouts/icmp"
       },
       {
-        "addr": "properties/naptConfiguration/pinholeTimeouts/tcp",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_attached_data_network",
-            "addr": "/network_address_port_translation/0/tcp_pinhole_timeout_in_seconds"
-          }
-        ]
+        "addr": "properties/naptConfiguration/pinholeTimeouts/tcp"
       },
       {
-        "addr": "properties/naptConfiguration/pinholeTimeouts/udp",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_attached_data_network",
-            "addr": "/network_address_port_translation/0/udp_pinhole_timeout_in_seconds"
-          }
-        ]
+        "addr": "properties/naptConfiguration/pinholeTimeouts/udp"
       },
       {
-        "addr": "properties/naptConfiguration/portRange/maxPort",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_attached_data_network",
-            "addr": "/network_address_port_translation/0/port_range/0/maximum"
-          }
-        ]
+        "addr": "properties/naptConfiguration/portRange/maxPort"
       },
       {
-        "addr": "properties/naptConfiguration/portRange/minPort",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_attached_data_network",
-            "addr": "/network_address_port_translation/0/port_range/0/minimum"
-          }
-        ]
+        "addr": "properties/naptConfiguration/portRange/minPort"
       },
       {
-        "addr": "properties/naptConfiguration/portReuseHoldTime/tcp",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_attached_data_network",
-            "addr": "/network_address_port_translation/0/tcp_port_reuse_minimum_hold_time_in_seconds"
-          }
-        ]
+        "addr": "properties/naptConfiguration/portReuseHoldTime/tcp"
       },
       {
-        "addr": "properties/naptConfiguration/portReuseHoldTime/udp",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_attached_data_network",
-            "addr": "/network_address_port_translation/0/udp_port_reuse_minimum_hold_time_in_seconds"
-          }
-        ]
+        "addr": "properties/naptConfiguration/portReuseHoldTime/udp"
       },
       {
         "addr": "properties/userEquipmentAddressPoolPrefix"
@@ -94527,40 +94305,16 @@
         "addr": "properties/userEquipmentStaticAddressPoolPrefix"
       },
       {
-        "addr": "properties/userPlaneDataInterface/ipv4Address",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_attached_data_network",
-            "addr": "/user_plane_access_ipv4_address"
-          }
-        ]
+        "addr": "properties/userPlaneDataInterface/ipv4Address"
       },
       {
-        "addr": "properties/userPlaneDataInterface/ipv4Gateway",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_attached_data_network",
-            "addr": "/user_plane_access_ipv4_gateway"
-          }
-        ]
+        "addr": "properties/userPlaneDataInterface/ipv4Gateway"
       },
       {
-        "addr": "properties/userPlaneDataInterface/ipv4Subnet",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_attached_data_network",
-            "addr": "/user_plane_access_ipv4_subnet"
-          }
-        ]
+        "addr": "properties/userPlaneDataInterface/ipv4Subnet"
       },
       {
-        "addr": "properties/userPlaneDataInterface/name",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_attached_data_network",
-            "addr": "/user_plane_access_name"
-          }
-        ]
+        "addr": "properties/userPlaneDataInterface/name"
       },
       {
         "addr": "tags"
@@ -94573,13 +94327,7 @@
     "operation": "PUT",
     "properties": [
       {
-        "addr": "location",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_attached_data_network",
-            "addr": "/location"
-          }
-        ]
+        "addr": "location"
       },
       {
         "addr": "properties/dnsAddresses"
@@ -94588,76 +94336,28 @@
         "addr": "properties/naptConfiguration/enabled"
       },
       {
-        "addr": "properties/naptConfiguration/pinholeLimits",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_attached_data_network",
-            "addr": "/network_address_port_translation/0/pinhole_maximum_number"
-          }
-        ]
+        "addr": "properties/naptConfiguration/pinholeLimits"
       },
       {
-        "addr": "properties/naptConfiguration/pinholeTimeouts/icmp",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_attached_data_network",
-            "addr": "/network_address_port_translation/0/icmp_pinhole_timeout_in_seconds"
-          }
-        ]
+        "addr": "properties/naptConfiguration/pinholeTimeouts/icmp"
       },
       {
-        "addr": "properties/naptConfiguration/pinholeTimeouts/tcp",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_attached_data_network",
-            "addr": "/network_address_port_translation/0/tcp_pinhole_timeout_in_seconds"
-          }
-        ]
+        "addr": "properties/naptConfiguration/pinholeTimeouts/tcp"
       },
       {
-        "addr": "properties/naptConfiguration/pinholeTimeouts/udp",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_attached_data_network",
-            "addr": "/network_address_port_translation/0/udp_pinhole_timeout_in_seconds"
-          }
-        ]
+        "addr": "properties/naptConfiguration/pinholeTimeouts/udp"
       },
       {
-        "addr": "properties/naptConfiguration/portRange/maxPort",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_attached_data_network",
-            "addr": "/network_address_port_translation/0/port_range/0/maximum"
-          }
-        ]
+        "addr": "properties/naptConfiguration/portRange/maxPort"
       },
       {
-        "addr": "properties/naptConfiguration/portRange/minPort",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_attached_data_network",
-            "addr": "/network_address_port_translation/0/port_range/0/minimum"
-          }
-        ]
+        "addr": "properties/naptConfiguration/portRange/minPort"
       },
       {
-        "addr": "properties/naptConfiguration/portReuseHoldTime/tcp",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_attached_data_network",
-            "addr": "/network_address_port_translation/0/tcp_port_reuse_minimum_hold_time_in_seconds"
-          }
-        ]
+        "addr": "properties/naptConfiguration/portReuseHoldTime/tcp"
       },
       {
-        "addr": "properties/naptConfiguration/portReuseHoldTime/udp",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_attached_data_network",
-            "addr": "/network_address_port_translation/0/udp_port_reuse_minimum_hold_time_in_seconds"
-          }
-        ]
+        "addr": "properties/naptConfiguration/portReuseHoldTime/udp"
       },
       {
         "addr": "properties/userEquipmentAddressPoolPrefix"
@@ -94666,40 +94366,16 @@
         "addr": "properties/userEquipmentStaticAddressPoolPrefix"
       },
       {
-        "addr": "properties/userPlaneDataInterface/ipv4Address",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_attached_data_network",
-            "addr": "/user_plane_access_ipv4_address"
-          }
-        ]
+        "addr": "properties/userPlaneDataInterface/ipv4Address"
       },
       {
-        "addr": "properties/userPlaneDataInterface/ipv4Gateway",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_attached_data_network",
-            "addr": "/user_plane_access_ipv4_gateway"
-          }
-        ]
+        "addr": "properties/userPlaneDataInterface/ipv4Gateway"
       },
       {
-        "addr": "properties/userPlaneDataInterface/ipv4Subnet",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_attached_data_network",
-            "addr": "/user_plane_access_ipv4_subnet"
-          }
-        ]
+        "addr": "properties/userPlaneDataInterface/ipv4Subnet"
       },
       {
-        "addr": "properties/userPlaneDataInterface/name",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_attached_data_network",
-            "addr": "/user_plane_access_name"
-          }
-        ]
+        "addr": "properties/userPlaneDataInterface/name"
       },
       {
         "addr": "tags"
@@ -94729,31 +94405,13 @@
         "addr": "identity/userAssignedIdentities"
       },
       {
-        "addr": "location",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim_group",
-            "addr": "/location"
-          }
-        ]
+        "addr": "location"
       },
       {
-        "addr": "properties/encryptionKey/keyUrl",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim_group",
-            "addr": "/encryption_key_url"
-          }
-        ]
+        "addr": "properties/encryptionKey/keyUrl"
       },
       {
-        "addr": "properties/mobileNetwork/id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim_group",
-            "addr": "/mobile_network_id"
-          }
-        ]
+        "addr": "properties/mobileNetwork/id"
       },
       {
         "addr": "tags"
@@ -94778,31 +94436,13 @@
         "addr": "identity/userAssignedIdentities"
       },
       {
-        "addr": "location",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim_group",
-            "addr": "/location"
-          }
-        ]
+        "addr": "location"
       },
       {
-        "addr": "properties/encryptionKey/keyUrl",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim_group",
-            "addr": "/encryption_key_url"
-          }
-        ]
+        "addr": "properties/encryptionKey/keyUrl"
       },
       {
-        "addr": "properties/mobileNetwork/id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim_group",
-            "addr": "/mobile_network_id"
-          }
-        ]
+        "addr": "properties/mobileNetwork/id"
       },
       {
         "addr": "tags"
@@ -94823,52 +94463,22 @@
         "addr": "properties/authenticationKey"
       },
       {
-        "addr": "properties/deviceType",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim",
-            "addr": "/device_type"
-          }
-        ]
+        "addr": "properties/deviceType"
       },
       {
-        "addr": "properties/integratedCircuitCardIdentifier",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim",
-            "addr": "/integrated_circuit_card_identifier"
-          }
-        ]
+        "addr": "properties/integratedCircuitCardIdentifier"
       },
       {
-        "addr": "properties/internationalMobileSubscriberIdentity",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim",
-            "addr": "/international_mobile_subscriber_identity"
-          }
-        ]
+        "addr": "properties/internationalMobileSubscriberIdentity"
       },
       {
         "addr": "properties/operatorKeyCode"
       },
       {
-        "addr": "properties/simPolicy/id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim",
-            "addr": "/sim_policy_id"
-          }
-        ]
+        "addr": "properties/simPolicy/id"
       },
       {
-        "addr": "properties/simState",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim",
-            "addr": "/sim_state"
-          }
-        ]
+        "addr": "properties/simState"
       },
       {
         "addr": "properties/staticIpConfiguration/attachedDataNetwork/id"
@@ -94880,22 +94490,10 @@
         "addr": "properties/staticIpConfiguration/staticIp/ipv4Address"
       },
       {
-        "addr": "properties/vendorKeyFingerprint",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim",
-            "addr": "/vendor_key_fingerprint"
-          }
-        ]
+        "addr": "properties/vendorKeyFingerprint"
       },
       {
-        "addr": "properties/vendorName",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim",
-            "addr": "/vendor_name"
-          }
-        ]
+        "addr": "properties/vendorName"
       }
     ]
   },
@@ -94908,52 +94506,22 @@
         "addr": "properties/authenticationKey"
       },
       {
-        "addr": "properties/deviceType",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim",
-            "addr": "/device_type"
-          }
-        ]
+        "addr": "properties/deviceType"
       },
       {
-        "addr": "properties/integratedCircuitCardIdentifier",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim",
-            "addr": "/integrated_circuit_card_identifier"
-          }
-        ]
+        "addr": "properties/integratedCircuitCardIdentifier"
       },
       {
-        "addr": "properties/internationalMobileSubscriberIdentity",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim",
-            "addr": "/international_mobile_subscriber_identity"
-          }
-        ]
+        "addr": "properties/internationalMobileSubscriberIdentity"
       },
       {
         "addr": "properties/operatorKeyCode"
       },
       {
-        "addr": "properties/simPolicy/id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim",
-            "addr": "/sim_policy_id"
-          }
-        ]
+        "addr": "properties/simPolicy/id"
       },
       {
-        "addr": "properties/simState",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim",
-            "addr": "/sim_state"
-          }
-        ]
+        "addr": "properties/simState"
       },
       {
         "addr": "properties/staticIpConfiguration/attachedDataNetwork/id"
@@ -94965,22 +94533,10 @@
         "addr": "properties/staticIpConfiguration/staticIp/ipv4Address"
       },
       {
-        "addr": "properties/vendorKeyFingerprint",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim",
-            "addr": "/vendor_key_fingerprint"
-          }
-        ]
+        "addr": "properties/vendorKeyFingerprint"
       },
       {
-        "addr": "properties/vendorName",
-        "app_property_maps": [
-          {
-            "name": "azurerm_mobile_network_sim",
-            "addr": "/vendor_name"
-          }
-        ]
+        "addr": "properties/vendorName"
       }
     ]
   },
@@ -109430,6 +108986,67 @@
   },
   {
     "api_version": "2024-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PRIVATEDNSZONES",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "etag"
+      },
+      {
+        "addr": "id"
+      },
+      {
+        "addr": "location"
+      },
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/maxNumberOfRecordSets",
+        "app_property_maps": [
+          {
+            "name": "azurerm_private_dns_zone",
+            "addr": "/max_number_of_record_sets"
+          }
+        ]
+      },
+      {
+        "addr": "properties/maxNumberOfVirtualNetworkLinks",
+        "app_property_maps": [
+          {
+            "name": "azurerm_private_dns_zone",
+            "addr": "/max_number_of_virtual_network_links"
+          }
+        ]
+      },
+      {
+        "addr": "properties/maxNumberOfVirtualNetworkLinksWithRegistration",
+        "app_property_maps": [
+          {
+            "name": "azurerm_private_dns_zone",
+            "addr": "/max_number_of_virtual_network_links_with_registration"
+          }
+        ]
+      },
+      {
+        "addr": "properties/numberOfRecordSets",
+        "app_property_maps": [
+          {
+            "name": "azurerm_private_dns_zone",
+            "addr": "/number_of_record_sets"
+          }
+        ]
+      },
+      {
+        "addr": "tags"
+      },
+      {
+        "addr": "type"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PRIVATEDNSZONES/{}",
     "operation": "DELETE"
   },
@@ -119477,16 +119094,87 @@
   {
     "api_version": "2022-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/TABLES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2022-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}/TABLES/{}",
     "operation": "GET",
     "properties": [
       {
-        "addr": "properties/plan"
+        "addr": "properties/plan",
+        "app_property_maps": [
+          {
+            "name": "azurerm_log_analytics_workspace_table_custom_log",
+            "addr": "/plan"
+          }
+        ]
       },
       {
         "addr": "properties/retentionInDays"
       },
       {
+        "addr": "properties/retentionInDaysAsDefault"
+      },
+      {
+        "addr": "properties/schema/columns/description"
+      },
+      {
+        "addr": "properties/schema/columns/displayName"
+      },
+      {
+        "addr": "properties/schema/columns/name"
+      },
+      {
+        "addr": "properties/schema/columns/type"
+      },
+      {
+        "addr": "properties/schema/description",
+        "app_property_maps": [
+          {
+            "name": "azurerm_log_analytics_workspace_table_custom_log",
+            "addr": "/description"
+          }
+        ]
+      },
+      {
+        "addr": "properties/schema/displayName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_log_analytics_workspace_table_custom_log",
+            "addr": "/display_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/schema/name"
+      },
+      {
+        "addr": "properties/schema/solutions"
+      },
+      {
+        "addr": "properties/schema/standardColumns/description"
+      },
+      {
+        "addr": "properties/schema/standardColumns/displayName"
+      },
+      {
+        "addr": "properties/schema/standardColumns/name"
+      },
+      {
+        "addr": "properties/schema/standardColumns/type"
+      },
+      {
+        "addr": "properties/schema/tableSubType"
+      },
+      {
+        "addr": "properties/schema/tableType"
+      },
+      {
         "addr": "properties/totalRetentionInDays"
+      },
+      {
+        "addr": "properties/totalRetentionInDaysAsDefault"
       }
     ]
   },
@@ -119496,13 +119184,79 @@
     "operation": "PATCH",
     "properties": [
       {
-        "addr": "properties/plan"
+        "addr": "properties/plan",
+        "app_property_maps": [
+          {
+            "name": "azurerm_log_analytics_workspace_table_custom_log",
+            "addr": "/plan"
+          }
+        ]
       },
       {
         "addr": "properties/retentionInDays"
       },
       {
+        "addr": "properties/retentionInDaysAsDefault"
+      },
+      {
+        "addr": "properties/schema/columns/description"
+      },
+      {
+        "addr": "properties/schema/columns/displayName"
+      },
+      {
+        "addr": "properties/schema/columns/name"
+      },
+      {
+        "addr": "properties/schema/columns/type"
+      },
+      {
+        "addr": "properties/schema/description",
+        "app_property_maps": [
+          {
+            "name": "azurerm_log_analytics_workspace_table_custom_log",
+            "addr": "/description"
+          }
+        ]
+      },
+      {
+        "addr": "properties/schema/displayName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_log_analytics_workspace_table_custom_log",
+            "addr": "/display_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/schema/name"
+      },
+      {
+        "addr": "properties/schema/solutions"
+      },
+      {
+        "addr": "properties/schema/standardColumns/description"
+      },
+      {
+        "addr": "properties/schema/standardColumns/displayName"
+      },
+      {
+        "addr": "properties/schema/standardColumns/name"
+      },
+      {
+        "addr": "properties/schema/standardColumns/type"
+      },
+      {
+        "addr": "properties/schema/tableSubType"
+      },
+      {
+        "addr": "properties/schema/tableType"
+      },
+      {
         "addr": "properties/totalRetentionInDays"
+      },
+      {
+        "addr": "properties/totalRetentionInDaysAsDefault"
       }
     ]
   },
@@ -119512,13 +119266,79 @@
     "operation": "PUT",
     "properties": [
       {
-        "addr": "properties/plan"
+        "addr": "properties/plan",
+        "app_property_maps": [
+          {
+            "name": "azurerm_log_analytics_workspace_table_custom_log",
+            "addr": "/plan"
+          }
+        ]
       },
       {
         "addr": "properties/retentionInDays"
       },
       {
+        "addr": "properties/retentionInDaysAsDefault"
+      },
+      {
+        "addr": "properties/schema/columns/description"
+      },
+      {
+        "addr": "properties/schema/columns/displayName"
+      },
+      {
+        "addr": "properties/schema/columns/name"
+      },
+      {
+        "addr": "properties/schema/columns/type"
+      },
+      {
+        "addr": "properties/schema/description",
+        "app_property_maps": [
+          {
+            "name": "azurerm_log_analytics_workspace_table_custom_log",
+            "addr": "/description"
+          }
+        ]
+      },
+      {
+        "addr": "properties/schema/displayName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_log_analytics_workspace_table_custom_log",
+            "addr": "/display_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/schema/name"
+      },
+      {
+        "addr": "properties/schema/solutions"
+      },
+      {
+        "addr": "properties/schema/standardColumns/description"
+      },
+      {
+        "addr": "properties/schema/standardColumns/displayName"
+      },
+      {
+        "addr": "properties/schema/standardColumns/name"
+      },
+      {
+        "addr": "properties/schema/standardColumns/type"
+      },
+      {
+        "addr": "properties/schema/tableSubType"
+      },
+      {
+        "addr": "properties/schema/tableType"
+      },
+      {
         "addr": "properties/totalRetentionInDays"
+      },
+      {
+        "addr": "properties/totalRetentionInDaysAsDefault"
       }
     ]
   },
@@ -163638,6 +163458,9 @@
     "operation": "PATCH",
     "properties": [
       {
+        "addr": "properties/adminPassword"
+      },
+      {
         "addr": "properties/backupRetentionPeriodInDays"
       },
       {
@@ -166635,6 +166458,12 @@
     "operation": "GET",
     "properties": [
       {
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
+      },
+      {
         "addr": "location",
         "app_property_maps": [
           {
@@ -166642,7 +166471,15 @@
             "addr": "/location"
           },
           {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_hub_strata_cloud_manager",
+            "addr": "/location"
+          },
+          {
             "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_panorama",
+            "addr": "/location"
+          },
+          {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_strata_cloud_manager",
             "addr": "/location"
           }
         ]
@@ -166706,6 +166543,9 @@
         "addr": "properties/isPanoramaManaged"
       },
       {
+        "addr": "properties/isStrataCloudManaged"
+      },
+      {
         "addr": "properties/marketplaceDetails/offerId",
         "app_property_maps": [
           {
@@ -166717,11 +166557,19 @@
             "addr": "/marketplace_offer_id"
           },
           {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_hub_strata_cloud_manager",
+            "addr": "/marketplace_offer_id"
+          },
+          {
             "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_local_rulestack",
             "addr": "/marketplace_offer_id"
           },
           {
             "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_panorama",
+            "addr": "/marketplace_offer_id"
+          },
+          {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_strata_cloud_manager",
             "addr": "/marketplace_offer_id"
           }
         ]
@@ -166760,6 +166608,10 @@
           {
             "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_panorama",
             "addr": "/network_profile/0/vnet_configuration/0/ip_of_trust_for_user_defined_routes"
+          },
+          {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_strata_cloud_manager",
+            "addr": "/network_profile/0/vnet_configuration/0/ip_of_trust_for_user_defined_routes"
           }
         ]
       },
@@ -166776,6 +166628,10 @@
           {
             "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_panorama",
             "addr": "/network_profile/0/vnet_configuration/0/trusted_subnet_id"
+          },
+          {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_strata_cloud_manager",
+            "addr": "/network_profile/0/vnet_configuration/0/trusted_subnet_id"
           }
         ]
       },
@@ -166788,6 +166644,10 @@
           },
           {
             "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_panorama",
+            "addr": "/network_profile/0/vnet_configuration/0/untrusted_subnet_id"
+          },
+          {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_strata_cloud_manager",
             "addr": "/network_profile/0/vnet_configuration/0/untrusted_subnet_id"
           }
         ]
@@ -166802,6 +166662,10 @@
           {
             "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_panorama",
             "addr": "/network_profile/0/vnet_configuration/0/virtual_network_id"
+          },
+          {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_strata_cloud_manager",
+            "addr": "/network_profile/0/vnet_configuration/0/virtual_network_id"
           }
         ]
       },
@@ -166814,6 +166678,10 @@
           },
           {
             "name": "azurerm_palo_alto_next_generation_firewall_virtual_hub_panorama",
+            "addr": "/network_profile/0/ip_of_trust_for_user_defined_routes"
+          },
+          {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_hub_strata_cloud_manager",
             "addr": "/network_profile/0/ip_of_trust_for_user_defined_routes"
           }
         ]
@@ -166831,6 +166699,10 @@
           {
             "name": "azurerm_palo_alto_next_generation_firewall_virtual_hub_panorama",
             "addr": "/network_profile/0/network_virtual_appliance_id"
+          },
+          {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_hub_strata_cloud_manager",
+            "addr": "/network_profile/0/network_virtual_appliance_id"
           }
         ]
       },
@@ -166843,6 +166715,10 @@
           },
           {
             "name": "azurerm_palo_alto_next_generation_firewall_virtual_hub_panorama",
+            "addr": "/network_profile/0/trusted_subnet_id"
+          },
+          {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_hub_strata_cloud_manager",
             "addr": "/network_profile/0/trusted_subnet_id"
           }
         ]
@@ -166857,6 +166733,10 @@
           {
             "name": "azurerm_palo_alto_next_generation_firewall_virtual_hub_panorama",
             "addr": "/network_profile/0/untrusted_subnet_id"
+          },
+          {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_hub_strata_cloud_manager",
+            "addr": "/network_profile/0/untrusted_subnet_id"
           }
         ]
       },
@@ -166869,6 +166749,10 @@
           },
           {
             "name": "azurerm_palo_alto_next_generation_firewall_virtual_hub_panorama",
+            "addr": "/network_profile/0/virtual_hub_id"
+          },
+          {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_hub_strata_cloud_manager",
             "addr": "/network_profile/0/virtual_hub_id"
           }
         ]
@@ -166992,12 +166876,33 @@
             "addr": "/plan_id"
           },
           {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_hub_strata_cloud_manager",
+            "addr": "/plan_id"
+          },
+          {
             "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_local_rulestack",
             "addr": "/plan_id"
           },
           {
             "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_panorama",
             "addr": "/plan_id"
+          },
+          {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_strata_cloud_manager",
+            "addr": "/plan_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/strataCloudManagerConfig/cloudManagerName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_hub_strata_cloud_manager",
+            "addr": "/strata_cloud_manager_tenant_name"
+          },
+          {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_strata_cloud_manager",
+            "addr": "/strata_cloud_manager_tenant_name"
           }
         ]
       },
@@ -167012,6 +166917,12 @@
     "operation": "PUT",
     "properties": [
       {
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
+      },
+      {
         "addr": "location",
         "app_property_maps": [
           {
@@ -167019,7 +166930,15 @@
             "addr": "/location"
           },
           {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_hub_strata_cloud_manager",
+            "addr": "/location"
+          },
+          {
             "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_panorama",
+            "addr": "/location"
+          },
+          {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_strata_cloud_manager",
             "addr": "/location"
           }
         ]
@@ -167083,6 +167002,9 @@
         "addr": "properties/isPanoramaManaged"
       },
       {
+        "addr": "properties/isStrataCloudManaged"
+      },
+      {
         "addr": "properties/marketplaceDetails/offerId",
         "app_property_maps": [
           {
@@ -167094,11 +167016,19 @@
             "addr": "/marketplace_offer_id"
           },
           {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_hub_strata_cloud_manager",
+            "addr": "/marketplace_offer_id"
+          },
+          {
             "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_local_rulestack",
             "addr": "/marketplace_offer_id"
           },
           {
             "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_panorama",
+            "addr": "/marketplace_offer_id"
+          },
+          {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_strata_cloud_manager",
             "addr": "/marketplace_offer_id"
           }
         ]
@@ -167137,6 +167067,10 @@
           {
             "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_panorama",
             "addr": "/network_profile/0/vnet_configuration/0/ip_of_trust_for_user_defined_routes"
+          },
+          {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_strata_cloud_manager",
+            "addr": "/network_profile/0/vnet_configuration/0/ip_of_trust_for_user_defined_routes"
           }
         ]
       },
@@ -167153,6 +167087,10 @@
           {
             "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_panorama",
             "addr": "/network_profile/0/vnet_configuration/0/trusted_subnet_id"
+          },
+          {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_strata_cloud_manager",
+            "addr": "/network_profile/0/vnet_configuration/0/trusted_subnet_id"
           }
         ]
       },
@@ -167165,6 +167103,10 @@
           },
           {
             "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_panorama",
+            "addr": "/network_profile/0/vnet_configuration/0/untrusted_subnet_id"
+          },
+          {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_strata_cloud_manager",
             "addr": "/network_profile/0/vnet_configuration/0/untrusted_subnet_id"
           }
         ]
@@ -167179,6 +167121,10 @@
           {
             "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_panorama",
             "addr": "/network_profile/0/vnet_configuration/0/virtual_network_id"
+          },
+          {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_strata_cloud_manager",
+            "addr": "/network_profile/0/vnet_configuration/0/virtual_network_id"
           }
         ]
       },
@@ -167191,6 +167137,10 @@
           },
           {
             "name": "azurerm_palo_alto_next_generation_firewall_virtual_hub_panorama",
+            "addr": "/network_profile/0/ip_of_trust_for_user_defined_routes"
+          },
+          {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_hub_strata_cloud_manager",
             "addr": "/network_profile/0/ip_of_trust_for_user_defined_routes"
           }
         ]
@@ -167208,6 +167158,10 @@
           {
             "name": "azurerm_palo_alto_next_generation_firewall_virtual_hub_panorama",
             "addr": "/network_profile/0/network_virtual_appliance_id"
+          },
+          {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_hub_strata_cloud_manager",
+            "addr": "/network_profile/0/network_virtual_appliance_id"
           }
         ]
       },
@@ -167220,6 +167174,10 @@
           },
           {
             "name": "azurerm_palo_alto_next_generation_firewall_virtual_hub_panorama",
+            "addr": "/network_profile/0/trusted_subnet_id"
+          },
+          {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_hub_strata_cloud_manager",
             "addr": "/network_profile/0/trusted_subnet_id"
           }
         ]
@@ -167234,6 +167192,10 @@
           {
             "name": "azurerm_palo_alto_next_generation_firewall_virtual_hub_panorama",
             "addr": "/network_profile/0/untrusted_subnet_id"
+          },
+          {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_hub_strata_cloud_manager",
+            "addr": "/network_profile/0/untrusted_subnet_id"
           }
         ]
       },
@@ -167246,6 +167208,10 @@
           },
           {
             "name": "azurerm_palo_alto_next_generation_firewall_virtual_hub_panorama",
+            "addr": "/network_profile/0/virtual_hub_id"
+          },
+          {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_hub_strata_cloud_manager",
             "addr": "/network_profile/0/virtual_hub_id"
           }
         ]
@@ -167369,12 +167335,33 @@
             "addr": "/plan_id"
           },
           {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_hub_strata_cloud_manager",
+            "addr": "/plan_id"
+          },
+          {
             "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_local_rulestack",
             "addr": "/plan_id"
           },
           {
             "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_panorama",
             "addr": "/plan_id"
+          },
+          {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_strata_cloud_manager",
+            "addr": "/plan_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/strataCloudManagerConfig/cloudManagerName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_hub_strata_cloud_manager",
+            "addr": "/strata_cloud_manager_tenant_name"
+          },
+          {
+            "name": "azurerm_palo_alto_next_generation_firewall_virtual_network_strata_cloud_manager",
+            "addr": "/strata_cloud_manager_tenant_name"
           }
         ]
       },
