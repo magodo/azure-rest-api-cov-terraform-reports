@@ -19755,6 +19755,125 @@
   },
   {
     "api_version": "2024-10-23",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/RUNTIMEENVIRONMENTS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2024-10-23",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/RUNTIMEENVIRONMENTS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_automation_runtime_environment",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/defaultPackages"
+      },
+      {
+        "addr": "properties/description",
+        "app_property_maps": [
+          {
+            "name": "azurerm_automation_runtime_environment",
+            "addr": "/description"
+          }
+        ]
+      },
+      {
+        "addr": "properties/runtime/language",
+        "app_property_maps": [
+          {
+            "name": "azurerm_automation_runtime_environment",
+            "addr": "/runtime_language"
+          }
+        ]
+      },
+      {
+        "addr": "properties/runtime/version",
+        "app_property_maps": [
+          {
+            "name": "azurerm_automation_runtime_environment",
+            "addr": "/runtime_version"
+          }
+        ]
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-10-23",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/RUNTIMEENVIRONMENTS/{}",
+    "operation": "PATCH",
+    "properties": [
+      {
+        "addr": "properties/defaultPackages"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-10-23",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/RUNTIMEENVIRONMENTS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_automation_runtime_environment",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/defaultPackages"
+      },
+      {
+        "addr": "properties/description",
+        "app_property_maps": [
+          {
+            "name": "azurerm_automation_runtime_environment",
+            "addr": "/description"
+          }
+        ]
+      },
+      {
+        "addr": "properties/runtime/language",
+        "app_property_maps": [
+          {
+            "name": "azurerm_automation_runtime_environment",
+            "addr": "/runtime_language"
+          }
+        ]
+      },
+      {
+        "addr": "properties/runtime/version",
+        "app_property_maps": [
+          {
+            "name": "azurerm_automation_runtime_environment",
+            "addr": "/runtime_version"
+          }
+        ]
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/SCHEDULES/{}",
     "operation": "DELETE"
   },
@@ -49894,6 +50013,24 @@
         "addr": "properties/networkProfile/serviceCidrs"
       },
       {
+        "addr": "properties/nodeProvisioningProfile/defaultNodePools",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster",
+            "addr": "/node_provisioning_profile/0/default_node_pools"
+          }
+        ]
+      },
+      {
+        "addr": "properties/nodeProvisioningProfile/mode",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster",
+            "addr": "/node_provisioning_profile/0/mode"
+          }
+        ]
+      },
+      {
         "addr": "properties/nodeResourceGroup",
         "app_property_maps": [
           {
@@ -51009,6 +51146,24 @@
       },
       {
         "addr": "properties/networkProfile/serviceCidrs"
+      },
+      {
+        "addr": "properties/nodeProvisioningProfile/defaultNodePools",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster",
+            "addr": "/node_provisioning_profile/0/default_node_pools"
+          }
+        ]
+      },
+      {
+        "addr": "properties/nodeProvisioningProfile/mode",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster",
+            "addr": "/node_provisioning_profile/0/mode"
+          }
+        ]
       },
       {
         "addr": "properties/nodeResourceGroup",
@@ -93562,983 +93717,6 @@
     "api_version": "2023-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MAPS/ACCOUNTS/{}/LISTKEYS",
     "operation": "POST"
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/MOBILENETWORKS/{}",
-    "operation": "DELETE"
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/MOBILENETWORKS/{}",
-    "operation": "GET",
-    "properties": [
-      {
-        "addr": "location"
-      },
-      {
-        "addr": "properties/publicLandMobileNetworkIdentifier/mcc"
-      },
-      {
-        "addr": "properties/publicLandMobileNetworkIdentifier/mnc"
-      },
-      {
-        "addr": "properties/serviceKey"
-      },
-      {
-        "addr": "tags"
-      }
-    ]
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/MOBILENETWORKS/{}",
-    "operation": "PUT",
-    "properties": [
-      {
-        "addr": "location"
-      },
-      {
-        "addr": "properties/publicLandMobileNetworkIdentifier/mcc"
-      },
-      {
-        "addr": "properties/publicLandMobileNetworkIdentifier/mnc"
-      },
-      {
-        "addr": "properties/serviceKey"
-      },
-      {
-        "addr": "tags"
-      }
-    ]
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/MOBILENETWORKS/{}/DATANETWORKS/{}",
-    "operation": "DELETE"
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/MOBILENETWORKS/{}/DATANETWORKS/{}",
-    "operation": "GET",
-    "properties": [
-      {
-        "addr": "location"
-      },
-      {
-        "addr": "properties/description"
-      },
-      {
-        "addr": "tags"
-      }
-    ]
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/MOBILENETWORKS/{}/DATANETWORKS/{}",
-    "operation": "PUT",
-    "properties": [
-      {
-        "addr": "location"
-      },
-      {
-        "addr": "properties/description"
-      },
-      {
-        "addr": "tags"
-      }
-    ]
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/MOBILENETWORKS/{}/SERVICES/{}",
-    "operation": "DELETE"
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/MOBILENETWORKS/{}/SERVICES/{}",
-    "operation": "GET",
-    "properties": [
-      {
-        "addr": "location"
-      },
-      {
-        "addr": "properties/pccRules/ruleName"
-      },
-      {
-        "addr": "properties/pccRules/rulePrecedence"
-      },
-      {
-        "addr": "properties/pccRules/ruleQosPolicy/5qi"
-      },
-      {
-        "addr": "properties/pccRules/ruleQosPolicy/allocationAndRetentionPriorityLevel"
-      },
-      {
-        "addr": "properties/pccRules/ruleQosPolicy/guaranteedBitRate/downlink"
-      },
-      {
-        "addr": "properties/pccRules/ruleQosPolicy/guaranteedBitRate/uplink"
-      },
-      {
-        "addr": "properties/pccRules/ruleQosPolicy/maximumBitRate/downlink"
-      },
-      {
-        "addr": "properties/pccRules/ruleQosPolicy/maximumBitRate/uplink"
-      },
-      {
-        "addr": "properties/pccRules/ruleQosPolicy/preemptionCapability"
-      },
-      {
-        "addr": "properties/pccRules/ruleQosPolicy/preemptionVulnerability"
-      },
-      {
-        "addr": "properties/pccRules/serviceDataFlowTemplates/direction"
-      },
-      {
-        "addr": "properties/pccRules/serviceDataFlowTemplates/ports"
-      },
-      {
-        "addr": "properties/pccRules/serviceDataFlowTemplates/protocol"
-      },
-      {
-        "addr": "properties/pccRules/serviceDataFlowTemplates/remoteIpList"
-      },
-      {
-        "addr": "properties/pccRules/serviceDataFlowTemplates/templateName"
-      },
-      {
-        "addr": "properties/pccRules/trafficControl"
-      },
-      {
-        "addr": "properties/servicePrecedence"
-      },
-      {
-        "addr": "properties/serviceQosPolicy/5qi"
-      },
-      {
-        "addr": "properties/serviceQosPolicy/allocationAndRetentionPriorityLevel"
-      },
-      {
-        "addr": "properties/serviceQosPolicy/maximumBitRate/downlink"
-      },
-      {
-        "addr": "properties/serviceQosPolicy/maximumBitRate/uplink"
-      },
-      {
-        "addr": "properties/serviceQosPolicy/preemptionCapability"
-      },
-      {
-        "addr": "properties/serviceQosPolicy/preemptionVulnerability"
-      },
-      {
-        "addr": "tags"
-      }
-    ]
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/MOBILENETWORKS/{}/SERVICES/{}",
-    "operation": "PUT",
-    "properties": [
-      {
-        "addr": "location"
-      },
-      {
-        "addr": "properties/pccRules/ruleName"
-      },
-      {
-        "addr": "properties/pccRules/rulePrecedence"
-      },
-      {
-        "addr": "properties/pccRules/ruleQosPolicy/5qi"
-      },
-      {
-        "addr": "properties/pccRules/ruleQosPolicy/allocationAndRetentionPriorityLevel"
-      },
-      {
-        "addr": "properties/pccRules/ruleQosPolicy/guaranteedBitRate/downlink"
-      },
-      {
-        "addr": "properties/pccRules/ruleQosPolicy/guaranteedBitRate/uplink"
-      },
-      {
-        "addr": "properties/pccRules/ruleQosPolicy/maximumBitRate/downlink"
-      },
-      {
-        "addr": "properties/pccRules/ruleQosPolicy/maximumBitRate/uplink"
-      },
-      {
-        "addr": "properties/pccRules/ruleQosPolicy/preemptionCapability"
-      },
-      {
-        "addr": "properties/pccRules/ruleQosPolicy/preemptionVulnerability"
-      },
-      {
-        "addr": "properties/pccRules/serviceDataFlowTemplates/direction"
-      },
-      {
-        "addr": "properties/pccRules/serviceDataFlowTemplates/ports"
-      },
-      {
-        "addr": "properties/pccRules/serviceDataFlowTemplates/protocol"
-      },
-      {
-        "addr": "properties/pccRules/serviceDataFlowTemplates/remoteIpList"
-      },
-      {
-        "addr": "properties/pccRules/serviceDataFlowTemplates/templateName"
-      },
-      {
-        "addr": "properties/pccRules/trafficControl"
-      },
-      {
-        "addr": "properties/servicePrecedence"
-      },
-      {
-        "addr": "properties/serviceQosPolicy/5qi"
-      },
-      {
-        "addr": "properties/serviceQosPolicy/allocationAndRetentionPriorityLevel"
-      },
-      {
-        "addr": "properties/serviceQosPolicy/maximumBitRate/downlink"
-      },
-      {
-        "addr": "properties/serviceQosPolicy/maximumBitRate/uplink"
-      },
-      {
-        "addr": "properties/serviceQosPolicy/preemptionCapability"
-      },
-      {
-        "addr": "properties/serviceQosPolicy/preemptionVulnerability"
-      },
-      {
-        "addr": "tags"
-      }
-    ]
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/MOBILENETWORKS/{}/SIMPOLICIES/{}",
-    "operation": "DELETE"
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/MOBILENETWORKS/{}/SIMPOLICIES/{}",
-    "operation": "GET",
-    "properties": [
-      {
-        "addr": "location"
-      },
-      {
-        "addr": "properties/defaultSlice/id"
-      },
-      {
-        "addr": "properties/registrationTimer"
-      },
-      {
-        "addr": "properties/rfspIndex"
-      },
-      {
-        "addr": "properties/sliceConfigurations/dataNetworkConfigurations/5qi"
-      },
-      {
-        "addr": "properties/sliceConfigurations/dataNetworkConfigurations/additionalAllowedSessionTypes"
-      },
-      {
-        "addr": "properties/sliceConfigurations/dataNetworkConfigurations/allocationAndRetentionPriorityLevel"
-      },
-      {
-        "addr": "properties/sliceConfigurations/dataNetworkConfigurations/allowedServices/id"
-      },
-      {
-        "addr": "properties/sliceConfigurations/dataNetworkConfigurations/dataNetwork/id"
-      },
-      {
-        "addr": "properties/sliceConfigurations/dataNetworkConfigurations/defaultSessionType"
-      },
-      {
-        "addr": "properties/sliceConfigurations/dataNetworkConfigurations/maximumNumberOfBufferedPackets"
-      },
-      {
-        "addr": "properties/sliceConfigurations/dataNetworkConfigurations/preemptionCapability"
-      },
-      {
-        "addr": "properties/sliceConfigurations/dataNetworkConfigurations/preemptionVulnerability"
-      },
-      {
-        "addr": "properties/sliceConfigurations/dataNetworkConfigurations/sessionAmbr/downlink"
-      },
-      {
-        "addr": "properties/sliceConfigurations/dataNetworkConfigurations/sessionAmbr/uplink"
-      },
-      {
-        "addr": "properties/sliceConfigurations/defaultDataNetwork/id"
-      },
-      {
-        "addr": "properties/sliceConfigurations/slice/id"
-      },
-      {
-        "addr": "properties/ueAmbr/downlink"
-      },
-      {
-        "addr": "properties/ueAmbr/uplink"
-      },
-      {
-        "addr": "tags"
-      }
-    ]
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/MOBILENETWORKS/{}/SIMPOLICIES/{}",
-    "operation": "PUT",
-    "properties": [
-      {
-        "addr": "location"
-      },
-      {
-        "addr": "properties/defaultSlice/id"
-      },
-      {
-        "addr": "properties/registrationTimer"
-      },
-      {
-        "addr": "properties/rfspIndex"
-      },
-      {
-        "addr": "properties/sliceConfigurations/dataNetworkConfigurations/5qi"
-      },
-      {
-        "addr": "properties/sliceConfigurations/dataNetworkConfigurations/additionalAllowedSessionTypes"
-      },
-      {
-        "addr": "properties/sliceConfigurations/dataNetworkConfigurations/allocationAndRetentionPriorityLevel"
-      },
-      {
-        "addr": "properties/sliceConfigurations/dataNetworkConfigurations/allowedServices/id"
-      },
-      {
-        "addr": "properties/sliceConfigurations/dataNetworkConfigurations/dataNetwork/id"
-      },
-      {
-        "addr": "properties/sliceConfigurations/dataNetworkConfigurations/defaultSessionType"
-      },
-      {
-        "addr": "properties/sliceConfigurations/dataNetworkConfigurations/maximumNumberOfBufferedPackets"
-      },
-      {
-        "addr": "properties/sliceConfigurations/dataNetworkConfigurations/preemptionCapability"
-      },
-      {
-        "addr": "properties/sliceConfigurations/dataNetworkConfigurations/preemptionVulnerability"
-      },
-      {
-        "addr": "properties/sliceConfigurations/dataNetworkConfigurations/sessionAmbr/downlink"
-      },
-      {
-        "addr": "properties/sliceConfigurations/dataNetworkConfigurations/sessionAmbr/uplink"
-      },
-      {
-        "addr": "properties/sliceConfigurations/defaultDataNetwork/id"
-      },
-      {
-        "addr": "properties/sliceConfigurations/slice/id"
-      },
-      {
-        "addr": "properties/ueAmbr/downlink"
-      },
-      {
-        "addr": "properties/ueAmbr/uplink"
-      },
-      {
-        "addr": "tags"
-      }
-    ]
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/MOBILENETWORKS/{}/SITES/{}",
-    "operation": "DELETE"
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/MOBILENETWORKS/{}/SITES/{}",
-    "operation": "GET",
-    "properties": [
-      {
-        "addr": "location"
-      },
-      {
-        "addr": "properties"
-      },
-      {
-        "addr": "properties/networkFunctions/id"
-      },
-      {
-        "addr": "tags"
-      }
-    ]
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/MOBILENETWORKS/{}/SITES/{}",
-    "operation": "PUT",
-    "properties": [
-      {
-        "addr": "location"
-      },
-      {
-        "addr": "properties"
-      },
-      {
-        "addr": "properties/networkFunctions/id"
-      },
-      {
-        "addr": "tags"
-      }
-    ]
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/MOBILENETWORKS/{}/SLICES/{}",
-    "operation": "DELETE"
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/MOBILENETWORKS/{}/SLICES/{}",
-    "operation": "GET",
-    "properties": [
-      {
-        "addr": "location"
-      },
-      {
-        "addr": "properties/description"
-      },
-      {
-        "addr": "properties/snssai/sd"
-      },
-      {
-        "addr": "properties/snssai/sst"
-      },
-      {
-        "addr": "tags"
-      }
-    ]
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/MOBILENETWORKS/{}/SLICES/{}",
-    "operation": "PUT",
-    "properties": [
-      {
-        "addr": "location"
-      },
-      {
-        "addr": "properties/description"
-      },
-      {
-        "addr": "properties/snssai/sd"
-      },
-      {
-        "addr": "properties/snssai/sst"
-      },
-      {
-        "addr": "tags"
-      }
-    ]
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/PACKETCORECONTROLPLANES/{}",
-    "operation": "DELETE"
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/PACKETCORECONTROLPLANES/{}",
-    "operation": "GET",
-    "properties": [
-      {
-        "addr": "identity/type"
-      },
-      {
-        "addr": "identity/userAssignedIdentities"
-      },
-      {
-        "addr": "location"
-      },
-      {
-        "addr": "name"
-      },
-      {
-        "addr": "properties/controlPlaneAccessInterface/ipv4Address"
-      },
-      {
-        "addr": "properties/controlPlaneAccessInterface/ipv4Gateway"
-      },
-      {
-        "addr": "properties/controlPlaneAccessInterface/ipv4Subnet"
-      },
-      {
-        "addr": "properties/controlPlaneAccessInterface/name"
-      },
-      {
-        "addr": "properties/coreNetworkTechnology"
-      },
-      {
-        "addr": "properties/interopSettings"
-      },
-      {
-        "addr": "properties/localDiagnosticsAccess/authenticationType"
-      },
-      {
-        "addr": "properties/localDiagnosticsAccess/httpsServerCertificate/certificateUrl"
-      },
-      {
-        "addr": "properties/platform/azureStackEdgeDevice/id"
-      },
-      {
-        "addr": "properties/platform/azureStackHciCluster/id"
-      },
-      {
-        "addr": "properties/platform/connectedCluster/id"
-      },
-      {
-        "addr": "properties/platform/customLocation/id"
-      },
-      {
-        "addr": "properties/platform/type"
-      },
-      {
-        "addr": "properties/sites/id"
-      },
-      {
-        "addr": "properties/sku"
-      },
-      {
-        "addr": "properties/ueMtu"
-      },
-      {
-        "addr": "properties/version"
-      },
-      {
-        "addr": "tags"
-      }
-    ]
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/PACKETCORECONTROLPLANES/{}",
-    "operation": "PUT",
-    "properties": [
-      {
-        "addr": "identity/type"
-      },
-      {
-        "addr": "identity/userAssignedIdentities"
-      },
-      {
-        "addr": "location"
-      },
-      {
-        "addr": "name"
-      },
-      {
-        "addr": "properties/controlPlaneAccessInterface/ipv4Address"
-      },
-      {
-        "addr": "properties/controlPlaneAccessInterface/ipv4Gateway"
-      },
-      {
-        "addr": "properties/controlPlaneAccessInterface/ipv4Subnet"
-      },
-      {
-        "addr": "properties/controlPlaneAccessInterface/name"
-      },
-      {
-        "addr": "properties/coreNetworkTechnology"
-      },
-      {
-        "addr": "properties/interopSettings"
-      },
-      {
-        "addr": "properties/localDiagnosticsAccess/authenticationType"
-      },
-      {
-        "addr": "properties/localDiagnosticsAccess/httpsServerCertificate/certificateUrl"
-      },
-      {
-        "addr": "properties/platform/azureStackEdgeDevice/id"
-      },
-      {
-        "addr": "properties/platform/azureStackHciCluster/id"
-      },
-      {
-        "addr": "properties/platform/connectedCluster/id"
-      },
-      {
-        "addr": "properties/platform/customLocation/id"
-      },
-      {
-        "addr": "properties/platform/type"
-      },
-      {
-        "addr": "properties/sites/id"
-      },
-      {
-        "addr": "properties/sku"
-      },
-      {
-        "addr": "properties/ueMtu"
-      },
-      {
-        "addr": "properties/version"
-      },
-      {
-        "addr": "tags"
-      }
-    ]
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/PACKETCORECONTROLPLANES/{}/PACKETCOREDATAPLANES/{}",
-    "operation": "DELETE"
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/PACKETCORECONTROLPLANES/{}/PACKETCOREDATAPLANES/{}",
-    "operation": "GET",
-    "properties": [
-      {
-        "addr": "location"
-      },
-      {
-        "addr": "properties/userPlaneAccessInterface/ipv4Address"
-      },
-      {
-        "addr": "properties/userPlaneAccessInterface/ipv4Gateway"
-      },
-      {
-        "addr": "properties/userPlaneAccessInterface/ipv4Subnet"
-      },
-      {
-        "addr": "properties/userPlaneAccessInterface/name"
-      },
-      {
-        "addr": "tags"
-      }
-    ]
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/PACKETCORECONTROLPLANES/{}/PACKETCOREDATAPLANES/{}",
-    "operation": "PUT",
-    "properties": [
-      {
-        "addr": "location"
-      },
-      {
-        "addr": "properties/userPlaneAccessInterface/ipv4Address"
-      },
-      {
-        "addr": "properties/userPlaneAccessInterface/ipv4Gateway"
-      },
-      {
-        "addr": "properties/userPlaneAccessInterface/ipv4Subnet"
-      },
-      {
-        "addr": "properties/userPlaneAccessInterface/name"
-      },
-      {
-        "addr": "tags"
-      }
-    ]
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/PACKETCORECONTROLPLANES/{}/PACKETCOREDATAPLANES/{}/ATTACHEDDATANETWORKS/{}",
-    "operation": "DELETE"
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/PACKETCORECONTROLPLANES/{}/PACKETCOREDATAPLANES/{}/ATTACHEDDATANETWORKS/{}",
-    "operation": "GET",
-    "properties": [
-      {
-        "addr": "location"
-      },
-      {
-        "addr": "properties/dnsAddresses"
-      },
-      {
-        "addr": "properties/naptConfiguration/enabled"
-      },
-      {
-        "addr": "properties/naptConfiguration/pinholeLimits"
-      },
-      {
-        "addr": "properties/naptConfiguration/pinholeTimeouts/icmp"
-      },
-      {
-        "addr": "properties/naptConfiguration/pinholeTimeouts/tcp"
-      },
-      {
-        "addr": "properties/naptConfiguration/pinholeTimeouts/udp"
-      },
-      {
-        "addr": "properties/naptConfiguration/portRange/maxPort"
-      },
-      {
-        "addr": "properties/naptConfiguration/portRange/minPort"
-      },
-      {
-        "addr": "properties/naptConfiguration/portReuseHoldTime/tcp"
-      },
-      {
-        "addr": "properties/naptConfiguration/portReuseHoldTime/udp"
-      },
-      {
-        "addr": "properties/userEquipmentAddressPoolPrefix"
-      },
-      {
-        "addr": "properties/userEquipmentStaticAddressPoolPrefix"
-      },
-      {
-        "addr": "properties/userPlaneDataInterface/ipv4Address"
-      },
-      {
-        "addr": "properties/userPlaneDataInterface/ipv4Gateway"
-      },
-      {
-        "addr": "properties/userPlaneDataInterface/ipv4Subnet"
-      },
-      {
-        "addr": "properties/userPlaneDataInterface/name"
-      },
-      {
-        "addr": "tags"
-      }
-    ]
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/PACKETCORECONTROLPLANES/{}/PACKETCOREDATAPLANES/{}/ATTACHEDDATANETWORKS/{}",
-    "operation": "PUT",
-    "properties": [
-      {
-        "addr": "location"
-      },
-      {
-        "addr": "properties/dnsAddresses"
-      },
-      {
-        "addr": "properties/naptConfiguration/enabled"
-      },
-      {
-        "addr": "properties/naptConfiguration/pinholeLimits"
-      },
-      {
-        "addr": "properties/naptConfiguration/pinholeTimeouts/icmp"
-      },
-      {
-        "addr": "properties/naptConfiguration/pinholeTimeouts/tcp"
-      },
-      {
-        "addr": "properties/naptConfiguration/pinholeTimeouts/udp"
-      },
-      {
-        "addr": "properties/naptConfiguration/portRange/maxPort"
-      },
-      {
-        "addr": "properties/naptConfiguration/portRange/minPort"
-      },
-      {
-        "addr": "properties/naptConfiguration/portReuseHoldTime/tcp"
-      },
-      {
-        "addr": "properties/naptConfiguration/portReuseHoldTime/udp"
-      },
-      {
-        "addr": "properties/userEquipmentAddressPoolPrefix"
-      },
-      {
-        "addr": "properties/userEquipmentStaticAddressPoolPrefix"
-      },
-      {
-        "addr": "properties/userPlaneDataInterface/ipv4Address"
-      },
-      {
-        "addr": "properties/userPlaneDataInterface/ipv4Gateway"
-      },
-      {
-        "addr": "properties/userPlaneDataInterface/ipv4Subnet"
-      },
-      {
-        "addr": "properties/userPlaneDataInterface/name"
-      },
-      {
-        "addr": "tags"
-      }
-    ]
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/SIMGROUPS/{}",
-    "operation": "DELETE"
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/SIMGROUPS/{}",
-    "operation": "GET",
-    "properties": [
-      {
-        "addr": "identity/principalId"
-      },
-      {
-        "addr": "identity/tenantId"
-      },
-      {
-        "addr": "identity/type"
-      },
-      {
-        "addr": "identity/userAssignedIdentities"
-      },
-      {
-        "addr": "location"
-      },
-      {
-        "addr": "properties/encryptionKey/keyUrl"
-      },
-      {
-        "addr": "properties/mobileNetwork/id"
-      },
-      {
-        "addr": "tags"
-      }
-    ]
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/SIMGROUPS/{}",
-    "operation": "PUT",
-    "properties": [
-      {
-        "addr": "identity/principalId"
-      },
-      {
-        "addr": "identity/tenantId"
-      },
-      {
-        "addr": "identity/type"
-      },
-      {
-        "addr": "identity/userAssignedIdentities"
-      },
-      {
-        "addr": "location"
-      },
-      {
-        "addr": "properties/encryptionKey/keyUrl"
-      },
-      {
-        "addr": "properties/mobileNetwork/id"
-      },
-      {
-        "addr": "tags"
-      }
-    ]
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/SIMGROUPS/{}/SIMS/{}",
-    "operation": "DELETE"
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/SIMGROUPS/{}/SIMS/{}",
-    "operation": "GET",
-    "properties": [
-      {
-        "addr": "properties/authenticationKey"
-      },
-      {
-        "addr": "properties/deviceType"
-      },
-      {
-        "addr": "properties/integratedCircuitCardIdentifier"
-      },
-      {
-        "addr": "properties/internationalMobileSubscriberIdentity"
-      },
-      {
-        "addr": "properties/operatorKeyCode"
-      },
-      {
-        "addr": "properties/simPolicy/id"
-      },
-      {
-        "addr": "properties/simState"
-      },
-      {
-        "addr": "properties/staticIpConfiguration/attachedDataNetwork/id"
-      },
-      {
-        "addr": "properties/staticIpConfiguration/slice/id"
-      },
-      {
-        "addr": "properties/staticIpConfiguration/staticIp/ipv4Address"
-      },
-      {
-        "addr": "properties/vendorKeyFingerprint"
-      },
-      {
-        "addr": "properties/vendorName"
-      }
-    ]
-  },
-  {
-    "api_version": "2022-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.MOBILENETWORK/SIMGROUPS/{}/SIMS/{}",
-    "operation": "PUT",
-    "properties": [
-      {
-        "addr": "properties/authenticationKey"
-      },
-      {
-        "addr": "properties/deviceType"
-      },
-      {
-        "addr": "properties/integratedCircuitCardIdentifier"
-      },
-      {
-        "addr": "properties/internationalMobileSubscriberIdentity"
-      },
-      {
-        "addr": "properties/operatorKeyCode"
-      },
-      {
-        "addr": "properties/simPolicy/id"
-      },
-      {
-        "addr": "properties/simState"
-      },
-      {
-        "addr": "properties/staticIpConfiguration/attachedDataNetwork/id"
-      },
-      {
-        "addr": "properties/staticIpConfiguration/slice/id"
-      },
-      {
-        "addr": "properties/staticIpConfiguration/staticIp/ipv4Address"
-      },
-      {
-        "addr": "properties/vendorKeyFingerprint"
-      },
-      {
-        "addr": "properties/vendorName"
-      }
-    ]
   },
   {
     "api_version": "2023-04-03",
