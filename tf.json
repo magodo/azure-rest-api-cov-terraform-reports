@@ -54302,16 +54302,6 @@
   {
     "api_version": "2024-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATABRICKS/WORKSPACES/{}",
-    "operation": "PATCH",
-    "properties": [
-      {
-        "addr": "tags"
-      }
-    ]
-  },
-  {
-    "api_version": "2024-05-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATABRICKS/WORKSPACES/{}",
     "operation": "PUT",
     "properties": [
       {
@@ -89622,6 +89612,12 @@
         "addr": "properties/mappingRuleName"
       },
       {
+        "addr": "properties/provisioningState"
+      },
+      {
+        "addr": "properties/retrievalStartDate"
+      },
+      {
         "addr": "properties/tableName"
       }
     ]
@@ -89652,6 +89648,12 @@
       },
       {
         "addr": "properties/mappingRuleName"
+      },
+      {
+        "addr": "properties/provisioningState"
+      },
+      {
+        "addr": "properties/retrievalStartDate"
       },
       {
         "addr": "properties/sharedAccessPolicyName"
@@ -89777,6 +89779,12 @@
         "addr": "properties/mappingRuleName"
       },
       {
+        "addr": "properties/provisioningState"
+      },
+      {
+        "addr": "properties/retrievalStartDate"
+      },
+      {
         "addr": "properties/tableName"
       }
     ]
@@ -89807,6 +89815,12 @@
       },
       {
         "addr": "properties/mappingRuleName"
+      },
+      {
+        "addr": "properties/provisioningState"
+      },
+      {
+        "addr": "properties/retrievalStartDate"
       },
       {
         "addr": "properties/sharedAccessPolicyName"
@@ -89972,7 +89986,25 @@
         ]
       },
       {
+        "addr": "properties/principalPermissionsAction",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kusto_script",
+            "addr": "/principal_permissions_action"
+          }
+        ]
+      },
+      {
         "addr": "properties/scriptContent"
+      },
+      {
+        "addr": "properties/scriptLevel",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kusto_script",
+            "addr": "/script_level"
+          }
+        ]
       },
       {
         "addr": "properties/scriptUrl",
@@ -90012,7 +90044,25 @@
         ]
       },
       {
+        "addr": "properties/principalPermissionsAction",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kusto_script",
+            "addr": "/principal_permissions_action"
+          }
+        ]
+      },
+      {
         "addr": "properties/scriptContent"
+      },
+      {
+        "addr": "properties/scriptLevel",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kusto_script",
+            "addr": "/script_level"
+          }
+        ]
       },
       {
         "addr": "properties/scriptUrl",
@@ -106150,6 +106200,15 @@
             "addr": "/description"
           }
         ]
+      },
+      {
+        "addr": "properties/routeTableUsageMode",
+        "app_property_maps": [
+          {
+            "name": "azurerm_network_manager_routing_configuration",
+            "addr": "/route_table_usage_mode"
+          }
+        ]
       }
     ]
   },
@@ -106167,6 +106226,15 @@
           {
             "name": "azurerm_network_manager_routing_configuration",
             "addr": "/description"
+          }
+        ]
+      },
+      {
+        "addr": "properties/routeTableUsageMode",
+        "app_property_maps": [
+          {
+            "name": "azurerm_network_manager_routing_configuration",
+            "addr": "/route_table_usage_mode"
           }
         ]
       }
@@ -107221,6 +107289,201 @@
       },
       {
         "addr": "properties/sourcePortRanges"
+      }
+    ]
+  },
+  {
+    "api_version": "2025-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKSECURITYPERIMETERS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2025-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKSECURITYPERIMETERS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_network_security_perimeter",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2025-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKSECURITYPERIMETERS/{}",
+    "operation": "PATCH",
+    "properties": [
+      {
+        "addr": "id"
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2025-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKSECURITYPERIMETERS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_network_security_perimeter",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2025-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKSECURITYPERIMETERS/{}/PROFILES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2025-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKSECURITYPERIMETERS/{}/PROFILES/{}/ACCESSRULES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2025-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKSECURITYPERIMETERS/{}/PROFILES/{}/ACCESSRULES/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/addressPrefixes"
+      },
+      {
+        "addr": "properties/direction",
+        "app_property_maps": [
+          {
+            "name": "azurerm_network_security_perimeter_access_rule",
+            "addr": "/direction"
+          }
+        ]
+      },
+      {
+        "addr": "properties/fullyQualifiedDomainNames"
+      },
+      {
+        "addr": "properties/serviceTags"
+      },
+      {
+        "addr": "properties/subscriptions/id"
+      }
+    ]
+  },
+  {
+    "api_version": "2025-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKSECURITYPERIMETERS/{}/PROFILES/{}/ACCESSRULES/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "properties/addressPrefixes"
+      },
+      {
+        "addr": "properties/direction",
+        "app_property_maps": [
+          {
+            "name": "azurerm_network_security_perimeter_access_rule",
+            "addr": "/direction"
+          }
+        ]
+      },
+      {
+        "addr": "properties/fullyQualifiedDomainNames"
+      },
+      {
+        "addr": "properties/serviceTags"
+      },
+      {
+        "addr": "properties/subscriptions/id"
+      }
+    ]
+  },
+  {
+    "api_version": "2025-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKSECURITYPERIMETERS/{}/RESOURCEASSOCIATIONS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2025-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKSECURITYPERIMETERS/{}/RESOURCEASSOCIATIONS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/accessMode",
+        "app_property_maps": [
+          {
+            "name": "azurerm_network_security_perimeter_association",
+            "addr": "/access_mode"
+          }
+        ]
+      },
+      {
+        "addr": "properties/privateLinkResource/id",
+        "app_property_maps": [
+          {
+            "name": "azurerm_network_security_perimeter_association",
+            "addr": "/resource_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/profile/id",
+        "app_property_maps": [
+          {
+            "name": "azurerm_network_security_perimeter_association",
+            "addr": "/network_security_perimeter_profile_id"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2025-01-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/NETWORKSECURITYPERIMETERS/{}/RESOURCEASSOCIATIONS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "properties/accessMode",
+        "app_property_maps": [
+          {
+            "name": "azurerm_network_security_perimeter_association",
+            "addr": "/access_mode"
+          }
+        ]
+      },
+      {
+        "addr": "properties/privateLinkResource/id",
+        "app_property_maps": [
+          {
+            "name": "azurerm_network_security_perimeter_association",
+            "addr": "/resource_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/profile/id",
+        "app_property_maps": [
+          {
+            "name": "azurerm_network_security_perimeter_association",
+            "addr": "/network_security_perimeter_profile_id"
+          }
+        ]
       }
     ]
   },
@@ -120743,6 +121006,111 @@
         ]
       },
       {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/snapshotRetentionInDays",
+        "app_property_maps": [
+          {
+            "name": "azurerm_backup_policy_file_share",
+            "addr": "/snapshot_retention_in_days"
+          }
+        ]
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/dailySchedule/retentionDuration/count",
+        "app_property_maps": [
+          {
+            "name": "azurerm_backup_policy_file_share",
+            "addr": "/retention_daily/0/count"
+          }
+        ]
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/dailySchedule/retentionDuration/durationType"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/dailySchedule/retentionTimes"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/monthlySchedule/retentionDuration/count",
+        "app_property_maps": [
+          {
+            "name": "azurerm_backup_policy_file_share",
+            "addr": "/retention_monthly/0/count"
+          }
+        ]
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/monthlySchedule/retentionDuration/durationType"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleDaily/daysOfTheMonth/date"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleDaily/daysOfTheMonth/isLast"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleFormatType"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleWeekly/daysOfTheWeek"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleWeekly/weeksOfTheMonth"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/monthlySchedule/retentionTimes"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/weeklySchedule/daysOfTheWeek"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/weeklySchedule/retentionDuration/count",
+        "app_property_maps": [
+          {
+            "name": "azurerm_backup_policy_file_share",
+            "addr": "/retention_weekly/0/count"
+          }
+        ]
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/weeklySchedule/retentionDuration/durationType"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/weeklySchedule/retentionTimes"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/yearlySchedule/monthsOfYear"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/yearlySchedule/retentionDuration/count",
+        "app_property_maps": [
+          {
+            "name": "azurerm_backup_policy_file_share",
+            "addr": "/retention_yearly/0/count"
+          }
+        ]
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/yearlySchedule/retentionDuration/durationType"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleDaily/daysOfTheMonth/date"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleDaily/daysOfTheMonth/isLast"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleFormatType"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleWeekly/daysOfTheWeek"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleWeekly/weeksOfTheMonth"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/yearlySchedule/retentionTimes"
+      },
+      {
         "addr": "properties{AzureStorage}/workLoadType"
       },
       {
@@ -121135,6 +121503,111 @@
             "addr": "/timezone"
           }
         ]
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/snapshotRetentionInDays",
+        "app_property_maps": [
+          {
+            "name": "azurerm_backup_policy_file_share",
+            "addr": "/snapshot_retention_in_days"
+          }
+        ]
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/dailySchedule/retentionDuration/count",
+        "app_property_maps": [
+          {
+            "name": "azurerm_backup_policy_file_share",
+            "addr": "/retention_daily/0/count"
+          }
+        ]
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/dailySchedule/retentionDuration/durationType"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/dailySchedule/retentionTimes"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/monthlySchedule/retentionDuration/count",
+        "app_property_maps": [
+          {
+            "name": "azurerm_backup_policy_file_share",
+            "addr": "/retention_monthly/0/count"
+          }
+        ]
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/monthlySchedule/retentionDuration/durationType"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleDaily/daysOfTheMonth/date"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleDaily/daysOfTheMonth/isLast"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleFormatType"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleWeekly/daysOfTheWeek"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/monthlySchedule/retentionScheduleWeekly/weeksOfTheMonth"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/monthlySchedule/retentionTimes"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/weeklySchedule/daysOfTheWeek"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/weeklySchedule/retentionDuration/count",
+        "app_property_maps": [
+          {
+            "name": "azurerm_backup_policy_file_share",
+            "addr": "/retention_weekly/0/count"
+          }
+        ]
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/weeklySchedule/retentionDuration/durationType"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/weeklySchedule/retentionTimes"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/yearlySchedule/monthsOfYear"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/yearlySchedule/retentionDuration/count",
+        "app_property_maps": [
+          {
+            "name": "azurerm_backup_policy_file_share",
+            "addr": "/retention_yearly/0/count"
+          }
+        ]
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/yearlySchedule/retentionDuration/durationType"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleDaily/daysOfTheMonth/date"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleDaily/daysOfTheMonth/isLast"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleFormatType"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleWeekly/daysOfTheWeek"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/yearlySchedule/retentionScheduleWeekly/weeksOfTheMonth"
+      },
+      {
+        "addr": "properties{AzureStorage}/vaultRetentionPolicy/vaultRetention{LongTermRetentionPolicy}/yearlySchedule/retentionTimes"
       },
       {
         "addr": "properties{AzureStorage}/workLoadType"
