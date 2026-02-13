@@ -4926,6 +4926,25 @@
   },
   {
     "api_version": "2025-09-01",
+    "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/ORACLE.DATABASE/LOCATIONS/{}/DBSYSTEMDBVERSIONS",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/isLatestForMajorVersion"
+      },
+      {
+        "addr": "properties/supportsPdb"
+      },
+      {
+        "addr": "properties/version"
+      }
+    ]
+  },
+  {
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/ORACLE.DATABASE/LOCATIONS/{}/DBSYSTEMSHAPES",
     "operation": "GET",
     "properties": [
@@ -12596,6 +12615,109 @@
       },
       {
         "addr": "properties/password"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/WORKSPACES/{}/NAMEDVALUES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2024-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/WORKSPACES/{}/NAMEDVALUES/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/displayName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_api_management_workspace_named_value",
+            "addr": "/display_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/keyVault/identityClientId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_api_management_workspace_named_value",
+            "addr": "/value_from_key_vault/0/identity_client_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/keyVault/secretIdentifier",
+        "app_property_maps": [
+          {
+            "name": "azurerm_api_management_workspace_named_value",
+            "addr": "/value_from_key_vault/0/secret_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/secret",
+        "app_property_maps": [
+          {
+            "name": "azurerm_api_management_workspace_named_value",
+            "addr": "/secret"
+          }
+        ]
+      },
+      {
+        "addr": "properties/tags"
+      },
+      {
+        "addr": "properties/value"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-05-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APIMANAGEMENT/SERVICE/{}/WORKSPACES/{}/NAMEDVALUES/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "properties/displayName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_api_management_workspace_named_value",
+            "addr": "/display_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/keyVault/identityClientId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_api_management_workspace_named_value",
+            "addr": "/value_from_key_vault/0/identity_client_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/keyVault/secretIdentifier",
+        "app_property_maps": [
+          {
+            "name": "azurerm_api_management_workspace_named_value",
+            "addr": "/value_from_key_vault/0/secret_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/secret",
+        "app_property_maps": [
+          {
+            "name": "azurerm_api_management_workspace_named_value",
+            "addr": "/secret"
+          }
+        ]
+      },
+      {
+        "addr": "properties/tags"
+      },
+      {
+        "addr": "properties/value"
       }
     ]
   },
@@ -29162,6 +29284,55 @@
           {
             "name": "azurerm_managed_redis",
             "addr": "/default_database/0/port"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2025-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}/ACCESSPOLICYASSIGNMENTS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2025-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}/ACCESSPOLICYASSIGNMENTS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/accessPolicyName"
+      },
+      {
+        "addr": "properties/user/objectId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_redis_access_policy_assignment",
+            "addr": "/object_id"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2025-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}/ACCESSPOLICYASSIGNMENTS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/accessPolicyName"
+      },
+      {
+        "addr": "properties/user/objectId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_redis_access_policy_assignment",
+            "addr": "/object_id"
           }
         ]
       }
@@ -46278,12 +46449,12 @@
     ]
   },
   {
-    "api_version": "2023-05-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERINSTANCE/CONTAINERGROUPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-05-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERINSTANCE/CONTAINERGROUPS/{}",
     "operation": "GET",
     "properties": [
@@ -46659,7 +46830,7 @@
     ]
   },
   {
-    "api_version": "2023-05-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERINSTANCE/CONTAINERGROUPS/{}",
     "operation": "PATCH",
     "properties": [
@@ -46669,7 +46840,7 @@
     ]
   },
   {
-    "api_version": "2023-05-01",
+    "api_version": "2025-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERINSTANCE/CONTAINERGROUPS/{}",
     "operation": "PUT",
     "properties": [
@@ -59383,6 +59554,66 @@
         ]
       },
       {
+        "addr": "properties{AzureSqlMI}/annotations"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/connectVia/referenceName"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/connectVia/type"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/description"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/parameters"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/type"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/typeProperties/connectionString"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/typeProperties/password/secretName"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/typeProperties/password/store/referenceName"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/typeProperties/password/store/type"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/typeProperties/servicePrincipalCredential{AzureKeyVaultSecret}/secretName"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/typeProperties/servicePrincipalCredential{AzureKeyVaultSecret}/store/referenceName"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/typeProperties/servicePrincipalCredential{AzureKeyVaultSecret}/store/type"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/typeProperties/servicePrincipalCredential{SecureString}/value"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/typeProperties/servicePrincipalId"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/typeProperties/servicePrincipalKey{AzureKeyVaultSecret}/secretName"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/typeProperties/servicePrincipalKey{AzureKeyVaultSecret}/store/referenceName"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/typeProperties/servicePrincipalKey{AzureKeyVaultSecret}/store/type"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/typeProperties/servicePrincipalKey{SecureString}/value"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/typeProperties/tenant"
+      },
+      {
         "addr": "properties{AzureTableStorage}"
       },
       {
@@ -60922,6 +61153,66 @@
             "addr": "/tenant_id"
           }
         ]
+      },
+      {
+        "addr": "properties{AzureSqlMI}/annotations"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/connectVia/referenceName"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/connectVia/type"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/description"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/parameters"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/type"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/typeProperties/connectionString"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/typeProperties/password/secretName"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/typeProperties/password/store/referenceName"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/typeProperties/password/store/type"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/typeProperties/servicePrincipalCredential{AzureKeyVaultSecret}/secretName"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/typeProperties/servicePrincipalCredential{AzureKeyVaultSecret}/store/referenceName"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/typeProperties/servicePrincipalCredential{AzureKeyVaultSecret}/store/type"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/typeProperties/servicePrincipalCredential{SecureString}/value"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/typeProperties/servicePrincipalId"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/typeProperties/servicePrincipalKey{AzureKeyVaultSecret}/secretName"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/typeProperties/servicePrincipalKey{AzureKeyVaultSecret}/store/referenceName"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/typeProperties/servicePrincipalKey{AzureKeyVaultSecret}/store/type"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/typeProperties/servicePrincipalKey{SecureString}/value"
+      },
+      {
+        "addr": "properties{AzureSqlMI}/typeProperties/tenant"
       },
       {
         "addr": "properties{AzureTableStorage}"
@@ -65168,6 +65459,24 @@
         "addr": "properties/backup/geoRedundantBackup"
       },
       {
+        "addr": "properties/cluster/clusterSize",
+        "app_property_maps": [
+          {
+            "name": "azurerm_postgresql_flexible_server",
+            "addr": "/cluster/0/size"
+          }
+        ]
+      },
+      {
+        "addr": "properties/cluster/defaultDatabaseName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_postgresql_flexible_server",
+            "addr": "/cluster/0/default_database_name"
+          }
+        ]
+      },
+      {
         "addr": "properties/createMode"
       },
       {
@@ -65362,6 +65671,24 @@
       },
       {
         "addr": "properties/backup/geoRedundantBackup"
+      },
+      {
+        "addr": "properties/cluster/clusterSize",
+        "app_property_maps": [
+          {
+            "name": "azurerm_postgresql_flexible_server",
+            "addr": "/cluster/0/size"
+          }
+        ]
+      },
+      {
+        "addr": "properties/cluster/defaultDatabaseName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_postgresql_flexible_server",
+            "addr": "/cluster/0/default_database_name"
+          }
+        ]
       },
       {
         "addr": "properties/createMode"
@@ -65567,6 +65894,24 @@
       },
       {
         "addr": "properties/backup/geoRedundantBackup"
+      },
+      {
+        "addr": "properties/cluster/clusterSize",
+        "app_property_maps": [
+          {
+            "name": "azurerm_postgresql_flexible_server",
+            "addr": "/cluster/0/size"
+          }
+        ]
+      },
+      {
+        "addr": "properties/cluster/defaultDatabaseName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_postgresql_flexible_server",
+            "addr": "/cluster/0/default_database_name"
+          }
+        ]
       },
       {
         "addr": "properties/createMode"
@@ -131753,7 +132098,13 @@
     "operation": "GET",
     "properties": [
       {
-        "addr": "properties/autoRotationEnabled"
+        "addr": "properties/autoRotationEnabled",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mssql_managed_instance_transparent_data_encryption",
+            "addr": "/auto_rotation_enabled"
+          }
+        ]
       },
       {
         "addr": "properties/serverKeyName"
@@ -131772,7 +132123,13 @@
     "operation": "PUT",
     "properties": [
       {
-        "addr": "properties/autoRotationEnabled"
+        "addr": "properties/autoRotationEnabled",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mssql_managed_instance_transparent_data_encryption",
+            "addr": "/auto_rotation_enabled"
+          }
+        ]
       },
       {
         "addr": "properties/serverKeyName"
@@ -133666,7 +134023,13 @@
     "operation": "GET",
     "properties": [
       {
-        "addr": "properties/autoRotationEnabled"
+        "addr": "properties/autoRotationEnabled",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mssql_server_transparent_data_encryption",
+            "addr": "/auto_rotation_enabled"
+          }
+        ]
       },
       {
         "addr": "properties/serverKeyName"
@@ -133685,7 +134048,13 @@
     "operation": "PUT",
     "properties": [
       {
-        "addr": "properties/autoRotationEnabled"
+        "addr": "properties/autoRotationEnabled",
+        "app_property_maps": [
+          {
+            "name": "azurerm_mssql_server_transparent_data_encryption",
+            "addr": "/auto_rotation_enabled"
+          }
+        ]
       },
       {
         "addr": "properties/serverKeyName"
@@ -139358,12 +139727,12 @@
     ]
   },
   {
-    "api_version": "2023-03-01",
+    "api_version": "2025-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGEMOVER/STORAGEMOVERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-03-01",
+    "api_version": "2025-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGEMOVER/STORAGEMOVERS/{}",
     "operation": "GET",
     "properties": [
@@ -139391,7 +139760,7 @@
     ]
   },
   {
-    "api_version": "2023-03-01",
+    "api_version": "2025-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGEMOVER/STORAGEMOVERS/{}",
     "operation": "PUT",
     "properties": [
@@ -139492,12 +139861,12 @@
     ]
   },
   {
-    "api_version": "2023-03-01",
+    "api_version": "2025-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGEMOVER/STORAGEMOVERS/{}/ENDPOINTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-03-01",
+    "api_version": "2025-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGEMOVER/STORAGEMOVERS/{}/ENDPOINTS/{}",
     "operation": "GET",
     "properties": [
@@ -139567,7 +139936,7 @@
     ]
   },
   {
-    "api_version": "2023-03-01",
+    "api_version": "2025-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGEMOVER/STORAGEMOVERS/{}/ENDPOINTS/{}",
     "operation": "PUT",
     "properties": [
@@ -139637,12 +140006,12 @@
     ]
   },
   {
-    "api_version": "2023-03-01",
+    "api_version": "2025-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGEMOVER/STORAGEMOVERS/{}/PROJECTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-03-01",
+    "api_version": "2025-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGEMOVER/STORAGEMOVERS/{}/PROJECTS/{}",
     "operation": "GET",
     "properties": [
@@ -139658,7 +140027,7 @@
     ]
   },
   {
-    "api_version": "2023-03-01",
+    "api_version": "2025-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGEMOVER/STORAGEMOVERS/{}/PROJECTS/{}",
     "operation": "PUT",
     "properties": [
@@ -139674,12 +140043,12 @@
     ]
   },
   {
-    "api_version": "2023-03-01",
+    "api_version": "2025-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGEMOVER/STORAGEMOVERS/{}/PROJECTS/{}/JOBDEFINITIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-03-01",
+    "api_version": "2025-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGEMOVER/STORAGEMOVERS/{}/PROJECTS/{}/JOBDEFINITIONS/{}",
     "operation": "GET",
     "properties": [
@@ -139749,7 +140118,7 @@
     ]
   },
   {
-    "api_version": "2023-03-01",
+    "api_version": "2025-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGEMOVER/STORAGEMOVERS/{}/PROJECTS/{}/JOBDEFINITIONS/{}",
     "operation": "PUT",
     "properties": [
