@@ -29082,6 +29082,9 @@
         "addr": "properties/geoReplication/linkedDatabases/id"
       },
       {
+        "addr": "properties/geoReplication/linkedDatabases/state"
+      },
+      {
         "addr": "properties/modules/args"
       },
       {
@@ -29246,6 +29249,9 @@
         "addr": "properties/geoReplication/linkedDatabases/id"
       },
       {
+        "addr": "properties/geoReplication/linkedDatabases/state"
+      },
+      {
         "addr": "properties/modules/args"
       },
       {
@@ -29379,6 +29385,11 @@
   {
     "api_version": "2025-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/DATABASES/{}/LISTKEYS",
+    "operation": "POST"
+  },
+  {
+    "api_version": "2025-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CACHE/REDISENTERPRISE/{}/LISTSKUSFORSCALING",
     "operation": "POST"
   },
   {
@@ -58882,22 +58893,10 @@
         ]
       },
       {
-        "addr": "properties{AzureBlobStorage}/typeProperties/sasToken/secretName",
-        "app_property_maps": [
-          {
-            "name": "azurerm_data_factory_linked_service_azure_blob_storage",
-            "addr": "/key_vault_sas_token/0/secret_name"
-          }
-        ]
+        "addr": "properties{AzureBlobStorage}/typeProperties/sasToken/secretName"
       },
       {
-        "addr": "properties{AzureBlobStorage}/typeProperties/sasToken/store/referenceName",
-        "app_property_maps": [
-          {
-            "name": "azurerm_data_factory_linked_service_azure_blob_storage",
-            "addr": "/key_vault_sas_token/0/linked_service_name"
-          }
-        ]
+        "addr": "properties{AzureBlobStorage}/typeProperties/sasToken/store/referenceName"
       },
       {
         "addr": "properties{AzureBlobStorage}/typeProperties/sasToken/store/type"
@@ -60483,22 +60482,10 @@
         ]
       },
       {
-        "addr": "properties{AzureBlobStorage}/typeProperties/sasToken/secretName",
-        "app_property_maps": [
-          {
-            "name": "azurerm_data_factory_linked_service_azure_blob_storage",
-            "addr": "/key_vault_sas_token/0/secret_name"
-          }
-        ]
+        "addr": "properties{AzureBlobStorage}/typeProperties/sasToken/secretName"
       },
       {
-        "addr": "properties{AzureBlobStorage}/typeProperties/sasToken/store/referenceName",
-        "app_property_maps": [
-          {
-            "name": "azurerm_data_factory_linked_service_azure_blob_storage",
-            "addr": "/key_vault_sas_token/0/linked_service_name"
-          }
-        ]
+        "addr": "properties{AzureBlobStorage}/typeProperties/sasToken/store/referenceName"
       },
       {
         "addr": "properties{AzureBlobStorage}/typeProperties/sasToken/store/type"
@@ -175222,7 +175209,7 @@
     ]
   },
   {
-    "api_version": "2022-12-01-preview",
+    "api_version": "2025-06-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.SECURITY/DEFENDERFORSTORAGESETTINGS/CURRENT",
     "operation": "GET",
     "properties": [
@@ -175259,7 +175246,7 @@
     ]
   },
   {
-    "api_version": "2022-12-01-preview",
+    "api_version": "2025-06-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.SECURITY/DEFENDERFORSTORAGESETTINGS/CURRENT",
     "operation": "PUT",
     "properties": [
