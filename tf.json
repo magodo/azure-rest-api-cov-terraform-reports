@@ -19025,6 +19025,40 @@
   {
     "api_version": "2024-10-23",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/CONNECTIONS/{}",
+    "operation": "PATCH",
+    "properties": [
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/description",
+        "app_property_maps": [
+          {
+            "name": "azurerm_automation_connection",
+            "addr": "/description"
+          },
+          {
+            "name": "azurerm_automation_connection_certificate",
+            "addr": "/description"
+          },
+          {
+            "name": "azurerm_automation_connection_classic_certificate",
+            "addr": "/description"
+          },
+          {
+            "name": "azurerm_automation_connection_service_principal",
+            "addr": "/description"
+          }
+        ]
+      },
+      {
+        "addr": "properties/fieldDefinitionValues"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-10-23",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/CONNECTIONS/{}",
     "operation": "PUT",
     "properties": [
       {
@@ -19506,6 +19540,15 @@
     "operation": "GET",
     "properties": [
       {
+        "addr": "properties/contentLink/contentHash/algorithm"
+      },
+      {
+        "addr": "properties/contentLink/contentHash/value"
+      },
+      {
+        "addr": "properties/contentLink/uri"
+      },
+      {
         "addr": "properties/error/message"
       },
       {
@@ -19513,6 +19556,25 @@
       },
       {
         "addr": "properties/provisioningState"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-10-23",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/MODULES/{}",
+    "operation": "PATCH",
+    "properties": [
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/contentLink/contentHash/algorithm"
+      },
+      {
+        "addr": "properties/contentLink/contentHash/value"
+      },
+      {
+        "addr": "properties/contentLink/uri"
       }
     ]
   },
