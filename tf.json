@@ -2868,25 +2868,25 @@
     "operation": "GET",
     "properties": [
       {
-        "addr": "value/availabilityZoneMappings/logicalZone"
+        "addr": "availabilityZoneMappings/logicalZone"
       },
       {
-        "addr": "value/availabilityZoneMappings/physicalZone"
+        "addr": "availabilityZoneMappings/physicalZone"
       },
       {
-        "addr": "value/displayName"
+        "addr": "displayName"
       },
       {
-        "addr": "value/metadata/homeLocation"
+        "addr": "metadata/homeLocation"
       },
       {
-        "addr": "value/metadata/regionType"
+        "addr": "metadata/regionType"
       },
       {
-        "addr": "value/name"
+        "addr": "name"
       },
       {
-        "addr": "value/type"
+        "addr": "type"
       }
     ]
   },
@@ -63252,6 +63252,10 @@
             "addr": "/protection_state"
           },
           {
+            "name": "azurerm_data_protection_backup_instance_data_lake_storage",
+            "addr": "/protection_state"
+          },
+          {
             "name": "azurerm_data_protection_backup_instance_disk",
             "addr": "/protection_state"
           },
@@ -63287,6 +63291,10 @@
             "addr": "/storage_account_id"
           },
           {
+            "name": "azurerm_data_protection_backup_instance_data_lake_storage",
+            "addr": "/storage_account_id"
+          },
+          {
             "name": "azurerm_data_protection_backup_instance_disk",
             "addr": "/disk_id"
           },
@@ -63313,6 +63321,10 @@
         "app_property_maps": [
           {
             "name": "azurerm_data_protection_backup_instance_blob_storage",
+            "addr": "/location"
+          },
+          {
+            "name": "azurerm_data_protection_backup_instance_data_lake_storage",
             "addr": "/location"
           },
           {
@@ -63393,6 +63405,10 @@
             "addr": "/backup_policy_id"
           },
           {
+            "name": "azurerm_data_protection_backup_instance_data_lake_storage",
+            "addr": "/backup_policy_data_lake_storage_id"
+          },
+          {
             "name": "azurerm_data_protection_backup_instance_disk",
             "addr": "/backup_policy_id"
           },
@@ -63413,6 +63429,9 @@
             "addr": "/backup_policy_id"
           }
         ]
+      },
+      {
+        "addr": "properties/policyInfo/policyParameters/backupDatasourceParametersList{AdlsBlobBackupDatasourceParameters}/containersList"
       },
       {
         "addr": "properties/policyInfo/policyParameters/backupDatasourceParametersList{BlobBackupDatasourceParameters}/containersList"
@@ -63462,6 +63481,10 @@
             "addr": "/protection_state"
           },
           {
+            "name": "azurerm_data_protection_backup_instance_data_lake_storage",
+            "addr": "/protection_state"
+          },
+          {
             "name": "azurerm_data_protection_backup_instance_disk",
             "addr": "/protection_state"
           },
@@ -63497,6 +63520,10 @@
             "addr": "/storage_account_id"
           },
           {
+            "name": "azurerm_data_protection_backup_instance_data_lake_storage",
+            "addr": "/storage_account_id"
+          },
+          {
             "name": "azurerm_data_protection_backup_instance_disk",
             "addr": "/disk_id"
           },
@@ -63523,6 +63550,10 @@
         "app_property_maps": [
           {
             "name": "azurerm_data_protection_backup_instance_blob_storage",
+            "addr": "/location"
+          },
+          {
+            "name": "azurerm_data_protection_backup_instance_data_lake_storage",
             "addr": "/location"
           },
           {
@@ -63603,6 +63634,10 @@
             "addr": "/backup_policy_id"
           },
           {
+            "name": "azurerm_data_protection_backup_instance_data_lake_storage",
+            "addr": "/backup_policy_data_lake_storage_id"
+          },
+          {
             "name": "azurerm_data_protection_backup_instance_disk",
             "addr": "/backup_policy_id"
           },
@@ -63623,6 +63658,9 @@
             "addr": "/backup_policy_id"
           }
         ]
+      },
+      {
+        "addr": "properties/policyInfo/policyParameters/backupDatasourceParametersList{AdlsBlobBackupDatasourceParameters}/containersList"
       },
       {
         "addr": "properties/policyInfo/policyParameters/backupDatasourceParametersList{BlobBackupDatasourceParameters}/containersList"
@@ -71718,6 +71756,433 @@
       },
       {
         "addr": "properties/iotHubs/resourceId"
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2025-09-20",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVOPSINFRASTRUCTURE/POOLS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2025-09-20",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVOPSINFRASTRUCTURE/POOLS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
+      },
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_devops_pool",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/agentProfile{Stateful}/gracePeriodTimeSpan",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_devops_pool",
+            "addr": "/stateful_agent/0/grace_period_time_span"
+          }
+        ]
+      },
+      {
+        "addr": "properties/agentProfile{Stateful}/kind"
+      },
+      {
+        "addr": "properties/agentProfile{Stateful}/maxAgentLifetime",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_devops_pool",
+            "addr": "/stateful_agent/0/maximum_agent_lifetime"
+          }
+        ]
+      },
+      {
+        "addr": "properties/agentProfile{Stateful}/resourcePredictions"
+      },
+      {
+        "addr": "properties/agentProfile{Stateful}/resourcePredictionsProfile{Automatic}/kind"
+      },
+      {
+        "addr": "properties/agentProfile{Stateful}/resourcePredictionsProfile{Automatic}/predictionPreference",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_devops_pool",
+            "addr": "/stateful_agent/0/automatic_resource_prediction/0/prediction_preference"
+          }
+        ]
+      },
+      {
+        "addr": "properties/agentProfile{Stateful}/resourcePredictionsProfile{Manual}/kind"
+      },
+      {
+        "addr": "properties/agentProfile{Stateless}/kind"
+      },
+      {
+        "addr": "properties/agentProfile{Stateless}/resourcePredictions"
+      },
+      {
+        "addr": "properties/agentProfile{Stateless}/resourcePredictionsProfile{Automatic}/kind"
+      },
+      {
+        "addr": "properties/agentProfile{Stateless}/resourcePredictionsProfile{Automatic}/predictionPreference"
+      },
+      {
+        "addr": "properties/agentProfile{Stateless}/resourcePredictionsProfile{Manual}/kind"
+      },
+      {
+        "addr": "properties/devCenterProjectResourceId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_devops_pool",
+            "addr": "/dev_center_project_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/images/aliases"
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/images/buffer"
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/images/resourceId"
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/images/wellKnownImageName"
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/networkProfile/subnetId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_devops_pool",
+            "addr": "/virtual_machine_scale_set_fabric/0/subnet_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/osProfile/logonType"
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/osProfile/secretsManagementSettings/certificateStoreLocation",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_devops_pool",
+            "addr": "/virtual_machine_scale_set_fabric/0/security/0/key_vault_management/0/certificate_store_location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/osProfile/secretsManagementSettings/certificateStoreName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_devops_pool",
+            "addr": "/virtual_machine_scale_set_fabric/0/security/0/key_vault_management/0/certificate_store_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/osProfile/secretsManagementSettings/keyExportable"
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/osProfile/secretsManagementSettings/observedCertificates"
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/sku/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_devops_pool",
+            "addr": "/virtual_machine_scale_set_fabric/0/sku_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/storageProfile/dataDisks/caching"
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/storageProfile/dataDisks/diskSizeGiB"
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/storageProfile/dataDisks/driveLetter"
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/storageProfile/dataDisks/storageAccountType"
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/storageProfile/osDiskStorageAccountType",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_devops_pool",
+            "addr": "/virtual_machine_scale_set_fabric/0/os_disk_storage_account_type"
+          }
+        ]
+      },
+      {
+        "addr": "properties/maximumConcurrency",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_devops_pool",
+            "addr": "/maximum_concurrency"
+          }
+        ]
+      },
+      {
+        "addr": "properties/organizationProfile{AzureDevOps}/organizations/parallelism"
+      },
+      {
+        "addr": "properties/organizationProfile{AzureDevOps}/organizations/projects"
+      },
+      {
+        "addr": "properties/organizationProfile{AzureDevOps}/organizations/url"
+      },
+      {
+        "addr": "properties/organizationProfile{AzureDevOps}/permissionProfile/groups"
+      },
+      {
+        "addr": "properties/organizationProfile{AzureDevOps}/permissionProfile/kind",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_devops_pool",
+            "addr": "/azure_devops_organization/0/permission/0/kind"
+          }
+        ]
+      },
+      {
+        "addr": "properties/organizationProfile{AzureDevOps}/permissionProfile/users"
+      },
+      {
+        "addr": "properties/runtimeConfiguration/workFolder",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_devops_pool",
+            "addr": "/work_folder"
+          }
+        ]
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2025-09-20",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DEVOPSINFRASTRUCTURE/POOLS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
+      },
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_devops_pool",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/agentProfile{Stateful}/gracePeriodTimeSpan",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_devops_pool",
+            "addr": "/stateful_agent/0/grace_period_time_span"
+          }
+        ]
+      },
+      {
+        "addr": "properties/agentProfile{Stateful}/kind"
+      },
+      {
+        "addr": "properties/agentProfile{Stateful}/maxAgentLifetime",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_devops_pool",
+            "addr": "/stateful_agent/0/maximum_agent_lifetime"
+          }
+        ]
+      },
+      {
+        "addr": "properties/agentProfile{Stateful}/resourcePredictions"
+      },
+      {
+        "addr": "properties/agentProfile{Stateful}/resourcePredictionsProfile{Automatic}/kind"
+      },
+      {
+        "addr": "properties/agentProfile{Stateful}/resourcePredictionsProfile{Automatic}/predictionPreference",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_devops_pool",
+            "addr": "/stateful_agent/0/automatic_resource_prediction/0/prediction_preference"
+          }
+        ]
+      },
+      {
+        "addr": "properties/agentProfile{Stateful}/resourcePredictionsProfile{Manual}/kind"
+      },
+      {
+        "addr": "properties/agentProfile{Stateless}/kind"
+      },
+      {
+        "addr": "properties/agentProfile{Stateless}/resourcePredictions"
+      },
+      {
+        "addr": "properties/agentProfile{Stateless}/resourcePredictionsProfile{Automatic}/kind"
+      },
+      {
+        "addr": "properties/agentProfile{Stateless}/resourcePredictionsProfile{Automatic}/predictionPreference"
+      },
+      {
+        "addr": "properties/agentProfile{Stateless}/resourcePredictionsProfile{Manual}/kind"
+      },
+      {
+        "addr": "properties/devCenterProjectResourceId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_devops_pool",
+            "addr": "/dev_center_project_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/images/aliases"
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/images/buffer"
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/images/resourceId"
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/images/wellKnownImageName"
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/networkProfile/subnetId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_devops_pool",
+            "addr": "/virtual_machine_scale_set_fabric/0/subnet_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/osProfile/logonType"
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/osProfile/secretsManagementSettings/certificateStoreLocation",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_devops_pool",
+            "addr": "/virtual_machine_scale_set_fabric/0/security/0/key_vault_management/0/certificate_store_location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/osProfile/secretsManagementSettings/certificateStoreName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_devops_pool",
+            "addr": "/virtual_machine_scale_set_fabric/0/security/0/key_vault_management/0/certificate_store_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/osProfile/secretsManagementSettings/keyExportable"
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/osProfile/secretsManagementSettings/observedCertificates"
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/sku/name",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_devops_pool",
+            "addr": "/virtual_machine_scale_set_fabric/0/sku_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/storageProfile/dataDisks/caching"
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/storageProfile/dataDisks/diskSizeGiB"
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/storageProfile/dataDisks/driveLetter"
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/storageProfile/dataDisks/storageAccountType"
+      },
+      {
+        "addr": "properties/fabricProfile{Vmss}/storageProfile/osDiskStorageAccountType",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_devops_pool",
+            "addr": "/virtual_machine_scale_set_fabric/0/os_disk_storage_account_type"
+          }
+        ]
+      },
+      {
+        "addr": "properties/maximumConcurrency",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_devops_pool",
+            "addr": "/maximum_concurrency"
+          }
+        ]
+      },
+      {
+        "addr": "properties/organizationProfile{AzureDevOps}/organizations/parallelism"
+      },
+      {
+        "addr": "properties/organizationProfile{AzureDevOps}/organizations/projects"
+      },
+      {
+        "addr": "properties/organizationProfile{AzureDevOps}/organizations/url"
+      },
+      {
+        "addr": "properties/organizationProfile{AzureDevOps}/permissionProfile/groups"
+      },
+      {
+        "addr": "properties/organizationProfile{AzureDevOps}/permissionProfile/kind",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_devops_pool",
+            "addr": "/azure_devops_organization/0/permission/0/kind"
+          }
+        ]
+      },
+      {
+        "addr": "properties/organizationProfile{AzureDevOps}/permissionProfile/users"
+      },
+      {
+        "addr": "properties/runtimeConfiguration/workFolder",
+        "app_property_maps": [
+          {
+            "name": "azurerm_managed_devops_pool",
+            "addr": "/work_folder"
+          }
+        ]
       },
       {
         "addr": "tags"
@@ -94433,12 +94898,12 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}",
     "operation": "GET",
     "properties": [
@@ -94541,7 +95006,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -94638,7 +95103,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}",
     "operation": "PUT",
     "properties": [
@@ -94741,12 +95206,12 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPPOLICIES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPPOLICIES/{}",
     "operation": "GET",
     "properties": [
@@ -94795,7 +95260,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPPOLICIES/{}",
     "operation": "PATCH",
     "properties": [
@@ -94835,7 +95300,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPPOLICIES/{}",
     "operation": "PUT",
     "properties": [
@@ -94884,12 +95349,12 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPVAULTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPVAULTS/{}",
     "operation": "GET",
     "properties": [
@@ -94908,7 +95373,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPVAULTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -94918,7 +95383,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPVAULTS/{}",
     "operation": "PUT",
     "properties": [
@@ -94937,7 +95402,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPVAULTS/{}/BACKUPS",
     "operation": "GET",
     "properties": [
@@ -94950,12 +95415,12 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPVAULTS/{}/BACKUPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPVAULTS/{}/BACKUPS/{}",
     "operation": "GET",
     "properties": [
@@ -94968,7 +95433,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS",
     "operation": "GET",
     "properties": [
@@ -95038,12 +95503,12 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}",
     "operation": "GET",
     "properties": [
@@ -95113,7 +95578,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}",
     "operation": "PATCH",
     "properties": [
@@ -95153,7 +95618,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}",
     "operation": "PUT",
     "properties": [
@@ -95223,7 +95688,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES",
     "operation": "GET",
     "properties": [
@@ -95322,6 +95787,9 @@
         "addr": "properties/dataProtection/backup/policyEnforced"
       },
       {
+        "addr": "properties/dataProtection/ransomwareProtection/desiredRansomwareProtectionState"
+      },
+      {
         "addr": "properties/dataProtection/replication/endpointType"
       },
       {
@@ -95500,12 +95968,12 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}",
     "operation": "GET",
     "properties": [
@@ -95604,6 +96072,9 @@
         "addr": "properties/dataProtection/backup/policyEnforced"
       },
       {
+        "addr": "properties/dataProtection/ransomwareProtection/desiredRansomwareProtectionState"
+      },
+      {
         "addr": "properties/dataProtection/replication/endpointType"
       },
       {
@@ -95782,7 +96253,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}",
     "operation": "PATCH",
     "properties": [
@@ -95836,6 +96307,9 @@
       },
       {
         "addr": "properties/dataProtection/backup/policyEnforced"
+      },
+      {
+        "addr": "properties/dataProtection/ransomwareProtection/desiredRansomwareProtectionState"
       },
       {
         "addr": "properties/dataProtection/snapshot/snapshotPolicyId",
@@ -95926,7 +96400,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}",
     "operation": "PUT",
     "properties": [
@@ -96025,6 +96499,9 @@
         "addr": "properties/dataProtection/backup/policyEnforced"
       },
       {
+        "addr": "properties/dataProtection/ransomwareProtection/desiredRansomwareProtectionState"
+      },
+      {
         "addr": "properties/dataProtection/replication/endpointType"
       },
       {
@@ -96203,7 +96680,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/AUTHORIZEREPLICATION",
     "operation": "POST",
     "properties": [
@@ -96213,7 +96690,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/BREAKREPLICATION",
     "operation": "POST",
     "properties": [
@@ -96223,12 +96700,12 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/DELETEREPLICATION",
     "operation": "POST"
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/LATESTBACKUPSTATUS/CURRENT",
     "operation": "GET",
     "properties": [
@@ -96238,7 +96715,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/POOLCHANGE",
     "operation": "POST",
     "properties": [
@@ -96248,7 +96725,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/REPLICATIONSTATUS",
     "operation": "GET",
     "properties": [
@@ -96258,12 +96735,12 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/SNAPSHOTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/SNAPSHOTS/{}",
     "operation": "GET",
     "properties": [
@@ -96282,7 +96759,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/SNAPSHOTS/{}",
     "operation": "PUT",
     "properties": [
@@ -96301,12 +96778,12 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/VOLUMEQUOTARULES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/VOLUMEQUOTARULES/{}",
     "operation": "GET",
     "properties": [
@@ -96349,7 +96826,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/VOLUMEQUOTARULES/{}",
     "operation": "PATCH",
     "properties": [
@@ -96365,7 +96842,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/VOLUMEQUOTARULES/{}",
     "operation": "PUT",
     "properties": [
@@ -96408,12 +96885,12 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/SNAPSHOTPOLICIES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/SNAPSHOTPOLICIES/{}",
     "operation": "GET",
     "properties": [
@@ -96555,7 +97032,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/SNAPSHOTPOLICIES/{}",
     "operation": "PATCH",
     "properties": [
@@ -96697,7 +97174,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/SNAPSHOTPOLICIES/{}",
     "operation": "PUT",
     "properties": [
@@ -96839,12 +97316,12 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/VOLUMEGROUPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/VOLUMEGROUPS/{}",
     "operation": "GET",
     "properties": [
@@ -97013,7 +97490,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/VOLUMEGROUPS/{}",
     "operation": "PUT",
     "properties": [
@@ -99588,6 +100065,9 @@
         "addr": "properties/enableKerberos"
       },
       {
+        "addr": "properties/enablePrivateOnlyBastion"
+      },
+      {
         "addr": "properties/enableSessionRecording"
       },
       {
@@ -99674,6 +100154,9 @@
       },
       {
         "addr": "properties/enableKerberos"
+      },
+      {
+        "addr": "properties/enablePrivateOnlyBastion"
       },
       {
         "addr": "properties/enableSessionRecording"
@@ -131818,6 +132301,9 @@
         ]
       },
       {
+        "addr": "properties/isGeneralPurposeV2"
+      },
+      {
         "addr": "properties/keyId"
       },
       {
@@ -131869,6 +132355,9 @@
         ]
       },
       {
+        "addr": "properties/storageIOps"
+      },
+      {
         "addr": "properties/storageSizeInGB",
         "app_property_maps": [
           {
@@ -131876,6 +132365,9 @@
             "addr": "/storage_size_in_gb"
           }
         ]
+      },
+      {
+        "addr": "properties/storageThroughputMBps"
       },
       {
         "addr": "properties/subnetId",
@@ -132047,6 +132539,9 @@
         ]
       },
       {
+        "addr": "properties/isGeneralPurposeV2"
+      },
+      {
         "addr": "properties/keyId"
       },
       {
@@ -132098,6 +132593,9 @@
         ]
       },
       {
+        "addr": "properties/storageIOps"
+      },
+      {
         "addr": "properties/storageSizeInGB",
         "app_property_maps": [
           {
@@ -132105,6 +132603,9 @@
             "addr": "/storage_size_in_gb"
           }
         ]
+      },
+      {
+        "addr": "properties/storageThroughputMBps"
       },
       {
         "addr": "properties/subnetId",
