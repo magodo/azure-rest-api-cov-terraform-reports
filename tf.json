@@ -13268,6 +13268,9 @@
         "addr": "properties/template/scale/rules/custom/auth/triggerParameter"
       },
       {
+        "addr": "properties/template/scale/rules/custom/identity"
+      },
+      {
         "addr": "properties/template/scale/rules/custom/metadata"
       },
       {
@@ -13753,6 +13756,9 @@
       },
       {
         "addr": "properties/template/scale/rules/custom/auth/triggerParameter"
+      },
+      {
+        "addr": "properties/template/scale/rules/custom/identity"
       },
       {
         "addr": "properties/template/scale/rules/custom/metadata"
@@ -15044,6 +15050,101 @@
     "api_version": "2025-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APP/MANAGEDENVIRONMENTS/{}/DAPRCOMPONENTS/{}/LISTSECRETS",
     "operation": "POST"
+  },
+  {
+    "api_version": "2025-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APP/MANAGEDENVIRONMENTS/{}/MANAGEDCERTIFICATES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2025-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APP/MANAGEDENVIRONMENTS/{}/MANAGEDCERTIFICATES/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "location"
+      },
+      {
+        "addr": "properties/domainControlValidation",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_app_environment_managed_certificate",
+            "addr": "/domain_control_validation"
+          }
+        ]
+      },
+      {
+        "addr": "properties/subjectName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_app_environment_managed_certificate",
+            "addr": "/subject_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/validationToken",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_app_environment_managed_certificate",
+            "addr": "/validation_token"
+          }
+        ]
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2025-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APP/MANAGEDENVIRONMENTS/{}/MANAGEDCERTIFICATES/{}",
+    "operation": "PATCH",
+    "properties": [
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2025-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.APP/MANAGEDENVIRONMENTS/{}/MANAGEDCERTIFICATES/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "location"
+      },
+      {
+        "addr": "properties/domainControlValidation",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_app_environment_managed_certificate",
+            "addr": "/domain_control_validation"
+          }
+        ]
+      },
+      {
+        "addr": "properties/subjectName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_app_environment_managed_certificate",
+            "addr": "/subject_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/validationToken",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_app_environment_managed_certificate",
+            "addr": "/validation_token"
+          }
+        ]
+      },
+      {
+        "addr": "tags"
+      }
+    ]
   },
   {
     "api_version": "2025-07-01",
@@ -20071,6 +20172,124 @@
       },
       {
         "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2024-10-23",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/RUNTIMEENVIRONMENTS/{}/PACKAGES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2024-10-23",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/RUNTIMEENVIRONMENTS/{}/PACKAGES/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/contentLink/contentHash/algorithm",
+        "app_property_maps": [
+          {
+            "name": "azurerm_automation_runtime_environment_package",
+            "addr": "/hash_algorithm"
+          }
+        ]
+      },
+      {
+        "addr": "properties/contentLink/contentHash/value",
+        "app_property_maps": [
+          {
+            "name": "azurerm_automation_runtime_environment_package",
+            "addr": "/hash_value"
+          }
+        ]
+      },
+      {
+        "addr": "properties/contentLink/uri",
+        "app_property_maps": [
+          {
+            "name": "azurerm_automation_runtime_environment_package",
+            "addr": "/content_uri"
+          }
+        ]
+      },
+      {
+        "addr": "properties/contentLink/version",
+        "app_property_maps": [
+          {
+            "name": "azurerm_automation_runtime_environment_package",
+            "addr": "/content_version"
+          }
+        ]
+      },
+      {
+        "addr": "properties/default",
+        "app_property_maps": [
+          {
+            "name": "azurerm_automation_runtime_environment_package",
+            "addr": "/default"
+          }
+        ]
+      },
+      {
+        "addr": "properties/sizeInBytes",
+        "app_property_maps": [
+          {
+            "name": "azurerm_automation_runtime_environment_package",
+            "addr": "/size_in_bytes"
+          }
+        ]
+      },
+      {
+        "addr": "properties/version",
+        "app_property_maps": [
+          {
+            "name": "azurerm_automation_runtime_environment_package",
+            "addr": "/version"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2024-10-23",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/RUNTIMEENVIRONMENTS/{}/PACKAGES/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "properties/contentLink/contentHash/algorithm",
+        "app_property_maps": [
+          {
+            "name": "azurerm_automation_runtime_environment_package",
+            "addr": "/hash_algorithm"
+          }
+        ]
+      },
+      {
+        "addr": "properties/contentLink/contentHash/value",
+        "app_property_maps": [
+          {
+            "name": "azurerm_automation_runtime_environment_package",
+            "addr": "/hash_value"
+          }
+        ]
+      },
+      {
+        "addr": "properties/contentLink/uri",
+        "app_property_maps": [
+          {
+            "name": "azurerm_automation_runtime_environment_package",
+            "addr": "/content_uri"
+          }
+        ]
+      },
+      {
+        "addr": "properties/contentLink/version",
+        "app_property_maps": [
+          {
+            "name": "azurerm_automation_runtime_environment_package",
+            "addr": "/content_version"
+          }
+        ]
       }
     ]
   },
@@ -26025,6 +26244,10 @@
         "addr": "properties/msaAppMSIResourceId",
         "app_property_maps": [
           {
+            "name": "azurerm_bot_channels_registration",
+            "addr": "/microsoft_app_user_assigned_identity_id"
+          },
+          {
             "name": "azurerm_bot_service_azure_bot",
             "addr": "/microsoft_app_msi_id"
           }
@@ -26034,6 +26257,10 @@
         "addr": "properties/msaAppTenantId",
         "app_property_maps": [
           {
+            "name": "azurerm_bot_channels_registration",
+            "addr": "/microsoft_app_tenant_id"
+          },
+          {
             "name": "azurerm_bot_service_azure_bot",
             "addr": "/microsoft_app_tenant_id"
           }
@@ -26042,6 +26269,10 @@
       {
         "addr": "properties/msaAppType",
         "app_property_maps": [
+          {
+            "name": "azurerm_bot_channels_registration",
+            "addr": "/microsoft_app_type"
+          },
           {
             "name": "azurerm_bot_service_azure_bot",
             "addr": "/microsoft_app_type"
@@ -26240,6 +26471,10 @@
         "addr": "properties/msaAppMSIResourceId",
         "app_property_maps": [
           {
+            "name": "azurerm_bot_channels_registration",
+            "addr": "/microsoft_app_user_assigned_identity_id"
+          },
+          {
             "name": "azurerm_bot_service_azure_bot",
             "addr": "/microsoft_app_msi_id"
           }
@@ -26249,6 +26484,10 @@
         "addr": "properties/msaAppTenantId",
         "app_property_maps": [
           {
+            "name": "azurerm_bot_channels_registration",
+            "addr": "/microsoft_app_tenant_id"
+          },
+          {
             "name": "azurerm_bot_service_azure_bot",
             "addr": "/microsoft_app_tenant_id"
           }
@@ -26257,6 +26496,10 @@
       {
         "addr": "properties/msaAppType",
         "app_property_maps": [
+          {
+            "name": "azurerm_bot_channels_registration",
+            "addr": "/microsoft_app_type"
+          },
           {
             "name": "azurerm_bot_service_azure_bot",
             "addr": "/microsoft_app_type"
@@ -26455,6 +26698,10 @@
         "addr": "properties/msaAppMSIResourceId",
         "app_property_maps": [
           {
+            "name": "azurerm_bot_channels_registration",
+            "addr": "/microsoft_app_user_assigned_identity_id"
+          },
+          {
             "name": "azurerm_bot_service_azure_bot",
             "addr": "/microsoft_app_msi_id"
           }
@@ -26464,6 +26711,10 @@
         "addr": "properties/msaAppTenantId",
         "app_property_maps": [
           {
+            "name": "azurerm_bot_channels_registration",
+            "addr": "/microsoft_app_tenant_id"
+          },
+          {
             "name": "azurerm_bot_service_azure_bot",
             "addr": "/microsoft_app_tenant_id"
           }
@@ -26472,6 +26723,10 @@
       {
         "addr": "properties/msaAppType",
         "app_property_maps": [
+          {
+            "name": "azurerm_bot_channels_registration",
+            "addr": "/microsoft_app_type"
+          },
           {
             "name": "azurerm_bot_service_azure_bot",
             "addr": "/microsoft_app_type"
@@ -52151,7 +52406,13 @@
         "addr": "properties/networkProfile/nodePublicIPTags/tag"
       },
       {
-        "addr": "properties/nodeImageVersion"
+        "addr": "properties/nodeImageVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster_node_pool",
+            "addr": "/node_image_version"
+          }
+        ]
       },
       {
         "addr": "properties/nodeLabels"
@@ -52842,7 +53103,13 @@
         "addr": "properties/networkProfile/nodePublicIPTags/tag"
       },
       {
-        "addr": "properties/nodeImageVersion"
+        "addr": "properties/nodeImageVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_cluster_node_pool",
+            "addr": "/node_image_version"
+          }
+        ]
       },
       {
         "addr": "properties/nodeLabels"
@@ -87561,6 +87828,9 @@
         "addr": "properties/actions/actionGroups"
       },
       {
+        "addr": "properties/actions/actionProperties"
+      },
+      {
         "addr": "properties/actions/customProperties"
       },
       {
@@ -87927,6 +88197,9 @@
       },
       {
         "addr": "properties/actions/actionGroups"
+      },
+      {
+        "addr": "properties/actions/actionProperties"
       },
       {
         "addr": "properties/actions/customProperties"
@@ -174136,12 +174409,12 @@
     ]
   },
   {
-    "api_version": "2024-11-01",
+    "api_version": "2025-04-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.KUBERNETESCONFIGURATION/FLUXCONFIGURATIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-11-01",
+    "api_version": "2025-04-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.KUBERNETESCONFIGURATION/FLUXCONFIGURATIONS/{}",
     "operation": "GET",
     "properties": [
@@ -174487,7 +174760,7 @@
     ]
   },
   {
-    "api_version": "2024-11-01",
+    "api_version": "2025-04-01",
     "api_path": "/{}/PROVIDERS/MICROSOFT.KUBERNETESCONFIGURATION/FLUXCONFIGURATIONS/{}",
     "operation": "PUT",
     "properties": [
