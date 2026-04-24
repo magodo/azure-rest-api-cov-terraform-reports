@@ -576,9 +576,6 @@
     "operation": "GET",
     "properties": [
       {
-        "addr": "attributes/enabled"
-      },
-      {
         "addr": "attributes/exp"
       },
       {
@@ -607,28 +604,6 @@
       },
       {
         "addr": "key/y"
-      },
-      {
-        "addr": "tags"
-      }
-    ]
-  },
-  {
-    "api_version": "7.4",
-    "api_path": "/KEYS/{}/{}",
-    "operation": "PATCH",
-    "properties": [
-      {
-        "addr": "attributes/enabled"
-      },
-      {
-        "addr": "attributes/exp"
-      },
-      {
-        "addr": "attributes/nbf"
-      },
-      {
-        "addr": "key_ops"
       },
       {
         "addr": "tags"
@@ -746,37 +721,6 @@
     "api_version": "1.0",
     "api_path": "/LOCKS/{}",
     "operation": "PUT"
-  },
-  {
-    "api_version": "2019-06-01-preview",
-    "api_path": "/MANAGEDVIRTUALNETWORKS/{}/MANAGEDPRIVATEENDPOINTS/{}",
-    "operation": "DELETE"
-  },
-  {
-    "api_version": "2019-06-01-preview",
-    "api_path": "/MANAGEDVIRTUALNETWORKS/{}/MANAGEDPRIVATEENDPOINTS/{}",
-    "operation": "GET",
-    "properties": [
-      {
-        "addr": "properties/groupId"
-      },
-      {
-        "addr": "properties/privateLinkResourceId"
-      }
-    ]
-  },
-  {
-    "api_version": "2019-06-01-preview",
-    "api_path": "/MANAGEDVIRTUALNETWORKS/{}/MANAGEDPRIVATEENDPOINTS/{}",
-    "operation": "PUT",
-    "properties": [
-      {
-        "addr": "properties/groupId"
-      },
-      {
-        "addr": "properties/privateLinkResourceId"
-      }
-    ]
   },
   {
     "api_version": "2022-10-31-preview",
@@ -21464,6 +21408,37 @@
   {
     "api_version": "2015-10-31",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/WEBHOOKS/{}",
+    "operation": "PATCH",
+    "properties": [
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/isEnabled",
+        "app_property_maps": [
+          {
+            "name": "azurerm_automation_webhook",
+            "addr": "/enabled"
+          }
+        ]
+      },
+      {
+        "addr": "properties/parameters"
+      },
+      {
+        "addr": "properties/runOn",
+        "app_property_maps": [
+          {
+            "name": "azurerm_automation_webhook",
+            "addr": "/run_on_worker_group"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "api_version": "2015-10-31",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTOMATION/AUTOMATIONACCOUNTS/{}/WEBHOOKS/{}",
     "operation": "PUT",
     "properties": [
       {
@@ -26250,6 +26225,10 @@
           {
             "name": "azurerm_bot_service_azure_bot",
             "addr": "/microsoft_app_msi_id"
+          },
+          {
+            "name": "azurerm_bot_web_app",
+            "addr": "/microsoft_app_user_assigned_identity_id"
           }
         ]
       },
@@ -26263,6 +26242,10 @@
           {
             "name": "azurerm_bot_service_azure_bot",
             "addr": "/microsoft_app_tenant_id"
+          },
+          {
+            "name": "azurerm_bot_web_app",
+            "addr": "/microsoft_app_tenant_id"
           }
         ]
       },
@@ -26275,6 +26258,10 @@
           },
           {
             "name": "azurerm_bot_service_azure_bot",
+            "addr": "/microsoft_app_type"
+          },
+          {
+            "name": "azurerm_bot_web_app",
             "addr": "/microsoft_app_type"
           }
         ]
@@ -26477,6 +26464,10 @@
           {
             "name": "azurerm_bot_service_azure_bot",
             "addr": "/microsoft_app_msi_id"
+          },
+          {
+            "name": "azurerm_bot_web_app",
+            "addr": "/microsoft_app_user_assigned_identity_id"
           }
         ]
       },
@@ -26490,6 +26481,10 @@
           {
             "name": "azurerm_bot_service_azure_bot",
             "addr": "/microsoft_app_tenant_id"
+          },
+          {
+            "name": "azurerm_bot_web_app",
+            "addr": "/microsoft_app_tenant_id"
           }
         ]
       },
@@ -26502,6 +26497,10 @@
           },
           {
             "name": "azurerm_bot_service_azure_bot",
+            "addr": "/microsoft_app_type"
+          },
+          {
+            "name": "azurerm_bot_web_app",
             "addr": "/microsoft_app_type"
           }
         ]
@@ -26704,6 +26703,10 @@
           {
             "name": "azurerm_bot_service_azure_bot",
             "addr": "/microsoft_app_msi_id"
+          },
+          {
+            "name": "azurerm_bot_web_app",
+            "addr": "/microsoft_app_user_assigned_identity_id"
           }
         ]
       },
@@ -26717,6 +26720,10 @@
           {
             "name": "azurerm_bot_service_azure_bot",
             "addr": "/microsoft_app_tenant_id"
+          },
+          {
+            "name": "azurerm_bot_web_app",
+            "addr": "/microsoft_app_tenant_id"
           }
         ]
       },
@@ -26729,6 +26736,10 @@
           },
           {
             "name": "azurerm_bot_service_azure_bot",
+            "addr": "/microsoft_app_type"
+          },
+          {
+            "name": "azurerm_bot_web_app",
             "addr": "/microsoft_app_type"
           }
         ]
@@ -26834,6 +26845,12 @@
       },
       {
         "addr": "properties{DirectLineChannel}/channelName"
+      },
+      {
+        "addr": "properties{DirectLineChannel}/properties/extensionKey1"
+      },
+      {
+        "addr": "properties{DirectLineChannel}/properties/extensionKey2"
       },
       {
         "addr": "properties{DirectLineChannel}/properties/sites/isBlockUserUploadEnabled"
@@ -27140,6 +27157,12 @@
         "addr": "properties{DirectLineChannel}/channelName"
       },
       {
+        "addr": "properties{DirectLineChannel}/properties/extensionKey1"
+      },
+      {
+        "addr": "properties{DirectLineChannel}/properties/extensionKey2"
+      },
+      {
         "addr": "properties{DirectLineChannel}/properties/sites/isBlockUserUploadEnabled"
       },
       {
@@ -27442,6 +27465,12 @@
       },
       {
         "addr": "properties{DirectLineChannel}/channelName"
+      },
+      {
+        "addr": "properties{DirectLineChannel}/properties/extensionKey1"
+      },
+      {
+        "addr": "properties{DirectLineChannel}/properties/extensionKey2"
       },
       {
         "addr": "properties{DirectLineChannel}/properties/sites/isBlockUserUploadEnabled"
@@ -53907,6 +53936,15 @@
         ]
       },
       {
+        "addr": "sku/size",
+        "app_property_maps": [
+          {
+            "name": "azurerm_dashboard_grafana",
+            "addr": "/sku_size"
+          }
+        ]
+      },
+      {
         "addr": "tags"
       }
     ]
@@ -54054,6 +54092,15 @@
           {
             "name": "azurerm_dashboard_grafana",
             "addr": "/sku"
+          }
+        ]
+      },
+      {
+        "addr": "sku/size",
+        "app_property_maps": [
+          {
+            "name": "azurerm_dashboard_grafana",
+            "addr": "/sku_size"
           }
         ]
       },
@@ -75933,12 +75980,12 @@
     ]
   },
   {
-    "api_version": "2022-11-15",
+    "api_version": "2025-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/MONGODBROLEDEFINITIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-11-15",
+    "api_version": "2025-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/MONGODBROLEDEFINITIONS/{}",
     "operation": "GET",
     "properties": [
@@ -75969,7 +76016,7 @@
     ]
   },
   {
-    "api_version": "2022-11-15",
+    "api_version": "2025-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/MONGODBROLEDEFINITIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -76006,12 +76053,12 @@
     ]
   },
   {
-    "api_version": "2022-11-15",
+    "api_version": "2025-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/MONGODBUSERDEFINITIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2022-11-15",
+    "api_version": "2025-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/MONGODBUSERDEFINITIONS/{}",
     "operation": "GET",
     "properties": [
@@ -76039,7 +76086,7 @@
     ]
   },
   {
-    "api_version": "2022-11-15",
+    "api_version": "2025-10-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/MONGODBUSERDEFINITIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -106699,10 +106746,16 @@
         "addr": "properties/publicIpAddresses/id"
       },
       {
+        "addr": "properties/publicIpAddressesV6/id"
+      },
+      {
         "addr": "properties/publicIpPrefixes"
       },
       {
         "addr": "properties/publicIpPrefixes/id"
+      },
+      {
+        "addr": "properties/publicIpPrefixesV6/id"
       },
       {
         "addr": "properties/resourceGuid",
@@ -106763,10 +106816,16 @@
         "addr": "properties/publicIpAddresses/id"
       },
       {
+        "addr": "properties/publicIpAddressesV6/id"
+      },
+      {
         "addr": "properties/publicIpPrefixes"
       },
       {
         "addr": "properties/publicIpPrefixes/id"
+      },
+      {
+        "addr": "properties/publicIpPrefixesV6/id"
       },
       {
         "addr": "properties/resourceGuid",
@@ -122347,6 +122406,15 @@
         "addr": "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicy}/scheduleRunTimes"
       },
       {
+        "addr": "properties{AzureIaasVM}/snapshotConsistencyType",
+        "app_property_maps": [
+          {
+            "name": "azurerm_backup_policy_vm",
+            "addr": "/consistency_type"
+          }
+        ]
+      },
+      {
         "addr": "properties{AzureIaasVM}/tieringPolicy"
       },
       {
@@ -122844,6 +122912,15 @@
       },
       {
         "addr": "properties{AzureIaasVM}/schedulePolicy{SimpleSchedulePolicy}/scheduleRunTimes"
+      },
+      {
+        "addr": "properties{AzureIaasVM}/snapshotConsistencyType",
+        "app_property_maps": [
+          {
+            "name": "azurerm_backup_policy_vm",
+            "addr": "/consistency_type"
+          }
+        ]
       },
       {
         "addr": "properties{AzureIaasVM}/tieringPolicy"
