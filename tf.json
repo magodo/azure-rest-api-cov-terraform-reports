@@ -26889,7 +26889,13 @@
         "addr": "properties{DirectLineSpeechChannel}/channelName"
       },
       {
-        "addr": "properties{DirectLineSpeechChannel}/properties/cognitiveServiceRegion"
+        "addr": "properties{DirectLineSpeechChannel}/properties/cognitiveServiceRegion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_bot_channel_direct_line_speech",
+            "addr": "/cognitive_service_location"
+          }
+        ]
       },
       {
         "addr": "properties{DirectLineSpeechChannel}/properties/cognitiveServiceResourceId",
@@ -26901,7 +26907,13 @@
         ]
       },
       {
-        "addr": "properties{DirectLineSpeechChannel}/properties/cognitiveServiceSubscriptionKey"
+        "addr": "properties{DirectLineSpeechChannel}/properties/cognitiveServiceSubscriptionKey",
+        "app_property_maps": [
+          {
+            "name": "azurerm_bot_channel_direct_line_speech",
+            "addr": "/cognitive_service_access_key"
+          }
+        ]
       },
       {
         "addr": "properties{DirectLineSpeechChannel}/properties/customSpeechModelId",
@@ -27199,7 +27211,13 @@
         "addr": "properties{DirectLineSpeechChannel}/channelName"
       },
       {
-        "addr": "properties{DirectLineSpeechChannel}/properties/cognitiveServiceRegion"
+        "addr": "properties{DirectLineSpeechChannel}/properties/cognitiveServiceRegion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_bot_channel_direct_line_speech",
+            "addr": "/cognitive_service_location"
+          }
+        ]
       },
       {
         "addr": "properties{DirectLineSpeechChannel}/properties/cognitiveServiceResourceId",
@@ -27211,7 +27229,13 @@
         ]
       },
       {
-        "addr": "properties{DirectLineSpeechChannel}/properties/cognitiveServiceSubscriptionKey"
+        "addr": "properties{DirectLineSpeechChannel}/properties/cognitiveServiceSubscriptionKey",
+        "app_property_maps": [
+          {
+            "name": "azurerm_bot_channel_direct_line_speech",
+            "addr": "/cognitive_service_access_key"
+          }
+        ]
       },
       {
         "addr": "properties{DirectLineSpeechChannel}/properties/customSpeechModelId",
@@ -27509,7 +27533,13 @@
         "addr": "properties{DirectLineSpeechChannel}/channelName"
       },
       {
-        "addr": "properties{DirectLineSpeechChannel}/properties/cognitiveServiceRegion"
+        "addr": "properties{DirectLineSpeechChannel}/properties/cognitiveServiceRegion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_bot_channel_direct_line_speech",
+            "addr": "/cognitive_service_location"
+          }
+        ]
       },
       {
         "addr": "properties{DirectLineSpeechChannel}/properties/cognitiveServiceResourceId",
@@ -27521,7 +27551,13 @@
         ]
       },
       {
-        "addr": "properties{DirectLineSpeechChannel}/properties/cognitiveServiceSubscriptionKey"
+        "addr": "properties{DirectLineSpeechChannel}/properties/cognitiveServiceSubscriptionKey",
+        "app_property_maps": [
+          {
+            "name": "azurerm_bot_channel_direct_line_speech",
+            "addr": "/cognitive_service_access_key"
+          }
+        ]
       },
       {
         "addr": "properties{DirectLineSpeechChannel}/properties/customSpeechModelId",
@@ -36183,9 +36219,6 @@
         "addr": "properties/activeKey/keyUrl"
       },
       {
-        "addr": "properties/activeKey/sourceVault/id"
-      },
-      {
         "addr": "properties/encryptionType",
         "app_property_maps": [
           {
@@ -36238,9 +36271,6 @@
         "addr": "properties/activeKey/keyUrl"
       },
       {
-        "addr": "properties/activeKey/sourceVault/id"
-      },
-      {
         "addr": "properties/federatedClientId",
         "app_property_maps": [
           {
@@ -36291,9 +36321,6 @@
       },
       {
         "addr": "properties/activeKey/keyUrl"
-      },
-      {
-        "addr": "properties/activeKey/sourceVault/id"
       },
       {
         "addr": "properties/encryptionType",
@@ -52030,13 +52057,7 @@
         "addr": "properties/kubeletConfig/allowedUnsafeSysctls"
       },
       {
-        "addr": "properties/kubeletConfig/containerLogMaxFiles",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_cluster_node_pool",
-            "addr": "/kubelet_config/0/container_log_max_line"
-          }
-        ]
+        "addr": "properties/kubeletConfig/containerLogMaxFiles"
       },
       {
         "addr": "properties/kubeletConfig/containerLogMaxSizeMB",
@@ -52727,13 +52748,7 @@
         "addr": "properties/kubeletConfig/allowedUnsafeSysctls"
       },
       {
-        "addr": "properties/kubeletConfig/containerLogMaxFiles",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_cluster_node_pool",
-            "addr": "/kubelet_config/0/container_log_max_line"
-          }
-        ]
+        "addr": "properties/kubeletConfig/containerLogMaxFiles"
       },
       {
         "addr": "properties/kubeletConfig/containerLogMaxSizeMB",
@@ -81174,6 +81189,24 @@
     "operation": "GET",
     "properties": [
       {
+        "addr": "properties/captureDescription/destination/identity/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_eventhub",
+            "addr": "/capture_description/0/destination/0/storage_authentication_type"
+          }
+        ]
+      },
+      {
+        "addr": "properties/captureDescription/destination/identity/userAssignedIdentity",
+        "app_property_maps": [
+          {
+            "name": "azurerm_eventhub",
+            "addr": "/capture_description/0/destination/0/storage_authentication_id"
+          }
+        ]
+      },
+      {
         "addr": "properties/captureDescription/destination/name",
         "app_property_maps": [
           {
@@ -81288,6 +81321,24 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.EVENTHUB/NAMESPACES/{}/EVENTHUBS/{}",
     "operation": "PUT",
     "properties": [
+      {
+        "addr": "properties/captureDescription/destination/identity/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_eventhub",
+            "addr": "/capture_description/0/destination/0/storage_authentication_type"
+          }
+        ]
+      },
+      {
+        "addr": "properties/captureDescription/destination/identity/userAssignedIdentity",
+        "app_property_maps": [
+          {
+            "name": "azurerm_eventhub",
+            "addr": "/capture_description/0/destination/0/storage_authentication_id"
+          }
+        ]
+      },
       {
         "addr": "properties/captureDescription/destination/name",
         "app_property_maps": [
@@ -133144,6 +133195,9 @@
         "addr": "properties/sourceDatabaseId"
       },
       {
+        "addr": "properties/status"
+      },
+      {
         "addr": "tags"
       }
     ]
@@ -133167,6 +133221,9 @@
       },
       {
         "addr": "properties/sourceDatabaseId"
+      },
+      {
+        "addr": "properties/status"
       },
       {
         "addr": "tags"
@@ -137667,12 +137724,12 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}",
     "operation": "GET",
     "properties": [
@@ -138350,7 +138407,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -138506,7 +138563,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}",
     "operation": "PUT",
     "properties": [
@@ -138866,12 +138923,12 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/BLOBSERVICES/DEFAULT/CONTAINERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/BLOBSERVICES/DEFAULT/CONTAINERS/{}",
     "operation": "GET",
     "properties": [
@@ -138902,7 +138959,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/BLOBSERVICES/DEFAULT/CONTAINERS/{}",
     "operation": "PATCH",
     "properties": [
@@ -138933,7 +138990,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/BLOBSERVICES/DEFAULT/CONTAINERS/{}",
     "operation": "PUT",
     "properties": [
@@ -138964,12 +139021,12 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/BLOBSERVICES/DEFAULT/CONTAINERS/{}/IMMUTABILITYPOLICIES/DEFAULT",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/BLOBSERVICES/DEFAULT/CONTAINERS/{}/IMMUTABILITYPOLICIES/DEFAULT",
     "operation": "GET",
     "properties": [
@@ -138997,7 +139054,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/BLOBSERVICES/DEFAULT/CONTAINERS/{}/IMMUTABILITYPOLICIES/DEFAULT",
     "operation": "PUT",
     "properties": [
@@ -139025,12 +139082,12 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/BLOBSERVICES/DEFAULT/CONTAINERS/{}/IMMUTABILITYPOLICIES/DEFAULT/LOCK",
     "operation": "POST"
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/ENCRYPTIONSCOPES/{}",
     "operation": "GET",
     "properties": [
@@ -139067,7 +139124,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/ENCRYPTIONSCOPES/{}",
     "operation": "PATCH",
     "properties": [
@@ -139104,7 +139161,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/ENCRYPTIONSCOPES/{}",
     "operation": "PUT",
     "properties": [
@@ -139141,12 +139198,12 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/FILESERVICES/DEFAULT/SHARES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/FILESERVICES/DEFAULT/SHARES/{}",
     "operation": "GET",
     "properties": [
@@ -139195,7 +139252,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/FILESERVICES/DEFAULT/SHARES/{}",
     "operation": "PATCH",
     "properties": [
@@ -139244,12 +139301,12 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/INVENTORYPOLICIES/DEFAULT",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/INVENTORYPOLICIES/DEFAULT",
     "operation": "GET",
     "properties": [
@@ -139301,7 +139358,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/INVENTORYPOLICIES/DEFAULT",
     "operation": "PUT",
     "properties": [
@@ -139353,17 +139410,17 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/LISTKEYS",
     "operation": "POST"
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/LOCALUSERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/LOCALUSERS/{}",
     "operation": "GET",
     "properties": [
@@ -139409,7 +139466,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/LOCALUSERS/{}",
     "operation": "PUT",
     "properties": [
@@ -139455,17 +139512,17 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/LOCALUSERS/{}/REGENERATEPASSWORD",
     "operation": "POST"
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/MANAGEMENTPOLICIES/DEFAULT",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/MANAGEMENTPOLICIES/DEFAULT",
     "operation": "GET",
     "properties": [
@@ -139598,7 +139655,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/MANAGEMENTPOLICIES/DEFAULT",
     "operation": "PUT",
     "properties": [
@@ -139731,7 +139788,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/OBJECTREPLICATIONPOLICIES",
     "operation": "GET",
     "properties": [
@@ -139765,12 +139822,12 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/OBJECTREPLICATIONPOLICIES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/OBJECTREPLICATIONPOLICIES/{}",
     "operation": "GET",
     "properties": [
@@ -139804,7 +139861,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/OBJECTREPLICATIONPOLICIES/{}",
     "operation": "PUT",
     "properties": [
@@ -139838,12 +139895,12 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/QUEUESERVICES/DEFAULT/QUEUES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/QUEUESERVICES/DEFAULT/QUEUES/{}",
     "operation": "GET",
     "properties": [
@@ -139853,7 +139910,7 @@
     ]
   },
   {
-    "api_version": "2025-06-01",
+    "api_version": "2025-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/QUEUESERVICES/DEFAULT/QUEUES/{}",
     "operation": "PUT",
     "properties": [
