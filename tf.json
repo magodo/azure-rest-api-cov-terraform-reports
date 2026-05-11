@@ -3382,7 +3382,7 @@
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/LOCATIONS/{}/RESTORABLEDATABASEACCOUNTS",
     "operation": "GET",
     "properties": [
@@ -3853,7 +3853,7 @@
     ]
   },
   {
-    "api_version": "2022-10-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES",
     "operation": "GET",
     "properties": [
@@ -29780,11 +29780,6 @@
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-02-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}",
-    "operation": "DELETE"
-  },
-  {
     "api_version": "2020-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}",
     "operation": "GET",
@@ -30280,12 +30275,12 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2025-04-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/CUSTOMDOMAINS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2025-04-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/CUSTOMDOMAINS/{}",
     "operation": "GET",
     "properties": [
@@ -30317,13 +30312,22 @@
         ]
       },
       {
-        "addr": "properties/tlsSettings/minimumTlsVersion",
+        "addr": "properties/tlsSettings/cipherSuiteSetType",
         "app_property_maps": [
           {
             "name": "azurerm_cdn_frontdoor_custom_domain",
-            "addr": "/tls/0/minimum_tls_version"
+            "addr": "/tls/0/cipher_suite/0/type"
           }
         ]
+      },
+      {
+        "addr": "properties/tlsSettings/customizedCipherSuiteSet/cipherSuiteSetForTls12"
+      },
+      {
+        "addr": "properties/tlsSettings/customizedCipherSuiteSet/cipherSuiteSetForTls13"
+      },
+      {
+        "addr": "properties/tlsSettings/minimumTlsVersion"
       },
       {
         "addr": "properties/tlsSettings/secret/id",
@@ -30355,7 +30359,7 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2025-04-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/CUSTOMDOMAINS/{}",
     "operation": "PATCH",
     "properties": [
@@ -30378,13 +30382,22 @@
         ]
       },
       {
-        "addr": "properties/tlsSettings/minimumTlsVersion",
+        "addr": "properties/tlsSettings/cipherSuiteSetType",
         "app_property_maps": [
           {
             "name": "azurerm_cdn_frontdoor_custom_domain",
-            "addr": "/tls/0/minimum_tls_version"
+            "addr": "/tls/0/cipher_suite/0/type"
           }
         ]
+      },
+      {
+        "addr": "properties/tlsSettings/customizedCipherSuiteSet/cipherSuiteSetForTls12"
+      },
+      {
+        "addr": "properties/tlsSettings/customizedCipherSuiteSet/cipherSuiteSetForTls13"
+      },
+      {
+        "addr": "properties/tlsSettings/minimumTlsVersion"
       },
       {
         "addr": "properties/tlsSettings/secret/id",
@@ -30398,7 +30411,7 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2025-04-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/CUSTOMDOMAINS/{}",
     "operation": "PUT",
     "properties": [
@@ -30430,13 +30443,22 @@
         ]
       },
       {
-        "addr": "properties/tlsSettings/minimumTlsVersion",
+        "addr": "properties/tlsSettings/cipherSuiteSetType",
         "app_property_maps": [
           {
             "name": "azurerm_cdn_frontdoor_custom_domain",
-            "addr": "/tls/0/minimum_tls_version"
+            "addr": "/tls/0/cipher_suite/0/type"
           }
         ]
+      },
+      {
+        "addr": "properties/tlsSettings/customizedCipherSuiteSet/cipherSuiteSetForTls12"
+      },
+      {
+        "addr": "properties/tlsSettings/customizedCipherSuiteSet/cipherSuiteSetForTls13"
+      },
+      {
+        "addr": "properties/tlsSettings/minimumTlsVersion"
       },
       {
         "addr": "properties/tlsSettings/secret/id",
@@ -74451,19 +74473,6 @@
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-10-15",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}",
-    "operation": "GET",
-    "properties": [
-      {
-        "addr": "id"
-      },
-      {
-        "addr": "properties/capabilities/name"
-      }
-    ]
-  },
-  {
     "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}",
     "operation": "GET",
@@ -75118,18 +75127,15 @@
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/CASSANDRAKEYSPACES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/CASSANDRAKEYSPACES/{}",
     "operation": "GET",
     "properties": [
-      {
-        "addr": "id"
-      },
       {
         "addr": "properties/resource/id",
         "app_property_maps": [
@@ -75142,13 +75148,10 @@
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/CASSANDRAKEYSPACES/{}",
     "operation": "PUT",
     "properties": [
-      {
-        "addr": "properties/options"
-      },
       {
         "addr": "properties/options/autoscaleSettings/maxThroughput"
       },
@@ -75167,12 +75170,12 @@
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/CASSANDRAKEYSPACES/{}/TABLES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/CASSANDRAKEYSPACES/{}/TABLES/{}",
     "operation": "GET",
     "properties": [
@@ -75195,15 +75198,6 @@
         ]
       },
       {
-        "addr": "properties/resource/id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_cosmosdb_cassandra_table",
-            "addr": "/name"
-          }
-        ]
-      },
-      {
         "addr": "properties/resource/schema/clusterKeys/name"
       },
       {
@@ -75221,7 +75215,7 @@
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/CASSANDRAKEYSPACES/{}/TABLES/{}",
     "operation": "PUT",
     "properties": [
@@ -75253,13 +75247,7 @@
         ]
       },
       {
-        "addr": "properties/resource/id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_cosmosdb_cassandra_table",
-            "addr": "/name"
-          }
-        ]
+        "addr": "properties/resource/id"
       },
       {
         "addr": "properties/resource/schema/clusterKeys/name"
@@ -75279,7 +75267,7 @@
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/CASSANDRAKEYSPACES/{}/TABLES/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "GET",
     "properties": [
@@ -75304,7 +75292,7 @@
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/CASSANDRAKEYSPACES/{}/TABLES/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "PUT",
     "properties": [
@@ -75329,7 +75317,7 @@
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/CASSANDRAKEYSPACES/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "GET",
     "properties": [
@@ -75354,7 +75342,7 @@
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/CASSANDRAKEYSPACES/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "PUT",
     "properties": [
@@ -75386,22 +75374,6 @@
   {
     "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/GREMLINDATABASES/{}",
-    "operation": "GET",
-    "properties": [
-      {
-        "addr": "properties/resource/id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_cosmosdb_gremlin_database",
-            "addr": "/name"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "api_version": "2024-08-15",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/GREMLINDATABASES/{}",
     "operation": "PUT",
     "properties": [
       {
@@ -75414,13 +75386,7 @@
         "addr": "properties/options/throughput"
       },
       {
-        "addr": "properties/resource/id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_cosmosdb_gremlin_database",
-            "addr": "/name"
-          }
-        ]
+        "addr": "properties/resource/id"
       }
     ]
   },
@@ -75752,85 +75718,52 @@
     "operation": "POST"
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/MONGODBDATABASES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/MONGODBDATABASES/{}",
     "operation": "GET",
     "properties": [
-      {
-        "addr": "id"
-      },
-      {
-        "addr": "properties/resource/id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_cosmosdb_mongo_database",
-            "addr": "/name"
-          }
-        ]
-      },
       {
         "addr": "tags"
       }
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/MONGODBDATABASES/{}",
     "operation": "PUT",
     "properties": [
       {
-        "addr": "properties/options"
-      },
-      {
         "addr": "properties/options/autoscaleSettings/maxThroughput"
       },
       {
         "addr": "properties/options/throughput"
       },
       {
-        "addr": "properties/resource/id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_cosmosdb_mongo_database",
-            "addr": "/name"
-          }
-        ]
+        "addr": "properties/resource/id"
       }
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/MONGODBDATABASES/{}/COLLECTIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/MONGODBDATABASES/{}/COLLECTIONS/{}",
     "operation": "GET",
     "properties": [
-      {
-        "addr": "id"
-      },
       {
         "addr": "properties/resource/analyticalStorageTtl",
         "app_property_maps": [
           {
             "name": "azurerm_cosmosdb_mongo_collection",
             "addr": "/analytical_storage_ttl"
-          }
-        ]
-      },
-      {
-        "addr": "properties/resource/id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_cosmosdb_mongo_collection",
-            "addr": "/name"
           }
         ]
       },
@@ -75849,7 +75782,7 @@
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/MONGODBDATABASES/{}/COLLECTIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -75872,13 +75805,7 @@
         ]
       },
       {
-        "addr": "properties/resource/id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_cosmosdb_mongo_collection",
-            "addr": "/name"
-          }
-        ]
+        "addr": "properties/resource/id"
       },
       {
         "addr": "properties/resource/indexes/key/keys"
@@ -75895,7 +75822,7 @@
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/MONGODBDATABASES/{}/COLLECTIONS/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "GET",
     "properties": [
@@ -75920,7 +75847,7 @@
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/MONGODBDATABASES/{}/COLLECTIONS/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "PUT",
     "properties": [
@@ -75945,7 +75872,7 @@
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/MONGODBDATABASES/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "GET",
     "properties": [
@@ -75970,7 +75897,7 @@
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/MONGODBDATABASES/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "PUT",
     "properties": [
@@ -76183,37 +76110,15 @@
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-10-15",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}",
-    "operation": "GET",
-    "properties": [
-      {
-        "addr": "id"
-      },
-      {
-        "addr": "properties/resource/id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_cosmosdb_sql_database",
-            "addr": "/name"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}",
     "operation": "PUT",
     "properties": [
-      {
-        "addr": "properties/options"
-      },
       {
         "addr": "properties/options/autoscaleSettings/maxThroughput"
       },
@@ -76221,13 +76126,7 @@
         "addr": "properties/options/throughput"
       },
       {
-        "addr": "properties/resource/id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_cosmosdb_sql_database",
-            "addr": "/name"
-          }
-        ]
+        "addr": "properties/resource/id"
       }
     ]
   },
@@ -76455,18 +76354,15 @@
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/CONTAINERS/{}/STOREDPROCEDURES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/CONTAINERS/{}/STOREDPROCEDURES/{}",
     "operation": "GET",
     "properties": [
-      {
-        "addr": "id"
-      },
       {
         "addr": "properties/resource/body",
         "app_property_maps": [
@@ -76479,7 +76375,7 @@
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/CONTAINERS/{}/STOREDPROCEDURES/{}",
     "operation": "PUT",
     "properties": [
@@ -76551,12 +76447,12 @@
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/CONTAINERS/{}/TRIGGERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/CONTAINERS/{}/TRIGGERS/{}",
     "operation": "GET",
     "properties": [
@@ -76590,7 +76486,7 @@
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/CONTAINERS/{}/TRIGGERS/{}",
     "operation": "PUT",
     "properties": [
@@ -76630,12 +76526,12 @@
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/CONTAINERS/{}/USERDEFINEDFUNCTIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/CONTAINERS/{}/USERDEFINEDFUNCTIONS/{}",
     "operation": "GET",
     "properties": [
@@ -76651,7 +76547,7 @@
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/CONTAINERS/{}/USERDEFINEDFUNCTIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -76673,7 +76569,7 @@
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "GET",
     "properties": [
@@ -76698,7 +76594,7 @@
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLDATABASES/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "PUT",
     "properties": [
@@ -76723,12 +76619,12 @@
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLROLEASSIGNMENTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLROLEASSIGNMENTS/{}",
     "operation": "GET",
     "properties": [
@@ -76762,7 +76658,7 @@
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLROLEASSIGNMENTS/{}",
     "operation": "PUT",
     "properties": [
@@ -76796,12 +76692,12 @@
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLROLEDEFINITIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLROLEDEFINITIONS/{}",
     "operation": "GET",
     "properties": [
@@ -76832,7 +76728,7 @@
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/SQLROLEDEFINITIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -76863,37 +76759,15 @@
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/TABLES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-10-15",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/TABLES/{}",
-    "operation": "GET",
-    "properties": [
-      {
-        "addr": "id"
-      },
-      {
-        "addr": "properties/resource/id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_cosmosdb_table",
-            "addr": "/name"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/TABLES/{}",
     "operation": "PUT",
     "properties": [
-      {
-        "addr": "properties/options"
-      },
       {
         "addr": "properties/options/autoscaleSettings/maxThroughput"
       },
@@ -76901,18 +76775,12 @@
         "addr": "properties/options/throughput"
       },
       {
-        "addr": "properties/resource/id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_cosmosdb_table",
-            "addr": "/name"
-          }
-        ]
+        "addr": "properties/resource/id"
       }
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/TABLES/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "GET",
     "properties": [
@@ -76937,7 +76805,7 @@
     ]
   },
   {
-    "api_version": "2021-10-15",
+    "api_version": "2024-08-15",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/DATABASEACCOUNTS/{}/TABLES/{}/THROUGHPUTSETTINGS/DEFAULT",
     "operation": "PUT",
     "properties": [
@@ -116610,7 +116478,7 @@
     ]
   },
   {
-    "api_version": "2022-10-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}",
     "operation": "GET",
     "properties": [
@@ -116719,7 +116587,7 @@
     ]
   },
   {
-    "api_version": "2022-10-01",
+    "api_version": "2023-09-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.OPERATIONALINSIGHTS/WORKSPACES/{}",
     "operation": "PUT",
     "properties": [
