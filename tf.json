@@ -33527,12 +33527,12 @@
     ]
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2023-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CERTIFICATEREGISTRATION/CERTIFICATEORDERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2023-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CERTIFICATEREGISTRATION/CERTIFICATEORDERS/{}",
     "operation": "GET",
     "properties": [
@@ -33542,15 +33542,6 @@
           {
             "name": "azurerm_app_service_certificate_order",
             "addr": "/location"
-          }
-        ]
-      },
-      {
-        "addr": "name",
-        "app_property_maps": [
-          {
-            "name": "azurerm_app_service_certificate_order",
-            "addr": "/name"
           }
         ]
       },
@@ -33665,7 +33656,7 @@
     ]
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2023-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CERTIFICATEREGISTRATION/CERTIFICATEORDERS/{}",
     "operation": "PUT",
     "properties": [
@@ -33675,15 +33666,6 @@
           {
             "name": "azurerm_app_service_certificate_order",
             "addr": "/location"
-          }
-        ]
-      },
-      {
-        "addr": "name",
-        "app_property_maps": [
-          {
-            "name": "azurerm_app_service_certificate_order",
-            "addr": "/name"
           }
         ]
       },
@@ -59126,6 +59108,26 @@
         ]
       }
     ]
+  },
+  {
+    "api_version": "2018-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAFACTORY/FACTORIES/{}/INTEGRATIONRUNTIMES/{}/DISABLEINTERACTIVEQUERY",
+    "operation": "POST"
+  },
+  {
+    "api_version": "2018-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAFACTORY/FACTORIES/{}/INTEGRATIONRUNTIMES/{}/ENABLEINTERACTIVEQUERY",
+    "operation": "POST",
+    "properties": [
+      {
+        "addr": "autoTerminationMinutes"
+      }
+    ]
+  },
+  {
+    "api_version": "2018-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAFACTORY/FACTORIES/{}/INTEGRATIONRUNTIMES/{}/GETSTATUS",
+    "operation": "POST"
   },
   {
     "api_version": "2018-06-01",
@@ -148237,12 +148239,12 @@
     ]
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2023-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/CERTIFICATES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2023-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/CERTIFICATES/{}",
     "operation": "GET",
     "properties": [
@@ -148252,15 +148254,6 @@
           {
             "name": "azurerm_app_service_certificate",
             "addr": "/location"
-          }
-        ]
-      },
-      {
-        "addr": "name",
-        "app_property_maps": [
-          {
-            "name": "azurerm_app_service_certificate",
-            "addr": "/name"
           }
         ]
       },
@@ -148350,7 +148343,13 @@
         "addr": "properties/pfxBlob"
       },
       {
-        "addr": "properties/serverFarmId"
+        "addr": "properties/serverFarmId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_app_service_certificate",
+            "addr": "/app_service_plan_id"
+          }
+        ]
       },
       {
         "addr": "properties/subjectName",
@@ -148384,7 +148383,17 @@
     ]
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2023-12-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/CERTIFICATES/{}",
+    "operation": "PATCH",
+    "properties": [
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2023-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/CERTIFICATES/{}",
     "operation": "PUT",
     "properties": [
@@ -148394,15 +148403,6 @@
           {
             "name": "azurerm_app_service_certificate",
             "addr": "/location"
-          }
-        ]
-      },
-      {
-        "addr": "name",
-        "app_property_maps": [
-          {
-            "name": "azurerm_app_service_certificate",
-            "addr": "/name"
           }
         ]
       },
@@ -148492,7 +148492,13 @@
         "addr": "properties/pfxBlob"
       },
       {
-        "addr": "properties/serverFarmId"
+        "addr": "properties/serverFarmId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_app_service_certificate",
+            "addr": "/app_service_plan_id"
+          }
+        ]
       },
       {
         "addr": "properties/subjectName",
@@ -149218,19 +149224,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}",
     "operation": "GET",
     "properties": [
-      {
-        "addr": "id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_app_service_slot_virtual_network_swift_connection",
-            "addr": "/app_service_id"
-          },
-          {
-            "name": "azurerm_app_service_virtual_network_swift_connection",
-            "addr": "/app_service_id"
-          }
-        ]
-      },
       {
         "addr": "identity/principalId"
       },
@@ -150127,6 +150120,9 @@
       },
       {
         "addr": "properties/siteConfig/managedPipelineMode"
+      },
+      {
+        "addr": "properties/siteConfig/minTlsCipherSuite"
       },
       {
         "addr": "properties/siteConfig/minTlsVersion"
@@ -150292,17 +150288,7 @@
     "operation": "PATCH",
     "properties": [
       {
-        "addr": "id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_app_service_slot_virtual_network_swift_connection",
-            "addr": "/app_service_id"
-          },
-          {
-            "name": "azurerm_app_service_virtual_network_swift_connection",
-            "addr": "/app_service_id"
-          }
-        ]
+        "addr": "id"
       },
       {
         "addr": "identity/principalId"
@@ -150336,19 +150322,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}",
     "operation": "PUT",
     "properties": [
-      {
-        "addr": "id",
-        "app_property_maps": [
-          {
-            "name": "azurerm_app_service_slot_virtual_network_swift_connection",
-            "addr": "/app_service_id"
-          },
-          {
-            "name": "azurerm_app_service_virtual_network_swift_connection",
-            "addr": "/app_service_id"
-          }
-        ]
-      },
       {
         "addr": "identity/principalId"
       },
@@ -151245,6 +151218,9 @@
       },
       {
         "addr": "properties/siteConfig/managedPipelineMode"
+      },
+      {
+        "addr": "properties/siteConfig/minTlsCipherSuite"
       },
       {
         "addr": "properties/siteConfig/minTlsVersion"
@@ -153562,6 +153538,31 @@
         ]
       },
       {
+        "addr": "properties/minTlsCipherSuite",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_function_app",
+            "addr": "/site_config/0/minimum_tls_cipher_suite"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/site_config/0/minimum_tls_cipher_suite"
+          },
+          {
+            "name": "azurerm_linux_web_app",
+            "addr": "/site_config/0/minimum_tls_cipher_suite"
+          },
+          {
+            "name": "azurerm_windows_function_app",
+            "addr": "/site_config/0/minimum_tls_cipher_suite"
+          },
+          {
+            "name": "azurerm_windows_web_app",
+            "addr": "/site_config/0/minimum_tls_cipher_suite"
+          }
+        ]
+      },
+      {
         "addr": "properties/minTlsVersion",
         "app_property_maps": [
           {
@@ -154339,6 +154340,31 @@
         ]
       },
       {
+        "addr": "properties/minTlsCipherSuite",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_function_app",
+            "addr": "/site_config/0/minimum_tls_cipher_suite"
+          },
+          {
+            "name": "azurerm_linux_function_app_slot",
+            "addr": "/site_config/0/minimum_tls_cipher_suite"
+          },
+          {
+            "name": "azurerm_linux_web_app",
+            "addr": "/site_config/0/minimum_tls_cipher_suite"
+          },
+          {
+            "name": "azurerm_windows_function_app",
+            "addr": "/site_config/0/minimum_tls_cipher_suite"
+          },
+          {
+            "name": "azurerm_windows_web_app",
+            "addr": "/site_config/0/minimum_tls_cipher_suite"
+          }
+        ]
+      },
+      {
         "addr": "properties/minTlsVersion",
         "app_property_maps": [
           {
@@ -155110,23 +155136,20 @@
     ]
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2023-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/HOST/DEFAULT/LISTKEYS",
     "operation": "POST"
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2023-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/HOSTNAMEBINDINGS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2023-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/HOSTNAMEBINDINGS/{}",
     "operation": "GET",
     "properties": [
-      {
-        "addr": "id"
-      },
       {
         "addr": "properties/siteName"
       },
@@ -155160,13 +155183,10 @@
     ]
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2023-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/HOSTNAMEBINDINGS/{}",
     "operation": "PUT",
     "properties": [
-      {
-        "addr": "id"
-      },
       {
         "addr": "properties/siteName"
       },
@@ -155540,17 +155560,12 @@
     ]
   },
   {
-    "api_version": "2021-02-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/NETWORKCONFIG/VIRTUALNETWORK",
-    "operation": "DELETE"
-  },
-  {
     "api_version": "2023-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/NETWORKCONFIG/VIRTUALNETWORK",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2023-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/NETWORKCONFIG/VIRTUALNETWORK",
     "operation": "GET",
     "properties": [
@@ -155569,7 +155584,7 @@
     ]
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2023-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/NETWORKCONFIG/VIRTUALNETWORK",
     "operation": "PUT",
     "properties": [
@@ -155675,9 +155690,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}",
     "operation": "GET",
     "properties": [
-      {
-        "addr": "id"
-      },
       {
         "addr": "identity/principalId"
       },
@@ -156200,6 +156212,9 @@
       },
       {
         "addr": "properties/siteConfig/managedPipelineMode"
+      },
+      {
+        "addr": "properties/siteConfig/minTlsCipherSuite"
       },
       {
         "addr": "properties/siteConfig/minTlsVersion"
@@ -156364,9 +156379,6 @@
     "operation": "PUT",
     "properties": [
       {
-        "addr": "id"
-      },
-      {
         "addr": "identity/principalId"
       },
       {
@@ -156888,6 +156900,9 @@
       },
       {
         "addr": "properties/siteConfig/managedPipelineMode"
+      },
+      {
+        "addr": "properties/siteConfig/minTlsCipherSuite"
       },
       {
         "addr": "properties/siteConfig/minTlsVersion"
@@ -159034,6 +159049,23 @@
         ]
       },
       {
+        "addr": "properties/minTlsCipherSuite",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_web_app_slot",
+            "addr": "/site_config/0/minimum_tls_cipher_suite"
+          },
+          {
+            "name": "azurerm_windows_function_app_slot",
+            "addr": "/site_config/0/minimum_tls_cipher_suite"
+          },
+          {
+            "name": "azurerm_windows_web_app_slot",
+            "addr": "/site_config/0/minimum_tls_cipher_suite"
+          }
+        ]
+      },
+      {
         "addr": "properties/minTlsVersion",
         "app_property_maps": [
           {
@@ -159687,6 +159719,23 @@
         ]
       },
       {
+        "addr": "properties/minTlsCipherSuite",
+        "app_property_maps": [
+          {
+            "name": "azurerm_linux_web_app_slot",
+            "addr": "/site_config/0/minimum_tls_cipher_suite"
+          },
+          {
+            "name": "azurerm_windows_function_app_slot",
+            "addr": "/site_config/0/minimum_tls_cipher_suite"
+          },
+          {
+            "name": "azurerm_windows_web_app_slot",
+            "addr": "/site_config/0/minimum_tls_cipher_suite"
+          }
+        ]
+      },
+      {
         "addr": "properties/minTlsVersion",
         "app_property_maps": [
           {
@@ -160215,19 +160264,16 @@
     ]
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2023-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/HOSTNAMEBINDINGS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2023-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/HOSTNAMEBINDINGS/{}",
     "operation": "GET",
     "properties": [
       {
-        "addr": "id"
-      },
-      {
         "addr": "properties/siteName"
       },
       {
@@ -160260,14 +160306,11 @@
     ]
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2023-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/HOSTNAMEBINDINGS/{}",
     "operation": "PUT",
     "properties": [
       {
-        "addr": "id"
-      },
-      {
         "addr": "properties/siteName"
       },
       {
@@ -160298,11 +160341,6 @@
         ]
       }
     ]
-  },
-  {
-    "api_version": "2021-02-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/NETWORKCONFIG/VIRTUALNETWORK",
-    "operation": "DELETE"
   },
   {
     "api_version": "2023-12-01",
@@ -160310,7 +160348,7 @@
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2023-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/NETWORKCONFIG/VIRTUALNETWORK",
     "operation": "GET",
     "properties": [
@@ -160329,7 +160367,7 @@
     ]
   },
   {
-    "api_version": "2021-02-01",
+    "api_version": "2023-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/NETWORKCONFIG/VIRTUALNETWORK",
     "operation": "PUT",
     "properties": [
