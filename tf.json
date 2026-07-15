@@ -3216,19 +3216,6 @@
     ]
   },
   {
-    "api_version": "2025-11-01",
-    "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.CONTAINERREGISTRY/CHECKNAMEAVAILABILITY",
-    "operation": "POST",
-    "properties": [
-      {
-        "addr": "name"
-      },
-      {
-        "addr": "type"
-      }
-    ]
-  },
-  {
     "api_version": "2019-08-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/LOCATIONS/{}/ORCHESTRATORS",
     "operation": "GET",
@@ -3371,7 +3358,7 @@
     ]
   },
   {
-    "api_version": "2023-02-01",
+    "api_version": "2026-02-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.KEYVAULT/LOCATIONS/{}/DELETEDVAULTS/{}",
     "operation": "GET",
     "properties": [
@@ -3384,7 +3371,7 @@
     ]
   },
   {
-    "api_version": "2023-02-01",
+    "api_version": "2026-02-01",
     "api_path": "/SUBSCRIPTIONS/{}/PROVIDERS/MICROSOFT.KEYVAULT/LOCATIONS/{}/DELETEDVAULTS/{}/PURGE",
     "operation": "POST"
   },
@@ -29739,7 +29726,7 @@
     ]
   },
   {
-    "api_version": "2024-02-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}",
     "operation": "GET",
     "properties": [
@@ -29819,7 +29806,7 @@
     ]
   },
   {
-    "api_version": "2024-02-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}",
     "operation": "PATCH",
     "properties": [
@@ -29893,7 +29880,7 @@
     ]
   },
   {
-    "api_version": "2024-02-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}",
     "operation": "PUT",
     "properties": [
@@ -29963,12 +29950,12 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/AFDENDPOINTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/AFDENDPOINTS/{}",
     "operation": "GET",
     "properties": [
@@ -29996,7 +29983,7 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/AFDENDPOINTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -30009,7 +29996,7 @@
     ]
   },
   {
-    "api_version": "2021-06-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/AFDENDPOINTS/{}",
     "operation": "PUT",
     "properties": [
@@ -30206,12 +30193,12 @@
     ]
   },
   {
-    "api_version": "2025-04-15",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/CUSTOMDOMAINS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-04-15",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/CUSTOMDOMAINS/{}",
     "operation": "GET",
     "properties": [
@@ -30290,7 +30277,7 @@
     ]
   },
   {
-    "api_version": "2025-04-15",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/CUSTOMDOMAINS/{}",
     "operation": "PATCH",
     "properties": [
@@ -30342,7 +30329,7 @@
     ]
   },
   {
-    "api_version": "2025-04-15",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/CUSTOMDOMAINS/{}",
     "operation": "PUT",
     "properties": [
@@ -31926,22 +31913,931 @@
     ]
   },
   {
-    "api_version": "2024-02-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/RULESETS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-02-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/RULESETS/{}",
-    "operation": "PUT"
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/batchMode",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cdn_frontdoor_rule",
+            "addr": "/actions/0/route_configuration_override_action/0/compression_enabled"
+          }
+        ]
+      },
+      {
+        "addr": "properties/rules/actions{CacheExpiration}/name"
+      },
+      {
+        "addr": "properties/rules/actions{CacheKeyQueryString}/name"
+      },
+      {
+        "addr": "properties/rules/actions{ModifyRequestHeader}/name"
+      },
+      {
+        "addr": "properties/rules/actions{ModifyRequestHeader}/parameters/headerAction"
+      },
+      {
+        "addr": "properties/rules/actions{ModifyRequestHeader}/parameters/headerName"
+      },
+      {
+        "addr": "properties/rules/actions{ModifyRequestHeader}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/actions{ModifyRequestHeader}/parameters/value"
+      },
+      {
+        "addr": "properties/rules/actions{ModifyResponseHeader}/name"
+      },
+      {
+        "addr": "properties/rules/actions{ModifyResponseHeader}/parameters/headerAction"
+      },
+      {
+        "addr": "properties/rules/actions{ModifyResponseHeader}/parameters/headerName"
+      },
+      {
+        "addr": "properties/rules/actions{ModifyResponseHeader}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/actions{ModifyResponseHeader}/parameters/value"
+      },
+      {
+        "addr": "properties/rules/actions{OriginGroupOverride}/name"
+      },
+      {
+        "addr": "properties/rules/actions{RouteConfigurationOverride}/name"
+      },
+      {
+        "addr": "properties/rules/actions{RouteConfigurationOverride}/parameters/cacheConfiguration/cacheBehavior"
+      },
+      {
+        "addr": "properties/rules/actions{RouteConfigurationOverride}/parameters/cacheConfiguration/cacheDuration"
+      },
+      {
+        "addr": "properties/rules/actions{RouteConfigurationOverride}/parameters/cacheConfiguration/isCompressionEnabled"
+      },
+      {
+        "addr": "properties/rules/actions{RouteConfigurationOverride}/parameters/cacheConfiguration/queryParameters"
+      },
+      {
+        "addr": "properties/rules/actions{RouteConfigurationOverride}/parameters/cacheConfiguration/queryStringCachingBehavior"
+      },
+      {
+        "addr": "properties/rules/actions{RouteConfigurationOverride}/parameters/originGroupOverride/forwardingProtocol"
+      },
+      {
+        "addr": "properties/rules/actions{RouteConfigurationOverride}/parameters/originGroupOverride/originGroup/id"
+      },
+      {
+        "addr": "properties/rules/actions{RouteConfigurationOverride}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/actions{UrlRedirect}/name"
+      },
+      {
+        "addr": "properties/rules/actions{UrlRedirect}/parameters/customFragment"
+      },
+      {
+        "addr": "properties/rules/actions{UrlRedirect}/parameters/customHostname"
+      },
+      {
+        "addr": "properties/rules/actions{UrlRedirect}/parameters/customPath"
+      },
+      {
+        "addr": "properties/rules/actions{UrlRedirect}/parameters/customQueryString"
+      },
+      {
+        "addr": "properties/rules/actions{UrlRedirect}/parameters/destinationProtocol"
+      },
+      {
+        "addr": "properties/rules/actions{UrlRedirect}/parameters/redirectType"
+      },
+      {
+        "addr": "properties/rules/actions{UrlRedirect}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/actions{UrlRewrite}/name"
+      },
+      {
+        "addr": "properties/rules/actions{UrlRewrite}/parameters/destination"
+      },
+      {
+        "addr": "properties/rules/actions{UrlRewrite}/parameters/preserveUnmatchedPath"
+      },
+      {
+        "addr": "properties/rules/actions{UrlRewrite}/parameters/sourcePattern"
+      },
+      {
+        "addr": "properties/rules/actions{UrlRewrite}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/actions{UrlSigning}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{ClientPort}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{ClientPort}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{ClientPort}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{ClientPort}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{ClientPort}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{Cookies}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{Cookies}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{Cookies}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{Cookies}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{Cookies}/parameters/selector"
+      },
+      {
+        "addr": "properties/rules/conditions{Cookies}/parameters/transforms"
+      },
+      {
+        "addr": "properties/rules/conditions{Cookies}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{HostName}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{HostName}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{HostName}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{HostName}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{HostName}/parameters/transforms"
+      },
+      {
+        "addr": "properties/rules/conditions{HostName}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{HttpVersion}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{HttpVersion}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{HttpVersion}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{HttpVersion}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{HttpVersion}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{IsDevice}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{IsDevice}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{IsDevice}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{IsDevice}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{IsDevice}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{PostArgs}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{PostArgs}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{PostArgs}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{PostArgs}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{PostArgs}/parameters/selector"
+      },
+      {
+        "addr": "properties/rules/conditions{PostArgs}/parameters/transforms"
+      },
+      {
+        "addr": "properties/rules/conditions{PostArgs}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{QueryString}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{QueryString}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{QueryString}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{QueryString}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{QueryString}/parameters/transforms"
+      },
+      {
+        "addr": "properties/rules/conditions{QueryString}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{RemoteAddress}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{RemoteAddress}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{RemoteAddress}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{RemoteAddress}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{RemoteAddress}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestBody}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestBody}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestBody}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestBody}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestBody}/parameters/transforms"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestBody}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestHeader}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestHeader}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestHeader}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestHeader}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestHeader}/parameters/selector"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestHeader}/parameters/transforms"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestHeader}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestMethod}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestMethod}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestMethod}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestMethod}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestMethod}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestScheme}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestScheme}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestScheme}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestScheme}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestScheme}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestUri}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestUri}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestUri}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestUri}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestUri}/parameters/transforms"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestUri}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{ServerPort}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{ServerPort}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{ServerPort}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{ServerPort}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{ServerPort}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{SocketAddr}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{SocketAddr}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{SocketAddr}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{SocketAddr}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{SocketAddr}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{SslProtocol}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{SslProtocol}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{SslProtocol}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{SslProtocol}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{SslProtocol}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlFileExtension}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlFileExtension}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlFileExtension}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlFileExtension}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlFileExtension}/parameters/transforms"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlFileExtension}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlFileName}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlFileName}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlFileName}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlFileName}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlFileName}/parameters/transforms"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlFileName}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlPath}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlPath}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlPath}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlPath}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlPath}/parameters/transforms"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlPath}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/matchProcessingBehavior"
+      },
+      {
+        "addr": "properties/rules/order"
+      },
+      {
+        "addr": "properties/rules/ruleName"
+      }
+    ]
   },
   {
-    "api_version": "2024-09-01",
+    "api_version": "2025-12-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/RULESETS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "properties/batchMode",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cdn_frontdoor_rule",
+            "addr": "/actions/0/route_configuration_override_action/0/compression_enabled"
+          }
+        ]
+      },
+      {
+        "addr": "properties/rules/actions{CacheExpiration}/name"
+      },
+      {
+        "addr": "properties/rules/actions{CacheKeyQueryString}/name"
+      },
+      {
+        "addr": "properties/rules/actions{ModifyRequestHeader}/name"
+      },
+      {
+        "addr": "properties/rules/actions{ModifyRequestHeader}/parameters/headerAction"
+      },
+      {
+        "addr": "properties/rules/actions{ModifyRequestHeader}/parameters/headerName"
+      },
+      {
+        "addr": "properties/rules/actions{ModifyRequestHeader}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/actions{ModifyRequestHeader}/parameters/value"
+      },
+      {
+        "addr": "properties/rules/actions{ModifyResponseHeader}/name"
+      },
+      {
+        "addr": "properties/rules/actions{ModifyResponseHeader}/parameters/headerAction"
+      },
+      {
+        "addr": "properties/rules/actions{ModifyResponseHeader}/parameters/headerName"
+      },
+      {
+        "addr": "properties/rules/actions{ModifyResponseHeader}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/actions{ModifyResponseHeader}/parameters/value"
+      },
+      {
+        "addr": "properties/rules/actions{OriginGroupOverride}/name"
+      },
+      {
+        "addr": "properties/rules/actions{RouteConfigurationOverride}/name"
+      },
+      {
+        "addr": "properties/rules/actions{RouteConfigurationOverride}/parameters/cacheConfiguration/cacheBehavior"
+      },
+      {
+        "addr": "properties/rules/actions{RouteConfigurationOverride}/parameters/cacheConfiguration/cacheDuration"
+      },
+      {
+        "addr": "properties/rules/actions{RouteConfigurationOverride}/parameters/cacheConfiguration/isCompressionEnabled"
+      },
+      {
+        "addr": "properties/rules/actions{RouteConfigurationOverride}/parameters/cacheConfiguration/queryParameters"
+      },
+      {
+        "addr": "properties/rules/actions{RouteConfigurationOverride}/parameters/cacheConfiguration/queryStringCachingBehavior"
+      },
+      {
+        "addr": "properties/rules/actions{RouteConfigurationOverride}/parameters/originGroupOverride/forwardingProtocol"
+      },
+      {
+        "addr": "properties/rules/actions{RouteConfigurationOverride}/parameters/originGroupOverride/originGroup/id"
+      },
+      {
+        "addr": "properties/rules/actions{RouteConfigurationOverride}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/actions{UrlRedirect}/name"
+      },
+      {
+        "addr": "properties/rules/actions{UrlRedirect}/parameters/customFragment"
+      },
+      {
+        "addr": "properties/rules/actions{UrlRedirect}/parameters/customHostname"
+      },
+      {
+        "addr": "properties/rules/actions{UrlRedirect}/parameters/customPath"
+      },
+      {
+        "addr": "properties/rules/actions{UrlRedirect}/parameters/customQueryString"
+      },
+      {
+        "addr": "properties/rules/actions{UrlRedirect}/parameters/destinationProtocol"
+      },
+      {
+        "addr": "properties/rules/actions{UrlRedirect}/parameters/redirectType"
+      },
+      {
+        "addr": "properties/rules/actions{UrlRedirect}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/actions{UrlRewrite}/name"
+      },
+      {
+        "addr": "properties/rules/actions{UrlRewrite}/parameters/destination"
+      },
+      {
+        "addr": "properties/rules/actions{UrlRewrite}/parameters/preserveUnmatchedPath"
+      },
+      {
+        "addr": "properties/rules/actions{UrlRewrite}/parameters/sourcePattern"
+      },
+      {
+        "addr": "properties/rules/actions{UrlRewrite}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/actions{UrlSigning}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{ClientPort}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{ClientPort}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{ClientPort}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{ClientPort}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{ClientPort}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{Cookies}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{Cookies}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{Cookies}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{Cookies}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{Cookies}/parameters/selector"
+      },
+      {
+        "addr": "properties/rules/conditions{Cookies}/parameters/transforms"
+      },
+      {
+        "addr": "properties/rules/conditions{Cookies}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{HostName}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{HostName}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{HostName}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{HostName}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{HostName}/parameters/transforms"
+      },
+      {
+        "addr": "properties/rules/conditions{HostName}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{HttpVersion}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{HttpVersion}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{HttpVersion}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{HttpVersion}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{HttpVersion}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{IsDevice}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{IsDevice}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{IsDevice}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{IsDevice}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{IsDevice}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{PostArgs}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{PostArgs}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{PostArgs}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{PostArgs}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{PostArgs}/parameters/selector"
+      },
+      {
+        "addr": "properties/rules/conditions{PostArgs}/parameters/transforms"
+      },
+      {
+        "addr": "properties/rules/conditions{PostArgs}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{QueryString}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{QueryString}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{QueryString}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{QueryString}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{QueryString}/parameters/transforms"
+      },
+      {
+        "addr": "properties/rules/conditions{QueryString}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{RemoteAddress}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{RemoteAddress}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{RemoteAddress}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{RemoteAddress}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{RemoteAddress}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestBody}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestBody}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestBody}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestBody}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestBody}/parameters/transforms"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestBody}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestHeader}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestHeader}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestHeader}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestHeader}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestHeader}/parameters/selector"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestHeader}/parameters/transforms"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestHeader}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestMethod}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestMethod}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestMethod}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestMethod}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestMethod}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestScheme}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestScheme}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestScheme}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestScheme}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestScheme}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestUri}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestUri}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestUri}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestUri}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestUri}/parameters/transforms"
+      },
+      {
+        "addr": "properties/rules/conditions{RequestUri}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{ServerPort}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{ServerPort}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{ServerPort}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{ServerPort}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{ServerPort}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{SocketAddr}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{SocketAddr}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{SocketAddr}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{SocketAddr}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{SocketAddr}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{SslProtocol}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{SslProtocol}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{SslProtocol}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{SslProtocol}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{SslProtocol}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlFileExtension}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlFileExtension}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlFileExtension}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlFileExtension}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlFileExtension}/parameters/transforms"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlFileExtension}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlFileName}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlFileName}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlFileName}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlFileName}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlFileName}/parameters/transforms"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlFileName}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlPath}/name"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlPath}/parameters/matchValues"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlPath}/parameters/negateCondition"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlPath}/parameters/operator"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlPath}/parameters/transforms"
+      },
+      {
+        "addr": "properties/rules/conditions{UrlPath}/parameters/typeName"
+      },
+      {
+        "addr": "properties/rules/matchProcessingBehavior"
+      },
+      {
+        "addr": "properties/rules/order"
+      },
+      {
+        "addr": "properties/rules/ruleName"
+      }
+    ]
+  },
+  {
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/RULESETS/{}/RULES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-09-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/RULESETS/{}/RULES/{}",
     "operation": "GET",
     "properties": [
@@ -32401,7 +33297,7 @@
     ]
   },
   {
-    "api_version": "2024-09-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/RULESETS/{}/RULES/{}",
     "operation": "PATCH",
     "properties": [
@@ -32858,7 +33754,7 @@
     ]
   },
   {
-    "api_version": "2024-09-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/RULESETS/{}/RULES/{}",
     "operation": "PUT",
     "properties": [
@@ -33391,12 +34287,12 @@
     ]
   },
   {
-    "api_version": "2024-02-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/SECURITYPOLICIES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-02-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/SECURITYPOLICIES/{}",
     "operation": "GET",
     "properties": [
@@ -33424,7 +34320,7 @@
     ]
   },
   {
-    "api_version": "2024-02-01",
+    "api_version": "2025-12-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CDN/PROFILES/{}/SECURITYPOLICIES/{}",
     "operation": "PUT",
     "properties": [
@@ -34687,6 +35583,1075 @@
       },
       {
         "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2026-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/ACCOUNTS/{}/CONNECTIONS/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2026-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/ACCOUNTS/{}/CONNECTIONS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties{AAD}/authType"
+      },
+      {
+        "addr": "properties{AAD}/category",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cognitive_account_connection_entra_id",
+            "addr": "/category"
+          }
+        ]
+      },
+      {
+        "addr": "properties{AAD}/createdByWorkspaceArmId"
+      },
+      {
+        "addr": "properties{AAD}/error"
+      },
+      {
+        "addr": "properties{AAD}/expiryTime"
+      },
+      {
+        "addr": "properties{AAD}/group"
+      },
+      {
+        "addr": "properties{AAD}/isSharedToAll"
+      },
+      {
+        "addr": "properties{AAD}/metadata"
+      },
+      {
+        "addr": "properties{AAD}/peRequirement"
+      },
+      {
+        "addr": "properties{AAD}/peStatus"
+      },
+      {
+        "addr": "properties{AAD}/sharedUserList"
+      },
+      {
+        "addr": "properties{AAD}/target",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cognitive_account_connection_entra_id",
+            "addr": "/target"
+          }
+        ]
+      },
+      {
+        "addr": "properties{AAD}/useWorkspaceManagedIdentity"
+      },
+      {
+        "addr": "properties{AccessKey}/authType"
+      },
+      {
+        "addr": "properties{AccessKey}/category"
+      },
+      {
+        "addr": "properties{AccessKey}/createdByWorkspaceArmId"
+      },
+      {
+        "addr": "properties{AccessKey}/error"
+      },
+      {
+        "addr": "properties{AccessKey}/expiryTime"
+      },
+      {
+        "addr": "properties{AccessKey}/group"
+      },
+      {
+        "addr": "properties{AccessKey}/isSharedToAll"
+      },
+      {
+        "addr": "properties{AccessKey}/metadata"
+      },
+      {
+        "addr": "properties{AccessKey}/peRequirement"
+      },
+      {
+        "addr": "properties{AccessKey}/peStatus"
+      },
+      {
+        "addr": "properties{AccessKey}/sharedUserList"
+      },
+      {
+        "addr": "properties{AccessKey}/target"
+      },
+      {
+        "addr": "properties{AccessKey}/useWorkspaceManagedIdentity"
+      },
+      {
+        "addr": "properties{AccountKey}/authType"
+      },
+      {
+        "addr": "properties{AccountKey}/category",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cognitive_account_connection_account_key",
+            "addr": "/category"
+          }
+        ]
+      },
+      {
+        "addr": "properties{AccountKey}/createdByWorkspaceArmId"
+      },
+      {
+        "addr": "properties{AccountKey}/credentials/key"
+      },
+      {
+        "addr": "properties{AccountKey}/error"
+      },
+      {
+        "addr": "properties{AccountKey}/expiryTime"
+      },
+      {
+        "addr": "properties{AccountKey}/group"
+      },
+      {
+        "addr": "properties{AccountKey}/isSharedToAll"
+      },
+      {
+        "addr": "properties{AccountKey}/metadata"
+      },
+      {
+        "addr": "properties{AccountKey}/peRequirement"
+      },
+      {
+        "addr": "properties{AccountKey}/peStatus"
+      },
+      {
+        "addr": "properties{AccountKey}/sharedUserList"
+      },
+      {
+        "addr": "properties{AccountKey}/target",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cognitive_account_connection_account_key",
+            "addr": "/target"
+          }
+        ]
+      },
+      {
+        "addr": "properties{AccountKey}/useWorkspaceManagedIdentity"
+      },
+      {
+        "addr": "properties{ApiKey}/authType"
+      },
+      {
+        "addr": "properties{ApiKey}/category",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cognitive_account_connection_api_key",
+            "addr": "/category"
+          }
+        ]
+      },
+      {
+        "addr": "properties{ApiKey}/createdByWorkspaceArmId"
+      },
+      {
+        "addr": "properties{ApiKey}/credentials/key"
+      },
+      {
+        "addr": "properties{ApiKey}/error"
+      },
+      {
+        "addr": "properties{ApiKey}/expiryTime"
+      },
+      {
+        "addr": "properties{ApiKey}/group"
+      },
+      {
+        "addr": "properties{ApiKey}/isSharedToAll"
+      },
+      {
+        "addr": "properties{ApiKey}/metadata"
+      },
+      {
+        "addr": "properties{ApiKey}/peRequirement"
+      },
+      {
+        "addr": "properties{ApiKey}/peStatus"
+      },
+      {
+        "addr": "properties{ApiKey}/sharedUserList"
+      },
+      {
+        "addr": "properties{ApiKey}/target",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cognitive_account_connection_api_key",
+            "addr": "/target"
+          }
+        ]
+      },
+      {
+        "addr": "properties{ApiKey}/useWorkspaceManagedIdentity"
+      },
+      {
+        "addr": "properties{CustomKeys}/authType"
+      },
+      {
+        "addr": "properties{CustomKeys}/category",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cognitive_account_connection_custom_keys",
+            "addr": "/category"
+          }
+        ]
+      },
+      {
+        "addr": "properties{CustomKeys}/createdByWorkspaceArmId"
+      },
+      {
+        "addr": "properties{CustomKeys}/credentials/keys"
+      },
+      {
+        "addr": "properties{CustomKeys}/error"
+      },
+      {
+        "addr": "properties{CustomKeys}/expiryTime"
+      },
+      {
+        "addr": "properties{CustomKeys}/group"
+      },
+      {
+        "addr": "properties{CustomKeys}/isSharedToAll"
+      },
+      {
+        "addr": "properties{CustomKeys}/metadata"
+      },
+      {
+        "addr": "properties{CustomKeys}/peRequirement"
+      },
+      {
+        "addr": "properties{CustomKeys}/peStatus"
+      },
+      {
+        "addr": "properties{CustomKeys}/sharedUserList"
+      },
+      {
+        "addr": "properties{CustomKeys}/target",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cognitive_account_connection_custom_keys",
+            "addr": "/target"
+          }
+        ]
+      },
+      {
+        "addr": "properties{CustomKeys}/useWorkspaceManagedIdentity"
+      },
+      {
+        "addr": "properties{ManagedIdentity}/authType"
+      },
+      {
+        "addr": "properties{ManagedIdentity}/category"
+      },
+      {
+        "addr": "properties{ManagedIdentity}/createdByWorkspaceArmId"
+      },
+      {
+        "addr": "properties{ManagedIdentity}/error"
+      },
+      {
+        "addr": "properties{ManagedIdentity}/expiryTime"
+      },
+      {
+        "addr": "properties{ManagedIdentity}/group"
+      },
+      {
+        "addr": "properties{ManagedIdentity}/isSharedToAll"
+      },
+      {
+        "addr": "properties{ManagedIdentity}/metadata"
+      },
+      {
+        "addr": "properties{ManagedIdentity}/peRequirement"
+      },
+      {
+        "addr": "properties{ManagedIdentity}/peStatus"
+      },
+      {
+        "addr": "properties{ManagedIdentity}/sharedUserList"
+      },
+      {
+        "addr": "properties{ManagedIdentity}/target"
+      },
+      {
+        "addr": "properties{ManagedIdentity}/useWorkspaceManagedIdentity"
+      },
+      {
+        "addr": "properties{None}/authType"
+      },
+      {
+        "addr": "properties{None}/category"
+      },
+      {
+        "addr": "properties{None}/createdByWorkspaceArmId"
+      },
+      {
+        "addr": "properties{None}/error"
+      },
+      {
+        "addr": "properties{None}/expiryTime"
+      },
+      {
+        "addr": "properties{None}/group"
+      },
+      {
+        "addr": "properties{None}/isSharedToAll"
+      },
+      {
+        "addr": "properties{None}/metadata"
+      },
+      {
+        "addr": "properties{None}/peRequirement"
+      },
+      {
+        "addr": "properties{None}/peStatus"
+      },
+      {
+        "addr": "properties{None}/sharedUserList"
+      },
+      {
+        "addr": "properties{None}/target"
+      },
+      {
+        "addr": "properties{None}/useWorkspaceManagedIdentity"
+      },
+      {
+        "addr": "properties{OAuth2}/authType"
+      },
+      {
+        "addr": "properties{OAuth2}/category"
+      },
+      {
+        "addr": "properties{OAuth2}/createdByWorkspaceArmId"
+      },
+      {
+        "addr": "properties{OAuth2}/error"
+      },
+      {
+        "addr": "properties{OAuth2}/expiryTime"
+      },
+      {
+        "addr": "properties{OAuth2}/group"
+      },
+      {
+        "addr": "properties{OAuth2}/isSharedToAll"
+      },
+      {
+        "addr": "properties{OAuth2}/metadata"
+      },
+      {
+        "addr": "properties{OAuth2}/peRequirement"
+      },
+      {
+        "addr": "properties{OAuth2}/peStatus"
+      },
+      {
+        "addr": "properties{OAuth2}/sharedUserList"
+      },
+      {
+        "addr": "properties{OAuth2}/target"
+      },
+      {
+        "addr": "properties{OAuth2}/useWorkspaceManagedIdentity"
+      },
+      {
+        "addr": "properties{PAT}/authType"
+      },
+      {
+        "addr": "properties{PAT}/category"
+      },
+      {
+        "addr": "properties{PAT}/createdByWorkspaceArmId"
+      },
+      {
+        "addr": "properties{PAT}/error"
+      },
+      {
+        "addr": "properties{PAT}/expiryTime"
+      },
+      {
+        "addr": "properties{PAT}/group"
+      },
+      {
+        "addr": "properties{PAT}/isSharedToAll"
+      },
+      {
+        "addr": "properties{PAT}/metadata"
+      },
+      {
+        "addr": "properties{PAT}/peRequirement"
+      },
+      {
+        "addr": "properties{PAT}/peStatus"
+      },
+      {
+        "addr": "properties{PAT}/sharedUserList"
+      },
+      {
+        "addr": "properties{PAT}/target"
+      },
+      {
+        "addr": "properties{PAT}/useWorkspaceManagedIdentity"
+      },
+      {
+        "addr": "properties{SAS}/authType"
+      },
+      {
+        "addr": "properties{SAS}/category"
+      },
+      {
+        "addr": "properties{SAS}/createdByWorkspaceArmId"
+      },
+      {
+        "addr": "properties{SAS}/error"
+      },
+      {
+        "addr": "properties{SAS}/expiryTime"
+      },
+      {
+        "addr": "properties{SAS}/group"
+      },
+      {
+        "addr": "properties{SAS}/isSharedToAll"
+      },
+      {
+        "addr": "properties{SAS}/metadata"
+      },
+      {
+        "addr": "properties{SAS}/peRequirement"
+      },
+      {
+        "addr": "properties{SAS}/peStatus"
+      },
+      {
+        "addr": "properties{SAS}/sharedUserList"
+      },
+      {
+        "addr": "properties{SAS}/target"
+      },
+      {
+        "addr": "properties{SAS}/useWorkspaceManagedIdentity"
+      },
+      {
+        "addr": "properties{ServicePrincipal}/authType"
+      },
+      {
+        "addr": "properties{ServicePrincipal}/category"
+      },
+      {
+        "addr": "properties{ServicePrincipal}/createdByWorkspaceArmId"
+      },
+      {
+        "addr": "properties{ServicePrincipal}/error"
+      },
+      {
+        "addr": "properties{ServicePrincipal}/expiryTime"
+      },
+      {
+        "addr": "properties{ServicePrincipal}/group"
+      },
+      {
+        "addr": "properties{ServicePrincipal}/isSharedToAll"
+      },
+      {
+        "addr": "properties{ServicePrincipal}/metadata"
+      },
+      {
+        "addr": "properties{ServicePrincipal}/peRequirement"
+      },
+      {
+        "addr": "properties{ServicePrincipal}/peStatus"
+      },
+      {
+        "addr": "properties{ServicePrincipal}/sharedUserList"
+      },
+      {
+        "addr": "properties{ServicePrincipal}/target"
+      },
+      {
+        "addr": "properties{ServicePrincipal}/useWorkspaceManagedIdentity"
+      },
+      {
+        "addr": "properties{UsernamePassword}/authType"
+      },
+      {
+        "addr": "properties{UsernamePassword}/category"
+      },
+      {
+        "addr": "properties{UsernamePassword}/createdByWorkspaceArmId"
+      },
+      {
+        "addr": "properties{UsernamePassword}/error"
+      },
+      {
+        "addr": "properties{UsernamePassword}/expiryTime"
+      },
+      {
+        "addr": "properties{UsernamePassword}/group"
+      },
+      {
+        "addr": "properties{UsernamePassword}/isSharedToAll"
+      },
+      {
+        "addr": "properties{UsernamePassword}/metadata"
+      },
+      {
+        "addr": "properties{UsernamePassword}/peRequirement"
+      },
+      {
+        "addr": "properties{UsernamePassword}/peStatus"
+      },
+      {
+        "addr": "properties{UsernamePassword}/sharedUserList"
+      },
+      {
+        "addr": "properties{UsernamePassword}/target"
+      },
+      {
+        "addr": "properties{UsernamePassword}/useWorkspaceManagedIdentity"
+      }
+    ]
+  },
+  {
+    "api_version": "2026-03-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COGNITIVESERVICES/ACCOUNTS/{}/CONNECTIONS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "properties{AAD}/authType"
+      },
+      {
+        "addr": "properties{AAD}/category",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cognitive_account_connection_entra_id",
+            "addr": "/category"
+          }
+        ]
+      },
+      {
+        "addr": "properties{AAD}/createdByWorkspaceArmId"
+      },
+      {
+        "addr": "properties{AAD}/error"
+      },
+      {
+        "addr": "properties{AAD}/expiryTime"
+      },
+      {
+        "addr": "properties{AAD}/group"
+      },
+      {
+        "addr": "properties{AAD}/isSharedToAll"
+      },
+      {
+        "addr": "properties{AAD}/metadata"
+      },
+      {
+        "addr": "properties{AAD}/peRequirement"
+      },
+      {
+        "addr": "properties{AAD}/peStatus"
+      },
+      {
+        "addr": "properties{AAD}/sharedUserList"
+      },
+      {
+        "addr": "properties{AAD}/target",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cognitive_account_connection_entra_id",
+            "addr": "/target"
+          }
+        ]
+      },
+      {
+        "addr": "properties{AAD}/useWorkspaceManagedIdentity"
+      },
+      {
+        "addr": "properties{AccessKey}/authType"
+      },
+      {
+        "addr": "properties{AccessKey}/category"
+      },
+      {
+        "addr": "properties{AccessKey}/createdByWorkspaceArmId"
+      },
+      {
+        "addr": "properties{AccessKey}/error"
+      },
+      {
+        "addr": "properties{AccessKey}/expiryTime"
+      },
+      {
+        "addr": "properties{AccessKey}/group"
+      },
+      {
+        "addr": "properties{AccessKey}/isSharedToAll"
+      },
+      {
+        "addr": "properties{AccessKey}/metadata"
+      },
+      {
+        "addr": "properties{AccessKey}/peRequirement"
+      },
+      {
+        "addr": "properties{AccessKey}/peStatus"
+      },
+      {
+        "addr": "properties{AccessKey}/sharedUserList"
+      },
+      {
+        "addr": "properties{AccessKey}/target"
+      },
+      {
+        "addr": "properties{AccessKey}/useWorkspaceManagedIdentity"
+      },
+      {
+        "addr": "properties{AccountKey}/authType"
+      },
+      {
+        "addr": "properties{AccountKey}/category",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cognitive_account_connection_account_key",
+            "addr": "/category"
+          }
+        ]
+      },
+      {
+        "addr": "properties{AccountKey}/createdByWorkspaceArmId"
+      },
+      {
+        "addr": "properties{AccountKey}/credentials/key"
+      },
+      {
+        "addr": "properties{AccountKey}/error"
+      },
+      {
+        "addr": "properties{AccountKey}/expiryTime"
+      },
+      {
+        "addr": "properties{AccountKey}/group"
+      },
+      {
+        "addr": "properties{AccountKey}/isSharedToAll"
+      },
+      {
+        "addr": "properties{AccountKey}/metadata"
+      },
+      {
+        "addr": "properties{AccountKey}/peRequirement"
+      },
+      {
+        "addr": "properties{AccountKey}/peStatus"
+      },
+      {
+        "addr": "properties{AccountKey}/sharedUserList"
+      },
+      {
+        "addr": "properties{AccountKey}/target",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cognitive_account_connection_account_key",
+            "addr": "/target"
+          }
+        ]
+      },
+      {
+        "addr": "properties{AccountKey}/useWorkspaceManagedIdentity"
+      },
+      {
+        "addr": "properties{ApiKey}/authType"
+      },
+      {
+        "addr": "properties{ApiKey}/category",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cognitive_account_connection_api_key",
+            "addr": "/category"
+          }
+        ]
+      },
+      {
+        "addr": "properties{ApiKey}/createdByWorkspaceArmId"
+      },
+      {
+        "addr": "properties{ApiKey}/credentials/key"
+      },
+      {
+        "addr": "properties{ApiKey}/error"
+      },
+      {
+        "addr": "properties{ApiKey}/expiryTime"
+      },
+      {
+        "addr": "properties{ApiKey}/group"
+      },
+      {
+        "addr": "properties{ApiKey}/isSharedToAll"
+      },
+      {
+        "addr": "properties{ApiKey}/metadata"
+      },
+      {
+        "addr": "properties{ApiKey}/peRequirement"
+      },
+      {
+        "addr": "properties{ApiKey}/peStatus"
+      },
+      {
+        "addr": "properties{ApiKey}/sharedUserList"
+      },
+      {
+        "addr": "properties{ApiKey}/target",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cognitive_account_connection_api_key",
+            "addr": "/target"
+          }
+        ]
+      },
+      {
+        "addr": "properties{ApiKey}/useWorkspaceManagedIdentity"
+      },
+      {
+        "addr": "properties{CustomKeys}/authType"
+      },
+      {
+        "addr": "properties{CustomKeys}/category",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cognitive_account_connection_custom_keys",
+            "addr": "/category"
+          }
+        ]
+      },
+      {
+        "addr": "properties{CustomKeys}/createdByWorkspaceArmId"
+      },
+      {
+        "addr": "properties{CustomKeys}/credentials/keys"
+      },
+      {
+        "addr": "properties{CustomKeys}/error"
+      },
+      {
+        "addr": "properties{CustomKeys}/expiryTime"
+      },
+      {
+        "addr": "properties{CustomKeys}/group"
+      },
+      {
+        "addr": "properties{CustomKeys}/isSharedToAll"
+      },
+      {
+        "addr": "properties{CustomKeys}/metadata"
+      },
+      {
+        "addr": "properties{CustomKeys}/peRequirement"
+      },
+      {
+        "addr": "properties{CustomKeys}/peStatus"
+      },
+      {
+        "addr": "properties{CustomKeys}/sharedUserList"
+      },
+      {
+        "addr": "properties{CustomKeys}/target",
+        "app_property_maps": [
+          {
+            "name": "azurerm_cognitive_account_connection_custom_keys",
+            "addr": "/target"
+          }
+        ]
+      },
+      {
+        "addr": "properties{CustomKeys}/useWorkspaceManagedIdentity"
+      },
+      {
+        "addr": "properties{ManagedIdentity}/authType"
+      },
+      {
+        "addr": "properties{ManagedIdentity}/category"
+      },
+      {
+        "addr": "properties{ManagedIdentity}/createdByWorkspaceArmId"
+      },
+      {
+        "addr": "properties{ManagedIdentity}/error"
+      },
+      {
+        "addr": "properties{ManagedIdentity}/expiryTime"
+      },
+      {
+        "addr": "properties{ManagedIdentity}/group"
+      },
+      {
+        "addr": "properties{ManagedIdentity}/isSharedToAll"
+      },
+      {
+        "addr": "properties{ManagedIdentity}/metadata"
+      },
+      {
+        "addr": "properties{ManagedIdentity}/peRequirement"
+      },
+      {
+        "addr": "properties{ManagedIdentity}/peStatus"
+      },
+      {
+        "addr": "properties{ManagedIdentity}/sharedUserList"
+      },
+      {
+        "addr": "properties{ManagedIdentity}/target"
+      },
+      {
+        "addr": "properties{ManagedIdentity}/useWorkspaceManagedIdentity"
+      },
+      {
+        "addr": "properties{None}/authType"
+      },
+      {
+        "addr": "properties{None}/category"
+      },
+      {
+        "addr": "properties{None}/createdByWorkspaceArmId"
+      },
+      {
+        "addr": "properties{None}/error"
+      },
+      {
+        "addr": "properties{None}/expiryTime"
+      },
+      {
+        "addr": "properties{None}/group"
+      },
+      {
+        "addr": "properties{None}/isSharedToAll"
+      },
+      {
+        "addr": "properties{None}/metadata"
+      },
+      {
+        "addr": "properties{None}/peRequirement"
+      },
+      {
+        "addr": "properties{None}/peStatus"
+      },
+      {
+        "addr": "properties{None}/sharedUserList"
+      },
+      {
+        "addr": "properties{None}/target"
+      },
+      {
+        "addr": "properties{None}/useWorkspaceManagedIdentity"
+      },
+      {
+        "addr": "properties{OAuth2}/authType"
+      },
+      {
+        "addr": "properties{OAuth2}/category"
+      },
+      {
+        "addr": "properties{OAuth2}/createdByWorkspaceArmId"
+      },
+      {
+        "addr": "properties{OAuth2}/error"
+      },
+      {
+        "addr": "properties{OAuth2}/expiryTime"
+      },
+      {
+        "addr": "properties{OAuth2}/group"
+      },
+      {
+        "addr": "properties{OAuth2}/isSharedToAll"
+      },
+      {
+        "addr": "properties{OAuth2}/metadata"
+      },
+      {
+        "addr": "properties{OAuth2}/peRequirement"
+      },
+      {
+        "addr": "properties{OAuth2}/peStatus"
+      },
+      {
+        "addr": "properties{OAuth2}/sharedUserList"
+      },
+      {
+        "addr": "properties{OAuth2}/target"
+      },
+      {
+        "addr": "properties{OAuth2}/useWorkspaceManagedIdentity"
+      },
+      {
+        "addr": "properties{PAT}/authType"
+      },
+      {
+        "addr": "properties{PAT}/category"
+      },
+      {
+        "addr": "properties{PAT}/createdByWorkspaceArmId"
+      },
+      {
+        "addr": "properties{PAT}/error"
+      },
+      {
+        "addr": "properties{PAT}/expiryTime"
+      },
+      {
+        "addr": "properties{PAT}/group"
+      },
+      {
+        "addr": "properties{PAT}/isSharedToAll"
+      },
+      {
+        "addr": "properties{PAT}/metadata"
+      },
+      {
+        "addr": "properties{PAT}/peRequirement"
+      },
+      {
+        "addr": "properties{PAT}/peStatus"
+      },
+      {
+        "addr": "properties{PAT}/sharedUserList"
+      },
+      {
+        "addr": "properties{PAT}/target"
+      },
+      {
+        "addr": "properties{PAT}/useWorkspaceManagedIdentity"
+      },
+      {
+        "addr": "properties{SAS}/authType"
+      },
+      {
+        "addr": "properties{SAS}/category"
+      },
+      {
+        "addr": "properties{SAS}/createdByWorkspaceArmId"
+      },
+      {
+        "addr": "properties{SAS}/error"
+      },
+      {
+        "addr": "properties{SAS}/expiryTime"
+      },
+      {
+        "addr": "properties{SAS}/group"
+      },
+      {
+        "addr": "properties{SAS}/isSharedToAll"
+      },
+      {
+        "addr": "properties{SAS}/metadata"
+      },
+      {
+        "addr": "properties{SAS}/peRequirement"
+      },
+      {
+        "addr": "properties{SAS}/peStatus"
+      },
+      {
+        "addr": "properties{SAS}/sharedUserList"
+      },
+      {
+        "addr": "properties{SAS}/target"
+      },
+      {
+        "addr": "properties{SAS}/useWorkspaceManagedIdentity"
+      },
+      {
+        "addr": "properties{ServicePrincipal}/authType"
+      },
+      {
+        "addr": "properties{ServicePrincipal}/category"
+      },
+      {
+        "addr": "properties{ServicePrincipal}/createdByWorkspaceArmId"
+      },
+      {
+        "addr": "properties{ServicePrincipal}/error"
+      },
+      {
+        "addr": "properties{ServicePrincipal}/expiryTime"
+      },
+      {
+        "addr": "properties{ServicePrincipal}/group"
+      },
+      {
+        "addr": "properties{ServicePrincipal}/isSharedToAll"
+      },
+      {
+        "addr": "properties{ServicePrincipal}/metadata"
+      },
+      {
+        "addr": "properties{ServicePrincipal}/peRequirement"
+      },
+      {
+        "addr": "properties{ServicePrincipal}/peStatus"
+      },
+      {
+        "addr": "properties{ServicePrincipal}/sharedUserList"
+      },
+      {
+        "addr": "properties{ServicePrincipal}/target"
+      },
+      {
+        "addr": "properties{ServicePrincipal}/useWorkspaceManagedIdentity"
+      },
+      {
+        "addr": "properties{UsernamePassword}/authType"
+      },
+      {
+        "addr": "properties{UsernamePassword}/category"
+      },
+      {
+        "addr": "properties{UsernamePassword}/createdByWorkspaceArmId"
+      },
+      {
+        "addr": "properties{UsernamePassword}/error"
+      },
+      {
+        "addr": "properties{UsernamePassword}/expiryTime"
+      },
+      {
+        "addr": "properties{UsernamePassword}/group"
+      },
+      {
+        "addr": "properties{UsernamePassword}/isSharedToAll"
+      },
+      {
+        "addr": "properties{UsernamePassword}/metadata"
+      },
+      {
+        "addr": "properties{UsernamePassword}/peRequirement"
+      },
+      {
+        "addr": "properties{UsernamePassword}/peStatus"
+      },
+      {
+        "addr": "properties{UsernamePassword}/sharedUserList"
+      },
+      {
+        "addr": "properties{UsernamePassword}/target"
+      },
+      {
+        "addr": "properties{UsernamePassword}/useWorkspaceManagedIdentity"
       }
     ]
   },
@@ -42991,12 +44956,12 @@
     ]
   },
   {
-    "api_version": "2024-11-01",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-11-01",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
     "operation": "GET",
     "properties": [
@@ -43665,6 +45630,9 @@
         "addr": "properties/virtualMachineProfile/networkProfile/networkInterfaceConfigurations/properties/primary"
       },
       {
+        "addr": "properties/virtualMachineProfile/networkProfile/networkInterfaceConfigurations/tags"
+      },
+      {
         "addr": "properties/virtualMachineProfile/osProfile/adminPassword",
         "app_property_maps": [
           {
@@ -44231,7 +46199,7 @@
     ]
   },
   {
-    "api_version": "2024-11-01",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
     "operation": "PATCH",
     "properties": [
@@ -44721,6 +46689,9 @@
         "addr": "properties/virtualMachineProfile/networkProfile/networkInterfaceConfigurations/properties/primary"
       },
       {
+        "addr": "properties/virtualMachineProfile/networkProfile/networkInterfaceConfigurations/tags"
+      },
+      {
         "addr": "properties/virtualMachineProfile/osProfile/customData",
         "app_property_maps": [
           {
@@ -45135,7 +47106,7 @@
     ]
   },
   {
-    "api_version": "2024-11-01",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}",
     "operation": "PUT",
     "properties": [
@@ -45802,6 +47773,9 @@
       },
       {
         "addr": "properties/virtualMachineProfile/networkProfile/networkInterfaceConfigurations/properties/primary"
+      },
+      {
+        "addr": "properties/virtualMachineProfile/networkProfile/networkInterfaceConfigurations/tags"
       },
       {
         "addr": "properties/virtualMachineProfile/osProfile/adminPassword",
@@ -46539,7 +48513,7 @@
     ]
   },
   {
-    "api_version": "2024-11-01",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}/MANUALUPGRADE",
     "operation": "POST",
     "properties": [
@@ -46554,7 +48528,7 @@
     "operation": "POST"
   },
   {
-    "api_version": "2024-11-01",
+    "api_version": "2025-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINESCALESETS/{}/REIMAGE",
     "operation": "POST",
     "properties": [
@@ -47602,6 +49576,9 @@
         ]
       },
       {
+        "addr": "properties/networkRuleBypassAllowedForTasks"
+      },
+      {
         "addr": "properties/networkRuleBypassOptions",
         "app_property_maps": [
           {
@@ -47626,6 +49603,9 @@
         "addr": "properties/networkRuleSet/ipRules/value"
       },
       {
+        "addr": "properties/policies/azureADAuthenticationAsArmPolicy/status"
+      },
+      {
         "addr": "properties/policies/exportPolicy/status"
       },
       {
@@ -47642,6 +49622,15 @@
       },
       {
         "addr": "properties/publicNetworkAccess"
+      },
+      {
+        "addr": "properties/roleAssignmentMode",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_registry",
+            "addr": "/role_assignment_mode"
+          }
+        ]
       },
       {
         "addr": "properties/zoneRedundancy"
@@ -47711,6 +49700,9 @@
         "addr": "properties/encryption/status"
       },
       {
+        "addr": "properties/networkRuleBypassAllowedForTasks"
+      },
+      {
         "addr": "properties/networkRuleBypassOptions",
         "app_property_maps": [
           {
@@ -47735,6 +49727,9 @@
         "addr": "properties/networkRuleSet/ipRules/value"
       },
       {
+        "addr": "properties/policies/azureADAuthenticationAsArmPolicy/status"
+      },
+      {
         "addr": "properties/policies/exportPolicy/status"
       },
       {
@@ -47751,6 +49746,15 @@
       },
       {
         "addr": "properties/publicNetworkAccess"
+      },
+      {
+        "addr": "properties/roleAssignmentMode",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_registry",
+            "addr": "/role_assignment_mode"
+          }
+        ]
       },
       {
         "addr": "sku/name"
@@ -47838,6 +49842,9 @@
         ]
       },
       {
+        "addr": "properties/networkRuleBypassAllowedForTasks"
+      },
+      {
         "addr": "properties/networkRuleBypassOptions",
         "app_property_maps": [
           {
@@ -47862,6 +49869,9 @@
         "addr": "properties/networkRuleSet/ipRules/value"
       },
       {
+        "addr": "properties/policies/azureADAuthenticationAsArmPolicy/status"
+      },
+      {
         "addr": "properties/policies/exportPolicy/status"
       },
       {
@@ -47878,6 +49888,15 @@
       },
       {
         "addr": "properties/publicNetworkAccess"
+      },
+      {
+        "addr": "properties/roleAssignmentMode",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_registry",
+            "addr": "/role_assignment_mode"
+          }
+        ]
       },
       {
         "addr": "properties/zoneRedundancy"
@@ -49619,6 +51638,11 @@
     "operation": "DELETE"
   },
   {
+    "api_version": "2026-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
+    "operation": "DELETE"
+  },
+  {
     "api_version": "2025-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
     "operation": "GET",
@@ -50026,13 +52050,7 @@
         ]
       },
       {
-        "addr": "properties/autoScalerProfile/max-total-unready-percentage",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_cluster",
-            "addr": "/auto_scaler_profile/0/max_unready_percentage"
-          }
-        ]
+        "addr": "properties/autoScalerProfile/max-total-unready-percentage"
       },
       {
         "addr": "properties/autoScalerProfile/new-pod-scale-up-delay",
@@ -50044,13 +52062,7 @@
         ]
       },
       {
-        "addr": "properties/autoScalerProfile/ok-total-unready-count",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_cluster",
-            "addr": "/auto_scaler_profile/0/max_unready_nodes"
-          }
-        ]
+        "addr": "properties/autoScalerProfile/ok-total-unready-count"
       },
       {
         "addr": "properties/autoScalerProfile/scale-down-delay-after-add",
@@ -50179,13 +52191,7 @@
         ]
       },
       {
-        "addr": "properties/bootstrapProfile/containerRegistryId",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_cluster",
-            "addr": "/bootstrap_profile/0/container_registry_id"
-          }
-        ]
+        "addr": "properties/bootstrapProfile/containerRegistryId"
       },
       {
         "addr": "properties/currentKubernetesVersion",
@@ -50754,6 +52760,196 @@
     ]
   },
   {
+    "api_version": "2026-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "identity/principalId"
+      },
+      {
+        "addr": "identity/tenantId"
+      },
+      {
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
+      },
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/apiServerAccessProfile/authorizedIPRanges"
+      },
+      {
+        "addr": "properties/apiServerAccessProfile/enablePrivateCluster"
+      },
+      {
+        "addr": "properties/apiServerAccessProfile/enablePrivateClusterPublicFQDN"
+      },
+      {
+        "addr": "properties/apiServerAccessProfile/privateDNSZone"
+      },
+      {
+        "addr": "properties/apiServerAccessProfile/subnetId"
+      },
+      {
+        "addr": "properties/azurePortalFQDN",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/portal_fully_qualified_domain_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/currentKubernetesVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/current_kubernetes_version"
+          }
+        ]
+      },
+      {
+        "addr": "properties/fqdn",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/fully_qualified_domain_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/hostedSystemProfile/enabled"
+      },
+      {
+        "addr": "properties/hostedSystemProfile/nodeSubnetID",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/hosted_system/0/node_subnet_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/hostedSystemProfile/systemNodeSubnetID",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/hosted_system/0/system_node_subnet_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/ingressProfile/webAppRouting/dnsZoneResourceIds"
+      },
+      {
+        "addr": "properties/ingressProfile/webAppRouting/enabled"
+      },
+      {
+        "addr": "properties/ingressProfile/webAppRouting/gatewayAPIImplementations/appRoutingIstio/mode"
+      },
+      {
+        "addr": "properties/ingressProfile/webAppRouting/identity/clientId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/web_app_routing_ingress/0/web_app_routing_identity/0/client_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/ingressProfile/webAppRouting/identity/objectId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/web_app_routing_ingress/0/web_app_routing_identity/0/object_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/ingressProfile/webAppRouting/identity/resourceId"
+      },
+      {
+        "addr": "properties/ingressProfile/webAppRouting/nginx/defaultIngressControllerType",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/web_app_routing_ingress/0/default_nginx_controller"
+          }
+        ]
+      },
+      {
+        "addr": "properties/nodeResourceGroup"
+      },
+      {
+        "addr": "properties/oidcIssuerProfile/issuerURL",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/oidc_issuer_url"
+          }
+        ]
+      },
+      {
+        "addr": "properties/privateFQDN",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/private_fully_qualified_domain_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/serviceMeshProfile/istio/certificateAuthority/plugin/certChainObjectName"
+      },
+      {
+        "addr": "properties/serviceMeshProfile/istio/certificateAuthority/plugin/certObjectName"
+      },
+      {
+        "addr": "properties/serviceMeshProfile/istio/certificateAuthority/plugin/keyObjectName"
+      },
+      {
+        "addr": "properties/serviceMeshProfile/istio/certificateAuthority/plugin/keyVaultId"
+      },
+      {
+        "addr": "properties/serviceMeshProfile/istio/certificateAuthority/plugin/rootCertObjectName"
+      },
+      {
+        "addr": "properties/serviceMeshProfile/istio/components/ingressGateways/enabled"
+      },
+      {
+        "addr": "properties/serviceMeshProfile/istio/components/ingressGateways/mode"
+      },
+      {
+        "addr": "properties/serviceMeshProfile/istio/components/proxyRedirectionMechanism"
+      },
+      {
+        "addr": "properties/serviceMeshProfile/istio/revisions"
+      },
+      {
+        "addr": "properties/serviceMeshProfile/mode"
+      },
+      {
+        "addr": "sku/name"
+      },
+      {
+        "addr": "sku/tier"
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
     "api_version": "2025-10-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
     "operation": "PUT",
@@ -51161,13 +53357,7 @@
         ]
       },
       {
-        "addr": "properties/autoScalerProfile/max-total-unready-percentage",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_cluster",
-            "addr": "/auto_scaler_profile/0/max_unready_percentage"
-          }
-        ]
+        "addr": "properties/autoScalerProfile/max-total-unready-percentage"
       },
       {
         "addr": "properties/autoScalerProfile/new-pod-scale-up-delay",
@@ -51179,13 +53369,7 @@
         ]
       },
       {
-        "addr": "properties/autoScalerProfile/ok-total-unready-count",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_cluster",
-            "addr": "/auto_scaler_profile/0/max_unready_nodes"
-          }
-        ]
+        "addr": "properties/autoScalerProfile/ok-total-unready-count"
       },
       {
         "addr": "properties/autoScalerProfile/scale-down-delay-after-add",
@@ -51314,13 +53498,7 @@
         ]
       },
       {
-        "addr": "properties/bootstrapProfile/containerRegistryId",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_cluster",
-            "addr": "/bootstrap_profile/0/container_registry_id"
-          }
-        ]
+        "addr": "properties/bootstrapProfile/containerRegistryId"
       },
       {
         "addr": "properties/currentKubernetesVersion",
@@ -51882,6 +54060,196 @@
             "addr": "/sku_tier"
           }
         ]
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2026-04-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "identity/principalId"
+      },
+      {
+        "addr": "identity/tenantId"
+      },
+      {
+        "addr": "identity/type"
+      },
+      {
+        "addr": "identity/userAssignedIdentities"
+      },
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/apiServerAccessProfile/authorizedIPRanges"
+      },
+      {
+        "addr": "properties/apiServerAccessProfile/enablePrivateCluster"
+      },
+      {
+        "addr": "properties/apiServerAccessProfile/enablePrivateClusterPublicFQDN"
+      },
+      {
+        "addr": "properties/apiServerAccessProfile/privateDNSZone"
+      },
+      {
+        "addr": "properties/apiServerAccessProfile/subnetId"
+      },
+      {
+        "addr": "properties/azurePortalFQDN",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/portal_fully_qualified_domain_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/currentKubernetesVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/current_kubernetes_version"
+          }
+        ]
+      },
+      {
+        "addr": "properties/fqdn",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/fully_qualified_domain_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/hostedSystemProfile/enabled"
+      },
+      {
+        "addr": "properties/hostedSystemProfile/nodeSubnetID",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/hosted_system/0/node_subnet_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/hostedSystemProfile/systemNodeSubnetID",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/hosted_system/0/system_node_subnet_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/ingressProfile/webAppRouting/dnsZoneResourceIds"
+      },
+      {
+        "addr": "properties/ingressProfile/webAppRouting/enabled"
+      },
+      {
+        "addr": "properties/ingressProfile/webAppRouting/gatewayAPIImplementations/appRoutingIstio/mode"
+      },
+      {
+        "addr": "properties/ingressProfile/webAppRouting/identity/clientId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/web_app_routing_ingress/0/web_app_routing_identity/0/client_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/ingressProfile/webAppRouting/identity/objectId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/web_app_routing_ingress/0/web_app_routing_identity/0/object_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/ingressProfile/webAppRouting/identity/resourceId"
+      },
+      {
+        "addr": "properties/ingressProfile/webAppRouting/nginx/defaultIngressControllerType",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/web_app_routing_ingress/0/default_nginx_controller"
+          }
+        ]
+      },
+      {
+        "addr": "properties/nodeResourceGroup"
+      },
+      {
+        "addr": "properties/oidcIssuerProfile/issuerURL",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/oidc_issuer_url"
+          }
+        ]
+      },
+      {
+        "addr": "properties/privateFQDN",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/private_fully_qualified_domain_name"
+          }
+        ]
+      },
+      {
+        "addr": "properties/serviceMeshProfile/istio/certificateAuthority/plugin/certChainObjectName"
+      },
+      {
+        "addr": "properties/serviceMeshProfile/istio/certificateAuthority/plugin/certObjectName"
+      },
+      {
+        "addr": "properties/serviceMeshProfile/istio/certificateAuthority/plugin/keyObjectName"
+      },
+      {
+        "addr": "properties/serviceMeshProfile/istio/certificateAuthority/plugin/keyVaultId"
+      },
+      {
+        "addr": "properties/serviceMeshProfile/istio/certificateAuthority/plugin/rootCertObjectName"
+      },
+      {
+        "addr": "properties/serviceMeshProfile/istio/components/ingressGateways/enabled"
+      },
+      {
+        "addr": "properties/serviceMeshProfile/istio/components/ingressGateways/mode"
+      },
+      {
+        "addr": "properties/serviceMeshProfile/istio/components/proxyRedirectionMechanism"
+      },
+      {
+        "addr": "properties/serviceMeshProfile/istio/revisions"
+      },
+      {
+        "addr": "properties/serviceMeshProfile/mode"
+      },
+      {
+        "addr": "sku/name"
+      },
+      {
+        "addr": "sku/tier"
       },
       {
         "addr": "tags"
@@ -53282,6 +55650,11 @@
   },
   {
     "api_version": "2025-10-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/LISTCLUSTERUSERCREDENTIAL",
+    "operation": "POST"
+  },
+  {
+    "api_version": "2026-04-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/LISTCLUSTERUSERCREDENTIAL",
     "operation": "POST"
   },
@@ -89323,14 +91696,184 @@
     ]
   },
   {
-    "api_version": "2023-02-01",
+    "api_version": "2026-02-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.KEYVAULT/VAULTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-02-01",
+    "api_version": "2026-02-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.KEYVAULT/VAULTS/{}",
     "operation": "GET",
+    "properties": [
+      {
+        "addr": "id"
+      },
+      {
+        "addr": "location"
+      },
+      {
+        "addr": "name"
+      },
+      {
+        "addr": "properties/accessPolicies/applicationId"
+      },
+      {
+        "addr": "properties/accessPolicies/objectId"
+      },
+      {
+        "addr": "properties/accessPolicies/permissions/certificates"
+      },
+      {
+        "addr": "properties/accessPolicies/permissions/keys"
+      },
+      {
+        "addr": "properties/accessPolicies/permissions/secrets"
+      },
+      {
+        "addr": "properties/accessPolicies/permissions/storage"
+      },
+      {
+        "addr": "properties/accessPolicies/tenantId"
+      },
+      {
+        "addr": "properties/createMode"
+      },
+      {
+        "addr": "properties/enablePurgeProtection"
+      },
+      {
+        "addr": "properties/enableRbacAuthorization"
+      },
+      {
+        "addr": "properties/enableSoftDelete"
+      },
+      {
+        "addr": "properties/enabledForDeployment"
+      },
+      {
+        "addr": "properties/enabledForDiskEncryption"
+      },
+      {
+        "addr": "properties/enabledForTemplateDeployment"
+      },
+      {
+        "addr": "properties/networkAcls/bypass"
+      },
+      {
+        "addr": "properties/networkAcls/defaultAction"
+      },
+      {
+        "addr": "properties/networkAcls/ipRules/value"
+      },
+      {
+        "addr": "properties/networkAcls/virtualNetworkRules/id"
+      },
+      {
+        "addr": "properties/publicNetworkAccess"
+      },
+      {
+        "addr": "properties/sku/family"
+      },
+      {
+        "addr": "properties/sku/name"
+      },
+      {
+        "addr": "properties/softDeleteRetentionInDays"
+      },
+      {
+        "addr": "properties/tenantId"
+      },
+      {
+        "addr": "properties/vaultUri"
+      },
+      {
+        "addr": "tags"
+      },
+      {
+        "addr": "type"
+      }
+    ]
+  },
+  {
+    "api_version": "2026-02-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.KEYVAULT/VAULTS/{}",
+    "operation": "PATCH",
+    "properties": [
+      {
+        "addr": "properties/accessPolicies/applicationId"
+      },
+      {
+        "addr": "properties/accessPolicies/objectId"
+      },
+      {
+        "addr": "properties/accessPolicies/permissions/certificates"
+      },
+      {
+        "addr": "properties/accessPolicies/permissions/keys"
+      },
+      {
+        "addr": "properties/accessPolicies/permissions/secrets"
+      },
+      {
+        "addr": "properties/accessPolicies/permissions/storage"
+      },
+      {
+        "addr": "properties/accessPolicies/tenantId"
+      },
+      {
+        "addr": "properties/enablePurgeProtection"
+      },
+      {
+        "addr": "properties/enableRbacAuthorization"
+      },
+      {
+        "addr": "properties/enableSoftDelete"
+      },
+      {
+        "addr": "properties/enabledForDeployment"
+      },
+      {
+        "addr": "properties/enabledForDiskEncryption"
+      },
+      {
+        "addr": "properties/enabledForTemplateDeployment"
+      },
+      {
+        "addr": "properties/networkAcls/bypass"
+      },
+      {
+        "addr": "properties/networkAcls/defaultAction"
+      },
+      {
+        "addr": "properties/networkAcls/ipRules/value"
+      },
+      {
+        "addr": "properties/networkAcls/virtualNetworkRules/id"
+      },
+      {
+        "addr": "properties/publicNetworkAccess"
+      },
+      {
+        "addr": "properties/sku/family"
+      },
+      {
+        "addr": "properties/sku/name"
+      },
+      {
+        "addr": "properties/softDeleteRetentionInDays"
+      },
+      {
+        "addr": "properties/tenantId"
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2026-02-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.KEYVAULT/VAULTS/{}",
+    "operation": "PUT",
     "properties": [
       {
         "addr": "location"
@@ -89413,83 +91956,7 @@
     ]
   },
   {
-    "api_version": "2023-02-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.KEYVAULT/VAULTS/{}",
-    "operation": "PATCH",
-    "properties": [
-      {
-        "addr": "properties/accessPolicies/applicationId"
-      },
-      {
-        "addr": "properties/accessPolicies/objectId"
-      },
-      {
-        "addr": "properties/accessPolicies/permissions/certificates"
-      },
-      {
-        "addr": "properties/accessPolicies/permissions/keys"
-      },
-      {
-        "addr": "properties/accessPolicies/permissions/secrets"
-      },
-      {
-        "addr": "properties/accessPolicies/permissions/storage"
-      },
-      {
-        "addr": "properties/accessPolicies/tenantId"
-      },
-      {
-        "addr": "properties/enablePurgeProtection"
-      },
-      {
-        "addr": "properties/enableRbacAuthorization"
-      },
-      {
-        "addr": "properties/enableSoftDelete"
-      },
-      {
-        "addr": "properties/enabledForDeployment"
-      },
-      {
-        "addr": "properties/enabledForDiskEncryption"
-      },
-      {
-        "addr": "properties/enabledForTemplateDeployment"
-      },
-      {
-        "addr": "properties/networkAcls/bypass"
-      },
-      {
-        "addr": "properties/networkAcls/defaultAction"
-      },
-      {
-        "addr": "properties/networkAcls/ipRules/value"
-      },
-      {
-        "addr": "properties/networkAcls/virtualNetworkRules/id"
-      },
-      {
-        "addr": "properties/publicNetworkAccess"
-      },
-      {
-        "addr": "properties/sku/family"
-      },
-      {
-        "addr": "properties/sku/name"
-      },
-      {
-        "addr": "properties/softDeleteRetentionInDays"
-      },
-      {
-        "addr": "properties/tenantId"
-      },
-      {
-        "addr": "tags"
-      }
-    ]
-  },
-  {
-    "api_version": "2023-02-01",
+    "api_version": "2026-02-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.KEYVAULT/VAULTS/{}/ACCESSPOLICIES/{}",
     "operation": "PUT",
     "properties": [
@@ -110700,6 +113167,9 @@
     "operation": "GET",
     "properties": [
       {
+        "addr": "extendedLocation"
+      },
+      {
         "addr": "location",
         "app_property_maps": [
           {
@@ -110799,6 +113269,9 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETWORK/PRIVATEENDPOINTS/{}",
     "operation": "PUT",
     "properties": [
+      {
+        "addr": "extendedLocation"
+      },
       {
         "addr": "location",
         "app_property_maps": [
@@ -120434,10 +122907,19 @@
         "addr": "properties/retentionInDaysAsDefault"
       },
       {
+        "addr": "properties/schema/columns"
+      },
+      {
         "addr": "properties/schema/columns/description"
       },
       {
         "addr": "properties/schema/columns/displayName"
+      },
+      {
+        "addr": "properties/schema/columns/isDefaultDisplay"
+      },
+      {
+        "addr": "properties/schema/columns/isHidden"
       },
       {
         "addr": "properties/schema/columns/name"
@@ -120451,6 +122933,10 @@
           {
             "name": "azurerm_log_analytics_workspace_table_custom_log",
             "addr": "/description"
+          },
+          {
+            "name": "azurerm_log_analytics_workspace_table_microsoft",
+            "addr": "/description"
           }
         ]
       },
@@ -120460,8 +122946,15 @@
           {
             "name": "azurerm_log_analytics_workspace_table_custom_log",
             "addr": "/display_name"
+          },
+          {
+            "name": "azurerm_log_analytics_workspace_table_microsoft",
+            "addr": "/display_name"
           }
         ]
+      },
+      {
+        "addr": "properties/schema/labels"
       },
       {
         "addr": "properties/schema/name"
@@ -120474,6 +122967,12 @@
       },
       {
         "addr": "properties/schema/standardColumns/displayName"
+      },
+      {
+        "addr": "properties/schema/standardColumns/isDefaultDisplay"
+      },
+      {
+        "addr": "properties/schema/standardColumns/isHidden"
       },
       {
         "addr": "properties/schema/standardColumns/name"
@@ -120516,10 +123015,19 @@
         "addr": "properties/retentionInDaysAsDefault"
       },
       {
+        "addr": "properties/schema/columns"
+      },
+      {
         "addr": "properties/schema/columns/description"
       },
       {
         "addr": "properties/schema/columns/displayName"
+      },
+      {
+        "addr": "properties/schema/columns/isDefaultDisplay"
+      },
+      {
+        "addr": "properties/schema/columns/isHidden"
       },
       {
         "addr": "properties/schema/columns/name"
@@ -120533,6 +123041,10 @@
           {
             "name": "azurerm_log_analytics_workspace_table_custom_log",
             "addr": "/description"
+          },
+          {
+            "name": "azurerm_log_analytics_workspace_table_microsoft",
+            "addr": "/description"
           }
         ]
       },
@@ -120542,8 +123054,15 @@
           {
             "name": "azurerm_log_analytics_workspace_table_custom_log",
             "addr": "/display_name"
+          },
+          {
+            "name": "azurerm_log_analytics_workspace_table_microsoft",
+            "addr": "/display_name"
           }
         ]
+      },
+      {
+        "addr": "properties/schema/labels"
       },
       {
         "addr": "properties/schema/name"
@@ -120556,6 +123075,12 @@
       },
       {
         "addr": "properties/schema/standardColumns/displayName"
+      },
+      {
+        "addr": "properties/schema/standardColumns/isDefaultDisplay"
+      },
+      {
+        "addr": "properties/schema/standardColumns/isHidden"
       },
       {
         "addr": "properties/schema/standardColumns/name"
@@ -120598,10 +123123,19 @@
         "addr": "properties/retentionInDaysAsDefault"
       },
       {
+        "addr": "properties/schema/columns"
+      },
+      {
         "addr": "properties/schema/columns/description"
       },
       {
         "addr": "properties/schema/columns/displayName"
+      },
+      {
+        "addr": "properties/schema/columns/isDefaultDisplay"
+      },
+      {
+        "addr": "properties/schema/columns/isHidden"
       },
       {
         "addr": "properties/schema/columns/name"
@@ -120615,6 +123149,10 @@
           {
             "name": "azurerm_log_analytics_workspace_table_custom_log",
             "addr": "/description"
+          },
+          {
+            "name": "azurerm_log_analytics_workspace_table_microsoft",
+            "addr": "/description"
           }
         ]
       },
@@ -120624,8 +123162,15 @@
           {
             "name": "azurerm_log_analytics_workspace_table_custom_log",
             "addr": "/display_name"
+          },
+          {
+            "name": "azurerm_log_analytics_workspace_table_microsoft",
+            "addr": "/display_name"
           }
         ]
+      },
+      {
+        "addr": "properties/schema/labels"
       },
       {
         "addr": "properties/schema/name"
@@ -120638,6 +123183,12 @@
       },
       {
         "addr": "properties/schema/standardColumns/displayName"
+      },
+      {
+        "addr": "properties/schema/standardColumns/isDefaultDisplay"
+      },
+      {
+        "addr": "properties/schema/standardColumns/isHidden"
       },
       {
         "addr": "properties/schema/standardColumns/name"
@@ -155751,7 +158302,13 @@
         "addr": "id"
       },
       {
-        "addr": "properties/subnetResourceId"
+        "addr": "properties/subnetResourceId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_app_service_virtual_network_swift_connection",
+            "addr": "/subnet_id"
+          }
+        ]
       }
     ]
   },
@@ -155764,7 +158321,13 @@
         "addr": "id"
       },
       {
-        "addr": "properties/subnetResourceId"
+        "addr": "properties/subnetResourceId",
+        "app_property_maps": [
+          {
+            "name": "azurerm_app_service_virtual_network_swift_connection",
+            "addr": "/subnet_id"
+          }
+        ]
       }
     ]
   },
@@ -160527,10 +163090,6 @@
           {
             "name": "azurerm_app_service_slot_virtual_network_swift_connection",
             "addr": "/subnet_id"
-          },
-          {
-            "name": "azurerm_app_service_virtual_network_swift_connection",
-            "addr": "/subnet_id"
           }
         ]
       }
@@ -160549,10 +163108,6 @@
         "app_property_maps": [
           {
             "name": "azurerm_app_service_slot_virtual_network_swift_connection",
-            "addr": "/subnet_id"
-          },
-          {
-            "name": "azurerm_app_service_virtual_network_swift_connection",
             "addr": "/subnet_id"
           }
         ]
@@ -167898,12 +170453,6 @@
     "operation": "GET",
     "properties": [
       {
-        "addr": "identity/principalId"
-      },
-      {
-        "addr": "identity/tenantId"
-      },
-      {
         "addr": "identity/type"
       },
       {
@@ -168362,12 +170911,6 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/PALOALTONETWORKS.CLOUDNGFW/FIREWALLS/{}",
     "operation": "PUT",
     "properties": [
-      {
-        "addr": "identity/principalId"
-      },
-      {
-        "addr": "identity/tenantId"
-      },
       {
         "addr": "identity/type"
       },
