@@ -18450,25 +18450,6 @@
     "operation": "DELETE"
   },
   {
-    "api_version": "2020-10-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.ATTESTATION/ATTESTATIONPROVIDERS/{}",
-    "operation": "GET",
-    "properties": [
-      {
-        "addr": "location"
-      },
-      {
-        "addr": "properties/attestUri"
-      },
-      {
-        "addr": "properties/trustModel"
-      },
-      {
-        "addr": "tags"
-      }
-    ]
-  },
-  {
     "api_version": "2020-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.AUTHORIZATION/RESOURCEMANAGEMENTPRIVATELINKS/{}",
     "operation": "DELETE"
@@ -66877,7 +66858,25 @@
         "addr": "properties/storage/autoGrow"
       },
       {
+        "addr": "properties/storage/iops",
+        "app_property_maps": [
+          {
+            "name": "azurerm_postgresql_flexible_server",
+            "addr": "/storage_iops"
+          }
+        ]
+      },
+      {
         "addr": "properties/storage/storageSizeGB"
+      },
+      {
+        "addr": "properties/storage/throughput",
+        "app_property_maps": [
+          {
+            "name": "azurerm_postgresql_flexible_server",
+            "addr": "/storage_throughput"
+          }
+        ]
       },
       {
         "addr": "properties/storage/tier",
@@ -66885,6 +66884,15 @@
           {
             "name": "azurerm_postgresql_flexible_server",
             "addr": "/storage_tier"
+          }
+        ]
+      },
+      {
+        "addr": "properties/storage/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_postgresql_flexible_server",
+            "addr": "/storage_type"
           }
         ]
       },
@@ -67070,7 +67078,25 @@
         "addr": "properties/storage/autoGrow"
       },
       {
+        "addr": "properties/storage/iops",
+        "app_property_maps": [
+          {
+            "name": "azurerm_postgresql_flexible_server",
+            "addr": "/storage_iops"
+          }
+        ]
+      },
+      {
         "addr": "properties/storage/storageSizeGB"
+      },
+      {
+        "addr": "properties/storage/throughput",
+        "app_property_maps": [
+          {
+            "name": "azurerm_postgresql_flexible_server",
+            "addr": "/storage_throughput"
+          }
+        ]
       },
       {
         "addr": "properties/storage/tier",
@@ -67078,6 +67104,15 @@
           {
             "name": "azurerm_postgresql_flexible_server",
             "addr": "/storage_tier"
+          }
+        ]
+      },
+      {
+        "addr": "properties/storage/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_postgresql_flexible_server",
+            "addr": "/storage_type"
           }
         ]
       },
@@ -67314,7 +67349,25 @@
         "addr": "properties/storage/autoGrow"
       },
       {
+        "addr": "properties/storage/iops",
+        "app_property_maps": [
+          {
+            "name": "azurerm_postgresql_flexible_server",
+            "addr": "/storage_iops"
+          }
+        ]
+      },
+      {
         "addr": "properties/storage/storageSizeGB"
+      },
+      {
+        "addr": "properties/storage/throughput",
+        "app_property_maps": [
+          {
+            "name": "azurerm_postgresql_flexible_server",
+            "addr": "/storage_throughput"
+          }
+        ]
       },
       {
         "addr": "properties/storage/tier",
@@ -67322,6 +67375,15 @@
           {
             "name": "azurerm_postgresql_flexible_server",
             "addr": "/storage_tier"
+          }
+        ]
+      },
+      {
+        "addr": "properties/storage/type",
+        "app_property_maps": [
+          {
+            "name": "azurerm_postgresql_flexible_server",
+            "addr": "/storage_type"
           }
         ]
       },
@@ -76787,12 +76849,12 @@
     ]
   },
   {
-    "api_version": "2025-09-01",
+    "api_version": "2026-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/MONGOCLUSTERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-09-01",
+    "api_version": "2026-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/MONGOCLUSTERS/{}",
     "operation": "GET",
     "properties": [
@@ -76955,7 +77017,7 @@
     ]
   },
   {
-    "api_version": "2025-09-01",
+    "api_version": "2026-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/MONGOCLUSTERS/{}",
     "operation": "PATCH",
     "properties": [
@@ -76965,7 +77027,7 @@
     ]
   },
   {
-    "api_version": "2025-09-01",
+    "api_version": "2026-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/MONGOCLUSTERS/{}",
     "operation": "PUT",
     "properties": [
@@ -77128,12 +77190,12 @@
     ]
   },
   {
-    "api_version": "2025-09-01",
+    "api_version": "2026-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/MONGOCLUSTERS/{}/FIREWALLRULES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-09-01",
+    "api_version": "2026-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/MONGOCLUSTERS/{}/FIREWALLRULES/{}",
     "operation": "GET",
     "properties": [
@@ -77158,7 +77220,7 @@
     ]
   },
   {
-    "api_version": "2025-09-01",
+    "api_version": "2026-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/MONGOCLUSTERS/{}/FIREWALLRULES/{}",
     "operation": "PUT",
     "properties": [
@@ -77183,17 +77245,17 @@
     ]
   },
   {
-    "api_version": "2025-09-01",
+    "api_version": "2026-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/MONGOCLUSTERS/{}/LISTCONNECTIONSTRINGS",
     "operation": "POST"
   },
   {
-    "api_version": "2025-09-01",
+    "api_version": "2026-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/MONGOCLUSTERS/{}/USERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-09-01",
+    "api_version": "2026-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/MONGOCLUSTERS/{}/USERS/{}",
     "operation": "GET",
     "properties": [
@@ -77224,7 +77286,7 @@
     ]
   },
   {
-    "api_version": "2025-09-01",
+    "api_version": "2026-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DOCUMENTDB/MONGOCLUSTERS/{}/USERS/{}",
     "operation": "PUT",
     "properties": [
@@ -95106,12 +95168,12 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}",
     "operation": "GET",
     "properties": [
@@ -95214,7 +95276,7 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -95254,7 +95316,7 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}",
     "operation": "PUT",
     "properties": [
@@ -95357,12 +95419,12 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPPOLICIES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPPOLICIES/{}",
     "operation": "GET",
     "properties": [
@@ -95411,7 +95473,7 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPPOLICIES/{}",
     "operation": "PATCH",
     "properties": [
@@ -95451,7 +95513,7 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPPOLICIES/{}",
     "operation": "PUT",
     "properties": [
@@ -95500,12 +95562,12 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPVAULTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPVAULTS/{}",
     "operation": "GET",
     "properties": [
@@ -95524,7 +95586,7 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPVAULTS/{}",
     "operation": "PATCH",
     "properties": [
@@ -95534,7 +95596,7 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPVAULTS/{}",
     "operation": "PUT",
     "properties": [
@@ -95553,7 +95615,7 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPVAULTS/{}/BACKUPS",
     "operation": "GET",
     "properties": [
@@ -95566,12 +95628,12 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPVAULTS/{}/BACKUPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/BACKUPVAULTS/{}/BACKUPS/{}",
     "operation": "GET",
     "properties": [
@@ -95584,7 +95646,7 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS",
     "operation": "GET",
     "properties": [
@@ -95654,12 +95716,12 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}",
     "operation": "GET",
     "properties": [
@@ -95729,7 +95791,7 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}",
     "operation": "PATCH",
     "properties": [
@@ -95769,7 +95831,7 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}",
     "operation": "PUT",
     "properties": [
@@ -95839,7 +95901,7 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES",
     "operation": "GET",
     "properties": [
@@ -95878,6 +95940,9 @@
         "addr": "properties/avsDataStore"
       },
       {
+        "addr": "properties/breakthroughMode"
+      },
+      {
         "addr": "properties/coolAccess"
       },
       {
@@ -96122,12 +96187,12 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}",
     "operation": "GET",
     "properties": [
@@ -96166,6 +96231,9 @@
         "addr": "properties/avsDataStore"
       },
       {
+        "addr": "properties/breakthroughMode"
+      },
+      {
         "addr": "properties/coolAccess"
       },
       {
@@ -96410,7 +96478,7 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}",
     "operation": "PATCH",
     "properties": [
@@ -96557,7 +96625,7 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}",
     "operation": "PUT",
     "properties": [
@@ -96594,6 +96662,9 @@
       },
       {
         "addr": "properties/avsDataStore"
+      },
+      {
+        "addr": "properties/breakthroughMode"
       },
       {
         "addr": "properties/coolAccess"
@@ -96840,7 +96911,7 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/AUTHORIZEREPLICATION",
     "operation": "POST",
     "properties": [
@@ -96850,7 +96921,7 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/BREAKREPLICATION",
     "operation": "POST",
     "properties": [
@@ -96860,12 +96931,12 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/BUCKETS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/BUCKETS/{}",
     "operation": "GET",
     "properties": [
@@ -97062,7 +97133,7 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/BUCKETS/{}",
     "operation": "PATCH",
     "properties": [
@@ -97194,7 +97265,7 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/BUCKETS/{}",
     "operation": "PUT",
     "properties": [
@@ -97391,12 +97462,12 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/DELETEREPLICATION",
     "operation": "POST"
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/LATESTBACKUPSTATUS/CURRENT",
     "operation": "GET",
     "properties": [
@@ -97406,7 +97477,7 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/POOLCHANGE",
     "operation": "POST",
     "properties": [
@@ -97416,7 +97487,7 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/REPLICATIONSTATUS",
     "operation": "GET",
     "properties": [
@@ -97426,12 +97497,12 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/SNAPSHOTS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/SNAPSHOTS/{}",
     "operation": "GET",
     "properties": [
@@ -97450,7 +97521,7 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/SNAPSHOTS/{}",
     "operation": "PUT",
     "properties": [
@@ -97469,12 +97540,12 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/VOLUMEQUOTARULES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/VOLUMEQUOTARULES/{}",
     "operation": "GET",
     "properties": [
@@ -97517,7 +97588,7 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/VOLUMEQUOTARULES/{}",
     "operation": "PATCH",
     "properties": [
@@ -97533,7 +97604,7 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/CAPACITYPOOLS/{}/VOLUMES/{}/VOLUMEQUOTARULES/{}",
     "operation": "PUT",
     "properties": [
@@ -97576,12 +97647,12 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/SNAPSHOTPOLICIES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/SNAPSHOTPOLICIES/{}",
     "operation": "GET",
     "properties": [
@@ -97723,7 +97794,7 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/SNAPSHOTPOLICIES/{}",
     "operation": "PATCH",
     "properties": [
@@ -97865,7 +97936,7 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/SNAPSHOTPOLICIES/{}",
     "operation": "PUT",
     "properties": [
@@ -98007,12 +98078,12 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/VOLUMEGROUPS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/VOLUMEGROUPS/{}",
     "operation": "GET",
     "properties": [
@@ -98181,7 +98252,7 @@
     ]
   },
   {
-    "api_version": "2026-01-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.NETAPP/NETAPPACCOUNTS/{}/VOLUMEGROUPS/{}",
     "operation": "PUT",
     "properties": [
@@ -106417,6 +106488,9 @@
         "addr": "properties/probes/properties/loadBalancingRules/id"
       },
       {
+        "addr": "properties/probes/properties/noHealthyBackendsBehavior"
+      },
+      {
         "addr": "properties/probes/properties/numberOfProbes"
       },
       {
@@ -106695,6 +106769,9 @@
       },
       {
         "addr": "properties/probes/properties/loadBalancingRules/id"
+      },
+      {
+        "addr": "properties/probes/properties/noHealthyBackendsBehavior"
       },
       {
         "addr": "properties/probes/properties/numberOfProbes"
@@ -140875,6 +140952,16 @@
     ]
   },
   {
+    "api_version": "2025-08-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/{}/STARTACCOUNTMIGRATION",
+    "operation": "POST",
+    "properties": [
+      {
+        "addr": "properties/targetSkuName"
+      }
+    ]
+  },
+  {
     "api_version": "2024-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGECACHE/AMLFILESYSTEMS/{}",
     "operation": "DELETE"
@@ -146554,12 +146641,12 @@
     ]
   },
   {
-    "api_version": "2021-06-01-preview",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/BIGDATAPOOLS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2021-06-01-preview",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/BIGDATAPOOLS/{}",
     "operation": "GET",
     "properties": [
@@ -146719,7 +146806,7 @@
     ]
   },
   {
-    "api_version": "2021-06-01-preview",
+    "api_version": "2021-06-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SYNAPSE/WORKSPACES/{}/BIGDATAPOOLS/{}",
     "operation": "PUT",
     "properties": [
