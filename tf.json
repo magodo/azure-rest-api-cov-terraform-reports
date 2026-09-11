@@ -4941,9 +4941,6 @@
     "operation": "PATCH",
     "properties": [
       {
-        "addr": "managedBy"
-      },
-      {
         "addr": "tags"
       }
     ]
@@ -28784,9 +28781,6 @@
         "addr": "properties/logScrubbing/scrubbingRules/matchVariable"
       },
       {
-        "addr": "properties/logScrubbing/scrubbingRules/selector"
-      },
-      {
         "addr": "properties/logScrubbing/scrubbingRules/selectorMatchOperator"
       },
       {
@@ -28847,9 +28841,6 @@
       },
       {
         "addr": "properties/logScrubbing/scrubbingRules/matchVariable"
-      },
-      {
-        "addr": "properties/logScrubbing/scrubbingRules/selector"
       },
       {
         "addr": "properties/logScrubbing/scrubbingRules/selectorMatchOperator"
@@ -28933,9 +28924,6 @@
       },
       {
         "addr": "properties/logScrubbing/scrubbingRules/matchVariable"
-      },
-      {
-        "addr": "properties/logScrubbing/scrubbingRules/selector"
       },
       {
         "addr": "properties/logScrubbing/scrubbingRules/selectorMatchOperator"
@@ -64907,9 +64895,6 @@
         "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/taggingCriteria/criteria{ScheduleBasedBackupCriteria}/absoluteCriteria"
       },
       {
-        "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/taggingCriteria/criteria{ScheduleBasedBackupCriteria}/daysOfMonth"
-      },
-      {
         "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/taggingCriteria/criteria{ScheduleBasedBackupCriteria}/daysOfMonth/date"
       },
       {
@@ -64990,9 +64975,6 @@
       },
       {
         "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/taggingCriteria/criteria{ScheduleBasedBackupCriteria}/absoluteCriteria"
-      },
-      {
-        "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/taggingCriteria/criteria{ScheduleBasedBackupCriteria}/daysOfMonth"
       },
       {
         "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/taggingCriteria/criteria{ScheduleBasedBackupCriteria}/daysOfMonth/date"
@@ -93730,9 +93712,6 @@
         "addr": "properties{SynapseSpark}/disableLocalAuth"
       },
       {
-        "addr": "properties{SynapseSpark}/properties"
-      },
-      {
         "addr": "properties{SynapseSpark}/resourceId",
         "app_property_maps": [
           {
@@ -94046,9 +94025,6 @@
       },
       {
         "addr": "properties{SynapseSpark}/disableLocalAuth"
-      },
-      {
-        "addr": "properties{SynapseSpark}/properties"
       },
       {
         "addr": "properties{SynapseSpark}/resourceId",
@@ -134166,6 +134142,9 @@
     "operation": "GET",
     "properties": [
       {
+        "addr": "properties"
+      },
+      {
         "addr": "properties/azureADOnlyAuthentication",
         "app_property_maps": [
           {
@@ -134181,6 +134160,9 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SQL/MANAGEDINSTANCES/{}/AZUREADONLYAUTHENTICATIONS/DEFAULT",
     "operation": "PUT",
     "properties": [
+      {
+        "addr": "properties"
+      },
       {
         "addr": "properties/azureADOnlyAuthentication",
         "app_property_maps": [
@@ -139212,7 +139194,13 @@
         ]
       },
       {
-        "addr": "properties/publicNetworkAccess"
+        "addr": "properties/publicNetworkAccess",
+        "app_property_maps": [
+          {
+            "name": "azurerm_storage_account",
+            "addr": "/public_network_access"
+          }
+        ]
       },
       {
         "addr": "properties/routingPreference/publishInternetEndpoints"
@@ -139890,7 +139878,13 @@
         "addr": "properties/networkAcls/virtualNetworkRules/id"
       },
       {
-        "addr": "properties/publicNetworkAccess"
+        "addr": "properties/publicNetworkAccess",
+        "app_property_maps": [
+          {
+            "name": "azurerm_storage_account",
+            "addr": "/public_network_access"
+          }
+        ]
       },
       {
         "addr": "properties/routingPreference/publishInternetEndpoints"
@@ -150689,6 +150683,9 @@
     "operation": "GET",
     "properties": [
       {
+        "addr": "properties"
+      },
+      {
         "addr": "properties/allow"
       }
     ]
@@ -150698,6 +150695,9 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/BASICPUBLISHINGCREDENTIALSPOLICIES/FTP",
     "operation": "PUT",
     "properties": [
+      {
+        "addr": "properties"
+      },
       {
         "addr": "properties/allow"
       }
@@ -150709,6 +150709,9 @@
     "operation": "GET",
     "properties": [
       {
+        "addr": "properties"
+      },
+      {
         "addr": "properties/allow"
       }
     ]
@@ -150718,6 +150721,9 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/BASICPUBLISHINGCREDENTIALSPOLICIES/SCM",
     "operation": "PUT",
     "properties": [
+      {
+        "addr": "properties"
+      },
       {
         "addr": "properties/allow"
       }
@@ -154727,6 +154733,9 @@
     "operation": "GET",
     "properties": [
       {
+        "addr": "properties"
+      },
+      {
         "addr": "properties/allow"
       }
     ]
@@ -154736,6 +154745,9 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/BASICPUBLISHINGCREDENTIALSPOLICIES/FTP",
     "operation": "PUT",
     "properties": [
+      {
+        "addr": "properties"
+      },
       {
         "addr": "properties/allow"
       }
@@ -154747,6 +154759,9 @@
     "operation": "GET",
     "properties": [
       {
+        "addr": "properties"
+      },
+      {
         "addr": "properties/allow"
       }
     ]
@@ -154756,6 +154771,9 @@
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.WEB/SITES/{}/SLOTS/{}/BASICPUBLISHINGCREDENTIALSPOLICIES/SCM",
     "operation": "PUT",
     "properties": [
+      {
+        "addr": "properties"
+      },
       {
         "addr": "properties/allow"
       }
