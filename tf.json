@@ -50110,17 +50110,12 @@
     ]
   },
   {
-    "api_version": "2025-10-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2026-04-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
-    "operation": "DELETE"
-  },
-  {
-    "api_version": "2025-10-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
     "operation": "GET",
     "properties": [
@@ -50142,6 +50137,10 @@
       {
         "addr": "location",
         "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/location"
+          },
           {
             "name": "azurerm_kubernetes_cluster",
             "addr": "/location"
@@ -50653,6 +50652,10 @@
         "addr": "properties/azurePortalFQDN",
         "app_property_maps": [
           {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/portal_fully_qualified_domain_name"
+          },
+          {
             "name": "azurerm_kubernetes_cluster",
             "addr": "/portal_fqdn"
           }
@@ -50673,6 +50676,10 @@
       {
         "addr": "properties/currentKubernetesVersion",
         "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/current_kubernetes_version"
+          },
           {
             "name": "azurerm_kubernetes_cluster",
             "addr": "/current_kubernetes_version"
@@ -50707,6 +50714,10 @@
         "addr": "properties/fqdn",
         "app_property_maps": [
           {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/fully_qualified_domain_name"
+          },
+          {
             "name": "azurerm_kubernetes_cluster",
             "addr": "/fqdn"
           }
@@ -50718,6 +50729,27 @@
           {
             "name": "azurerm_kubernetes_cluster",
             "addr": "/dns_prefix_private_cluster"
+          }
+        ]
+      },
+      {
+        "addr": "properties/hostedSystemProfile/enabled"
+      },
+      {
+        "addr": "properties/hostedSystemProfile/nodeSubnetID",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/hosted_system/0/node_subnet_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/hostedSystemProfile/systemNodeSubnetID",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/hosted_system/0/system_node_subnet_id"
           }
         ]
       },
@@ -50761,8 +50793,15 @@
         "addr": "properties/ingressProfile/webAppRouting/enabled"
       },
       {
+        "addr": "properties/ingressProfile/webAppRouting/gatewayAPIImplementations/appRoutingIstio/mode"
+      },
+      {
         "addr": "properties/ingressProfile/webAppRouting/identity/clientId",
         "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/web_app_routing_ingress/0/web_app_routing_identity/0/client_id"
+          },
           {
             "name": "azurerm_kubernetes_cluster",
             "addr": "/web_app_routing/0/web_app_routing_identity/0/client_id"
@@ -50772,6 +50811,10 @@
       {
         "addr": "properties/ingressProfile/webAppRouting/identity/objectId",
         "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/web_app_routing_ingress/0/web_app_routing_identity/0/object_id"
+          },
           {
             "name": "azurerm_kubernetes_cluster",
             "addr": "/web_app_routing/0/web_app_routing_identity/0/object_id"
@@ -50790,6 +50833,10 @@
       {
         "addr": "properties/ingressProfile/webAppRouting/nginx/defaultIngressControllerType",
         "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/web_app_routing_ingress/0/default_nginx_controller"
+          },
           {
             "name": "azurerm_kubernetes_cluster",
             "addr": "/web_app_routing/0/default_nginx_controller"
@@ -51031,6 +51078,10 @@
         "addr": "properties/oidcIssuerProfile/issuerURL",
         "app_property_maps": [
           {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/oidc_issuer_url"
+          },
+          {
             "name": "azurerm_kubernetes_cluster",
             "addr": "/oidc_issuer_url"
           }
@@ -51039,6 +51090,10 @@
       {
         "addr": "properties/privateFQDN",
         "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/private_fully_qualified_domain_name"
+          },
           {
             "name": "azurerm_kubernetes_cluster",
             "addr": "/private_fqdn"
@@ -51119,6 +51174,9 @@
       },
       {
         "addr": "properties/serviceMeshProfile/istio/components/ingressGateways/mode"
+      },
+      {
+        "addr": "properties/serviceMeshProfile/istio/components/proxyRedirectionMechanism"
       },
       {
         "addr": "properties/serviceMeshProfile/istio/revisions"
@@ -51237,206 +51295,7 @@
     ]
   },
   {
-    "api_version": "2026-04-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
-    "operation": "GET",
-    "properties": [
-      {
-        "addr": "identity/principalId"
-      },
-      {
-        "addr": "identity/tenantId"
-      },
-      {
-        "addr": "identity/type"
-      },
-      {
-        "addr": "identity/userAssignedIdentities"
-      },
-      {
-        "addr": "location",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_automatic_cluster",
-            "addr": "/location"
-          }
-        ]
-      },
-      {
-        "addr": "properties/apiServerAccessProfile/authorizedIPRanges"
-      },
-      {
-        "addr": "properties/apiServerAccessProfile/enablePrivateCluster"
-      },
-      {
-        "addr": "properties/apiServerAccessProfile/enablePrivateClusterPublicFQDN"
-      },
-      {
-        "addr": "properties/apiServerAccessProfile/privateDNSZone"
-      },
-      {
-        "addr": "properties/apiServerAccessProfile/subnetId"
-      },
-      {
-        "addr": "properties/azurePortalFQDN",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_automatic_cluster",
-            "addr": "/portal_fully_qualified_domain_name"
-          }
-        ]
-      },
-      {
-        "addr": "properties/currentKubernetesVersion",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_automatic_cluster",
-            "addr": "/current_kubernetes_version"
-          }
-        ]
-      },
-      {
-        "addr": "properties/dnsPrefix"
-      },
-      {
-        "addr": "properties/fqdn",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_automatic_cluster",
-            "addr": "/fully_qualified_domain_name"
-          }
-        ]
-      },
-      {
-        "addr": "properties/hostedSystemProfile/enabled"
-      },
-      {
-        "addr": "properties/hostedSystemProfile/nodeSubnetID",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_automatic_cluster",
-            "addr": "/hosted_system/0/node_subnet_id"
-          }
-        ]
-      },
-      {
-        "addr": "properties/hostedSystemProfile/systemNodeSubnetID",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_automatic_cluster",
-            "addr": "/hosted_system/0/system_node_subnet_id"
-          }
-        ]
-      },
-      {
-        "addr": "properties/identityProfile"
-      },
-      {
-        "addr": "properties/ingressProfile/webAppRouting/dnsZoneResourceIds"
-      },
-      {
-        "addr": "properties/ingressProfile/webAppRouting/enabled"
-      },
-      {
-        "addr": "properties/ingressProfile/webAppRouting/gatewayAPIImplementations/appRoutingIstio/mode"
-      },
-      {
-        "addr": "properties/ingressProfile/webAppRouting/identity/clientId",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_automatic_cluster",
-            "addr": "/web_app_routing_ingress/0/web_app_routing_identity/0/client_id"
-          }
-        ]
-      },
-      {
-        "addr": "properties/ingressProfile/webAppRouting/identity/objectId",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_automatic_cluster",
-            "addr": "/web_app_routing_ingress/0/web_app_routing_identity/0/object_id"
-          }
-        ]
-      },
-      {
-        "addr": "properties/ingressProfile/webAppRouting/identity/resourceId"
-      },
-      {
-        "addr": "properties/ingressProfile/webAppRouting/nginx/defaultIngressControllerType",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_automatic_cluster",
-            "addr": "/web_app_routing_ingress/0/default_nginx_controller"
-          }
-        ]
-      },
-      {
-        "addr": "properties/kubernetesVersion"
-      },
-      {
-        "addr": "properties/nodeResourceGroup"
-      },
-      {
-        "addr": "properties/oidcIssuerProfile/issuerURL",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_automatic_cluster",
-            "addr": "/oidc_issuer_url"
-          }
-        ]
-      },
-      {
-        "addr": "properties/privateFQDN",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_automatic_cluster",
-            "addr": "/private_fully_qualified_domain_name"
-          }
-        ]
-      },
-      {
-        "addr": "properties/serviceMeshProfile/istio/certificateAuthority/plugin/certChainObjectName"
-      },
-      {
-        "addr": "properties/serviceMeshProfile/istio/certificateAuthority/plugin/certObjectName"
-      },
-      {
-        "addr": "properties/serviceMeshProfile/istio/certificateAuthority/plugin/keyObjectName"
-      },
-      {
-        "addr": "properties/serviceMeshProfile/istio/certificateAuthority/plugin/keyVaultId"
-      },
-      {
-        "addr": "properties/serviceMeshProfile/istio/certificateAuthority/plugin/rootCertObjectName"
-      },
-      {
-        "addr": "properties/serviceMeshProfile/istio/components/ingressGateways/enabled"
-      },
-      {
-        "addr": "properties/serviceMeshProfile/istio/components/ingressGateways/mode"
-      },
-      {
-        "addr": "properties/serviceMeshProfile/istio/components/proxyRedirectionMechanism"
-      },
-      {
-        "addr": "properties/serviceMeshProfile/istio/revisions"
-      },
-      {
-        "addr": "properties/serviceMeshProfile/mode"
-      },
-      {
-        "addr": "sku/name"
-      },
-      {
-        "addr": "sku/tier"
-      },
-      {
-        "addr": "tags"
-      }
-    ]
-  },
-  {
-    "api_version": "2025-10-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
     "operation": "PUT",
     "properties": [
@@ -51458,6 +51317,10 @@
       {
         "addr": "location",
         "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/location"
+          },
           {
             "name": "azurerm_kubernetes_cluster",
             "addr": "/location"
@@ -51969,6 +51832,10 @@
         "addr": "properties/azurePortalFQDN",
         "app_property_maps": [
           {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/portal_fully_qualified_domain_name"
+          },
+          {
             "name": "azurerm_kubernetes_cluster",
             "addr": "/portal_fqdn"
           }
@@ -51989,6 +51856,10 @@
       {
         "addr": "properties/currentKubernetesVersion",
         "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/current_kubernetes_version"
+          },
           {
             "name": "azurerm_kubernetes_cluster",
             "addr": "/current_kubernetes_version"
@@ -52023,6 +51894,10 @@
         "addr": "properties/fqdn",
         "app_property_maps": [
           {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/fully_qualified_domain_name"
+          },
+          {
             "name": "azurerm_kubernetes_cluster",
             "addr": "/fqdn"
           }
@@ -52034,6 +51909,27 @@
           {
             "name": "azurerm_kubernetes_cluster",
             "addr": "/dns_prefix_private_cluster"
+          }
+        ]
+      },
+      {
+        "addr": "properties/hostedSystemProfile/enabled"
+      },
+      {
+        "addr": "properties/hostedSystemProfile/nodeSubnetID",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/hosted_system/0/node_subnet_id"
+          }
+        ]
+      },
+      {
+        "addr": "properties/hostedSystemProfile/systemNodeSubnetID",
+        "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/hosted_system/0/system_node_subnet_id"
           }
         ]
       },
@@ -52077,8 +51973,15 @@
         "addr": "properties/ingressProfile/webAppRouting/enabled"
       },
       {
+        "addr": "properties/ingressProfile/webAppRouting/gatewayAPIImplementations/appRoutingIstio/mode"
+      },
+      {
         "addr": "properties/ingressProfile/webAppRouting/identity/clientId",
         "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/web_app_routing_ingress/0/web_app_routing_identity/0/client_id"
+          },
           {
             "name": "azurerm_kubernetes_cluster",
             "addr": "/web_app_routing/0/web_app_routing_identity/0/client_id"
@@ -52088,6 +51991,10 @@
       {
         "addr": "properties/ingressProfile/webAppRouting/identity/objectId",
         "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/web_app_routing_ingress/0/web_app_routing_identity/0/object_id"
+          },
           {
             "name": "azurerm_kubernetes_cluster",
             "addr": "/web_app_routing/0/web_app_routing_identity/0/object_id"
@@ -52106,6 +52013,10 @@
       {
         "addr": "properties/ingressProfile/webAppRouting/nginx/defaultIngressControllerType",
         "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/web_app_routing_ingress/0/default_nginx_controller"
+          },
           {
             "name": "azurerm_kubernetes_cluster",
             "addr": "/web_app_routing/0/default_nginx_controller"
@@ -52347,6 +52258,10 @@
         "addr": "properties/oidcIssuerProfile/issuerURL",
         "app_property_maps": [
           {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/oidc_issuer_url"
+          },
+          {
             "name": "azurerm_kubernetes_cluster",
             "addr": "/oidc_issuer_url"
           }
@@ -52355,6 +52270,10 @@
       {
         "addr": "properties/privateFQDN",
         "app_property_maps": [
+          {
+            "name": "azurerm_kubernetes_automatic_cluster",
+            "addr": "/private_fully_qualified_domain_name"
+          },
           {
             "name": "azurerm_kubernetes_cluster",
             "addr": "/private_fqdn"
@@ -52435,6 +52354,9 @@
       },
       {
         "addr": "properties/serviceMeshProfile/istio/components/ingressGateways/mode"
+      },
+      {
+        "addr": "properties/serviceMeshProfile/istio/components/proxyRedirectionMechanism"
       },
       {
         "addr": "properties/serviceMeshProfile/istio/revisions"
@@ -52553,211 +52475,12 @@
     ]
   },
   {
-    "api_version": "2026-04-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
-    "operation": "PUT",
-    "properties": [
-      {
-        "addr": "identity/principalId"
-      },
-      {
-        "addr": "identity/tenantId"
-      },
-      {
-        "addr": "identity/type"
-      },
-      {
-        "addr": "identity/userAssignedIdentities"
-      },
-      {
-        "addr": "location",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_automatic_cluster",
-            "addr": "/location"
-          }
-        ]
-      },
-      {
-        "addr": "properties/apiServerAccessProfile/authorizedIPRanges"
-      },
-      {
-        "addr": "properties/apiServerAccessProfile/enablePrivateCluster"
-      },
-      {
-        "addr": "properties/apiServerAccessProfile/enablePrivateClusterPublicFQDN"
-      },
-      {
-        "addr": "properties/apiServerAccessProfile/privateDNSZone"
-      },
-      {
-        "addr": "properties/apiServerAccessProfile/subnetId"
-      },
-      {
-        "addr": "properties/azurePortalFQDN",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_automatic_cluster",
-            "addr": "/portal_fully_qualified_domain_name"
-          }
-        ]
-      },
-      {
-        "addr": "properties/currentKubernetesVersion",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_automatic_cluster",
-            "addr": "/current_kubernetes_version"
-          }
-        ]
-      },
-      {
-        "addr": "properties/dnsPrefix"
-      },
-      {
-        "addr": "properties/fqdn",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_automatic_cluster",
-            "addr": "/fully_qualified_domain_name"
-          }
-        ]
-      },
-      {
-        "addr": "properties/hostedSystemProfile/enabled"
-      },
-      {
-        "addr": "properties/hostedSystemProfile/nodeSubnetID",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_automatic_cluster",
-            "addr": "/hosted_system/0/node_subnet_id"
-          }
-        ]
-      },
-      {
-        "addr": "properties/hostedSystemProfile/systemNodeSubnetID",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_automatic_cluster",
-            "addr": "/hosted_system/0/system_node_subnet_id"
-          }
-        ]
-      },
-      {
-        "addr": "properties/identityProfile"
-      },
-      {
-        "addr": "properties/ingressProfile/webAppRouting/dnsZoneResourceIds"
-      },
-      {
-        "addr": "properties/ingressProfile/webAppRouting/enabled"
-      },
-      {
-        "addr": "properties/ingressProfile/webAppRouting/gatewayAPIImplementations/appRoutingIstio/mode"
-      },
-      {
-        "addr": "properties/ingressProfile/webAppRouting/identity/clientId",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_automatic_cluster",
-            "addr": "/web_app_routing_ingress/0/web_app_routing_identity/0/client_id"
-          }
-        ]
-      },
-      {
-        "addr": "properties/ingressProfile/webAppRouting/identity/objectId",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_automatic_cluster",
-            "addr": "/web_app_routing_ingress/0/web_app_routing_identity/0/object_id"
-          }
-        ]
-      },
-      {
-        "addr": "properties/ingressProfile/webAppRouting/identity/resourceId"
-      },
-      {
-        "addr": "properties/ingressProfile/webAppRouting/nginx/defaultIngressControllerType",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_automatic_cluster",
-            "addr": "/web_app_routing_ingress/0/default_nginx_controller"
-          }
-        ]
-      },
-      {
-        "addr": "properties/kubernetesVersion"
-      },
-      {
-        "addr": "properties/nodeResourceGroup"
-      },
-      {
-        "addr": "properties/oidcIssuerProfile/issuerURL",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_automatic_cluster",
-            "addr": "/oidc_issuer_url"
-          }
-        ]
-      },
-      {
-        "addr": "properties/privateFQDN",
-        "app_property_maps": [
-          {
-            "name": "azurerm_kubernetes_automatic_cluster",
-            "addr": "/private_fully_qualified_domain_name"
-          }
-        ]
-      },
-      {
-        "addr": "properties/serviceMeshProfile/istio/certificateAuthority/plugin/certChainObjectName"
-      },
-      {
-        "addr": "properties/serviceMeshProfile/istio/certificateAuthority/plugin/certObjectName"
-      },
-      {
-        "addr": "properties/serviceMeshProfile/istio/certificateAuthority/plugin/keyObjectName"
-      },
-      {
-        "addr": "properties/serviceMeshProfile/istio/certificateAuthority/plugin/keyVaultId"
-      },
-      {
-        "addr": "properties/serviceMeshProfile/istio/certificateAuthority/plugin/rootCertObjectName"
-      },
-      {
-        "addr": "properties/serviceMeshProfile/istio/components/ingressGateways/enabled"
-      },
-      {
-        "addr": "properties/serviceMeshProfile/istio/components/ingressGateways/mode"
-      },
-      {
-        "addr": "properties/serviceMeshProfile/istio/components/proxyRedirectionMechanism"
-      },
-      {
-        "addr": "properties/serviceMeshProfile/istio/revisions"
-      },
-      {
-        "addr": "properties/serviceMeshProfile/mode"
-      },
-      {
-        "addr": "sku/name"
-      },
-      {
-        "addr": "sku/tier"
-      },
-      {
-        "addr": "tags"
-      }
-    ]
-  },
-  {
-    "api_version": "2025-10-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/AGENTPOOLS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-10-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/AGENTPOOLS/{}",
     "operation": "GET",
     "properties": [
@@ -53460,7 +53183,7 @@
     ]
   },
   {
-    "api_version": "2025-10-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/AGENTPOOLS/{}",
     "operation": "PUT",
     "properties": [
@@ -54163,27 +53886,22 @@
     ]
   },
   {
-    "api_version": "2025-10-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/LISTCLUSTERADMINCREDENTIAL",
     "operation": "POST"
   },
   {
-    "api_version": "2025-10-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/LISTCLUSTERUSERCREDENTIAL",
     "operation": "POST"
   },
   {
-    "api_version": "2026-04-01",
-    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/LISTCLUSTERUSERCREDENTIAL",
-    "operation": "POST"
-  },
-  {
-    "api_version": "2025-10-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/MAINTENANCECONFIGURATIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-10-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/MAINTENANCECONFIGURATIONS/{}",
     "operation": "GET",
     "properties": [
@@ -54314,7 +54032,7 @@
     ]
   },
   {
-    "api_version": "2025-10-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/MAINTENANCECONFIGURATIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -54445,7 +54163,7 @@
     ]
   },
   {
-    "api_version": "2025-10-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/RESETAADPROFILE",
     "operation": "POST",
     "properties": [
@@ -54464,7 +54182,7 @@
     ]
   },
   {
-    "api_version": "2025-10-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/RESETSERVICEPRINCIPALPROFILE",
     "operation": "POST",
     "properties": [
@@ -54477,12 +54195,12 @@
     ]
   },
   {
-    "api_version": "2025-10-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/TRUSTEDACCESSROLEBINDINGS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2025-10-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/TRUSTEDACCESSROLEBINDINGS/{}",
     "operation": "GET",
     "properties": [
@@ -54501,7 +54219,7 @@
     ]
   },
   {
-    "api_version": "2025-10-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/TRUSTEDACCESSROLEBINDINGS/{}",
     "operation": "PUT",
     "properties": [
@@ -54520,7 +54238,7 @@
     ]
   },
   {
-    "api_version": "2025-10-01",
+    "api_version": "2026-05-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/SNAPSHOTS/{}",
     "operation": "GET",
     "properties": [
@@ -76916,6 +76634,9 @@
         ]
       },
       {
+        "addr": "properties/networkBypassMode"
+      },
+      {
         "addr": "properties/previewFeatures"
       },
       {
@@ -77005,6 +76726,9 @@
     "properties": [
       {
         "addr": "properties/dataApi/mode"
+      },
+      {
+        "addr": "properties/networkBypassMode"
       }
     ]
   },
@@ -77087,6 +76811,9 @@
             "addr": "/high_availability_mode"
           }
         ]
+      },
+      {
+        "addr": "properties/networkBypassMode"
       },
       {
         "addr": "properties/previewFeatures"
@@ -128602,12 +128329,12 @@
     ]
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}",
     "operation": "GET",
     "properties": [
@@ -128707,7 +128434,7 @@
     ]
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}",
     "operation": "PUT",
     "properties": [
@@ -128807,12 +128534,12 @@
     ]
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/AUTHORIZATIONRULES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/AUTHORIZATIONRULES/{}",
     "operation": "GET",
     "properties": [
@@ -128825,7 +128552,7 @@
     ]
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/AUTHORIZATIONRULES/{}",
     "operation": "PUT",
     "properties": [
@@ -128838,12 +128565,12 @@
     ]
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/AUTHORIZATIONRULES/{}/LISTKEYS",
     "operation": "POST"
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/DISASTERRECOVERYCONFIGS",
     "operation": "GET",
     "properties": [
@@ -128865,7 +128592,7 @@
     ]
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/DISASTERRECOVERYCONFIGS/CHECKNAMEAVAILABILITY",
     "operation": "POST",
     "properties": [
@@ -128875,12 +128602,12 @@
     ]
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/DISASTERRECOVERYCONFIGS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/DISASTERRECOVERYCONFIGS/{}",
     "operation": "GET",
     "properties": [
@@ -128902,7 +128629,7 @@
     ]
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/DISASTERRECOVERYCONFIGS/{}",
     "operation": "PUT",
     "properties": [
@@ -128924,17 +128651,17 @@
     ]
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/DISASTERRECOVERYCONFIGS/{}/AUTHORIZATIONRULES/{}/LISTKEYS",
     "operation": "POST"
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/DISASTERRECOVERYCONFIGS/{}/BREAKPAIRING",
     "operation": "POST"
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/NETWORKRULESETS/DEFAULT",
     "operation": "GET",
     "properties": [
@@ -128968,7 +128695,7 @@
     ]
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/NETWORKRULESETS/DEFAULT",
     "operation": "PUT",
     "properties": [
@@ -129002,12 +128729,12 @@
     ]
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/QUEUES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/QUEUES/{}",
     "operation": "GET",
     "properties": [
@@ -129119,7 +128846,7 @@
     ]
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/QUEUES/{}",
     "operation": "PUT",
     "properties": [
@@ -129231,12 +128958,12 @@
     ]
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/QUEUES/{}/AUTHORIZATIONRULES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/QUEUES/{}/AUTHORIZATIONRULES/{}",
     "operation": "GET",
     "properties": [
@@ -129249,7 +128976,7 @@
     ]
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/QUEUES/{}/AUTHORIZATIONRULES/{}",
     "operation": "PUT",
     "properties": [
@@ -129262,17 +128989,17 @@
     ]
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/QUEUES/{}/AUTHORIZATIONRULES/{}/LISTKEYS",
     "operation": "POST"
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/TOPICS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/TOPICS/{}",
     "operation": "GET",
     "properties": [
@@ -129345,7 +129072,7 @@
     ]
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/TOPICS/{}",
     "operation": "PUT",
     "properties": [
@@ -129418,12 +129145,12 @@
     ]
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/TOPICS/{}/AUTHORIZATIONRULES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/TOPICS/{}/AUTHORIZATIONRULES/{}",
     "operation": "GET",
     "properties": [
@@ -129436,7 +129163,7 @@
     ]
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/TOPICS/{}/AUTHORIZATIONRULES/{}",
     "operation": "PUT",
     "properties": [
@@ -129449,17 +129176,17 @@
     ]
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/TOPICS/{}/AUTHORIZATIONRULES/{}/LISTKEYS",
     "operation": "POST"
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/TOPICS/{}/SUBSCRIPTIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/TOPICS/{}/SUBSCRIPTIONS/{}",
     "operation": "GET",
     "properties": [
@@ -129559,7 +129286,7 @@
     ]
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/TOPICS/{}/SUBSCRIPTIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -129659,12 +129386,12 @@
     ]
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/TOPICS/{}/SUBSCRIPTIONS/{}/RULES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/TOPICS/{}/SUBSCRIPTIONS/{}/RULES/{}",
     "operation": "GET",
     "properties": [
@@ -129782,7 +129509,7 @@
     ]
   },
   {
-    "api_version": "2024-01-01",
+    "api_version": "2026-01-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.SERVICEBUS/NAMESPACES/{}/TOPICS/{}/SUBSCRIPTIONS/{}/RULES/{}",
     "operation": "PUT",
     "properties": [
@@ -129876,6 +129603,15 @@
           {
             "name": "azurerm_servicebus_subscription_rule",
             "addr": "/filter_type"
+          }
+        ]
+      },
+      {
+        "addr": "properties/sqlFilter/compatibilityLevel",
+        "app_property_maps": [
+          {
+            "name": "azurerm_servicebus_subscription_rule",
+            "addr": "/sql_filter_compatibility_level"
           }
         ]
       },
@@ -141357,6 +141093,155 @@
     ]
   },
   {
+    "api_version": "2025-09-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGEDISCOVERY/STORAGEDISCOVERYWORKSPACES/{}",
+    "operation": "DELETE"
+  },
+  {
+    "api_version": "2025-09-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGEDISCOVERY/STORAGEDISCOVERYWORKSPACES/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_storage_discovery_workspace",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/description",
+        "app_property_maps": [
+          {
+            "name": "azurerm_storage_discovery_workspace",
+            "addr": "/description"
+          }
+        ]
+      },
+      {
+        "addr": "properties/scopes/displayName"
+      },
+      {
+        "addr": "properties/scopes/resourceTypes"
+      },
+      {
+        "addr": "properties/scopes/tagKeysOnly"
+      },
+      {
+        "addr": "properties/scopes/tags"
+      },
+      {
+        "addr": "properties/sku",
+        "app_property_maps": [
+          {
+            "name": "azurerm_storage_discovery_workspace",
+            "addr": "/sku"
+          }
+        ]
+      },
+      {
+        "addr": "properties/workspaceRoots"
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2025-09-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGEDISCOVERY/STORAGEDISCOVERYWORKSPACES/{}",
+    "operation": "PATCH",
+    "properties": [
+      {
+        "addr": "properties/description",
+        "app_property_maps": [
+          {
+            "name": "azurerm_storage_discovery_workspace",
+            "addr": "/description"
+          }
+        ]
+      },
+      {
+        "addr": "properties/scopes/displayName"
+      },
+      {
+        "addr": "properties/scopes/resourceTypes"
+      },
+      {
+        "addr": "properties/scopes/tagKeysOnly"
+      },
+      {
+        "addr": "properties/scopes/tags"
+      },
+      {
+        "addr": "properties/sku",
+        "app_property_maps": [
+          {
+            "name": "azurerm_storage_discovery_workspace",
+            "addr": "/sku"
+          }
+        ]
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2025-09-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGEDISCOVERY/STORAGEDISCOVERYWORKSPACES/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "location",
+        "app_property_maps": [
+          {
+            "name": "azurerm_storage_discovery_workspace",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/description",
+        "app_property_maps": [
+          {
+            "name": "azurerm_storage_discovery_workspace",
+            "addr": "/description"
+          }
+        ]
+      },
+      {
+        "addr": "properties/scopes/displayName"
+      },
+      {
+        "addr": "properties/scopes/resourceTypes"
+      },
+      {
+        "addr": "properties/scopes/tagKeysOnly"
+      },
+      {
+        "addr": "properties/scopes/tags"
+      },
+      {
+        "addr": "properties/sku",
+        "app_property_maps": [
+          {
+            "name": "azurerm_storage_discovery_workspace",
+            "addr": "/sku"
+          }
+        ]
+      },
+      {
+        "addr": "properties/workspaceRoots"
+      },
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
     "api_version": "2025-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.STORAGEMOVER/STORAGEMOVERS/{}",
     "operation": "DELETE"
@@ -149492,6 +149377,9 @@
         "addr": "properties/enabled"
       },
       {
+        "addr": "properties/endToEndEncryptionEnabled"
+      },
+      {
         "addr": "properties/functionAppConfig/deployment/storage/authentication/storageAccountConnectionStringName"
       },
       {
@@ -150216,6 +150104,9 @@
       },
       {
         "addr": "properties/enabled"
+      },
+      {
+        "addr": "properties/endToEndEncryptionEnabled"
       },
       {
         "addr": "properties/functionAppConfig/deployment/storage/authentication/storageAccountConnectionStringName"
@@ -153908,6 +153799,9 @@
         "addr": "properties/enabled"
       },
       {
+        "addr": "properties/endToEndEncryptionEnabled"
+      },
+      {
         "addr": "properties/functionAppConfig/deployment/storage/authentication/storageAccountConnectionStringName"
       },
       {
@@ -154346,6 +154240,9 @@
       },
       {
         "addr": "properties/enabled"
+      },
+      {
+        "addr": "properties/endToEndEncryptionEnabled"
       },
       {
         "addr": "properties/functionAppConfig/deployment/storage/authentication/storageAccountConnectionStringName"
@@ -165699,12 +165596,12 @@
     ]
   },
   {
-    "api_version": "2024-06-19",
+    "api_version": "2026-04-16",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/QUMULO.STORAGE/FILESYSTEMS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2024-06-19",
+    "api_version": "2026-04-16",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/QUMULO.STORAGE/FILESYSTEMS/{}",
     "operation": "GET",
     "properties": [
@@ -165783,7 +165680,7 @@
     ]
   },
   {
-    "api_version": "2024-06-19",
+    "api_version": "2026-04-16",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/QUMULO.STORAGE/FILESYSTEMS/{}",
     "operation": "PATCH",
     "properties": [
@@ -165793,7 +165690,7 @@
     ]
   },
   {
-    "api_version": "2024-06-19",
+    "api_version": "2026-04-16",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/QUMULO.STORAGE/FILESYSTEMS/{}",
     "operation": "PUT",
     "properties": [
