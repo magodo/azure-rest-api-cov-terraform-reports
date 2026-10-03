@@ -13807,6 +13807,18 @@
         ]
       },
       {
+        "addr": "properties/eventStreamEndpoint",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_app_job",
+            "addr": "/event_stream_endpoint"
+          }
+        ]
+      },
+      {
+        "addr": "properties/outboundIpAddresses"
+      },
+      {
         "addr": "properties/template/containers/args"
       },
       {
@@ -14076,6 +14088,18 @@
             "addr": "/container_app_environment_id"
           }
         ]
+      },
+      {
+        "addr": "properties/eventStreamEndpoint",
+        "app_property_maps": [
+          {
+            "name": "azurerm_container_app_job",
+            "addr": "/event_stream_endpoint"
+          }
+        ]
+      },
+      {
+        "addr": "properties/outboundIpAddresses"
       },
       {
         "addr": "properties/template/containers/args"
@@ -35610,12 +35634,12 @@
     ]
   },
   {
-    "api_version": "2023-03-31",
+    "api_version": "2026-03-18",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMMUNICATION/COMMUNICATIONSERVICES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-03-31",
+    "api_version": "2026-03-18",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMMUNICATION/COMMUNICATIONSERVICES/{}",
     "operation": "GET",
     "properties": [
@@ -35652,7 +35676,7 @@
     ]
   },
   {
-    "api_version": "2023-03-31",
+    "api_version": "2026-03-18",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMMUNICATION/COMMUNICATIONSERVICES/{}",
     "operation": "PATCH",
     "properties": [
@@ -35662,7 +35686,7 @@
     ]
   },
   {
-    "api_version": "2023-03-31",
+    "api_version": "2026-03-18",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMMUNICATION/COMMUNICATIONSERVICES/{}",
     "operation": "PUT",
     "properties": [
@@ -35699,17 +35723,17 @@
     ]
   },
   {
-    "api_version": "2023-03-31",
+    "api_version": "2026-03-18",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMMUNICATION/COMMUNICATIONSERVICES/{}/LISTKEYS",
     "operation": "POST"
   },
   {
-    "api_version": "2023-03-31",
+    "api_version": "2026-03-18",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMMUNICATION/EMAILSERVICES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-03-31",
+    "api_version": "2026-03-18",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMMUNICATION/EMAILSERVICES/{}",
     "operation": "GET",
     "properties": [
@@ -35731,7 +35755,7 @@
     ]
   },
   {
-    "api_version": "2023-03-31",
+    "api_version": "2026-03-18",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMMUNICATION/EMAILSERVICES/{}",
     "operation": "PUT",
     "properties": [
@@ -35753,12 +35777,12 @@
     ]
   },
   {
-    "api_version": "2023-03-31",
+    "api_version": "2026-03-18",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMMUNICATION/EMAILSERVICES/{}/DOMAINS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-03-31",
+    "api_version": "2026-03-18",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMMUNICATION/EMAILSERVICES/{}/DOMAINS/{}",
     "operation": "GET",
     "properties": [
@@ -35981,7 +36005,7 @@
     ]
   },
   {
-    "api_version": "2023-03-31",
+    "api_version": "2026-03-18",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMMUNICATION/EMAILSERVICES/{}/DOMAINS/{}",
     "operation": "PUT",
     "properties": [
@@ -36204,12 +36228,12 @@
     ]
   },
   {
-    "api_version": "2023-03-31",
+    "api_version": "2026-03-18",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMMUNICATION/EMAILSERVICES/{}/DOMAINS/{}/SENDERUSERNAMES/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2023-03-31",
+    "api_version": "2026-03-18",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMMUNICATION/EMAILSERVICES/{}/DOMAINS/{}/SENDERUSERNAMES/{}",
     "operation": "GET",
     "properties": [
@@ -36228,7 +36252,7 @@
     ]
   },
   {
-    "api_version": "2023-03-31",
+    "api_version": "2026-03-18",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.COMMUNICATION/EMAILSERVICES/{}/DOMAINS/{}/SENDERUSERNAMES/{}",
     "operation": "PUT",
     "properties": [
@@ -159682,6 +159706,10 @@
           {
             "name": "azurerm_oracle_autonomous_database_clone_from_database",
             "addr": "/location"
+          },
+          {
+            "name": "azurerm_oracle_autonomous_database_cross_region_disaster_recovery",
+            "addr": "/location"
           }
         ]
       },
@@ -160433,16 +160461,40 @@
         "addr": "properties{CrossRegionDisasterRecovery}/availableUpgradeVersions"
       },
       {
-        "addr": "properties{CrossRegionDisasterRecovery}/backupRetentionPeriodInDays"
+        "addr": "properties{CrossRegionDisasterRecovery}/backupRetentionPeriodInDays",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database_cross_region_disaster_recovery",
+            "addr": "/backup_retention_period_in_days"
+          }
+        ]
       },
       {
-        "addr": "properties{CrossRegionDisasterRecovery}/characterSet"
+        "addr": "properties{CrossRegionDisasterRecovery}/characterSet",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database_cross_region_disaster_recovery",
+            "addr": "/character_set"
+          }
+        ]
       },
       {
-        "addr": "properties{CrossRegionDisasterRecovery}/computeCount"
+        "addr": "properties{CrossRegionDisasterRecovery}/computeCount",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database_cross_region_disaster_recovery",
+            "addr": "/compute_count"
+          }
+        ]
       },
       {
-        "addr": "properties{CrossRegionDisasterRecovery}/computeModel"
+        "addr": "properties{CrossRegionDisasterRecovery}/computeModel",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database_cross_region_disaster_recovery",
+            "addr": "/compute_model"
+          }
+        ]
       },
       {
         "addr": "properties{CrossRegionDisasterRecovery}/connectionStrings"
@@ -160457,6 +160509,9 @@
         "addr": "properties{CrossRegionDisasterRecovery}/customerContacts"
       },
       {
+        "addr": "properties{CrossRegionDisasterRecovery}/customerContacts/email"
+      },
+      {
         "addr": "properties{CrossRegionDisasterRecovery}/dataBaseType"
       },
       {
@@ -160466,19 +160521,43 @@
         "addr": "properties{CrossRegionDisasterRecovery}/dataStorageSizeInGbs"
       },
       {
-        "addr": "properties{CrossRegionDisasterRecovery}/dataStorageSizeInTbs"
+        "addr": "properties{CrossRegionDisasterRecovery}/dataStorageSizeInTbs",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database_cross_region_disaster_recovery",
+            "addr": "/data_storage_size_in_tb"
+          }
+        ]
       },
       {
         "addr": "properties{CrossRegionDisasterRecovery}/databaseEdition"
       },
       {
-        "addr": "properties{CrossRegionDisasterRecovery}/dbVersion"
+        "addr": "properties{CrossRegionDisasterRecovery}/dbVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database_cross_region_disaster_recovery",
+            "addr": "/database_version"
+          }
+        ]
       },
       {
-        "addr": "properties{CrossRegionDisasterRecovery}/dbWorkload"
+        "addr": "properties{CrossRegionDisasterRecovery}/dbWorkload",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database_cross_region_disaster_recovery",
+            "addr": "/database_workload"
+          }
+        ]
       },
       {
-        "addr": "properties{CrossRegionDisasterRecovery}/displayName"
+        "addr": "properties{CrossRegionDisasterRecovery}/displayName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database_cross_region_disaster_recovery",
+            "addr": "/display_name"
+          }
+        ]
       },
       {
         "addr": "properties{CrossRegionDisasterRecovery}/failedDataRecoveryInSeconds"
@@ -160508,7 +160587,16 @@
         "addr": "properties{CrossRegionDisasterRecovery}/isRemoteDataGuardEnabled"
       },
       {
-        "addr": "properties{CrossRegionDisasterRecovery}/licenseModel"
+        "addr": "properties{CrossRegionDisasterRecovery}/isReplicateAutomaticBackups"
+      },
+      {
+        "addr": "properties{CrossRegionDisasterRecovery}/licenseModel",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database_cross_region_disaster_recovery",
+            "addr": "/license_model"
+          }
+        ]
       },
       {
         "addr": "properties{CrossRegionDisasterRecovery}/lifecycleDetails"
@@ -160544,7 +160632,13 @@
         "addr": "properties{CrossRegionDisasterRecovery}/memoryPerOracleComputeUnitInGbs"
       },
       {
-        "addr": "properties{CrossRegionDisasterRecovery}/ncharacterSet"
+        "addr": "properties{CrossRegionDisasterRecovery}/ncharacterSet",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database_cross_region_disaster_recovery",
+            "addr": "/national_character_set"
+          }
+        ]
       },
       {
         "addr": "properties{CrossRegionDisasterRecovery}/nextLongTermBackupTimeStamp"
@@ -160589,6 +160683,9 @@
         "addr": "properties{CrossRegionDisasterRecovery}/remoteDisasterRecoveryConfiguration"
       },
       {
+        "addr": "properties{CrossRegionDisasterRecovery}/remoteDisasterRecoveryType"
+      },
+      {
         "addr": "properties{CrossRegionDisasterRecovery}/role"
       },
       {
@@ -160596,6 +160693,18 @@
       },
       {
         "addr": "properties{CrossRegionDisasterRecovery}/serviceConsoleUrl"
+      },
+      {
+        "addr": "properties{CrossRegionDisasterRecovery}/source"
+      },
+      {
+        "addr": "properties{CrossRegionDisasterRecovery}/sourceId"
+      },
+      {
+        "addr": "properties{CrossRegionDisasterRecovery}/sourceLocation"
+      },
+      {
+        "addr": "properties{CrossRegionDisasterRecovery}/sourceOcid"
       },
       {
         "addr": "properties{CrossRegionDisasterRecovery}/sqlWebDeveloperUrl"
@@ -160877,7 +160986,13 @@
         "addr": "properties{Regular}/ociUrl"
       },
       {
-        "addr": "properties{Regular}/ocid"
+        "addr": "properties{Regular}/ocid",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/ocid"
+          }
+        ]
       },
       {
         "addr": "properties{Regular}/openMode"
@@ -161057,6 +161172,10 @@
           {
             "name": "azurerm_oracle_autonomous_database_clone_from_database",
             "addr": "/location"
+          },
+          {
+            "name": "azurerm_oracle_autonomous_database_cross_region_disaster_recovery",
+            "addr": "/location"
           }
         ]
       },
@@ -161808,16 +161927,40 @@
         "addr": "properties{CrossRegionDisasterRecovery}/availableUpgradeVersions"
       },
       {
-        "addr": "properties{CrossRegionDisasterRecovery}/backupRetentionPeriodInDays"
+        "addr": "properties{CrossRegionDisasterRecovery}/backupRetentionPeriodInDays",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database_cross_region_disaster_recovery",
+            "addr": "/backup_retention_period_in_days"
+          }
+        ]
       },
       {
-        "addr": "properties{CrossRegionDisasterRecovery}/characterSet"
+        "addr": "properties{CrossRegionDisasterRecovery}/characterSet",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database_cross_region_disaster_recovery",
+            "addr": "/character_set"
+          }
+        ]
       },
       {
-        "addr": "properties{CrossRegionDisasterRecovery}/computeCount"
+        "addr": "properties{CrossRegionDisasterRecovery}/computeCount",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database_cross_region_disaster_recovery",
+            "addr": "/compute_count"
+          }
+        ]
       },
       {
-        "addr": "properties{CrossRegionDisasterRecovery}/computeModel"
+        "addr": "properties{CrossRegionDisasterRecovery}/computeModel",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database_cross_region_disaster_recovery",
+            "addr": "/compute_model"
+          }
+        ]
       },
       {
         "addr": "properties{CrossRegionDisasterRecovery}/connectionStrings"
@@ -161832,6 +161975,9 @@
         "addr": "properties{CrossRegionDisasterRecovery}/customerContacts"
       },
       {
+        "addr": "properties{CrossRegionDisasterRecovery}/customerContacts/email"
+      },
+      {
         "addr": "properties{CrossRegionDisasterRecovery}/dataBaseType"
       },
       {
@@ -161841,19 +161987,43 @@
         "addr": "properties{CrossRegionDisasterRecovery}/dataStorageSizeInGbs"
       },
       {
-        "addr": "properties{CrossRegionDisasterRecovery}/dataStorageSizeInTbs"
+        "addr": "properties{CrossRegionDisasterRecovery}/dataStorageSizeInTbs",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database_cross_region_disaster_recovery",
+            "addr": "/data_storage_size_in_tb"
+          }
+        ]
       },
       {
         "addr": "properties{CrossRegionDisasterRecovery}/databaseEdition"
       },
       {
-        "addr": "properties{CrossRegionDisasterRecovery}/dbVersion"
+        "addr": "properties{CrossRegionDisasterRecovery}/dbVersion",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database_cross_region_disaster_recovery",
+            "addr": "/database_version"
+          }
+        ]
       },
       {
-        "addr": "properties{CrossRegionDisasterRecovery}/dbWorkload"
+        "addr": "properties{CrossRegionDisasterRecovery}/dbWorkload",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database_cross_region_disaster_recovery",
+            "addr": "/database_workload"
+          }
+        ]
       },
       {
-        "addr": "properties{CrossRegionDisasterRecovery}/displayName"
+        "addr": "properties{CrossRegionDisasterRecovery}/displayName",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database_cross_region_disaster_recovery",
+            "addr": "/display_name"
+          }
+        ]
       },
       {
         "addr": "properties{CrossRegionDisasterRecovery}/failedDataRecoveryInSeconds"
@@ -161883,7 +162053,16 @@
         "addr": "properties{CrossRegionDisasterRecovery}/isRemoteDataGuardEnabled"
       },
       {
-        "addr": "properties{CrossRegionDisasterRecovery}/licenseModel"
+        "addr": "properties{CrossRegionDisasterRecovery}/isReplicateAutomaticBackups"
+      },
+      {
+        "addr": "properties{CrossRegionDisasterRecovery}/licenseModel",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database_cross_region_disaster_recovery",
+            "addr": "/license_model"
+          }
+        ]
       },
       {
         "addr": "properties{CrossRegionDisasterRecovery}/lifecycleDetails"
@@ -161919,7 +162098,13 @@
         "addr": "properties{CrossRegionDisasterRecovery}/memoryPerOracleComputeUnitInGbs"
       },
       {
-        "addr": "properties{CrossRegionDisasterRecovery}/ncharacterSet"
+        "addr": "properties{CrossRegionDisasterRecovery}/ncharacterSet",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database_cross_region_disaster_recovery",
+            "addr": "/national_character_set"
+          }
+        ]
       },
       {
         "addr": "properties{CrossRegionDisasterRecovery}/nextLongTermBackupTimeStamp"
@@ -161964,6 +162149,9 @@
         "addr": "properties{CrossRegionDisasterRecovery}/remoteDisasterRecoveryConfiguration"
       },
       {
+        "addr": "properties{CrossRegionDisasterRecovery}/remoteDisasterRecoveryType"
+      },
+      {
         "addr": "properties{CrossRegionDisasterRecovery}/role"
       },
       {
@@ -161971,6 +162159,18 @@
       },
       {
         "addr": "properties{CrossRegionDisasterRecovery}/serviceConsoleUrl"
+      },
+      {
+        "addr": "properties{CrossRegionDisasterRecovery}/source"
+      },
+      {
+        "addr": "properties{CrossRegionDisasterRecovery}/sourceId"
+      },
+      {
+        "addr": "properties{CrossRegionDisasterRecovery}/sourceLocation"
+      },
+      {
+        "addr": "properties{CrossRegionDisasterRecovery}/sourceOcid"
       },
       {
         "addr": "properties{CrossRegionDisasterRecovery}/sqlWebDeveloperUrl"
@@ -162252,7 +162452,13 @@
         "addr": "properties{Regular}/ociUrl"
       },
       {
-        "addr": "properties{Regular}/ocid"
+        "addr": "properties{Regular}/ocid",
+        "app_property_maps": [
+          {
+            "name": "azurerm_oracle_autonomous_database",
+            "addr": "/ocid"
+          }
+        ]
       },
       {
         "addr": "properties{Regular}/openMode"
