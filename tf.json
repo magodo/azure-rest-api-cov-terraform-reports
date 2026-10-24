@@ -8046,6 +8046,9 @@
         ]
       },
       {
+        "addr": "properties/metrics"
+      },
+      {
         "addr": "properties/operationNameFormat",
         "app_property_maps": [
           {
@@ -8213,6 +8216,9 @@
             "addr": "/api_management_logger_id"
           }
         ]
+      },
+      {
+        "addr": "properties/metrics"
       },
       {
         "addr": "properties/operationNameFormat",
@@ -10077,6 +10083,9 @@
         ]
       },
       {
+        "addr": "properties/metrics"
+      },
+      {
         "addr": "properties/operationNameFormat",
         "app_property_maps": [
           {
@@ -10241,6 +10250,9 @@
             "addr": "/api_management_logger_id"
           }
         ]
+      },
+      {
+        "addr": "properties/metrics"
       },
       {
         "addr": "properties/operationNameFormat",
@@ -64689,6 +64701,11 @@
     "operation": "DELETE"
   },
   {
+    "api_version": "2026-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAPROTECTION/BACKUPVAULTS/{}/BACKUPPOLICIES/{}",
+    "operation": "DELETE"
+  },
+  {
     "api_version": "2025-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAPROTECTION/BACKUPVAULTS/{}/BACKUPPOLICIES/{}",
     "operation": "GET",
@@ -64771,6 +64788,76 @@
     ]
   },
   {
+    "api_version": "2026-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAPROTECTION/BACKUPVAULTS/{}/BACKUPPOLICIES/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties{BackupPolicy}/datasourceTypes"
+      },
+      {
+        "addr": "properties{BackupPolicy}/objectType"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/backupParameters{AzureBackupParams}/backupType"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/dataStore/dataStoreType"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/dataStore/objectType"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/name"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/schedule/repeatingTimeIntervals"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/taggingCriteria/criteria{ScheduleBasedBackupCriteria}/absoluteCriteria"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/taggingCriteria/criteria{ScheduleBasedBackupCriteria}/daysOfTheWeek"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/taggingCriteria/criteria{ScheduleBasedBackupCriteria}/monthsOfYear"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/taggingCriteria/criteria{ScheduleBasedBackupCriteria}/weeksOfTheMonth"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/taggingCriteria/isDefault"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/taggingCriteria/tagInfo/id"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/taggingCriteria/tagInfo/tagName"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/taggingCriteria/taggingPriority"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureRetentionRule}/isDefault"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureRetentionRule}/lifecycles/deleteAfter{AbsoluteDeleteOption}/duration"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureRetentionRule}/lifecycles/sourceDataStore/dataStoreType"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureRetentionRule}/lifecycles/sourceDataStore/objectType"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureRetentionRule}/lifecycles/targetDataStoreCopySettings"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureRetentionRule}/name"
+      }
+    ]
+  },
+  {
     "api_version": "2025-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAPROTECTION/BACKUPVAULTS/{}/BACKUPPOLICIES/{}",
     "operation": "PUT",
@@ -64816,6 +64903,76 @@
       },
       {
         "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/taggingCriteria/criteria{ScheduleBasedBackupCriteria}/scheduleTimes"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/taggingCriteria/criteria{ScheduleBasedBackupCriteria}/weeksOfTheMonth"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/taggingCriteria/isDefault"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/taggingCriteria/tagInfo/id"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/taggingCriteria/tagInfo/tagName"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/taggingCriteria/taggingPriority"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureRetentionRule}/isDefault"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureRetentionRule}/lifecycles/deleteAfter{AbsoluteDeleteOption}/duration"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureRetentionRule}/lifecycles/sourceDataStore/dataStoreType"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureRetentionRule}/lifecycles/sourceDataStore/objectType"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureRetentionRule}/lifecycles/targetDataStoreCopySettings"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureRetentionRule}/name"
+      }
+    ]
+  },
+  {
+    "api_version": "2026-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAPROTECTION/BACKUPVAULTS/{}/BACKUPPOLICIES/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "properties{BackupPolicy}/datasourceTypes"
+      },
+      {
+        "addr": "properties{BackupPolicy}/objectType"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/backupParameters{AzureBackupParams}/backupType"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/dataStore/dataStoreType"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/dataStore/objectType"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/name"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/schedule/repeatingTimeIntervals"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/taggingCriteria/criteria{ScheduleBasedBackupCriteria}/absoluteCriteria"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/taggingCriteria/criteria{ScheduleBasedBackupCriteria}/daysOfTheWeek"
+      },
+      {
+        "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/taggingCriteria/criteria{ScheduleBasedBackupCriteria}/monthsOfYear"
       },
       {
         "addr": "properties{BackupPolicy}/policyRules{AzureBackupRule}/trigger{ScheduleBasedTriggerContext}/taggingCriteria/criteria{ScheduleBasedBackupCriteria}/weeksOfTheMonth"
