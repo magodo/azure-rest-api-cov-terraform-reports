@@ -12844,6 +12844,9 @@
         "addr": "properties/configuration/ingress/ipSecurityRestrictions/name"
       },
       {
+        "addr": "properties/configuration/ingress/stickySessions/affinity"
+      },
+      {
         "addr": "properties/configuration/ingress/targetPort",
         "app_property_maps": [
           {
@@ -13329,6 +13332,9 @@
       },
       {
         "addr": "properties/configuration/ingress/ipSecurityRestrictions/name"
+      },
+      {
+        "addr": "properties/configuration/ingress/stickySessions/affinity"
       },
       {
         "addr": "properties/configuration/ingress/targetPort",
@@ -43783,6 +43789,15 @@
         ]
       },
       {
+        "addr": "properties/resiliencyPolicy/automaticZoneRebalancingPolicy/enabled"
+      },
+      {
+        "addr": "properties/resiliencyPolicy/automaticZoneRebalancingPolicy/rebalanceBehavior"
+      },
+      {
+        "addr": "properties/resiliencyPolicy/automaticZoneRebalancingPolicy/rebalanceStrategy"
+      },
+      {
         "addr": "properties/resiliencyPolicy/resilientVMCreationPolicy/enabled"
       },
       {
@@ -44943,6 +44958,15 @@
         ]
       },
       {
+        "addr": "properties/resiliencyPolicy/automaticZoneRebalancingPolicy/enabled"
+      },
+      {
+        "addr": "properties/resiliencyPolicy/automaticZoneRebalancingPolicy/rebalanceBehavior"
+      },
+      {
+        "addr": "properties/resiliencyPolicy/automaticZoneRebalancingPolicy/rebalanceStrategy"
+      },
+      {
         "addr": "properties/resiliencyPolicy/resilientVMCreationPolicy/enabled"
       },
       {
@@ -45932,6 +45956,15 @@
             "addr": "/proximity_placement_group_id"
           }
         ]
+      },
+      {
+        "addr": "properties/resiliencyPolicy/automaticZoneRebalancingPolicy/enabled"
+      },
+      {
+        "addr": "properties/resiliencyPolicy/automaticZoneRebalancingPolicy/rebalanceBehavior"
+      },
+      {
+        "addr": "properties/resiliencyPolicy/automaticZoneRebalancingPolicy/rebalanceStrategy"
       },
       {
         "addr": "properties/resiliencyPolicy/resilientVMCreationPolicy/enabled"
@@ -50230,12 +50263,12 @@
     ]
   },
   {
-    "api_version": "2026-05-01",
+    "api_version": "2026-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2026-05-01",
+    "api_version": "2026-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
     "operation": "GET",
     "properties": [
@@ -50748,6 +50781,9 @@
         ]
       },
       {
+        "addr": "properties/azureMonitorProfile/containerInsights"
+      },
+      {
         "addr": "properties/azureMonitorProfile/metrics/enabled"
       },
       {
@@ -51415,7 +51451,17 @@
     ]
   },
   {
-    "api_version": "2026-05-01",
+    "api_version": "2026-07-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
+    "operation": "PATCH",
+    "properties": [
+      {
+        "addr": "tags"
+      }
+    ]
+  },
+  {
+    "api_version": "2026-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}",
     "operation": "PUT",
     "properties": [
@@ -51928,6 +51974,9 @@
         ]
       },
       {
+        "addr": "properties/azureMonitorProfile/containerInsights"
+      },
+      {
         "addr": "properties/azureMonitorProfile/metrics/enabled"
       },
       {
@@ -52595,12 +52644,12 @@
     ]
   },
   {
-    "api_version": "2026-05-01",
+    "api_version": "2026-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/AGENTPOOLS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2026-05-01",
+    "api_version": "2026-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/AGENTPOOLS/{}",
     "operation": "GET",
     "properties": [
@@ -53303,7 +53352,7 @@
     ]
   },
   {
-    "api_version": "2026-05-01",
+    "api_version": "2026-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/AGENTPOOLS/{}",
     "operation": "PUT",
     "properties": [
@@ -54006,22 +54055,22 @@
     ]
   },
   {
-    "api_version": "2026-05-01",
+    "api_version": "2026-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/LISTCLUSTERADMINCREDENTIAL",
     "operation": "POST"
   },
   {
-    "api_version": "2026-05-01",
+    "api_version": "2026-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/LISTCLUSTERUSERCREDENTIAL",
     "operation": "POST"
   },
   {
-    "api_version": "2026-05-01",
+    "api_version": "2026-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/MAINTENANCECONFIGURATIONS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2026-05-01",
+    "api_version": "2026-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/MAINTENANCECONFIGURATIONS/{}",
     "operation": "GET",
     "properties": [
@@ -54152,7 +54201,7 @@
     ]
   },
   {
-    "api_version": "2026-05-01",
+    "api_version": "2026-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/MAINTENANCECONFIGURATIONS/{}",
     "operation": "PUT",
     "properties": [
@@ -54283,7 +54332,7 @@
     ]
   },
   {
-    "api_version": "2026-05-01",
+    "api_version": "2026-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/RESETAADPROFILE",
     "operation": "POST",
     "properties": [
@@ -54302,7 +54351,7 @@
     ]
   },
   {
-    "api_version": "2026-05-01",
+    "api_version": "2026-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/RESETSERVICEPRINCIPALPROFILE",
     "operation": "POST",
     "properties": [
@@ -54315,12 +54364,12 @@
     ]
   },
   {
-    "api_version": "2026-05-01",
+    "api_version": "2026-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/TRUSTEDACCESSROLEBINDINGS/{}",
     "operation": "DELETE"
   },
   {
-    "api_version": "2026-05-01",
+    "api_version": "2026-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/TRUSTEDACCESSROLEBINDINGS/{}",
     "operation": "GET",
     "properties": [
@@ -54339,7 +54388,7 @@
     ]
   },
   {
-    "api_version": "2026-05-01",
+    "api_version": "2026-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/MANAGEDCLUSTERS/{}/TRUSTEDACCESSROLEBINDINGS/{}",
     "operation": "PUT",
     "properties": [
@@ -54358,7 +54407,7 @@
     ]
   },
   {
-    "api_version": "2026-05-01",
+    "api_version": "2026-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.CONTAINERSERVICE/SNAPSHOTS/{}",
     "operation": "GET",
     "properties": [
@@ -64284,6 +64333,11 @@
     "operation": "DELETE"
   },
   {
+    "api_version": "2026-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAPROTECTION/BACKUPVAULTS/{}/BACKUPINSTANCES/{}",
+    "operation": "DELETE"
+  },
+  {
     "api_version": "2025-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAPROTECTION/BACKUPVAULTS/{}/BACKUPINSTANCES/{}",
     "operation": "GET",
@@ -64485,6 +64539,55 @@
     ]
   },
   {
+    "api_version": "2026-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAPROTECTION/BACKUPVAULTS/{}/BACKUPINSTANCES/{}",
+    "operation": "GET",
+    "properties": [
+      {
+        "addr": "properties/currentProtectionState",
+        "app_property_maps": [
+          {
+            "name": "azurerm_data_protection_backup_instance_cosmosdb_account",
+            "addr": "/protection_state"
+          }
+        ]
+      },
+      {
+        "addr": "properties/dataSourceInfo/datasourceType"
+      },
+      {
+        "addr": "properties/dataSourceInfo/objectType"
+      },
+      {
+        "addr": "properties/dataSourceInfo/resourceID"
+      },
+      {
+        "addr": "properties/dataSourceInfo/resourceLocation",
+        "app_property_maps": [
+          {
+            "name": "azurerm_data_protection_backup_instance_cosmosdb_account",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/dataSourceInfo/resourceName"
+      },
+      {
+        "addr": "properties/dataSourceInfo/resourceType"
+      },
+      {
+        "addr": "properties/dataSourceInfo/resourceUri"
+      },
+      {
+        "addr": "properties/friendlyName"
+      },
+      {
+        "addr": "properties/policyInfo/policyId"
+      }
+    ]
+  },
+  {
     "api_version": "2025-07-01",
     "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAPROTECTION/BACKUPVAULTS/{}/BACKUPINSTANCES/{}",
     "operation": "PUT",
@@ -64682,6 +64785,55 @@
       },
       {
         "addr": "properties/protectionStatus/status"
+      }
+    ]
+  },
+  {
+    "api_version": "2026-06-01",
+    "api_path": "/SUBSCRIPTIONS/{}/RESOURCEGROUPS/{}/PROVIDERS/MICROSOFT.DATAPROTECTION/BACKUPVAULTS/{}/BACKUPINSTANCES/{}",
+    "operation": "PUT",
+    "properties": [
+      {
+        "addr": "properties/currentProtectionState",
+        "app_property_maps": [
+          {
+            "name": "azurerm_data_protection_backup_instance_cosmosdb_account",
+            "addr": "/protection_state"
+          }
+        ]
+      },
+      {
+        "addr": "properties/dataSourceInfo/datasourceType"
+      },
+      {
+        "addr": "properties/dataSourceInfo/objectType"
+      },
+      {
+        "addr": "properties/dataSourceInfo/resourceID"
+      },
+      {
+        "addr": "properties/dataSourceInfo/resourceLocation",
+        "app_property_maps": [
+          {
+            "name": "azurerm_data_protection_backup_instance_cosmosdb_account",
+            "addr": "/location"
+          }
+        ]
+      },
+      {
+        "addr": "properties/dataSourceInfo/resourceName"
+      },
+      {
+        "addr": "properties/dataSourceInfo/resourceType"
+      },
+      {
+        "addr": "properties/dataSourceInfo/resourceUri"
+      },
+      {
+        "addr": "properties/friendlyName"
+      },
+      {
+        "addr": "properties/policyInfo/policyId"
       }
     ]
   },
@@ -66796,6 +66948,9 @@
         "addr": "properties/pointInTimeUTC"
       },
       {
+        "addr": "properties/replicationRole"
+      },
+      {
         "addr": "properties/sourceServerResourceId",
         "app_property_maps": [
           {
@@ -67261,6 +67416,9 @@
       },
       {
         "addr": "properties/pointInTimeUTC"
+      },
+      {
+        "addr": "properties/replicationRole"
       },
       {
         "addr": "properties/sourceServerResourceId",
@@ -95278,10 +95436,16 @@
         "addr": "properties/activeDirectories/adName"
       },
       {
+        "addr": "properties/activeDirectories/administrators"
+      },
+      {
         "addr": "properties/activeDirectories/aesEncryption"
       },
       {
         "addr": "properties/activeDirectories/allowLocalNfsUsersWithLdap"
+      },
+      {
+        "addr": "properties/activeDirectories/backupOperators"
       },
       {
         "addr": "properties/activeDirectories/dns"
@@ -95290,10 +95454,22 @@
         "addr": "properties/activeDirectories/domain"
       },
       {
+        "addr": "properties/activeDirectories/encryptDCConnections"
+      },
+      {
         "addr": "properties/activeDirectories/kdcIP"
       },
       {
         "addr": "properties/activeDirectories/ldapOverTLS"
+      },
+      {
+        "addr": "properties/activeDirectories/ldapSearchScope/groupDN"
+      },
+      {
+        "addr": "properties/activeDirectories/ldapSearchScope/groupMembershipFilter"
+      },
+      {
+        "addr": "properties/activeDirectories/ldapSearchScope/userDN"
       },
       {
         "addr": "properties/activeDirectories/ldapSigning"
@@ -95303,6 +95479,12 @@
       },
       {
         "addr": "properties/activeDirectories/password"
+      },
+      {
+        "addr": "properties/activeDirectories/preferredServersForLdapClient"
+      },
+      {
+        "addr": "properties/activeDirectories/securityOperators"
       },
       {
         "addr": "properties/activeDirectories/serverRootCACertificate"
@@ -95421,10 +95603,16 @@
         "addr": "properties/activeDirectories/adName"
       },
       {
+        "addr": "properties/activeDirectories/administrators"
+      },
+      {
         "addr": "properties/activeDirectories/aesEncryption"
       },
       {
         "addr": "properties/activeDirectories/allowLocalNfsUsersWithLdap"
+      },
+      {
+        "addr": "properties/activeDirectories/backupOperators"
       },
       {
         "addr": "properties/activeDirectories/dns"
@@ -95433,10 +95621,22 @@
         "addr": "properties/activeDirectories/domain"
       },
       {
+        "addr": "properties/activeDirectories/encryptDCConnections"
+      },
+      {
         "addr": "properties/activeDirectories/kdcIP"
       },
       {
         "addr": "properties/activeDirectories/ldapOverTLS"
+      },
+      {
+        "addr": "properties/activeDirectories/ldapSearchScope/groupDN"
+      },
+      {
+        "addr": "properties/activeDirectories/ldapSearchScope/groupMembershipFilter"
+      },
+      {
+        "addr": "properties/activeDirectories/ldapSearchScope/userDN"
       },
       {
         "addr": "properties/activeDirectories/ldapSigning"
@@ -95446,6 +95646,12 @@
       },
       {
         "addr": "properties/activeDirectories/password"
+      },
+      {
+        "addr": "properties/activeDirectories/preferredServersForLdapClient"
+      },
+      {
+        "addr": "properties/activeDirectories/securityOperators"
       },
       {
         "addr": "properties/activeDirectories/serverRootCACertificate"
@@ -126612,6 +126818,9 @@
         ]
       },
       {
+        "addr": "properties"
+      },
+      {
         "addr": "properties/metricId",
         "app_property_maps": [
           {
@@ -126650,6 +126859,9 @@
             "addr": "/location"
           }
         ]
+      },
+      {
+        "addr": "properties"
       },
       {
         "addr": "properties/metricId",
@@ -139022,6 +139234,9 @@
         ]
       },
       {
+        "addr": "properties/azureFilesIdentityBasedAuthentication/smbOAuthSettings/isSmbOAuthEnabled"
+      },
+      {
         "addr": "properties/customDomain/name",
         "app_property_maps": [
           {
@@ -139646,6 +139861,9 @@
         ]
       },
       {
+        "addr": "properties/azureFilesIdentityBasedAuthentication/smbOAuthSettings/isSmbOAuthEnabled"
+      },
+      {
         "addr": "properties/encryption/identity/federatedIdentityClientId"
       },
       {
@@ -139860,6 +140078,9 @@
             "addr": "/azure_files_authentication/0/directory_type"
           }
         ]
+      },
+      {
+        "addr": "properties/azureFilesIdentityBasedAuthentication/smbOAuthSettings/isSmbOAuthEnabled"
       },
       {
         "addr": "properties/customDomain/name",
